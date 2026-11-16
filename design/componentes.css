@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;600&family=Schibsted+Grotesk:wght@600;700;800&display=swap');
+
+/* Gabarita — componentes. Toda cor, espaço e raio vem de tokens.css. */
+
+.gb-raiz { font-family: var(--font-texto); color: var(--grafite); background: var(--papel); }
+
+/* Botão */
+.gb-botao {
+  display: inline-flex; align-items: center; gap: var(--espaco-2);
+  min-height: 44px; padding: 0 var(--espaco-4);
+  border-radius: var(--raio-md); border: 1.5px solid transparent;
+  font: 700 17px/1 var(--font-texto); cursor: pointer;
+}
+.gb-botao:focus-visible { outline: none; box-shadow: var(--sombra-foco); }
+.gb-botao--primario { background: var(--tinta); color: var(--texto-sobre-tinta); }
+.gb-botao--primario:hover { background: var(--tinta-forte); }
+.gb-botao--secundario { background: var(--papel); color: var(--grafite); border-color: var(--borda-controle); }
+.gb-botao--secundario:hover { background: var(--papel-2); }
+.gb-botao--texto { background: transparent; color: var(--tinta); padding: 0 var(--espaco-2); }
+.gb-botao--texto:hover { text-decoration: underline; text-underline-offset: 3px; }
+.gb-botao:disabled { opacity: .45; cursor: not-allowed; }
+.gb-botao svg { width: 18px; height: 18px; flex: none; }
+
+/* Bolha: o elemento-assinatura */
+.gb-bolha {
+  display: inline-grid; place-items: center; flex: none;
+  width: 28px; height: 28px; border-radius: var(--raio-bolha);
+  border: 2px solid var(--borda-controle); color: var(--grafite-suave);
+  font: 700 14px/1 var(--font-texto); background: var(--papel);
+}
+.gb-bolha--marcada { background: var(--tinta); border-color: var(--tinta); color: var(--texto-sobre-tinta); }
+.gb-bolha--pequena { width: 16px; height: 16px; border-width: 2px; }
+
+/* Alternativa */
+.gb-alternativa {
+  display: flex; align-items: flex-start; gap: var(--espaco-3);
+  width: 100%; max-width: 64ch; padding: var(--espaco-3) var(--espaco-4);
+  border-radius: var(--raio-md); border: 1.5px solid var(--borda);
+  background: var(--papel); color: var(--grafite);
+  font: 400 17px/27px var(--font-texto); text-align: left; cursor: pointer;
+}
+.gb-alternativa:hover { border-color: var(--borda-controle); }
+.gb-alternativa:focus-visible { outline: none; box-shadow: var(--sombra-foco); }
+.gb-alternativa[aria-checked="true"] { background: var(--tinta-clara); border-color: var(--tinta); }
+.gb-alternativa[aria-checked="true"] .gb-bolha { background: var(--tinta); border-color: var(--tinta); color: var(--texto-sobre-tinta); }
+.gb-alternativa--correta { background: var(--acerto-fundo); border-color: var(--acerto); }
+.gb-alternativa--correta .gb-bolha { background: var(--acerto); border-color: var(--acerto); color: var(--papel); }
+.gb-alternativa--errada { background: var(--erro-fundo); border-color: var(--erro-vivo); }
+.gb-alternativa--errada .gb-bolha { border-color: var(--erro-vivo); color: var(--erro); }
+.gb-alternativa__texto { flex: 1; padding-top: 0; }
+.gb-alternativa__status { display: inline-flex; align-items: center; gap: var(--espaco-1); font: 700 15px/22px var(--font-texto); white-space: nowrap; }
+.gb-alternativa--correta .gb-alternativa__status { color: var(--acerto); }
+.gb-alternativa--errada .gb-alternativa__status { color: var(--erro); }
+.gb-alternativa__status svg { width: 18px; height: 18px; }
+
+/* Medidor de domínio: cinco bolhas */
+.gb-dominio { display: inline-flex; align-items: center; gap: var(--espaco-3); font: 400 15px/22px var(--font-texto); color: var(--grafite-suave); }
+.gb-dominio__bolhas { display: inline-flex; gap: var(--espaco-1); }
+.gb-dominio__bolhas span { width: 14px; height: 14px; border-radius: var(--raio-bolha); border: 2px solid var(--borda-controle); }
+.gb-dominio__bolhas span.cheia { background: var(--tinta); border-color: var(--tinta); }
+.gb-dominio strong { color: var(--grafite); font-weight: 700; }
+
+/* Etiqueta */
+.gb-etiqueta {
+  display: inline-flex; align-items: center; gap: var(--espaco-1);
+  padding: 2px var(--espaco-2); border-radius: var(--raio-sm);
+  border: 1px solid var(--borda); background: var(--papel-2); color: var(--grafite);
+  font: 400 15px/22px var(--font-texto);
+}
+.gb-etiqueta--nova { background: var(--tinta-clara); border-color: var(--tinta-clara); color: var(--tinta-forte); }
+.gb-etiqueta--vencida { background: var(--marca-texto); border-color: var(--marca-texto); color: var(--texto-sobre-marca); font-weight: 700; }
+.gb-etiqueta svg { width: 14px; height: 14px; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .gb-botao, .gb-alternativa { transition: background-color .12s, border-color .12s; }
+}
