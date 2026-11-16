@@ -43,5 +43,6 @@ Sempre pela skill `commit` (`.claude/skills/commit/`): Conventional Commits em p
 - Migração aplicada não se edita; `supabase/seed.sql` não se edita à mão.
 - RLS em toda tabela; nenhuma chave no código ou no front-end.
 - Regra de negócio só em `dominio/`, pura e testada.
+- Comentário só quando importante e pertinente: explica o porquê, nunca o quê (doc 06 § Comentários).
 - Não marcar tarefa como pronta com teste falhando ou revisão reprovada; relatar o resultado real.
 - Documentação e código em português; termos do domínio sem acento, iguais aos do banco.

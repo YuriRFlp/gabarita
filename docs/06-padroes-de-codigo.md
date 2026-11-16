@@ -49,6 +49,37 @@ supabase/tests/               pgTAP (RLS, restrições, visões)
 - Proibido `as` para silenciar erro de tipo (exceção: tipos gerados do Supabase em JSON, com comentário).
 - Erros esperados do domínio retornam resultado tipado (`{ ok: true, valor } | { ok: false, erro }`); `throw` só para falhas inesperadas.
 
+## Comentários
+
+**Por padrão, não há comentário.** O código se explica por nomes claros, funções pequenas e tipos. Um comentário só existe quando diz algo que o código não consegue dizer, e quase sempre isso é o **porquê**.
+
+### Quando comentar
+| Situação | Exemplo |
+|---|---|
+| Regra de negócio não óbvia, citando a fonte | `// Item em branco não penaliza no Cebraspe (docs/04 § Simulados).` |
+| Decisão que parece errada, mas é intencional | `// Sem await: o log de IA não pode atrasar a resposta ao usuário.` |
+| Contorno de bug ou limitação externa, com link | `// ts-fsrs 4.x arredonda due para minutos; ver <link da issue>.` |
+| Escolha de segurança ou de desempenho | `-- Índice parcial: a fila diária só consulta cartões não suspensos.` |
+| Expressão regular, SQL ou cálculo difícil de ler | O que a regex aceita, com um exemplo |
+| Contrato público não expresso pelos tipos (TSDoc no `index.ts` do módulo) | Unidade, faixa (0 a 1), efeitos colaterais |
+| Pendência com dono | `// TODO(SPEC-012): incluir variante − 6 × NE / TL.` |
+
+### Nunca comentar
+- O que o código já diz: `// incrementa o contador`, `// retorna o usuário`.
+- Código desativado: apague; o git guarda o histórico.
+- Histórico, autoria ou datas (`// alterado em…`, `// por fulano`): isso vai no commit.
+- Separadores e banners (`// ===== HELPERS =====`).
+- TSDoc que só repete nome e tipos dos parâmetros.
+- Recados para o revisor ou para a IA (`// agora usando a nova função`, `// corrigido`).
+- `TODO` ou `FIXME` sem spec associada.
+- `eslint-disable` ou `@ts-expect-error` sem o motivo na mesma linha.
+
+### Forma
+- Português, curto, frase completa. Se precisar de um parágrafo, o código provavelmente precisa ser simplificado, ou o assunto é uma spec ou um ADR, e o comentário apenas o cita.
+- Comentário desatualizado é pior que nenhum: quem muda o código atualiza ou remove o comentário.
+- Testes não levam comentários explicando o caso; o nome do teste faz isso.
+- SQL: `comment on table/column` para semânticas que não são óbvias (ex.: `penalidade_erro`); cada migração começa com uma linha dizendo o propósito dela.
+
 ## Banco (Supabase)
 
 - Toda mudança de schema é uma **nova** migração em `supabase/migrations/`; migração já aplicada não se edita.

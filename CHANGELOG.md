@@ -9,6 +9,7 @@ Formato inspirado em [Keep a Changelog](https://keepachangelog.com/pt-BR/). Data
 - `CLAUDE.md` com o fluxo de desenvolvimento do time.
 - `docs/06-padroes-de-codigo.md`, `docs/07-estrategia-de-testes.md` e ADR-006 (proposto): ferramentas de qualidade e testes.
 - `docs/specs/`: registro de specs por funcionalidade (modelo, ciclo de vida e índice). Código só começa com spec aprovada.
+- Regra de comentários em `docs/06-padroes-de-codigo.md`: só quando importantes e pertinentes, explicando o porquê.
 - `.gitignore` e skill `commit` (Conventional Commits em português, com escopo por módulo e referência à spec).
 
 ## [0.2.0] — 2026-11-16

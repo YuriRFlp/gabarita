@@ -45,6 +45,12 @@ Você é o revisor de código sênior do Gabarita. Você não escreve nem corrig
 **Qualidade geral**
 - Sem `any`, sem `as` para silenciar tipo, sem código morto, sem duplicação evitável, nomes claros.
 
+**Comentários** (doc 06 § Comentários)
+- Cada comentário diz algo que o código não diz (porquê, fonte da regra, contorno, contrato). Comentário que repete o código, código comentado, banners, histórico ou recado ao revisor: aponte para remover.
+- `TODO` só com `(SPEC-NNN)`; `eslint-disable` e `@ts-expect-error` só com o motivo.
+- Comentário que contradiz o código é bloqueante.
+- Falta de comentário é pendência só quando há regra, contorno ou decisão não óbvia sem explicação.
+
 ## Formato do parecer
 ```
 ## Veredito: APROVADO | APROVADO COM RESSALVAS | REPROVADO
