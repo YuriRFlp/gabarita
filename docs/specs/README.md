@@ -1,0 +1,30 @@
+# Specs — planos técnicos por funcionalidade
+
+Cada funcionalidade do Gabarita tem uma spec registrada aqui **antes** de ser implementada. A spec é o contrato entre o que se pediu, o que se constrói e o que se testa.
+
+## Convenções
+
+- Arquivo: `SPEC-NNN-nome-da-funcionalidade.md` (numeração sequencial, nome em kebab-case, sem acento).
+- Partir sempre do [modelo](_modelo.md).
+- Redigida pelo agente `arquiteto`; aprovada pelo dono do projeto.
+- Spec nunca é apagada. Funcionalidade abandonada recebe o status `cancelada`; mudança grande de rumo gera uma nova spec que substitui a anterior.
+- Mudança de escopo durante a implementação **atualiza a spec primeiro** e registra a alteração no histórico dela.
+- Decisão com alternativas razoáveis que vale para além da funcionalidade vira ADR (`docs/adr/`); a spec apenas o cita.
+
+## Ciclo de vida
+
+| Status | Significado | Quem muda |
+|---|---|---|
+| `rascunho` | Em elaboração ou aguardando aprovação | arquiteto |
+| `aprovada` | Pode ser implementada | dono do projeto |
+| `em-implementacao` | Código em andamento | quem começa a implementar |
+| `concluida` | Definição de pronto cumprida e revisão aprovada | quem fecha a tarefa |
+| `cancelada` | Não será feita (motivo no histórico) | dono do projeto |
+
+Código só começa com a spec `aprovada`.
+
+## Índice
+
+| Spec | Funcionalidade | Status |
+|---|---|---|
+| — | — | — |
