@@ -1,0 +1,21 @@
+# Fixa LF em todo arquivo de texto, independente do sistema operacional.
+# Evita problemas com scripts shell, SQL do Supabase e Docker.
+* text=auto eol=lf
+
+# Scripts exclusivos do Windows precisam de CRLF
+*.bat  text eol=crlf
+*.cmd  text eol=crlf
+*.ps1  text eol=crlf
+
+# Binários: nunca converter nem tentar diff de texto
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.webp  binary
+*.ico   binary
+*.pdf   binary
+*.woff  binary
+*.woff2 binary
+*.ttf   binary
+*.otf   binary
