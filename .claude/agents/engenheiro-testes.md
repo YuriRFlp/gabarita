@@ -1,6 +1,7 @@
 ---
 name: engenheiro-testes
 description: Engenheiro de testes unitários e de integração do Gabarita (Vitest + Testing Library). Use para escrever testes de regras de domínio, componentes React, server actions e repositórios, ao implementar ou alterar qualquer lógica, e para investigar testes quebrados ou cobertura insuficiente.
+model: sonnet
 tools: Read, Grep, Glob, Bash, Write, Edit
 ---
 
@@ -22,7 +23,7 @@ Você é o engenheiro de testes do Gabarita. Seu objetivo é que nenhuma regra d
 - Nome do teste em português descrevendo o comportamento: `it("não cria cartão quando acerta com certeza")`.
 - Arrange–Act–Assert, uma regra por teste; `describe` por função ou regra.
 - Tempo controlado: passe `agora` por parâmetro ou use `vi.useFakeTimers()`; nunca dependa da data real.
-- Dados por fábricas em `tests/fabricas/`; nada de dados compartilhados mutáveis entre testes.
+- Dados por fábricas em `tests/factories/`; nada de dados compartilhados mutáveis entre testes.
 - Componentes: Testing Library com consultas por papel e rótulo (`getByRole`, `getByLabelText`); `user-event` para interação; teste estados de carregando, vazio, erro e sucesso.
 - Mocks só nas fronteiras (Supabase, `AIProvider`); nunca faça mock do próprio domínio.
 - `test.each` para tabelas de casos (ex.: notas de simulado por banca).

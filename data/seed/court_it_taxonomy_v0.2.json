@@ -1,0 +1,2057 @@
+{
+  "meta": {
+    "version": "0.2",
+    "generated_at": "2026-11-17",
+    "incidence_scale": {
+      "0": "ausente",
+      "1": "cobrado com profundidade",
+      "0.5": "parcial ou em nível de noções"
+    },
+    "target_weights": {
+      "trt3": 0.28,
+      "trf6": 0.18,
+      "tjmg": 0.14,
+      "trt1": 0.05,
+      "trt2": 0.05,
+      "trt15": 0.05,
+      "trf2": 0.05,
+      "trt4": 0.04,
+      "trt12": 0.04,
+      "trf4": 0.04,
+      "tjsp": 0.025,
+      "tjrj": 0.025,
+      "tjrs": 0.015,
+      "tjsc": 0.015
+    },
+    "priority_formula": "soma(peso_alvo[concurso] * incidencia[concurso])",
+    "notes": [
+      "TRF-6 = cargo 3 (Análise de Sistemas de Informação)",
+      "Versões de normas mudam entre editais: estudar sempre a mais recente",
+      "v0.2: subtópicos que tinham sido quebrados em vírgulas dentro de parênteses foram reagrupados",
+      "v0.2: novos assuntos direito_penal_adm e arquitetura_computadores; incidência 0 confirmada nos editais dos 4 concursos-alvo (TRT-3 2022 pelo Anexo II, TRF-6 2024, TJMG 2022 e TRT-4 2026)",
+      "TJRJ 2025: escolhida a especialidade Analista de Sistemas entre as 11 de TI do edital",
+      "TJRS 2023: edital exclusivo de TI; Raciocínio Lógico faz parte de Conhecimentos Específicos",
+      "TRT-2 2025: retificação do DOU de 11/06/2025 incorporada (acrescenta os normativos da PDPJ-Br ao conteúdo de TI)",
+      "TRF-4 2025: escolhida a especialidade Análise de Sistemas de Informação; confirmado que o programa não traz banco de dados (só SQL injection, em segurança)",
+      "TRT-12 2023: edital lido a partir de digitalização do DEJT com OCR",
+      "Pesos por faixa: MG (0,60) > federais do Sudeste (0,20) > federais do Sul (0,12) > estaduais do Sudeste (0,05) > estaduais do Sul (0,03); todo concurso de uma faixa pesa mais que qualquer concurso da faixa seguinte",
+      "Dentro de MG mantém-se a proporção anterior: TRT-3 > TRF-6 > TJMG",
+      "v0.2: entram 10 concursos novos, além dos 4 originais: TJSP, TJRS, TJRJ, TJSC, TRF-2, TRT-1, TRT-2, TRT-15, TRT-12 e TRF-4",
+      "v0.2: discursiva da FGV (TJRJ, 1 questão) tratada como technical_question; a da Vunesp (TJSP, 6 questões + 1 estudo de caso) usa o tipo próprio technical_questions_and_case_study"
+    ],
+    "priority_tiers": [
+      {
+        "id": "mg",
+        "description": "Concursos de Minas Gerais",
+        "exams": [
+          "trt3",
+          "trf6",
+          "tjmg"
+        ],
+        "total_weight": 0.6
+      },
+      {
+        "id": "federal_sudeste",
+        "description": "Federais do Sudeste (fora de MG)",
+        "exams": [
+          "trt1",
+          "trt2",
+          "trt15",
+          "trf2"
+        ],
+        "total_weight": 0.2
+      },
+      {
+        "id": "federal_sul",
+        "description": "Federais do Sul",
+        "exams": [
+          "trt4",
+          "trt12",
+          "trf4"
+        ],
+        "total_weight": 0.12
+      },
+      {
+        "id": "estadual_sudeste",
+        "description": "Estaduais do Sudeste (fora de MG)",
+        "exams": [
+          "tjsp",
+          "tjrj"
+        ],
+        "total_weight": 0.05
+      },
+      {
+        "id": "estadual_sul",
+        "description": "Estaduais do Sul",
+        "exams": [
+          "tjrs",
+          "tjsc"
+        ],
+        "total_weight": 0.03
+      }
+    ]
+  },
+  "exams": [
+    {
+      "id": "trt3",
+      "court": "TRT-3 (MG)",
+      "year": 2022,
+      "exam_board": "Fumarc",
+      "position": "Analista Judiciário - Apoio Especializado - TI",
+      "duration_h": 4.5,
+      "objective": {
+        "format": "multiple_choice",
+        "options": 5,
+        "distribution": {
+          "portugues": 15,
+          "informatica": 5,
+          "legislacao": 5,
+          "nocoes_direito": 5,
+          "specific": 30
+        },
+        "passing_rule": "60% do total e nenhuma disciplina zerada"
+      },
+      "essay": {
+        "type": "general_essay",
+        "lines": [
+          20,
+          30
+        ],
+        "points": 50,
+        "minimum": 30,
+        "rubric": "fumarc_redacao"
+      }
+    },
+    {
+      "id": "trt4",
+      "court": "TRT-4 (RS)",
+      "year": 2026,
+      "exam_board": "FCC",
+      "position": "Analista Judiciário - Apoio Especializado - TI",
+      "duration_h": 4,
+      "objective": {
+        "format": "multiple_choice",
+        "options": 5,
+        "distribution": {
+          "general": 30,
+          "specific": 30
+        },
+        "weights": {
+          "general": 1,
+          "specific": 2
+        },
+        "passing_rule": "nota ponderada >= 6,00 (escala 0-10)"
+      },
+      "essay": {
+        "type": "general_essay",
+        "lines": [
+          20,
+          30
+        ],
+        "points": 10,
+        "minimum": 6,
+        "rubric": "fcc_redacao"
+      }
+    },
+    {
+      "id": "tjmg",
+      "court": "TJMG",
+      "year": 2022,
+      "exam_board": "IBFC",
+      "position": "Analista Judiciário - Analista de TI",
+      "duration_h": 5,
+      "objective": {
+        "format": "multiple_choice",
+        "distribution": {
+          "portugues": 15,
+          "nocoes_direito": 15,
+          "ingles": 5,
+          "specific": 20,
+          "raciocinio_logico": 5
+        }
+      },
+      "essay": {
+        "type": "technical_case_study",
+        "lines": [
+          25,
+          30
+        ],
+        "points": 40,
+        "minimum": 20,
+        "rubric": "ibfc_estudo_caso"
+      }
+    },
+    {
+      "id": "trf6",
+      "court": "TRF-6 (MG)",
+      "year": 2024,
+      "exam_board": "Cebraspe",
+      "position": "Analista Judiciário - Análise de Sistemas de Informação",
+      "duration_h": 4.5,
+      "objective": {
+        "format": "true_false",
+        "items": {
+          "general": 50,
+          "specific": 70
+        },
+        "scoring": {
+          "correct": 1,
+          "wrong": -1,
+          "blank": 0
+        },
+        "minimums": {
+          "general": 10,
+          "specific": 20
+        }
+      },
+      "essay": {
+        "type": "general_essay",
+        "lines": [
+          0,
+          30
+        ],
+        "points": 20,
+        "minimum": 10,
+        "rubric": "cebraspe_redacao"
+      }
+    },
+    {
+      "id": "tjsp",
+      "court": "TJSP",
+      "year": 2025,
+      "exam_board": "Vunesp",
+      "position": "Analista de Sistemas Judiciário",
+      "notice": "Edital nº 01/2025 – Analista de Sistemas Judiciário (Comarca da Capital)",
+      "duration_h": 4,
+      "objective": {
+        "format": "multiple_choice",
+        "options": 5,
+        "distribution": {
+          "portugues": 10,
+          "specific": 50,
+          "raciocinio_logico": 5,
+          "legislacao": 5
+        },
+        "max_score": 7,
+        "minimums": {
+          "portugues": 5,
+          "specific": 25
+        },
+        "passing_rule": "nota >= 3,5 (escala 0-7); mínimo de 50% em Língua Portuguesa e em Conhecimentos Específicos; Conhecimentos Gerais (raciocínio lógico e legislação) só classificatórios"
+      },
+      "essay": {
+        "type": "technical_questions_and_case_study",
+        "questions": 6,
+        "case_studies": 1,
+        "subject": "Conhecimentos Específicos",
+        "lines": null,
+        "points": 3,
+        "minimum": 1.2,
+        "duration_h": 4,
+        "rubric": "vunesp_tjsp_discursiva"
+      },
+      "credentials": {
+        "points": 3
+      }
+    },
+    {
+      "id": "tjrs",
+      "court": "TJRS",
+      "year": 2023,
+      "exam_board": "Vunesp",
+      "position": "Analista de Tecnologia da Informação – Análise de Sistemas",
+      "notice": "Edital de abertura de 11/05/2023 (DJE-RS nº 7.435) – concurso exclusivo de TI",
+      "duration_h": 5,
+      "objective": {
+        "format": "multiple_choice",
+        "options": 5,
+        "distribution": {
+          "portugues": 16,
+          "specific": 40,
+          "ingles": 12,
+          "legislacao": 12
+        },
+        "minimums": {
+          "portugues": 1,
+          "specific": 20,
+          "ingles": 1,
+          "legislacao": 1,
+          "total": 40
+        },
+        "passing_rule": "mínimo de 40 acertos no total (50%), 20 em Conhecimentos Específicos e 1 em cada uma das demais partes"
+      },
+      "essay": null,
+      "credentials": {
+        "points": null
+      }
+    },
+    {
+      "id": "tjrj",
+      "court": "TJRJ",
+      "year": 2025,
+      "exam_board": "FGV",
+      "position": "Analista Judiciário – Tecnologia da Informação – Analista de Sistemas",
+      "notice": "Edital nº 01/2025 – LXII Concurso para Analista Judiciário",
+      "duration_h": 5,
+      "objective": {
+        "format": "multiple_choice",
+        "options": 5,
+        "distribution": {
+          "portugues": 20,
+          "legislacao_etica_pcd": 10,
+          "specific": 40
+        },
+        "minimums": {
+          "general": 12,
+          "specific": 20,
+          "total": 35
+        },
+        "passing_rule": "mínimo de 12 acertos em Conhecimentos Gerais, 20 em Conhecimentos Específicos e 35 no total",
+        "note": "Conhecimentos Específicos incluem Noções de Direito Constitucional, Administrativo e Legislação (normativos PDPJ-Br e crimes contra a administração)"
+      },
+      "essay": {
+        "type": "technical_question",
+        "questions": 1,
+        "lines": null,
+        "points": 20,
+        "minimum": 8,
+        "rubric": "fgv_tjrj_discursiva",
+        "note": "aplicada no mesmo período da objetiva (5 h no total); o edital não fixa o tema nem o número de linhas"
+      },
+      "credentials": {
+        "points": 6
+      }
+    },
+    {
+      "id": "tjsc",
+      "court": "TJSC",
+      "year": 2026,
+      "exam_board": "FGV",
+      "position": "Analista de Sistemas",
+      "notice": "Edital nº 10/2026 (retificado em 10/04/2026)",
+      "duration_h": 4,
+      "objective": {
+        "format": "multiple_choice",
+        "options": 5,
+        "distribution": {
+          "general": 30,
+          "specific": 50
+        },
+        "detailed_distribution": {
+          "portugues": 10,
+          "legislacao_pjsc": 6,
+          "etica_gestao": 4,
+          "informatica_protecao_dados": 5,
+          "direitos_humanos": 5,
+          "eng_software_desenvolvimento": 10,
+          "arquitetura_integracao": 10,
+          "banco_dados_eng_dados": 8,
+          "infra_nuvem": 8,
+          "seguranca_governanca": 8,
+          "governanca_projetos_setor_publico": 6
+        },
+        "minimums": {
+          "specific": 30,
+          "total": 48
+        },
+        "passing_rule": "mínimo de 30 acertos em Conhecimentos Específicos e 48 no total"
+      },
+      "essay": null
+    },
+    {
+      "id": "trf2",
+      "court": "TRF-2 (RJ/ES)",
+      "year": 2024,
+      "exam_board": "Instituto AOCP",
+      "position": "Analista Judiciário – Apoio Especializado – Tecnologia da Informação",
+      "notice": "Edital de Abertura nº 1/2024 e Anexo II (conteúdos programáticos)",
+      "duration_h": 5,
+      "objective": {
+        "format": "multiple_choice",
+        "options": 5,
+        "distribution": {
+          "general": 10,
+          "specific": 30
+        },
+        "weights": {
+          "general": 1,
+          "specific": 2
+        },
+        "max_score": 70,
+        "passing_rule": "mínimo de 50% dos pontos em gerais e em específicos, e 60% do total"
+      },
+      "essay": {
+        "type": "technical_case_study",
+        "questions": 3,
+        "lines": [
+          0,
+          15
+        ],
+        "lines_per": "question",
+        "points": 30,
+        "minimum": 18,
+        "rubric": "aocp_trf2_estudo_caso",
+        "note": "aplicada junto com a objetiva (5 h no total)"
+      }
+    },
+    {
+      "id": "trt1",
+      "court": "TRT-1 (RJ)",
+      "year": 2025,
+      "exam_board": "FCC",
+      "position": "Analista Judiciário – Apoio Especializado – Tecnologia da Informação",
+      "notice": "Edital nº 01/2025 de Abertura de Inscrições (código Q17)",
+      "duration_h": 4.5,
+      "objective": {
+        "format": "multiple_choice",
+        "options": 5,
+        "distribution": {
+          "general": 30,
+          "specific": 30
+        },
+        "weights": {
+          "general": 1,
+          "specific": 2
+        },
+        "passing_rule": "média ponderada (pesos 1 e 2) >= 6,00 na escala 0-10",
+        "detailed_distribution": {
+          "portugues": 10,
+          "raciocinio_logico": 5,
+          "legislacao": 5,
+          "direitos_humanos": 5,
+          "direito_administrativo": 5
+        }
+      },
+      "essay": {
+        "type": "technical_case_study",
+        "questions": 1,
+        "lines": [
+          0,
+          15
+        ],
+        "lines_per": "question",
+        "points": 10,
+        "minimum": 6,
+        "rubric": "fcc_estudo_caso",
+        "subject": "Conhecimentos Específicos",
+        "note": "aplicada junto com a objetiva"
+      }
+    },
+    {
+      "id": "trt2",
+      "court": "TRT-2 (SP)",
+      "year": 2025,
+      "exam_board": "FCC",
+      "position": "Analista Judiciário – Apoio Especializado – Tecnologia da Informação",
+      "notice": "Edital nº 1, de 11/04/2025 (DOU de 15/04/2025), código M13, com a retificação de conteúdo de TI publicada no DOU de 11/06/2025",
+      "duration_h": 4,
+      "objective": {
+        "format": "multiple_choice",
+        "options": 5,
+        "distribution": {
+          "general": 20,
+          "specific": 40
+        },
+        "weights": {
+          "general": 1,
+          "specific": 3
+        },
+        "passing_rule": "média ponderada (pesos 1 e 3) >= 6,00 na escala 0-10",
+        "note": "Conhecimentos Gerais: Língua Portuguesa, Raciocínio Lógico-Matemático, Direitos das Pessoas com Deficiência e Código de Ética do TRT-2"
+      },
+      "essay": {
+        "type": "general_essay",
+        "lines": [
+          20,
+          30
+        ],
+        "points": 10,
+        "minimum": 6,
+        "rubric": "fcc_redacao_trt2"
+      }
+    },
+    {
+      "id": "trt15",
+      "court": "TRT-15 (Campinas)",
+      "year": 2024,
+      "exam_board": "FCC",
+      "position": "Analista Judiciário – Apoio Especializado – Tecnologia da Informação",
+      "notice": "Edital nº 01/2024 de Abertura de Inscrições (código 24)",
+      "duration_h": 4.5,
+      "objective": {
+        "format": "multiple_choice",
+        "options": 5,
+        "distribution": {
+          "general": 20,
+          "specific": 40
+        },
+        "weights": {
+          "general": 1,
+          "specific": 3
+        },
+        "passing_rule": "média ponderada (pesos 1 e 3) >= 6,00 na escala 0-10",
+        "note": "Conhecimentos Gerais: Língua Portuguesa, Raciocínio Lógico-Matemático, Direitos das Pessoas com Deficiência, Código de Ética e Regimento Interno do TRT-15, Noções de Administração Pública e Legislação (Lei 8.112/1990, Lei 8.429/1992, LGPD)"
+      },
+      "essay": {
+        "type": "technical_case_study",
+        "questions": 2,
+        "lines": [
+          0,
+          15
+        ],
+        "lines_per": "question",
+        "points": 10,
+        "minimum": 6,
+        "rubric": "fcc_estudo_caso",
+        "subject": "Conhecimentos Específicos",
+        "note": "nota é a média das questões; aplicada junto com a objetiva"
+      }
+    },
+    {
+      "id": "trt12",
+      "court": "TRT-12 (SC)",
+      "year": 2023,
+      "exam_board": "FCC",
+      "position": "Analista Judiciário – Apoio Especializado – Tecnologia da Informação",
+      "notice": "Edital nº 001/2023 (DEJT de 24/07/2023), código H08",
+      "duration_h": 3,
+      "objective": {
+        "format": "multiple_choice",
+        "options": 5,
+        "distribution": {
+          "general": 20,
+          "specific": 40
+        },
+        "weights": {
+          "general": 1,
+          "specific": 3
+        },
+        "passing_rule": "média ponderada (pesos 1 e 3) >= 6,00 na escala 0-10",
+        "note": "Conhecimentos Gerais: Língua Portuguesa, Matemática e Raciocínio Lógico, Legislação (Lei 8.112/1990, Regimento Interno do TRT-12, Res. CNJ 400/2021)"
+      },
+      "essay": null
+    },
+    {
+      "id": "trf4",
+      "court": "TRF-4 (RS/SC/PR)",
+      "year": 2025,
+      "exam_board": "FCC",
+      "position": "Analista Judiciário – Apoio Especializado – Análise de Sistemas de Informação",
+      "notice": "Edital TRF4 nº 1/2025 (DE Administrativo nº 82, de 08/04/2025), código 03",
+      "duration_h": 4,
+      "objective": {
+        "format": "multiple_choice",
+        "options": 5,
+        "distribution": {
+          "general": 20,
+          "specific": 30
+        },
+        "weights": {
+          "general": 1,
+          "specific": 2
+        },
+        "passing_rule": "média ponderada (pesos 1 e 2) >= 6,00 na escala 0-10",
+        "note": "Conhecimentos Gerais: Língua Portuguesa, Direitos das Pessoas com Deficiência, Inteligência Artificial e Inovação (Res. CNJ 332/2020 e 395/2021), Sustentabilidade e Noções de Direito Administrativo"
+      },
+      "essay": {
+        "type": "technical_case_study",
+        "questions": 1,
+        "lines": [
+          0,
+          20
+        ],
+        "lines_per": "question",
+        "points": 10,
+        "minimum": 6,
+        "rubric": "fcc_estudo_caso",
+        "subject": "Conhecimentos Específicos",
+        "note": "aplicada junto com a objetiva"
+      }
+    }
+  ],
+  "rubrics": {
+    "fumarc_redacao": {
+      "criteria": [
+        {
+          "id": "AI",
+          "name": "Argumentação e informatividade",
+          "max": 15,
+          "bands": {
+            "poor": [
+              0,
+              4
+            ],
+            "fair": [
+              5,
+              8
+            ],
+            "good": [
+              9,
+              12
+            ],
+            "very_good": [
+              13,
+              15
+            ]
+          }
+        },
+        {
+          "id": "CC",
+          "name": "Coerência e coesão",
+          "max": 15,
+          "bands": {
+            "poor": [
+              0,
+              4
+            ],
+            "fair": [
+              5,
+              8
+            ],
+            "good": [
+              9,
+              12
+            ],
+            "very_good": [
+              13,
+              15
+            ]
+          }
+        },
+        {
+          "id": "M",
+          "name": "Morfossintaxe",
+          "max": 10,
+          "deduction_per_error": 1
+        },
+        {
+          "id": "PO",
+          "name": "Pontuação, acentuação e ortografia",
+          "max": 10,
+          "deduction_per_error": 1
+        }
+      ],
+      "zeroed_if": [
+        "menos de 20 linhas",
+        "fuga ao conteúdo",
+        "letra ilegível",
+        "lápis",
+        "identificação indevida"
+      ]
+    },
+    "fcc_redacao": {
+      "criteria": [
+        {
+          "id": "recorte",
+          "name": "Recorte temático",
+          "max": 2
+        },
+        {
+          "id": "textos_apoio",
+          "name": "Interpretação crítica dos textos de apoio",
+          "max": 2
+        },
+        {
+          "id": "progressao",
+          "name": "Progressão textual",
+          "max": 3
+        },
+        {
+          "id": "vocabulario",
+          "name": "Propriedade vocabular",
+          "max": 0.8
+        },
+        {
+          "id": "coesao",
+          "name": "Coesão textual",
+          "max": 1.6
+        },
+        {
+          "id": "morfossintaxe",
+          "name": "Morfossintaxe",
+          "max": 0.6
+        }
+      ],
+      "zeroed_if": [
+        "fuga ao tema ou ao gênero",
+        "até 7 linhas",
+        "identificação",
+        "cópia de modelos prontos"
+      ]
+    },
+    "ibfc_estudo_caso": {
+      "criteria": [
+        {
+          "id": "estrutura",
+          "name": "Estrutura dissertativo-argumentativa",
+          "max": 10
+        },
+        {
+          "id": "conteudo",
+          "name": "Conteúdo: fidelidade ao tema, argumentação, senso crítico",
+          "max": 20
+        },
+        {
+          "id": "expressao",
+          "name": "Expressão: norma culta, clareza, coesão",
+          "max": 10
+        }
+      ],
+      "zeroed_if": [
+        "nota zero em qualquer critério elimina"
+      ]
+    },
+    "cebraspe_redacao": {
+      "formula": "NPD = NC - 4 * NE / TL",
+      "NC_max": 20,
+      "legend": {
+        "NC": "nota de conteúdo",
+        "NE": "número de erros de língua",
+        "TL": "linhas escritas"
+      },
+      "technical_variant": {
+        "usage": "questão dissertativa técnica de até 45 linhas (cargos específicos)",
+        "formula": "NPD = NC - 6 * NE / TL",
+        "NC_max": 30
+      }
+    },
+    "vunesp_tjsp_discursiva": {
+      "criteria": [
+        {
+          "id": "questao",
+          "name": "Questão dissertativa (cada uma das 6)",
+          "max": 0.36,
+          "quantity": 6
+        },
+        {
+          "id": "estudo_caso",
+          "name": "Estudo de caso",
+          "max": 0.84,
+          "quantity": 1
+        }
+      ],
+      "assessed_aspects": [
+        "conhecimento e capacidade teórico-prática",
+        "organização do texto",
+        "análise e síntese dos fatos",
+        "correção gramatical",
+        "raciocínio",
+        "fundamentação e consistência",
+        "interpretação e exposição"
+      ],
+      "zeroed_if": [
+        "resposta inadequada ao caso proposto",
+        "identificação do candidato",
+        "uso de corretor ou marca-texto",
+        "em branco",
+        "texto não articulado verbalmente ou fora da língua portuguesa",
+        "letra ilegível",
+        "texto definitivo fora do espaço reservado",
+        "cópia do texto base ou fatos estranhos à proposta"
+      ]
+    },
+    "fgv_tjrj_discursiva": {
+      "criteria": [
+        {
+          "id": "questao",
+          "name": "Questão discursiva",
+          "max": 20
+        }
+      ],
+      "assessed_aspects": [
+        "acerto das respostas",
+        "grau de conhecimento do tema",
+        "fluência e coerência da exposição"
+      ],
+      "zeroed_if": [
+        "escrita a lápis",
+        "em branco",
+        "letra ilegível"
+      ],
+      "eliminated_if": [
+        "identificação do candidato na folha definitiva",
+        "não devolver a folha de textos definitivos"
+      ]
+    },
+    "aocp_trf2_estudo_caso": {
+      "per": "question",
+      "questions": 3,
+      "criteria": [
+        {
+          "id": "conhecimento_tecnico",
+          "name": "Conhecimento técnico sobre a matéria",
+          "max": 6
+        },
+        {
+          "id": "argumentacao",
+          "name": "Clareza na argumentação e senso crítico",
+          "max": 2
+        },
+        {
+          "id": "lingua",
+          "name": "Língua Portuguesa, clareza e coerência",
+          "max": 2
+        }
+      ],
+      "passing_rule": "50% ou mais em cada estudo de caso, nenhum aspecto com nota zero e 60% ou mais do total",
+      "line_limit": 15
+    },
+    "fcc_estudo_caso": {
+      "criteria": [
+        {
+          "id": "questao",
+          "name": "Questão prática (cada uma)",
+          "max": 10
+        }
+      ],
+      "assessed_aspects": [
+        "domínio do conteúdo dos temas abordados",
+        "experiência prévia e adequação às atribuições do cargo",
+        "correção gramatical",
+        "atendimento à grade de correção da banca"
+      ],
+      "penalized_if": [
+        "abordagem tangencial, parcial ou diluída em divagações",
+        "cópia de textos ou de questões da prova",
+        "texto além do limite de linhas"
+      ],
+      "zeroed_if": [
+        "fuga ao tema",
+        "texto não articulado verbalmente ou fora do local apropriado",
+        "identificação do candidato",
+        "em branco",
+        "letra ilegível",
+        "não atender aos requisitos da grade de correção"
+      ]
+    },
+    "fcc_redacao_trt2": {
+      "criteria": [
+        {
+          "id": "conteudo",
+          "name": "Conteúdo",
+          "max": 4
+        },
+        {
+          "id": "estrutura",
+          "name": "Estrutura",
+          "max": 3
+        },
+        {
+          "id": "expressao",
+          "name": "Expressão",
+          "max": 3
+        }
+      ],
+      "zeroed_if": [
+        "fuga à modalidade ou ao tema",
+        "texto não articulado verbalmente ou fora do local apropriado",
+        "assinatura fora do local apropriado",
+        "identificação do candidato",
+        "em branco",
+        "letra ilegível"
+      ]
+    }
+  },
+  "taxonomy": {
+    "specific": [
+      {
+        "id": "pdpj_stack",
+        "category": "specific",
+        "name": "Stack da PDPJ-Br",
+        "subtopics": [
+          "Java",
+          "Spring Boot/Cloud",
+          "Eureka",
+          "Zuul",
+          "Swagger",
+          "API Gateway",
+          "JPA/Hibernate/Envers",
+          "Flyway",
+          "PostgreSQL/H2",
+          "Keycloak/OAuth2/OIDC",
+          "RabbitMQ/webhooks",
+          "Kubernetes/Rancher"
+        ],
+        "incidence": {
+          "trt3": 1,
+          "trt4": 1,
+          "tjmg": 1,
+          "trf6": 1,
+          "tjsp": 1,
+          "tjrs": 1,
+          "tjrj": 1,
+          "tjsc": 1,
+          "trf2": 1,
+          "trt1": 1,
+          "trt2": 1,
+          "trt15": 1,
+          "trt12": 1,
+          "trf4": 1
+        },
+        "priority": 1,
+        "profile": "systems",
+        "phase": "pre_notice"
+      },
+      {
+        "id": "devops_cicd",
+        "category": "specific",
+        "name": "DevOps, DevSecOps e CI/CD",
+        "subtopics": [
+          "Git/Gitflow",
+          "Jenkins",
+          "Maven",
+          "GitLab CI",
+          "pipelines",
+          "deploy contínuo",
+          "Docker",
+          "infraestrutura como código (Ansible, Terraform)",
+          "Kubernetes",
+          "SVN"
+        ],
+        "incidence": {
+          "trt3": 1,
+          "trt4": 1,
+          "tjmg": 1,
+          "trf6": 1,
+          "tjsp": 1,
+          "tjrs": 1,
+          "tjrj": 1,
+          "tjsc": 1,
+          "trf2": 1,
+          "trt1": 1,
+          "trt2": 1,
+          "trt15": 1,
+          "trt12": 1,
+          "trf4": 1
+        },
+        "priority": 1,
+        "profile": "systems",
+        "phase": "pre_notice"
+      },
+      {
+        "id": "arquitetura",
+        "category": "specific",
+        "name": "Arquitetura de sistemas",
+        "subtopics": [
+          "cliente-servidor",
+          "camadas",
+          "monolito x microsserviços",
+          "orientada a eventos",
+          "SOA",
+          "DDD",
+          "design patterns",
+          "resiliência (cache, fallback, circuit breaker)",
+          "MVC",
+          "arquitetura limpa",
+          "princípios SOLID"
+        ],
+        "incidence": {
+          "trt3": 1,
+          "trt4": 1,
+          "tjmg": 1,
+          "trf6": 1,
+          "tjsp": 1,
+          "tjrs": 1,
+          "tjrj": 1,
+          "tjsc": 1,
+          "trf2": 1,
+          "trt1": 1,
+          "trt2": 1,
+          "trt15": 1,
+          "trt12": 1,
+          "trf4": 1
+        },
+        "priority": 1,
+        "profile": "systems",
+        "phase": "pre_notice"
+      },
+      {
+        "id": "linguagens_poo",
+        "category": "specific",
+        "name": "Linguagens e orientação a objetos",
+        "subtopics": [
+          "Java",
+          "Python",
+          "JavaScript/TypeScript",
+          "C#/.NET",
+          "PHP",
+          "POO",
+          "exceções",
+          "coleções",
+          "algoritmos e estruturas de dados"
+        ],
+        "incidence": {
+          "trt3": 1,
+          "trt4": 1,
+          "tjmg": 0.5,
+          "trf6": 1,
+          "tjsp": 1,
+          "tjrs": 1,
+          "tjrj": 1,
+          "tjsc": 1,
+          "trf2": 1,
+          "trt1": 1,
+          "trt2": 1,
+          "trt15": 1,
+          "trt12": 1,
+          "trf4": 1
+        },
+        "priority": 0.93,
+        "profile": "systems",
+        "phase": "pre_notice"
+      },
+      {
+        "id": "criptografia",
+        "category": "specific",
+        "name": "Criptografia e certificação digital",
+        "subtopics": [
+          "simétrica",
+          "assimétrica",
+          "hash",
+          "assinatura e certificado digital",
+          "TLS"
+        ],
+        "incidence": {
+          "trt3": 1,
+          "trt4": 1,
+          "tjmg": 1,
+          "trf6": 1,
+          "tjsp": 0,
+          "tjrs": 1,
+          "tjrj": 0,
+          "tjsc": 0,
+          "trf2": 0.5,
+          "trt1": 1,
+          "trt2": 1,
+          "trt15": 1,
+          "trt12": 1,
+          "trf4": 1
+        },
+        "priority": 0.91,
+        "profile": "common",
+        "phase": "pre_notice"
+      },
+      {
+        "id": "ageis",
+        "category": "specific",
+        "name": "Métodos ágeis",
+        "subtopics": [
+          "Manifesto Ágil",
+          "Scrum",
+          "Kanban",
+          "XP",
+          "Lean"
+        ],
+        "incidence": {
+          "trt3": 1,
+          "trt4": 1,
+          "tjmg": 1,
+          "trf6": 1,
+          "tjsp": 1,
+          "tjrs": 1,
+          "tjrj": 0.5,
+          "tjsc": 0.5,
+          "trf2": 1,
+          "trt1": 1,
+          "trt2": 0.5,
+          "trt15": 0.5,
+          "trt12": 0.5,
+          "trf4": 0.5
+        },
+        "priority": 0.89,
+        "profile": "common",
+        "phase": "pre_notice"
+      },
+      {
+        "id": "banco_dados",
+        "category": "specific",
+        "name": "Banco de dados e SQL",
+        "subtopics": [
+          "modelo ER",
+          "normalização",
+          "SQL DDL/DML/DCL",
+          "transações",
+          "PL/SQL",
+          "PostgreSQL",
+          "Oracle",
+          "NoSQL"
+        ],
+        "incidence": {
+          "trt3": 1,
+          "trt4": 1,
+          "tjmg": 0.5,
+          "trf6": 1,
+          "tjsp": 1,
+          "tjrs": 1,
+          "tjrj": 1,
+          "tjsc": 1,
+          "trf2": 1,
+          "trt1": 1,
+          "trt2": 1,
+          "trt15": 1,
+          "trt12": 1,
+          "trf4": 0
+        },
+        "priority": 0.89,
+        "profile": "systems",
+        "phase": "pre_notice"
+      },
+      {
+        "id": "ingles",
+        "category": "specific",
+        "name": "Inglês técnico",
+        "subtopics": [
+          "leitura de textos técnicos"
+        ],
+        "incidence": {
+          "trt3": 1,
+          "trt4": 1,
+          "tjmg": 1,
+          "trf6": 1,
+          "tjsp": 0,
+          "tjrs": 1,
+          "tjrj": 0,
+          "tjsc": 0,
+          "trf2": 0,
+          "trt1": 1,
+          "trt2": 1,
+          "trt15": 1,
+          "trt12": 1,
+          "trf4": 1
+        },
+        "priority": 0.885,
+        "profile": "common",
+        "phase": "pre_notice"
+      },
+      {
+        "id": "cnj_normativos",
+        "category": "specific",
+        "name": "Normativos do CNJ para TI",
+        "subtopics": [
+          "Res. 335/2020",
+          "Res. 522/2023 (MoReq-Jus, substituiu a Res. 91/2009)",
+          "Portarias 252/253/2020 e 131/2021",
+          "Portaria 284/2021 (altera a Portaria 252/2020)",
+          "Res. 396/2021 (ENSEC-PJ)",
+          "Portaria 162/2021",
+          "Portaria 257/2022 (PDPJ-Br)",
+          "Res. 443/2022",
+          "ENTIC-JUD (Res. 370/2021)",
+          "Res. 574/2024 (MoReq-Jus 2ª edição)"
+        ],
+        "incidence": {
+          "trt3": 1,
+          "trt4": 1,
+          "tjmg": 0.5,
+          "trf6": 1,
+          "tjsp": 1,
+          "tjrs": 1,
+          "tjrj": 1,
+          "tjsc": 1,
+          "trf2": 1,
+          "trt1": 1,
+          "trt2": 1,
+          "trt15": 0,
+          "trt12": 1,
+          "trf4": 1
+        },
+        "priority": 0.88,
+        "profile": "common",
+        "phase": "pre_notice"
+      },
+      {
+        "id": "seg_gestao",
+        "category": "specific",
+        "name": "Gestão de segurança da informação",
+        "subtopics": [
+          "ISO 27001/27002/27005/27701",
+          "NIST CSF",
+          "CIS Controls",
+          "continuidade (ISO 22301)"
+        ],
+        "incidence": {
+          "trt3": 1,
+          "trt4": 1,
+          "tjmg": 1,
+          "trf6": 0.5,
+          "tjsp": 0,
+          "tjrs": 1,
+          "tjrj": 0.5,
+          "tjsc": 0.5,
+          "trf2": 0.5,
+          "trt1": 1,
+          "trt2": 1,
+          "trt15": 1,
+          "trt12": 1,
+          "trf4": 1
+        },
+        "priority": 0.84,
+        "profile": "common",
+        "phase": "pre_notice"
+      },
+      {
+        "id": "seg_aplicacoes",
+        "category": "specific",
+        "name": "Segurança de aplicações",
+        "subtopics": [
+          "OWASP Top 10",
+          "desenvolvimento seguro",
+          "SDL",
+          "NIST SSDF"
+        ],
+        "incidence": {
+          "trt3": 1,
+          "trt4": 1,
+          "tjmg": 0.5,
+          "trf6": 1,
+          "tjsp": 1,
+          "tjrs": 0.5,
+          "tjrj": 0.5,
+          "tjsc": 0.5,
+          "trf2": 0.5,
+          "trt1": 0.5,
+          "trt2": 1,
+          "trt15": 1,
+          "trt12": 0.5,
+          "trf4": 1
+        },
+        "priority": 0.8325,
+        "profile": "systems",
+        "phase": "pre_notice"
+      },
+      {
+        "id": "frontend",
+        "category": "specific",
+        "name": "Desenvolvimento web front-end e mobile",
+        "subtopics": [
+          "HTML5",
+          "CSS3",
+          "Angular",
+          "React",
+          "Bootstrap",
+          "acessibilidade (WCAG/eMAG)",
+          "desenvolvimento mobile (nativo e híbrido, Flutter)",
+          "usabilidade e UX"
+        ],
+        "incidence": {
+          "trt3": 1,
+          "trt4": 1,
+          "tjmg": 0,
+          "trf6": 1,
+          "tjsp": 1,
+          "tjrs": 1,
+          "tjrj": 0,
+          "tjsc": 0,
+          "trf2": 0.5,
+          "trt1": 1,
+          "trt2": 1,
+          "trt15": 1,
+          "trt12": 1,
+          "trf4": 1
+        },
+        "priority": 0.795,
+        "profile": "systems",
+        "phase": "pre_notice"
+      },
+      {
+        "id": "bi_dados",
+        "category": "specific",
+        "name": "BI e engenharia de dados",
+        "subtopics": [
+          "data warehouse",
+          "data mart",
+          "ETL",
+          "OLAP",
+          "data mining",
+          "modelagem dimensional",
+          "data lake e big data (Spark, Hadoop)"
+        ],
+        "incidence": {
+          "trt3": 1,
+          "trt4": 0,
+          "tjmg": 0.5,
+          "trf6": 1,
+          "tjsp": 1,
+          "tjrs": 1,
+          "tjrj": 1,
+          "tjsc": 1,
+          "trf2": 0.5,
+          "trt1": 0,
+          "trt2": 1,
+          "trt15": 1,
+          "trt12": 0.5,
+          "trf4": 0
+        },
+        "priority": 0.755,
+        "profile": "systems",
+        "phase": "pre_notice"
+      },
+      {
+        "id": "eng_software",
+        "category": "specific",
+        "name": "Engenharia de software e requisitos",
+        "subtopics": [
+          "processos de software",
+          "CMMI",
+          "ISO/IEC/IEEE 12207",
+          "MPS.BR",
+          "UML",
+          "requisitos (IREB/BABOK)",
+          "pontos de função",
+          "RUP",
+          "Roteiro de Métricas do SISP",
+          "análise de negócios",
+          "low-code e no-code"
+        ],
+        "incidence": {
+          "trt3": 0,
+          "trt4": 1,
+          "tjmg": 1,
+          "trf6": 1,
+          "tjsp": 1,
+          "tjrs": 1,
+          "tjrj": 1,
+          "tjsc": 1,
+          "trf2": 1,
+          "trt1": 1,
+          "trt2": 1,
+          "trt15": 1,
+          "trt12": 1,
+          "trf4": 1
+        },
+        "priority": 0.72,
+        "profile": "systems",
+        "phase": "pre_notice"
+      },
+      {
+        "id": "lgpd",
+        "category": "specific",
+        "name": "LGPD e privacidade",
+        "subtopics": [
+          "Lei 13.709/2018"
+        ],
+        "incidence": {
+          "trt3": 1,
+          "trt4": 1,
+          "tjmg": 1,
+          "trf6": 0.5,
+          "tjsp": 0.5,
+          "tjrs": 1,
+          "tjrj": 1,
+          "tjsc": 1,
+          "trf2": 0,
+          "trt1": 0,
+          "trt2": 0.5,
+          "trt15": 1,
+          "trt12": 0,
+          "trf4": 0.5
+        },
+        "priority": 0.7125,
+        "profile": "common",
+        "phase": "pre_notice"
+      },
+      {
+        "id": "ia_ml",
+        "category": "specific",
+        "name": "Inteligência artificial e aprendizado de máquina",
+        "subtopics": [
+          "pré-processamento",
+          "supervisionado x não supervisionado",
+          "métricas",
+          "ROC",
+          "overfitting",
+          "redes neurais",
+          "LLMs",
+          "scikit-learn/keras/pytorch",
+          "ética em IA",
+          "processamento de linguagem natural",
+          "IA no Judiciário (Res. CNJ 332/2020) e IA generativa",
+          "MLOps"
+        ],
+        "incidence": {
+          "trt3": 1,
+          "trt4": 1,
+          "tjmg": 0,
+          "trf6": 1,
+          "tjsp": 1,
+          "tjrs": 0.5,
+          "tjrj": 0,
+          "tjsc": 0,
+          "trf2": 0.5,
+          "trt1": 0,
+          "trt2": 1,
+          "trt15": 1,
+          "trt12": 0,
+          "trf4": 1
+        },
+        "priority": 0.6975,
+        "profile": "systems",
+        "phase": "pre_notice"
+      },
+      {
+        "id": "governanca_ti",
+        "category": "specific",
+        "name": "Governança e serviços de TI",
+        "subtopics": [
+          "COBIT 2019",
+          "ITIL 4/5",
+          "ISO 38500/20000",
+          "PDTIC",
+          "OKR"
+        ],
+        "incidence": {
+          "trt3": 0.5,
+          "trt4": 1,
+          "tjmg": 1,
+          "trf6": 1,
+          "tjsp": 0,
+          "tjrs": 1,
+          "tjrj": 1,
+          "tjsc": 1,
+          "trf2": 1,
+          "trt1": 1,
+          "trt2": 0,
+          "trt15": 0,
+          "trt12": 1,
+          "trf4": 0
+        },
+        "priority": 0.695,
+        "profile": "common",
+        "phase": "pre_notice"
+      },
+      {
+        "id": "seg_infra",
+        "category": "specific",
+        "name": "Segurança de infraestrutura",
+        "subtopics": [
+          "firewall",
+          "IDS/IPS",
+          "SIEM",
+          "VPN",
+          "ZTNA",
+          "PAM",
+          "ataques (DDoS, phishing, APT)",
+          "malware"
+        ],
+        "incidence": {
+          "trt3": 1,
+          "trt4": 1,
+          "tjmg": 0.5,
+          "trf6": 0,
+          "tjsp": 0,
+          "tjrs": 1,
+          "tjrj": 0,
+          "tjsc": 0,
+          "trf2": 1,
+          "trt1": 1,
+          "trt2": 1,
+          "trt15": 1,
+          "trt12": 1,
+          "trf4": 1
+        },
+        "priority": 0.685,
+        "profile": "infra",
+        "phase": "pre_notice"
+      },
+      {
+        "id": "nuvem_virtualizacao",
+        "category": "specific",
+        "name": "Nuvem e virtualização",
+        "subtopics": [
+          "IaaS/PaaS/SaaS",
+          "NIST SP 800-145",
+          "virtualização",
+          "hiperconvergência",
+          "SDN"
+        ],
+        "incidence": {
+          "trt3": 1,
+          "trt4": 0,
+          "tjmg": 1,
+          "trf6": 0,
+          "tjsp": 0.5,
+          "tjrs": 1,
+          "tjrj": 1,
+          "tjsc": 1,
+          "trf2": 1,
+          "trt1": 0,
+          "trt2": 1,
+          "trt15": 1,
+          "trt12": 0,
+          "trf4": 1
+        },
+        "priority": 0.6775,
+        "profile": "infra",
+        "phase": "pre_notice"
+      },
+      {
+        "id": "testes_qualidade",
+        "category": "specific",
+        "name": "Testes e qualidade de código",
+        "subtopics": [
+          "testes unitários e de integração",
+          "JUnit",
+          "Mockito",
+          "TDD",
+          "Sonar",
+          "clean code",
+          "refactoring"
+        ],
+        "incidence": {
+          "trt3": 0.5,
+          "trt4": 1,
+          "tjmg": 0,
+          "trf6": 1,
+          "tjsp": 1,
+          "tjrs": 0.5,
+          "tjrj": 0,
+          "tjsc": 0.5,
+          "trf2": 1,
+          "trt1": 0.5,
+          "trt2": 1,
+          "trt15": 1,
+          "trt12": 0.5,
+          "trf4": 1
+        },
+        "priority": 0.635,
+        "profile": "systems",
+        "phase": "pre_notice"
+      },
+      {
+        "id": "contratacoes_ti",
+        "category": "specific",
+        "name": "Contratações de TI",
+        "subtopics": [
+          "Res. CNJ 468/2022",
+          "ETP",
+          "termo de referência",
+          "pesquisa de preços",
+          "Lei 14.133 aplicada a TI"
+        ],
+        "incidence": {
+          "trt3": 1,
+          "trt4": 0,
+          "tjmg": 1,
+          "trf6": 1,
+          "tjsp": 0,
+          "tjrs": 0.5,
+          "tjrj": 0,
+          "tjsc": 1,
+          "trf2": 0,
+          "trt1": 0,
+          "trt2": 0,
+          "trt15": 0,
+          "trt12": 0,
+          "trf4": 0
+        },
+        "priority": 0.6225,
+        "profile": "common",
+        "phase": "pre_notice"
+      },
+      {
+        "id": "redes",
+        "category": "specific",
+        "name": "Redes de computadores",
+        "subtopics": [
+          "TCP/IP v4/v6",
+          "protocolos (DNS, DHCP, HTTP, LDAP, SNMP)",
+          "VLAN",
+          "roteamento OSPF/BGP",
+          "QoS"
+        ],
+        "incidence": {
+          "trt3": 1,
+          "trt4": 1,
+          "tjmg": 0,
+          "trf6": 0,
+          "tjsp": 0,
+          "tjrs": 1,
+          "tjrj": 0.5,
+          "tjsc": 0.5,
+          "trf2": 1,
+          "trt1": 1,
+          "trt2": 1,
+          "trt15": 1,
+          "trt12": 1,
+          "trf4": 0.5
+        },
+        "priority": 0.615,
+        "profile": "infra",
+        "phase": "pre_notice"
+      },
+      {
+        "id": "sist_operacionais",
+        "category": "specific",
+        "name": "Sistemas operacionais",
+        "subtopics": [
+          "processos",
+          "threads",
+          "memória virtual",
+          "Linux (systemd, LVM, bash)",
+          "Windows Server/AD/PowerShell",
+          "servidores web e de aplicação (Apache, NGINX, JBoss, IIS)"
+        ],
+        "incidence": {
+          "trt3": 1,
+          "trt4": 1,
+          "tjmg": 0,
+          "trf6": 0,
+          "tjsp": 0,
+          "tjrs": 1,
+          "tjrj": 0.5,
+          "tjsc": 0.5,
+          "trf2": 1,
+          "trt1": 1,
+          "trt2": 0.5,
+          "trt15": 0.5,
+          "trt12": 1,
+          "trf4": 0
+        },
+        "priority": 0.545,
+        "profile": "infra",
+        "phase": "pre_notice"
+      },
+      {
+        "id": "monitoramento",
+        "category": "specific",
+        "name": "Monitoramento e observabilidade",
+        "subtopics": [
+          "Zabbix",
+          "Elasticsearch/Logstash/Kibana",
+          "Prometheus",
+          "Grafana",
+          "Fluentd"
+        ],
+        "incidence": {
+          "trt3": 1,
+          "trt4": 1,
+          "tjmg": 0,
+          "trf6": 0,
+          "tjsp": 0,
+          "tjrs": 0.5,
+          "tjrj": 0,
+          "tjsc": 0,
+          "trf2": 0,
+          "trt1": 1,
+          "trt2": 1,
+          "trt15": 1,
+          "trt12": 1,
+          "trf4": 0.5
+        },
+        "priority": 0.5375,
+        "profile": "infra",
+        "phase": "pre_notice"
+      },
+      {
+        "id": "projetos",
+        "category": "specific",
+        "name": "Gerenciamento de projetos",
+        "subtopics": [
+          "PMBOK 7ª/8ª edição"
+        ],
+        "incidence": {
+          "trt3": 0,
+          "trt4": 1,
+          "tjmg": 1,
+          "trf6": 1,
+          "tjsp": 0,
+          "tjrs": 1,
+          "tjrj": 1,
+          "tjsc": 1,
+          "trf2": 0.5,
+          "trt1": 1,
+          "trt2": 0,
+          "trt15": 0,
+          "trt12": 1,
+          "trf4": 0
+        },
+        "priority": 0.53,
+        "profile": "common",
+        "phase": "pre_notice"
+      },
+      {
+        "id": "storage_backup",
+        "category": "specific",
+        "name": "Armazenamento e backup",
+        "subtopics": [
+          "sistemas de arquivos",
+          "RAID",
+          "SAN/Fibre Channel",
+          "NFS/SMB",
+          "objeto (S3) e bloco",
+          "backup"
+        ],
+        "incidence": {
+          "trt3": 1,
+          "trt4": 0,
+          "tjmg": 0,
+          "trf6": 0,
+          "tjsp": 0,
+          "tjrs": 0.5,
+          "tjrj": 0,
+          "tjsc": 0.5,
+          "trf2": 1,
+          "trt1": 0,
+          "trt2": 1,
+          "trt15": 1,
+          "trt12": 0,
+          "trf4": 1
+        },
+        "priority": 0.485,
+        "profile": "infra",
+        "phase": "pre_notice"
+      },
+      {
+        "id": "processos_negocio",
+        "category": "specific",
+        "name": "Processos de negócio e BPMN",
+        "subtopics": [
+          "modelagem",
+          "indicadores",
+          "BPM"
+        ],
+        "incidence": {
+          "trt3": 0,
+          "trt4": 1,
+          "tjmg": 0.5,
+          "trf6": 1,
+          "tjsp": 0,
+          "tjrs": 1,
+          "tjrj": 0,
+          "tjsc": 0,
+          "trf2": 0,
+          "trt1": 0.5,
+          "trt2": 0.5,
+          "trt15": 0.5,
+          "trt12": 0.5,
+          "trf4": 0.5
+        },
+        "priority": 0.42,
+        "profile": "systems",
+        "phase": "pre_notice"
+      },
+      {
+        "id": "arquitetura_computadores",
+        "category": "specific",
+        "name": "Organização e arquitetura de computadores",
+        "subtopics": [
+          "CPU e memória",
+          "RISC x CISC",
+          "pipeline",
+          "paralelismo (SMP, NUMA, MPP)",
+          "multicore e hyperthreading",
+          "entrada/saída e interrupções"
+        ],
+        "incidence": {
+          "trt3": 0,
+          "trf6": 0,
+          "tjmg": 0,
+          "trt4": 0,
+          "tjsp": 0,
+          "tjrs": 1,
+          "tjrj": 0,
+          "tjsc": 0,
+          "trf2": 1,
+          "trt1": 0,
+          "trt2": 0,
+          "trt15": 0,
+          "trt12": 0,
+          "trf4": 0
+        },
+        "priority": 0.065,
+        "profile": "infra",
+        "phase": "pre_notice"
+      }
+    ],
+    "general": [
+      {
+        "id": "portugues",
+        "category": "general",
+        "name": "Língua Portuguesa",
+        "subtopics": [
+          "interpretação",
+          "coesão",
+          "crase",
+          "regência",
+          "concordância",
+          "pontuação"
+        ],
+        "incidence": {
+          "trt3": 1,
+          "trt4": 1,
+          "tjmg": 1,
+          "trf6": 1,
+          "tjsp": 1,
+          "tjrs": 1,
+          "tjrj": 1,
+          "tjsc": 1,
+          "trf2": 1,
+          "trt1": 1,
+          "trt2": 1,
+          "trt15": 1,
+          "trt12": 1,
+          "trf4": 1
+        },
+        "priority": 1,
+        "phase": "pre_notice"
+      },
+      {
+        "id": "legislacao_tribunal",
+        "category": "general",
+        "name": "Legislação própria do tribunal",
+        "subtopics": [
+          "regimento interno",
+          "código de ética/conduta",
+          "resoluções do tribunal"
+        ],
+        "incidence": {
+          "trt3": 1,
+          "trt4": 1,
+          "tjmg": 1,
+          "trf6": 1,
+          "tjsp": 0,
+          "tjrs": 1,
+          "tjrj": 1,
+          "tjsc": 1,
+          "trf2": 0.5,
+          "trt1": 1,
+          "trt2": 0.5,
+          "trt15": 1,
+          "trt12": 1,
+          "trf4": 0
+        },
+        "priority": 0.885,
+        "phase": "post_notice"
+      },
+      {
+        "id": "lei_8112_etica",
+        "category": "general",
+        "name": "Lei 8.112/1990, ética e processo administrativo",
+        "subtopics": [
+          "8.112",
+          "9.784",
+          "improbidade (8.429)",
+          "PAD"
+        ],
+        "incidence": {
+          "trt3": 1,
+          "trt4": 0,
+          "tjmg": 0,
+          "trf6": 1,
+          "tjsp": 0,
+          "tjrs": 0,
+          "tjrj": 0.5,
+          "tjsc": 0.5,
+          "trf2": 0.5,
+          "trt1": 1,
+          "trt2": 0,
+          "trt15": 1,
+          "trt12": 1,
+          "trf4": 1
+        },
+        "priority": 0.685,
+        "phase": "pre_notice"
+      },
+      {
+        "id": "direitos_humanos",
+        "category": "general",
+        "name": "Direitos humanos e acessibilidade",
+        "subtopics": [
+          "DUDH",
+          "tratados",
+          "LBI (13.146/2015)",
+          "Agenda 2030"
+        ],
+        "incidence": {
+          "trt3": 0.5,
+          "trt4": 1,
+          "tjmg": 0.5,
+          "trf6": 1,
+          "tjsp": 0,
+          "tjrs": 0.5,
+          "tjrj": 0.5,
+          "tjsc": 1,
+          "trf2": 0.5,
+          "trt1": 1,
+          "trt2": 0.5,
+          "trt15": 0.5,
+          "trt12": 0,
+          "trf4": 0.5
+        },
+        "priority": 0.61,
+        "phase": "pre_notice"
+      },
+      {
+        "id": "direito_const_adm",
+        "category": "general",
+        "name": "Noções de Direito Constitucional e Administrativo",
+        "subtopics": [
+          "CF/88 (direitos, organização do Estado, Judiciário)",
+          "atos e poderes administrativos"
+        ],
+        "incidence": {
+          "trt3": 1,
+          "trt4": 0,
+          "tjmg": 1,
+          "trf6": 0,
+          "tjsp": 0,
+          "tjrs": 0.5,
+          "tjrj": 1,
+          "tjsc": 0,
+          "trf2": 0.5,
+          "trt1": 0.5,
+          "trt2": 0,
+          "trt15": 0,
+          "trt12": 0,
+          "trf4": 0.5
+        },
+        "priority": 0.5225,
+        "phase": "pre_notice"
+      },
+      {
+        "id": "licitacoes",
+        "category": "general",
+        "name": "Lei 14.133/2021",
+        "subtopics": [
+          "modalidades",
+          "contratação direta",
+          "sanções"
+        ],
+        "incidence": {
+          "trt3": 1,
+          "trt4": 0,
+          "tjmg": 1,
+          "trf6": 0,
+          "tjsp": 0,
+          "tjrs": 1,
+          "tjrj": 0.5,
+          "tjsc": 0,
+          "trf2": 0.5,
+          "trt1": 1,
+          "trt2": 0,
+          "trt15": 0,
+          "trt12": 0,
+          "trf4": 0
+        },
+        "priority": 0.5225,
+        "phase": "pre_notice"
+      },
+      {
+        "id": "raciocinio_logico",
+        "category": "general",
+        "name": "Raciocínio lógico e matemática",
+        "subtopics": [
+          "lógica",
+          "proporção",
+          "porcentagem",
+          "estatística básica",
+          "argumentação"
+        ],
+        "incidence": {
+          "trt3": 0,
+          "trt4": 1,
+          "tjmg": 1,
+          "trf6": 0.5,
+          "tjsp": 0.5,
+          "tjrs": 0.5,
+          "tjrj": 0,
+          "tjsc": 0,
+          "trf2": 0.5,
+          "trt1": 1,
+          "trt2": 1,
+          "trt15": 1,
+          "trt12": 1,
+          "trf4": 0
+        },
+        "priority": 0.505,
+        "phase": "pre_notice"
+      },
+      {
+        "id": "informatica_office",
+        "category": "general",
+        "name": "Noções de informática (usuário)",
+        "subtopics": [
+          "Windows",
+          "Office/LibreOffice",
+          "Google Workspace",
+          "navegadores"
+        ],
+        "incidence": {
+          "trt3": 1,
+          "trt4": 0,
+          "tjmg": 0,
+          "trf6": 0,
+          "tjsp": 0,
+          "tjrs": 0,
+          "tjrj": 0,
+          "tjsc": 0.5,
+          "trf2": 0,
+          "trt1": 0,
+          "trt2": 0,
+          "trt15": 0,
+          "trt12": 0,
+          "trf4": 0
+        },
+        "priority": 0.2875,
+        "phase": "pre_notice"
+      },
+      {
+        "id": "legislacao_mg",
+        "category": "general",
+        "name": "Legislação estadual de MG",
+        "subtopics": [
+          "Constituição de MG",
+          "LC 59/2001",
+          "Lei 869/1952"
+        ],
+        "incidence": {
+          "trt3": 0,
+          "trt4": 0,
+          "tjmg": 1,
+          "trf6": 0,
+          "tjsp": 0,
+          "tjrs": 0,
+          "tjrj": 0,
+          "tjsc": 0,
+          "trf2": 0,
+          "trt1": 0,
+          "trt2": 0,
+          "trt15": 0,
+          "trt12": 0,
+          "trf4": 0
+        },
+        "priority": 0.14,
+        "phase": "post_notice"
+      },
+      {
+        "id": "direito_penal_adm",
+        "category": "general",
+        "name": "Crimes contra a administração pública",
+        "subtopics": [
+          "Código Penal arts. 312-327 (funcionário público)",
+          "arts. 328-337 (particular)",
+          "arts. 338-359 (administração da justiça)",
+          "abuso de autoridade (Lei 13.869/2019)"
+        ],
+        "incidence": {
+          "trt3": 0,
+          "trf6": 0,
+          "tjmg": 0,
+          "trt4": 0,
+          "tjsp": 1,
+          "tjrs": 0,
+          "tjrj": 0.5,
+          "tjsc": 0,
+          "trf2": 0.5,
+          "trt1": 0.5,
+          "trt2": 0,
+          "trt15": 0,
+          "trt12": 0,
+          "trf4": 0
+        },
+        "priority": 0.0875,
+        "phase": "pre_notice"
+      }
+    ]
+  }
+}

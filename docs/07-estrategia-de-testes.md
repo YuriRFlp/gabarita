@@ -6,10 +6,10 @@ Decisão de origem: ADR-006.
 
 | Nível | Ferramenta | O que cobre | Onde fica | Meta |
 |---|---|---|---|---|
-| Unitário | Vitest | Funções de `dominio/` (regras do doc 04) | ao lado do código | ≥ 90% de linhas e ramos em `dominio/` |
+| Unitário | Vitest | Funções de `domain/` (regras do doc 04) | ao lado do código | ≥ 90% de linhas e ramos em `domain/` |
 | Componente | Vitest + Testing Library | Estados e interação de componentes | ao lado do código | Todo componente com lógica |
 | Banco | pgTAP (`supabase test db`) | RLS, restrições, visões, índices | `supabase/tests/` | Toda tabela e visão |
-| Integração | Vitest + Supabase local | `dados/` e `acoes/` contra banco real | `*.int.test.ts` | Caminhos principais |
+| Integração | Vitest + Supabase local | `data/` e `actions/` contra banco real | `*.int.test.ts` | Caminhos principais |
 | E2E | Playwright (+ axe) | Jornadas do usuário no navegador | `tests/e2e/` | Jornadas críticas abaixo |
 
 ## Casos obrigatórios do domínio
@@ -26,6 +26,18 @@ Derivados de `docs/04-regras-de-estudo.md`; cada um vira teste com nome descriti
 - **Discursivas:** contagem de linhas versus limites do concurso.
 - **IA modo manual:** JSON colado inválido, incompleto ou com campos extras é rejeitado com mensagem clara.
 
+## Comandos e onde cada nível roda
+
+| Comando | Nível | Precisa de Docker | Roda no CI |
+|---|---|---|---|
+| `npm test` | Unitário e componente | Não | Sim |
+| `npm run test:coverage` | Unitário e componente, com limite de 90% em `domain/` | Não | Não |
+| `npm run test:int` | Integração (`*.int.test.ts`) | Sim | Não |
+| `npm run db:test` | pgTAP | Sim | Não |
+| `npm run test:e2e` | E2E (reseta o banco antes) | Sim | Não |
+
+O CI (`.github/workflows/ci.yml`) roda `lint`, `typecheck`, `format:check`, `test` e `build` em todo push e pull request. pgTAP, integração e E2E rodam localmente e são exigidos pela Definição de pronto (doc 06) antes de fechar uma tarefa.
+
 ## Jornadas E2E críticas
 
 1. Login e acesso negado sem sessão.
@@ -41,6 +53,6 @@ Derivados de `docs/04-regras-de-estudo.md`; cada um vira teste com nome descriti
 - Nome do teste descreve a regra: `"não cria cartão quando acerta com certeza"`.
 - Padrão Arrange–Act–Assert; uma regra por teste.
 - Sem `sleep`/`waitForTimeout`; no Playwright, usar localizadores por papel e rótulo (`getByRole`, `getByLabel`).
-- Dados de teste criados por fábricas (`tests/fabricas/`), nunca dependentes da ordem de execução.
+- Dados de teste criados por fábricas (`tests/factories/`), nunca dependentes da ordem de execução.
 - E2E começa com banco limpo (`supabase db reset`) e usuário de teste criado por script.
 - Teste instável não é desligado em silêncio: corrige-se ou abre-se pendência no `CHANGELOG.md`.

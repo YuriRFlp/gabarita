@@ -1,6 +1,6 @@
 # ADR-006 — Ferramentas de qualidade, testes e arquitetura do código
 
-**Status:** proposto · **Data:** 2026-11-16
+**Status:** aceito · **Data:** 2026-11-16 · **Aceito em:** 2026-11-17 (SPEC-001)
 
 ## Contexto
 O desenvolvimento do MVP será feito com apoio de um time de agentes de IA (ver `CLAUDE.md`). Para que o código gerado seja revisável e consistente, é preciso fixar antes: a organização das pastas, as ferramentas de qualidade e a estratégia de testes.

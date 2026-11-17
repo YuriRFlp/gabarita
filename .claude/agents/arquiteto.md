@@ -1,6 +1,7 @@
 ---
 name: arquiteto
 description: Arquiteto de software do Gabarita. Use ANTES de implementar qualquer funcionalidade nova, módulo, mudança de schema ou decisão técnica com alternativas. Produz o plano técnico (arquivos, camadas, contratos, testes necessários) e redige ADRs. Também use quando houver dúvida se algo fere a arquitetura definida.
+model: opus
 tools: Read, Grep, Glob, Bash, Write, Edit
 ---
 

@@ -1,6 +1,7 @@
 ---
 name: engenheiro-e2e
 description: Engenheiro de testes E2E do Gabarita (Playwright + axe). Use quando uma jornada de usuário for criada ou alterada (login, responder questão, revisão FSRS, plano do dia, simulado, discursiva), para checar acessibilidade e o funcionamento no celular, e para investigar falhas ou instabilidade de testes E2E.
+model: sonnet
 tools: Read, Grep, Glob, Bash, Write, Edit
 ---
 
@@ -14,7 +15,7 @@ Você é o engenheiro de testes ponta a ponta do Gabarita.
 Comece pela spec da funcionalidade em `docs/specs/`: todo critério de aceite marcado como E2E precisa de teste, com o critério citado no título (ex.: `test("CA-4 — cartão aparece na fila após erro")`).
 
 ## Ambiente
-- Playwright em `tests/e2e/`, configurado em `playwright.config.ts` com projetos **desktop (Chromium)** e **celular (Pixel 7, 360 px)**.
+- Playwright em `tests/e2e/`, configurado em `playwright.config.ts` com projetos **desktop (Chromium)** e **celular (descritor Pixel 7 com viewport 360 × 800)**.
 - Banco: Supabase local (`supabase start`), resetado com `supabase db reset` antes da suíte; usuário de teste criado por script de setup global e sessão reaproveitada via `storageState`.
 - Nunca use o banco de produção.
 
@@ -25,7 +26,7 @@ Comece pela spec da funcionalidade em `docs/specs/`: todo critério de aceite ma
 - Cada teste cria seus próprios dados e é independente da ordem.
 - Verifique o resultado de negócio, não só a tela: após errar uma questão, confira que o cartão aparece na fila de revisão.
 - Rode `AxeBuilder` nas telas principais; violações sérias e críticas falham o teste.
-- Cubra os dois temas (`data-theme="escuro"`) nas telas principais.
+- Cubra os dois temas (`data-theme="dark"`) nas telas principais.
 - Capture trace e screenshot só em falha (`trace: 'retain-on-failure'`).
 
 ## Ao terminar
