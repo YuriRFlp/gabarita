@@ -10,34 +10,59 @@ O princípio central: em concurso, o que conta é **o quanto você lembra na hor
 
 ## Estado atual
 
-Fase de **modelagem de dados**. Ainda não há código de aplicação.
+Fase de **fundação da aplicação** ([SPEC-001](docs/specs/SPEC-001-fundacao-da-aplicacao.md)).
 
 | Item | Situação |
 |---|---|
-| Taxonomia e matriz de incidência (4 editais) | ✅ `data/seed/` |
-| Schema do banco (migração inicial) | ✅ validado em PostgreSQL 16 |
+| Taxonomia e matriz de incidência (14 editais, v0.2) | ✅ `data/seed/` |
+| Schema do banco, RLS e testes pgTAP | ✅ `supabase/` |
 | Identidade visual e design system | ✅ `public/brand/`, `design/` |
-| Carga inicial (seed) | ✅ gerada por script |
-| Aplicação (MVP) | ⏳ próxima etapa |
+| Fundação: Next.js, login, tema, casca, CI | 🚧 SPEC-001 |
+| Módulos do MVP | ⏳ próximas specs |
 
 ## Estrutura do repositório
 
 ```
+src/app/              Rotas do Next.js (App Router)
+src/modules/          Módulos por funcionalidade (domain, data, actions, components)
+src/shared/           Design system (ui), clientes Supabase e utilitários
+tests/                E2E (Playwright), regras de lint, segurança e CI
 data/seed/            Dados de origem (taxonomia, concursos, rubricas) em JSON
 design/               Tokens e estilos dos componentes
 docs/                 Documentação do projeto (comece por docs/README.md)
 public/brand/         Logo, símbolo e ícone do app
-scripts/              Utilitários (ex.: geração do seed)
-supabase/migrations/  Migrações SQL do banco
-supabase/seed.sql     Carga inicial gerada a partir de data/seed/
+scripts/              Utilitários (seed, tokens, usuário de teste)
+supabase/             Configuração local, migrações, seed e testes pgTAP
 ```
 
-## Como recriar o banco localmente
+## Como rodar localmente
+
+Pré-requisitos: Node 26 (`nvm use`) e Docker.
 
 ```bash
-python scripts/gerar_seed.py      # regenera supabase/seed.sql a partir do JSON
-supabase db reset                 # aplica migrações + seed (Supabase CLI)
+npm ci
+npm run db:start        # sobe o Supabase local (migrações + seed)
+cp .env.example .env.local
+# preencha .env.local com "API URL" e "Publishable key" mostrados por `npx supabase status`
+npm run e2e:user          # cria o usuário local test@gabarita.local
+npm run dev               # http://localhost:3000
 ```
+
+Variáveis de ambiente: só `NEXT_PUBLIC_SUPABASE_URL` e `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`, ambas públicas e sujeitas à RLS. Nenhuma chave secreta entra no código ou no `.env`.
+
+## Comandos
+
+| Comando | O que faz |
+|---|---|
+| `npm run lint` / `typecheck` / `format:check` | Qualidade estática |
+| `npm test` | Testes unitários e de componente (sem Docker) |
+| `npm run test:coverage` | Idem, com limite de 90% em `domain/` |
+| `npm run test:int` | Integração contra o Supabase local |
+| `npm run db:test` | Testes pgTAP (RLS, restrições, visões) |
+| `npm run test:e2e` | Reseta o banco e roda o Playwright (desktop e celular) |
+| `npm run db:types` | Regenera os tipos do banco |
+| `npm run tokens` | Regenera `tokens.css` a partir de `design/tokens.json` |
+| `python scripts/generate_seed.py` | Regenera `supabase/seed.sql` a partir do JSON |
 
 ## Documentação
 

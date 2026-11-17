@@ -27,4 +27,4 @@ Código só começa com a spec `aprovada`.
 
 | Spec | Funcionalidade | Status |
 |---|---|---|
-| — | — | — |
+| [SPEC-001](SPEC-001-fundacao-da-aplicacao.md) | Fundação da aplicação (scaffold, ferramentas, CI, Supabase local, autenticação, design system com tema sincronizado, casca) | em-implementacao |
