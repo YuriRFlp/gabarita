@@ -1,6 +1,6 @@
 # SPEC-001 — Fundação da aplicação
 
-**Status:** em-implementacao · **Criada:** 2026-11-17 · **Atualizada:** 2026-11-17
+**Status:** concluida · **Criada:** 2026-11-17 · **Atualizada:** 2026-11-17
 **Módulo:** `src/modules/auth`, `src/modules/settings`, `src/shared` · **ADRs relacionados:** ADR-001, ADR-005, ADR-006, ADR-007
 
 ## 1. Objetivo
@@ -600,3 +600,4 @@ Todas as perguntas da primeira versão foram respondidas pelo dono do projeto em
 | 2026-11-17 | Identificadores passam para inglês (ADR-007); projeto movido para o sistema de arquivos do WSL. |
 | 2026-11-17 | Revisão: D-16 (logout só no aparelho atual, CA-20 alterado) e D-17 (contrato de `themeToSync`); `config.toml` sem `[auth.email] enable_signup`; arquivos de apoio do E2E, teste de assets de marca e `schema_constraints.test.sql` listados em § 5.1. |
 | 2026-11-17 | Revisão final: desfazer o login quando `ensureSettings` falha passa a usar `signOut({ scope: 'local' })` (D-16); comentário do `playwright.config.ts` corrigido; teste `tests/lint/typescript-options.test.ts` para o acesso indexado do CA-2. |
+| 2026-11-17 | Concluída: `revisor-codigo` aprovou; primeira execução do CI no GitHub verde (run 44182938464: lint, typecheck, format:check, test e build), fechando CA-1 e CA-32; pgTAP, integração e E2E verdes localmente. Status `concluida`. |

@@ -10,14 +10,14 @@ O princípio central: em concurso, o que conta é **o quanto você lembra na hor
 
 ## Estado atual
 
-Fase de **fundação da aplicação** ([SPEC-001](docs/specs/SPEC-001-fundacao-da-aplicacao.md)).
+Fundação da aplicação concluída ([SPEC-001](docs/specs/SPEC-001-fundacao-da-aplicacao.md)); próximos passos: módulos do MVP.
 
 | Item | Situação |
 |---|---|
 | Taxonomia e matriz de incidência (14 editais, v0.2) | ✅ `data/seed/` |
 | Schema do banco, RLS e testes pgTAP | ✅ `supabase/` |
 | Identidade visual e design system | ✅ `public/brand/`, `design/` |
-| Fundação: Next.js, login, tema, casca, CI | 🚧 SPEC-001 |
+| Fundação: Next.js, login, tema, casca, CI | ✅ SPEC-001 |
 | Módulos do MVP | ⏳ próximas specs |
 
 ## Estrutura do repositório
