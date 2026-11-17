@@ -23,9 +23,9 @@ Você é o revisor de código sênior do Gabarita. Você não escreve nem corrig
 - Tratamento de nulos (resposta em branco do Cebraspe), fuso horário e datas.
 
 **Arquitetura**
-- Regras de dependência entre camadas respeitadas; `dominio/` sem React/Next/Supabase/`Date.now()`.
-- Módulos se usam só pelo `index.ts`. Queries só em `dados/`.
-- Nomenclatura em português sem acento, igual ao banco.
+- Regras de dependência entre camadas respeitadas; `domain/` sem React/Next/Supabase/`Date.now()`.
+- Módulos se usam só pelo `index.ts`. Queries só em `data/`.
+- Código em inglês (identificadores, arquivos, comentários, testes, banco, CSS) seguindo `docs/08-glossario.md`; textos da interface em português (ADR-007).
 
 **Segurança**
 - Tabela nova com RLS e política conforme ADR-005; visão com `security_invoker`.

@@ -1,4 +1,4 @@
-# --- Dependências ---
+# Dependencies
 node_modules/
 .pnp
 .pnp.*
@@ -8,7 +8,7 @@ node_modules/
 !.yarn/releases
 !.yarn/versions
 
-# --- Next.js / build ---
+# Next.js / build
 .next/
 out/
 build/
@@ -16,20 +16,20 @@ dist/
 next-env.d.ts
 *.tsbuildinfo
 
-# --- Vercel ---
+# Vercel
 .vercel/
 
-# --- Variáveis de ambiente (chaves nunca no repositório: ver docs/02-arquitetura.md) ---
+# Environment variables (keys never go in the repo: see docs/02-arquitetura.md)
 .env
 .env.*
 !.env.example
 
-# --- Supabase CLI ---
+# Supabase CLI
 supabase/.branches/
 supabase/.temp/
 supabase/.env
 
-# --- Testes ---
+# Tests
 coverage/
 test-results/
 playwright-report/
@@ -37,25 +37,25 @@ blob-report/
 playwright/.cache/
 tests/e2e/.auth/
 
-# --- Backups do banco (rotina de exportação: podem conter dados pessoais) ---
+# Database backups (export routine: may contain personal data)
 backups/
 *.dump
 *.backup
 
-# --- Python (scripts/) ---
+# Python (scripts/)
 __pycache__/
 *.py[cod]
 .venv/
 venv/
 
-# --- Logs ---
+# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 *.log
 
-# --- Editor e sistema operacional ---
+# Editor and OS
 .vscode/*
 !.vscode/settings.json
 !.vscode/extensions.json
@@ -64,5 +64,5 @@ pnpm-debug.log*
 Thumbs.db
 desktop.ini
 
-# --- Claude Code (agentes e CLAUDE.md são versionados; configurações locais não) ---
+# Claude Code (agents and CLAUDE.md are versioned; local settings are not)
 .claude/settings.local.json

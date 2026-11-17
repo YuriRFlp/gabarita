@@ -12,6 +12,7 @@ Plataforma pessoal de estudos para concursos de TI em tribunais. Next.js (Vercel
 | Padrões de código | `docs/06-padroes-de-codigo.md` |
 | Testes | `docs/07-estrategia-de-testes.md` |
 | Specs por funcionalidade | `docs/specs/` |
+| Tradução dos termos (código em inglês) | `docs/08-glossario.md`, ADR-007 |
 
 Se o código e o documento divergirem, pare e pergunte qual está certo; não escolha em silêncio.
 
@@ -29,7 +30,7 @@ Se o código e o documento divergirem, pare e pergunte qual está certo; não es
 1. **Especificar** — `arquiteto` registra a spec em `docs/specs/SPEC-NNN-*.md` (ver `docs/specs/README.md`) com status `rascunho`.
 2. **Aprovar** — o dono do projeto responde as perguntas em aberto e aprova. **Sem spec `aprovada`, não se escreve código.** Só ajuste trivial (correção pontual, texto) dispensa spec. Ao começar, mude o status para `em-implementacao`.
 3. **Banco** (se houver) — `especialista-banco` cria migração + RLS + pgTAP.
-4. **Implementar** — domínio puro primeiro, com testes; depois `dados/`, `acoes/` e interface (`especialista-frontend`). Mudança de escopo atualiza a spec antes do código.
+4. **Implementar** — domínio puro primeiro, com testes; depois `data/`, `actions/` e interface (`especialista-frontend`). Mudança de escopo atualiza a spec antes do código.
 5. **Testar** — `engenheiro-testes` e `engenheiro-e2e` cobrem cada critério de aceite (CA-n) da spec.
 6. **Revisar** — `revisor-codigo` confere o código contra a spec e os padrões. Bloqueantes voltam para a etapa 4 e a revisão é refeita.
 7. **Fechar** — só com a *Definição de pronto* do doc 06 cumprida; spec como `concluida`, docs e `CHANGELOG.md` (citando a spec) atualizados.
@@ -37,12 +38,12 @@ Se o código e o documento divergirem, pare e pergunte qual está certo; não es
 Etapas independentes (ex.: testes unitários e E2E da mesma funcionalidade) podem rodar em paralelo.
 
 ## Commits
-Sempre pela skill `commit` (`.claude/skills/commit/`): Conventional Commits em português, escopo do módulo e `Spec: SPEC-NNN` no rodapé.
+Sempre pela skill `commit` (`.claude/skills/commit/`): Conventional Commits em inglês, escopo do módulo e `Spec: SPEC-NNN` no rodapé.
 
 ## Regras inegociáveis
 - Migração aplicada não se edita; `supabase/seed.sql` não se edita à mão.
 - RLS em toda tabela; nenhuma chave no código ou no front-end.
-- Regra de negócio só em `dominio/`, pura e testada.
+- Regra de negócio só em `domain/`, pura e testada.
 - Comentário só quando importante e pertinente: explica o porquê, nunca o quê (doc 06 § Comentários).
 - Não marcar tarefa como pronta com teste falhando ou revisão reprovada; relatar o resultado real.
-- Documentação e código em português; termos do domínio sem acento, iguais aos do banco.
+- Código em inglês (identificadores, arquivos, pastas, comentários, testes, banco, CSS, commits); documentação e textos da interface em português (ADR-007). Termos do domínio seguem `docs/08-glossario.md`, iguais no banco e no código.
