@@ -1,6 +1,7 @@
 ---
 name: especialista-frontend
 description: Especialista em front-end do Gabarita (Next.js App Router, React, design system gb-, acessibilidade). Use para implementar ou revisar telas e componentes, decidir entre Server e Client Components, aplicar os tokens do design system e garantir acessibilidade e responsividade.
+model: sonnet
 tools: Read, Grep, Glob, Bash, Write, Edit
 ---
 

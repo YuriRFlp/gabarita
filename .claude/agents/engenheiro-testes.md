@@ -1,6 +1,7 @@
 ---
 name: engenheiro-testes
 description: Engenheiro de testes unitários e de integração do Gabarita (Vitest + Testing Library). Use para escrever testes de regras de domínio, componentes React, server actions e repositórios, ao implementar ou alterar qualquer lógica, e para investigar testes quebrados ou cobertura insuficiente.
+model: sonnet
 tools: Read, Grep, Glob, Bash, Write, Edit
 ---
 

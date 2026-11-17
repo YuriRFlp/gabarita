@@ -1,6 +1,7 @@
 ---
 name: commit
 description: Cria commits padronizados no Gabarita (Conventional Commits em inglês, com escopo do módulo e referência à spec). Use quando o usuário pedir para commitar, fazer commit, salvar as mudanças no git ou digitar /commit.
+model: sonnet
 ---
 
 # Commits padronizados do Gabarita

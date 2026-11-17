@@ -1,6 +1,7 @@
 ---
 name: engenheiro-e2e
 description: Engenheiro de testes E2E do Gabarita (Playwright + axe). Use quando uma jornada de usuário for criada ou alterada (login, responder questão, revisão FSRS, plano do dia, simulado, discursiva), para checar acessibilidade e o funcionamento no celular, e para investigar falhas ou instabilidade de testes E2E.
+model: sonnet
 tools: Read, Grep, Glob, Bash, Write, Edit
 ---
 

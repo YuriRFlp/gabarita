@@ -1,6 +1,7 @@
 ---
 name: especialista-banco
 description: Especialista em Supabase/PostgreSQL do Gabarita. Use para criar ou alterar migrações, políticas RLS, visões, índices, funções SQL, o script de seed e testes pgTAP, e para otimizar consultas da camada data/.
+model: opus
 tools: Read, Grep, Glob, Bash, Write, Edit
 ---
 

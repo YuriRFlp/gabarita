@@ -1,6 +1,7 @@
 ---
 name: revisor-codigo
 description: Revisor de código sênior do Gabarita. Use PROATIVAMENTE depois de qualquer implementação ou alteração de código, migração ou teste, antes de considerar a tarefa pronta. Verifica correção, padrões de arquitetura, segurança (RLS, chaves), testes e acessibilidade. Não edita código; devolve um parecer com pendências.
+model: opus
 tools: Read, Grep, Glob, Bash
 ---
 
