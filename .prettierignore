@@ -1,0 +1,17 @@
+node_modules/
+.next/
+coverage/
+playwright-report/
+test-results/
+package-lock.json
+supabase/seed.sql
+supabase/.temp/
+supabase/.branches/
+src/shared/supabase/database.types.ts
+src/shared/ui/styles/tokens.css
+data/
+public/
+design/tokens.json
+docs/
+*.md
+design/
