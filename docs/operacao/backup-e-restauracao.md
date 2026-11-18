@@ -112,4 +112,4 @@ rm <nome>.tar.gz
 
 | Data | Backup usado (nome da pasta) | Versão da CLI | Contagens conferem | Login local com usuário real | Observações |
 |---|---|---|---|---|---|
-| | | | | | |
+| 2026-11-18 | `2026-11-18T211135Z` | 3.2.0 | Sim (56 tabelas) | Sim | Primeiro ensaio. Backup sem a cópia criptografada (a falha do `gpg` foi corrigida depois). O backup `2026-11-18T214929Z` já gerou o `.tar.gz.gpg`; falta abri-lo uma vez com `gpg --decrypt` (CA-22, manual) e enviá-lo ao Drive. |

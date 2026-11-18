@@ -5,7 +5,7 @@ Formato inspirado em [Keep a Changelog](https://keepachangelog.com/pt-BR/). Data
 ## [Não lançado]
 
 ### Adicionado
-- Implantação (SPEC-002, em implementação): `vercel.json` (região `gru1`, implantação só da `main`), cabeçalhos de segurança e `noindex` em `next.config.ts`, scripts `db:link`, `db:push` (guardas de migração e confirmação pelo identificador do projeto), `db:test:remote`, `backup`, `backup:verify` e `check:prod`, com testes unitários e de integração.
+- Implantação (SPEC-002): `vercel.json` (região `gru1`, implantação só da `main`), cabeçalhos de segurança e `noindex` em `next.config.ts`, scripts `db:link`, `db:push` (guardas de migração e confirmação pelo identificador do projeto), `db:test:remote`, `backup`, `backup:verify` e `check:prod`, com testes unitários e de integração.
 - Runbooks em `docs/operacao/`: `implantacao.md` e `backup-e-restauracao.md` (SPEC-002). ADR-008 (implantação e backup manuais pela máquina local).
 - Aplicação Next.js 16 (App Router, React 19.2, TypeScript strict com `noUncheckedIndexedAccess`), Node 26 fixado em `.nvmrc`, estrutura de módulos do doc 06 (SPEC-001).
 - Ferramentas do ADR-006: ESLint com regras de dependência entre camadas (testadas em `tests/lint/`), Prettier, Vitest (unitário, componente e integração, cobertura ≥ 90% em `domain/`), Playwright desktop e celular 360 px com axe (SPEC-001).
