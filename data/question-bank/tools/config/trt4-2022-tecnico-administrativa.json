@@ -1,0 +1,170 @@
+{
+  "paper": {
+    "schema_version": "1.0",
+    "id": "trt4-2022-tecnico-administrativa",
+    "court_id": "trt4",
+    "court": "TRT-4 (RS)",
+    "justice_branch": "trabalho",
+    "state": "RS",
+    "year": 2022,
+    "applied_on": null,
+    "exam_board": "FCC",
+    "notice": "Concurso público TRT da 4ª Região – 2022",
+    "taxonomy_edition": false,
+    "level": "tecnico",
+    "position": "Técnico Judiciário",
+    "specialty": "Área Administrativa",
+    "position_code": "T15",
+    "booklets": [
+      {
+        "code": "T15",
+        "type": "001",
+        "numbers": "1-60"
+      }
+    ],
+    "format": "multiple_choice",
+    "options_per_question": 5,
+    "sections": [
+      {
+        "name": "Conhecimentos Gerais",
+        "numbers": "1-30"
+      },
+      {
+        "name": "Conhecimentos Específicos",
+        "numbers": "31-60"
+      }
+    ],
+    "answer_key": {
+      "status": "definitivo",
+      "published_on": null,
+      "note": "Relação de gabaritos da FCC, tipo 1. A questão 40 foi anulada (pontos atribuídos a todos) pelo comunicado de alteração de gabarito e atribuição de questões"
+    },
+    "essay": {
+      "type": "redação",
+      "prompt": "Considere o seguinte texto:\n*Paulinho da Viola afirmou, a propósito de quem o julga muito amarrado à tradição da música popular: “Não vivo no meu passado, meu passado é que vive em mim”.*\n*Por outro lado, há quem afirme que nos tempos que correm, marcados pela instantaneidade e excesso de informações, a memória vem gradativamente perdendo a importância.*\nLevando em conta a divergência entre as duas afirmações acima, redija um texto dissertativo-argumentativo, no qual você se posicionará criticamente diante delas.",
+      "instructions": "Texto dissertativo-argumentativo a partir de proposta única e dos textos de apoio, com no mínimo 20 e no máximo 30 linhas. Eliminatória e classificatória, nota de 0 a 100; habilitado o candidato com 60 pontos ou mais.",
+      "max_score": 100,
+      "answer_standard": null,
+      "grading_criteria": "Conteúdo — até 40 pontos: a) perspectiva adotada no tratamento do tema; b) capacidade de análise e senso crítico em relação ao tema proposto; c) consistência dos argumentos, clareza e coerência no seu encadeamento.\nEstrutura — até 30 pontos: a) respeito ao gênero solicitado; b) progressão textual e encadeamento de ideias; c) articulação de frases e parágrafos (coesão textual).\nExpressão — até 30 pontos: a) desempenho linguístico de acordo com o nível de conhecimento exigido; b) adequação do nível de linguagem adotado à produção proposta e coerência no uso; c) domínio da norma culta formal (estrutura sintática, coesão, concordância, pontuação, regência, pronomes, flexão, tempos e modos verbais, grafia e acentuação).\nNota zero, entre outros casos, por fuga ao tema ou à modalidade de texto (Edital, itens 10.6 a 10.11, reproduzidos no caderno)."
+    },
+    "sources": [
+      {
+        "file": "TRT4_2022_caderno_T15_tipo001.pdf",
+        "kind": "caderno",
+        "url": null
+      },
+      {
+        "file": "TRT4_2022_T15_gabarito.pdf",
+        "kind": "gabarito",
+        "url": "https://www.concursosfcc.com.br/concursos/trt4r122/"
+      },
+      {
+        "file": "trt4_2022_alteracao_gabarito.pdf",
+        "kind": "recursos",
+        "url": "https://www.concursosfcc.com.br/concursos/trt4r122/"
+      }
+    ],
+    "notes": [
+      "Caderno de julho de 2022; data exata de aplicação não confirmada",
+      "Na crônica, cada parágrafo é uma linha do campo text (as questões citam o número do parágrafo)",
+      "Prova de técnico de área administrativa: útil para treinar conhecimentos gerais; a prova de TI do mesmo concurso está em trt4-2022-analista-ti e trt4-2022-tecnico-ti",
+      "Prova de técnico de área administrativa: útil para treinar conhecimentos gerais; a prova de TI do mesmo concurso está em trt4-2022-analista-ti e trt4-2022-tecnico-ti"
+    ]
+  },
+  "parsed": "/home/claude/bank/work/trt4_2022_t15.json",
+  "layout": "/home/claude/provas/txt/trt4_2022_t15.lay.txt",
+  "dehyphenate": true,
+  "ordinals": true,
+  "key": {
+    "file": "/home/claude/provas/txt/faf22964-fcc-2022-trt-4-regiao-rs-tecnico-judiciario-area-administrativa-gabarito.txt",
+    "method": "pairs",
+    "after": "Tipo gabarito 1",
+    "before": "Conhec\\. Gerais"
+  },
+  "sections": [
+    {
+      "from": 1,
+      "to": 15,
+      "section": "Conhecimentos Gerais",
+      "subject": "Português"
+    },
+    {
+      "from": 16,
+      "to": 20,
+      "section": "Conhecimentos Gerais",
+      "subject": "Raciocínio Lógico-Matemático"
+    },
+    {
+      "from": 21,
+      "to": 30,
+      "section": "Conhecimentos Gerais",
+      "subject": "Legislação"
+    },
+    {
+      "from": 31,
+      "to": 35,
+      "section": "Conhecimentos Específicos",
+      "subject": "Noções de Administração Pública"
+    },
+    {
+      "from": 36,
+      "to": 40,
+      "section": "Conhecimentos Específicos",
+      "subject": "Noções de Gestão Pública"
+    },
+    {
+      "from": 41,
+      "to": 45,
+      "section": "Conhecimentos Específicos",
+      "subject": "Noções de Direito Constitucional"
+    },
+    {
+      "from": 46,
+      "to": 52,
+      "section": "Conhecimentos Específicos",
+      "subject": "Noções de Direito Processual do Trabalho"
+    },
+    {
+      "from": 53,
+      "to": 60,
+      "section": "Conhecimentos Específicos",
+      "subject": "Noções de Direito do Trabalho"
+    }
+  ],
+  "stimuli": {
+    "s01": {
+      "range": [
+        1,
+        4
+      ],
+      "command_lines": 1,
+      "source_lines": 1,
+      "title": "Poema de Mario Quintana",
+      "text": "*Recordo ainda... e nada mais me importa…*\n*Aqueles dias de uma luz tão mansa*\n*Que me deixavam, sempre, de lembrança,*\n*Algum brinquedo novo à minha porta...*\n\n*Mas veio um vento de desesperança*\n*Soprando cinzas pela noite morta!*\n*E eu pendurei na galharia torta*\n*Todos os meus brinquedos de criança...*\n\n*Estrada afora após segui... Mas, ai,*\n*Embora idade e senso eu aparente,*\n*Não vos iluda o velho que aqui vai:*\n\n*Eu quero os meus brinquedos novamente!*\n*Sou um pobre menino... acreditai…*\n*Que envelheceu, um dia, de repente!...*"
+    },
+    "s02": {
+      "range": [
+        5,
+        14
+      ],
+      "command_lines": 2,
+      "source_lines": 1,
+      "para_numbers": true,
+      "title": "O VIP sem querer – Carlos Drummond de Andrade"
+    }
+  },
+  "review": {
+    "1": "Poema: divisão em estrofes (4-4-3-3) reconstruída a partir da imagem do caderno"
+  },
+  "overrides": {
+    "15": {
+      "statement": "*Alguns aspiram* **I** *se tornar ilustres e respeitados, acreditando assim conseguir segurança diante dos homens. Desse modo,* *se* **II** *vida deles decorre segura, foi alcançado o bem natural.*\n(Adaptado de: Epicuro. **Cartas e máximas principais**. São Paulo: Companhia das Letras, 2020)\nEm conformidade com a norma-padrão da língua portuguesa, as lacunas I e II devem ser preenchidas, respectivamente, por:"
+    }
+  },
+  "annulled": [
+    40
+  ],
+  "status_notes": {
+    "40": "Questão anulada: o comunicado da FCC “Alteração de gabarito e Atribuição de questões” atribui a questão 40 do tipo 1 a todos os candidatos do cargo T15 (Conhecimentos Específicos)"
+  }
+}

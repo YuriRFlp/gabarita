@@ -28,3 +28,4 @@ Código só começa com a spec `aprovada`.
 | Spec | Funcionalidade | Status |
 |---|---|---|
 | [SPEC-001](SPEC-001-fundacao-da-aplicacao.md) | Fundação da aplicação (scaffold, ferramentas, CI, Supabase local, autenticação, design system com tema sincronizado, casca) | concluida |
+| [SPEC-002](SPEC-002-implantacao.md) | Implantação (Supabase remoto, Vercel, migrações com guardas, cadastro desligado, usuário real, cabeçalhos de segurança, backup e ensaio de restauração, runbooks) | em-implementacao |

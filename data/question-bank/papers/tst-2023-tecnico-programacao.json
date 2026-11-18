@@ -1,0 +1,2689 @@
+{
+  "schema_version": "1.0",
+  "id": "tst-2023-tecnico-programacao",
+  "court_id": "tst",
+  "court": "TST",
+  "justice_branch": "trabalho",
+  "state": "DF",
+  "year": 2023,
+  "applied_on": "2024-01-21",
+  "exam_board": "Cebraspe",
+  "notice": "Edital n.º 1 – TST, de 21 de setembro de 2023",
+  "taxonomy_edition": false,
+  "level": "tecnico",
+  "position": "Técnico Judiciário – Área Apoio Especializado",
+  "specialty": "Programação",
+  "position_code": "Cargo 3",
+  "booklets": [
+    {
+      "code": "918_TST_SERVIDOR_CB2_01",
+      "type": null,
+      "numbers": "1-30"
+    },
+    {
+      "code": "918_TST_SERVIDOR_003_01",
+      "type": null,
+      "numbers": "31-60"
+    }
+  ],
+  "format": "multiple_choice",
+  "options_per_question": 5,
+  "sections": [
+    {
+      "name": "Conhecimentos Básicos",
+      "numbers": "1-30"
+    },
+    {
+      "name": "Conhecimentos Específicos",
+      "numbers": "31-60"
+    }
+  ],
+  "answer_key": {
+    "status": "definitivo",
+    "published_on": null,
+    "note": "Gabaritos oficiais definitivos do Cebraspe; alterações e anulações justificadas no documento de justificativas"
+  },
+  "essay": null,
+  "sources": [
+    {
+      "file": "tst_2023_c3_basicos.pdf",
+      "kind": "caderno",
+      "url": null
+    },
+    {
+      "file": "tst_2023_c3_especificos.pdf",
+      "kind": "caderno",
+      "url": null
+    },
+    {
+      "file": "tst_2023_c3_gab_basicos.pdf",
+      "kind": "gabarito",
+      "url": null
+    },
+    {
+      "file": "tst_2023_c3_gab_especificos.pdf",
+      "kind": "gabarito",
+      "url": null
+    },
+    {
+      "file": "tst_2023_justificativas.pdf",
+      "kind": "recursos",
+      "url": null
+    }
+  ],
+  "notes": [
+    "Múltipla escolha do Cebraspe (cinco opções, A a E)",
+    "Os Conhecimentos Básicos (caderno 918_TST_SERVIDOR_CB2_01) são os do cargo de técnico judiciário",
+    "Disciplinas dos Conhecimentos Básicos atribuídas pelo assunto das questões; o caderno não imprime o nome das disciplinas",
+    "Código em blocos ```linguagem com a indentação do caderno; opções de uma linha só de código aparecem entre crases",
+    "O cargo não teve prova discursiva neste caderno"
+  ],
+  "stimuli": [
+    {
+      "id": "t01",
+      "title": "**Texto CB1A1-I**",
+      "text": "Gigantes das tecnologias digitais, como Apple, Google e Meta, além de bancos, seguradoras, agências de turismo e outras organizações, estão decididas a levar de volta sua força de trabalho para os ambientes convencionais de trabalho presencial. Há muitos sinais de reocupação dos escritórios e limitação do trabalho remoto a apenas um dia da semana no chamado sistema híbrido.\nVários fatores explicam essa reversão. Em primeiro lugar, estão sendo reconsiderados os ganhos de produtividade do trabalho remoto encontrados nas primeiras avaliações. Com base em uma metodologia mais robusta, estudos recentes estão revelando que aqueles ganhos eram ilusórios. Quando se analisa com cuidado a relação entre a produção por hora trabalhada remotamente e a qualidade do trabalho realizado, os resultados decepcionam.\nEm segundo lugar, está ficando cada vez mais claro que o trabalho remoto, realizado de forma isolada e sem interação social, empobrece o capital humano das empresas pela falta do *feedback* imediato e repetido que ocorre nas relações presenciais. Depreciar o seu capital humano é o último desejo das empresas, que, em vista das transformações tecnológicas, precisam de pessoas que pensem bem e rápido para propor inovações no trabalho e que se ajustem rapidamente aos desafios crescentes dos negócios modernos.\nEm terceiro lugar, pesquisas recentes têm mostrado que a falta do contato face a face de forma continuada é um sério inibidor da criatividade. As teleconferências por meio de plataformas virtuais não geram as boas ideias que, normalmente, emergem nas reuniões presenciais, em que todos se observam mutuamente e aproveitam o ambiente de interação social para somar, corrigir e inovar.\nFinalmente, os pesquisadores descobriram o óbvio, ou seja, que os seres humanos não vivem só de produtividade, mas valorizam momentos felizes e agradáveis, que raramente ocorrem na solidão do trabalho remoto ou nos contatos fortuitos das reuniões virtuais.",
+      "source": "José Pastore. *A reversão do trabalho remoto*. Internet: <correiobraziliense.com.br> (com adaptações).",
+      "language": "pt"
+    },
+    {
+      "id": "t02",
+      "title": "**Texto CB1A1-II**",
+      "text": "“Minha avó contava que os negros de Lagoa Funda chegaram num tempo que ninguém sabia dizer. Cada um tinha sua tapera, tinham suas roças, plantavam na vazante do rio São Francisco. Os filhos iam nascendo e iam fazendo suas casinhas e botando suas roças onde os pais já tinham. Durante muito tempo, não houve nada nem ninguém por aquelas bandas. Eram só o povo e Deus. Depois chegou a Igreja e disse que as terras da cidade lhe pertenciam. Não demorou muito e chegou até Lagoa Funda e tudo o que estava em volta da cidade. Disse que nossa terra pertencia à igreja também.”\n(...)\n“A igreja marcou com ferro as árvores com um B e um J de Bom Jesus. Marcou tudo o que podia. Disse que as terras pertenciam à Igreja e nós éramos escravos do Bom Jesus. Bom, o povo estranhou, porque não se falava de escravidão em Lagoa Funda. Minha avó disse que sabiam de escravos em outros lugares, mas não ali. Nunca houve escravo naquela terra. Todos se consideravam livres, e hoje eu penso nas coisas que o finado Severo, seu pai, dizia: se os negros vieram para o Brasil para ser escravos, Lagoa Funda deve ter começado com o povo que fugiu de alguma fazenda ou ganhou liberdade de um algum fazendeiro. Mas ali ninguém quis falar sobre isso. Todo mundo nascia livre, sem dono. Apagaram essa lembrança do cativeiro.”\n(...)\n“Depois que marcaram tudo com o nome do Bom Jesus — eu vi muito pé de tudo, de jatobá a oitizeiro, com marca de ferro do Bom Jesus — e disseram que eram escravos do Bom Jesus, o povo ainda viveu como antes por muitos anos. Mas depois os fazendeiros chegaram mostrando documentos, e foram cercando as terras, o povo resistindo, muita gente morreu, e terminaram por ficar espremidos num cantinho. Minha mãe e meu pai foram para a Fazenda Caxangá, onde conheci seu avô, nessa época que cercaram as terras” (...).",
+      "source": "Itamar Vieira Júnior. *Torto arado*. 1.ª ed. São Paulo: Todavia, 2029, p. 227 – 229 (com adaptações).",
+      "language": "pt"
+    }
+  ],
+  "questions": [
+    {
+      "id": "tst-2023-tecnico-programacao-q001",
+      "number": 1,
+      "section": "Conhecimentos Básicos",
+      "subject": "Língua Portuguesa",
+      "stimulus_id": "t01",
+      "command": null,
+      "statement": "Entende-se da leitura do texto CB1A1-I que",
+      "options": [
+        {
+          "key": "A",
+          "text": "a depreciação do capital humano insere-se entre os desejos das empresas, visto que, de fato, a maior preocupação atual das corporações está centrada nas transformações tecnológicas."
+        },
+        {
+          "key": "B",
+          "text": "são decepcionantes os resultados obtidos pelas empresas com o trabalho remoto, pois o índice de produtividade é baixo e a qualidade, ruim."
+        },
+        {
+          "key": "C",
+          "text": "o sistema híbrido de trabalho, conforme os ganhos de produtividade encontrados nas primeiras avaliações, mostrou-se ineficaz."
+        },
+        {
+          "key": "D",
+          "text": "as pesquisas realizadas com o trabalho remoto demonstram que as pessoas preferem desenvolver suas atividades laborais presencialmente, pois se sentem mais produtivas."
+        },
+        {
+          "key": "E",
+          "text": "o contato face a face em reuniões presenciais de trabalho favorece a criatividade, assim como é uma oportunidade para as pessoas interagirem e trocarem experiências significativas."
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 1,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q002",
+      "number": 2,
+      "section": "Conhecimentos Básicos",
+      "subject": "Língua Portuguesa",
+      "stimulus_id": "t01",
+      "command": null,
+      "statement": "No último parágrafo do texto CB1A1-I, o vocábulo “fortuitos”",
+      "options": [
+        {
+          "key": "A",
+          "text": "indica o modo como os contatos são mantidos virtualmente e tem o mesmo sentido do vocábulo **inoperantes**."
+        },
+        {
+          "key": "B",
+          "text": "tem a mesma classificação gramatical que o vocábulo “raramente” e significa, no contexto em questão, **aquilo que não foi planejado**."
+        },
+        {
+          "key": "C",
+          "text": "é empregado, no contexto em questão, como substantivo e seu sentido é pejorativo, expressando a inoperância das reuniões virtuais."
+        },
+        {
+          "key": "D",
+          "text": "classifica-se gramaticalmente como adjetivo e poderia ser substituído, sem prejuízo dos sentidos do texto, por **eventuais**."
+        },
+        {
+          "key": "E",
+          "text": "tem a mesma classificação gramatical e o mesmo sentido da palavra “ilusórios”, empregada no terceiro período do segundo parágrafo."
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 1,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q003",
+      "number": 3,
+      "section": "Conhecimentos Básicos",
+      "subject": "Língua Portuguesa",
+      "stimulus_id": "t01",
+      "command": null,
+      "statement": "Cada uma das opções a seguir apresenta uma proposta de reescrita do primeiro período do segundo parágrafo do texto CB1A1-I. Assinale a opção em que a proposta apresentada mantém os sentidos e a correção gramatical do período.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Tal reversão justifica-se por diversas razões."
+        },
+        {
+          "key": "B",
+          "text": "Fatores diversos interferem com essa reversão."
+        },
+        {
+          "key": "C",
+          "text": "Tal reversão imiscui-se de vários elementos."
+        },
+        {
+          "key": "D",
+          "text": "Existe alguns fatos a serem considerados nessa reversão."
+        },
+        {
+          "key": "E",
+          "text": "Dessa reversão advém algumas consequências."
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 1,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q004",
+      "number": 4,
+      "section": "Conhecimentos Básicos",
+      "subject": "Língua Portuguesa",
+      "stimulus_id": "t01",
+      "command": null,
+      "statement": "O objetivo principal do texto CB1A1-I é",
+      "options": [
+        {
+          "key": "A",
+          "text": "argumentar em prol de uma maior produtividade nas organizações, que só é obtida efetivamente por meio do trabalho presencial."
+        },
+        {
+          "key": "B",
+          "text": "demonstrar que a priorização da produtividade nas empresas não compensa as perdas ocasionadas pela inibição da criatividade e pela depreciação acelerada do capital humano."
+        },
+        {
+          "key": "C",
+          "text": "denunciar a depreciação acelerada do capital humano, problema que as empresas vêm enfrentando desde a implementação do sistema de trabalho remoto."
+        },
+        {
+          "key": "D",
+          "text": "expor os fatores que explicam por que muitas organizações decidiram pelo retorno ao trabalho realizado de forma majoritariamente presencial."
+        },
+        {
+          "key": "E",
+          "text": "defender o sistema híbrido de trabalho como o mais vantajoso tanto para as empresas quanto para a força de trabalho, dados os princípios de economicidade e praticidade."
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 2,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q005",
+      "number": 5,
+      "section": "Conhecimentos Básicos",
+      "subject": "Língua Portuguesa",
+      "stimulus_id": "t01",
+      "command": null,
+      "statement": "A respeito das relações de concordância nominal e verbal no texto CB1A1-I, assinale a opção correta.",
+      "options": [
+        {
+          "key": "A",
+          "text": "No último período do terceiro parágrafo, a forma verbal “ajustem” está flexionada na terceira pessoa do plural porque concorda com o referente “empresas”."
+        },
+        {
+          "key": "B",
+          "text": "Estaria de acordo com as regras gramaticais a flexão do vocábulo “decididas” (primeiro período do primeiro parágrafo) no masculino plural — **decididos**."
+        },
+        {
+          "key": "C",
+          "text": "O vocábulo “reconsiderados” (segundo período do segundo parágrafo) está flexionado no masculino plural porque concorda com o termo “fatores” (primeiro período do segundo parágrafo)."
+        },
+        {
+          "key": "D",
+          "text": "No último período do segundo parágrafo, a forma verbal “analisa” poderia ser flexionada, sem prejuízo da correção gramatical do texto, na terceira pessoa do plural — **analisam** —, dado que o sujeito da oração em que se insere é composto de mais de um núcleo."
+        },
+        {
+          "key": "E",
+          "text": "A flexão no singular da forma verbal “está” (primeiro período do terceiro parágrafo) justifica-se pelo fato de que o sujeito da oração em que ela se insere é indeterminado."
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 2,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q006",
+      "number": 6,
+      "section": "Conhecimentos Básicos",
+      "subject": "Língua Portuguesa",
+      "stimulus_id": "t01",
+      "command": null,
+      "statement": "No que se refere à pontuação no texto CB1A1-I, assinale a opção correta.",
+      "options": [
+        {
+          "key": "A",
+          "text": "A inserção de uma vírgula imediatamente após o vocábulo “claro” (primeiro período do terceiro parágrafo) não prejudicaria a correção gramatical do texto, mas alteraria o sentido originalmente pretendido."
+        },
+        {
+          "key": "B",
+          "text": "No segundo período do terceiro parágrafo, a supressão da vírgula após “empresas”, embora não prejudicasse a correção gramatical do texto, alteraria seu sentido original."
+        },
+        {
+          "key": "C",
+          "text": "A supressão da vírgula empregada após “agradáveis” (último parágrafo) preservaria tanto a correção gramatical quanto os sentidos originais do texto."
+        },
+        {
+          "key": "D",
+          "text": "No segundo período do quarto parágrafo, as vírgulas empregadas imediatamente após “que” e “presenciais” isolam um aposto explicativo."
+        },
+        {
+          "key": "E",
+          "text": "Estaria mantida a correção gramatical do último período do quarto parágrafo caso fosse inserido um ponto final após o termo “social”, feito o devido ajuste de letra inicial maiúscula na palavra que iniciaria o novo período."
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 2,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q007",
+      "number": 7,
+      "section": "Conhecimentos Básicos",
+      "subject": "Língua Portuguesa",
+      "stimulus_id": "t01",
+      "command": null,
+      "statement": "Julgue os seguintes itens, relativos a aspectos linguísticos do texto CB1A1-I.\nI Mantendo-se a correção gramatical e a coerência das ideias do texto, o último período do segundo parágrafo poderia ser reescrito da seguinte forma: **À análise cuidadosa da relação entre a produção por hora trabalhada remotamente e a qualidade do trabalho realizado, observa-se que os resultados decepcionam**.\nII Não haveria prejuízo à correção gramatical nem à coerência das ideias veiculadas no quarto período do segundo parágrafo caso se substituísse o segmento “Quando se analisa com cuidado” por **Analisando cuidadosamente**.\nIII No último parágrafo, a oração “mas valorizam momentos felizes e agradáveis” equivale, sintática e semanticamente, à oração **embora valorizem momentos felizes e agradáveis**.\nIV No primeiro período do terceiro parágrafo, o segmento “pela falta do *feedback* imediato e repetido” expressa, na oração em que se insere, circunstância de causa.\nEstão certos apenas os itens",
+      "options": [
+        {
+          "key": "A",
+          "text": "I e III."
+        },
+        {
+          "key": "B",
+          "text": "I e IV."
+        },
+        {
+          "key": "C",
+          "text": "II e IV."
+        },
+        {
+          "key": "D",
+          "text": "I, II e III."
+        },
+        {
+          "key": "E",
+          "text": "II, III e IV."
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 2,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q008",
+      "number": 8,
+      "section": "Conhecimentos Básicos",
+      "subject": "Língua Portuguesa",
+      "stimulus_id": "t01",
+      "command": null,
+      "statement": "Assinale a opção em que o segmento extraído do texto CB1A1-I corresponde a uma oração de função adjetiva com sentido explicativo.",
+      "options": [
+        {
+          "key": "A",
+          "text": "“a levar de volta sua força de trabalho para os ambientes convencionais de trabalho presencial” (primeiro período do primeiro parágrafo)"
+        },
+        {
+          "key": "B",
+          "text": "“em que todos se observam mutuamente” (último período do quarto parágrafo)"
+        },
+        {
+          "key": "C",
+          "text": "“que o trabalho remoto (...) empobrece o capital humano das empresas” (primeiro período do terceiro parágrafo)"
+        },
+        {
+          "key": "D",
+          "text": "“para propor inovações no trabalho” (último período do terceiro parágrafo)"
+        },
+        {
+          "key": "E",
+          "text": "“que a falta do contato face a face de forma continuada é um sério inibidor da criatividade” (primeiro período do quarto parágrafo)"
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 2,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q009",
+      "number": 9,
+      "section": "Conhecimentos Básicos",
+      "subject": "Língua Portuguesa",
+      "stimulus_id": "t01",
+      "command": null,
+      "statement": "Assinale a opção correta no que diz respeito a aspectos linguísticos do texto CB1A1-I.",
+      "options": [
+        {
+          "key": "A",
+          "text": "No último período do primeiro parágrafo, o emprego da preposição “a” após “remoto” justifica-se pela regência do vocábulo “limitação”."
+        },
+        {
+          "key": "B",
+          "text": "No último período do segundo parágrafo, a substituição do vocábulo “e” por **com** manteria tanto a correção gramatical quanto os sentidos originais do texto."
+        },
+        {
+          "key": "C",
+          "text": "Estaria mantida a correção gramatical do primeiro período do terceiro parágrafo caso se inserisse a preposição **de** imediatamente após o vocábulo “claro”."
+        },
+        {
+          "key": "D",
+          "text": "No último parágrafo, a substituição do segmento “que raramente ocorrem” por **onde quase nunca acontecem** manteria tanto a correção gramatical quanto os sentidos originais do texto."
+        },
+        {
+          "key": "E",
+          "text": "Estariam preservados os sentidos e a correção gramatical do último parágrafo caso se substituísse “de produtividade” por **para a produtividade**."
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 2,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q010",
+      "number": 10,
+      "section": "Conhecimentos Básicos",
+      "subject": "Língua Portuguesa",
+      "stimulus_id": "t02",
+      "command": null,
+      "statement": "Em relação ao texto CB1A1-II e às ideias nele expressas, julgue os seguintes itens.\nI O fragmento apresentado é composto de trechos de história narrada oralmente por provável descendente de pessoas escravizadas fugidas ou libertas que povoaram a terra de Lagoa Funda.\nII De acordo com o fragmento, os ocupantes de Lagoa Funda foram desalojados primeiramente pela Igreja, que marcou ‘tudo o que podia’, e, depois, definitivamente, pelos fazendeiros, que lhes tomaram as terras.\nIII Entende-se da leitura do primeiro parágrafo que, por muito tempo, o povo de Lagoa Funda viveu sem a presença de estranhos e sem nenhum acontecimento que alterasse sua rotina.\nIV Pela organização das ideias do segundo parágrafo, conclui-se que foi com a chegada da Igreja que a população de Lagoa Funda apagou a lembrança do cativeiro.\nEstão certos apenas os itens",
+      "options": [
+        {
+          "key": "A",
+          "text": "I e II."
+        },
+        {
+          "key": "B",
+          "text": "I e III."
+        },
+        {
+          "key": "C",
+          "text": "II e IV."
+        },
+        {
+          "key": "D",
+          "text": "I, III e IV."
+        },
+        {
+          "key": "E",
+          "text": "II, III e IV."
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 3,
+      "topic_ids": [],
+      "review": "O crédito do texto CB1A1-II traz “Todavia, 2029” no caderno (transcrito como está)"
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q011",
+      "number": 11,
+      "section": "Conhecimentos Básicos",
+      "subject": "Língua Portuguesa",
+      "stimulus_id": "t02",
+      "command": null,
+      "statement": "Considerando os sentidos e aspectos linguísticos do texto CB1A1-II, assinale a opção correta.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Dadas as relações coesivas do primeiro parágrafo, o segmento ‘lhe pertenciam’ (antepenúltimo período) poderia ser, correta e coerentemente, substituído por **pertenciam à ela**."
+        },
+        {
+          "key": "B",
+          "text": "No segmento ‘se os negros vieram para o Brasil para ser escravos’ (segundo parágrafo), o emprego do vocábulo ‘se’, associado ao teor de todo o parágrafo, indica dúvida em relação ao cativeiro no Brasil."
+        },
+        {
+          "key": "C",
+          "text": "Na oração ‘porque não se falava de escravidão em Lagoa Funda’ (segundo parágrafo), a partícula ‘se’ indica que a oração está construída na voz passiva pronominal."
+        },
+        {
+          "key": "D",
+          "text": "No período ‘Nunca houve escravo naquela terra.’ (segundo parágrafo), a flexão da forma verbal ‘houve’ na terceira pessoa do singular justifica-se por sua concordância com o termo ‘escravo’, que é o sujeito da oração."
+        },
+        {
+          "key": "E",
+          "text": "No penúltimo período do último parágrafo, o sujeito referencial da forma verbal ‘terminaram’ é o termo ‘povo’, tomado em sentido plural no texto."
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 3,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q012",
+      "number": 12,
+      "section": "Conhecimentos Básicos",
+      "subject": "Língua Portuguesa",
+      "stimulus_id": "t02",
+      "command": null,
+      "statement": "Em relação a aspectos linguísticos do texto CB1A1-II, julgue os itens que se seguem.\nI No trecho ‘Eram só o povo e Deus’ (primeiro parágrafo), o vocábulo ‘só’ está empregado com o mesmo sentido de **apenas**.\nII No trecho ‘Depois chegou a Igreja’ (antepenúltimo período do primeiro parágrafo), o vocábulo ‘a’ classifica-se como preposição.\nIII No trecho ‘e nós éramos escravos do Bom Jesus’ (terceiro período do segundo parágrafo), após ‘e’ está subentendido o vocábulo **que**.\nIV No segundo parágrafo, o vocábulo ‘ali’ (quinto período) classifica-se como advérbio e está empregado em referência a ‘Lagoa Funda’ (quarto período).\nEstão certos apenas os itens",
+      "options": [
+        {
+          "key": "A",
+          "text": "I e II."
+        },
+        {
+          "key": "B",
+          "text": "I e IV."
+        },
+        {
+          "key": "C",
+          "text": "II e III."
+        },
+        {
+          "key": "D",
+          "text": "I, III e IV."
+        },
+        {
+          "key": "E",
+          "text": "II, III e IV."
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 3,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q013",
+      "number": 13,
+      "section": "Conhecimentos Básicos",
+      "subject": "Raciocínio Lógico-Matemático",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "No torneio anual de basquete promovido entre os servidores de um tribunal, foram inscritos 8 times. Na primeira fase do torneio, cada time jogará com cada um dos demais apenas uma vez. Entre esses times, apenas os 4 melhores passarão para a próxima fase. Nela, assim como na primeira fase, cada um dos times jogará com cada um dos demais apenas uma vez. Finalmente, após a segunda fase, os 2 times mais bem classificados jogarão a final, em jogo único. Com base na situação apresentada, assinale a opção que apresenta a quantidade total de jogos desse torneio.",
+      "options": [
+        {
+          "key": "A",
+          "text": "28"
+        },
+        {
+          "key": "B",
+          "text": "35"
+        },
+        {
+          "key": "C",
+          "text": "36"
+        },
+        {
+          "key": "D",
+          "text": "64"
+        },
+        {
+          "key": "E",
+          "text": "91"
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 3,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q014",
+      "number": 14,
+      "section": "Conhecimentos Básicos",
+      "subject": "Raciocínio Lógico-Matemático",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "O piso de uma sala retangular de certo tribunal será trocado integralmente. A sala em questão mede 10 m × 15 m, e nela serão colocadas cerâmicas quadradas de lado de 90 cm. Com base nessas informações, assinale a opção que corresponde ao menor número possível de cerâmicas que serão necessárias para a sala.",
+      "options": [
+        {
+          "key": "A",
+          "text": "166"
+        },
+        {
+          "key": "B",
+          "text": "167"
+        },
+        {
+          "key": "C",
+          "text": "185"
+        },
+        {
+          "key": "D",
+          "text": "186"
+        },
+        {
+          "key": "E",
+          "text": "1.852"
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 4,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q015",
+      "number": 15,
+      "section": "Conhecimentos Básicos",
+      "subject": "Raciocínio Lógico-Matemático",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Considerando-se *P* como o conjunto dos números primos ímpares e *I* como o conjunto dos números naturais ímpares, conclui-se que *P* − *I* será",
+      "options": [
+        {
+          "key": "A",
+          "text": "o conjunto dos números pares."
+        },
+        {
+          "key": "B",
+          "text": "o conjunto dos números primos pares."
+        },
+        {
+          "key": "C",
+          "text": "o conjunto dos ímpares não primos."
+        },
+        {
+          "key": "D",
+          "text": "o conjunto vazio."
+        },
+        {
+          "key": "E",
+          "text": "o conjunto dos números ímpares primos."
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 4,
+      "topic_ids": [],
+      "review": "Símbolos dos conjuntos transcritos da imagem do caderno"
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q016",
+      "number": 16,
+      "section": "Conhecimentos Básicos",
+      "subject": "Raciocínio Lógico-Matemático",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "*P*: “É permitido entrar de *shorts* em um tribunal.”\n*Q*: “É permitido entrar de bermuda em um tribunal.”\nCom base nas preposições *P* e *Q* precedentes, assinale a opção que é equivalente à proposição composta “Não é verdade que é permitido entrar de *shorts* ou bermuda em um tribunal.”.",
+      "options": [
+        {
+          "key": "A",
+          "text": "p → q"
+        },
+        {
+          "key": "B",
+          "text": "~(~q → p ∧ ~q)"
+        },
+        {
+          "key": "C",
+          "text": "~p ∨ ~q"
+        },
+        {
+          "key": "D",
+          "text": "~(p ∧ q)"
+        },
+        {
+          "key": "E",
+          "text": "p ∧ q → ~q"
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 4,
+      "topic_ids": [],
+      "review": "Fórmulas das opções transcritas da imagem do caderno"
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q017",
+      "number": 17,
+      "section": "Conhecimentos Básicos",
+      "subject": "Raciocínio Lógico-Matemático",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "(∃*x*)(maisIdade(*x*) → (∀*y*)(maisJovem(*y*) → maisEstudioso(*x*, *y*)))\nConsiderando que maisIdade(*x*) indica que *x* é uma pessoa de mais idade na faculdade, que maisJovem(*x*) indica que *x* é uma pessoa mais jovem na faculdade e que maisEstudioso(*x*, *y*) indica que *x* é mais estudioso que *y*, assinale a opção que traduz corretamente a notação lógica da sentença precedente.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Algumas pessoas de mais idade na faculdade são mais estudiosas que alguns dos mais jovens de lá."
+        },
+        {
+          "key": "B",
+          "text": "Todas as pessoas de mais idade na faculdade são mais estudiosas que alguns dos mais jovens de lá."
+        },
+        {
+          "key": "C",
+          "text": "Não existe nenhuma pessoa de mais idade na faculdade que seja mais estudiosa que todos os mais jovens de lá."
+        },
+        {
+          "key": "D",
+          "text": "Algumas pessoas de mais idade na faculdade são mais estudiosas que todos os mais jovens de lá."
+        },
+        {
+          "key": "E",
+          "text": "Todas as pessoas de mais idade na faculdade são mais estudiosas que todos os mais jovens de lá."
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 4,
+      "topic_ids": [],
+      "review": "Fórmula transcrita da imagem do caderno"
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q018",
+      "number": 18,
+      "section": "Conhecimentos Básicos",
+      "subject": "Direitos das pessoas com deficiência",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "O símbolo nacional de identificação de pessoas com deficiências ocultas consiste em um cordão de fita com desenhos de",
+      "options": [
+        {
+          "key": "A",
+          "text": "girassóis."
+        },
+        {
+          "key": "B",
+          "text": "quebra-cabeças coloridos."
+        },
+        {
+          "key": "C",
+          "text": "fitas vermelhas."
+        },
+        {
+          "key": "D",
+          "text": "fitas amarelas."
+        },
+        {
+          "key": "E",
+          "text": "fitas azuis."
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 4,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q019",
+      "number": 19,
+      "section": "Conhecimentos Básicos",
+      "subject": "Direitos das pessoas com deficiência",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "De acordo com a Lei n.º 10.098/2000, que estabelece critérios de promoção da acessibilidade de pessoas com deficiência, as barreiras existentes nos edifícios públicos e privados são classificadas como barreiras",
+      "options": [
+        {
+          "key": "A",
+          "text": "de circulação."
+        },
+        {
+          "key": "B",
+          "text": "arquitetônicas."
+        },
+        {
+          "key": "C",
+          "text": "espaciais."
+        },
+        {
+          "key": "D",
+          "text": "urbanísticas."
+        },
+        {
+          "key": "E",
+          "text": "técnicas."
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 4,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q020",
+      "number": 20,
+      "section": "Conhecimentos Básicos",
+      "subject": "Direitos das pessoas com deficiência",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Conforme o Decreto n.º 3.298/1999, no âmbito das modalidades de inserção laboral de pessoas com deficiência, entidades beneficentes de assistência social podem intermediar a modalidade denominada colocação seletiva. Nesse caso, a prestação de serviços entre a entidade beneficente de assistência social e o tomador de serviços se dará na forma de",
+      "options": [
+        {
+          "key": "A",
+          "text": "acordo de cooperação ou convênio."
+        },
+        {
+          "key": "B",
+          "text": "acordo de cooperação ou contrato formal."
+        },
+        {
+          "key": "C",
+          "text": "acordo de cooperação, apenas."
+        },
+        {
+          "key": "D",
+          "text": "convênio ou contrato formal."
+        },
+        {
+          "key": "E",
+          "text": "termo de colaboração ou convênio."
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 4,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q021",
+      "number": 21,
+      "section": "Conhecimentos Básicos",
+      "subject": "Direitos das pessoas com deficiência",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "O propósito da Convenção Internacional sobre os Direitos das Pessoas com Deficiência, conforme estabelecido expressamente em seu texto, inclui promover, proteger e assegurar\nI a acessibilidade urbana e digital de pessoas com deficiência, para que utilizem, com segurança e autonomia, espaços e tecnologias.\nII a integridade física e moral de pessoas com deficiência contra situações de preconceito.\nIII o exercício pleno e equitativo de todos os direitos humanos e liberdades fundamentais por todas as pessoas com deficiência.\nAssinale a opção correta.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Apenas o item II está certo."
+        },
+        {
+          "key": "B",
+          "text": "Apenas o item III está certo."
+        },
+        {
+          "key": "C",
+          "text": "Apenas os itens I e II estão certos."
+        },
+        {
+          "key": "D",
+          "text": "Apenas os itens I e III estão certos."
+        },
+        {
+          "key": "E",
+          "text": "Todos os itens estão certos."
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 4,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q022",
+      "number": 22,
+      "section": "Conhecimentos Básicos",
+      "subject": "Direitos das pessoas com deficiência",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "A Lei n.º 12.764/2012 estabelece que, para todos os efeitos legais, a pessoa com transtorno do espectro autista é considerada",
+      "options": [
+        {
+          "key": "A",
+          "text": "portadora de deficiência intelectual."
+        },
+        {
+          "key": "B",
+          "text": "portadora de necessidades especiais."
+        },
+        {
+          "key": "C",
+          "text": "pessoa com mobilidade reduzida."
+        },
+        {
+          "key": "D",
+          "text": "pessoa neurotípica."
+        },
+        {
+          "key": "E",
+          "text": "pessoa com deficiência."
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 4,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q023",
+      "number": 23,
+      "section": "Conhecimentos Básicos",
+      "subject": "Regimento Interno do TST",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Assinale a opção que indica órgão que funciona junto ao Tribunal Superior do Trabalho (TST), nos termos do seu Regimento Interno.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Tribunal Pleno"
+        },
+        {
+          "key": "B",
+          "text": "Órgão Especial"
+        },
+        {
+          "key": "C",
+          "text": "Escola Nacional de Administração Pública"
+        },
+        {
+          "key": "D",
+          "text": "Ouvidoria"
+        },
+        {
+          "key": "E",
+          "text": "Seção Especializada em Dissídios Coletivos"
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 4,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q024",
+      "number": 24,
+      "section": "Conhecimentos Básicos",
+      "subject": "Regimento Interno do TST",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Acerca dos cargos de direção do TST, julgue os itens seguintes.\nI A Presidência, a Vice-Presidência e a Corregedoria-Geral da Justiça do Trabalho são cargos de direção do TST.\nII O preenchimento dos cargos de direção é realizado mediante eleição em que concorrem os ministros mais antigos do TST, sendo permitida uma reeleição a qualquer dos cargos.\nIII Os ocupantes dos cargos de direção do TST são eleitos para exercer mandatos de dois anos, mediante escrutínio secreto e pelo voto da maioria absoluta dos membros, em sessão extraordinária do Tribunal Pleno.\nAssinale a opção correta.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Apenas o item II está certo."
+        },
+        {
+          "key": "B",
+          "text": "Apenas o item III está certo."
+        },
+        {
+          "key": "C",
+          "text": "Apenas os itens I e II estão certos."
+        },
+        {
+          "key": "D",
+          "text": "Apenas os itens I e III estão certos."
+        },
+        {
+          "key": "E",
+          "text": "Todos os itens estão certos."
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 5,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q025",
+      "number": 25,
+      "section": "Conhecimentos Básicos",
+      "subject": "Regimento Interno do TST",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Assinale a opção que indica corretamente o órgão do TST competente para fixar e rever diárias e ajudas de custo do presidente, dos ministros e dos servidores do tribunal em matéria administrativa.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Órgão Especial"
+        },
+        {
+          "key": "B",
+          "text": "Tribunal Pleno"
+        },
+        {
+          "key": "C",
+          "text": "Seção Especializada em Dissídios Individuais"
+        },
+        {
+          "key": "D",
+          "text": "Turmas"
+        },
+        {
+          "key": "E",
+          "text": "Conselho Superior da Justiça do Trabalho"
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 5,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q026",
+      "number": 26,
+      "section": "Conhecimentos Básicos",
+      "subject": "Regimento Interno do TST",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Segundo o Regimento Interno do TST, compete à Seção Especializada em Dissídios Individuais, em composição plena,\nI julgar os embargos interpostos contra decisões divergentes das turmas.\nII processar e julgar as reclamações destinadas à observância obrigatória de tese jurídica firmada em decisão com eficácia de precedente judicial de cumprimento obrigatório, por ela proferida.\nIII julgar os *habeas corpus*.\nAssinale a opção correta.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Apenas o item I está certo."
+        },
+        {
+          "key": "B",
+          "text": "Apenas o item II está certo."
+        },
+        {
+          "key": "C",
+          "text": "Apenas os itens I e III estão certos."
+        },
+        {
+          "key": "D",
+          "text": "Apenas os itens II e III estão certos."
+        },
+        {
+          "key": "E",
+          "text": "Todos os itens estão certos."
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 5,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q027",
+      "number": 27,
+      "section": "Conhecimentos Básicos",
+      "subject": "Regimento Interno do TST",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Segundo a ordem estabelecida no Regimento Interno do TST, nas sessões desse tribunal, terão prioridade de julgamento sobre todos os demais processos",
+      "options": [
+        {
+          "key": "A",
+          "text": "os processos em que houver pedido de preferência formulado por advogado habilitado até a hora prevista para o início da sessão."
+        },
+        {
+          "key": "B",
+          "text": "as tutelas provisórias."
+        },
+        {
+          "key": "C",
+          "text": "os *habeas corpus*."
+        },
+        {
+          "key": "D",
+          "text": "os mandados de segurança."
+        },
+        {
+          "key": "E",
+          "text": "os remanescentes de sessões anteriores."
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 5,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q028",
+      "number": 28,
+      "section": "Conhecimentos Básicos",
+      "subject": "Regimento Interno do TST",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Segundo o Regimento Interno do TST, salvo em caso de acúmulo de serviço, o prazo para os ministros será de",
+      "options": [
+        {
+          "key": "A",
+          "text": "30 dias para o visto do revisor."
+        },
+        {
+          "key": "B",
+          "text": "10 dias para justificativa de voto."
+        },
+        {
+          "key": "C",
+          "text": "15 dias para decisões interlocutórias e para o visto do relator."
+        },
+        {
+          "key": "D",
+          "text": "15 dias para vista regimental."
+        },
+        {
+          "key": "E",
+          "text": "10 dias para despachos e atos administrativos."
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 5,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q029",
+      "number": 29,
+      "section": "Conhecimentos Básicos",
+      "subject": "Regimento Interno do TST",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Com base no Regimento Interno do TST, assinale a opção que indica o recurso cabível contra as decisões não unânimes proferidas pela Seção Especializada em Dissídios Coletivos nos processos de dissídios coletivos de competência originária do TST.",
+      "options": [
+        {
+          "key": "A",
+          "text": "agravo de instrumento"
+        },
+        {
+          "key": "B",
+          "text": "agravo interno"
+        },
+        {
+          "key": "C",
+          "text": "recurso ordinário"
+        },
+        {
+          "key": "D",
+          "text": "recurso de revista"
+        },
+        {
+          "key": "E",
+          "text": "embargos infringentes"
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 5,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q030",
+      "number": 30,
+      "section": "Conhecimentos Básicos",
+      "subject": "Regimento Interno do TST",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "A Secretaria do TST é dirigida pelo",
+      "options": [
+        {
+          "key": "A",
+          "text": "diretor-geral, bacharel em direito, a quem incumbe a direção dos serviços administrativos do tribunal."
+        },
+        {
+          "key": "B",
+          "text": "diretor-geral, bacharel em curso de nível superior de qualquer área de formação, a quem incumbe a direção dos serviços administrativos do tribunal."
+        },
+        {
+          "key": "C",
+          "text": "diretor-geral, bacharel em curso de nível superior de qualquer área de formação, a quem incumbe a direção dos serviços administrativos e judiciários do tribunal."
+        },
+        {
+          "key": "D",
+          "text": "secretário-geral judiciário, bacharel em direito, a quem incumbe a direção dos serviços administrativos do tribunal."
+        },
+        {
+          "key": "E",
+          "text": "secretário-geral judiciário, bacharel em curso de nível superior de qualquer área de formação, a quem incumbe a direção dos serviços administrativos e judiciários do tribunal."
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 5,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q031",
+      "number": 31,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "```text\nprograma principal\n     inteiro i, contagem = 10, limite = 10;\n     para (i = 0; i > limite; i = i + 1) faça\n           contagem = contagem – 1;\n     fim para\n     imprime(contagem);\nfim programa\n```\nCom base no algoritmo precedente, escrito em pseudocódigo, assinale a opção que corresponde ao tipo de estrutura em que se realiza o decréscimo da variável `contagem`.",
+      "options": [
+        {
+          "key": "A",
+          "text": "estrutura de controle"
+        },
+        {
+          "key": "B",
+          "text": "estrutura de repetição"
+        },
+        {
+          "key": "C",
+          "text": "estrutura condicional"
+        },
+        {
+          "key": "D",
+          "text": "atributo"
+        },
+        {
+          "key": "E",
+          "text": "função"
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": true,
+      "has_figure": false,
+      "figures": [],
+      "page": 1,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q032",
+      "number": 32,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Na orientação a objetos, os conceitos de superclasse e subclasse estão relacionados a",
+      "options": [
+        {
+          "key": "A",
+          "text": "interface."
+        },
+        {
+          "key": "B",
+          "text": "polimorfismo."
+        },
+        {
+          "key": "C",
+          "text": "*array*."
+        },
+        {
+          "key": "D",
+          "text": "herança."
+        },
+        {
+          "key": "E",
+          "text": "coleção."
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 1,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q033",
+      "number": 33,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Uma das vantagens do uso de funções predefinidas é",
+      "options": [
+        {
+          "key": "A",
+          "text": "o reaproveitamento de código."
+        },
+        {
+          "key": "B",
+          "text": "a passagem de parâmetros."
+        },
+        {
+          "key": "C",
+          "text": "o recebimento do retorno das funções."
+        },
+        {
+          "key": "D",
+          "text": "o grau de abstração do sistema."
+        },
+        {
+          "key": "E",
+          "text": "a facilidade de implementação das funções."
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 1,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q034",
+      "number": 34,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Assinale a opção que apresenta a representação correta de instruções, em pseudocódigo tipado, para definir uma variável e modificar e imprimir seu conteúdo em uma saída.",
+      "options": [
+        {
+          "key": "A",
+          "text": "```text\nvariavel = 0;\nvariavel = 1 + 2;\nimprime(variavel);\n```"
+        },
+        {
+          "key": "B",
+          "text": "```text\ninteiro variavel = 0;\nvariavel = 1 + 2;\nimprime(inteiro);\n```"
+        },
+        {
+          "key": "C",
+          "text": "```text\ninteiro variavel = 0;\nvariavel = \"1\" + \"2\";\nimprime(variavel);\n```"
+        },
+        {
+          "key": "D",
+          "text": "```text\ninteiro variavel = 0;\nvariavel = 1 + 2;\nimprime(variavel);\n```"
+        },
+        {
+          "key": "E",
+          "text": "```text\ninteiro variavel = \"0\";\nvariavel = 1 + 2;\nimprime(variavel);\n```"
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": true,
+      "has_figure": false,
+      "figures": [],
+      "page": 1,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q035",
+      "number": 35,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Uma das finalidades da utilização das funções de *hashing* é",
+      "options": [
+        {
+          "key": "A",
+          "text": "converter um número inteiro para uma sequência de caracteres."
+        },
+        {
+          "key": "B",
+          "text": "criptografar um arquivo com senha."
+        },
+        {
+          "key": "C",
+          "text": "recuperar informações a partir de um arquivo criptografado."
+        },
+        {
+          "key": "D",
+          "text": "garantir a autenticidade de uma mensagem."
+        },
+        {
+          "key": "E",
+          "text": "mapear os dados de um objeto para um valor inteiro representativo."
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 1,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q036",
+      "number": 36,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Em normalização de bancos de dados, a forma em que a tabela não possui atributos transitivamente dependentes da chave primária e em que não há colunas dependentes de outras colunas que não são chaves é denominada",
+      "options": [
+        {
+          "key": "A",
+          "text": "primeira forma normal."
+        },
+        {
+          "key": "B",
+          "text": "associações."
+        },
+        {
+          "key": "C",
+          "text": "segunda forma normal."
+        },
+        {
+          "key": "D",
+          "text": "terceira forma normal."
+        },
+        {
+          "key": "E",
+          "text": "diagrama de dependências funcionais."
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 1,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q037",
+      "number": 37,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Entre as operações possíveis no OLAP, aquela que implica um aumento do nível de detalhamento, ou seja, faz que se parta de um nível mais baixo de agregação para um nível mais alto, é",
+      "options": [
+        {
+          "key": "A",
+          "text": "`drill up`."
+        },
+        {
+          "key": "B",
+          "text": "`drill down`."
+        },
+        {
+          "key": "C",
+          "text": "`break`."
+        },
+        {
+          "key": "D",
+          "text": "`drill across`."
+        },
+        {
+          "key": "E",
+          "text": "`slice`."
+        }
+      ],
+      "answer": null,
+      "status": "anulada",
+      "status_note": "Deferido com anulação: as informações apresentadas no enunciado da questão prejudicaram seu julgamento objetivo.",
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 1,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q038",
+      "number": 38,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Assinale a opção correspondente ao comando utilizado para adicionar, remover ou modificar colunas de tabelas de bancos de dados SQL.",
+      "options": [
+        {
+          "key": "A",
+          "text": "`update`"
+        },
+        {
+          "key": "B",
+          "text": "`insert`"
+        },
+        {
+          "key": "C",
+          "text": "`create`"
+        },
+        {
+          "key": "D",
+          "text": "`delete`"
+        },
+        {
+          "key": "E",
+          "text": "`alter`"
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": true,
+      "has_figure": false,
+      "figures": [],
+      "page": 1,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q039",
+      "number": 39,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "A fase do CRISP-DM em que se dá a aplicação das técnicas de mineração de dados propriamente ditas é denominada",
+      "options": [
+        {
+          "key": "A",
+          "text": "preparação dos dados."
+        },
+        {
+          "key": "B",
+          "text": "entendimento dos dados."
+        },
+        {
+          "key": "C",
+          "text": "implantação."
+        },
+        {
+          "key": "D",
+          "text": "modelagem."
+        },
+        {
+          "key": "E",
+          "text": "avaliação."
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 1,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q040",
+      "number": 40,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "ElasticSearch",
+      "options": [
+        {
+          "key": "A",
+          "text": "é uma linguagem de programação."
+        },
+        {
+          "key": "B",
+          "text": "suporta pesquisas de texto completo (*full-text search*)."
+        },
+        {
+          "key": "C",
+          "text": "é usado no armazenamento de banco de dados."
+        },
+        {
+          "key": "D",
+          "text": "é um banco de dados relacional."
+        },
+        {
+          "key": "E",
+          "text": "não suporta buscas em tempo real."
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 1,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q041",
+      "number": 41,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "O projeto de *software* é a primeira atividade técnica voltada à construção de *software* e deve ser iniciada logo após",
+      "options": [
+        {
+          "key": "A",
+          "text": "o teste de *software*."
+        },
+        {
+          "key": "B",
+          "text": "o projeto de dados."
+        },
+        {
+          "key": "C",
+          "text": "o projeto arquitetural."
+        },
+        {
+          "key": "D",
+          "text": "a análise e a especificação de requisitos."
+        },
+        {
+          "key": "E",
+          "text": "a codificação."
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 1,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q042",
+      "number": 42,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Assinale a opção em que é apresentada uma técnica de desenvolvimento de *software* orientada a testes que é voltada para o atendimento dos requisitos do sistema com base no negócio, que utiliza exemplos e dublês de teste e que descreve funcionalidades por meio da sintaxe `dado que`, `quando` e `então`.",
+      "options": [
+        {
+          "key": "A",
+          "text": "teste unitário de *software*"
+        },
+        {
+          "key": "B",
+          "text": "desenvolvimento orientado por comportamento (BDD)"
+        },
+        {
+          "key": "C",
+          "text": "desenvolvimento guiado por testes (TDD)"
+        },
+        {
+          "key": "D",
+          "text": "desenvolvimento guiado por testes de aceitação (ATDD)"
+        },
+        {
+          "key": "E",
+          "text": "testes de aceitação de usuário (UAT)"
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 2,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q043",
+      "number": 43,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "No Scrum, o artefato que apresenta uma lista de características do *software* que está sendo desenvolvido é denominado",
+      "options": [
+        {
+          "key": "A",
+          "text": "*backlog* da *sprint*."
+        },
+        {
+          "key": "B",
+          "text": "incremento."
+        },
+        {
+          "key": "C",
+          "text": "cartão."
+        },
+        {
+          "key": "D",
+          "text": "*backlog* do produto."
+        },
+        {
+          "key": "E",
+          "text": "*sprint*."
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 2,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q044",
+      "number": 44,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "No processo de desenvolvimento de *software* ágil, uma narrativa que relata, sob a perspectiva do usuário final, como o *software* irá agregar valor ao negócio é denominada",
+      "options": [
+        {
+          "key": "A",
+          "text": "*sprint*."
+        },
+        {
+          "key": "B",
+          "text": "iniciativa."
+        },
+        {
+          "key": "C",
+          "text": "história de usuário."
+        },
+        {
+          "key": "D",
+          "text": "requisito não funcional."
+        },
+        {
+          "key": "E",
+          "text": "épico."
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 2,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q045",
+      "number": 45,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "De acordo com o Manual de Práticas de Contagem do IFPUG, a contagem das funções de dados e das funções transacionais deve ser realizada imediatamente após a",
+      "options": [
+        {
+          "key": "A",
+          "text": "determinação do escopo da contagem."
+        },
+        {
+          "key": "B",
+          "text": "identificação do tipo da contagem."
+        },
+        {
+          "key": "C",
+          "text": "identificação do propósito da contagem."
+        },
+        {
+          "key": "D",
+          "text": "determinação da fronteira da aplicação."
+        },
+        {
+          "key": "E",
+          "text": "identificação dos requisitos funcionais."
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 2,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q046",
+      "number": 46,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "```html\n<html>\n   <body>\n     <p id=\"demo\"></p>\n        <script>\n        let x = 10;{\n         let x = 1;\n         x = x - 1;\n        }\n        {\n         let x = 3;\n         x = x + 5;\n        }\n        {\n         let x = 20;\n         x = x + 2;\n        }\ndocument.getElementById(\"demo\").innerHTML = x;\n</script>\n</body>\n</html>\n```\nConsiderando o código precedente, desenvolvido em ECMAScript 6, assinale a opção que apresenta o resultado mostrado ao usuário ao final da execução desse código.",
+      "options": [
+        {
+          "key": "A",
+          "text": "`0`"
+        },
+        {
+          "key": "B",
+          "text": "`8`"
+        },
+        {
+          "key": "C",
+          "text": "`10`"
+        },
+        {
+          "key": "D",
+          "text": "`12`"
+        },
+        {
+          "key": "E",
+          "text": "`22`"
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": true,
+      "has_figure": false,
+      "figures": [],
+      "page": 2,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q047",
+      "number": 47,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "```php\n<?php\n$ x = function($ a) {\n    return $ a ** 2;\n};\n$ y = range(3, 5);\n$ y = array_map($ x, $ y);\nprint implode(' ', $ y);\n?>\n```\nCom base no código precedente, desenvolvido em PHP, assinale a opção que corresponde ao resultado a ser apresentado ao final da execução desse código.",
+      "options": [
+        {
+          "key": "A",
+          "text": "`4`"
+        },
+        {
+          "key": "B",
+          "text": "`8`"
+        },
+        {
+          "key": "C",
+          "text": "`3 4 5`"
+        },
+        {
+          "key": "D",
+          "text": "`6 8 10`"
+        },
+        {
+          "key": "E",
+          "text": "`9 16 25`"
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": true,
+      "has_figure": false,
+      "figures": [],
+      "page": 2,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q048",
+      "number": 48,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "```html\n<html>\n<head>\n<script\nsrc=\"https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery. min.js\"></script>\n<script>\n$ (document).ready(function(){\n  $ (\"button\").click(function(){\n    $ (\"#nome\").hide();\n  });\n});\n</script>\n</head>\n<body>\n<h2>Poder Judiciário</h2>\n<p>TST</p>\n<p id=\"nome\">Tribunal Superior do Trabalho</p>\n<button>Clique Aqui</button>\n</body>\n</html>\n```\nA execução do código precedente, desenvolvido com HTML, JavaScript e jQuery, provê o resultado apresentado a seguir. Com base nessas informações, assinale a opção que representa corretamente o que será apresentado se o usuário clicar no botão “Clique Aqui”.",
+      "options": [
+        {
+          "key": "A",
+          "text": "[imagem] Título “Poder Judiciário”, parágrafo “TST” e botão “Clique Aqui” (o parágrafo “Tribunal Superior do Trabalho” deixa de aparecer)"
+        },
+        {
+          "key": "B",
+          "text": "[imagem] Apenas o botão “Clique Aqui”"
+        },
+        {
+          "key": "C",
+          "text": "[imagem] Título “Poder Judiciário”, parágrafos “TST” e “Tribunal Superior do Trabalho” e botão “Clique Aqui” (igual à tela inicial)"
+        },
+        {
+          "key": "D",
+          "text": "[imagem] Título “Poder Judiciário” e botão “Clique Aqui”"
+        },
+        {
+          "key": "E",
+          "text": "[imagem] Título “Poder Judiciário” e parágrafo “TST”, sem o botão"
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": "Deferido com alteração (E → A): a opção apontada preliminarmente como gabarito não pode ser correta, uma vez que a opção que representa corretamente o que será apresentado se o usuário clicar no botão Clique Aqui é a opção A.",
+      "answer_changed_from": "E",
+      "language": "pt",
+      "has_table": false,
+      "has_code": true,
+      "has_figure": true,
+      "figures": [
+        {
+          "file": "assets/tst-2023-tecnico-programacao-q048.png",
+          "description": "Tela inicial: título “Poder Judiciário”, parágrafos “TST” e “Tribunal Superior do Trabalho” e botão “Clique Aqui”. Abaixo, as cinco opções de resposta, cada uma com uma captura de tela (descritas no texto das opções)."
+        }
+      ],
+      "page": 2,
+      "topic_ids": [],
+      "review": "A URL do jQuery, quebrada em duas linhas pela diagramação, foi unida. As opções são imagens; o texto das opções descreve cada captura, e a figura recorta a área inteira"
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q049",
+      "number": 49,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "```html\n<html>\n<body>\n<h3>TST</h3>\n<form action=\"/action.php\">\n  <label for=\"login\">Login:</label>\n  <input type=\"text\" id=\"login\" name=\"login\" #TST>\n  <input type=\"submit\">\n</form>\n</body>\n</html>\n```\nSegundo a versão 3.1 do Modelo de Acessibilidade em Governo Eletrônico (eMAG), no HTML 5, há um atributo que especifica que um campo é obrigatório, informação que é lida pelo leitor de tela.\nO código precedente foi desenvolvido com HTML 5. O arquivo `action.php` está na mesma pasta do arquivo que contém o código apresentado. O resultado da execução desse código está ilustrado na figura a seguir.\nA partir dessas informações, é correto afirmar que, para fornecer instrução para a entrada de dados obrigatória e obter o mesmo resultado do apresentado na figura precedente quando o usuário clicar no botão “Enviar” sem preencher o campo de Login, o trecho `#TST` deverá ser substituído por",
+      "options": [
+        {
+          "key": "A",
+          "text": "`obligatory`."
+        },
+        {
+          "key": "B",
+          "text": "`must`."
+        },
+        {
+          "key": "C",
+          "text": "`required`."
+        },
+        {
+          "key": "D",
+          "text": "`formvalidate`."
+        },
+        {
+          "key": "E",
+          "text": "`mandatory`."
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": true,
+      "has_figure": true,
+      "figures": [
+        {
+          "file": "assets/tst-2023-tecnico-programacao-q049.png",
+          "description": "Formulário com o título “TST”, o rótulo “Login:”, campo de texto vazio e botão “Enviar”; abaixo do campo aparece o aviso do navegador “Preencha este campo.”"
+        }
+      ],
+      "page": 3,
+      "topic_ids": [],
+      "review": "Figura com o resultado do formulário; o botão “Enviar” citado no enunciado é uma imagem no caderno"
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q050",
+      "number": 50,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Assinale a opção que corresponde ao diretório no JBoss AS 7 sob o qual um controlador de *host* criará a área de trabalho para instâncias individuais de servidor (modo de domínio gerenciado).",
+      "options": [
+        {
+          "key": "A",
+          "text": "`jboss.domain.servers.dir`"
+        },
+        {
+          "key": "B",
+          "text": "`jboss.server.base.dir`"
+        },
+        {
+          "key": "C",
+          "text": "`jboss.server.data.dir`"
+        },
+        {
+          "key": "D",
+          "text": "`java.home`"
+        },
+        {
+          "key": "E",
+          "text": "`jboss.home`"
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": true,
+      "has_figure": false,
+      "figures": [],
+      "page": 3,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q051",
+      "number": 51,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "De acordo com a Resolução n.º 335/2020 do Conselho Nacional de Justiça (CNJ), a Plataforma Digital do Poder Judiciário (PDPJ-Br) deve adotar, de forma obrigatória, soluções que abranjam",
+      "options": [
+        {
+          "key": "A",
+          "text": "tecnologias com código aberto (*open source*)."
+        },
+        {
+          "key": "B",
+          "text": "plataforma privada sob responsabilidade do CNJ, a ser por ele disponibilizada aos órgãos do Poder Judiciário."
+        },
+        {
+          "key": "C",
+          "text": "incremento da robotização e técnicas disruptivas de desenvolvimento de soluções."
+        },
+        {
+          "key": "D",
+          "text": "bancos de dados massivos."
+        },
+        {
+          "key": "E",
+          "text": "sistemas imunológicos digitais."
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 3,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q052",
+      "number": 52,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Conforme a Portaria CNJ n.º 252/2020, que dispõe sobre o modelo de governança e gestão da PDPJ-Br, compete aos comitês gestores dos tribunais",
+      "options": [
+        {
+          "key": "A",
+          "text": "propor a organização da estrutura de atendimento às demandas de seus usuários internos e externos."
+        },
+        {
+          "key": "B",
+          "text": "sugerir à Presidência do Comitê Gestor Nacional o modelo de rateio dos custos da nuvem computacional e, se aprovado, acompanhar sua execução."
+        },
+        {
+          "key": "C",
+          "text": "propor à Presidência do Comitê Gestor Nacional a política de tecnologia da informação a ser seguida pela PDPJ-Br."
+        },
+        {
+          "key": "D",
+          "text": "homologar e propor ajustes aos projetos de desenvolvimento de microsserviços."
+        },
+        {
+          "key": "E",
+          "text": "propor normas regulamentadoras à Comissão Permanente de Tecnologia da Informação e Infraestrutura do CNJ."
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 3,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q053",
+      "number": 53,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Com base na Portaria CNJ n.º 253/2020, que institui os critérios e as diretrizes técnicas para o processo de desenvolvimento de módulos e serviços na PDPJ-Br, assinale a opção correta.",
+      "options": [
+        {
+          "key": "A",
+          "text": "As aplicações monolíticas deverão ser disponibilizadas por meio de mecanismos nativos como JSF e *richfaces*."
+        },
+        {
+          "key": "B",
+          "text": "Cada órgão que se integrar à PDPJ-Br deverá disponibilizar, em seu sítio público na nuvem (*marketplace*), a lista de projetos em andamento e pendentes de serem integrados à PDPJ-Br."
+        },
+        {
+          "key": "C",
+          "text": "A PDPJ-Br seguirá modelo arquitetural de microsserviços, preferencialmente modelados utilizando-se a metodologia DDD (*domain driven design*)."
+        },
+        {
+          "key": "D",
+          "text": "As API (*application programming interfaces*) deverão ser providas por meio de tecnologia SOAP (*simple object access protocol*), exceto as do tipo *stateless*, e, em qualquer caso, obedecer aos padrões definidos na plataforma de documentações do CNJ."
+        },
+        {
+          "key": "E",
+          "text": "Os recursos e meios para testes de integração utilizados não poderão permitir a execução de *pipelines* ou testes automatizados, com vistas a garantir unicidade e padronização de testes a nível nacional."
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 3,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q054",
+      "number": 54,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Em conformidade com a Portaria CNJ n.º 131/2021, que institui o grupo revisor de código-fonte das soluções da PDPJ-Br e do processo judicial eletrônico (PJe), assinale a opção correta.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Os servidores lotados na Divisão de Gestão de Sistemas Corporativos do CNJ são membros natos do grupo revisor em questão."
+        },
+        {
+          "key": "B",
+          "text": "Caberá ao grupo revisor de código-fonte a escolha dos projetos disponibilizados na PDPJ-Br, sendo ele o responsável pelos testes que orientarão tecnicamente as escolhas das soluções."
+        },
+        {
+          "key": "C",
+          "text": "Caberá preferencialmente ao CNJ prover um ambiente de testes padronizado para análise dos *merge requests*, sem prejuízo de os demais integrantes do grupo revisor realizarem suas análises em ambiente próprio."
+        },
+        {
+          "key": "D",
+          "text": "Antes de ser encaminhado para análise do grupo revisor, o código-fonte deverá ser submetido às ferramentas de DAST (*dynamic application security testing*) e SCA (*software composition analysis*)."
+        },
+        {
+          "key": "E",
+          "text": "O código-fonte que não alcançar os critérios mínimos definidos pelo CNJ no teste realizado deverá, antes de ser rejeitado, ser posto em quarentena, quando serão realizados novos testes por equipe distinta daquela que fez o teste que reprovou o código."
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 3,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q055",
+      "number": 55,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "De acordo com o disposto na Resolução CNJ n.º 396/2021, que institui a Estratégia Nacional de Segurança Cibernética do Poder Judiciário (ENSEC-PJ), assinale a opção correta. Nesse sentido, considere que as siglas STF, TIC e CGSI significam, respectivamente, Supremo Tribunal Federal, tecnologia da informação e comunicação e Comitê de Governança de Segurança da Informação.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Compete à área de TIC de cada órgão do Poder Judiciário realizar a governança da segurança da informação e, especialmente, implementar, no que lhe couber, a Política de Segurança Cibernética do Poder Judiciário."
+        },
+        {
+          "key": "B",
+          "text": "Cabe ao STF coordenar as ações para viabilizar a implementação do modelo de governança nacional na segurança cibernética do Poder Judiciário, de forma a promover a integração dos diversos entes relacionados com a segurança cibernética."
+        },
+        {
+          "key": "C",
+          "text": "Cada órgão do Poder Judiciário, incluído o STF, deverá constituir CGSI, ao qual caberá assessorar o chefe do setor de TIC nas questões relacionadas à segurança da informação."
+        },
+        {
+          "key": "D",
+          "text": "O CGSI será coordenado por equipe de TIC do respectivo órgão do Poder Judiciário, sendo sua composição definida pelo presidente do órgão especificamente para tal finalidade."
+        },
+        {
+          "key": "E",
+          "text": "Cada órgão do Poder Judiciário, salvo o STF, deverá implementar a gestão de usuários de sistemas informatizados composta por gerenciamento de identidades, de acessos e de privilégios."
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 4,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q056",
+      "number": 56,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Assinale a opção que indica o comando que só pode ser definido para executar em nível de instrução no banco de dados PostgreSQL.",
+      "options": [
+        {
+          "key": "A",
+          "text": "`after`"
+        },
+        {
+          "key": "B",
+          "text": "`truncate`"
+        },
+        {
+          "key": "C",
+          "text": "`update`"
+        },
+        {
+          "key": "D",
+          "text": "`instead of`"
+        },
+        {
+          "key": "E",
+          "text": "`before`"
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": true,
+      "has_figure": false,
+      "figures": [],
+      "page": 4,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q057",
+      "number": 57,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Um *dev* que trabalha com integração contínua, para garantir que suas implementações funcionem com o restante do código, deve, sequencialmente, ao final de sua tarefa,",
+      "options": [
+        {
+          "key": "A",
+          "text": "atualizar a cópia local do projeto, executar os testes localmente, executar um *build* local e fazer *commit* com o repositório central."
+        },
+        {
+          "key": "B",
+          "text": "atualizar a cópia local do projeto, executar um *build* local, executar os testes localmente e fazer *commit* com o repositório central."
+        },
+        {
+          "key": "C",
+          "text": "fazer *commit* com o repositório central, executar um *build* local, atualizar a cópia local do projeto e executar os testes localmente."
+        },
+        {
+          "key": "D",
+          "text": "executar um *build* local, atualizar a cópia local do projeto, executar os testes localmente e fazer *commit* com o repositório central."
+        },
+        {
+          "key": "E",
+          "text": "executar os testes localmente, executar um *build* local, atualizar a cópia local do projeto e fazer *commit* com o repositório central."
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 4,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q058",
+      "number": 58,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Assinale a opção que apresenta a ferramenta utilizada no Swagger para expor e invocar definições de APIs feitas com o próprio Swagger.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Swagger Socket"
+        },
+        {
+          "key": "B",
+          "text": "Swagger Editor"
+        },
+        {
+          "key": "C",
+          "text": "Swagger Parse"
+        },
+        {
+          "key": "D",
+          "text": "Swagger Codegen"
+        },
+        {
+          "key": "E",
+          "text": "Swagger JS"
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 4,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q059",
+      "number": 59,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "No Git, o comando que envia as atualizações do repositório local para o repositório remoto é executado por meio da instrução",
+      "options": [
+        {
+          "key": "A",
+          "text": "`git push`."
+        },
+        {
+          "key": "B",
+          "text": "`git commit`."
+        },
+        {
+          "key": "C",
+          "text": "`git pull`."
+        },
+        {
+          "key": "D",
+          "text": "`git add`."
+        },
+        {
+          "key": "E",
+          "text": "`git merge`."
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 4,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tst-2023-tecnico-programacao-q060",
+      "number": 60,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Single Sign-On é uma identidade federada que fornece um serviço de *token* de segurança por meio do",
+      "options": [
+        {
+          "key": "A",
+          "text": "ponto de contato."
+        },
+        {
+          "key": "B",
+          "text": "serviço de identidade."
+        },
+        {
+          "key": "C",
+          "text": "provisionamento."
+        },
+        {
+          "key": "D",
+          "text": "serviço de protocolo."
+        },
+        {
+          "key": "E",
+          "text": "serviço de chave."
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 4,
+      "topic_ids": [],
+      "review": null
+    }
+  ]
+}

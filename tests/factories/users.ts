@@ -3,7 +3,7 @@ import { createServerClient } from '@supabase/ssr';
 import { createClient } from '@supabase/supabase-js';
 import { inject } from 'vitest';
 import type { Database, DbClient } from '../../src/shared/supabase/types.ts';
-import { isLocalUrl } from '../../scripts/create-test-user.ts';
+import { isLocalUrl } from '../../scripts/local-supabase.ts';
 import type { CookieStore } from './cookies.ts';
 
 type DbThemePreference = Database['public']['Enums']['theme_preference'];

@@ -1,0 +1,192 @@
+{
+  "paper": {
+    "schema_version": "1.0",
+    "id": "stj-2024-analista-sistemas",
+    "court_id": "stj",
+    "court": "STJ",
+    "justice_branch": "superior",
+    "state": "DF",
+    "year": 2024,
+    "applied_on": "2024-12-01",
+    "exam_board": "Cebraspe",
+    "notice": "Edital n.º 1 – STJ, de 16 de agosto de 2024",
+    "taxonomy_edition": false,
+    "level": "analista",
+    "position": "Analista Judiciário – Área Apoio Especializado",
+    "specialty": "Análise de Sistemas de Informação",
+    "position_code": "Cargo 3",
+    "booklets": [
+      {
+        "code": "018_STJ_CB3_01",
+        "type": null,
+        "numbers": "1-50"
+      },
+      {
+        "code": "018_STJ_003_01",
+        "type": null,
+        "numbers": "51-120"
+      }
+    ],
+    "format": "true_false",
+    "options_per_question": null,
+    "sections": [
+      {
+        "name": "Conhecimentos Básicos",
+        "numbers": "1-50"
+      },
+      {
+        "name": "Conhecimentos Específicos",
+        "numbers": "51-120"
+      }
+    ],
+    "answer_key": {
+      "status": "definitivo",
+      "published_on": null,
+      "note": "Gabaritos oficiais definitivos do Cebraspe; alterações e anulações justificadas no documento de justificativas"
+    },
+    "essay": {
+      "type": "texto dissertativo",
+      "prompt": "Uma empresa de tecnologia, especializada em desenvolvimento de software, está enfrentando desafios significativos na gestão de seus processos de TI. Recentemente, a empresa passou por uma auditoria que revelou diversas falhas nos controles internos e na governança de TI, resultando em riscos elevados e ineficiências operacionais. Para resolver esses problemas, a diretoria decidiu implementar o COBIT 2019 como framework de governança e gestão de TI.\nConsiderando a situação hipotética apresentada, redija um texto dissertativo a respeito da implementação do COBIT 2019 na governança e na gestão de TI da referida empresa. Em seu texto, aborde os seguintes aspectos:\n1. dois impactos que as falhas nos controles internos podem gerar na operação e na estratégia da empresa; [valor: 8,00 pontos]\n2. dois impactos que as deficiências na governança de TI podem gerar na operação e na estratégia da empresa; [valor: 8,00 pontos]\n3. dois benefícios esperados com a implementação do COBIT 2019 na empresa; [valor: 10,00 pontos]\n4. três medidas que podem fazer parte de um plano de ação para a implementação do COBIT 2019 na empresa. [valor: 12,00 pontos]",
+      "instructions": "Extensão máxima de 30 linhas; até 40,00 pontos pelo domínio do conteúdo, dos quais parte é atribuída à apresentação e à estrutura textual.",
+      "max_score": 40.0,
+      "answer_standard": "1. A falta de controles internos eficazes (i) abre brechas para o acesso não autorizado; (ii) aumenta a probabilidade de incidentes de segurança; (ii) gera perda de dados e violações de conformidade; e (iii) provoca a diminuição da confiança dos clientes e parceiros (iii) causa ineficiência e baixa produtividade; (iv) compromete a confidencialidade e integridade dos dados; (v) facilita fraudes internas; (vi) gera consequências financeiras, contratuais, regulatórias e de imagem; (vii) gera perda de dados e violações de conformidade; (viii) impacta a qualidade do software desenvolvido; (ix) leva à diminuição da integridade e da eficiência da estrutura organizacional, incluindo a obsolescência de equipamentos; (x) ocasiona a perda de economicidade e eficiência; (xi) provoca a diminuição da confiança dos clientes e parceiros; e (xii) resulta em danos à reputação.\n2. A deficiência na governança de TI (i) compromete a capacidade da empresa de inovar e competir no mercado; (ii) desalinha as operações com a estratégia da empresa; e (iii) dificulta o alcance dos objetivos e da visão institucional; (iv) gera ineficiência na alocação de recursos; (v) leva a custos excessivos, perdas de receita, multas e sanções; (vi) prejudica a comunicação entre a TI e outras áreas da empresa, dificultando o alinhamento estratégico; (vii) prejudica a tomada de decisões estratégicas; e (viii) resulta em monitoramento precário dos processos internos.\n3. A implementação do COBIT 2019 pode trazer os seguintes benefícios significativos para a empresa: (i) ajudará a estabelecer um sistema robusto de controles internos, mitigando os riscos de segurança e conformidade; (ii) aprimorará o gerenciamento estratégico; (iii) assegurará a conformidade com legislações, como a LGPD; (iv) aumentará o engajamento das partes interessadas; (v) criará valor para a empresa; (vi) favorecerá a manutenção da relevância tecnológica e a inovação; (vii) fortalecerá a governança de TI; (viii) garantirá que os sistemas de informação atenderão aos padrões da indústria; (ix) melhorará a gestão da arquitetura, segurança, contratos e relacionamentos; (x) melhorará a gestão de riscos; (xi) otimizará os recursos da empresa; (xii) promoverá a integração dos objetivos de TI com os objetivos estratégicos da empresa; e (xiii) resultará em uma alocação mais eficiente de recursos.\n4. Para a implementação do COBIT 2019, quatro medidas são essenciais: (i) ajustar e corrigir para garantir a aderência ao framework e a eficácia das melhorias implementadas; (ii) avaliar e identificar o cenário atual; (iii) capacitar a equipe de TI e de governança sobre os princípios e práticas do COBIT 2019; (iv) comunicar amplamente, para toda a entidade, as mudanças e ações esperadas; (v) definir o estado futuro desejado; (vi) definir objetivos e metas; (vii) desenvolver um plano de ação com prioridades claras, prazos e responsáveis; (viii) elaborar ações específicas; (ix) garantir operação e melhoria contínua; (x) integrar o COBIT 2019 com outros frameworks como ITIL e ISSO; (xi) monitorar e ajustar continuamente os processos para garantir a aderência ao framework e a eficácia das melhorias implementadas; (xii) realizar monitoramento contínuo; e (xiii) realizar um levantamento detalhado dos processos atuais de TI e identificar lacunas em relação ao framework COBIT 2019.",
+      "grading_criteria": "QUESITO 2.1 Impactos das falhas nos controles internos\nConceito 0 – Não abordou os impactos relacionados a falhas nos controles internos ou o fez de forma totalmente equivocada.\nConceito 1 – Mencionou corretamente apenas um impacto.\nConceito 2 – Mencionou corretamente dois impactos.\nQUESITO 2.2 Impactos das deficiências na governança de TI\nConceito 0 – Não abordou os impactos relacionados a deficiências na governança de TI ou o fez de forma totalmente equivocada.\nConceito 1 – Mencionou corretamente apenas um impacto.\nConceito 2 – Mencionou corretamente dois impactos.\nQUESITO 2.3 Benefícios esperados da implementação do COBIT 2019\nConceito 0 – Não abordou os benefícios da implementação do COBIT 2019 ou o fez de forma totalmente equivocada.\nConceito 1 – Mencionou corretamente apenas um benefício.\nConceito 2 – Mencionou corretamente dois benefícios.\nQUESITO 2.4 Medidas para implementação do COBIT 2019\nConceito 0 – Não abordou as medidas para implementação do COBIT 2019 ou o fez de forma totalmente equivocada.\nConceito 1 – Mencionou corretamente apenas uma medida.\nConceito 2 – Mencionou corretamente apenas duas medidas.\nConceito 3 – Mencionou corretamente três medidas."
+    },
+    "sources": [
+      {
+        "file": "018_STJ_CB3_01.pdf",
+        "kind": "caderno",
+        "url": "https://cdn.cebraspe.org.br/concursos/STJ_24/arquivos/018_STJ_CB3_01.PDF"
+      },
+      {
+        "file": "018_STJ_003_01.pdf",
+        "kind": "caderno",
+        "url": "https://cdn.cebraspe.org.br/concursos/STJ_24/arquivos/018_STJ_003_01.PDF"
+      },
+      {
+        "file": "GAB_DEFINITIVO_018_STJ_CB3_01.pdf",
+        "kind": "gabarito",
+        "url": "https://cdn.cebraspe.org.br/concursos/STJ_24/arquivos/GAB_DEFINITIVO_018_STJ_CB3_01.PDF"
+      },
+      {
+        "file": "GAB_DEFINITIVO_018_STJ_003_01.pdf",
+        "kind": "gabarito",
+        "url": "https://cdn.cebraspe.org.br/concursos/STJ_24/arquivos/GAB_DEFINITIVO_018_STJ_003_01.PDF"
+      },
+      {
+        "file": "018_STJ_003_DISC.pdf",
+        "kind": "caderno",
+        "url": "https://cdn.cebraspe.org.br/concursos/STJ_24/arquivos/018_STJ_003_DISC.PDF"
+      },
+      {
+        "file": "PADRO_DEFINITIVO_DE_RESPOSTA___CARGO_3.pdf",
+        "kind": "outro",
+        "url": "https://cdn.cebraspe.org.br/concursos/STJ_24/arquivos/PADRO_DEFINITIVO_DE_RESPOSTA___CARGO_3.PDF"
+      },
+      {
+        "file": "STJ_24_JUSTIFICATIVAS_DE_ALTERAES_DE_GABARITO.pdf",
+        "kind": "recursos",
+        "url": "https://cdn.cebraspe.org.br/concursos/STJ_24/arquivos/STJ_24_JUSTIFICATIVAS_DE_ALTERAES_DE_GABARITO.PDF"
+      }
+    ],
+    "notes": [
+      "Itens de certo/errado: answer C = certo, E = errado",
+      "Os Conhecimentos Básicos (itens 1–50, caderno 018_STJ_CB3_01) são comuns aos cargos 3 e 18 e aparecem nas duas provas do STJ deste banco",
+      "Disciplinas dos Conhecimentos Básicos atribuídas pelos comandos do caderno; o caderno não imprime o nome das disciplinas",
+      "Discursiva: enunciado, padrão de resposta definitivo e quesitos transcritos dos PDFs da banca"
+    ]
+  },
+  "parts": [
+    {
+      "parsed": "/home/claude/bank/work/018_STJ_CB3_01.json",
+      "answer_key": "/home/claude/provas/txt/GAB_DEFINITIVO_018_STJ_CB3_01.txt",
+      "sections": [
+        {
+          "from": 1,
+          "to": 10,
+          "section": "Conhecimentos Básicos",
+          "subject": "Língua Portuguesa"
+        },
+        {
+          "from": 11,
+          "to": 12,
+          "section": "Conhecimentos Básicos",
+          "subject": "Redação oficial"
+        },
+        {
+          "from": 13,
+          "to": 18,
+          "section": "Conhecimentos Básicos",
+          "subject": "Direito Constitucional"
+        },
+        {
+          "from": 19,
+          "to": 23,
+          "section": "Conhecimentos Básicos",
+          "subject": "Previdência complementar do servidor público federal (Lei 12.618/2012)"
+        },
+        {
+          "from": 24,
+          "to": 28,
+          "section": "Conhecimentos Básicos",
+          "subject": "Direito Administrativo, LGPD e processo administrativo (Lei 9.784/1999)"
+        },
+        {
+          "from": 29,
+          "to": 33,
+          "section": "Conhecimentos Básicos",
+          "subject": "Direitos humanos e direitos das pessoas com deficiência"
+        },
+        {
+          "from": 34,
+          "to": 42,
+          "section": "Conhecimentos Básicos",
+          "subject": "Código de Conduta e Regimento Interno do STJ; ética no serviço público"
+        },
+        {
+          "from": 43,
+          "to": 46,
+          "section": "Conhecimentos Básicos",
+          "subject": "Improbidade administrativa (Lei 8.429/1992)"
+        },
+        {
+          "from": 47,
+          "to": 50,
+          "section": "Conhecimentos Básicos",
+          "subject": "Agenda 2030 e sustentabilidade no Poder Judiciário"
+        }
+      ],
+      "changed": {
+        "25": "C",
+        "37": "C"
+      },
+      "status_notes": {
+        "8": "Deferido com anulação: há duas ocorrências do vocábulo “quem” no período, o que prejudicou o julgamento do item.",
+        "15": "Deferido com anulação: o emprego do termo “necessariamente” prejudicou o julgamento objetivo do item.",
+        "21": "Deferido com anulação: a redação do item está dúbia, o que prejudicou seu julgamento objetivo.",
+        "25": "Deferido com alteração (C → E): conforme a doutrina e a Constituição Federal, aquele que exercer a função de confiança deverá ser ocupante de cargo efetivo, que pressupõe aprovação em concurso público, o que torna a redação do item errada.",
+        "37": "Deferido com alteração (C → E): conforme o art. 13, II, do Código de Conduta do STJ, a vedação de cópias refere-se à utilização em fins alheios aos objetivos do órgão ou à execução dos trabalhos a cargo do servidor, não alcançando suas atribuições ordinárias."
+      }
+    },
+    {
+      "parsed": "/home/claude/bank/work/018_STJ_003_01.json",
+      "answer_key": "/home/claude/provas/txt/GAB_DEFINITIVO_018_STJ_003_01.txt",
+      "sections": [
+        {
+          "from": 51,
+          "to": 120,
+          "section": "Conhecimentos Específicos",
+          "subject": "Tecnologia da Informação"
+        }
+      ],
+      "item_overrides": {
+        "67": {
+          "statement": "O comando Git a seguir, ao ser executado, copiará todo o conteúdo do repositório local para o repositório remoto git, e, por padrão, fará a mesclagem com a branch master.\n```bash\ngit clone --bare -l /home/projetox/ .git/pub/projetox\n```"
+        }
+      },
+      "status_notes": {
+        "114": "Deferido com anulação: a generalização da redação do item prejudicou seu julgamento objetivo."
+      }
+    }
+  ]
+}

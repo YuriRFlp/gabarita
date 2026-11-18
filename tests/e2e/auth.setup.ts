@@ -1,5 +1,6 @@
 import { expect, test as setup } from '@playwright/test';
-import { createTestUser, readLocalSupabase } from '../../scripts/create-test-user.ts';
+import { createTestUser } from '../../scripts/create-test-user.ts';
+import { readLocalSupabase } from '../../scripts/local-supabase.ts';
 import { TEST_USER } from './data/test-user.ts';
 import { SESSION_FILE } from './support/session.ts';
 import { HomePage } from './pages/HomePage.ts';

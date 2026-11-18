@@ -21,8 +21,18 @@ flowchart LR
 
 ## Restrições do plano gratuito do Supabase
 
-- Projeto pausa após 7 dias sem uso. Com estudo diário, isso não ocorre.
-- Sem backup automático. **Ação:** rotina semanal de exportação (`pg_dump` ou exportação pelo painel), a ser criada junto com o MVP.
+- Projeto pausa após 7 dias sem uso. Com estudo diário, isso não ocorre; se ocorrer, o runbook de implantação descreve a reativação.
+- Sem backup automático e sem download de backup pelo painel. **Ação:** rotina semanal manual com `npm run backup` (`supabase db dump`), mais um backup antes de cada migração aplicada no remoto, com cópia criptografada no Google Drive e ensaio de restauração periódico. Ver [operacao/backup-e-restauracao.md](operacao/backup-e-restauracao.md) e o ADR-008.
+- Limites do plano: 500 MB de banco e 2 projetos ativos no Supabase; uso não comercial na Vercel Hobby. Para um usuário, a folga é grande.
+
+## Implantação
+
+- **Regiões:** Supabase em `sa-east-1` (São Paulo) e funções da Vercel em `gru1` (`vercel.json`), juntos, para o banco ficar perto da função. Se o plano Hobby não permitir escolher a região, o plano B é Supabase em `us-east-1` e funções em `iad1` (SPEC-002, P-1).
+- **Código:** a Vercel implanta automaticamente só a `main`, pela integração Vercel–GitHub; não há previews por PR. A `main` só recebe merge por pull request com o check `verify` verde. Reversão pelo "Promote" da implantação anterior no painel da Vercel.
+- **Banco:** as migrações são aplicadas no remoto pelo dono do projeto, da máquina local, com `npm run db:push` (guardas e confirmação digitando o identificador do projeto), antes do merge, e conferidas com `npm run db:test:remote`. O GitHub Actions não aplica migração nem tem segredo de banco (repositório público). A homologação é o Supabase local.
+- **Variáveis:** na Vercel entram só `NEXT_PUBLIC_SUPABASE_URL` e `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`. A senha do banco remoto vive no gerenciador de senhas e na sessão do terminal.
+- **Verificação:** `npm run check:prod` confere, sem credenciais, redirecionamento, cabeçalhos, cadastro desligado e acesso anônimo negado às tabelas.
+- Passo a passo em [operacao/implantacao.md](operacao/implantacao.md); decisão em [ADR-008](adr/ADR-008-implantacao-e-backup-locais.md).
 
 ## Modos de IA
 

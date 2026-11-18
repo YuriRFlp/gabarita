@@ -1,0 +1,485 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "gabarita/exam_paper.schema.json",
+  "title": "Prova de concurso (caderno + gabarito)",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "id",
+    "court_id",
+    "court",
+    "year",
+    "exam_board",
+    "level",
+    "position",
+    "format",
+    "answer_key",
+    "sources",
+    "stimuli",
+    "questions"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "Identificador estável da prova, ex.: trf6-2024-analista-sistemas"
+    },
+    "court_id": {
+      "type": "string",
+      "description": "Mesmo id usado em exams da taxonomia (trt3, trf6, tjmg...)"
+    },
+    "court": {
+      "type": "string"
+    },
+    "justice_branch": {
+      "enum": [
+        "federal",
+        "trabalho",
+        "estadual",
+        "eleitoral",
+        "superior"
+      ],
+      "description": "Ramo da Justiça; 'superior' para tribunais superiores que não pertencem a um ramo especializado (STJ). TSE e TST ficam em 'eleitoral' e 'trabalho'"
+    },
+    "state": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "year": {
+      "type": "integer",
+      "description": "Ano do edital"
+    },
+    "applied_on": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "exam_board": {
+      "type": "string"
+    },
+    "notice": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "taxonomy_edition": {
+      "type": "boolean",
+      "description": "true se for a mesma edição cadastrada em exams da taxonomia"
+    },
+    "level": {
+      "enum": [
+        "analista",
+        "tecnico"
+      ]
+    },
+    "position": {
+      "type": "string"
+    },
+    "specialty": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "position_code": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "booklets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "code"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "type": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Tipo/cor do caderno, quando a banca embaralha questões"
+          },
+          "numbers": {
+            "type": "string",
+            "description": "Faixa de questões do caderno, ex.: 1-50"
+          }
+        }
+      }
+    },
+    "format": {
+      "enum": [
+        "multiple_choice",
+        "true_false"
+      ]
+    },
+    "options_per_question": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "sections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "numbers"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "numbers": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "answer_key": {
+      "type": "object",
+      "required": [
+        "status"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "definitivo",
+            "preliminar"
+          ]
+        },
+        "published_on": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "note": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "essay": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "prompt": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "instructions": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "max_score": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "Nota máxima da discursiva (domínio do conteúdo)"
+        },
+        "answer_standard": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Padrão de resposta definitivo publicado pela banca"
+        },
+        "grading_criteria": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Quesitos avaliados e conceitos, como publicados pela banca"
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "file",
+          "kind"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "file": {
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "caderno",
+              "gabarito",
+              "gabarito_preliminar",
+              "recursos",
+              "outro"
+            ]
+          },
+          "url": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "stimuli": {
+      "type": "array",
+      "description": "Textos-base, tabelas e trechos de código compartilhados por mais de uma questão",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "text"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "text": {
+            "type": "string",
+            "description": "Parágrafos separados por \\n"
+          },
+          "source": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Crédito do texto (autor, site)"
+          },
+          "language": {
+            "enum": [
+              "pt",
+              "en",
+              "es"
+            ]
+          }
+        }
+      }
+    },
+    "questions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "number",
+          "section",
+          "statement",
+          "answer",
+          "status"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "<id da prova>-q<número com 3 dígitos>"
+          },
+          "number": {
+            "type": "integer"
+          },
+          "section": {
+            "type": "string",
+            "description": "Bloco da prova: Conhecimentos Gerais, Conhecimentos Específicos..."
+          },
+          "subject": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Disciplina como aparece no caderno ou no edital"
+          },
+          "stimulus_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "command": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Comando do bloco (Cebraspe) ou enunciado comum a várias questões"
+          },
+          "statement": {
+            "type": "string",
+            "description": "Enunciado (múltipla escolha) ou afirmação a julgar (certo/errado)"
+          },
+          "options": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": "object",
+              "required": [
+                "key",
+                "text"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "key": {
+                  "enum": [
+                    "A",
+                    "B",
+                    "C",
+                    "D",
+                    "E"
+                  ]
+                },
+                "text": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "answer": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "enum": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E",
+              null
+            ],
+            "description": "Múltipla escolha: letra da alternativa. Certo/errado: C (certo) ou E (errado). null quando anulada"
+          },
+          "status": {
+            "enum": [
+              "valida",
+              "anulada"
+            ]
+          },
+          "status_note": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Justificativa oficial de anulação ou alteração, quando publicada"
+          },
+          "answer_changed_from": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Resposta do gabarito preliminar quando o definitivo alterou"
+          },
+          "language": {
+            "enum": [
+              "pt",
+              "en",
+              "es"
+            ]
+          },
+          "has_table": {
+            "type": "boolean"
+          },
+          "has_code": {
+            "type": "boolean"
+          },
+          "has_figure": {
+            "type": "boolean",
+            "description": "Questão depende de imagem"
+          },
+          "figures": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "file",
+                "description"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "file": {
+                  "type": "string",
+                  "description": "Caminho relativo à raiz do banco (assets/...)"
+                },
+                "description": {
+                  "type": "string",
+                  "description": "Descrição textual da imagem, para uso sem a figura"
+                }
+              }
+            }
+          },
+          "page": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "topic_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "ids de topics da taxonomia (preenchido depois)"
+          },
+          "review": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Observação de conferência da transcrição"
+          },
+          "duplicate_of": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "id da mesma questão em outra prova do banco (caderno comum a mais de um cargo); útil para não repetir a questão em treinos e estatísticas"
+          }
+        }
+      }
+    }
+  }
+}

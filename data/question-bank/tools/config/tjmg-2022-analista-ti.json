@@ -1,0 +1,169 @@
+{
+  "paper": {
+    "schema_version": "1.0",
+    "id": "tjmg-2022-analista-ti",
+    "court_id": "tjmg",
+    "court": "TJMG",
+    "justice_branch": "estadual",
+    "state": "MG",
+    "year": 2022,
+    "applied_on": "2022-12-04",
+    "exam_board": "IBFC",
+    "notice": "Edital nº 01/2022 – Servidores do Poder Judiciário do Estado de Minas Gerais",
+    "taxonomy_edition": true,
+    "level": "analista",
+    "position": "Analista Judiciário (Classe C)",
+    "specialty": "Analista de Tecnologia da Informação",
+    "position_code": "IBFC_15",
+    "booklets": [
+      {
+        "code": "IBFC_15",
+        "type": null,
+        "numbers": "1-60"
+      }
+    ],
+    "format": "multiple_choice",
+    "options_per_question": 5,
+    "sections": [
+      {
+        "name": "Prova objetiva",
+        "numbers": "1-60"
+      }
+    ],
+    "answer_key": {
+      "status": "definitivo",
+      "published_on": "2023-02-28",
+      "note": "Gabarito oficial pós-recurso (DJe de 28/02/2023)"
+    },
+    "essay": {
+      "type": "estudo de caso",
+      "prompt": "Muitas empresas atualmente utilizam o framework de desenvolvimento Scrum. No entanto, algumas têm sucesso e outras nem tanto. Descreva, de forma geral, o impacto da implementação do Scrum detalhando, no mínimo, um ponto positivo e um negativo.",
+      "instructions": "Mínimo de 25 e máximo de 30 linhas."
+    },
+    "sources": [
+      {
+        "file": "TJMG_2022_IBFC_15_caderno.pdf",
+        "kind": "caderno",
+        "url": "https://portal-hml.tjmg.jus.br/data/files/43/93/2E/7D/F38E481049B47D48EC08CCA8/IBFC_15%20anal%20tec%20inf.pdf"
+      },
+      {
+        "file": "TJMG_2022_IBFC_15_gabarito_preliminar.pdf",
+        "kind": "gabarito_preliminar",
+        "url": "https://tjmg.jus.br/data/files/CA/17/FE/A1/6D7E481049B47D48EC08CCA8/4.%20GABARITO_IBFC%20-%20anal%20tec%20inf.pdf"
+      },
+      {
+        "file": "TJMG_2022_gabarito_pos_recurso.pdf",
+        "kind": "gabarito",
+        "url": "https://tjmg.jus.br/data/files/84/C3/6A/1F/54D968100D5759680D28CCA8/Anexo%20Gabarito.pdf"
+      },
+      {
+        "file": "TJMG_2022_resultado_recursos.pdf",
+        "kind": "recursos",
+        "url": "https://tjmg.jus.br/data/files/68/C3/CC/1F/54D968100D5759680D28CCA8/anexo%201.pdf"
+      }
+    ],
+    "notes": [
+      "Questão 18 aparece anulada no gabarito pós-recurso, mas não consta na lista de recursos do cargo",
+      "Data de aplicação: domingo, 04/12/2022 (gabarito preliminar publicado no DJe de 06/12/2022)"
+    ]
+  },
+  "parsed": "/home/claude/bank/work/tjmg.json",
+  "key": {
+    "file": "/home/claude/provas/txt/0d224ec6-Anexo_Gabarito.txt",
+    "method": "grid",
+    "after": "IBFC_15\\s+-\\s+ANALISTA",
+    "before": "IBFC_\\d+\\s+-"
+  },
+  "preliminary_key": {
+    "file": "/home/claude/provas/txt/38c89510-4._GABARITO_IBFC_-_anal_tec_inf.txt",
+    "method": "grid"
+  },
+  "sections": [
+    {
+      "from": 1,
+      "to": 15,
+      "section": "Prova objetiva",
+      "subject": "Língua Portuguesa"
+    },
+    {
+      "from": 16,
+      "to": 30,
+      "section": "Prova objetiva",
+      "subject": "Noções de Direito"
+    },
+    {
+      "from": 31,
+      "to": 35,
+      "section": "Prova objetiva",
+      "subject": "Inglês Técnico"
+    },
+    {
+      "from": 36,
+      "to": 40,
+      "section": "Prova objetiva",
+      "subject": "Raciocínio Lógico"
+    },
+    {
+      "from": 41,
+      "to": 60,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação"
+    }
+  ],
+  "stimuli": {
+    "s01": {
+      "range": [
+        1,
+        13
+      ],
+      "title_lines": 1,
+      "source_lines": 2
+    },
+    "s02": {
+      "command_for": [
+        11,
+        12
+      ]
+    },
+    "s03": {
+      "range": [
+        14,
+        15
+      ],
+      "title_lines": 3,
+      "source_lines": 3,
+      "title": "Texto II – Tocar instrumento musical na infância deixa a mente mais afiada na velhice"
+    },
+    "s04": {
+      "range": [
+        31,
+        35
+      ],
+      "title_lines": 1,
+      "language": "en"
+    }
+  },
+  "figures": {
+    "47": {
+      "pdf": "/home/claude/bank/sources/TJMG_2022_IBFC_15_caderno.pdf",
+      "page": 11,
+      "bbox": [
+        305,
+        476,
+        556,
+        611
+      ],
+      "description": "Quadro com quatro colunas – TO DO, IN PROGRESS, TESTING e DONE – com cartões distribuídos em cada coluna."
+    }
+  },
+  "status_notes": {
+    "21": "Anulada após recurso",
+    "22": "Anulada após recurso",
+    "30": "Anulada após recurso",
+    "38": "Anulada após recurso",
+    "40": "Anulada após recurso",
+    "48": "Anulada após recurso",
+    "18": "Anulada no gabarito pós-recurso (não consta na lista de recursos do cargo)",
+    "43": "Recurso deferido: alternativa alterada de E para B"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "q_re": "^(\\d{1,2})\\.\\s+(.*)$",
+  "opt_re": "^\\(([A-E])\\)\\s*(.*)$",
+  "letters": "ABCDE",
+  "first": 1,
+  "last": 60,
+  "xpos": true,
+  "start_after": "^CONHECIMENTOS BÁSICOS$|^CONHECIMENTOS GERAIS$",
+  "stop_at": "^REDAÇÃO$|^PROVA DISCURSIVA-REDAÇÃO$",
+  "noise": [
+    "^pcimarkpci",
+    "www\\.pciconcursos\\.com\\.br",
+    "^\\d{1,2}$",
+    "^Caderno de Prova",
+    "^TRT4R",
+    "^\\d+ TRT4R",
+    "^Conhecimentos Básicos\\d*$",
+    "^Proibida a divulgação",
+    "^T15-",
+    "^Via @"
+  ],
+  "section_headers": [
+    "^(CONHECIMENTOS BÁSICOS|CONHECIMENTOS GERAIS|CONHECIMENTOS ESPECÍFICOS|Português|Língua Portuguesa|Raciocínio Lógico-Matemático|Raciocínio Lógico|Legislação|Noções de Direito Administrativo|Noções de Direito Constitucional|Noções de Informática|Direito Administrativo|Direito Constitucional|Direito do Trabalho|Direito Processual do Trabalho|Normas Aplicáveis aos Servidores Públicos Federais|Regimento Interno do TRT da 4a Região|Noções de Gestão Pública|Noções de Gestão de Pessoas|Ética no Serviço Público|Direitos das Pessoas com Deficiência|Noções de Sustentabilidade|Noções de Administração Pública|Noções de Direito Processual do Trabalho|Noções de Direito do Trabalho)$"
+  ],
+  "header": [
+    "^Atenção:",
+    "^Instruções:"
+  ],
+  "stimulus_end": "^\\((Adaptado|[A-ZÀ-Ú][^)]{2,}\\.)",
+  "stimulus_needs_end": "considere o (poema|trecho|texto)|Considere o texto"
+}

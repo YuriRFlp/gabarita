@@ -1,0 +1,280 @@
+{
+  "paper": {
+    "schema_version": "1.0",
+    "id": "trt3-2022-analista-ti",
+    "court_id": "trt3",
+    "court": "TRT-3 (MG)",
+    "justice_branch": "trabalho",
+    "state": "MG",
+    "year": 2022,
+    "applied_on": null,
+    "exam_board": "Fumarc",
+    "notice": "Edital 01/2022 – TRT da 3ª Região",
+    "taxonomy_edition": true,
+    "level": "analista",
+    "position": "Analista Judiciário – Apoio Especializado",
+    "specialty": "Tecnologia da Informação",
+    "position_code": "Caderno 225",
+    "booklets": [
+      {
+        "code": "225",
+        "type": null,
+        "numbers": "1-60"
+      }
+    ],
+    "format": "multiple_choice",
+    "options_per_question": 5,
+    "sections": [
+      {
+        "name": "Prova objetiva",
+        "numbers": "1-60"
+      }
+    ],
+    "answer_key": {
+      "status": "preliminar",
+      "published_on": null,
+      "note": "Gabarito oficial divulgado após a prova; o gabarito pós-recursos não foi obtido. Nenhuma questão aparece anulada."
+    },
+    "essay": {
+      "type": "redação (texto dissertativo)",
+      "prompt": null,
+      "instructions": "Tema e textos motivadores não transcritos; ver o caderno, página 40"
+    },
+    "sources": [
+      {
+        "file": "TRT3_2022_caderno_225_analista_TI.pdf",
+        "kind": "caderno",
+        "url": "https://www.pciconcursos.com.br/provas/download/analista-judiciario-apoio-especializado-tecnologia-da-informacao-trt-3-fumarc-2022"
+      },
+      {
+        "file": "TRT3_2022_gabarito_oficial_analistas.pdf",
+        "kind": "gabarito_preliminar",
+        "url": "https://portal.trt3.jus.br/internet/conheca-o-trt/comunicacao/noticias-institucionais/downloads/links/gabarito_oficial_trt_3r_cargos_analista.pdf"
+      }
+    ],
+    "notes": [
+      "Data de aplicação não confirmada no material disponível",
+      "Hifens de translineação removidos automaticamente; decisões registradas em work/trt3-2022-analista-ti.hifens.txt"
+    ]
+  },
+  "parsed": "/home/claude/bank/work/trt3.json",
+  "layout": "/home/claude/provas/txt/trt3.lay.txt",
+  "dehyphenate": true,
+  "keep_hyphen": [
+    "bate-papo",
+    "dissertativo-argumentativo",
+    "sub-humanas",
+    "e-mail"
+  ],
+  "key": {
+    "file": "/home/claude/provas/txt/c3ab25b3-gabarito_oficial_trt_3r_cargos_analista.txt",
+    "method": "pairs",
+    "after": "CADERNO 225",
+    "before": "CADERNO \\d{3}"
+  },
+  "sections": [
+    {
+      "from": 1,
+      "to": 15,
+      "section": "Prova objetiva",
+      "subject": "Língua Portuguesa"
+    },
+    {
+      "from": 16,
+      "to": 20,
+      "section": "Prova objetiva",
+      "subject": "Noções de Informática"
+    },
+    {
+      "from": 21,
+      "to": 25,
+      "section": "Prova objetiva",
+      "subject": "Legislação"
+    },
+    {
+      "from": 26,
+      "to": 30,
+      "section": "Prova objetiva",
+      "subject": "Noções de Direito"
+    },
+    {
+      "from": 31,
+      "to": 60,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação"
+    }
+  ],
+  "stimuli": {
+    "s01": {
+      "range": [
+        1,
+        12
+      ],
+      "title_lines": 2,
+      "title": "As palavras e as coisas – Antônio Prata",
+      "source_lines": 2
+    },
+    "s02": {
+      "command_for": [
+        13,
+        14
+      ],
+      "command": "Leia o texto abaixo para responder às questões **13** e **14**."
+    },
+    "s03": {
+      "range": [
+        31,
+        34
+      ],
+      "verbatim": true,
+      "indent_step": 9,
+      "title": "Script SQL (tabelas EMPREGADOR, TRABALHADOR e CONTRATO)",
+      "prefix_lines": 3,
+      "fence": "sql"
+    }
+  },
+  "code": [
+    19,
+    31,
+    32,
+    33,
+    34
+  ],
+  "verbatim_options": [
+    31,
+    32,
+    33,
+    34,
+    36,
+    37,
+    38
+  ],
+  "tables": [
+    17,
+    59
+  ],
+  "figures": {
+    "13": {
+      "pdf": "/home/claude/bank/sources/TRT3_2022_caderno_225_analista_TI.pdf",
+      "page": 10,
+      "bbox": [
+        98,
+        105,
+        322,
+        332
+      ],
+      "description": "Foto da fachada de um prédio com o anúncio “Aluga-se quarto com banheiro a 8 quadras do centro.” e o comentário de um leitor: “Me interessa, mas não tem um com o banheiro mais perto?” (Fonte indicada na prova: https://www.instagram.com/p/CiTtyO-AabJ/, acesso em 23 set. 2022.)"
+    },
+    "14": {
+      "pdf": "/home/claude/bank/sources/TRT3_2022_caderno_225_analista_TI.pdf",
+      "page": 10,
+      "bbox": [
+        98,
+        105,
+        322,
+        332
+      ],
+      "description": "Foto da fachada de um prédio com o anúncio “Aluga-se quarto com banheiro a 8 quadras do centro.” e o comentário de um leitor: “Me interessa, mas não tem um com o banheiro mais perto?” (Fonte indicada na prova: https://www.instagram.com/p/CiTtyO-AabJ/, acesso em 23 set. 2022.)"
+    },
+    "17": {
+      "pdf": "/home/claude/bank/sources/TRT3_2022_caderno_225_analista_TI.pdf",
+      "page": 13,
+      "bbox": [
+        28,
+        135,
+        392,
+        280
+      ],
+      "description": "Quadro com quatro ícones do menu Apresentação de Slides do LibreOffice Impress, numerados de I a IV, ao lado das quatro descrições a correlacionar."
+    },
+    "19": {
+      "pdf": "/home/claude/bank/sources/TRT3_2022_caderno_225_analista_TI.pdf",
+      "page": 14,
+      "bbox": [
+        28,
+        130,
+        386,
+        200
+      ],
+      "description": "Planilha do LibreOffice Calc: a célula A1 contém “Belo Horizonte, MG” e a célula B1, selecionada, exibe “MG”."
+    },
+    "35": {
+      "pdf": "/home/claude/bank/sources/TRT3_2022_caderno_225_analista_TI.pdf",
+      "page": 23,
+      "bbox": [
+        33,
+        117,
+        386,
+        346
+      ],
+      "description": "Modelo dimensional com a tabela VENDAS (PK ID_produto, ID_loja, ID_tempo; quantidade_vendida, valor_vendido) ligada às tabelas PRODUTO (ID_produto, nome_produto, categoria_produto, fabricante_produto), LOJA (ID_loja, nome_loja, cidade, UF, regiao, pais) e TEMPO (ID_tempo, data, dia, mes, ano, semestre)."
+    },
+    "37": {
+      "pdf": "/home/claude/bank/sources/TRT3_2022_caderno_225_analista_TI.pdf",
+      "page": 24,
+      "bbox": [
+        224,
+        463,
+        386,
+        533
+      ],
+      "description": "Página renderizada: tabela com cabeçalho Nome | Idade e as linhas Ze | 23 e Maria | 26; a tabela e cada célula têm borda preta fina com cantos arredondados."
+    },
+    "41": {
+      "pdf": "/home/claude/bank/sources/TRT3_2022_caderno_225_analista_TI.pdf",
+      "page": 28,
+      "bbox": [
+        26,
+        265,
+        393,
+        340
+      ],
+      "description": "Saída de terminal com as colunas Filesystem, Size, Used, Available, Use% e Mounted on: /dev/root 4.9G 2.3G 2.6G 47% /; devtmpfs 91.3M 0 91.3M 0% /dev; tmpfs 91.4M 4.0K 91.4M 0% /run; none 91.4M 0 91.4M 0% /dev/shm."
+    },
+    "42": {
+      "pdf": "/home/claude/bank/sources/TRT3_2022_caderno_225_analista_TI.pdf",
+      "page": 29,
+      "bbox": [
+        74,
+        75,
+        345,
+        208
+      ],
+      "description": "Diagrama de estados de processo: Em execução → Bloqueado (1); Em execução → Pronto (2); Pronto → Em execução (3); Bloqueado → Pronto (4)."
+    }
+  },
+  "overrides": {
+    "17": {
+      "statement": "Em relação às opções disponíveis no menu “Apresentação de Slides” do LibreOffice Impress 7.1.6, versão português, correlacione as colunas a seguir:\nÍcone | Descrição\nI. [ícone] | ( ) Configurações da apresentação de slides...\nII. [ícone] | ( ) Iniciar do slide atual\nIII. [ícone] | ( ) Apresentação de slides personalizada...\nIV. [ícone] | ( ) Iniciar no primeiro slide\nA sequência **CORRETA**, de cima para baixo, é:"
+    },
+    "36": {
+      "statement": "Considere o trecho de código abaixo escrito na linguagem Python 3.x sobre modelos preditivos de classificação usando a biblioteca scikit-learn (sklearn):\n```python\n# CÓDIGO PYTHON\nfrom sklearn import tree\nX = [[0, 0, 0], [1, 1, 1], [0, 0, 1], [1, 1, 0] ]\ny = [0, 1, 0, 1]\nclf = tree.DecisionTreeClassifier()\n\n# inserir o código que irá construir/treinar o modelo classificador\n```\nAssinale a alternativa **CORRETA** que corresponde à linha de código que irá construir um classificador (estimador) baseado em árvores de decisão a partir do conjunto de dados de treinamento:"
+    },
+    "37": {
+      "statement": "Considere a página HTML renderizada por um navegador web e o código fonte HTML5/CSS3 a seguir:\nCÓDIGO FONTE:\n```html\n<!DOCTYPE html><html>\n<................>\n<body><table>\n<tr><th>Nome</th><th>Idade</th></tr>\n<tr><td>Ze</td><td>23</td></tr>\n<tr><td>Maria</td><td>26</td></tr>\n</table></body></html>\n```\nPÁGINA HTML RENDERIZADA: ver figura.\nAssinale a alternativa **CORRETA** com o código HTML5/CSS3 que irá substituir o trecho “<................>” do código fonte para gerar a página HTML renderizada:",
+      "options_text": {
+        "A": "<head><style>\ntable, th, td {\n    border: 1px solid black;\n    border-radius: 10px;\n    width: 200px;\n}\n</style></head>",
+        "B": "<head><style>\ntable, th, td {\n    border: 1px solid black;\n    border-radius: 10px;\n}\n</style></head>",
+        "C": "<head><style>\ntable, th, td {\n    border: 1px solid black;\n    border-radius: 10px;\n    width: 200%;\n}\n</style></head>",
+        "D": "<head><style>\ntable, th, td {\n    border: 1px solid black;\n    width: 200%;\n}\n</style></head>",
+        "E": "<head><style>\ntable, th, td {\n    border: 1px solid black;\n    border-radius: rounded;\n}\n</style></head>"
+      }
+    },
+    "38": {
+      "statement": "Considere o trecho de código abaixo escrito na linguagem Python 3.x e a saída desejada a seguir:\nCÓDIGO PYTHON:\n```python\nitens = ['item1', 'item2', 'item3']\nprecos = [3.50, 4.0, 5.80]\n\n# código para gerar o dicionario produtos\n.................\n# fim do código\n\nprint(produtos)\n```\nSAÍDA DESEJADA:\n```\n{'item1': 3.5,\n 'item2': 4.0,\n 'item3': 5.8}\n```\nAssinale a alternativa que irá substituir o trecho “.................” com o código Python que irá executar corretamente para produzir a saída desejada:",
+      "options_text": {
+        "A": "produtos = {}\nfor x in itens:\n    for y in precos:\n        produtos[x] = y",
+        "B": "produtos = {}\nfor x in itens:\n    for y in precos:\n        produtos.update( { x : y })",
+        "C": "produtos = {}\nfor x,y in zip(itens,precos):\n    produtos.add(x[y])",
+        "D": "produtos = { x:y for x,y in zip(itens,precos) }",
+        "E": "produtos = {}\nfor x,y in zip(itens,precos):\n    produtos[y] = x"
+      }
+    },
+    "47": {
+      "statement": "Analise o seguinte trecho de código escrito na linguagem de programação Java:\n```java\npublic class Variavel {\n    String str;\n    static String s = \"abc\";\n    public Variavel (String s) {\n        s = \"-\";\n        str = s;\n    }\n    public static void main (String [] args){\n        Variavel v = new Variavel(\"def\");\n        String s = \"ghi\";\n        s = v.str;\n        System.out.println(v.s);\n    }\n}\n```\nA saída **CORRETA**, após a execução do código, é:"
+    },
+    "59": {
+      "statement": "Em relação ao NIST Framework, correlacione as colunas a seguir associando as categorias à sua respectiva função:\nFunção | Categoria\nI. Identificar | ( ) Segurança de dados.\nII. Proteger | ( ) Monitoramento Contínuo de Segurança.\nIII. Detectar | ( ) Mitigação.\nIV. Responder | ( ) Gerenciamento dos ativos.\nEstá **CORRETA** a seguinte sequência de respostas:"
+    }
+  }
+}

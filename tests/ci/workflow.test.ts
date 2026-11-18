@@ -1,4 +1,4 @@
-import { readFileSync } from 'node:fs';
+import { readdirSync, readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { parse } from 'yaml';
 import { z } from 'zod';
@@ -71,5 +71,45 @@ describe('CI workflow', () => {
       ]);
       expect(job.env?.NEXT_PUBLIC_SUPABASE_URL).toMatch(/^http:\/\/127\.0\.0\.1/);
     }
+  });
+});
+
+const WORKFLOWS_DIR = new URL('../../.github/workflows/', import.meta.url);
+const workflowFiles = readdirSync(WORKFLOWS_DIR).filter((name) => /\.ya?ml$/.test(name));
+
+describe('CA-4 — every workflow', () => {
+  it('finds the workflows', () => {
+    expect(workflowFiles).toContain('ci.yml');
+  });
+
+  describe.each(workflowFiles)('%s', (name) => {
+    const content = readFileSync(new URL(name, WORKFLOWS_DIR), 'utf8');
+    const parsed = z
+      .object({
+        permissions: z.record(z.string(), z.string()).optional(),
+        jobs: z.record(
+          z.string(),
+          z.object({ permissions: z.record(z.string(), z.string()).optional() }).loose(),
+        ),
+      })
+      .parse(parse(content));
+
+    it('does not use pull_request_target', () => {
+      expect(content).not.toContain('pull_request_target');
+    });
+
+    it('references no secret besides the implicit GITHUB_TOKEN', () => {
+      const references = [...content.matchAll(/secrets(?:\.|\[\s*['"])([A-Za-z0-9_]+)/g)].map(
+        (m) => m[1],
+      );
+      expect(references.filter((secret) => secret !== 'GITHUB_TOKEN')).toEqual([]);
+    });
+
+    it('declares permissions: contents: read and nothing broader', () => {
+      expect(parsed.permissions).toEqual({ contents: 'read' });
+      for (const job of Object.values(parsed.jobs)) {
+        if (job.permissions) expect(job.permissions).toEqual({ contents: 'read' });
+      }
+    });
   });
 });
