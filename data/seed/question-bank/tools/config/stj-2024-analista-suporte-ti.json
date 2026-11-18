@@ -1,0 +1,199 @@
+{
+  "paper": {
+    "schema_version": "1.0",
+    "id": "stj-2024-analista-suporte-ti",
+    "court_id": "stj",
+    "court": "STJ",
+    "justice_branch": "superior",
+    "state": "DF",
+    "year": 2024,
+    "applied_on": "2024-12-01",
+    "exam_board": "Cebraspe",
+    "notice": "Edital n.º 1 – STJ, de 16 de agosto de 2024",
+    "taxonomy_edition": false,
+    "level": "analista",
+    "position": "Analista Judiciário – Área Apoio Especializado",
+    "specialty": "Suporte em Tecnologia da Informação",
+    "position_code": "Cargo 18",
+    "booklets": [
+      {
+        "code": "018_STJ_CB3_01",
+        "type": null,
+        "numbers": "1-50"
+      },
+      {
+        "code": "018_STJ_018_01",
+        "type": null,
+        "numbers": "51-120"
+      }
+    ],
+    "format": "true_false",
+    "options_per_question": null,
+    "sections": [
+      {
+        "name": "Conhecimentos Básicos",
+        "numbers": "1-50"
+      },
+      {
+        "name": "Conhecimentos Específicos",
+        "numbers": "51-120"
+      }
+    ],
+    "answer_key": {
+      "status": "definitivo",
+      "published_on": null,
+      "note": "Gabaritos oficiais definitivos do Cebraspe; alterações e anulações justificadas no documento de justificativas"
+    },
+    "essay": {
+      "type": "texto dissertativo",
+      "prompt": "A criptografia é um método de segurança que usa algoritmos para proteger informações, transformando-as em um código secreto que só pode ser desbloqueado com uma chave digital. A respeito da criptografia no âmbito da segurança da informação, redija um texto dissertativo atendendo ao que se pede a seguir.\n1. Descreva o funcionamento dos protocolos de criptografia simétrica e assimétrica. [valor: 14,00 pontos]\n2. Apresente o conceito de certificado digital e cite dois de seus usos. [valor: 12,00 pontos]\n3. Apresente o conceito de algoritmos de hash e mencione seus princípios. [valor: 12,00 pontos]",
+      "instructions": "Extensão máxima de 30 linhas; até 40,00 pontos pelo domínio do conteúdo, dos quais parte é atribuída à apresentação e à estrutura textual.",
+      "max_score": 40.0,
+      "answer_standard": "A criptografia simétrica ou criptografia de chave secreta ou compartilhada utiliza uma única chave, que é compartilhada entre o emissor e o receptor da mensagem. Um algoritmo aplica uma série de regras matemáticas para transformar os dados em um código ilegível, e esse algoritmo depende de uma chave, que é uma sequência de bits que define como o código será gerado. A criptografia assimétrica ou criptografia de chave pública ou de dois fatores utiliza um par de chaves: uma pública e uma privada. O emissor deve ter a chave pública do receptor antes de enviar os dados. Assim, ele usa essa chave para cifrar os dados antes de enviá-los. O receptor, por sua vez, usa a sua chave privada para decifrar os dados após recebê-los.\nO certificado digital é um documento eletrônico que serve para identificar uma pessoa ou empresa na Internet, permitindo a realização de transações digitais de forma segura. O certificado digital é utilizado para assinar documentos digitalmente, com validade jurídica; para cessar serviços públicos, como o da Receita Federal ou INSS; para realizar operações bancárias; para validar o acesso a sistemas da empresa; para emitir notas fiscais eletrônicas, participar em leilões da Receita Federal etc.\nOs algoritmos de hash são funções criptográficas que transformam uma entrada de dados de qualquer tamanho em uma sequência fixa de caracteres. É amplamente utilizada em segurança digital, especialmente na verificação de integridade de dados e em assinaturas digitais. Os princípios dos algoritmos de hash são: irreversibilidade; unicidade; resistência à colisão; e recorrência.",
+      "grading_criteria": "QUESITO 2.1 Funcionamento dos protocolos de criptografia simétrica e assimétrica\nConceito 0 – Não atendeu ao quesito ou o fez de forma totalmente equivocada.\nConceito 1 – Descreveu de maneira parcialmente correta apenas um dos conceitos (criptografia simétrica ou assimétrica) e não abordou o outro ou o abordou de forma totalmente equivocada.\nConceito 2 – Descreveu corretamente apenas um dos conceitos e não abordou o outro ou o abordou de forma totalmente equivocada OU descreveu de forma parcialmente correta os dois conceitos.\nConceito 3 – Descreveu corretamente um dos conceitos e o outro de forma parcialmente correta.\nConceito 4 – Descreveu corretamente os dois conceitos.\nQUESITO 2.2 Conceito de certificado digital e dois de seus usos\nConceito 0 – Não atendeu ao quesito ou o fez de forma totalmente equivocada.\nConceito 1 – Descreveu o conceito de maneira parcialmente correta e não citou os usos.\nConceito 2 – Descreveu corretamente o conceito, mas não citou os usos.\nConceito 3 – Descreveu corretamente o conceito, mas citou corretamente apenas um uso.\nConceito 4 – Descreveu corretamente o conceito e citou corretamente ambos os usos.\nQUESITO 2.3 Conceito de algoritmos de hash e seus princípios\nConceito 0 – Não atendeu ao quesito ou o fez de forma totalmente equivocada.\nConceito 1 – Descreveu apenas o conceito, e o fez de maneira parcialmente correta.\nConceito 2 – Descreveu o conceito corretamente, mas não citou os princípios.\nConceito 3 – Descreveu o conceito corretamente, mas apresentou os princípios dos algoritmos de hash de maneira parcialmente correta.\nConceito 4 – Descreveu o conceito corretamente e apresentou corretamente os princípios dos algoritmos de hash."
+    },
+    "sources": [
+      {
+        "file": "018_STJ_CB3_01.pdf",
+        "kind": "caderno",
+        "url": "https://cdn.cebraspe.org.br/concursos/STJ_24/arquivos/018_STJ_CB3_01.PDF"
+      },
+      {
+        "file": "018_STJ_018_01.pdf",
+        "kind": "caderno",
+        "url": "https://cdn.cebraspe.org.br/concursos/STJ_24/arquivos/018_STJ_018_01.PDF"
+      },
+      {
+        "file": "GAB_DEFINITIVO_018_STJ_CB3_01.pdf",
+        "kind": "gabarito",
+        "url": "https://cdn.cebraspe.org.br/concursos/STJ_24/arquivos/GAB_DEFINITIVO_018_STJ_CB3_01.PDF"
+      },
+      {
+        "file": "GAB_DEFINITIVO_018_STJ_018_01.pdf",
+        "kind": "gabarito",
+        "url": "https://cdn.cebraspe.org.br/concursos/STJ_24/arquivos/GAB_DEFINITIVO_018_STJ_018_01.PDF"
+      },
+      {
+        "file": "018_STJ_018_DISC.pdf",
+        "kind": "caderno",
+        "url": "https://cdn.cebraspe.org.br/concursos/STJ_24/arquivos/018_STJ_018_DISC.PDF"
+      },
+      {
+        "file": "PADRO_DEFINITIVO_DE_RESPOSTA___CARGO_18.pdf",
+        "kind": "outro",
+        "url": "https://cdn.cebraspe.org.br/concursos/STJ_24/arquivos/PADRO_DEFINITIVO_DE_RESPOSTA___CARGO_18.PDF"
+      },
+      {
+        "file": "STJ_24_JUSTIFICATIVAS_DE_ALTERAES_DE_GABARITO.pdf",
+        "kind": "recursos",
+        "url": "https://cdn.cebraspe.org.br/concursos/STJ_24/arquivos/STJ_24_JUSTIFICATIVAS_DE_ALTERAES_DE_GABARITO.PDF"
+      }
+    ],
+    "notes": [
+      "Itens de certo/errado: answer C = certo, E = errado",
+      "Os Conhecimentos Básicos (itens 1–50, caderno 018_STJ_CB3_01) são comuns aos cargos 3 e 18 e aparecem nas duas provas do STJ deste banco",
+      "Disciplinas dos Conhecimentos Básicos atribuídas pelos comandos do caderno; o caderno não imprime o nome das disciplinas",
+      "Discursiva: enunciado, padrão de resposta definitivo e quesitos transcritos dos PDFs da banca"
+    ]
+  },
+  "parts": [
+    {
+      "parsed": "/home/claude/bank/work/018_STJ_CB3_01.json",
+      "answer_key": "/home/claude/provas/txt/GAB_DEFINITIVO_018_STJ_CB3_01.txt",
+      "sections": [
+        {
+          "from": 1,
+          "to": 10,
+          "section": "Conhecimentos Básicos",
+          "subject": "Língua Portuguesa"
+        },
+        {
+          "from": 11,
+          "to": 12,
+          "section": "Conhecimentos Básicos",
+          "subject": "Redação oficial"
+        },
+        {
+          "from": 13,
+          "to": 18,
+          "section": "Conhecimentos Básicos",
+          "subject": "Direito Constitucional"
+        },
+        {
+          "from": 19,
+          "to": 23,
+          "section": "Conhecimentos Básicos",
+          "subject": "Previdência complementar do servidor público federal (Lei 12.618/2012)"
+        },
+        {
+          "from": 24,
+          "to": 28,
+          "section": "Conhecimentos Básicos",
+          "subject": "Direito Administrativo, LGPD e processo administrativo (Lei 9.784/1999)"
+        },
+        {
+          "from": 29,
+          "to": 33,
+          "section": "Conhecimentos Básicos",
+          "subject": "Direitos humanos e direitos das pessoas com deficiência"
+        },
+        {
+          "from": 34,
+          "to": 42,
+          "section": "Conhecimentos Básicos",
+          "subject": "Código de Conduta e Regimento Interno do STJ; ética no serviço público"
+        },
+        {
+          "from": 43,
+          "to": 46,
+          "section": "Conhecimentos Básicos",
+          "subject": "Improbidade administrativa (Lei 8.429/1992)"
+        },
+        {
+          "from": 47,
+          "to": 50,
+          "section": "Conhecimentos Básicos",
+          "subject": "Agenda 2030 e sustentabilidade no Poder Judiciário"
+        }
+      ],
+      "changed": {
+        "25": "C",
+        "37": "C"
+      },
+      "status_notes": {
+        "8": "Deferido com anulação: há duas ocorrências do vocábulo “quem” no período, o que prejudicou o julgamento do item.",
+        "15": "Deferido com anulação: o emprego do termo “necessariamente” prejudicou o julgamento objetivo do item.",
+        "21": "Deferido com anulação: a redação do item está dúbia, o que prejudicou seu julgamento objetivo.",
+        "25": "Deferido com alteração (C → E): conforme a doutrina e a Constituição Federal, aquele que exercer a função de confiança deverá ser ocupante de cargo efetivo, que pressupõe aprovação em concurso público, o que torna a redação do item errada.",
+        "37": "Deferido com alteração (C → E): conforme o art. 13, II, do Código de Conduta do STJ, a vedação de cópias refere-se à utilização em fins alheios aos objetivos do órgão ou à execução dos trabalhos a cargo do servidor, não alcançando suas atribuições ordinárias."
+      },
+      "duplicate_of_paper": "stj-2024-analista-sistemas"
+    },
+    {
+      "parsed": "/home/claude/bank/work/018_STJ_018_01.json",
+      "answer_key": "/home/claude/provas/txt/GAB_DEFINITIVO_018_STJ_018_01.txt",
+      "sections": [
+        {
+          "from": 51,
+          "to": 120,
+          "section": "Conhecimentos Específicos",
+          "subject": "Tecnologia da Informação"
+        }
+      ],
+      "item_overrides": {
+        "75": {
+          "statement": "Considere o seguinte código, escrito em Java.\n```java\nclass Main {\n  public static void main(String[] args) {\n    int x = 11, y = -7, z = 22;\n    int resultado = (x >= y) ? ((x >= z) ? x : z) : ((y >= z) ? y : z);\n    System.out.println(“Resultado: “ + resultado);\n  }\n}\n```\nA partir do código precedente, é correto afirmar que a execução desse código apresentará o seguinte resultado.\n```text\nResultado: 22\n```"
+        },
+        "79": {
+          "statement": "O comando Git a seguir, ao ser executado, copiará todo o conteúdo do repositório local para o repositório remoto git, e, por padrão, fará a mesclagem com a branch master.\n```bash\ngit clone --bare -l /home/projetox/ .git/pub/projetox\n```"
+        },
+        "96": {
+          "statement": "A execução do comando a seguir permite verificar a integridade da configuração do Nagios no ambiente Linux.\n```bash\n# /usr/local/nagios/bin/nagios –v /usr/local/nagios/etc/nagios.cfg\n```"
+        }
+      },
+      "review": {
+        "75": "Linhas de código quebradas pela diagramação foram unidas; indentação reconstruída"
+      }
+    }
+  ]
+}

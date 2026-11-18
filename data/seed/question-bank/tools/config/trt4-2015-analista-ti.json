@@ -1,0 +1,222 @@
+{
+  "paper": {
+    "schema_version": "1.0",
+    "id": "trt4-2015-analista-ti",
+    "court_id": "trt4",
+    "court": "TRT-4 (RS)",
+    "justice_branch": "trabalho",
+    "state": "RS",
+    "year": 2015,
+    "applied_on": null,
+    "exam_board": "FCC",
+    "notice": "Concurso público TRT da 4ª Região – 2015",
+    "taxonomy_edition": false,
+    "level": "analista",
+    "position": "Analista Judiciário – Área Apoio Especializado",
+    "specialty": "Tecnologia da Informação",
+    "position_code": "AT",
+    "booklets": [
+      {
+        "code": "AT",
+        "type": "001",
+        "numbers": "1-60"
+      }
+    ],
+    "format": "multiple_choice",
+    "options_per_question": 5,
+    "sections": [
+      {
+        "name": "Conhecimentos Básicos",
+        "numbers": "1-30"
+      },
+      {
+        "name": "Conhecimentos Específicos",
+        "numbers": "31-60"
+      }
+    ],
+    "answer_key": {
+      "status": "definitivo",
+      "published_on": null,
+      "note": "Relação de gabaritos da FCC (diversos cargos), tipo 1; o documento não indica se é preliminar ou definitivo e não marca anulações"
+    },
+    "essay": {
+      "type": "redação",
+      "prompt": "A revitalização das culturas tradicionais e a promoção do respeito à diversidade cultural",
+      "instructions": "Proposta com textos de apoio e mapa-múndi; ver o caderno, página 16"
+    },
+    "sources": [
+      {
+        "file": "TRT4_2015_caderno_AT_tipo001.pdf",
+        "kind": "caderno",
+        "url": "https://www.pciconcursos.com.br/provas/download/analista-judiciario-tecnologia-da-informacao-trt-4-fcc-2015"
+      },
+      {
+        "file": "TRT4_2015_gabaritos_todos_cargos.pdf",
+        "kind": "gabarito",
+        "url": null
+      }
+    ],
+    "notes": [
+      "Caderno de setembro de 2015; data exata de aplicação não confirmada",
+      "Textos de Português com numeração de linhas: cada linha do campo text corresponde a uma linha impressa (as questões citam linhas)",
+      "Prova anterior a mudanças de normas e versões de frameworks (ITIL v3, COBIT 4.1, PMBOK 4ª edição)"
+    ]
+  },
+  "parsed": "/home/claude/bank/work/trt4_2015.json",
+  "layout": "/home/claude/provas/txt/d3d8d843-analista_judiciario_tecno_informacao.lay.txt",
+  "dehyphenate": true,
+  "key": {
+    "file": "/home/claude/provas/txt/c8161cc4-gabaritos_todos_cargos.txt",
+    "method": "pairs",
+    "after": "opção AT",
+    "before": "CONHEC\\."
+  },
+  "sections": [
+    {
+      "from": 1,
+      "to": 15,
+      "section": "Conhecimentos Básicos",
+      "subject": "Português"
+    },
+    {
+      "from": 16,
+      "to": 25,
+      "section": "Conhecimentos Básicos",
+      "subject": "Raciocínio Lógico-Matemático"
+    },
+    {
+      "from": 26,
+      "to": 30,
+      "section": "Conhecimentos Básicos",
+      "subject": "Legislação"
+    },
+    {
+      "from": 31,
+      "to": 60,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação"
+    }
+  ],
+  "stimuli": {
+    "s01": {
+      "range": [
+        1,
+        8
+      ],
+      "command_lines": 1,
+      "source_lines": 2,
+      "numbered_lines": true
+    },
+    "s02": {
+      "range": [
+        9,
+        15
+      ],
+      "command_lines": 1,
+      "source_lines": 2,
+      "numbered_lines": true
+    },
+    "s03": {
+      "range": [
+        33,
+        34
+      ],
+      "command_lines": 1,
+      "text": "```html\n<html>\n    <head>\n        <title>Prova</title>\n        <script type=\"text/javascript\">\n            function ver() {\n                var pontos = 0;\n                if ( ...I... ) {\n                    pontos++;\n                }\n                document.getElementById(\"res\").innerHTML = pontos;\n            }\n        </script>\n    </head>\n    <body>\n      <form name=\"frm\">\n        <p>\n          Questão 1 - CSS é <br><br>\n          <input type=\"radio\" name=\"q1\" value=\"a\"> uma linguagem de programação.<br>\n          <input type=\"radio\" name=\"q1\" value=\"b\"> um framework.<br>\n          <input type=\"radio\" name=\"q1\" value=\"c\"> uma prática de gestão.<br>\n          <input type=\"radio\" name=\"q1\" value=\"d\"> uma linguagem de estilos.<br>\n          <input type=\"radio\" name=\"q1\" value=\"e\"> um modelo matemático.<br>\n        </p>\n        <input type=\"button\" onclick=\"ver();\" value=\"Ver Resultado\">\n      </form>\n      <p id=\"res\"></p>\n    </body>\n</html>\n```",
+      "title": "Página HTML"
+    },
+    "s04": {
+      "range": [
+        35,
+        36
+      ],
+      "command_lines": 1,
+      "verbatim": true,
+      "fence": "java",
+      "title": "Programa Java"
+    }
+  },
+  "code": [],
+  "verbatim_options": [
+    50
+  ],
+  "tables": [
+    50
+  ],
+  "figures": {
+    "49": {
+      "pdf": "/home/claude/bank/sources/TRT4_2015_caderno_AT_tipo001.pdf",
+      "page": 13,
+      "bbox": [
+        150,
+        488,
+        472,
+        626
+      ],
+      "description": "Arquitetura de BI: fontes de dados (arquivos TXT, XLS, bancos de dados) passam pelo processo ETL (com staging area) e alimentam o Data Warehouse, que contém vários Data Marts; a partir dele, ferramentas de OLAP e de Data Mining são usadas pelos usuários."
+    }
+  },
+  "overrides": {
+    "17": {
+      "options_text": {
+        "A": "83/368.",
+        "B": "81/362.",
+        "C": "60/81.",
+        "D": "25/81.",
+        "E": "20/91."
+      }
+    },
+    "19": {
+      "statement": "Em um mesmo ano, no final de fevereiro foram retirados 2/9 dos recursos de uma conta bancária. No final de março foram retirados 3/7 do saldo remanescente (após a retirada de fevereiro). No final de abril, a conta recebeu depósito equivalente a 4/5 do total das retiradas feitas em fevereiro e março. Considere que aumentos ou reduções no saldo da conta nesse período tenham ocorrido apenas em função das operações anteriormente descritas. Sendo assim, é correto afirmar que, na comparação do saldo da conta antes da retirada de fevereiro com o saldo após o depósito feito no fim de abril, houve um",
+      "options_text": {
+        "A": "decréscimo de 1/9 do valor.",
+        "B": "aumento de 1/9 do valor.",
+        "C": "decréscimo de 2/7 do valor.",
+        "D": "aumento de 2/9 do valor.",
+        "E": "decréscimo de 2/9 do valor."
+      }
+    },
+    "41": {
+      "statement": "De acordo com a ITIL v3, um Acordo de Nível de Serviço (ANS) é um compromisso entre um provedor de serviço de TI e um cliente. Um ANS\npode definir ...I... de um incidente, problema ou mudança com base em impacto e urgência para identificar os tempos requeridos para que ações adequadas sejam tomadas.\ndocumenta ...II..., um compromisso que é baseado nos requisitos de nível de serviço, necessário para garantir que o desenho do serviço de TI atenda a seu propósito.\nAs lacunas I e II correspondem, correta e respectivamente, a"
+    },
+    "47": {
+      "statement": "Considere os dois trechos de código PL/SQL do Oracle 11g.\nTrecho 1:\n```sql\nSQL> BEGIN\n2  FOR cont IN 1..3 LOOP\n3  DBMS_OUTPUT.PUT_LINE\n4    ('Dentro do loop, cont = ' ||\n     TO_CHAR(cont));\n5  END LOOP;\n6\n7  DBMS_OUTPUT.PUT_LINE\n8    ('Fora do loop, cont = ' ||\n     TO_CHAR(cont));\n9  END;\n10 /\n```\nTrecho 2:\n```sql\nSQL> DECLARE\n2  done BOOLEAN;\n3  BEGIN\n4  FOR cont IN 1..50 LOOP\n5  IF done THEN\n6  GOTO end_loop;\n7  END IF;\n8  <<end_loop>>\n9  END LOOP;\n10 END;\n11 /\n```\nO trecho",
+      "options_text": {
+        "A": "1 e o trecho 2 estão corretos e irão executar sem erros."
+      }
+    },
+    "49": {
+      "statement": "Considere a arquitetura geral de um sistema de BI- Business Intelligence mostrada na figura abaixo.\n[figura]\nNesta arquitetura"
+    },
+    "50": {
+      "statement": "Considere que o Tribunal Regional do Trabalho possua em seu Banco de Dados a tabela Tab_Processos descrita abaixo.\nTabela Tab_Processos\n| Nro_Proc | Custas_Proc | Data_Alteracao |\n|---|---|---|\n| 1111111-10.2010.5.04.0000 | 910000.00 | 05-Jan-2010 |\n| 3333333-30.2012.5.04.0000 | 250000.00 | 07-Out-2012 |\n| 7777777-70.2011.5.04.0000 | 3200000.00 | 18-Fev-2011 |\n| 1234567-80.2010.5.04.0000 | 172500.00 | 23-Mai-2010 |\n| 1111111-10.2010.5.04.0000 | 80000.00 | 16-Mar-2013 |\n| 1234567-80.2010.5.04.0000 | 900000.00 | 31-Ago-2014 |\nConsidere que, após uma consulta, foi produzido o seguinte resultado:\n| Nro_Proc | SUM(Custas_Proc) |\n|---|---|\n| 1234567-80.2010.5.04.0000 | 1072500.00 |\n| 7777777-70.2011.5.04.0000 | 3200000.00 |\nO comando SQL utilizado para obter o resultado acima é:"
+    },
+    "34": {
+      "options_text": {
+        "A": "`<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 5.0//EN\" \"http://www.w3.org/TR/html5/strict.dtd\">` após da *tag* `<html>`.",
+        "B": "`<!DOCTYPE html>` antes da *tag* `<html>`.",
+        "C": "`<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 5.0 Transitional//EN\" \"http://www.w3.org/TR/html5/loose.dtd\">` antes da *tag* `<html>`.",
+        "D": "`<!DOCTYPE html5 PUBLIC>` antes da *tag* `<html>`.",
+        "E": "`<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 5.0 //PT-BR\" \"http://www.w3.org/TR/html5/html5.dtd\">` antes da *tag* `<html>`."
+      }
+    }
+  },
+  "code_flag": [
+    32,
+    33,
+    34,
+    35,
+    36,
+    47,
+    50,
+    53,
+    54,
+    55,
+    56,
+    57
+  ],
+  "review": {
+    "34": "Alternativas A e E reconstruídas: no PDF a quebra de linha do DOCTYPE saiu fora de ordem na extração"
+  },
+  "ordinals": true
+}

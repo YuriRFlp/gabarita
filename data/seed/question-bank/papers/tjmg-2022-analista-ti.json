@@ -1,0 +1,2678 @@
+{
+  "schema_version": "1.0",
+  "id": "tjmg-2022-analista-ti",
+  "court_id": "tjmg",
+  "court": "TJMG",
+  "justice_branch": "estadual",
+  "state": "MG",
+  "year": 2022,
+  "applied_on": "2022-12-04",
+  "exam_board": "IBFC",
+  "notice": "Edital nº 01/2022 – Servidores do Poder Judiciário do Estado de Minas Gerais",
+  "taxonomy_edition": true,
+  "level": "analista",
+  "position": "Analista Judiciário (Classe C)",
+  "specialty": "Analista de Tecnologia da Informação",
+  "position_code": "IBFC_15",
+  "booklets": [
+    {
+      "code": "IBFC_15",
+      "type": null,
+      "numbers": "1-60"
+    }
+  ],
+  "format": "multiple_choice",
+  "options_per_question": 5,
+  "sections": [
+    {
+      "name": "Prova objetiva",
+      "numbers": "1-60"
+    }
+  ],
+  "answer_key": {
+    "status": "definitivo",
+    "published_on": "2023-02-28",
+    "note": "Gabarito oficial pós-recurso (DJe de 28/02/2023)"
+  },
+  "essay": {
+    "type": "estudo de caso",
+    "prompt": "Muitas empresas atualmente utilizam o framework de desenvolvimento Scrum. No entanto, algumas têm sucesso e outras nem tanto. Descreva, de forma geral, o impacto da implementação do Scrum detalhando, no mínimo, um ponto positivo e um negativo.",
+    "instructions": "Mínimo de 25 e máximo de 30 linhas."
+  },
+  "sources": [
+    {
+      "file": "TJMG_2022_IBFC_15_caderno.pdf",
+      "kind": "caderno",
+      "url": "https://portal-hml.tjmg.jus.br/data/files/43/93/2E/7D/F38E481049B47D48EC08CCA8/IBFC_15%20anal%20tec%20inf.pdf"
+    },
+    {
+      "file": "TJMG_2022_IBFC_15_gabarito_preliminar.pdf",
+      "kind": "gabarito_preliminar",
+      "url": "https://tjmg.jus.br/data/files/CA/17/FE/A1/6D7E481049B47D48EC08CCA8/4.%20GABARITO_IBFC%20-%20anal%20tec%20inf.pdf"
+    },
+    {
+      "file": "TJMG_2022_gabarito_pos_recurso.pdf",
+      "kind": "gabarito",
+      "url": "https://tjmg.jus.br/data/files/84/C3/6A/1F/54D968100D5759680D28CCA8/Anexo%20Gabarito.pdf"
+    },
+    {
+      "file": "TJMG_2022_resultado_recursos.pdf",
+      "kind": "recursos",
+      "url": "https://tjmg.jus.br/data/files/68/C3/CC/1F/54D968100D5759680D28CCA8/anexo%201.pdf"
+    }
+  ],
+  "notes": [
+    "Questão 18 aparece anulada no gabarito pós-recurso, mas não consta na lista de recursos do cargo",
+    "Data de aplicação: domingo, 04/12/2022 (gabarito preliminar publicado no DJe de 06/12/2022)"
+  ],
+  "stimuli": [
+    {
+      "id": "t01",
+      "title": "Texto I",
+      "text": "“Explicar, a mim, como é Alejandra, Bruno ponderou, como é seu rosto, como são as dobras de sua boca.” E pensou que eram justamente essas dobras desdenhosas e um certo brilho tenebroso nos olhos que diferenciavam mais que tudo o rosto de Alejandra do rosto de Georgina, a quem ele amara de verdade. Pois, agora compreendia, a ela é que amara realmente, e quando imaginou estar apaixonado por Alejandra era a mãe de Alejandra que buscava, como esses monges medievais que tentavam decifrar o texto primitivo debaixo das restaurações, debaixo das palavras apagadas e substituídas. E essa insensatez fora a razão de tristes mal-entendidos com Alejandra, tendo às vezes a mesma sensação de quem, após muitíssimos anos de ausência, chega à casa da infância e, ao tentar de noite abrir uma porta, depara com uma parede. Claro que seu rosto era quase o mesmo de Georgina: o mesmo cabelo preto com reflexos avermelhados, os olhos cinza-esverdeados, a boca idêntica e grande, as mesmas faces mongólicas, a mesma pele morena e pálida. Mas o “quase” era atroz, e mais ainda por ser tão sutil e imperceptível, pois assim o equívoco era mais profundo e doloroso. Os ossos e a carne – pensava – não bastam para formar um rosto, e é por isso que ele é infinitamente menos físico do que o corpo: é determinado pelo olhar, pelo ríctus da boca, pelas rugas, por todo esse conjunto de atributos sutis com que a alma se revela por meio da carne. Razão pela qual, no momento exato em que alguém morre, seu corpo se transforma abruptamente numa coisa diferente, tão diferente a ponto de se poder dizer “não parece a mesma pessoa”, apesar de ter os mesmos ossos e a mesma matéria de um segundo antes, um segundo antes desse misterioso instante em que a alma se retira do corpo e este fica tão morto como uma casa da qual se retiram para sempre os seres que moram nela, e, sobretudo, que sofreram e se amaram nela.",
+      "source": "(SABATO, Ernesto. Sobre heróis e tumbas. São Paulo: Planeta De Agostini, 2003, p.22-23)",
+      "language": "pt"
+    },
+    {
+      "id": "t02",
+      "title": "Texto II – Tocar instrumento musical na infância deixa a mente mais afiada na velhice",
+      "text": "Pesquisadores da Universidade de Edimburgo, na Escócia, descobriram uma ligação entre aprender um instrumento musical na infância ou adolescência e ter uma mente mais “jovem” quando a idade já está bem avançada. Quanto mais extensa em anos a experiência em tocar um instrumento, mais as habilidades cognitivas permanecem bem conservadas na velhice.\nEsse estudo teve uma peculiaridade incomum: aproveitou dados de outra pesquisa, esquecida, feita em 1947. À época, todas as crianças nascidas na Escócia em 1936 foram obrigadas a fazer uma bateria de testes de inteligência. No total, 70.805 crianças participaram. Esse trabalho foi redescoberto há alguns anos por um grupo de acadêmicos escoceses, liderados pelo professor Ian Deary, diretor do Centro de Envelhecimento Cognitivo e Epidemiologia Cognitiva da universidade, que pretendia estudar a mente. E os dados daquela época vieram a calhar. Os estudiosos do presente foram atrás dos voluntários do passado para avaliar sua saúde mental hoje, e que hábitos influenciaram nos aspectos positivos e negativos.\nPara analisar a influência do aprendizado musical, selecionaram uma amostra de habitantes das cidades de Edimburgo e Lothians, que tinham participado dos testes na década de 1940, quando todos tinham 11 anos de idade. Dos 366 indivíduos analisados, 117 relataram alguma experiência de tocar um instrumento musical – principalmente quando ainda eram meninos e meninas. [...]",
+      "source": "(Disponível em: https://super.abril.com.br/saude/tocar-instrumento-musical-na-infancia-deixa-a-mente-mais-afiada-na-velhice/ Acesso em 30/08/2022)",
+      "language": "pt"
+    },
+    {
+      "id": "t03",
+      "title": "Crimes",
+      "text": "Certain types of people cannot be charged with committing a crime. It may appear that they have committed a crime. However, for a variety of reasons their behavior will not be considered a crime in the courts of law. First, insane people cannot commit a crime. These people do not understand their behavior. They may not understand right from wrong. Next, those taking drugs prescribed by a doctor might be excused from committing a crime. If the drugs affect their minds, the court will excuse them. Finally, children under a certain age cannot be held responsible for committing a crime.",
+      "source": null,
+      "language": "en"
+    }
+  ],
+  "questions": [
+    {
+      "id": "tjmg-2022-analista-ti-q001",
+      "number": 1,
+      "section": "Prova objetiva",
+      "subject": "Língua Portuguesa",
+      "stimulus_id": "t01",
+      "command": null,
+      "statement": "Uma leitura atenta do texto permite-nos perceber que a subjetividade que o caracteriza já é antecipada no propósito apresentado logo no início. Nesse sentido, pode-se afirmar que, para o enunciador:",
+      "options": [
+        {
+          "key": "A",
+          "text": "a semelhança física entre mãe e filha elimina qualquer possibilidade de distinção entre ambas."
+        },
+        {
+          "key": "B",
+          "text": "a filha era bem mais insensata que a mãe, o que a tornava, porém, visivelmente mais bela."
+        },
+        {
+          "key": "C",
+          "text": "aspectos mais discretos e abstratos são responsáveis pela diferenciação entre as duas mulheres."
+        },
+        {
+          "key": "D",
+          "text": "o amor que sentia pela mãe era uma projeção dos sentimentos que nutria a partir da beleza física da filha."
+        },
+        {
+          "key": "E",
+          "text": "aspectos físicos são privilegiados e compõem uma síntese da existência das mulheres descritas."
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 3,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q002",
+      "number": 2,
+      "section": "Prova objetiva",
+      "subject": "Língua Portuguesa",
+      "stimulus_id": "t01",
+      "command": null,
+      "statement": "A seleção dos adjetivos e de outros termos caracterizadores é fundamental para a produção de efeitos na composição dos textos. Dentre as passagens abaixo, retiradas do texto, assinale a que __não__ destaca um exemplo de caracterização subjetiva.",
+      "options": [
+        {
+          "key": "A",
+          "text": "“essas dobras __desdenhosas.”__"
+        },
+        {
+          "key": "B",
+          "text": "“certo brilho __tenebroso__ nos olhos.”"
+        },
+        {
+          "key": "C",
+          "text": "“como esses monges __medievais.”__"
+        },
+        {
+          "key": "D",
+          "text": "“a razão de __tristes__ mal-entendidos.”"
+        },
+        {
+          "key": "E",
+          "text": "“esse conjunto de atributos __sutis.”__"
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 3,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q003",
+      "number": 3,
+      "section": "Prova objetiva",
+      "subject": "Língua Portuguesa",
+      "stimulus_id": "t01",
+      "command": null,
+      "statement": "Em “Explicar, a mim, como é Alejandra, Bruno ponderou, como é seu rosto, como são as dobras de sua boca.”, ao considerar a estrutura sintática e o emprego das vírgulas, é correto afirmar que:",
+      "options": [
+        {
+          "key": "A",
+          "text": "as quatro últimas vírgulas caracterizam a construção de uma enumeração que diminui o ritmo do texto."
+        },
+        {
+          "key": "B",
+          "text": "“a mim” explicita redundância no texto, o que justifica seu emprego entre vírgulas denotando seu papel acessório."
+        },
+        {
+          "key": "C",
+          "text": "a oração intercalada “Bruno ponderou” cumpre papel acessório e revela a intervenção do próprio personagem."
+        },
+        {
+          "key": "D",
+          "text": "a expressão “a mim”, entre vírgulas, é um complemento verbal realçado por sua disposição no período."
+        },
+        {
+          "key": "E",
+          "text": "as construções introduzidas pela conjunção “como” aproximam-se semanticamente, mas exercem funções sintáticas distintas."
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 3,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q004",
+      "number": 4,
+      "section": "Prova objetiva",
+      "subject": "Língua Portuguesa",
+      "stimulus_id": "t01",
+      "command": null,
+      "statement": "Considerando-se o contexto, na passagem “E __essa insensatez__ fora a razão de tristes mal-entendidos com Alejandra,”, a expressão destacada cumpre um papel coesivo que está corretamente indicado por meio de uma referência:",
+      "options": [
+        {
+          "key": "A",
+          "text": "anafórica, indicando um sentimento já representado pela comparação simbólica."
+        },
+        {
+          "key": "B",
+          "text": "catafórica, antecipando os rostos de mãe e filha, descritos como quase iguais."
+        },
+        {
+          "key": "C",
+          "text": "catafórica, sintetizando por meio do substantivo o que ainda seria apresentado."
+        },
+        {
+          "key": "D",
+          "text": "metafórica, atribuindo expressividade a uma imagem anterior pouco racional."
+        },
+        {
+          "key": "E",
+          "text": "anafórica, situando temporalmente o leitor em relação ao momento da ação."
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 4,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q005",
+      "number": 5,
+      "section": "Prova objetiva",
+      "subject": "Língua Portuguesa",
+      "stimulus_id": "t01",
+      "command": null,
+      "statement": "Na oração “a quem ele amara de verdade”, a flexão do verbo é marcada por uma regularidade que indica tempo e modo. Tal flexão confere ao verbo o sentido de uma ação:",
+      "options": [
+        {
+          "key": "A",
+          "text": "futura que não será realizada em função de fato passado."
+        },
+        {
+          "key": "B",
+          "text": "do presente que dialoga com episódios do passado."
+        },
+        {
+          "key": "C",
+          "text": "do passado que é replicada em momentos futuros."
+        },
+        {
+          "key": "D",
+          "text": "do presente que se articula com uma projeção futura."
+        },
+        {
+          "key": "E",
+          "text": "passada anterior às ações enunciadas no passado."
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 4,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q006",
+      "number": 6,
+      "section": "Prova objetiva",
+      "subject": "Língua Portuguesa",
+      "stimulus_id": "t01",
+      "command": null,
+      "statement": "O substantivo composto “mal-entendidos”, presente no texto, está flexionado no plural. Dentre os vocábulos listados abaixo, assinale aquele que segue a mesma norma para a flexão de número.",
+      "options": [
+        {
+          "key": "A",
+          "text": "secretário-geral."
+        },
+        {
+          "key": "B",
+          "text": "abaixo-assinado."
+        },
+        {
+          "key": "C",
+          "text": "cana-de-açúcar."
+        },
+        {
+          "key": "D",
+          "text": "tenente-coronel."
+        },
+        {
+          "key": "E",
+          "text": "salário-família."
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 4,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q007",
+      "number": 7,
+      "section": "Prova objetiva",
+      "subject": "Língua Portuguesa",
+      "stimulus_id": "t01",
+      "command": null,
+      "statement": "Em “Mas o __‘quase’__ era atroz”, o vocábulo destacado tem seu sentido realçado pelas aspas, mas também em função de, no contexto em que se encontra, assumir um caráter:",
+      "options": [
+        {
+          "key": "A",
+          "text": "numérico."
+        },
+        {
+          "key": "B",
+          "text": "adjetivo."
+        },
+        {
+          "key": "C",
+          "text": "pronominal."
+        },
+        {
+          "key": "D",
+          "text": "adverbial."
+        },
+        {
+          "key": "E",
+          "text": "substantivo."
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 4,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q008",
+      "number": 8,
+      "section": "Prova objetiva",
+      "subject": "Língua Portuguesa",
+      "stimulus_id": "t01",
+      "command": null,
+      "statement": "Considere as passagens “e mais ainda __por ser__ tão sutil e imperceptível,” e “pois assim o equívoco era mais profundo e doloroso”. A construção destacada introduz, em relação à última passagem, um sentido de:",
+      "options": [
+        {
+          "key": "A",
+          "text": "conformidade."
+        },
+        {
+          "key": "B",
+          "text": "consequência."
+        },
+        {
+          "key": "C",
+          "text": "concessão."
+        },
+        {
+          "key": "D",
+          "text": "causa."
+        },
+        {
+          "key": "E",
+          "text": "conclusão."
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 4,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q009",
+      "number": 9,
+      "section": "Prova objetiva",
+      "subject": "Língua Portuguesa",
+      "stimulus_id": "t01",
+      "command": null,
+      "statement": "A respeito da expressão destacada em __“Claro que__ seu rosto era quase o mesmo de Georgina”, é correto afirmar que, na frase em que encontra, estabelece um papel de:",
+      "options": [
+        {
+          "key": "A",
+          "text": "predicativo em relação à oração seguinte."
+        },
+        {
+          "key": "B",
+          "text": "retificação em relação ao que se afirmou."
+        },
+        {
+          "key": "C",
+          "text": "realce em relação a uma declaração."
+        },
+        {
+          "key": "D",
+          "text": "conotativo a partir de um termo figurado."
+        },
+        {
+          "key": "E",
+          "text": "comparativo ao igualar um mesmo atributo."
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 4,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q010",
+      "number": 10,
+      "section": "Prova objetiva",
+      "subject": "Língua Portuguesa",
+      "stimulus_id": "t01",
+      "command": null,
+      "statement": "No final do texto, “corpo” e “casa” são aproximados em uma comparação figurada que é construída, sobretudo, por meio da:",
+      "options": [
+        {
+          "key": "A",
+          "text": "proximidade sonora."
+        },
+        {
+          "key": "B",
+          "text": "equivalência sintática."
+        },
+        {
+          "key": "C",
+          "text": "simetria fonética."
+        },
+        {
+          "key": "D",
+          "text": "semelhança física."
+        },
+        {
+          "key": "E",
+          "text": "capacidade de conter."
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 4,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q011",
+      "number": 11,
+      "section": "Prova objetiva",
+      "subject": "Língua Portuguesa",
+      "stimulus_id": "t01",
+      "command": "Considere a oração “seu corpo se transforma __abruptamente__ numa coisa diferente”, para responder às questões 11 e 12.",
+      "statement": "Ao observar o sentido do vocábulo destacado e seu papel morfossintático, é correto afirmar que:",
+      "options": [
+        {
+          "key": "A",
+          "text": "indica o modo pelo qual determinada ação ocorre."
+        },
+        {
+          "key": "B",
+          "text": "atribui uma característica permanente à “coisa”."
+        },
+        {
+          "key": "C",
+          "text": "nomeia o elemento específico a ser transformado."
+        },
+        {
+          "key": "D",
+          "text": "reforça a diferença no resultado da transformação."
+        },
+        {
+          "key": "E",
+          "text": "precisa a duração do tempo de uma ação."
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 4,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q012",
+      "number": 12,
+      "section": "Prova objetiva",
+      "subject": "Língua Portuguesa",
+      "stimulus_id": "t01",
+      "command": "Considere a oração “seu corpo se transforma __abruptamente__ numa coisa diferente”, para responder às questões 11 e 12.",
+      "statement": "Na passagem em análise, ao fazer uso da voz passiva, obtém-se como efeito:",
+      "options": [
+        {
+          "key": "A",
+          "text": "a indeterminação do sujeito sintático."
+        },
+        {
+          "key": "B",
+          "text": "a omissão do agente da ação realizada."
+        },
+        {
+          "key": "C",
+          "text": "a construção da ideia de reciprocidade."
+        },
+        {
+          "key": "D",
+          "text": "o prolongamento da duração da ação."
+        },
+        {
+          "key": "E",
+          "text": "a ambiguidade no complemento do verbo."
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 5,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q013",
+      "number": 13,
+      "section": "Prova objetiva",
+      "subject": "Língua Portuguesa",
+      "stimulus_id": "t01",
+      "command": null,
+      "statement": "Na oração “a quem ele amara de verdade”, justifica-se a presença da preposição destacada em função:",
+      "options": [
+        {
+          "key": "A",
+          "text": "da exigência normativa da regência do verbo “amar”."
+        },
+        {
+          "key": "B",
+          "text": "da necessidade de desfazer a ambiguidade acerca do objeto."
+        },
+        {
+          "key": "C",
+          "text": "da introdução de um objeto direto preposicionado de valor afetivo."
+        },
+        {
+          "key": "D",
+          "text": "de uma estrutura em paralelismo com a oração anterior."
+        },
+        {
+          "key": "E",
+          "text": "da indicação de gênero do referente do pronome relativo."
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 5,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q014",
+      "number": 14,
+      "section": "Prova objetiva",
+      "subject": "Língua Portuguesa",
+      "stimulus_id": "t02",
+      "command": null,
+      "statement": "As partes de um texto precisam ser bem articuladas para a construção de seu sentido global. Considerando a última frase do primeiro parágrafo, percebe-se que ela:",
+      "options": [
+        {
+          "key": "A",
+          "text": "aponta, numericamente, os resultados obtidos pela pesquisa realizada."
+        },
+        {
+          "key": "B",
+          "text": "apresenta o método empregado pelo estudo descrito no parágrafo seguinte."
+        },
+        {
+          "key": "C",
+          "text": "reitera exatamente a mesma informação apresentada na frase anterior."
+        },
+        {
+          "key": "D",
+          "text": "explicita a ideia já apresentada pelo termo de sentido mais amplo, “ligação”."
+        },
+        {
+          "key": "E",
+          "text": "indica o marcador temporal em que se deu a pesquisa apresentada."
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 5,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q015",
+      "number": 15,
+      "section": "Prova objetiva",
+      "subject": "Língua Portuguesa",
+      "stimulus_id": "t02",
+      "command": null,
+      "statement": "No primeiro período do texto, estabelece-se um contraste temporal. O recurso sintático empregado nessa estrutura foi:",
+      "options": [
+        {
+          "key": "A",
+          "text": "a comparação entre dois adjuntos adnominais que expressam tempo."
+        },
+        {
+          "key": "B",
+          "text": "o emprego de duas construções sintáticas introduzidas por preposições."
+        },
+        {
+          "key": "C",
+          "text": "o confronto entre adjetivos que exprimem noções diferentes de tempo."
+        },
+        {
+          "key": "D",
+          "text": "a presença de expressões nominais com valor semântico de tempo."
+        },
+        {
+          "key": "E",
+          "text": "o uso de um adjunto adverbial e de uma oração subordinada desenvolvida."
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 5,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q016",
+      "number": 16,
+      "section": "Prova objetiva",
+      "subject": "Noções de Direito",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Quanto aos Servidores Públicos consoante a Constituição Federal de 1988 (CF/88), analise as afirmativas a seguir.\nI. A União, os Estados e o Distrito Federal manterão escolas de governo para a formação e o aperfeiçoamento dos servidores públicos, constituindo-se a participação nos cursos um dos requisitos para a promoção na carreira.\nII. Os Poderes Executivo, Legislativo e Judiciário publicarão anualmente os valores do subsídio e da remuneração dos cargos e empregos públicos.\nIII. É permitida a incorporação de vantagens de caráter temporário ou vinculadas ao exercício de função de confiança ou de cargo em comissão à remuneração do cargo efetivo.\nIV. O servidor abrangido por regime próprio de previdência social será aposentado compulsoriamente, com proventos proporcionais ao tempo de contribuição, aos 65 (sessenta e cinco) anos de idade.\nEstão corretas as afirmativas:",
+      "options": [
+        {
+          "key": "A",
+          "text": "I e II apenas"
+        },
+        {
+          "key": "B",
+          "text": "II e III apenas"
+        },
+        {
+          "key": "C",
+          "text": "III e IV apenas"
+        },
+        {
+          "key": "D",
+          "text": "I e III apenas"
+        },
+        {
+          "key": "E",
+          "text": "II e IV apenas"
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 5,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q017",
+      "number": 17,
+      "section": "Prova objetiva",
+      "subject": "Noções de Direito",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "O Estado brasileiro dispõe no texto constitucional de diversos dispositivos visando a proteção da Família, da Criança, do Adolescente, do Jovem e do Idoso. Está de acordo com Constituição Federal de 1988 (CF/88):",
+      "options": [
+        {
+          "key": "A",
+          "text": "Os filhos, havidos fora da relação do casamento ou por união estável, não terão os mesmos direitos, sendo permitidos designações e tratamentos diversos relativos à filiação"
+        },
+        {
+          "key": "B",
+          "text": "O planejamento familiar é livre decisão do casal, competindo ao Estado propiciar recursos educacionais e científicos para o exercício desse direito, vedada qualquer forma coercitiva por parte de instituições oficiais ou privadas"
+        },
+        {
+          "key": "C",
+          "text": "Os pais têm o dever de assistir, criar e educar os filhos menores, mas, os filhos maiores não têm o dever de ajudar e amparar os pais na velhice, cuja atribuição é exclusiva do Estado"
+        },
+        {
+          "key": "D",
+          "text": "São penalmente inimputáveis os maiores de dezesseis anos, sujeitos às normas da legislação especial"
+        },
+        {
+          "key": "E",
+          "text": "O Estado prestará assistência psicológica à família na pessoa de cada um dos que a integram, não sendo sua obrigação criar mecanismos para coibir a violência no âmbito de suas relações"
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 6,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q018",
+      "number": 18,
+      "section": "Prova objetiva",
+      "subject": "Noções de Direito",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Sobre os Poderes Legislativo, Executivo e Judiciário, segundo a Constituição Federal de 1988 (CF/88), analise as afirmativas a seguir.\nI. O Poder Legislativo é exercido pelo Congresso Nacional, que se compõe da Câmara dos Deputados e do Senado Federal, sendo que, cada legislatura terá a duração de quatro anos.\nII. O Poder Executivo é exercido pelo Presidente da República, auxiliado pelos Ministros de Estado, sendo que, a eleição do Presidente da República importará a do Vice-Presidente com ele registrado, ambos tomarão posse em sessão do Congresso Nacional, podendo modificar a Constituição e leis, segundo julgarem importantes para o crescimento econômico do Brasil.\nIII. O Superior Tribunal de Justiça é o órgão máximo do Poder Judiciário, cujos Ministros serão nomeados pelo Presidente da República, cabendo-lhe, precipuamente, a guarda da Constituição.\nIV. São crimes de responsabilidade os atos do Presidente da República que atentem contra a Constituição Federal e, especialmente, contra o livre exercício do Poder Legislativo, do Poder Judiciário, do Ministério Público e dos Poderes constitucionais das unidades da Federação.\nEstão corretas as afirmativas:",
+      "options": [
+        {
+          "key": "A",
+          "text": "I e II apenas"
+        },
+        {
+          "key": "B",
+          "text": "II e III apenas"
+        },
+        {
+          "key": "C",
+          "text": "I e IV apenas"
+        },
+        {
+          "key": "D",
+          "text": "III e IV apenas"
+        },
+        {
+          "key": "E",
+          "text": "I e III apenas"
+        }
+      ],
+      "answer": null,
+      "status": "anulada",
+      "status_note": "Anulada no gabarito pós-recurso (não consta na lista de recursos do cargo)",
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 6,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q019",
+      "number": 19,
+      "section": "Prova objetiva",
+      "subject": "Noções de Direito",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "A Defensoria Pública trata-se de instituição essencial à função jurisdicional do Estado, sendo incumbida de prestar orientação jurídica, representação judicial e defesa gratuitas, em todos os graus, dos necessitados. Consoante a Constituição do Estado de Minas Gerais de 1989, é __incorreto__ afirmar que:",
+      "options": [
+        {
+          "key": "A",
+          "text": "É obrigatória a criação de órgão da Defensoria Pública em todas as comarcas"
+        },
+        {
+          "key": "B",
+          "text": "Ao Defensor Público é vedado o exercício da advocacia fora de suas atribuições institucionais"
+        },
+        {
+          "key": "C",
+          "text": "À Defensoria Pública é assegurada autonomia funcional e administrativa"
+        },
+        {
+          "key": "D",
+          "text": "O Defensor Público-Geral da Defensoria Pública será nomeado pelo Governador do Estado"
+        },
+        {
+          "key": "E",
+          "text": "O Defensor Público é indispensável à administração da Justiça e inviolável por seus atos e manifestações no exercício ou mesmo fora da profissão"
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 6,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q020",
+      "number": 20,
+      "section": "Prova objetiva",
+      "subject": "Noções de Direito",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "São direitos sociais a educação, a saúde, a alimentação, o trabalho, a moradia, o transporte, o lazer, a segurança, a previdência social, a proteção à maternidade e à infância, a assistência aos desamparados, na forma Constituição Federal de 1988 (CF/88). Visando a melhoria de sua condição social, a CF/88 garante ao trabalhador, __exceto:__",
+      "options": [
+        {
+          "key": "A",
+          "text": "duração do trabalho normal não superior a oito horas diárias e quarenta e quatro semanais, facultada a compensação de horários e a redução da jornada, mediante acordo ou convenção coletiva de trabalho"
+        },
+        {
+          "key": "B",
+          "text": "assistência gratuita aos filhos e dependentes desde o nascimento até 5 (cinco) anos de idade em creches e pré-escolas"
+        },
+        {
+          "key": "C",
+          "text": "proibição de trabalho noturno, perigoso ou insalubre a menores de dezoito e de qualquer trabalho a menores de dezesseis anos, salvo na condição de aprendiz, a partir de quatorze anos"
+        },
+        {
+          "key": "D",
+          "text": "piso salarial proporcional à extensão e relevância do trabalho da categoria, nacionalmente unificado, capaz de atender suas necessidades com moradia, alimentação, educação, saúde, lazer, vestuário, transporte e previdência social, bem como, de sua família"
+        },
+        {
+          "key": "E",
+          "text": "proteção do salário na forma da lei, constituindo crime sua retenção dolosa"
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 6,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q021",
+      "number": 21,
+      "section": "Prova objetiva",
+      "subject": "Noções de Direito",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Em relação às disposições sobre a Lei de Organização e Divisão Judiciárias do Estado de Minas Gerais (Lei Complementar nº 59 de 18/01/2001), analise as afirmativas a seguir.\nI. São cento e cinquenta os cargos de Desembargador do Tribunal de Justiça, dos quais um será o de Presidente, três, os de Vice-Presidentes, e um, o de Corregedor-Geral de Justiça.\nII. O Presidente, os Vice-Presidentes e o Corregedor-Geral de Justiça terão mandato de dois anos, permitida a reeleição para um único período subsequente;\nIII. A direção do Foro, sede privativa dos serviços judiciais, é exercida, na Comarca de Belo Horizonte, pelo Corregedor-Geral de Justiça ou por Juiz Auxiliar da Corregedoria por ele designado e, nas comarcas do interior, pelo Juiz de Direito ou, havendo mais de um Juiz, pelo que for designado bienalmente pelo Corregedor-Geral, permitida a recondução.\nEstão corretas as afirmativas:",
+      "options": [
+        {
+          "key": "A",
+          "text": "I, II e III"
+        },
+        {
+          "key": "B",
+          "text": "I e II apenas"
+        },
+        {
+          "key": "C",
+          "text": "II e III apenas"
+        },
+        {
+          "key": "D",
+          "text": "I e III apenas"
+        },
+        {
+          "key": "E",
+          "text": "I apenas"
+        }
+      ],
+      "answer": null,
+      "status": "anulada",
+      "status_note": "Anulada após recurso",
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 7,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q022",
+      "number": 22,
+      "section": "Prova objetiva",
+      "subject": "Noções de Direito",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Em relação às penalidades aplicáveis ao magistrado previstas na Lei de Organização e Divisão Judiciárias do Estado de Minas Gerais (Lei Complementar nº 59 de 18/01/2001), assinale a alternativa __incorreta.__",
+      "options": [
+        {
+          "key": "A",
+          "text": "As penas de advertência e de censura são aplicáveis somente aos Juízes de primeiro grau, após o devido processo legal"
+        },
+        {
+          "key": "B",
+          "text": "Compete ao Corregedor-Geral de Justiça, relativamente ao Juiz de Direito, propor ao órgão competente do Tribunal de Justiça a instauração de processo administrativo disciplinar"
+        },
+        {
+          "key": "C",
+          "text": "Compete ao Presidente do Tribunal de Justiça, relativamente ao Desembargador, propor ao órgão competente do Tribunal de Justiça a instauração de processo administrativo disciplinar"
+        },
+        {
+          "key": "D",
+          "text": "Qualquer pessoa devidamente identificada e com endereço conhecido poderá representar, por escrito, a respeito de abuso, erro, irregularidade ou omissão imputada a magistrado"
+        },
+        {
+          "key": "E",
+          "text": "A pena de advertência será aplicada ao magistrado que proceder de forma incompatível com a dignidade, a honra e o decoro de suas funções"
+        }
+      ],
+      "answer": null,
+      "status": "anulada",
+      "status_note": "Anulada após recurso",
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 7,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q023",
+      "number": 23,
+      "section": "Prova objetiva",
+      "subject": "Noções de Direito",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "No que concerne às disposições previstas na Lei de Licitações e Contratos Administrativos (Lei nº 14.133/2021), a pessoa jurídica poderá participar de licitação em consórcio, observadas as seguintes normas:\nI. Comprovação de compromisso público ou particular de constituição de consórcio, subscrito pelos consorciados.\nII. Indicação da empresa líder do consórcio, que será responsável por sua representação perante a Administração.\nIII. Impedimento de a empresa consorciada participar, na mesma licitação, de mais de um consórcio, salvo de forma isolada.\nEstão corretas as afirmativas:",
+      "options": [
+        {
+          "key": "A",
+          "text": "I, II e III"
+        },
+        {
+          "key": "B",
+          "text": "I e II apenas"
+        },
+        {
+          "key": "C",
+          "text": "II e III apenas"
+        },
+        {
+          "key": "D",
+          "text": "I e III apenas"
+        },
+        {
+          "key": "E",
+          "text": "I apenas"
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 7,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q024",
+      "number": 24,
+      "section": "Prova objetiva",
+      "subject": "Noções de Direito",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Conforme a Lei de Licitações e Contratos Administrativos (Lei nº 14.133/2021), assinale a alternativa __incorreta.__",
+      "options": [
+        {
+          "key": "A",
+          "text": "O edital de licitação poderá, na forma disposta em regulamento, exigir que percentual mínimo da mão de obra responsável pela execução do objeto da contratação seja constituído por mulheres vítimas de violência doméstica ou de indivíduos oriundos ou egressos do sistema prisional"
+        },
+        {
+          "key": "B",
+          "text": "No julgamento das propostas por técnica e preço, deverão ser avaliadas e ponderadas as propostas técnicas e, em seguida, as propostas de preço apresentadas pelos licitantes, na proporção máxima de 65% (sessenta e cinco por cento) de valoração para a proposta técnica"
+        },
+        {
+          "key": "C",
+          "text": "Na hipótese de aquisição de bens, os prazos mínimos para apresentação de propostas e lances, contados a partir da data de divulgação do edital de licitação, são de 8 (oito) dias úteis, quando adotados os critérios de julgamento de menor preço ou de maior desconto"
+        },
+        {
+          "key": "D",
+          "text": "Poderá ser exigida, no momento da apresentação da proposta, a comprovação do recolhimento de quantia a título de garantia de proposta, como requisito de pré-habilitação. A garantia de proposta será devolvida aos licitantes no prazo de 10 (dez) dias úteis, contado da assinatura do contrato ou da data em que for declarada fracassada a licitação"
+        },
+        {
+          "key": "E",
+          "text": "A Administração, nas compras para entrega futura e na execução de obras e serviços, poderá estabelecer no edital a exigência de capital mínimo ou de patrimônio líquido mínimo equivalente a até 10% (dez por cento) do valor estimado da contratação"
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 7,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q025",
+      "number": 25,
+      "section": "Prova objetiva",
+      "subject": "Noções de Direito",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "No que concerne à Lei de Organização e Divisão Judiciárias do Estado de Minas Gerais (Lei Complementar nº 59 de 18/01/2001), assinale a alternativa __incorreta.__ Aos servidores dos órgãos auxiliares dos Tribunais e da Justiça de Primeira Instância é proibido:",
+      "options": [
+        {
+          "key": "A",
+          "text": "recusar fé a documentos públicos"
+        },
+        {
+          "key": "B",
+          "text": "fazer circular ou subscrever lista de donativos no recinto de trabalho"
+        },
+        {
+          "key": "C",
+          "text": "exercer comércio como acionista ou cotista"
+        },
+        {
+          "key": "D",
+          "text": "participar de gerência ou administração de empresa privada ou de sociedade civil"
+        },
+        {
+          "key": "E",
+          "text": "recusar-se a atualizar seus dados cadastrais, quando solicitado"
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 8,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q026",
+      "number": 26,
+      "section": "Prova objetiva",
+      "subject": "Noções de Direito",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Na conformidade com o Regimento Interno do Tribunal de Justiça de Minas Gerais, salvo disposição em contrário, de lei ou deste regimento, as decisões serão tomadas por maioria de dois terços no seguinte caso:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Nas declarações de inconstitucionalidade"
+        },
+        {
+          "key": "B",
+          "text": "Nos incidentes de assunção de competência e de resolução de demandas repetitivas"
+        },
+        {
+          "key": "C",
+          "text": "No pedido de uniformização de jurisprudência dos juizados especiais"
+        },
+        {
+          "key": "D",
+          "text": "Nas ações coletivas relacionadas com o exercício do direito de greve dos servidores públicos civis estaduais e municipais não regidos pela Consolidação das Leis do Trabalho"
+        },
+        {
+          "key": "E",
+          "text": "Na recusa de promoção de magistrado pelo critério de antiguidade"
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 8,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q027",
+      "number": 27,
+      "section": "Prova objetiva",
+      "subject": "Noções de Direito",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Na conformidade com a Resolução nº 217 da 3ª Assembleia Geral da ONU, de 10 de dezembro de 1948 (Declaração Universal dos Direitos Humanos), é __incorreto__ afirmar que:",
+      "options": [
+        {
+          "key": "A",
+          "text": "a vontade do povo será a base da autoridade do governo; essa vontade será expressa em eleições periódicas e legítimas, por sufrágio universal, por voto secreto e obrigatório ou processo equivalente que assegure a liberdade de voto"
+        },
+        {
+          "key": "B",
+          "text": "todo ser humano acusado de um ato delituoso tem o direito de ser presumido inocente até que a sua culpabilidade tenha sido provada de acordo com a lei, em julgamento público no qual lhe tenham sido asseguradas todas as garantias necessárias à sua defesa"
+        },
+        {
+          "key": "C",
+          "text": "ninguém será sujeito à interferência na sua vida privada, na sua família, no seu lar ou na sua correspondência, nem a ataque à sua honra e reputação. Todo ser humano tem direito à proteção da lei contra tais interferências ou ataques"
+        },
+        {
+          "key": "D",
+          "text": "os homens e mulheres de maior idade, sem qualquer restrição de raça, nacionalidade ou religião, têm o direito de contrair matrimônio e fundar uma família. Gozam de iguais direitos em relação ao casamento, sua duração e sua dissolução"
+        },
+        {
+          "key": "E",
+          "text": "todo ser humano, sem qualquer distinção, tem direito a igual remuneração por igual trabalho"
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 8,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q028",
+      "number": 28,
+      "section": "Prova objetiva",
+      "subject": "Noções de Direito",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Assinale a alternativa __incorreta,__ considerando a Lei Geral de Proteção de Dados (LGPD), os princípios e a boa-fé que deverão ser observados.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Finalidade: realização do tratamento para propósitos legítimos, específicos, explícitos e informados ao titular, sem possibilidade de tratamento posterior de forma incompatível com essas finalidades"
+        },
+        {
+          "key": "B",
+          "text": "Necessidade: limitação do tratamento ao mínimo necessário para a realização de suas finalidades, com abrangência dos dados pertinentes, proporcionais e não excessivos em relação às finalidades do tratamento de dados"
+        },
+        {
+          "key": "C",
+          "text": "Livre acesso: garantia, aos titulares, de consulta facilitada e gratuita sobre a forma e a duração do tratamento, bem como sobre a integralidade de seus dados pessoais"
+        },
+        {
+          "key": "D",
+          "text": "Qualidade dos dados: garantia, aos titulares, de exatidão, clareza, relevância e atualização dos dados, de acordo com a necessidade e para o cumprimento da finalidade de seu tratamento"
+        },
+        {
+          "key": "E",
+          "text": "Não discriminação: possibilidade de realização do tratamento para fins discriminatórios ilícitos ou abusivos"
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 8,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q029",
+      "number": 29,
+      "section": "Prova objetiva",
+      "subject": "Noções de Direito",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Segundo a Lei Geral de Proteção de Dados (LGPD), o tratamento de dados pessoais pelas pessoas jurídicas de direito público (União, Estados, Distrito Federal e Municípios, os órgãos públicos integrantes da administração direta dos Poderes Executivo, Legislativo, incluindo as Cortes de Contas, e Judiciário e do Ministério Público, as autarquias, as fundações públicas, as empresas públicas, as sociedades de economia mista e demais entidades controladas direta ou indiretamente pela União, Estados, Distrito Federal e Municípios) deverá ser realizado para o atendimento de sua finalidade pública, na persecução do interesse público, com o objetivo de executar as competências legais ou cumprir as atribuições legais do serviço público. Na conformidade com essa diretriz, assinale a alternativa correta.",
+      "options": [
+        {
+          "key": "A",
+          "text": "A autoridade nacional não poderá dispor sobre as formas de publicidade das operações de tratamento"
+        },
+        {
+          "key": "B",
+          "text": "Os serviços notariais e de registro exercidos em caráter privado, por delegação do Poder Público, não terão o mesmo tratamento dispensado às pessoas jurídicas referidas no enunciado desta questão, nos termos da LGPD"
+        },
+        {
+          "key": "C",
+          "text": "Os órgãos notariais e de registro devem fornecer acesso aos dados por meio eletrônico para a administração pública, tendo em vista o atendimento de sua finalidade pública, na persecução do interesse público, com o objetivo de executar as competências legais ou cumprir as atribuições legais do serviço público"
+        },
+        {
+          "key": "D",
+          "text": "É vedado ao Poder Público, em qualquer caso, transferir a entidades privadas dados pessoais constantes de bases de dados a que tenha acesso"
+        },
+        {
+          "key": "E",
+          "text": "A autoridade nacional não poderá estabelecer normas complementares para as atividades de comunicação e de uso compartilhado de dados pessoais"
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 8,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q030",
+      "number": 30,
+      "section": "Prova objetiva",
+      "subject": "Noções de Direito",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "De acordo com o Regimento Interno do Tribunal de Justiça de Minas Gerais, os recursos ressalvados, aqueles amparados pela assistência judiciária ou isentos, estão sujeitos a preparo, assinale a alternativa __incorreta.__",
+      "options": [
+        {
+          "key": "A",
+          "text": "Em caso de ambas as partes recorrerem, inclusive adesivamente, cada recurso estará sujeito a preparo integra"
+        },
+        {
+          "key": "B",
+          "text": "Havendo mais de um recurso interposto por litisconsortes, basta que um deles seja preparado, para que todos sejam julgados, salvo se distintos ou opostos seus interesses"
+        },
+        {
+          "key": "C",
+          "text": "O assistente que recorrer, em qualquer situação, fará o preparo do seu recurso, independentemente do preparo dos recursos que porventura hajam sido interpostos pelos litisconsortes"
+        },
+        {
+          "key": "D",
+          "text": "O terceiro prejudicado que recorrer fará o preparo do seu recurso, independentemente do preparo dos recursos que porventura hajam sido interpostos pelo autor ou pelo réu"
+        },
+        {
+          "key": "E",
+          "text": "No caso de mandado de segurança, quando houver pedido de concessão de liminar e não for possível o preparo, este será efetuado após a decisão que a conceder ou negar"
+        }
+      ],
+      "answer": null,
+      "status": "anulada",
+      "status_note": "Anulada após recurso",
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 9,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q031",
+      "number": 31,
+      "section": "Prova objetiva",
+      "subject": "Inglês Técnico",
+      "stimulus_id": "t03",
+      "command": null,
+      "statement": "Utilizando-se das técnicas de leitura instrumental, mais especificamente da técnica skimming, ou seja, uma leitura rápida e superficial, leia o texto “Crimes” e assinale a alternativa que realmente identifica o assunto geral tratado pelo autor do texto.",
+      "options": [
+        {
+          "key": "A",
+          "text": "O autor discute os crimes de uma maneira geral e superficial"
+        },
+        {
+          "key": "B",
+          "text": "O autor afirma que todos os indivíduos são criminosos"
+        },
+        {
+          "key": "C",
+          "text": "O autor expõe que os indivíduos mentalmente insanos não são capazes de cometer crimes"
+        },
+        {
+          "key": "D",
+          "text": "O autor declara que alguns indivíduos não podem ser acusados de cometer crimes"
+        },
+        {
+          "key": "E",
+          "text": "O autor remonta casos de crimes e as complicações legais dos criminosos"
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 9,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q032",
+      "number": 32,
+      "section": "Prova objetiva",
+      "subject": "Inglês Técnico",
+      "stimulus_id": "t03",
+      "command": null,
+      "statement": "Utilizando-se das técnicas de leitura instrumental, especificamente da técnica scanning, a qual consiste em uma leitura atenta e precisa. Analise o excerto a seguir: “They may not understand right from wrong”. Assinale, dentre as alternativas abaixo, a que está mais próxima em significado.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Eles talvez não compreendam o que é certo"
+        },
+        {
+          "key": "B",
+          "text": "Eles talvez não consigam compreender o que é errado"
+        },
+        {
+          "key": "C",
+          "text": "Eles não conseguem distinguir o certo do errado"
+        },
+        {
+          "key": "D",
+          "text": "Eles não conseguem entender que só devem fazer o certo"
+        },
+        {
+          "key": "E",
+          "text": "Eles podem compreender o que é certo e o que é errado, mas não têm essa vontade"
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 9,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q033",
+      "number": 33,
+      "section": "Prova objetiva",
+      "subject": "Inglês Técnico",
+      "stimulus_id": "t03",
+      "command": null,
+      "statement": "A partir das técnicas de leitura instrumental, atenha-se à compreensão e à interpretação do texto “Crimes”, analise as afirmativas a seguir e dê valores de Verdadeiro (V) e Falso (F).\n( ) O autor afirma que certos tipos de indivíduos não podem ser acusados de cometer um crime.\n( ) O autor expõe que todos os indivíduos com comportamentos criminosos poderão ser julgados nos tribunais.\n( ) Ainda segundo o autor, os indivíduos mentalmente insanos não podem ser acusados de cometer um crime.\n( ) O autor reitera que embora insanos, os indivíduos conseguem entender e avaliar o seu próprio comportamento.\nAssinale a alternativa que apresenta a sequência correta de cima para baixo.",
+      "options": [
+        {
+          "key": "A",
+          "text": "F - V - F - V"
+        },
+        {
+          "key": "B",
+          "text": "V - F - V - F"
+        },
+        {
+          "key": "C",
+          "text": "F - F - V - V"
+        },
+        {
+          "key": "D",
+          "text": "V - V - F - F"
+        },
+        {
+          "key": "E",
+          "text": "V - V - V - V"
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 9,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q034",
+      "number": 34,
+      "section": "Prova objetiva",
+      "subject": "Inglês Técnico",
+      "stimulus_id": "t03",
+      "command": null,
+      "statement": "Uma das áreas de formação da língua inglesa, a morfologia, justifica que a palavra é formada por afixos (prefixos + sufixos) e radical/raiz. A forma dos afixos é mais rígida quanto à posição de formação da palavra. Os sufixos podem modificar a classe gramatical e os prefixos o sentido (positivo ou negativo) da palavra, sendo que o radical, raiz, é que traz o significado da palavra. Diante do exposto, assinale a alternativa que apresenta a palavra pós-fixada.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Misunderstand"
+        },
+        {
+          "key": "B",
+          "text": "Bicolour"
+        },
+        {
+          "key": "C",
+          "text": "Disappear"
+        },
+        {
+          "key": "D",
+          "text": "Impossible"
+        },
+        {
+          "key": "E",
+          "text": "Finally"
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 10,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q035",
+      "number": 35,
+      "section": "Prova objetiva",
+      "subject": "Inglês Técnico",
+      "stimulus_id": "t03",
+      "command": null,
+      "statement": "As palavras denominadas de cognatas vêm do latim cognatus que significa referente a parente. Especificamente, refere-se a uma palavra que deriva da mesma família de línguas ou tronco linguístico (Dicio.com., 2020). As palavras __cognatas__ ou os __cognatos__ são muito importantes, pois, a proximidade morfológica com a língua portuguesa auxilia na compreensão do texto em língua inglesa e na aprendizagem de palavras, ainda, desconhecidas. A partir do acima explicado, assinale a sequência de palavras cognatas retiradas do texto Crimes.",
+      "options": [
+        {
+          "key": "A",
+          "text": "crime, types; understand"
+        },
+        {
+          "key": "B",
+          "text": "courts, wrong, commit"
+        },
+        {
+          "key": "C",
+          "text": "insane; crime, responsible"
+        },
+        {
+          "key": "D",
+          "text": "children; age; cannot"
+        },
+        {
+          "key": "E",
+          "text": "right, law, courts"
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 10,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q036",
+      "number": 36,
+      "section": "Prova objetiva",
+      "subject": "Raciocínio Lógico",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Uma frase que representa uma negação da proposição lógica “Pedro estudará ou irá ao encontro dos amigos” é:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Pedro não estudará ou irá ao encontro dos amigos"
+        },
+        {
+          "key": "B",
+          "text": "Pedro não estudará ou não irá ao encontro dos amigos"
+        },
+        {
+          "key": "C",
+          "text": "Pedro não estudará e não irá ao encontro dos amigos"
+        },
+        {
+          "key": "D",
+          "text": "Pedro estudará e não irá ao encontro dos amigos"
+        },
+        {
+          "key": "E",
+          "text": "Pedro não estudará e irá ao encontro dos amigos"
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 10,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q037",
+      "number": 37,
+      "section": "Prova objetiva",
+      "subject": "Raciocínio Lógico",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Uma frase que representa uma equivalência da proposição lógica “Se Paulo estudou, então teve um bom desempenho no concurso” é:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Paulo estudou ou não teve um bom desempenho no concurso"
+        },
+        {
+          "key": "B",
+          "text": "Paulo não estudou ou não teve um bom desempenho no concurso"
+        },
+        {
+          "key": "C",
+          "text": "Se Paulo não estudou, então não teve um bom desempenho no concurso"
+        },
+        {
+          "key": "D",
+          "text": "Paulo não estudou ou teve um bom desempenho no concurso"
+        },
+        {
+          "key": "E",
+          "text": "Paulo estudou e teve um bom desempenho no concurso"
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 10,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q038",
+      "number": 38,
+      "section": "Prova objetiva",
+      "subject": "Raciocínio Lógico",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "A negação da proposição “Existem números inteiros divisíveis por 5” corresponde a:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Existem números inteiros não divisíveis por 5"
+        },
+        {
+          "key": "B",
+          "text": "Não existem números inteiros divisíveis por 5"
+        },
+        {
+          "key": "C",
+          "text": "Qualquer número inteiro é divisível por 5"
+        },
+        {
+          "key": "D",
+          "text": "Qualquer número inteiro não é divisível por 5"
+        },
+        {
+          "key": "E",
+          "text": "Nem todo número inteiro é divisível por 5"
+        }
+      ],
+      "answer": null,
+      "status": "anulada",
+      "status_note": "Anulada após recurso",
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 10,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q039",
+      "number": 39,
+      "section": "Prova objetiva",
+      "subject": "Raciocínio Lógico",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Abaixo temos uma sequência lógica de números naturais. Dessa forma, o próximo número dessa sequência que segue a essa lógica 1, 7, 25, 79, ... corresponde a:",
+      "options": [
+        {
+          "key": "A",
+          "text": "108"
+        },
+        {
+          "key": "B",
+          "text": "241"
+        },
+        {
+          "key": "C",
+          "text": "257"
+        },
+        {
+          "key": "D",
+          "text": "571"
+        },
+        {
+          "key": "E",
+          "text": "342"
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 10,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q040",
+      "number": 40,
+      "section": "Prova objetiva",
+      "subject": "Raciocínio Lógico",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "A sentença condicional “Se sou um atleta, então pratico esportes” equivale a conjunção:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Não sou um atleta e não pratico esportes"
+        },
+        {
+          "key": "B",
+          "text": "Sou um atleta e não pratico esportes"
+        },
+        {
+          "key": "C",
+          "text": "Sou um atleta e pratico esportes"
+        },
+        {
+          "key": "D",
+          "text": "Não sou um atleta ou não pratico esportes"
+        },
+        {
+          "key": "E",
+          "text": "Não sou um atleta ou pratico esportes"
+        }
+      ],
+      "answer": null,
+      "status": "anulada",
+      "status_note": "Anulada após recurso",
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 10,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q041",
+      "number": 41,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Leia atentamente a frase abaixo: \"O ______ é uma camada que descreve uma interface comum para frameworks ______ como o ______\". Assinale a alternativa que preencha correta e respectivamente as lacunas.",
+      "options": [
+        {
+          "key": "A",
+          "text": "JVM / ORM / Hibernate"
+        },
+        {
+          "key": "B",
+          "text": "JPA / ORM / Hibernate"
+        },
+        {
+          "key": "C",
+          "text": "JVM / ORM / OpenJDK"
+        },
+        {
+          "key": "D",
+          "text": "JPA / DBA / OpenJDK"
+        },
+        {
+          "key": "E",
+          "text": "JPA / DBA / Hibernate"
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 10,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q042",
+      "number": 42,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Quanto ao conceito geral sobre Webhooks, analise as afirmativas a seguir e dê valores Verdadeiro (V) ou Falso (F).\n( ) Não existe a necessidade de um endpoint para webhook poder funcionar.\n( ) Os dados recebidos em um webhook jamais podem ser no formato JSON.\n( ) O webhook pode enviar notificações em tempo real em aplicações web.\nAssinale a alternativa que apresenta a sequência correta de cima para baixo.",
+      "options": [
+        {
+          "key": "A",
+          "text": "V - V - V"
+        },
+        {
+          "key": "B",
+          "text": "V - V - F"
+        },
+        {
+          "key": "C",
+          "text": "V - F - V"
+        },
+        {
+          "key": "D",
+          "text": "F - F - V"
+        },
+        {
+          "key": "E",
+          "text": "F - F - F"
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 11,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q043",
+      "number": 43,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Quanto aos diversos conceitos relacionados ao gerenciamento de projetos, métodos e técnicas ágeis, analise as afirmativas a seguir.\nI. O Daily Scrum, em princípio, não deve durar mais do que 15 minutos.\nII. Uma Sprint do Scrum pode ser incorporada em um Kanban.\nIII. O objetivo do Lean é transformar as estruturas da empresa para potencializar seus resultados e torná-la mais competitiva.\nDas afirmativas:",
+      "options": [
+        {
+          "key": "A",
+          "text": "apenas I é tecnicamente verdadeira"
+        },
+        {
+          "key": "B",
+          "text": "apenas I e II são tecnicamente verdadeiras"
+        },
+        {
+          "key": "C",
+          "text": "apenas II e III são tecnicamente verdadeiras"
+        },
+        {
+          "key": "D",
+          "text": "apenas I e III são tecnicamente verdadeiras"
+        },
+        {
+          "key": "E",
+          "text": "I, II e III são tecnicamente verdadeiras"
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": "Recurso deferido: alternativa alterada de E para B",
+      "answer_changed_from": "E",
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 11,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q044",
+      "number": 44,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Dado os três conceitos básicos sobre o ITIL v4 abaixo, assinale a alternativa que corresponda respectivamente a denominação referente a cada um desses conceitos:\n1. Acréscimo, modificação ou remoção de qualquer elemento que possa afetar direta ou indiretamente os serviços.\n2. É uma interrupção não planejada de um serviço de TI ou uma redução da qualidade de um serviço de TI.\n3. Trata-se de uma chamada para a ação de serviço que tenha sido acordada como parte normal da entrega de serviço.",
+      "options": [
+        {
+          "key": "A",
+          "text": "1.INCIDENTE - 2.MUDANÇA - 3.REQUISIÇÃO de SERVIÇO"
+        },
+        {
+          "key": "B",
+          "text": "1.MUDANÇA - 2.INCIDENTE - 3.REQUISIÇÃO de SERVIÇO"
+        },
+        {
+          "key": "C",
+          "text": "1.INCIDENTE - 2.REQUISIÇÃO de SERVIÇO - 3.MUDANÇA"
+        },
+        {
+          "key": "D",
+          "text": "1.MUDANÇA - 2.REQUISIÇÃO de SERVIÇO - 3.INCIDENTE"
+        },
+        {
+          "key": "E",
+          "text": "1.REQUISIÇÃO de SERVIÇO - 2.INCIDENTE - 3.MUDANÇA"
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 11,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q045",
+      "number": 45,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Sobre a arquitetura de desenvolvimento da PDPJ-Br, conforme Portaria CNJ nº 25/2022, temos como ferramenta de versionamento de software oficialmente adotada a:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Mercurial"
+        },
+        {
+          "key": "B",
+          "text": "CVC"
+        },
+        {
+          "key": "C",
+          "text": "GIT"
+        },
+        {
+          "key": "D",
+          "text": "TFS"
+        },
+        {
+          "key": "E",
+          "text": "Subversion"
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 11,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q046",
+      "number": 46,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Em relação a linguagem de programação Java, analise as afirmativas a seguir e dê valores Verdadeiro (V) ou Falso (F).\n( ) Existem vários ambientes de desenvolvimento (IDEs) como: BlueJ, JCreator e jEdit.\n( ) Não suporta recursos de alto desempenho, como multithreading e compilação just-in-time.\n( ) Das diversas bibliotecas da linguagem Java uma das mais utilizadas é o Javascript.\nAssinale a alternativa que apresenta a sequência correta de cima para baixo.",
+      "options": [
+        {
+          "key": "A",
+          "text": "V - F - F"
+        },
+        {
+          "key": "B",
+          "text": "V - F - V"
+        },
+        {
+          "key": "C",
+          "text": "F - V - V"
+        },
+        {
+          "key": "D",
+          "text": "V - V - F"
+        },
+        {
+          "key": "E",
+          "text": "F - F - V"
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 11,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q047",
+      "number": 47,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Conforme a Extensão Ágil do BABOK, a imagem a seguir se refere especificamente a um:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Genérico Ciclo de Vida Ágil"
+        },
+        {
+          "key": "B",
+          "text": "Modelo de Extreme Programming"
+        },
+        {
+          "key": "C",
+          "text": "Ciclo de Vida Scrum"
+        },
+        {
+          "key": "D",
+          "text": "Mapa de Histórias"
+        },
+        {
+          "key": "E",
+          "text": "Típico Quadro Kanban"
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": true,
+      "figures": [
+        {
+          "file": "assets/tjmg-2022-analista-ti-q047.png",
+          "description": "Quadro com quatro colunas – TO DO, IN PROGRESS, TESTING e DONE – com cartões distribuídos em cada coluna."
+        }
+      ],
+      "page": 11,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q048",
+      "number": 48,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Quanto à arquitetura distribuída de microsserviços temos o Spring Framework. Dentro desse ecossistema temos o Spring Boot que possui os seguintes componentes-base:\n(1) Spring Boot Actuator.\n(2) Spring Boot Finisher.\n(3) Spring Boot AutoConfigurator.\n(4) Spring Boot Starter.\nDa relação apresentada:",
+      "options": [
+        {
+          "key": "A",
+          "text": "somente são aplicados o 1, 2 e 3"
+        },
+        {
+          "key": "B",
+          "text": "somente são aplicados o 1, 2 e 4"
+        },
+        {
+          "key": "C",
+          "text": "somente são aplicados o 2, 3 e 4"
+        },
+        {
+          "key": "D",
+          "text": "somente são aplicados o 1, 3 e 4"
+        },
+        {
+          "key": "E",
+          "text": "todos podem ser aplicados"
+        }
+      ],
+      "answer": null,
+      "status": "anulada",
+      "status_note": "Anulada após recurso",
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 12,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q049",
+      "number": 49,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Conforme a Instrução Normativa SGD/ME nº 1/2019, o \"documento que descreve as análises realizadas em relação às condições da contratação em termos de necessidades, requisitos, alternativas, escolhas, resultados pretendidos e demais características, e que demonstra a viabilidade técnica e econômica da contratação\", denomina-se especificamente como:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Projeto Básico (PB)"
+        },
+        {
+          "key": "B",
+          "text": "Mapa de Gerenciamento de Riscos (MGR)"
+        },
+        {
+          "key": "C",
+          "text": "Estudo Técnico Preliminar da Contratação (ETP)"
+        },
+        {
+          "key": "D",
+          "text": "Documento de Oficialização da Demanda (DOD)"
+        },
+        {
+          "key": "E",
+          "text": "Termo de Referência (TR)"
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 12,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q050",
+      "number": 50,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Para implementar um SGSI - Sistema de Gestão de Segurança da Informação, com base na norma NBR ISO 27001, aplica-se aos processos do SGSI o modelo: \"______ estabelecer o SGSI - ______ implementar e operar o SGSI - ______ monitorar e analisar criticamente o SGSI - ______ manter e melhorar o SGSI\". Assinale a alternativa que preencha correta e respectivamente as lacunas.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Do (fazer) / Check (checar) / Act (agir) / Plan (planejar)"
+        },
+        {
+          "key": "B",
+          "text": "Plan (planejar) / Do (fazer) / Check (checar) / Act (agir)"
+        },
+        {
+          "key": "C",
+          "text": "Check (checar) / Do (fazer) / Plan (planejar) / Act (agir)"
+        },
+        {
+          "key": "D",
+          "text": "Plan (planejar) / Check (checar) / Act (agir) / Do (fazer)"
+        },
+        {
+          "key": "E",
+          "text": "Act (agir) / Do (fazer) / Check (checar) / Plan (planejar)"
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 12,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q051",
+      "number": 51,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Algumas das principais bibliotecas padrão da linguagem de programação Java são:\n(1) java.lang\n(2) java.net\n(3) java.sql\n(4) java.util\nDa relação apresentada:",
+      "options": [
+        {
+          "key": "A",
+          "text": "somente são aplicados o 1, 2 e 3"
+        },
+        {
+          "key": "B",
+          "text": "somente são aplicados o 1, 2 e 4"
+        },
+        {
+          "key": "C",
+          "text": "somente são aplicados o 2, 3 e 4"
+        },
+        {
+          "key": "D",
+          "text": "somente são aplicados o 1, 3 e 4"
+        },
+        {
+          "key": "E",
+          "text": "todos podem ser aplicados"
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 12,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q052",
+      "number": 52,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Quanto ao significado de SSO (Single Sign-On), assinale a alternativa correta.",
+      "options": [
+        {
+          "key": "A",
+          "text": "É um típico Sistema de Informação Transacional que possibilita acesso a um SGBD único"
+        },
+        {
+          "key": "B",
+          "text": "A sigla que representa \"Sistema de Segurança Operacional\" permite tomadas de decisões únicas"
+        },
+        {
+          "key": "C",
+          "text": "É uma funcionalidade de controle de acesso único a vários sistemas, ainda que independentes"
+        },
+        {
+          "key": "D",
+          "text": "Possibilidade de gerir uma grande base de dados por meio de uma única tela de controle"
+        },
+        {
+          "key": "E",
+          "text": "É um sistema simples de entradas únicas para consolidação de Sistemas de Informação"
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 12,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q053",
+      "number": 53,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Com base no framework COBIT 2019, analise as afirmativas a seguir.\nI. Anteriormente ao COBIT 2019 tivemos a versão de número cinco, ou seja, o COBIT 5.\nII. Existem 12 (doze) publicações oficiais que são consideradas a essência do COBIT 2019.\nIII. Dentre os inúmeros exemplos de áreas de foco, podemos destacar computação em nuvem.\nDas afirmativas:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Apenas I é tecnicamente verdadeira"
+        },
+        {
+          "key": "B",
+          "text": "Apenas I e II são tecnicamente verdadeiras"
+        },
+        {
+          "key": "C",
+          "text": "Apenas II e III são tecnicamente verdadeiras"
+        },
+        {
+          "key": "D",
+          "text": "Apenas I e III são tecnicamente verdadeiras"
+        },
+        {
+          "key": "E",
+          "text": "I, II e III são tecnicamente verdadeiras"
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 12,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q054",
+      "number": 54,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "A certificação CPRE do IREB (International Requirements Engineering Board) tem como ênfase especificamente a seguinte área da Engenharia de Software:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Testes de Software"
+        },
+        {
+          "key": "B",
+          "text": "Requisitos de Software"
+        },
+        {
+          "key": "C",
+          "text": "Manutenção de Software"
+        },
+        {
+          "key": "D",
+          "text": "Design de Software"
+        },
+        {
+          "key": "E",
+          "text": "Qualidade de Software"
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 12,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q055",
+      "number": 55,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "A menor unidade de computação implantável que se pode criar e gerenciar no Kubernetes são denominados tecnicamente como sendo:",
+      "options": [
+        {
+          "key": "A",
+          "text": "bean"
+        },
+        {
+          "key": "B",
+          "text": "shell"
+        },
+        {
+          "key": "C",
+          "text": "kernel"
+        },
+        {
+          "key": "D",
+          "text": "pod"
+        },
+        {
+          "key": "E",
+          "text": "hem"
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 13,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q056",
+      "number": 56,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Quanto à funcionalidade específica do Swagger, assinale a alternativa correta.",
+      "options": [
+        {
+          "key": "A",
+          "text": "É um padrão de arquitetura de software arquitetural criado por Robert Martin, que favorece a implementação de sistemas com reusabilidade de código, coesão, independência de tecnologia e testabilidade"
+        },
+        {
+          "key": "B",
+          "text": "É uma plataforma de prototipagem e de simulação de software livre para a criação de contêineres"
+        },
+        {
+          "key": "C",
+          "text": "É a combinação de diversas ferramentas em uma única interface gráfica para o desenvolvimento de aplicações"
+        },
+        {
+          "key": "D",
+          "text": "Ramo da Inteligência Artificial que utiliza modelos analíticos a partir da coleta, análise e correlação de dados"
+        },
+        {
+          "key": "E",
+          "text": "Permite o desenvolvimento em todo o ciclo de vida da API, desde o design e a documentação até o teste e a implantação"
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 13,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q057",
+      "number": 57,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Quanto às principais características técnicas dos bancos de dados relacionais e não-relacionais, analise as afirmativas a seguir e dê valores Verdadeiro (V) ou Falso (F).\n( ) Todos os bancos de dados relacionais representam dados em coleções de documentos JSON.\n( ) Basicamente os bancos de dados não-relacionais representam e armazenam dados em tabelas e linhas.\n( ) Tanto os bancos de dados relacionais, como os não-relacionais, utilizam como padrão o SQL como ferramenta de pesquisa.\nAssinale a alternativa que apresenta a sequência correta de cima para baixo.",
+      "options": [
+        {
+          "key": "A",
+          "text": "V - V - V"
+        },
+        {
+          "key": "B",
+          "text": "V - V - F"
+        },
+        {
+          "key": "C",
+          "text": "V - F - V"
+        },
+        {
+          "key": "D",
+          "text": "F - F - V"
+        },
+        {
+          "key": "E",
+          "text": "F - F - F"
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 13,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q058",
+      "number": 58,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Em relação às quatro dimensões do gerenciamento de serviços, abordadas no ITIL v4, temos:\n(1) Parceiros e Fornecedores.\n(2) Dados e Informação.\n(3) Fluxos de valor e Processos.\n(4) Organizações e Pessoas.\nDa relação apresentada:",
+      "options": [
+        {
+          "key": "A",
+          "text": "somente são aplicados o 1, 2 e 3"
+        },
+        {
+          "key": "B",
+          "text": "somente são aplicados o 1, 2 e 4"
+        },
+        {
+          "key": "C",
+          "text": "somente são aplicados o 2, 3 e 4"
+        },
+        {
+          "key": "D",
+          "text": "somente são aplicados o 1, 3 e 4"
+        },
+        {
+          "key": "E",
+          "text": "todos podem ser aplicados"
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 13,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q059",
+      "number": 59,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Conforme a Instrução Normativa SGD/ME nº 1/2019, quanto ao Processo de Contratação, as contratações de soluções de TIC devem seguir as seguintes fases:\n(A) Seleção do Fornecedor\n(B) Planejamento da Contratação\n(C) Gestão do Contrato\nOrdene essas fases na sequência definida pela Instrução Normativa (Fase I, Fase II e Fase III).",
+      "options": [
+        {
+          "key": "A",
+          "text": "A - B - C"
+        },
+        {
+          "key": "B",
+          "text": "B - C - A"
+        },
+        {
+          "key": "C",
+          "text": "C - A - B"
+        },
+        {
+          "key": "D",
+          "text": "B - A - C"
+        },
+        {
+          "key": "E",
+          "text": "A - C - B"
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 13,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "tjmg-2022-analista-ti-q060",
+      "number": 60,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Quanto aos conceitos básicos sobre Certificação Digital, analise as afirmativas a seguir.\nI. A assinatura digital, gerada pelos certificados digitais, dispensa a criptografia.\nII. Documentos assinados com certificado digital ainda não têm validade nacional.\nIII. O sistema utilizado é de um par de chaves criptográficas que nunca se repetem.\nIV. O certificado digital, tipo A3, é armazenado em token ou em smartcard.\nDas afirmativas:",
+      "options": [
+        {
+          "key": "A",
+          "text": "I e II são tecnicamente verdadeiras"
+        },
+        {
+          "key": "B",
+          "text": "II e III são tecnicamente verdadeiras"
+        },
+        {
+          "key": "C",
+          "text": "III e IV são tecnicamente verdadeiras"
+        },
+        {
+          "key": "D",
+          "text": "I e III são tecnicamente verdadeiras"
+        },
+        {
+          "key": "E",
+          "text": "II e IV são tecnicamente verdadeiras"
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 13,
+      "topic_ids": [],
+      "review": null
+    }
+  ]
+}

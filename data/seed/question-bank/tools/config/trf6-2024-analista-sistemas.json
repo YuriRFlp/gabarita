@@ -1,0 +1,189 @@
+{
+  "paper": {
+    "schema_version": "1.0",
+    "id": "trf6-2024-analista-sistemas",
+    "court_id": "trf6",
+    "court": "TRF-6 (MG)",
+    "justice_branch": "federal",
+    "state": "MG",
+    "year": 2024,
+    "applied_on": "2025-01-19",
+    "exam_board": "Cebraspe",
+    "notice": "Edital nº 1 – TRF da 6ª Região, de 10 de outubro de 2024",
+    "taxonomy_edition": true,
+    "level": "analista",
+    "position": "Analista Judiciário – Área Apoio Especializado",
+    "specialty": "Análise de Sistemas de Informação",
+    "position_code": "Cargo 3",
+    "booklets": [
+      {
+        "code": "034_TRF6_CG2_01",
+        "type": null,
+        "numbers": "1-50"
+      },
+      {
+        "code": "034_TRF6_003_01",
+        "type": null,
+        "numbers": "51-120"
+      }
+    ],
+    "format": "true_false",
+    "options_per_question": null,
+    "sections": [
+      {
+        "name": "Conhecimentos Gerais",
+        "numbers": "1-50"
+      },
+      {
+        "name": "Conhecimentos Específicos",
+        "numbers": "51-120"
+      }
+    ],
+    "answer_key": {
+      "status": "definitivo",
+      "published_on": null,
+      "note": "Gabaritos oficiais definitivos do Cebraspe; anulações justificadas no documento de alterações"
+    },
+    "essay": null,
+    "sources": [
+      {
+        "file": "034_TRF6_CG2_01.pdf",
+        "kind": "caderno",
+        "url": "https://cdn.cebraspe.org.br/concursos/TRF6_24/arquivos/034_TRF6_CG2_01.PDF"
+      },
+      {
+        "file": "034_TRF6_003_01.pdf",
+        "kind": "caderno",
+        "url": "https://cdn.cebraspe.org.br/concursos/TRF6_24/arquivos/034_TRF6_003_01.PDF"
+      },
+      {
+        "file": "GAB_DEFINITIVO_034_TRF6_CG2_01.pdf",
+        "kind": "gabarito",
+        "url": "https://cdn.cebraspe.org.br/concursos/trf6_24/arquivos/GAB_DEFINITIVO_034_TRF6_CG2_01.PDF"
+      },
+      {
+        "file": "GAB_DEFINITIVO_034_TRF6_003_01.pdf",
+        "kind": "gabarito",
+        "url": "https://cdn.cebraspe.org.br/concursos/trf6_24/arquivos/GAB_DEFINITIVO_034_TRF6_003_01.PDF"
+      },
+      {
+        "file": "TRF6_24_JUSTIFICATIVAS_DE_ALTERACOES_DE_GABARITO.pdf",
+        "kind": "recursos",
+        "url": "https://cdn.cebraspe.org.br/concursos/TRF6_24/arquivos/TRF6_24_JUSTIFICATIVAS_DE_ALTERAES_DE_GABARITO.PDF"
+      }
+    ],
+    "notes": [
+      "Itens de certo/errado: answer C = certo, E = errado",
+      "Disciplinas dos Conhecimentos Gerais atribuídas pela sequência de comandos do caderno; o caderno não imprime o nome das disciplinas",
+      "A prova discursiva não faz parte dos cadernos de objetivas e não foi transcrita"
+    ]
+  },
+  "parts": [
+    {
+      "parsed": "/home/claude/bank/work/trf6_cg2.json",
+      "answer_key": "/home/claude/provas/txt/e7c0422b-GAB_DEFINITIVO_034_TRF6_CG2_01.txt",
+      "english": [
+        9,
+        10
+      ],
+      "move_to_item": [
+        {
+          "stimulus": "s06",
+          "lines": 3,
+          "item": 25
+        }
+      ],
+      "sections": [
+        {
+          "from": 1,
+          "to": 12,
+          "section": "Conhecimentos Gerais",
+          "subject": "Língua Portuguesa"
+        },
+        {
+          "from": 13,
+          "to": 15,
+          "section": "Conhecimentos Gerais",
+          "subject": "Regime jurídico dos servidores e processo administrativo (Leis 8.112/1990 e 9.784/1999)"
+        },
+        {
+          "from": 16,
+          "to": 18,
+          "section": "Conhecimentos Gerais",
+          "subject": "Ética, improbidade e anticorrupção (Decreto 1.171/1994, Leis 8.429/1992 e 12.846/2013)"
+        },
+        {
+          "from": 19,
+          "to": 25,
+          "section": "Conhecimentos Gerais",
+          "subject": "Raciocínio analítico"
+        },
+        {
+          "from": 26,
+          "to": 29,
+          "section": "Conhecimentos Gerais",
+          "subject": "Direitos humanos e Agenda 2030"
+        },
+        {
+          "from": 30,
+          "to": 32,
+          "section": "Conhecimentos Gerais",
+          "subject": "Direitos das pessoas com deficiência"
+        },
+        {
+          "from": 33,
+          "to": 42,
+          "section": "Conhecimentos Gerais",
+          "subject": "Regimento Interno do TRF-6"
+        },
+        {
+          "from": 43,
+          "to": 50,
+          "section": "Conhecimentos Gerais",
+          "subject": "Língua Inglesa",
+          "language": "en"
+        }
+      ],
+      "status_notes": {
+        "29": "Deferido com anulação: a redação do item está ambígua, o que prejudicou seu julgamento objetivo.",
+        "32": "Deferido com anulação: o emprego do termo “dotação” prejudicou o julgamento objetivo do item."
+      }
+    },
+    {
+      "parsed": "/home/claude/bank/work/trf6_003.json",
+      "answer_key": "/home/claude/provas/txt/c83ec6e0-GAB_DEFINITIVO_034_TRF6_003_01.txt",
+      "move_to_item": [
+        {
+          "stimulus": "s11",
+          "lines": 2,
+          "item": 70
+        }
+      ],
+      "tables": [
+        69,
+        70,
+        111,
+        112
+      ],
+      "sections": [
+        {
+          "from": 51,
+          "to": 120,
+          "section": "Conhecimentos Específicos",
+          "subject": "Tecnologia da Informação"
+        }
+      ],
+      "status_notes": {
+        "55": "Deferido com anulação: o item possibilita mais de uma interpretação, o que prejudicou seu julgamento objetivo.",
+        "61": "Deferido com anulação: a redação do item está ambígua, o que prejudicou seu julgamento objetivo."
+      },
+      "review": {
+        "67": "Indentação do código Java não preservada na transcrição",
+        "73": "Indentação do YAML do texto-base reconstruída"
+      }
+    }
+  ],
+  "stimulus_overrides": {
+    "t06": "steps:\n  - name: Checkout code\n    uses: actions/checkout@v2"
+  }
+}

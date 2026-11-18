@@ -1,0 +1,2696 @@
+{
+  "schema_version": "1.0",
+  "id": "trt3-2022-analista-ti",
+  "court_id": "trt3",
+  "court": "TRT-3 (MG)",
+  "justice_branch": "trabalho",
+  "state": "MG",
+  "year": 2022,
+  "applied_on": null,
+  "exam_board": "Fumarc",
+  "notice": "Edital 01/2022 – TRT da 3ª Região",
+  "taxonomy_edition": true,
+  "level": "analista",
+  "position": "Analista Judiciário – Apoio Especializado",
+  "specialty": "Tecnologia da Informação",
+  "position_code": "Caderno 225",
+  "booklets": [
+    {
+      "code": "225",
+      "type": null,
+      "numbers": "1-60"
+    }
+  ],
+  "format": "multiple_choice",
+  "options_per_question": 5,
+  "sections": [
+    {
+      "name": "Prova objetiva",
+      "numbers": "1-60"
+    }
+  ],
+  "answer_key": {
+    "status": "preliminar",
+    "published_on": null,
+    "note": "Gabarito oficial divulgado após a prova; o gabarito pós-recursos não foi obtido. Nenhuma questão aparece anulada."
+  },
+  "essay": {
+    "type": "redação (texto dissertativo)",
+    "prompt": null,
+    "instructions": "Tema e textos motivadores não transcritos; ver o caderno, página 40"
+  },
+  "sources": [
+    {
+      "file": "TRT3_2022_caderno_225_analista_TI.pdf",
+      "kind": "caderno",
+      "url": "https://www.pciconcursos.com.br/provas/download/analista-judiciario-apoio-especializado-tecnologia-da-informacao-trt-3-fumarc-2022"
+    },
+    {
+      "file": "TRT3_2022_gabarito_oficial_analistas.pdf",
+      "kind": "gabarito_preliminar",
+      "url": "https://portal.trt3.jus.br/internet/conheca-o-trt/comunicacao/noticias-institucionais/downloads/links/gabarito_oficial_trt_3r_cargos_analista.pdf"
+    }
+  ],
+  "notes": [
+    "Data de aplicação não confirmada no material disponível",
+    "Hifens de translineação removidos automaticamente; decisões registradas em work/trt3-2022-analista-ti.hifens.txt"
+  ],
+  "stimuli": [
+    {
+      "id": "t01",
+      "title": "As palavras e as coisas – Antônio Prata",
+      "text": "Entre as sugestões que vieram da editora sobre meu novo livro, havia a de trocar \"índios\" por __\"indígenas\".__ Sempre fui um defensor do politicamente correto. Algumas mudanças na ética verbal, porém, me parecem contraproducentes.\nEm certo momento dos anos 90, \"favela\" virou \"comunidade\". \"Favelado\" era um termo pejorativo e é compreensível que os moradores destas áreas não quisessem ser chamados assim, mas mudar para \"morador de comunidade\", embora amacie na semântica, não leva água encanada, esgoto e luz para ninguém. Pelo contrário.\nA gente ouve \"comunidade\" e dá a impressão de que aquelas pessoas estão todas de mãos dadas fazendo uma ciranda em torno da horta orgânica, não apinhando-se em condições sub-humanas, sem esgoto, asfalto, educação, saúde.\nTalvez fosse bom deixarmos o incômodo nos tomar toda vez que disséssemos ou ouvíssemos \"favela\" ou \"favelados\". Nosso objetivo deveria ser dar condições de vida decente praquela gente, não nos sentirmos confortáveis ao mencioná-la.\nO mesmo vale para \"morador em situação de rua\". Parece que o cara teve um problema pra voltar pra casa numa terça, dormiu \"em situação de rua\" num ponto de ônibus e na quarta vai retornar ao conforto do lar. É mentira. A pessoa que mora na rua tá ferrada, é alguém que perdeu tudo na vida, até virar \"mendigo\".\n\"Mendigo\" é um termo horrível não porque as vogais e consoantes se juntem de forma deselegante, mas pelo que ele nomeia: gente que dorme na calçada, revira lixo pra comer, não tem sequer acesso a um banheiro. Mas quando a gente fala \"morador em situação de rua\" vem junto o mesmo morninho no coração de \"comunidade\": essa situação, pensamos, é temporária. Vai mudar. Logo, logo, ele estará em outra.\nNão, não estará se não nos indignarmos com a indigência e agirmos. Algumas palavras têm que doer, porque a realidade dói. Do contrário, a linguagem deixa de ser uma ferramenta que busca representar a vida como ela é e se torna um tapume nos impedindo de enxergá-la.\nSobre \"índios\" e \"indígenas\", li alguns textos. Os argumentos giram em torno do fato de \"índio\" ter se tornado um termo pejorativo, ligado aos preconceitos que os brancos sempre tiveram com os povos originários da América: preguiçosos, atrasados, primitivos.\nTá certo. Mas o problema, pensei, não tá no termo \"índio\", tá no preconceito do branco. Outro dia ouvi num podcast americano um escritor judeu indignado porque ele, que sempre chamou os de sua religião de \"jews\" (judeus), agora tinha que dizer \"jewish people\" (pessoas judias). Como se houvesse algo de errado em ser judeu, ele disse. Como se a mudança na nomenclatura incorporasse o preconceito, quando deveria ser justamente o contrário, feito os negros americanos dos anos 70 dizendo \"say it loud, I’m black and I’m proud!\" (\"diga alto, sou preto e tenho orgulho!\").\nEu estava errado. Fui salvo da ignorância por minha querida prima antropóloga, Florência Ferrari, e pelo mestre Sérgio Rodrigues. \"Indígena\" vem de \"endógeno\", aquele que pertence a um lugar. Ou seja: \"povos indígenas\" dão uma ideia da multiplicidade de etnias que aqui estavam. \"Índio\" é uma generalização preconceituosa, tipo \"paraíba\", no Rio, para se referir a qualquer nordestino ou nortista. Maravilha. Sai \"índio\". Entra \"indígena\". Viva a Paraíba.",
+      "source": "Disponível em: https://www1.folha.uol.com.br/colunas/antonioprata/2022/07/as-palavras-e-as-coisas.shtml (Adaptado) Acesso em: 22 set. 2022,",
+      "language": "pt"
+    },
+    {
+      "id": "t02",
+      "title": "Script SQL (tabelas EMPREGADOR, TRABALHADOR e CONTRATO)",
+      "text": "Considere o script abaixo da linguagem SQL para criação das tabelas **EMPREGADOR**, **TRABALHADOR** e **CONTRATO** em um banco de dados relacional para responder às questões de **31** a **34**:\n```sql\ncreate table EMPREGADOR (\n    id int NOT NULL,\n    nome_empregador varchar(200) NOT NULL,\n    cnpj char(14) NOT NULL,\n    telefone varchar(25) NULL\n    PRIMARY KEY (id),\n    UNIQUE (nome_empregador),\n    UNIQUE (cnpj)\n);\ncreate table TRABALHADOR (\n    id int NOT NULL,\n    nome_trabalhador varchar(200) NOT NULL,\n    cpf char(11) NOT NULL,\n    data_nascimento date NULL,\n    sexo_biologico char(1) NOT NULL,\n    PRIMARY KEY (id),\n    UNIQUE (cpf),\n    CHECK ( sexo_biologico in ('M','F') )\n);\ncreate table CONTRATO (\n    id int NOT NULL,\n    id_empregador int NOT NULL,\n    id_trabalhador int NOT NULL,\n    data_inicio datetime NOT NULL,\n    data_fim datetime NULL,\n    PRIMARY KEY (id),\n    UNIQUE (id_empregador, id_trabalhador, data_inicio),\n    FOREIGN KEY (id_empregador) REFERENCES EMPREGADOR (id),\n    FOREIGN KEY (id_trabalhador) REFERENCES TRABALHADOR (id)\n);\n```",
+      "source": null,
+      "language": "pt"
+    }
+  ],
+  "questions": [
+    {
+      "id": "trt3-2022-analista-ti-q001",
+      "number": 1,
+      "section": "Prova objetiva",
+      "subject": "Língua Portuguesa",
+      "stimulus_id": "t01",
+      "command": null,
+      "statement": "Sobre o gênero do texto, é **CORRETO** dizer que se trata de",
+      "options": [
+        {
+          "key": "A",
+          "text": "editorial."
+        },
+        {
+          "key": "B",
+          "text": "um artigo de opinião."
+        },
+        {
+          "key": "C",
+          "text": "um relato pessoal."
+        },
+        {
+          "key": "D",
+          "text": "um texto dissertativo-argumentativo."
+        },
+        {
+          "key": "E",
+          "text": "uma crônica."
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 5,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q002",
+      "number": 2,
+      "section": "Prova objetiva",
+      "subject": "Língua Portuguesa",
+      "stimulus_id": "t01",
+      "command": null,
+      "statement": "Sobre a constituição do texto, é correto afirmar, **EXCETO**:",
+      "options": [
+        {
+          "key": "A",
+          "text": "A ideia apresentada no primeiro parágrafo é defendida ao longo do desenvolvimento do texto"
+        },
+        {
+          "key": "B",
+          "text": "No 1º parágrafo, apresenta-se a tese que será desenvolvida ao longo do texto."
+        },
+        {
+          "key": "C",
+          "text": "No último parágrafo, a conclusão contradiz a ideia expressa no parágrafo anterior."
+        },
+        {
+          "key": "D",
+          "text": "O uso da 1ª pessoa do singular, em alguns trechos, é incorreto, pois perde-se a credibilidade na fala do locutor."
+        },
+        {
+          "key": "E",
+          "text": "Utiliza-se de uma linguagem informal, o que dá ao leitor a ideia de um bate-papo."
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 5,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q003",
+      "number": 3,
+      "section": "Prova objetiva",
+      "subject": "Língua Portuguesa",
+      "stimulus_id": "t01",
+      "command": null,
+      "statement": "Em todos os trechos, há interlocução, **EXCETO** em:",
+      "options": [
+        {
+          "key": "A",
+          "text": "“Como se a mudança na nomenclatura incorporasse o preconceito, quando deveria ser justamente o contrário [...].”"
+        },
+        {
+          "key": "B",
+          "text": "“Do contrário, a linguagem deixa de ser uma ferramenta que busca representar a vida como ela é e se torna um tapume nos impedindo de enxergá-la.”"
+        },
+        {
+          "key": "C",
+          "text": "“Mas quando a gente fala \"morador em situação de rua\" vem junto o mesmo morninho no coração de \"comunidade\" [...].”"
+        },
+        {
+          "key": "D",
+          "text": "“Não, não estará se não nos indignarmos com a indigência e agirmos.”"
+        },
+        {
+          "key": "E",
+          "text": "“Talvez fosse bom deixarmos o incômodo nos tomar toda vez que disséssemos ou ouvíssemos \"favela\" ou \"favelados\".”"
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 5,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q004",
+      "number": 4,
+      "section": "Prova objetiva",
+      "subject": "Língua Portuguesa",
+      "stimulus_id": "t01",
+      "command": null,
+      "statement": "As palavras destacadas foram corretamente interpretadas entre parênteses, **EXCETO** em:",
+      "options": [
+        {
+          "key": "A",
+          "text": "“[...] mas mudar para \"morador de comunidade\", embora amacie na **semântica**, não leva água encanada, esgoto e luz para ninguém.” (sentido das palavras)"
+        },
+        {
+          "key": "B",
+          "text": "“A gente ouve \"comunidade\" e dá a impressão de que aquelas pessoas estão todas de mãos dadas fazendo uma ciranda em torno da horta orgânica, não **apinhando**-se em condições sub-humanas.” (aglomerando-se)"
+        },
+        {
+          "key": "C",
+          "text": "“Como se a mudança na **nomenclatura** incorporasse o preconceito, quando deveria ser justamente o contrário” (vocabulário)"
+        },
+        {
+          "key": "D",
+          "text": "“Em certo momento dos anos 90, \"favela\" virou \"comunidade\". \"Favelado\" era um termo **pejorativo**.” (vulgar)"
+        },
+        {
+          "key": "E",
+          "text": "“Não, não estará se não nos indignarmos com a **indigência** e agirmos.” (miséria)"
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 6,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q005",
+      "number": 5,
+      "section": "Prova objetiva",
+      "subject": "Língua Portuguesa",
+      "stimulus_id": "t01",
+      "command": null,
+      "statement": "São sentimentos presentes no texto, **EXCETO**:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Desconforto."
+        },
+        {
+          "key": "B",
+          "text": "Determinação."
+        },
+        {
+          "key": "C",
+          "text": "Indignação."
+        },
+        {
+          "key": "D",
+          "text": "Ironia."
+        },
+        {
+          "key": "E",
+          "text": "Preconceito."
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 6,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q006",
+      "number": 6,
+      "section": "Prova objetiva",
+      "subject": "Língua Portuguesa",
+      "stimulus_id": "t01",
+      "command": null,
+      "statement": "O que motivou o locutor a escrever o texto foi",
+      "options": [
+        {
+          "key": "A",
+          "text": "a descoberta de que estava errado com relação à palavra índio, a qual também é uma generalização preconceituosa."
+        },
+        {
+          "key": "B",
+          "text": "a discussão gerada devido ao fato de ele usar a palavra índio em seu livro."
+        },
+        {
+          "key": "C",
+          "text": "a mudança ocorrida na língua devido às questões relacionadas à ética verbal."
+        },
+        {
+          "key": "D",
+          "text": "a não concordância com as mudanças ocorridas na língua devido à ética verbal."
+        },
+        {
+          "key": "E",
+          "text": "a vontade de iniciar uma discussão devido ao fato de não concordar com o politicamente correto na língua."
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 7,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q007",
+      "number": 7,
+      "section": "Prova objetiva",
+      "subject": "Língua Portuguesa",
+      "stimulus_id": "t01",
+      "command": null,
+      "statement": "Com base numa leitura global do texto, é possível fazer as seguintes afirmações, **EXCETO**:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ao afirmar que estava errado em relação ao uso da palavra índio, visto que é uma palavra preconceituosa, mostra-se que o autor não se envergonha de errar e faz disso um aprendizado para si e para os seus leitores."
+        },
+        {
+          "key": "B",
+          "text": "Ao afirmar que se não nos indignarmos com a indigência e agirmos, a linguagem deixa de ser uma ferramenta que busca representar a vida como ela é e se torna um tapume nos impedindo de enxergá-la, confirma-se a ideia de que trata o texto que é o combate ao preconceito."
+        },
+        {
+          "key": "C",
+          "text": "Ao constatar que errou ao usar a palavra índio e foi salvo de sua ignorância por uma prima antropóloga e por um mestre, o autor revela sua tranquilidade em admitir seus erros e corrigi-los em tempo hábil."
+        },
+        {
+          "key": "D",
+          "text": "Ao constatar que mudar para \"morador de comunidade\", embora amacie na semântica, não leva água encanada, esgoto e luz para ninguém, confirma-se a ideia de que algumas mudanças na ética verbal são contraproducentes."
+        },
+        {
+          "key": "E",
+          "text": "Ao se referir à palavra “mendigo\" como um termo horrível não porque as vogais e consoantes se juntem de forma deselegante, mas pelo que ele nomeia, mostra-se a indignação refletida na fala do autor."
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 7,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q008",
+      "number": 8,
+      "section": "Prova objetiva",
+      "subject": "Língua Portuguesa",
+      "stimulus_id": "t01",
+      "command": null,
+      "statement": "Há linguagem figurada em:",
+      "options": [
+        {
+          "key": "A",
+          "text": "“Algumas mudanças na ética verbal, porém, me parecem contraproducentes.”"
+        },
+        {
+          "key": "B",
+          "text": "“Algumas palavras têm que doer, porque a realidade dói.”"
+        },
+        {
+          "key": "C",
+          "text": "“Em certo momento dos anos 90, \"favela\" virou \"comunidade\"."
+        },
+        {
+          "key": "D",
+          "text": "“Mas o problema, pensei, não tá no termo \"índio\", tá no preconceito do branco.”"
+        },
+        {
+          "key": "E",
+          "text": "“O mesmo vale para \"morador em situação de rua\"."
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 8,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q009",
+      "number": 9,
+      "section": "Prova objetiva",
+      "subject": "Língua Portuguesa",
+      "stimulus_id": "t01",
+      "command": null,
+      "statement": "A ideia expressa pelos termos destacados está corretamente identificada entre parênteses, **EXCETO** em:",
+      "options": [
+        {
+          "key": "A",
+          "text": "“[...] mas mudar para \"morador de comunidade\", **embora** amacie na semântica, não leva água encanada, esgoto e luz para ninguém.” (finalidade)"
+        },
+        {
+          "key": "B",
+          "text": "“Algumas mudanças na ética verbal, **porém**, me parecem contraproducentes.” (oposição)"
+        },
+        {
+          "key": "C",
+          "text": "“Como se a mudança na nomenclatura incorporasse o preconceito, **quando** deveria ser justamente o contrário [...].” (tempo)"
+        },
+        {
+          "key": "D",
+          "text": "“Do contrário, a linguagem deixa de ser uma ferramenta que busca representar a vida **como** ela é e se torna um tapume nos impedindo de enxergá-la.” (comparação)"
+        },
+        {
+          "key": "E",
+          "text": "“Não, não estará **se** não nos indignarmos com a indigência e agirmos.” (condição)"
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 8,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q010",
+      "number": 10,
+      "section": "Prova objetiva",
+      "subject": "Língua Portuguesa",
+      "stimulus_id": "t01",
+      "command": null,
+      "statement": "Em: “Outro dia ouvi num podcast americano um escritor judeu indignado porque ele, que sempre chamou **os** de sua religião de \"jews\" (judeus) agora tinha que dizer \"jewish people\" (pessoas judias).”, **os** é:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Artigo definido."
+        },
+        {
+          "key": "B",
+          "text": "Artigo indefinido."
+        },
+        {
+          "key": "C",
+          "text": "Pronome demonstrativo."
+        },
+        {
+          "key": "D",
+          "text": "Pronome indefinido."
+        },
+        {
+          "key": "E",
+          "text": "Pronome pessoal do caso oblíquo."
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 9,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q011",
+      "number": 11,
+      "section": "Prova objetiva",
+      "subject": "Língua Portuguesa",
+      "stimulus_id": "t01",
+      "command": null,
+      "statement": "A posição do pronome oblíquo é **facultativa** em:",
+      "options": [
+        {
+          "key": "A",
+          "text": "\"Mendigo\" é um termo horrível não porque as vogais e consoantes **se** juntem de forma deselegante.”"
+        },
+        {
+          "key": "B",
+          "text": "“Do contrário, a linguagem deixa de ser uma ferramenta que busca representar a vida como ela é e **se** torna um tapume nos impedindo de enxergá-la.”"
+        },
+        {
+          "key": "C",
+          "text": "“Não, não estará se não **nos** indignarmos com a indigência e agirmos.”"
+        },
+        {
+          "key": "D",
+          "text": "“Nosso objetivo deveria ser dar condições de vida decente praquela gente, não **nos** sentirmos confortáveis ao mencioná-la.”"
+        },
+        {
+          "key": "E",
+          "text": "“Talvez fosse bom deixarmos o incômodo **nos** tomar toda vez que disséssemos ou ouvíssemos \"favela\" ou \"favelados [...].”"
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 9,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q012",
+      "number": 12,
+      "section": "Prova objetiva",
+      "subject": "Língua Portuguesa",
+      "stimulus_id": "t01",
+      "command": null,
+      "statement": "Em: “Talvez fosse bom deixarmos o incômodo nos tomar toda vez que **disséssemos** ou **ouvíssemos** \"favela\" ou \"favelados\", os verbos destacados estão flexionados no:",
+      "options": [
+        {
+          "key": "A",
+          "text": "futuro do pretérito do indicativo."
+        },
+        {
+          "key": "B",
+          "text": "futuro do subjuntivo."
+        },
+        {
+          "key": "C",
+          "text": "pretérito imperfeito do indicativo."
+        },
+        {
+          "key": "D",
+          "text": "pretérito imperfeito do subjuntivo."
+        },
+        {
+          "key": "E",
+          "text": "pretérito perfeito do indicativo."
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 9,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q013",
+      "number": 13,
+      "section": "Prova objetiva",
+      "subject": "Língua Portuguesa",
+      "stimulus_id": null,
+      "command": "Leia o texto abaixo para responder às questões **13** e **14**.",
+      "statement": "Observando o anúncio “Aluga-se quarto com banheiro a 8 quadras do centro” e a pergunta feita “Me interessa, mas não tem um com o banheiro mais perto?”, pode-se dizer, **EXCETO** que",
+      "options": [
+        {
+          "key": "A",
+          "text": "a intenção do anunciante foi anunciar um quarto com um banheiro e indicar onde o imóvel se localizava."
+        },
+        {
+          "key": "B",
+          "text": "o duplo sentido gerado pela frase gerou humor, já que é impossível haver um quarto com um banheiro tão distante."
+        },
+        {
+          "key": "C",
+          "text": "o fato de ser apenas um quarto no imóvel induz o leitor a pensar que o banheiro não era parte dele, pela distância sugerida na frase em questão."
+        },
+        {
+          "key": "D",
+          "text": "o humor do texto foi gerado pelo fato de alguém querer alugar um quarto como o descrito no anúncio."
+        },
+        {
+          "key": "E",
+          "text": "o leitor entendeu que o quarto tinha o banheiro em um lugar bem distante do local que seria o alugado."
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": true,
+      "figures": [
+        {
+          "file": "assets/trt3-2022-analista-ti-q013.png",
+          "description": "Foto da fachada de um prédio com o anúncio “Aluga-se quarto com banheiro a 8 quadras do centro.” e o comentário de um leitor: “Me interessa, mas não tem um com o banheiro mais perto?” (Fonte indicada na prova: https://www.instagram.com/p/CiTtyO-AabJ/, acesso em 23 set. 2022.)"
+        }
+      ],
+      "page": 10,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q014",
+      "number": 14,
+      "section": "Prova objetiva",
+      "subject": "Língua Portuguesa",
+      "stimulus_id": null,
+      "command": "Leia o texto abaixo para responder às questões **13** e **14**.",
+      "statement": "Sobre o anúncio: “Aluga-se quarto com banheiro a 8 quadras do centro.”, pode-se dizer que a duplicidade de sentido pode ser desfeita, **EXCETO**",
+      "options": [
+        {
+          "key": "A",
+          "text": "se colocarmos dois pontos após o termo “aluga-se”."
+        },
+        {
+          "key": "B",
+          "text": "se colocarmos vírgula após o termo “quarto com banheiro”."
+        },
+        {
+          "key": "C",
+          "text": "se colocarmos vírgulas intercalando o termo “com banheiro”"
+        },
+        {
+          "key": "D",
+          "text": "se colocarmos vírgulas intercalando o termo “quarto com banheiro”"
+        },
+        {
+          "key": "E",
+          "text": "se o termo “a 8 quadras do centro” vier no início da frase."
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": true,
+      "figures": [
+        {
+          "file": "assets/trt3-2022-analista-ti-q013.png",
+          "description": "Foto da fachada de um prédio com o anúncio “Aluga-se quarto com banheiro a 8 quadras do centro.” e o comentário de um leitor: “Me interessa, mas não tem um com o banheiro mais perto?” (Fonte indicada na prova: https://www.instagram.com/p/CiTtyO-AabJ/, acesso em 23 set. 2022.)"
+        }
+      ],
+      "page": 11,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q015",
+      "number": 15,
+      "section": "Prova objetiva",
+      "subject": "Língua Portuguesa",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "A crase é facultativa em:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ele escreve à Machado de Assis."
+        },
+        {
+          "key": "B",
+          "text": "Ele vendeu o apartamento à vista."
+        },
+        {
+          "key": "C",
+          "text": "Os rapazes saíram às pressas."
+        },
+        {
+          "key": "D",
+          "text": "Vou à casa de meu primo mais tarde."
+        },
+        {
+          "key": "E",
+          "text": "Voltaremos para casa até às 19 horas."
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 11,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q016",
+      "number": 16,
+      "section": "Prova objetiva",
+      "subject": "Noções de Informática",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Ao acessar a opção “Personalização” na janela “Configurações” do Microsoft Windows 10, versão português, é possível fazer várias configurações personalizadas referentes ao sistema operacional. Analise as afirmativas abaixo sobre as funcionalidades da opção “Personalização” da janela “Configurações” do Microsoft Windows 10:\nI – Na opção “Tela de fundo” é possível definir o modo “Apresentação de Slides” e selecionar uma pasta contendo imagens que se alternam em um intervalo de tempo.\nII – Na opção “Tela de bloqueio”, é possível escolher um aplicativo para mostrar o status detalhado na tela de bloqueio.\nIII – Na opção “Barra de Tarefas”, existe a opção para desativar a lista de aplicativos do “Menu Iniciar”.\nEstão **CORRETAS** as afirmativas:",
+      "options": [
+        {
+          "key": "A",
+          "text": "I, apenas."
+        },
+        {
+          "key": "B",
+          "text": "I e II, apenas."
+        },
+        {
+          "key": "C",
+          "text": "I e III, apenas."
+        },
+        {
+          "key": "D",
+          "text": "II e III, apenas."
+        },
+        {
+          "key": "E",
+          "text": "I, II e III."
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 12,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q017",
+      "number": 17,
+      "section": "Prova objetiva",
+      "subject": "Noções de Informática",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Em relação às opções disponíveis no menu “Apresentação de Slides” do LibreOffice Impress 7.1.6, versão português, correlacione as colunas a seguir:\nÍcone | Descrição\nI. [ícone] | ( ) Configurações da apresentação de slides...\nII. [ícone] | ( ) Iniciar do slide atual\nIII. [ícone] | ( ) Apresentação de slides personalizada...\nIV. [ícone] | ( ) Iniciar no primeiro slide\nA sequência **CORRETA**, de cima para baixo, é:",
+      "options": [
+        {
+          "key": "A",
+          "text": "I, II, IV, III."
+        },
+        {
+          "key": "B",
+          "text": "II, IV, III, I."
+        },
+        {
+          "key": "C",
+          "text": "III, II, I, IV."
+        },
+        {
+          "key": "D",
+          "text": "IV, II, I, III."
+        },
+        {
+          "key": "E",
+          "text": "IV, III, I, II."
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": true,
+      "has_code": false,
+      "has_figure": true,
+      "figures": [
+        {
+          "file": "assets/trt3-2022-analista-ti-q017.png",
+          "description": "Quadro com quatro ícones do menu Apresentação de Slides do LibreOffice Impress, numerados de I a IV, ao lado das quatro descrições a correlacionar."
+        }
+      ],
+      "page": 13,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q018",
+      "number": 18,
+      "section": "Prova objetiva",
+      "subject": "Noções de Informática",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "O LibreOffice Writer 7.1.6, versão português, permite criar malas diretas por meio da opção “Assistente de mala direta...”. Essa opção está disponível por padrão na lista de opções do menu:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Estilos."
+        },
+        {
+          "key": "B",
+          "text": "Inserir."
+        },
+        {
+          "key": "C",
+          "text": "Formatar."
+        },
+        {
+          "key": "D",
+          "text": "Formulário."
+        },
+        {
+          "key": "E",
+          "text": "Ferramentas."
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 13,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q019",
+      "number": 19,
+      "section": "Prova objetiva",
+      "subject": "Noções de Informática",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Considere o exemplo de planilha do LibreOffice Calc 7.1.6, versão português, abaixo com a célula **B1** selecionada. A opção **CORRETA** da fórmula contida na célula **B1**, que faz referência ao conteúdo da célula **A1**, que irá gerar o valor “**MG**” na célula **B1**, conforme exibido na figura é:",
+      "options": [
+        {
+          "key": "A",
+          "text": "=EXT.TEXTO(A1;PROCURAR(\", \"; A1);2)"
+        },
+        {
+          "key": "B",
+          "text": "=EXT.TEXTO(A1;PROCURAR(\", \"; A1)+2;0)"
+        },
+        {
+          "key": "C",
+          "text": "=EXT.TEXTO(A1;PROCURAR(\", \"; A1)+2;2)"
+        },
+        {
+          "key": "D",
+          "text": "=EXT.TEXTO(A1;PROCURAR(\"MG\"; A1);0)"
+        },
+        {
+          "key": "E",
+          "text": "=EXT.TEXTO(A1;PROCURAR(\"MG\"; A1)+2;2)"
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": true,
+      "has_figure": true,
+      "figures": [
+        {
+          "file": "assets/trt3-2022-analista-ti-q019.png",
+          "description": "Planilha do LibreOffice Calc: a célula A1 contém “Belo Horizonte, MG” e a célula B1, selecionada, exibe “MG”."
+        }
+      ],
+      "page": 14,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q020",
+      "number": 20,
+      "section": "Prova objetiva",
+      "subject": "Noções de Informática",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Analise as seguintes afirmativas sobre as opções de envio de e-mail da janela de “Nova mensagem” do Gmail, versão português:\nI – É possível inserir arquivos do Google Drive em uma mensagem.\nII – É possível programar o envio de uma mensagem para uma determinada data e hora.\nIII – É possível inserir uma assinatura predefinida em uma mensagem.\nEstá **CORRETO** o que se afirma em:",
+      "options": [
+        {
+          "key": "A",
+          "text": "I e II, apenas."
+        },
+        {
+          "key": "B",
+          "text": "I, II e III."
+        },
+        {
+          "key": "C",
+          "text": "II e III, apenas."
+        },
+        {
+          "key": "D",
+          "text": "I, apenas."
+        },
+        {
+          "key": "E",
+          "text": "I e III, apenas."
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 14,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q021",
+      "number": 21,
+      "section": "Prova objetiva",
+      "subject": "Legislação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Conforme a legislação brasileira, pessoa com deficiência pode ser considerada capaz?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Não, toda pessoa com deficiência é presumidamente incapaz."
+        },
+        {
+          "key": "B",
+          "text": "Sim, em igualdade de condições com as demais pessoas."
+        },
+        {
+          "key": "C",
+          "text": "Sim, mas apenas no que se refere ao trabalho."
+        },
+        {
+          "key": "D",
+          "text": "Sim, mas apenas para fins de saúde."
+        },
+        {
+          "key": "E",
+          "text": "Toda pessoa com deficiência somente pode exercer direitos por meio de curador."
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 15,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q022",
+      "number": 22,
+      "section": "Prova objetiva",
+      "subject": "Legislação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Na hipótese de servidor público usar de artifícios para dificultar o exercício regular de direito por qualquer pessoa, é **CORRETO** concluir que",
+      "options": [
+        {
+          "key": "A",
+          "text": "a conduta é ilícita, se resultar em dano material."
+        },
+        {
+          "key": "B",
+          "text": "não constitui ilícito, se o servidor atuou na esfera de sua competência."
+        },
+        {
+          "key": "C",
+          "text": "não constitui ilícito, se o servidor atuou sob ordem de outrem."
+        },
+        {
+          "key": "D",
+          "text": "o servidor deve ser demitido por ato imediato e sem direito de defesa."
+        },
+        {
+          "key": "E",
+          "text": "se trata de infração ética."
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 15,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q023",
+      "number": 23,
+      "section": "Prova objetiva",
+      "subject": "Legislação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Para os fins do Código de Ética do TRT3, **NÃO** se consideram presentes:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Bens imateriais."
+        },
+        {
+          "key": "B",
+          "text": "Bens materiais ou imateriais recebidos sem que tenham sido solicitados."
+        },
+        {
+          "key": "C",
+          "text": "Brindes que não tenham valor comercial."
+        },
+        {
+          "key": "D",
+          "text": "Itens de consumo."
+        },
+        {
+          "key": "E",
+          "text": "Valores em pecúnia."
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 15,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q024",
+      "number": 24,
+      "section": "Prova objetiva",
+      "subject": "Legislação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "A autoridade que tiver ciência de irregularidade praticada pelo servidor público do TRT3 que lhe seja subordinado estará obrigada a",
+      "options": [
+        {
+          "key": "A",
+          "text": "demitir imediatamente o servidor."
+        },
+        {
+          "key": "B",
+          "text": "determinar sua imediata apuração, por sindicância ou por processo administrativo disciplinar."
+        },
+        {
+          "key": "C",
+          "text": "emitir ofício dirigido ao Ministério Público."
+        },
+        {
+          "key": "D",
+          "text": "interrogar o servidor, bem como averiguar pessoalmente, por todos os meios, os fatos a serem apurados."
+        },
+        {
+          "key": "E",
+          "text": "oficiar a Presidência do Tribunal."
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 16,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q025",
+      "number": 25,
+      "section": "Prova objetiva",
+      "subject": "Legislação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "A prática de discriminação pelo servidor do TRT3, em razão de orientação sexual, constitui",
+      "options": [
+        {
+          "key": "A",
+          "text": "conduta irrelevante em face do regime disciplinar do servidor."
+        },
+        {
+          "key": "B",
+          "text": "conduta irrelevante."
+        },
+        {
+          "key": "C",
+          "text": "infração a compromisso ético."
+        },
+        {
+          "key": "D",
+          "text": "manifestação individual de convicção."
+        },
+        {
+          "key": "E",
+          "text": "matéria não prevista nas normas internas do Tribunal."
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 16,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q026",
+      "number": 26,
+      "section": "Prova objetiva",
+      "subject": "Noções de Direito",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "A liberdade de associação sindical, conforme a Constituição da República de 1988R,",
+      "options": [
+        {
+          "key": "A",
+          "text": "é livre apenas para a iniciativa privada."
+        },
+        {
+          "key": "B",
+          "text": "é livre."
+        },
+        {
+          "key": "C",
+          "text": "exige autorização estatal."
+        },
+        {
+          "key": "D",
+          "text": "exige autorização patronal."
+        },
+        {
+          "key": "E",
+          "text": "resulta na filiação obrigatória."
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 17,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q027",
+      "number": 27,
+      "section": "Prova objetiva",
+      "subject": "Noções de Direito",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Os direitos dos trabalhadores, elencados no Art. 7º da Constituição vigente, são de titularidade",
+      "options": [
+        {
+          "key": "A",
+          "text": "apenas dos trabalhadores que assim pactuarem em contratos formais."
+        },
+        {
+          "key": "B",
+          "text": "apenas dos trabalhadores urbanos, exceto os domésticos."
+        },
+        {
+          "key": "C",
+          "text": "apenas dos trabalhadores urbanos."
+        },
+        {
+          "key": "D",
+          "text": "dos trabalhadores urbanos e rurais, exceto os trabalhadores domésticos."
+        },
+        {
+          "key": "E",
+          "text": "dos trabalhadores urbanos e rurais."
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 17,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q028",
+      "number": 28,
+      "section": "Prova objetiva",
+      "subject": "Noções de Direito",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "A inviolabilidade de domicílio, garantida pela Constituição vigente, proíbe:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ingresso forçado sem ordem judicial ou decisão policial."
+        },
+        {
+          "key": "B",
+          "text": "Ingresso forçado sem ordem ordem judicial."
+        },
+        {
+          "key": "C",
+          "text": "O ingresso forçado em qualquer hipótese."
+        },
+        {
+          "key": "D",
+          "text": "O ingresso sem consentimento do morador, ainda que seja para prestar socorro."
+        },
+        {
+          "key": "E",
+          "text": "O morador de impedir a entrada de autoridade em geral."
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 17,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q029",
+      "number": 29,
+      "section": "Prova objetiva",
+      "subject": "Noções de Direito",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "O servidor estável só perderá o cargo em virtude de:",
+      "options": [
+        {
+          "key": "A",
+          "text": "apenas por processo administrativo disciplinar."
+        },
+        {
+          "key": "B",
+          "text": "apenas por sentença judicial transitada em julgado."
+        },
+        {
+          "key": "C",
+          "text": "decisão unilateral do seu superior hierárquico."
+        },
+        {
+          "key": "D",
+          "text": "sentença judicial transitada em julgado ou de processo administrativo disciplinar com direito de defesa."
+        },
+        {
+          "key": "E",
+          "text": "sentença judicial transitada em julgado ou de processo administrativo disciplinar, independente do direito de defesa."
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 18,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q030",
+      "number": 30,
+      "section": "Prova objetiva",
+      "subject": "Noções de Direito",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "O servidor público que causar dano a terceiro, no exercício das suas funções, causa a seguinte consequência:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Dever do Estado de responder pelos danos."
+        },
+        {
+          "key": "B",
+          "text": "Dever do servidor de indenizar a vítima e comprovar o pagamento junto ao Estado."
+        },
+        {
+          "key": "C",
+          "text": "Obrigação do Estado de indenizar a vítima, sem possibilidade de consequências para o próprio servidor."
+        },
+        {
+          "key": "D",
+          "text": "Responsabilidade civil, mas sem possibilidade de responsabilidade disciplinar do servidor."
+        },
+        {
+          "key": "E",
+          "text": "Responsabilidade disciplinar do próprio servidor, independente de sua culpa."
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 18,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q031",
+      "number": 31,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": "t02",
+      "command": null,
+      "statement": "A alternativa na qual a sentença SQL irá atualizar a coluna “data_fim” da tabela CONTRATO para o valor “20220901” para os contratos ainda não encerrados, isto é, nos quais a “data_fim” é nula, e que são referentes a trabalhadores da tabela TRABALHADOR cujo “sexo_biologico” é igual a “M” é:",
+      "options": [
+        {
+          "key": "A",
+          "text": "UPDATE c SET data_fim='20220901' FROM CONTRATO as c\nINNER JOIN TRABALHADOR as t ON c.id_trabalhador = t.id\nWHERE t.sexo_biologico = 'M' AND c.data_fim IS NULL;"
+        },
+        {
+          "key": "B",
+          "text": "UPDATE c SET data_fim='20220901' FROM CONTRATO as c\nINNER JOIN TRABALHADOR as t ON c.id_trabalhador = t.id\nWHERE t.sexo_biologico = 'M';"
+        },
+        {
+          "key": "C",
+          "text": "UPDATE c SET data_fim='20220901' FROM CONTRATO as c\nINNER JOIN TRABALHADOR as t ON c.id_trabalhador = t.id\nWHERE t.sexo_biologico = 'M' AND c.data_fim = NULL;"
+        },
+        {
+          "key": "D",
+          "text": "UPDATE c SET data_fim='20220901' FROM CONTRATO as c\nWHERE c.id IN (SELECT t.id FROM TRABALHADOR as t\nWHERE t.sexo_biologico = 'M') AND c.data_fim IS NULL;"
+        },
+        {
+          "key": "E",
+          "text": "UPDATE c SET data_fim='20220901' FROM CONTRATO as c\nWHERE c.id_trabalhador IN (SELECT t.id FROM TRABALHADOR as t\nWHERE t.sexo_biologico = 'M') AND c.data_fim = NULL;"
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": true,
+      "has_figure": false,
+      "figures": [],
+      "page": 20,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q032",
+      "number": 32,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": "t02",
+      "command": null,
+      "statement": "A alternativa na qual a sentença SQL irá excluir os trabalhadores da tabela TRABALHADOR para os quais não há contratos cadastrados na tabela CONTRATO é:",
+      "options": [
+        {
+          "key": "A",
+          "text": "DELETE FROM TRABALHADOR WHERE id NOT EXISTS\n(SELECT c.id_trabalhador FROM CONTRATO as c);"
+        },
+        {
+          "key": "B",
+          "text": "DELETE FROM TRABALHADOR WHERE NOT EXISTS\n(SELECT 1 FROM CONTRATO as c WHERE c.id_trabalhador = TRABALHADOR.id);"
+        },
+        {
+          "key": "C",
+          "text": "DELETE FROM TRABALHADOR WHERE NOT EXISTS\n(SELECT 1 FROM CONTRATO as c WHERE c.id_trabalhador = t.id);"
+        },
+        {
+          "key": "D",
+          "text": "DELETE FROM TRABALHADOR WHERE NOT EXISTS\n(SELECT 1 FROM CONTRATO as c WHERE c.id = TRABALHADOR.id);"
+        },
+        {
+          "key": "E",
+          "text": "DELETE FROM TRABALHADOR WHERE NOT IN\n(SELECT 1 FROM CONTRATO as c WHERE c.id_trabalhador = TRABALHADOR.id);"
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": true,
+      "has_figure": false,
+      "figures": [],
+      "page": 20,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q033",
+      "number": 33,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": "t02",
+      "command": null,
+      "statement": "Escolha a sentença SQL que **MELHOR** responda à consulta “Listar o nome de todos os empregadores da tabela EMPREGADOR e o total de contratos cadastrados na tabela CONTRATO para cada um. Empregadores sem contratos cadastrados devem aparecer com total igual a zero**.**”:",
+      "options": [
+        {
+          "key": "A",
+          "text": "SELECT e.nome_empregador, COUNT(*) as total\nFROM EMPREGADOR as e LEFT JOIN CONTRATO as c ON e.id = c.id\nGROUP BY e.nome_empregador;"
+        },
+        {
+          "key": "B",
+          "text": "SELECT e.nome_empregador, COUNT(c.id) as total\nFROM EMPREGADOR as e LEFT JOIN CONTRATO as c ON e.id =\nc.id_empregador\nWHERE c.id_empregador <> NULL\nGROUP BY e.nome_empregador;"
+        },
+        {
+          "key": "C",
+          "text": "SELECT e.nome_empregador, COUNT(c.id) as total\nFROM EMPREGADOR as e LEFT JOIN CONTRATO as c ON e.id =\nc.id_empregador\nGROUP BY e.nome_empregador;"
+        },
+        {
+          "key": "D",
+          "text": "SELECT e.nome_empregador, COUNT(c.id) as total\nFROM EMPREGADOR as e RIGHT JOIN CONTRATO as c ON e.id =\nc.id_empregador\nGROUP BY e.nome_empregador;"
+        },
+        {
+          "key": "E",
+          "text": "SELECT e.nome_empregador, COUNT(c.id) as total FROM EMPREGADOR as e\nINNER JOIN CONTRATO as c ON e.id = c.id_empregador\nGROUP BY e.nome_empregador;"
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": true,
+      "has_figure": false,
+      "figures": [],
+      "page": 21,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q034",
+      "number": 34,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": "t02",
+      "command": null,
+      "statement": "Escolha a sentença SQL que **MELHOR** responda à consulta “Listar o nome dos trabalhadores da tabela TRABALHADOR que não possuem contratos cadastrados na tabela CONTRATO**.**”:",
+      "options": [
+        {
+          "key": "A",
+          "text": "SELECT t.nome_trabalhador FROM TRABALHADOR as t\nINNER JOIN CONTRATO as c ON t.id = c.id_trabalhador\nWHERE c.id IS NULL;"
+        },
+        {
+          "key": "B",
+          "text": "SELECT t.nome_trabalhador FROM TRABALHADOR as t\nLEFT JOIN CONTRATO as c ON t.id = c.id_trabalhador\nWHERE c.id <> NULL;"
+        },
+        {
+          "key": "C",
+          "text": "SELECT t.nome_trabalhador FROM TRABALHADOR as t\nWHERE t.id NOT IN (SELECT id FROM CONTRATO);"
+        },
+        {
+          "key": "D",
+          "text": "SELECT t.nome_trabalhador FROM TRABALHADOR as t\nLEFT JOIN CONTRATO as c ON t.id = c.id_trabalhador\nWHERE c.id IS NULL;"
+        },
+        {
+          "key": "E",
+          "text": "SELECT t.nome_trabalhador FROM TRABALHADOR as t\nWHERE t.id NOT IN (SELECT * FROM CONTRATO);"
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": true,
+      "has_figure": false,
+      "figures": [],
+      "page": 22,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q035",
+      "number": 35,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Considere o modelo dimensional de um data warehouse a seguir: Analise as afirmativas referentes aos conceitos e definições de modelo dimensional e data warehouse:\nI – As tabelas PRODUTO, TEMPO e LOJA representam dimensões e a tabela VENDAS é uma tabela fato.\nII – O modelo dimensional apresentado é um modelo do tipo flocos de neve (snowflake schema).\nIII – No modelo dimensional do tipo estrela (star schema), geralmente as dimensões estão normalizadas e não há redundância de dados.\nEstá **CORRETO** o que se afirma em:",
+      "options": [
+        {
+          "key": "A",
+          "text": "I, apenas."
+        },
+        {
+          "key": "B",
+          "text": "I e II, apenas."
+        },
+        {
+          "key": "C",
+          "text": "I e III, apenas."
+        },
+        {
+          "key": "D",
+          "text": "II e III, apenas."
+        },
+        {
+          "key": "E",
+          "text": "I, II e III."
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": true,
+      "figures": [
+        {
+          "file": "assets/trt3-2022-analista-ti-q035.png",
+          "description": "Modelo dimensional com a tabela VENDAS (PK ID_produto, ID_loja, ID_tempo; quantidade_vendida, valor_vendido) ligada às tabelas PRODUTO (ID_produto, nome_produto, categoria_produto, fabricante_produto), LOJA (ID_loja, nome_loja, cidade, UF, regiao, pais) e TEMPO (ID_tempo, data, dia, mes, ano, semestre)."
+        }
+      ],
+      "page": 23,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q036",
+      "number": 36,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Considere o trecho de código abaixo escrito na linguagem Python 3.x sobre modelos preditivos de classificação usando a biblioteca scikit-learn (sklearn):\n```python\n# CÓDIGO PYTHON\nfrom sklearn import tree\nX = [[0, 0, 0], [1, 1, 1], [0, 0, 1], [1, 1, 0] ]\ny = [0, 1, 0, 1]\nclf = tree.DecisionTreeClassifier()\n\n# inserir o código que irá construir/treinar o modelo classificador\n```\nAssinale a alternativa **CORRETA** que corresponde à linha de código que irá construir um classificador (estimador) baseado em árvores de decisão a partir do conjunto de dados de treinamento:",
+      "options": [
+        {
+          "key": "A",
+          "text": "clf.classifier(X, y)"
+        },
+        {
+          "key": "B",
+          "text": "clf.estimate(X, y)"
+        },
+        {
+          "key": "C",
+          "text": "clf.fit(X, y)"
+        },
+        {
+          "key": "D",
+          "text": "clf.predict(X, y)"
+        },
+        {
+          "key": "E",
+          "text": "clf.train(X, y)"
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": true,
+      "has_figure": false,
+      "figures": [],
+      "page": 24,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q037",
+      "number": 37,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Considere a página HTML renderizada por um navegador web e o código fonte HTML5/CSS3 a seguir:\nCÓDIGO FONTE:\n```html\n<!DOCTYPE html><html>\n<................>\n<body><table>\n<tr><th>Nome</th><th>Idade</th></tr>\n<tr><td>Ze</td><td>23</td></tr>\n<tr><td>Maria</td><td>26</td></tr>\n</table></body></html>\n```\nPÁGINA HTML RENDERIZADA: ver figura.\nAssinale a alternativa **CORRETA** com o código HTML5/CSS3 que irá substituir o trecho “<................>” do código fonte para gerar a página HTML renderizada:",
+      "options": [
+        {
+          "key": "A",
+          "text": "<head><style>\ntable, th, td {\n    border: 1px solid black;\n    border-radius: 10px;\n    width: 200px;\n}\n</style></head>"
+        },
+        {
+          "key": "B",
+          "text": "<head><style>\ntable, th, td {\n    border: 1px solid black;\n    border-radius: 10px;\n}\n</style></head>"
+        },
+        {
+          "key": "C",
+          "text": "<head><style>\ntable, th, td {\n    border: 1px solid black;\n    border-radius: 10px;\n    width: 200%;\n}\n</style></head>"
+        },
+        {
+          "key": "D",
+          "text": "<head><style>\ntable, th, td {\n    border: 1px solid black;\n    width: 200%;\n}\n</style></head>"
+        },
+        {
+          "key": "E",
+          "text": "<head><style>\ntable, th, td {\n    border: 1px solid black;\n    border-radius: rounded;\n}\n</style></head>"
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": true,
+      "has_figure": true,
+      "figures": [
+        {
+          "file": "assets/trt3-2022-analista-ti-q037.png",
+          "description": "Página renderizada: tabela com cabeçalho Nome | Idade e as linhas Ze | 23 e Maria | 26; a tabela e cada célula têm borda preta fina com cantos arredondados."
+        }
+      ],
+      "page": 24,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q038",
+      "number": 38,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Considere o trecho de código abaixo escrito na linguagem Python 3.x e a saída desejada a seguir:\nCÓDIGO PYTHON:\n```python\nitens = ['item1', 'item2', 'item3']\nprecos = [3.50, 4.0, 5.80]\n\n# código para gerar o dicionario produtos\n.................\n# fim do código\n\nprint(produtos)\n```\nSAÍDA DESEJADA:\n```\n{'item1': 3.5,\n 'item2': 4.0,\n 'item3': 5.8}\n```\nAssinale a alternativa que irá substituir o trecho “.................” com o código Python que irá executar corretamente para produzir a saída desejada:",
+      "options": [
+        {
+          "key": "A",
+          "text": "produtos = {}\nfor x in itens:\n    for y in precos:\n        produtos[x] = y"
+        },
+        {
+          "key": "B",
+          "text": "produtos = {}\nfor x in itens:\n    for y in precos:\n        produtos.update( { x : y })"
+        },
+        {
+          "key": "C",
+          "text": "produtos = {}\nfor x,y in zip(itens,precos):\n    produtos.add(x[y])"
+        },
+        {
+          "key": "D",
+          "text": "produtos = { x:y for x,y in zip(itens,precos) }"
+        },
+        {
+          "key": "E",
+          "text": "produtos = {}\nfor x,y in zip(itens,precos):\n    produtos[y] = x"
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": true,
+      "has_figure": false,
+      "figures": [],
+      "page": 26,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q039",
+      "number": 39,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Considere que a mensagem de erro em inglês técnico “Transaction (Process ID XX) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction.” foi recebida por um usuário de uma aplicação, cujo banco de dados é o Microsoft SQL Server. De acordo com esta mensagem, assinale a opção que **MELHOR** explica o significado da mensagem:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Uma transação entrou em deadlock (impasse) ao bloquear recursos com outro processo e foi escolhida como a vítima do deadlock. A transação será executada novamente de forma automática."
+        },
+        {
+          "key": "B",
+          "text": "Uma transação entrou em deadlock (impasse) ao bloquear recursos com outro processo e foi escolhida como a vítima do deadlock. Execute a transação novamente."
+        },
+        {
+          "key": "C",
+          "text": "Uma transação foi bloqueada por outro processo que rodava uma transação de deadlock (impasse) e foi escolhida como a vítima deste processo. Execute a transação novamente."
+        },
+        {
+          "key": "D",
+          "text": "Uma transação foi bloqueada por outro processo que rodava uma transação de deadlock (impasse) e foi escolhida como a vítima deste processo. A transação será executada novamente de forma automática."
+        },
+        {
+          "key": "E",
+          "text": "Uma transação foi bloqueada por recursos de deadlock (impasse) com outro processo e foi escolhida como a vítima dos bloqueios. A transação será executada novamente de forma automática."
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 27,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q040",
+      "number": 40,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Analise as afirmativas referentes aos conceitos definidos no Art. 5º da Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709, de 14 de agosto de 2018):\nI – **Operador**: pessoa natural a quem se referem os dados pessoais que são objeto de tratamento.\nII – **Controlador**: pessoa natural ou jurídica, de direito público ou privado, a quem competem as decisões referentes ao tratamento de dados pessoais.\nIII – **Encarregado**: pessoa natural ou jurídica, de direito público ou privado, que realiza o tratamento de dados pessoais em nome do controlador.\nEstá **CORRETO** o que se afirma em:",
+      "options": [
+        {
+          "key": "A",
+          "text": "I e II, apenas."
+        },
+        {
+          "key": "B",
+          "text": "I e III, apenas."
+        },
+        {
+          "key": "C",
+          "text": "II, apenas."
+        },
+        {
+          "key": "D",
+          "text": "II e III, apenas."
+        },
+        {
+          "key": "E",
+          "text": "I, II e III."
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 27,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q041",
+      "number": 41,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Considere a figura abaixo com a saída de um comando do sistema operacional GNU/Linux. No sistema operacional GNU/Linux, o comando **CORRETO** que exibe o espaço livre/ocupado em MB, KB, GB de cada partição, como no exemplo da figura é:",
+      "options": [
+        {
+          "key": "A",
+          "text": "df -h"
+        },
+        {
+          "key": "B",
+          "text": "df"
+        },
+        {
+          "key": "C",
+          "text": "df -l"
+        },
+        {
+          "key": "D",
+          "text": "ls -size"
+        },
+        {
+          "key": "E",
+          "text": "mount -size"
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": true,
+      "figures": [
+        {
+          "file": "assets/trt3-2022-analista-ti-q041.png",
+          "description": "Saída de terminal com as colunas Filesystem, Size, Used, Available, Use% e Mounted on: /dev/root 4.9G 2.3G 2.6G 47% /; devtmpfs 91.3M 0 91.3M 0% /dev; tmpfs 91.4M 4.0K 91.4M 0% /run; none 91.4M 0 91.4M 0% /dev/shm."
+        }
+      ],
+      "page": 28,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q042",
+      "number": 42,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Em relação aos conceitos relacionados a processos em Sistemas Operacionais, considere o seguinte diagrama de estados, mostrando os três estados nos quais um processo pode se encontrar. De acordo com o diagrama, analise as afirmativas a seguir:\nI – Um processo pode estar nos estados “Em execução”, “Bloqueado” e “Pronto”.\nII – A transição de número “2” ocorre quando o escalonador decide que o processo em execução foi executado por tempo suficiente e é o momento de deixar outro processo ter algum tempo de CPU.\nIII – A transição de número “4” ocorre quando o escalonador escolhe o processo que estava bloqueado para chegar à CPU e ser executado novamente.\nEstá **CORRETO** o que se afirma em:",
+      "options": [
+        {
+          "key": "A",
+          "text": "I, apenas."
+        },
+        {
+          "key": "B",
+          "text": "I e II, apenas."
+        },
+        {
+          "key": "C",
+          "text": "I e III, apenas."
+        },
+        {
+          "key": "D",
+          "text": "II e III, apenas."
+        },
+        {
+          "key": "E",
+          "text": "I, II e III."
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": true,
+      "figures": [
+        {
+          "file": "assets/trt3-2022-analista-ti-q042.png",
+          "description": "Diagrama de estados de processo: Em execução → Bloqueado (1); Em execução → Pronto (2); Pronto → Em execução (3); Bloqueado → Pronto (4)."
+        }
+      ],
+      "page": 28,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q043",
+      "number": 43,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Analise as afirmativas a seguir referentes aos sistemas de arquivos journaling:\nI – A ideia de um sistema de arquivos journaling é manter um diário (registro) das operações que o sistema de arquivos deve realizar, antes mesmo de se iniciar a execução da operação.\nII – Para que as informações registradas no diário possam ser usadas em caso de falhas, é necessário que as entradas do diário tenham sido gravadas em disco, antes de se iniciar a execução das operações.\nIII – Os sistemas de arquivos NTFS da Microsoft e Linux ext3 são exemplos de sistemas de arquivos que usam journaling.\nEstá **CORRETO** o que se afirma em:",
+      "options": [
+        {
+          "key": "A",
+          "text": "I e II, apenas."
+        },
+        {
+          "key": "B",
+          "text": "I e III, apenas."
+        },
+        {
+          "key": "C",
+          "text": "II e III, apenas."
+        },
+        {
+          "key": "D",
+          "text": "III, apenas."
+        },
+        {
+          "key": "E",
+          "text": "I, II e III."
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 30,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q044",
+      "number": 44,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Analise as afirmativas a seguir referentes a JSON Web Tokens (JWT):\nI – JSON Web Token, é um padrão para autenticação e troca de informações, definido pela RFC7519, baseado em JSON.\nII – Um token JWT possui 3 partes separadas por pontos na seguinte ordem: header.signature.payload.\nIII – O elemento payload é composto pela codificação dos elementos header e signature, somado a uma palavra-chave.\nEstá **CORRETO** o que se afirma em:",
+      "options": [
+        {
+          "key": "A",
+          "text": "I, apenas."
+        },
+        {
+          "key": "B",
+          "text": "I e II, apenas."
+        },
+        {
+          "key": "C",
+          "text": "I e III, apenas."
+        },
+        {
+          "key": "D",
+          "text": "II e III, apenas."
+        },
+        {
+          "key": "E",
+          "text": "I, II e III."
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 30,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q045",
+      "number": 45,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "De acordo com o Art. 9° da Resolução N° 468 de 15 de julho de 2022, que dispõe sobre diretrizes para as contratações de Solução de Tecnologia da Informação e Comunicação (STIC) pelos órgãos submetidos ao controle administrativo e financeiro do Conselho Nacional de Justiça, é vedado nas contratações de STIC, **EXCETO**:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Definir uma equipe de planejamento da contratação, formalmente designada pela autoridade competente."
+        },
+        {
+          "key": "B",
+          "text": "Demandar a execução de serviços ou tarefas estranhas ao objeto da contratação, mesmo que haja anuência do preposto ou da própria contratada."
+        },
+        {
+          "key": "C",
+          "text": "Estabelecer vínculo de subordinação com funcionários da empresa contratada."
+        },
+        {
+          "key": "D",
+          "text": "Indicar pessoas para compor o quadro funcional da empresa contratada."
+        },
+        {
+          "key": "E",
+          "text": "Prever exigências em edital que constituam intervenção indevida da Administração na gestão interna dos fornecedores."
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 31,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q046",
+      "number": 46,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "A biblioteca utilizada na Arquitetura de Desenvolvimento da Plataforma Digital do Poder Judiciário (PDPJ-Br) que permite auditar classes persistentes através do controle de versões em mapeamentos de objetos relacionais, pela qual é criada uma tabela versionada no banco de dados para cada entidade mapeada auditada contendo todo o histórico das alterações efetuadas sobre aquela entidade é a:",
+      "options": [
+        {
+          "key": "A",
+          "text": "AOP."
+        },
+        {
+          "key": "B",
+          "text": "H2 Database."
+        },
+        {
+          "key": "C",
+          "text": "Hibernate Envers."
+        },
+        {
+          "key": "D",
+          "text": "Micrometer."
+        },
+        {
+          "key": "E",
+          "text": "Security."
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 31,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q047",
+      "number": 47,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Analise o seguinte trecho de código escrito na linguagem de programação Java:\n```java\npublic class Variavel {\n    String str;\n    static String s = \"abc\";\n    public Variavel (String s) {\n        s = \"-\";\n        str = s;\n    }\n    public static void main (String [] args){\n        Variavel v = new Variavel(\"def\");\n        String s = \"ghi\";\n        s = v.str;\n        System.out.println(v.s);\n    }\n}\n```\nA saída **CORRETA**, após a execução do código, é:",
+      "options": [
+        {
+          "key": "A",
+          "text": "abc"
+        },
+        {
+          "key": "B",
+          "text": "def"
+        },
+        {
+          "key": "C",
+          "text": "ghi"
+        },
+        {
+          "key": "D",
+          "text": "-"
+        },
+        {
+          "key": "E",
+          "text": "Não haverá nenhuma saída"
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 32,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q048",
+      "number": 48,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Analise as afirmativas sobre as tecnologias utilizadas na Arquitetura de Desenvolvimento da Plataforma Digital do Poder Judiciário (PDPJ-Br).\nI – Flyway é uma ferramenta para organização de scripts SQL que são executados no banco de dados, funcionando como um controle de versão do mesmo.\nII – MapStruct é um gerador de código para a implementação de mapeamento entre tipos de beans java.\nIII – Keycloak é uma linguagem de descrição de interface para descrever APIs RESTful expressas usando JSON.\nEstá **CORRETO** o que se afirma em:",
+      "options": [
+        {
+          "key": "A",
+          "text": "I, apenas."
+        },
+        {
+          "key": "B",
+          "text": "I e II, apenas."
+        },
+        {
+          "key": "C",
+          "text": "I e III, apenas."
+        },
+        {
+          "key": "D",
+          "text": "II e III, apenas."
+        },
+        {
+          "key": "E",
+          "text": "I, II e III."
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 33,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q049",
+      "number": 49,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Analise as afirmativas a seguir sobre tecnologias utilizadas para monitoramento de ambientes tecnológicos.\nI – Prometheus é um banco de dados de série temporal dimensional que extrai métricas de instâncias de aplicativos periodicamente com base na descoberta de serviço.\nII – Kibana é uma ferramenta de visualização e exploração de dados usada para log e análise de séries temporais, monitoramento de aplicações e casos de uso de inteligência operacional.\nIII – Elasticsearch é um coletor de dados de código aberto que unifica coleções de dados para uma melhor compreensão dos dados e foi escrito na linguagem de programação Ruby.\nEstá **CORRETO** o que se afirma em:",
+      "options": [
+        {
+          "key": "A",
+          "text": "I, II e III."
+        },
+        {
+          "key": "B",
+          "text": "I, apenas."
+        },
+        {
+          "key": "C",
+          "text": "I e II, apenas."
+        },
+        {
+          "key": "D",
+          "text": "I e III, apenas."
+        },
+        {
+          "key": "E",
+          "text": "II e III, apenas."
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 33,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q050",
+      "number": 50,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Analise as afirmativas referentes aos conceitos e ferramentas de testes de software:\nI – O Mockito é um framework de teste de código aberto para Java que permite instanciar classes e controlar o comportamento dos métodos.\nII – Teste de integração é um teste de validação no ambiente de produção dos usuários para identificar problemas antes de uma implantação.\nIII – Testes unitários verificam se as menores partes testáveis de um software estão funcionando corretamente.\nEstão **CORRETAS** as afirmativas:",
+      "options": [
+        {
+          "key": "A",
+          "text": "I e II, apenas."
+        },
+        {
+          "key": "B",
+          "text": "I e III, apenas."
+        },
+        {
+          "key": "C",
+          "text": "II e III, apenas."
+        },
+        {
+          "key": "D",
+          "text": "III, apenas."
+        },
+        {
+          "key": "E",
+          "text": "I, II e III."
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 34,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q051",
+      "number": 51,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Servidor web Java que pode ser considerado um container de Servlets, que suporta tecnologias tais como JSP, Servlets, JSTL, JSF e que não é compatível com a especificação Java EE:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Java Server."
+        },
+        {
+          "key": "B",
+          "text": "JBoss."
+        },
+        {
+          "key": "C",
+          "text": "JUnit."
+        },
+        {
+          "key": "D",
+          "text": "Tomcat."
+        },
+        {
+          "key": "E",
+          "text": "WildFly."
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 34,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q052",
+      "number": 52,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Analise as seguintes afirmativas sobre serviços e funcionalidades do sistema operacional Microsoft Windows:\nI – O serviço WSUS tem como objetivo permitir que um conjunto de computadores independentes trabalhem em conjunto para aumentar a disponibilidade e a escalabilidade por meio de um cluster.\nII – O Windows PowerShell permite que os administradores de sistema automatizem as suas operações do dia a dia por meio de linhas comando.\nIII – O Active Directory usa um armazenamento de dados estruturado como base para uma organização lógica e hierárquica de informações de diretório.\nEstá **CORRETO** o que se afirma em:",
+      "options": [
+        {
+          "key": "A",
+          "text": "I e II, apenas."
+        },
+        {
+          "key": "B",
+          "text": "I e III, apenas."
+        },
+        {
+          "key": "C",
+          "text": "II, apenas."
+        },
+        {
+          "key": "D",
+          "text": "II e III, apenas."
+        },
+        {
+          "key": "E",
+          "text": "I, II e III."
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 35,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q053",
+      "number": 53,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "O TCP (Transmission Control Protocol) é um protocolo da camada de transporte do modelo OSI utilizado no envio e no recebimento de dados na web. Todas as afirmativas abaixo sobre o protocolo TCP estão corretas, **EXCETO**:",
+      "options": [
+        {
+          "key": "A",
+          "text": "O protocolo TCP é orientado à conexão."
+        },
+        {
+          "key": "B",
+          "text": "O protocolo TCP faz a retransmissão de mensagens caso elas não cheguem ao destinatário."
+        },
+        {
+          "key": "C",
+          "text": "O protocolo TCP não é compatível com o protocolo FTP (File Transfer Protocol)."
+        },
+        {
+          "key": "D",
+          "text": "O protocolo TCP possui mecanismos para garantir a entrega de dados."
+        },
+        {
+          "key": "E",
+          "text": "O protocolo TCP trata a ordenação e a correção de pacotes."
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 35,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q054",
+      "number": 54,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Protocolo para gerenciamento de dispositivos em redes IP e que é composto por 3 elementos: a MIB (Management Information Base), o manager (gerente), e o agent (agente):",
+      "options": [
+        {
+          "key": "A",
+          "text": "DHCP."
+        },
+        {
+          "key": "B",
+          "text": "ICMP."
+        },
+        {
+          "key": "C",
+          "text": "NTP."
+        },
+        {
+          "key": "D",
+          "text": "SMTP."
+        },
+        {
+          "key": "E",
+          "text": "SNMP."
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 36,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q055",
+      "number": 55,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Analise as seguintes afirmativas sobre os as versões IPv4 e IPv6 do modelo TCP/IP:\nI – O IPv4 tem o tamanho de endereço de 128 bits.\nII – O IPv6 deve ser representado apenas em notação numérica decimal com ponto.\nIII – O DHCP pode ser utilizado para designação de endereços IPv4.\nEstá **CORRETO** o que se afirma em:",
+      "options": [
+        {
+          "key": "A",
+          "text": "I e II, apenas."
+        },
+        {
+          "key": "B",
+          "text": "I e III, apenas."
+        },
+        {
+          "key": "C",
+          "text": "II e III, apenas."
+        },
+        {
+          "key": "D",
+          "text": "III, apenas."
+        },
+        {
+          "key": "E",
+          "text": "I, II e III."
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 36,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q056",
+      "number": 56,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Analise as seguintes afirmativas sobre o Manifesto Ágil:\nI – Indivíduos e interações são mais importantes que processos e ferramentas.\nII – Negociação de contratos é mais importante que colaboração com o cliente.\nIII – Software em funcionamento é mais importante que documentação abrangente.\nEstá **CORRETO** o que se afirma em:",
+      "options": [
+        {
+          "key": "A",
+          "text": "I, apenas."
+        },
+        {
+          "key": "B",
+          "text": "I e II, apenas."
+        },
+        {
+          "key": "C",
+          "text": "I e III, apenas."
+        },
+        {
+          "key": "D",
+          "text": "II e III, apenas."
+        },
+        {
+          "key": "E",
+          "text": "I, II e III."
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 37,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q057",
+      "number": 57,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "A portaria do CNJ responsável por instituir a Estratégia Nacional de Segurança Cibernética do Poder Judiciário (ENSEC-PJ) é a:",
+      "options": [
+        {
+          "key": "A",
+          "text": "CNJ nº 131/2021."
+        },
+        {
+          "key": "B",
+          "text": "CNJ nº 252/2020."
+        },
+        {
+          "key": "C",
+          "text": "CNJ nº 253/2020."
+        },
+        {
+          "key": "D",
+          "text": "CNJ nº 335/2020."
+        },
+        {
+          "key": "E",
+          "text": "CNJ nº 396/2021."
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 37,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q058",
+      "number": 58,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Metodologia de gestão que ganhou fama por ter suportado o crescimento do Google e que é caracterizada pela declaração qualitativa dos objetivos de uma empresa e por um conjunto de metas quantitativas com impacto direto em cada objetivo:",
+      "options": [
+        {
+          "key": "A",
+          "text": "ITIL."
+        },
+        {
+          "key": "B",
+          "text": "Kanban."
+        },
+        {
+          "key": "C",
+          "text": "Lean Development."
+        },
+        {
+          "key": "D",
+          "text": "OKR."
+        },
+        {
+          "key": "E",
+          "text": "Scrum."
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 38,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q059",
+      "number": 59,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Em relação ao NIST Framework, correlacione as colunas a seguir associando as categorias à sua respectiva função:\nFunção | Categoria\nI. Identificar | ( ) Segurança de dados.\nII. Proteger | ( ) Monitoramento Contínuo de Segurança.\nIII. Detectar | ( ) Mitigação.\nIV. Responder | ( ) Gerenciamento dos ativos.\nEstá **CORRETA** a seguinte sequência de respostas:",
+      "options": [
+        {
+          "key": "A",
+          "text": "II, III, IV, I."
+        },
+        {
+          "key": "B",
+          "text": "II, IV, I, III."
+        },
+        {
+          "key": "C",
+          "text": "II, IV, III, I."
+        },
+        {
+          "key": "D",
+          "text": "III, II, I, IV."
+        },
+        {
+          "key": "E",
+          "text": "IV, I, II, III."
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": true,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 38,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt3-2022-analista-ti-q060",
+      "number": 60,
+      "section": "Prova objetiva",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Analise as seguintes afirmativas sobre criptografia e certificação digital:\nI – A criptografia assimétrica, também conhecida como criptografia de chave pública, é baseada em dois tipos de chaves de segurança, sendo uma privada e a outra pública.\nII – Certificado Digital é um documento eletrônico que possibilita a troca segura de informações entre duas partes, que pode garantir a identidade do emissor, a integridade da mensagem e a sua confidencialidade.\nIII – A criptografia simétrica faz uso de uma única chave, que é compartilhada entre o emissor e o destinatário de um conteúdo. Essa chave é uma cadeia própria de bits, que vai definir a forma como o algoritmo vai criptografar um conteúdo.\nEstá **CORRETO** o que se afirma em:",
+      "options": [
+        {
+          "key": "A",
+          "text": "I, apenas."
+        },
+        {
+          "key": "B",
+          "text": "I e II, apenas."
+        },
+        {
+          "key": "C",
+          "text": "I e III, apenas."
+        },
+        {
+          "key": "D",
+          "text": "II e III, apenas."
+        },
+        {
+          "key": "E",
+          "text": "I, II e III."
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 39,
+      "topic_ids": [],
+      "review": null
+    }
+  ]
+}

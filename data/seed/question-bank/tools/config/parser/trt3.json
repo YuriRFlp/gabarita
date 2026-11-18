@@ -1,0 +1,24 @@
+{
+  "q_re": "^QUESTÃO (\\d{2})$",
+  "opt_re": "^\\(([A-E])\\)\\s*(.*)$",
+  "letters": "ABCDE",
+  "first": 1,
+  "last": 60,
+  "xpos": true,
+  "start_after": "^PROVA DE LÍNGUA PORTUGUESA$",
+  "stop_at": "^PROVA DISCURSIVA - REDAÇÃO",
+  "noise": [
+    "^pcimarkpci",
+    "www\\.pciconcursos\\.com\\.br",
+    "^\\d{1,2}$"
+  ],
+  "section_headers": [
+    "^PROVA DE (NOÇÕES DE INFORMÁTICA|LEGISLAÇÃO|NOÇÕES DE DIREITO|CONHECIMENTOS ESPECÍFICOS –)$",
+    "^TECNOLOGIA DA INFORMAÇÃO$"
+  ],
+  "header": [
+    "^INSTRUÇÃO$",
+    "^Leia o texto abaixo",
+    "^Considere o script abaixo"
+  ]
+}

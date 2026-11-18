@@ -1,0 +1,195 @@
+{
+  "paper": {
+    "schema_version": "1.0",
+    "id": "tse-2024-analista-ti",
+    "court_id": "tse",
+    "court": "TSE",
+    "justice_branch": "eleitoral",
+    "state": "DF",
+    "year": 2024,
+    "applied_on": "2024-12-08",
+    "exam_board": "Cebraspe",
+    "notice": "Edital n.º 1 – Concurso Público Nacional Unificado da Justiça Eleitoral (CPNUJE), 2024",
+    "taxonomy_edition": false,
+    "level": "analista",
+    "position": "Analista Judiciário – Área Apoio Especializado",
+    "specialty": "Tecnologia da Informação",
+    "position_code": "Cargo 17",
+    "booklets": [
+      {
+        "code": "988_CPNUJE_CB2_01",
+        "type": null,
+        "numbers": "1-50"
+      },
+      {
+        "code": "988_CPNUJE_017_01",
+        "type": null,
+        "numbers": "51-120"
+      }
+    ],
+    "format": "true_false",
+    "options_per_question": null,
+    "sections": [
+      {
+        "name": "Conhecimentos Básicos",
+        "numbers": "1-50"
+      },
+      {
+        "name": "Conhecimentos Específicos",
+        "numbers": "51-120"
+      }
+    ],
+    "answer_key": {
+      "status": "definitivo",
+      "published_on": null,
+      "note": "Gabaritos oficiais definitivos do Cebraspe; alterações e anulações justificadas no documento de justificativas"
+    },
+    "essay": {
+      "type": "texto dissertativo",
+      "prompt": "A respeito de técnicas de análise de segurança das aplicações, redija um texto dissertativo atendendo ao que se pede a seguir.\n1. Explique o que é análise estática de código-fonte (SAST). [valor: 10,00 pontos]\n2. Discorra sobre o princípio de funcionamento da SAST. [valor: 10,00 pontos]\n3. Explique o que são testes dinâmicos de segurança (DAST). [valor: 10,00 pontos]\n4. Discorra sobre o princípio de funcionamento do DAST. [valor: 10,00 pontos]\n5. Identifique, justificando, qual análise entre a SAST e o DAST é considerada white box e qual é considerada black box. [valor: 7,50 pontos]",
+      "instructions": "Extensão máxima de 30 linhas; até 50,00 pontos pelo domínio do conteúdo, dos quais parte é atribuída à apresentação e à estrutura textual.",
+      "max_score": 50.0,
+      "answer_standard": null,
+      "grading_criteria": null
+    },
+    "sources": [
+      {
+        "file": "988_CPNUJE_CB2_01.pdf",
+        "kind": "caderno",
+        "url": "https://cdn.cebraspe.org.br/concursos/CPNUJE_24/arquivos/988_CPNUJE_CB2_01.PDF"
+      },
+      {
+        "file": "988_CPNUJE_017_01.pdf",
+        "kind": "caderno",
+        "url": "https://cdn.cebraspe.org.br/concursos/CPNUJE_24/arquivos/988_CPNUJE_017_01.PDF"
+      },
+      {
+        "file": "GAB_DEFINITIVO_988_CPNUJE_CB2_01.pdf",
+        "kind": "gabarito",
+        "url": "https://cdn.cebraspe.org.br/concursos/CPNUJE_24/arquivos/GAB_DEFINITIVO_988_CPNUJE_CB2_01.PDF"
+      },
+      {
+        "file": "GAB_DEFINITIVO_988_CPNUJE_017_01.pdf",
+        "kind": "gabarito",
+        "url": "https://cdn.cebraspe.org.br/concursos/CPNUJE_24/arquivos/GAB_DEFINITIVO_988_CPNUJE_017_01.PDF"
+      },
+      {
+        "file": "988_CPNUJE_017_DISC.pdf",
+        "kind": "caderno",
+        "url": "https://cdn.cebraspe.org.br/concursos/CPNUJE_24/arquivos/988_CPNUJE_017_DISC.PDF"
+      },
+      {
+        "file": "CPNUJE_24_JUSTIFICATIVAS_DE_ALTERAES_DE_GABARITO.pdf",
+        "kind": "recursos",
+        "url": "https://cdn.cebraspe.org.br/concursos/CPNUJE_24/arquivos/CPNUJE_24_JUSTIFICATIVAS_DE_ALTERAES_DE_GABARITO.PDF"
+      }
+    ],
+    "notes": [
+      "Itens de certo/errado: answer C = certo, E = errado",
+      "Concurso unificado da Justiça Eleitoral: a mesma prova vale para o TSE e para os TREs, inclusive o TRE-MG",
+      "Os Conhecimentos Básicos (caderno 988_CPNUJE_CB2_01) são comuns aos cargos 2 a 17",
+      "Padrão de resposta da discursiva não localizado; answer_standard fica nulo",
+      "Trechos de código transcritos em blocos ```linguagem com a indentação do caderno; tabela em Markdown"
+    ]
+  },
+  "parts": [
+    {
+      "parsed": "/home/claude/bank/work/988_CPNUJE_CB2_01.json",
+      "answer_key": "/home/claude/provas/txt/GAB_DEFINITIVO_988_CPNUJE_CB2_01.txt",
+      "sections": [
+        {
+          "from": 1,
+          "to": 30,
+          "section": "Conhecimentos Básicos",
+          "subject": "Língua Portuguesa"
+        },
+        {
+          "from": 31,
+          "to": 50,
+          "section": "Conhecimentos Básicos",
+          "subject": "Direito Administrativo"
+        }
+      ],
+      "changed": {
+        "11": "C",
+        "29": "C"
+      },
+      "status_notes": {
+        "11": "Deferido com alteração (C → E): a forma verbal “acabou” não é núcleo de sua oração.",
+        "29": "Deferido com alteração (C → E): a supressão das palavras “é” e “que” no segundo período do segundo parágrafo prejudica a correção gramatical do texto."
+      }
+    },
+    {
+      "parsed": "/home/claude/bank/work/988_CPNUJE_017_01.json",
+      "answer_key": "/home/claude/provas/txt/GAB_DEFINITIVO_988_CPNUJE_017_01.txt",
+      "sections": [
+        {
+          "from": 51,
+          "to": 120,
+          "section": "Conhecimentos Específicos",
+          "subject": "Tecnologia da Informação"
+        }
+      ],
+      "changed": {
+        "101": "C"
+      },
+      "status_notes": {
+        "83": "Deferido com anulação: o item possibilita mais de uma interpretação, o que prejudicou seu julgamento objetivo.",
+        "93": "Deferido com anulação: o item possibilita mais de uma interpretação, o que prejudicou seu julgamento objetivo.",
+        "101": "Deferido com alteração (C → E): a função curl_multi_setopt é genérica, e a opção CURLMOPT_MAXCONNECTS configura o limite de conexões mantidas no cache, e não o número máximo de conexões simultâneas."
+      },
+      "tables": [
+        93,
+        94,
+        95
+      ],
+      "code": [
+        99,
+        100,
+        101,
+        102,
+        103
+      ],
+      "stim_text": {
+        "s18": "| idVenda | idCliente | dataVenda | valorVenda |\n|---|---|---|---|\n| 1 | 101 | 10/09/2023 | 150.00 |\n| 2 | 102 | 12/09/2023 | 250.00 |\n| 3 | 101 | 15/09/2023 | 200.00 |\n| 4 | 103 | 20/09/2023 | 300.00 |\n| 5 | 102 | 25/09/2023 | 180.00 |",
+        "s20": "```rust\nuse std::sync::{Arc};\nuse std::thread;\n\nfn main() {\n  let counter = Arc::new(0);\n  let mut handles = vec![];\n  for _ in 0..10 {\n    let counter_clone = Arc::clone(&counter);\n    let handle = thread::spawn(move || {\n      let mut num =\n      counter_clone.lock().unwrap();\n      *num += 1;\n    });\n    handles.push(handle);\n  }\n  for handle in handles {\n    handle.join().unwrap();\n  }\n  println!(“Resultado final do contador: {}”,\n  *counter.lock().unwrap());\n}\n```",
+        "s21": "```python\nimport pandas as pd\n\ndf = pd.DataFrame({\n  'Nome': ['Alice', 'Maria', 'Ana'],\n  'Idade': [25, 30, 35],\n  'Disciplina': ['Direito', 'Direito', 'Direito'],\n  'Situacao': ['Aprovada', 'Reprovada', 'Aprovada']\n})\n\ncolunas_interesse = ['Nome', 'Situacao']\ntabela = df[colunas_interesse].values.tolist()\nprint(tabela[0][0])\n```",
+        "s22": "```c\ncurl_multi_setopt( cm, CURLMOPT_MAXCONNECTS, (long)PARALLEL );\n```",
+        "s23": "```text\nmenuentry 'Ubuntu' --class ubuntu --class gnu-linux --class gnu --class os\n$ menuentry_id_option 'gnulinux-simple-44836297-8097-455e-a64d-4fc7be245184' {\n    ...\n    set root='hd0,gpt1'\n    ...\n    linux /boot/vmlinuz-5.4.0-144-generic root=UUID=44836297-8097-455e-a64d-4fc7be245184 ro console=tty1 console=ttyS0\n    initrd /boot/initrd.img-5.4.0-144-generic\n}\n```",
+        "s24": "```csharp\nusing System.ServiceProcess;\npublic class MyService : ServiceBase{\n   public MyService(){\n     this.ServiceName = “MySampleService”;\n   }\n   protected override void OnStart(string[] args){\n     // Lógica de inicialização\n   }\n   protected override void OnStop(){\n     // Lógica de parada\n   }\n}\n\nstatic class Program {\n   static void Main(){\n     ServiceBase[] ServicesToRun;\n     ServicesToRun = new ServiceBase[]{\n        new MyService()};\n     ServiceBase.Run(ServicesToRun);\n   }\n}\n```"
+      },
+      "stim_command": {
+        "s18": "Com base na tabela de nome vendas apresentada acima e nos conceitos de SQL, DLL e DML, julgue os próximos itens.",
+        "s22": "Considerando a linha de código precedente, julgue o item seguinte, em relação à biblioteca libcurl.",
+        "s20": "Com base no trecho de código precedente, escrito em Rust, que cria um contador, julgue o item a seguir.",
+        "s21": "Com base no código precedente, julgue o item que se segue, relativo à linguagem de programação Python, considerando que o ambiente em uso possua as bibliotecas necessárias instaladas.",
+        "s23": "Tendo como base o trecho precedente, julgue o próximo item, relativo a conceitos associados ao Bootloader.",
+        "s24": "Com base no código precedente, cuja estrutura permite que o gerenciador de controle de serviços do Windows gerencie e controle corretamente o serviço, julgue o item a seguir."
+      },
+      "item_overrides": {
+        "51": {
+          "statement": "No código a seguir, desenvolvido em Java, a substituição dos caracteres #XPTO por @extends fará que a execução do código apresente BMW x3 como resultado.\n```java\npublic class Veiculo {\n  protected String nome;\n  public Veiculo(String nome) {\n    this.nome = “BMW”;\n  }\n  public void Modelo() {\n  }\n  public static void main(String[] args) {\n    Veiculo Veiculo = new Veiculo(““);\n    Veiculo.Modelo();\n    Veiculo bmw = new Veiculo(““) {\n      #XPTO\n      public void Modelo() {\n        System.out.println(nome + “ “ + “x3”);\n      }\n    };\n    bmw.Modelo();\n  }\n}\n```"
+        },
+        "54": {
+          "statement": "```sql\nCREATE TABLE cidade (\n  nome varchar(40),\n  codigo int );\n\nCREATE TABLE capital (\n  UF      char(2) UNIQUE NOT NULL\n) #XPTO (cidade);\n\ninsert into capital values ('Brasília', 22, 'DF');\n\nselect * from capital;\n```\nNo script precedente, desenvolvido em SQL no PostgreSQL, a substituição dos caracteres #XPTO por References fará que a execução do script apresente o seguinte resultado.\n```text\nCREATE TABLE\nCREATE TABLE\nINSERT 0 1\n   nome   | codigo | uf\n----------+--------+----\n Brasília |     22 | DF\n(1 row)\n```"
+        },
+        "80": {
+          "statement": "Considerando que o pacote openssh-server tenha sido instalado, para que o daemon seja imediatamente iniciado e para que seja possível iniciar o serviço automaticamente quando o sistema operacional for reiniciado, devem ser executados os dois comandos a seguir.\n```bash\nsystemctl start sshd.service\nsystemctl enable sshd.service\n```"
+        },
+        "94": {
+          "statement": "A execução do comando SQL a seguir apresentará a soma de todas as vendas cujo valor excede 150.00.\n```sql\nSELECT SUM(valorVenda) FROM vendas WHERE valorVenda > 150.00;\n```"
+        },
+        "100": {
+          "statement": "Ao se executar esse trecho de código, será exibido o resultado a seguir.\n```text\n['Alice', 'Aprovada']\n```"
+        },
+        "104": {
+          "statement": "O comando git cherry-pick <commit-hash> permite aplicar um commit específico de uma branch a outra branch, reaplicando o commit na branch atual com um novo hash, sem a necessidade de mesclar toda a branch de origem."
+        }
+      },
+      "review": {
+        "54": "Espaçamento do resultado do psql normalizado",
+        "102": "Linhas longas do trecho do GRUB, quebradas pela diagramação, foram unidas"
+      }
+    }
+  ]
+}

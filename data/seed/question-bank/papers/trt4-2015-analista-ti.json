@@ -1,0 +1,2680 @@
+{
+  "schema_version": "1.0",
+  "id": "trt4-2015-analista-ti",
+  "court_id": "trt4",
+  "court": "TRT-4 (RS)",
+  "justice_branch": "trabalho",
+  "state": "RS",
+  "year": 2015,
+  "applied_on": null,
+  "exam_board": "FCC",
+  "notice": "Concurso público TRT da 4ª Região – 2015",
+  "taxonomy_edition": false,
+  "level": "analista",
+  "position": "Analista Judiciário – Área Apoio Especializado",
+  "specialty": "Tecnologia da Informação",
+  "position_code": "AT",
+  "booklets": [
+    {
+      "code": "AT",
+      "type": "001",
+      "numbers": "1-60"
+    }
+  ],
+  "format": "multiple_choice",
+  "options_per_question": 5,
+  "sections": [
+    {
+      "name": "Conhecimentos Básicos",
+      "numbers": "1-30"
+    },
+    {
+      "name": "Conhecimentos Específicos",
+      "numbers": "31-60"
+    }
+  ],
+  "answer_key": {
+    "status": "definitivo",
+    "published_on": null,
+    "note": "Relação de gabaritos da FCC (diversos cargos), tipo 1; o documento não indica se é preliminar ou definitivo e não marca anulações"
+  },
+  "essay": {
+    "type": "redação",
+    "prompt": "A revitalização das culturas tradicionais e a promoção do respeito à diversidade cultural",
+    "instructions": "Proposta com textos de apoio e mapa-múndi; ver o caderno, página 16"
+  },
+  "sources": [
+    {
+      "file": "TRT4_2015_caderno_AT_tipo001.pdf",
+      "kind": "caderno",
+      "url": "https://www.pciconcursos.com.br/provas/download/analista-judiciario-tecnologia-da-informacao-trt-4-fcc-2015"
+    },
+    {
+      "file": "TRT4_2015_gabaritos_todos_cargos.pdf",
+      "kind": "gabarito",
+      "url": null
+    }
+  ],
+  "notes": [
+    "Caderno de setembro de 2015; data exata de aplicação não confirmada",
+    "Textos de Português com numeração de linhas: cada linha do campo text corresponde a uma linha impressa (as questões citam linhas)",
+    "Prova anterior a mudanças de normas e versões de frameworks (ITIL v3, COBIT 4.1, PMBOK 4ª edição)"
+  ],
+  "stimuli": [
+    {
+      "id": "t01",
+      "title": null,
+      "text": "*Ópera é um tipo de teatro no qual a maioria ou todos os personagens cantam durante a maior parte do tempo ou o*\n*tempo todo. Nesse sentido, é muito óbvio que ela não seja realística, e com frequência, no decorrer de seus mais de*\n*quatrocentos anos de história, tem sido considerada exótica e estranha. Além disso, é quase sempre bastante cara de se*\n*encenar e de se assistir. Em nenhum momento da história a sociedade, como um todo, conseguiu sustentar facilmente os*\n*custos exorbitantes da ópera. Por que, então, tanta gente gosta dela de maneira tão profunda? Por que dedicam suas vidas*\n*a apresentá-la, escrever sobre ela, assistir a ela? Por que alguns fãs de ópera atravessam o mundo para ver uma nova*\n*produção ou ouvir um cantor favorito, pagando imensas quantias por esse fugaz privilégio? E por que a ópera é a única*\n*forma de música erudita que ainda desenvolve de modo significativo novas audiências, apesar de que, no último século ou*\n*por volta disso, o fluxo de novas obras, que uma vez foi seu sangue vital, secou até se reduzir a um débil gotejar?*\n*Essas perguntas são mais sobre a ópera tal como ela é hoje em dia: sobre aquilo em que a ópera se tornou no início*\n*do século XXI*. *No que se segue teremos muito a dizer sobre a história de nosso tema, sobre as maneiras em que a ópera*\n*se desenvolveu durante sua jornada de quatrocentos anos até nós; mas nossa ênfase será sempre no presente, no efeito*\n*que a ópera continua a ter sobre as audiências no mundo inteiro. Nosso objetivo é lidar com uma forma de arte cujas obras*\n*mais populares e duradouras foram quase sempre escritas num distante passado europeu,* [...] *mas cuja influência em*\n*muitos de nós – e cuja significância em nossa vida hoje em dia – é ainda palpável. A ópera pode nos transformar: física,*\n*emocional e intelectualmente. Queremos investigar por quê.*",
+      "source": "(Carolyn Abbate e Roger Parker. **Uma história da ópera:** os últimos quatrocentos anos. Trad. Paulo Geiger. 1.ed. São Paulo: Companhia das Letras, 2015, p. 21-22)",
+      "language": "pt"
+    },
+    {
+      "id": "t02",
+      "title": null,
+      "text": "*O conceito de vergonha recobre um campo de significados bastante amplo e rico. Para o* Dicionário Aurélio*, por*\n*exemplo, vergonha significa:* a) desonra humilhante; opróbrio, ignomínia; b) sentimento penoso de desonra, humilhação ou\nrebaixamento diante de outrem; c) sentimento de insegurança provocada pelo medo do ridículo, por escrúpulos etc.;\ntimidez, acanhamento; d) sentimento da própria dignidade, brio, honra*. O Dicionário* Larousse *traz aproximadamente as*\n*mesmas definições, mas acrescenta novas associações como:* medo da desonra *e* embaraço*. O* Dicionário Lexis *apresenta*\n*ainda algumas definições com nuanças diferentes:* indignidade, sentimento penoso de baixeza, de confusão, sentimento de\ndesconforto provocado pela modéstia, sentimento de remorso*. O que chama a atenção nas definições de vergonha é não*\n*somente a diversidade dos significados atribuídos a este sentimento, mas também, e sobretudo, o fato de alguns destes*\n*significados serem opostos: desonra/honra, indignidade/dignidade, humilhação/brio. Tal oposição, observada por Harkot-de-*\n*-La-Taille, faz esta autora perguntar-se que palavra é esta que recobre o não e o sim, a ausência e a presença, o temível e*\n*o desejável.*\n*Uma forma comum de pensar este sentimento é afirmar que ele é simplesmente desencadeado pela opinião de*\n*outrem. É o que, por exemplo, sugere a definição de Spinoza segundo a qual a vergonha é a tristeza que acompanha a*\n*ideia de alguma ação que imaginamos censurada pelos outros. E é o que, explicitamente, a antropóloga Benedict afirma em*\n*seu estudo sobre a sociedade japonesa. Para ela, as culturas da vergonha enfatizam as sanções externas, opondo-se às*\n*verdadeiras culturas da culpa, que interiorizam a convicção do pecado. Quanto ao sentimento de vergonha, escreve que*\n*alguém poderá envergonhar-se quando é ridicularizado abertamente, ou quando criar a fantasia para si mesmo de que o*\n*tenha sido. Todavia, não acreditamos que tudo esteja dito assim; a vergonha pressupõe um controle interno: quem sente*\n*vergonha julga a si próprio. Lembremos o fato notável de que a vergonha pode ser despertada pela simples exposição,*\n*mesmo que não acompanhada de juízo negativo por parte dos observadores. Com efeito, certas pessoas sentem vergonha*\n*pelo simples fato de estarem sendo observadas. O rubor pode subir às faces de alguém que está sendo objeto da atenção*\n*de uma plateia, mesmo que esta atenção seja motivada pelo elogio, pelo recebimento de um prêmio, portanto*\n*acompanhada de um juízo positivo. Este tipo de vergonha não deixa de ser psicologicamente misterioso: por que*\n*será que as pessoas sentem desconforto ao serem “apenas” observadas, mesmo que esta observação não contenha*\n*ameaças precisas, mesmo que ela seja lisonjeira?*",
+      "source": "(Adaptado de: LA TAILLE, Y. O sentimento de vergonha e suas relações com a moralidade. **Psicologia**: Reflexão e Crítica, São Paulo: Scielo, 2002, 15(1), p. 13-25).",
+      "language": "pt"
+    },
+    {
+      "id": "t03",
+      "title": "Página HTML",
+      "text": "```html\n<html>\n    <head>\n        <title>Prova</title>\n        <script type=\"text/javascript\">\n            function ver() {\n                var pontos = 0;\n                if ( ...I... ) {\n                    pontos++;\n                }\n                document.getElementById(\"res\").innerHTML = pontos;\n            }\n        </script>\n    </head>\n    <body>\n      <form name=\"frm\">\n        <p>\n          Questão 1 - CSS é <br><br>\n          <input type=\"radio\" name=\"q1\" value=\"a\"> uma linguagem de programação.<br>\n          <input type=\"radio\" name=\"q1\" value=\"b\"> um framework.<br>\n          <input type=\"radio\" name=\"q1\" value=\"c\"> uma prática de gestão.<br>\n          <input type=\"radio\" name=\"q1\" value=\"d\"> uma linguagem de estilos.<br>\n          <input type=\"radio\" name=\"q1\" value=\"e\"> um modelo matemático.<br>\n        </p>\n        <input type=\"button\" onclick=\"ver();\" value=\"Ver Resultado\">\n      </form>\n      <p id=\"res\"></p>\n    </body>\n</html>\n```",
+      "source": null,
+      "language": "pt"
+    },
+    {
+      "id": "t04",
+      "title": "Programa Java",
+      "text": "```java\nimport javax.swing.JOptionPane;\npublic class A001 {\n    public static void main(String[] args) {\n        int[][] v = {{1, 10, 8}, {15, 40, 16}, {10, 33, 91}, {0, 44, 51}};\n        int d=Integer.parseInt(JOptionPane.showInputDialog(\"Digite um valor\"));\n        System.out.print(f(v, 3, 2, d));\n    }\npublic static boolean f(int[][] valores, int n, int m, int x) {\n        int i, j, cont, p, q;\n        boolean a;\n        a = false;\n        i = 0;\n        while (i <= n && !a) {\n            j = 0;\n            while (j <= m && !a) {\n                if (valores[i][j] == x) {\n                    a = true;\n                }\n                j = j + 1;\n            }\n            i = i + 1;\n        }\n        return a;\n    }\n}\n```",
+      "source": null,
+      "language": "pt"
+    }
+  ],
+  "questions": [
+    {
+      "id": "trt4-2015-analista-ti-q001",
+      "number": 1,
+      "section": "Conhecimentos Básicos",
+      "subject": "Português",
+      "stimulus_id": "t01",
+      "command": "__Atenção:__ Considere o texto abaixo para responder às questões de números 1 a 8.",
+      "statement": "Os autores do texto",
+      "options": [
+        {
+          "key": "A",
+          "text": "apontam que a ópera é sempre bastante dispendiosa porque esse tipo de teatro renuncia a personagens que não se fazem presentes em cena por meio do canto."
+        },
+        {
+          "key": "B",
+          "text": "acusam a incongruência que existe entre a sociedade sustentar produções caríssimas e as pessoas, diferentemente deles mesmos, não investigarem o que justificaria manter esses projetos."
+        },
+        {
+          "key": "C",
+          "text": "indicam como usual que se tome a ópera como um gênero dramático excêntrico, pelo fato de representar situações estranhas ao que se considera \"vida real\"."
+        },
+        {
+          "key": "D",
+          "text": "expressam as intenções que têm ao escrever a história da ópera, demonstrando acreditar que a melhor maneira de fazê-lo é fixar-se na atualidade, auge dessa manifestação erudita."
+        },
+        {
+          "key": "E",
+          "text": "anunciam que têm muito a dizer e deixam entrever que suas reflexões desnudarão alguns mitos sobre a ópera, como a visão idealizada de que a profusão de obras já constituiu o sangue vital desse tipo de teatro."
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 2,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q002",
+      "number": 2,
+      "section": "Conhecimentos Básicos",
+      "subject": "Português",
+      "stimulus_id": "t01",
+      "command": "__Atenção:__ Considere o texto abaixo para responder às questões de números 1 a 8.",
+      "statement": "Tem sustentação no texto a ideia de que",
+      "options": [
+        {
+          "key": "A",
+          "text": "a efemeridade é um traço característico de todo objeto, fato, ou acontecimento cultural, que merece reprovação."
+        },
+        {
+          "key": "B",
+          "text": "obras eruditas têm, como sempre tiveram, público cativo, mas, em vista das atuais tendências musicais, ele está prestes a se esgotar."
+        },
+        {
+          "key": "C",
+          "text": "as formas de arte que mais se eternizam são as que têm raízes na tradição popular, sustentáculo das legítimas expressões culturais."
+        },
+        {
+          "key": "D",
+          "text": "obras de arte concebidas em certa cultura podem ter seu valor depreciado quando o eventual fruidor fizer parte de outro contexto cultural."
+        },
+        {
+          "key": "E",
+          "text": "as questões fundamentais sobre a ópera são passíveis de ser postas e respondidas somente no contexto do século XXI, depois de uma jornada de quatrocentos anos até a contemporaneidade."
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 2,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q003",
+      "number": 3,
+      "section": "Conhecimentos Básicos",
+      "subject": "Português",
+      "stimulus_id": "t01",
+      "command": "__Atenção:__ Considere o texto abaixo para responder às questões de números 1 a 8.",
+      "statement": "A frase em que o segmento destacado expressa uma circunstância restritiva é:",
+      "options": [
+        {
+          "key": "A",
+          "text": "(linha 2) __*Nesse sentido,*__ *é muito óbvio que ela não seja realística.* [...]"
+        },
+        {
+          "key": "B",
+          "text": "(linha 3) __*Além disso,*__ *é quase sempre bastante cara de se encenar e de se assistir.*"
+        },
+        {
+          "key": "C",
+          "text": "(linha 4) __*Em nenhum momento da história*__ *a sociedade, como um todo, conseguiu sustentar facilmente os custos exorbitantes da ópera.*"
+        },
+        {
+          "key": "D",
+          "text": "(linha 10) __*Essas perguntas*__ *são mais sobre a ópera tal como ela é hoje em dia* [...]"
+        },
+        {
+          "key": "E",
+          "text": "(linha 13) __*Nosso objetivo*__ *é lidar com uma forma de arte cujas obras mais populares e duradouras foram quase sempre escritas num distante passado europeu.*"
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 2,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q004",
+      "number": 4,
+      "section": "Conhecimentos Básicos",
+      "subject": "Português",
+      "stimulus_id": "t01",
+      "command": "__Atenção:__ Considere o texto abaixo para responder às questões de números 1 a 8.",
+      "statement": "*Queremos investigar __por quê.__* (final do texto) Ficarão preservadas a correção e a clareza da frase acima, sem prejuízo do sentido original, com a substituição do segmento destacado por",
+      "options": [
+        {
+          "key": "A",
+          "text": "suas razões."
+        },
+        {
+          "key": "B",
+          "text": "o seu porquê."
+        },
+        {
+          "key": "C",
+          "text": "por que motivos."
+        },
+        {
+          "key": "D",
+          "text": "porque ela nos transforma."
+        },
+        {
+          "key": "E",
+          "text": "seja qual for as motivações disso."
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 3,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q005",
+      "number": 5,
+      "section": "Conhecimentos Básicos",
+      "subject": "Português",
+      "stimulus_id": "t01",
+      "command": "__Atenção:__ Considere o texto abaixo para responder às questões de números 1 a 8.",
+      "statement": "Segmentos do texto estão, abaixo, associados a outras formulações. A que NÃO prejudica o sentido e a correção originais é:",
+      "options": [
+        {
+          "key": "A",
+          "text": "(linha 1) *no qual a maioria ou todos os personagens cantam* / cujos personagens, a maioria ou todos, cantam."
+        },
+        {
+          "key": "B",
+          "text": "(linhas 4 e 5) *conseguiu sustentar facilmente os custos exorbitantes da ópera /* obteve facilmente recursos para custear os gastos excessivos da ópera."
+        },
+        {
+          "key": "C",
+          "text": "(linhas 5 e 6) *Por que dedicam suas vidas a apresentá-la, escrever sobre ela, assistir a ela? /* Qual a causa de dedicarem suas vidas a apresentar, escrever e assistir a ela."
+        },
+        {
+          "key": "D",
+          "text": "(linha 7) *pagando imensas quantias por esse fugaz privilégio /* se forem pagar imensas quantias por esse privilégio instantâneo."
+        },
+        {
+          "key": "E",
+          "text": "(linha 8) *que ainda desenvolve de modo significativo novas audiências /* que desenvolve, ainda que de maneira significativa, novas audiências."
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 3,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q006",
+      "number": 6,
+      "section": "Conhecimentos Básicos",
+      "subject": "Português",
+      "stimulus_id": "t01",
+      "command": "__Atenção:__ Considere o texto abaixo para responder às questões de números 1 a 8.",
+      "statement": "Expressões utilizadas no texto motivaram a redação de outras frases. A frase que respeita as orientações da norma-padrão da língua, no que se refere à concordância, é:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Parece muito óbvio, de acordo com o noticiário, a intenção de os artistas de ópera pugnarem por melhores condições de trabalho e por melhores salários."
+        },
+        {
+          "key": "B",
+          "text": "No planejamento constam várias cotações para a compra dos instrumentos, e nota-se que é bastante caro os de corda, como o violino e a harpa."
+        },
+        {
+          "key": "C",
+          "text": "De acordo com o especialista, são muito fugaz, mesmo, as variações de tom no canto inicial, mas é exatamente essa diversificação que dá brilho ao trecho."
+        },
+        {
+          "key": "D",
+          "text": "Foram realmente débeis, por confrontos com outras encenações, a série de entradas do tenor em cena, mas isso foi atribuído à insegurança de um iniciante."
+        },
+        {
+          "key": "E",
+          "text": "A ópera, considerados sua concepção e entendimento atuais, pode ser tida como uma arte menos exótica, mas sempre transformadora."
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 3,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q007",
+      "number": 7,
+      "section": "Conhecimentos Básicos",
+      "subject": "Português",
+      "stimulus_id": "t01",
+      "command": "__Atenção:__ Considere o texto abaixo para responder às questões de números 1 a 8.",
+      "statement": "Considere a frase abaixo e as assertivas I, II e III. *E por que a ópera é a única forma de música erudita que ainda desenvolve de modo significativo novas audiências, apesar de que, no último século ou por volta disso, o fluxo de novas obras, que uma vez foi seu sangue vital, secou até se reduzir a um débil gotejar?*\nI. O segmento __*apesar de que*__ introduz ideia naturalmente compatível com a expressa na primeira parte do enunciado, de modo que a expectativa criada na porção inicial se harmoniza com o que vem a seguir na frase.\nII. A palavra *até*, que usualmente sinaliza o ápice de uma ação, tem esse sentido prejudicado em virtude de vir associada à ideia expressa por *débil*.\nIII. Se uma vírgula fosse introduzida antes da palavra *ou*, não haveria prejuízo para a correção original.\nÉ correto o que se afirma APENAS em",
+      "options": [
+        {
+          "key": "A",
+          "text": "I."
+        },
+        {
+          "key": "B",
+          "text": "I e II."
+        },
+        {
+          "key": "C",
+          "text": "II e III."
+        },
+        {
+          "key": "D",
+          "text": "II."
+        },
+        {
+          "key": "E",
+          "text": "III."
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 3,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q008",
+      "number": 8,
+      "section": "Conhecimentos Básicos",
+      "subject": "Português",
+      "stimulus_id": "t01",
+      "command": "__Atenção:__ Considere o texto abaixo para responder às questões de números 1 a 8.",
+      "statement": "*Em nenhum momento da história a sociedade, como um todo, conseguiu sustentar facilmente os custos exorbitantes da ópera.* Na frase acima, a locução verbal está empregada com regência idêntica à presente em:",
+      "options": [
+        {
+          "key": "A",
+          "text": "O crítico elegeu o jovem cantor o maior artista da temporada."
+        },
+        {
+          "key": "B",
+          "text": "Apresentou-nos currículo repleto de menções honrosas."
+        },
+        {
+          "key": "C",
+          "text": "Sem falsa modéstia, recebeu a ovação com elegância e alegria."
+        },
+        {
+          "key": "D",
+          "text": "Tentou cantar de modo condizente com as recomendações do maestro."
+        },
+        {
+          "key": "E",
+          "text": "Jamais se afastou daquele velho conselho do pai."
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 3,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q009",
+      "number": 9,
+      "section": "Conhecimentos Básicos",
+      "subject": "Português",
+      "stimulus_id": "t02",
+      "command": "__Atenção:__ Considere o texto abaixo para responder às questões de números 9 a 15.",
+      "statement": "O primeiro parágrafo do texto autoriza afirmar:",
+      "options": [
+        {
+          "key": "A",
+          "text": "A diversidade de significados atribuídos à vergonha comprova o entendimento superficial do sentimento, descrito com ambiguidade e incoerência nos mais diversos dicionários."
+        },
+        {
+          "key": "B",
+          "text": "O uso de *mas também* e *e sobretudo* (linha 8) em um mesmo período instaura falta de clareza na redação, já que não é possível compreender se o elemento agregado é de mesmo nível ou mais importante que o primeiro mencionado."
+        },
+        {
+          "key": "C",
+          "text": "O autor recorre a dicionários de prestígio, tomando-os como repositórios inequívocos do conhecimento e da cultura ocidentais."
+        },
+        {
+          "key": "D",
+          "text": "O autor parte de definições que, como espécies de comprovações prévias, conduzem à concordância com a reflexão de Harkot-de-La-Taille, reportada ao final."
+        },
+        {
+          "key": "E",
+          "text": "A oposição comentada revela o quanto há de descuido e precipitação quando se trata de examinar conceitos relacionados à natureza da alma humana."
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 4,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q010",
+      "number": 10,
+      "section": "Conhecimentos Básicos",
+      "subject": "Português",
+      "stimulus_id": "t02",
+      "command": "__Atenção:__ Considere o texto abaixo para responder às questões de números 9 a 15.",
+      "statement": "O segundo parágrafo valida o seguinte comentário:",
+      "options": [
+        {
+          "key": "A",
+          "text": "O julgamento de outrem não tem relevância para o sentimento de vergonha, sendo atitude simplória imaginar que o envergonhado reaja a avalições externas."
+        },
+        {
+          "key": "B",
+          "text": "O autor não descarta as ideias de Benedict, mas manifesta a necessidade de relativizá-las, como o comprova o trecho *não acreditamos que tudo esteja dito assim* (linha 18)."
+        },
+        {
+          "key": "C",
+          "text": "As *culturas da culpa* revelam maior amadurecimento psicológico dos indivíduos do que as *culturas da vergonha*, uma vez que estas têm como única referência os valores sociais."
+        },
+        {
+          "key": "D",
+          "text": "O autor prioriza o confronto de suas ideias com as de Spinoza e Benedict, dispensando-se de referir fatos ou situações objetivas em sua argumentação."
+        },
+        {
+          "key": "E",
+          "text": "A pergunta ao final faz retroceder a reflexão desenvolvida pelo texto, na medida em que tal indagação reafirma a impossibilidade de se compreender a vergonha."
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 4,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q011",
+      "number": 11,
+      "section": "Conhecimentos Básicos",
+      "subject": "Português",
+      "stimulus_id": "t02",
+      "command": "__Atenção:__ Considere o texto abaixo para responder às questões de números 9 a 15.",
+      "statement": "Consideradas definições da palavra *vergonha* retiradas do **Dicionário Aurélio**, a alternativa que contém exemplificação correta é:",
+      "options": [
+        {
+          "key": "A",
+          "text": "*sentimento da própria dignidade, brio, honra* (linha 4): “Durante severa discussão, o mais sincero dos amigos indagou-lhe se não tinha ética e vergonha na cara*.”*"
+        },
+        {
+          "key": "B",
+          "text": "*sentimento penoso de desonra, humilhação ou rebaixamento diante de outrem* (linhas 2 e 3): “Se tiverem vergonha, honrarão a confiança neles depositada e trabalharão com mais lisura.”"
+        },
+        {
+          "key": "C",
+          "text": "*desonra humilhante; opróbrio, ignomínia* (linha 2): “Artista talentoso, o jovem pianista contornou a explícita vergonha apresentando vários números antes de dirigir a palavra à audiência”."
+        },
+        {
+          "key": "D",
+          "text": "*sentimento de insegurança provocada pelo medo do ridículo, por escrúpulos etc.; timidez, acanhamento* (linhas 3 e 4): “Todos ficaram constrangidos com o comportamento indecoroso do magistrado; foi de fato uma vergonha.”"
+        },
+        {
+          "key": "E",
+          "text": "*desonra humilhante; opróbrio, ignomínia* (linha 2): “Um profundo sentimento de vergonha o impedia de aceitar elogios sem negar ou diminuir o que nele viam de bom.”"
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 5,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q012",
+      "number": 12,
+      "section": "Conhecimentos Básicos",
+      "subject": "Português",
+      "stimulus_id": "t02",
+      "command": "__Atenção:__ Considere o texto abaixo para responder às questões de números 9 a 15.",
+      "statement": "Afirma-se com correção:",
+      "options": [
+        {
+          "key": "A",
+          "text": "(linhas 4 e 5) Convertida para a voz passiva, a frase O Dicionário Larousse *traz aproximadamente as mesmas definições* apresentará a forma “é trazida”."
+        },
+        {
+          "key": "B",
+          "text": "(linha 21) Em *pelo simples fato de __estarem sendo__ observadas*, ocorre o deslize gramatical denominado “gerundismo”, caracterizado como o emprego indevido de formas no gerúndio."
+        },
+        {
+          "key": "C",
+          "text": "(linhas 17 e 18) Em *quando __é__ ridicularizado abertamente, ou quando __criar__ a fantasia para si mesmo de que o tenha sido*, os tempos das formas verbais destacadas obedecem à correlação privilegiada na norma-padrão."
+        },
+        {
+          "key": "D",
+          "text": "(linhas 23) A substituição do segmento *não deixa de ser* por “é” mantém plenamente o sentido original do período."
+        },
+        {
+          "key": "E",
+          "text": "(linhas 22 e 23) O fragmento *portanto acompanhada de um juízo positivo* pressupõe a forma verbal “seja”, que está elíptica."
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 5,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q013",
+      "number": 13,
+      "section": "Conhecimentos Básicos",
+      "subject": "Português",
+      "stimulus_id": "t02",
+      "command": "__Atenção:__ Considere o texto abaixo para responder às questões de números 9 a 15.",
+      "statement": "A nova redação mantém o sentido original e obedece à norma-padrão escrita em:",
+      "options": [
+        {
+          "key": "A",
+          "text": "*definições com nuanças diferentes* (linha 6): que têm nuanças diferentes."
+        },
+        {
+          "key": "B",
+          "text": "*as pessoas sentem desconforto ao serem “apenas” observadas* (linha 24): as pessoas sentem-se desconfortável ao ser “somente” examinadas."
+        },
+        {
+          "key": "C",
+          "text": "*a fantasia* [...] *de que o tenha sido* (linhas 17 e 18): a fantasia que tenha sido."
+        },
+        {
+          "key": "D",
+          "text": "*culturas da culpa, que interiorizam a convicção do pecado* (linha 16): culturas da culpa às quais interiorizam a convicção do pecado."
+        },
+        {
+          "key": "E",
+          "text": "*significados atribuídos a este sentimento* (linha 8): significados lhes atribuídos."
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 5,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q014",
+      "number": 14,
+      "section": "Conhecimentos Básicos",
+      "subject": "Português",
+      "stimulus_id": "t02",
+      "command": "__Atenção:__ Considere o texto abaixo para responder às questões de números 9 a 15.",
+      "statement": "Considerados o contexto e a norma-padrão,",
+      "options": [
+        {
+          "key": "A",
+          "text": "(linha 13) resulta em incorreção o acréscimo de vírgula entre *Spinoza* e *segundo*."
+        },
+        {
+          "key": "B",
+          "text": "(linha 24) o emprego de aspas em *\"apenas\"* empresta ironia à palavra, tal como em: \"Ele foi \"apenas\" assaltado, sem muita violência\"."
+        },
+        {
+          "key": "C",
+          "text": "(linha 21) em *O rubor pode subir às faces de alguém,* está correto o emprego do sinal de crase, assim como o está em “O sentimento de vergonha é comum à qualquer pessoa”."
+        },
+        {
+          "key": "D",
+          "text": "(linha 2) as palavras *opróbrio* e *ignomínia* estão corretamente grafadas e acentuadas, assim como o estão as palavras desta frase: \"A ausência de rúbrica nos documentos é mais um deslise para o qual ela tem o intuíto de reinvindicar tratamento de excessão.\""
+        },
+        {
+          "key": "E",
+          "text": "(linha 18) em *a vergonha pressupõe um controle interno: quem* [...], os dois-pontos introduzem consequência."
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 5,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q015",
+      "number": 15,
+      "section": "Conhecimentos Básicos",
+      "subject": "Português",
+      "stimulus_id": "t02",
+      "command": "__Atenção:__ Considere o texto abaixo para responder às questões de números 9 a 15.",
+      "statement": "*O rubor pode subir às faces de alguém que está sendo objeto da atenção de uma plateia, __mesmo que__ esta atenção seja motivada pelo elogio, pelo recebimento de um prêmio, portanto acompanhada de um juízo positivo.* Outra redação para o segmento acima manterá o sentido e a correção se o elemento destacado, e apenas ele, for substituído por:",
+      "options": [
+        {
+          "key": "A",
+          "text": "conforme."
+        },
+        {
+          "key": "B",
+          "text": "ainda que."
+        },
+        {
+          "key": "C",
+          "text": "embora."
+        },
+        {
+          "key": "D",
+          "text": "conquanto que."
+        },
+        {
+          "key": "E",
+          "text": "sempre que."
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 5,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q016",
+      "number": 16,
+      "section": "Conhecimentos Básicos",
+      "subject": "Raciocínio Lógico-Matemático",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "A quantidade de cartuchos de impressora distribuídos mensalmente para os três escritórios (P, Q e R) de uma empresa é diretamente proporcional ao número de impressoras de cada escritório. Sabe-se que P possui três impressoras a mais do que o dobro das impressoras de Q; e que R possui o dobro das impressoras de P. Nessas condições, a quantidade total mensal de cartuchos distribuídos para os três escritórios juntos é um número que, na divisão por 7, deixa resto igual a",
+      "options": [
+        {
+          "key": "A",
+          "text": "4."
+        },
+        {
+          "key": "B",
+          "text": "6."
+        },
+        {
+          "key": "C",
+          "text": "5."
+        },
+        {
+          "key": "D",
+          "text": "2."
+        },
+        {
+          "key": "E",
+          "text": "3."
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 6,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q017",
+      "number": 17,
+      "section": "Conhecimentos Básicos",
+      "subject": "Raciocínio Lógico-Matemático",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Em um município, a razão entre o número de homens e de mulheres é 91:92, e entre o número de mulheres e o de crianças é 23:5. Nesse município, a razão entre o número de crianças e o de homens é igual a",
+      "options": [
+        {
+          "key": "A",
+          "text": "83/368."
+        },
+        {
+          "key": "B",
+          "text": "81/362."
+        },
+        {
+          "key": "C",
+          "text": "60/81."
+        },
+        {
+          "key": "D",
+          "text": "25/81."
+        },
+        {
+          "key": "E",
+          "text": "20/91."
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 6,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q018",
+      "number": 18,
+      "section": "Conhecimentos Básicos",
+      "subject": "Raciocínio Lógico-Matemático",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Observe o seguinte diálogo entre Alberto e Beatriz.\nAlberto: − *Que horas são?*\nBeatriz: − *No horário atual, as horas que passam do meio dia formam um número que é igual a quarta parte dos minutos que faltam para as 18h00.*\nAlberto: − *Que horas começa sua festa de aniversário hoje?*\nBeatriz: − *As 21h00.*\nDa hora em que ocorreu o diálogo até a hora do começo da festa de aniversário de Beatriz faltam",
+      "options": [
+        {
+          "key": "A",
+          "text": "2 horas e 40 minutos."
+        },
+        {
+          "key": "B",
+          "text": "3 horas e 20 minutos."
+        },
+        {
+          "key": "C",
+          "text": "2 horas e 20 minutos."
+        },
+        {
+          "key": "D",
+          "text": "3 horas e 10 minutos."
+        },
+        {
+          "key": "E",
+          "text": "3 horas e 40 minutos."
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 6,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q019",
+      "number": 19,
+      "section": "Conhecimentos Básicos",
+      "subject": "Raciocínio Lógico-Matemático",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Em um mesmo ano, no final de fevereiro foram retirados 2/9 dos recursos de uma conta bancária. No final de março foram retirados 3/7 do saldo remanescente (após a retirada de fevereiro). No final de abril, a conta recebeu depósito equivalente a 4/5 do total das retiradas feitas em fevereiro e março. Considere que aumentos ou reduções no saldo da conta nesse período tenham ocorrido apenas em função das operações anteriormente descritas. Sendo assim, é correto afirmar que, na comparação do saldo da conta antes da retirada de fevereiro com o saldo após o depósito feito no fim de abril, houve um",
+      "options": [
+        {
+          "key": "A",
+          "text": "decréscimo de 1/9 do valor."
+        },
+        {
+          "key": "B",
+          "text": "aumento de 1/9 do valor."
+        },
+        {
+          "key": "C",
+          "text": "decréscimo de 2/7 do valor."
+        },
+        {
+          "key": "D",
+          "text": "aumento de 2/9 do valor."
+        },
+        {
+          "key": "E",
+          "text": "decréscimo de 2/9 do valor."
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 6,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q020",
+      "number": 20,
+      "section": "Conhecimentos Básicos",
+      "subject": "Raciocínio Lógico-Matemático",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "As peças de um jogo estão numeradas com a sequência ordenada dos primeiros números inteiros não negativos. Nesse jogo, sabe-se que:\n− as dez primeiras peças ordenadas devem se submeter à regra A.\n− as cinco primeiras peças ordenadas de numeração par devem se submeter à regra B;\n− as cinco primeiras peças ordenadas de numeração ímpar devem se submeter à regra C;\n− as cinco primeiras peças ordenadas com numeração de número primo devem se submeter à regra D.\nDe acordo com as regras, as peças do jogo submetidas à regra",
+      "options": [
+        {
+          "key": "A",
+          "text": "A também estão submetidas à regra C."
+        },
+        {
+          "key": "B",
+          "text": "A também estão submetidas à regra D."
+        },
+        {
+          "key": "C",
+          "text": "A mas não submetidas à regra B são as mesmas que estão submetidas à regra C."
+        },
+        {
+          "key": "D",
+          "text": "A e à regra B, simultaneamente, constituem um conjunto sem elementos."
+        },
+        {
+          "key": "E",
+          "text": "B e à regra C, simultaneamente, constituem um conjunto de um único elemento."
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 7,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q021",
+      "number": 21,
+      "section": "Conhecimentos Básicos",
+      "subject": "Raciocínio Lógico-Matemático",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Para produzir 900 catálogos, cada um de 240 páginas, uma gráfica consome 250 kg de papel. Se os catálogos produzidos tivessem 180 páginas cada um, o número de catálogos que poderiam ser produzidos com 780 kg de papel seria igual a",
+      "options": [
+        {
+          "key": "A",
+          "text": "2985."
+        },
+        {
+          "key": "B",
+          "text": "3280."
+        },
+        {
+          "key": "C",
+          "text": "3744."
+        },
+        {
+          "key": "D",
+          "text": "2864."
+        },
+        {
+          "key": "E",
+          "text": "3426."
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 7,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q022",
+      "number": 22,
+      "section": "Conhecimentos Básicos",
+      "subject": "Raciocínio Lógico-Matemático",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Há sete participantes de um torneio de tiro ao alvo, cada um disparando um único tiro. Quatro deles (André, Francisco, Sérgio e José) são experientes, e três deles (Eduardo, Fernando e Gabriel) são novatos. Sabe-se que:\n− para que um novato dispare seu tiro, ele deve ser antecedido e precedido por um atirador experiente;\n− Fernando é o segundo a disparar seu tiro, enquanto que Sérgio é o último atirador experiente a disparar um tiro;\n− Francisco dispara antes do que José dispara seu tiro, mas depois do que André dispara seu tiro.\nDentre as opções abaixo, NÃO é necessariamente correto que",
+      "options": [
+        {
+          "key": "A",
+          "text": "Gabriel dispare seu tiro depois de Fernando."
+        },
+        {
+          "key": "B",
+          "text": "Sérgio dispare seu tiro depois de todos os atiradores novatos."
+        },
+        {
+          "key": "C",
+          "text": "Fernando é o primeiro novato a disparar um tiro."
+        },
+        {
+          "key": "D",
+          "text": "Eduardo dispare seu tiro antes do que José."
+        },
+        {
+          "key": "E",
+          "text": "José dispare seu tiro entre Eduardo e Gabriel."
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 7,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q023",
+      "number": 23,
+      "section": "Conhecimentos Básicos",
+      "subject": "Raciocínio Lógico-Matemático",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Maria teve seu primeiro filho no dia em que completou 24 anos e, exatamente 4 anos depois, teve seu segundo filho. Em 2014, logo após o aniversário de Maria e seus dois filhos, as idades dos três somavam 53 anos. Sendo assim, o ano de nascimento de Maria é",
+      "options": [
+        {
+          "key": "A",
+          "text": "1974."
+        },
+        {
+          "key": "B",
+          "text": "1978."
+        },
+        {
+          "key": "C",
+          "text": "1976."
+        },
+        {
+          "key": "D",
+          "text": "1979."
+        },
+        {
+          "key": "E",
+          "text": "1980."
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 7,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q024",
+      "number": 24,
+      "section": "Conhecimentos Básicos",
+      "subject": "Raciocínio Lógico-Matemático",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Em uma caixa há 30 bolas, numeradas de 1 a 30, todas com numeração diferente. O menor número de bolas que devem ser retiradas ao acaso dessa caixa para se obter, com certeza, duas bolas com numeração ímpar e menor que 19 é igual a",
+      "options": [
+        {
+          "key": "A",
+          "text": "24."
+        },
+        {
+          "key": "B",
+          "text": "23."
+        },
+        {
+          "key": "C",
+          "text": "21."
+        },
+        {
+          "key": "D",
+          "text": "19."
+        },
+        {
+          "key": "E",
+          "text": "22."
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 7,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q025",
+      "number": 25,
+      "section": "Conhecimentos Básicos",
+      "subject": "Raciocínio Lógico-Matemático",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Em uma prova de múltipla escolha com 30 questões sobre Legislação de Trânsito, cada resposta correta vale 4 pontos, cada resposta incorreta vale − 1 ponto, e cada resposta em branco vale 0 ponto. Priscila fez essa prova e obteve 82 pontos. Na prova de Priscila, para cada resposta em branco havia 3 respostas corretas. Sendo assim, a quantidade de questões que Priscila acertou em sua prova foi igual a",
+      "options": [
+        {
+          "key": "A",
+          "text": "23."
+        },
+        {
+          "key": "B",
+          "text": "19."
+        },
+        {
+          "key": "C",
+          "text": "20."
+        },
+        {
+          "key": "D",
+          "text": "22."
+        },
+        {
+          "key": "E",
+          "text": "21."
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 7,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q026",
+      "number": 26,
+      "section": "Conhecimentos Básicos",
+      "subject": "Legislação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Considere as seguintes situações:\nI. Servidor federal passou a ter exercício em nova sede, no interesse da Administração. Essa mudança foi em caráter permanente e ele foi obrigado a realizar despesas com sua instalação.\nII. Servidor federal realizou viagem à Brasília, fora de sua sede, em caráter transitório, tendo realizado despesas com passagens aéreas e alimentação.\nIII. Servidor federal se deslocou a município localizado dentro da região metropolitana em que está localizada sua sede para realizar trabalho que é exigência permanente do cargo por ele ocupado.\nNos termos da Lei nº 8.112/90, o servidor fará jus a diárias em",
+      "options": [
+        {
+          "key": "A",
+          "text": "I, apenas."
+        },
+        {
+          "key": "B",
+          "text": "II e III, apenas."
+        },
+        {
+          "key": "C",
+          "text": "I, II e III."
+        },
+        {
+          "key": "D",
+          "text": "II, apenas."
+        },
+        {
+          "key": "E",
+          "text": "III, apenas."
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 8,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q027",
+      "number": 27,
+      "section": "Conhecimentos Básicos",
+      "subject": "Legislação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Considere as seguintes situações, relacionadas a licenças tiradas por servidor federal:\nI. Por motivo de doença do cônjuge, comprovada por perícia médica oficial e com a necessidade de sua assistência direta, por trinta dias não consecutivos.\nII. Para acompanhar cônjuge que foi deslocado para outro ponto do território nacional por tempo indeterminado.\nIII. Para atividade política, no período que mediou entre a sua escolha em convenção partidária, como candidato a cargo eletivo, e a véspera do registro de sua candidatura perante a Justiça Eleitoral.\nIV. Para participar de curso de capacitação profissional por sessenta dias, no interesse da Administração, após ter completado um quinquênio de efetivo exercício.\nNos termos da Lei nº 8.112/90, será mantida a remuneração do servidor APENAS em",
+      "options": [
+        {
+          "key": "A",
+          "text": "IV."
+        },
+        {
+          "key": "B",
+          "text": "I e IV."
+        },
+        {
+          "key": "C",
+          "text": "II e III."
+        },
+        {
+          "key": "D",
+          "text": "I e III."
+        },
+        {
+          "key": "E",
+          "text": "I, II e III."
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 8,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q028",
+      "number": 28,
+      "section": "Conhecimentos Básicos",
+      "subject": "Legislação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Sobre o processo administrativo no âmbito da Administração Pública Federal, regulado pela Lei nº 9.784/99, é correto afirmar que",
+      "options": [
+        {
+          "key": "A",
+          "text": "órgão é a unidade de atuação dotada de personalidade jurídica."
+        },
+        {
+          "key": "B",
+          "text": "todos os atos administrativos devem sempre ser objeto de divulgação oficial."
+        },
+        {
+          "key": "C",
+          "text": "o processo pode ser iniciado tanto de ofício como a pedido do interessado."
+        },
+        {
+          "key": "D",
+          "text": "o requerimento inicial do interessado deve ser feito sempre na forma escrita."
+        },
+        {
+          "key": "E",
+          "text": "a competência exercida pelos órgãos administrativos é irrenunciável, cabendo delegação no caso da edição de atos de caráter normativo."
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 8,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q029",
+      "number": 29,
+      "section": "Conhecimentos Básicos",
+      "subject": "Legislação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Nos termos regulados pela Lei nº 8.429/92, a pena de perda dos bens ou valores acrescidos ilicitamente ao patrimônio, ressarcimento integral do dano, quando houver, perda da função pública, suspensão dos direitos políticos de oito a dez anos, pagamento de multa civil de até três vezes o valor do acréscimo patrimonial e proibição de contratar com o Poder Público ou receber benefícios ou incentivos fiscais ou creditícios, direta ou indiretamente, ainda que por intermédio de pessoa jurídica da qual seja sócio majoritário, pelo prazo de dez anos, pode ser aplicada quando caracterizado o ato de improbidade administrativa por",
+      "options": [
+        {
+          "key": "A",
+          "text": "receber vantagem econômica de qualquer natureza, direta ou indiretamente, para omitir ato de ofício, providência ou declaração a que esteja obrigado."
+        },
+        {
+          "key": "B",
+          "text": "permitir ou facilitar a aquisição, permuta ou locação de bem ou serviço por preço superior ao de mercado."
+        },
+        {
+          "key": "C",
+          "text": "ordenar ou permitir a realização de despesas não autorizadas em lei ou regulamento."
+        },
+        {
+          "key": "D",
+          "text": "negar publicidade aos atos oficiais."
+        },
+        {
+          "key": "E",
+          "text": "retardar ou deixar de praticar, indevidamente, ato de ofício."
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 8,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q030",
+      "number": 30,
+      "section": "Conhecimentos Básicos",
+      "subject": "Legislação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Nos termos do Regimento Interno do TRT da 4ª Região, supervisionar os serviços da Assessoria de Juízes e decidir os conflitos de atribuições entre Juízes de primeiro grau é competência do",
+      "options": [
+        {
+          "key": "A",
+          "text": "Tribunal Pleno."
+        },
+        {
+          "key": "B",
+          "text": "Órgão Especial."
+        },
+        {
+          "key": "C",
+          "text": "Presidente do Tribunal."
+        },
+        {
+          "key": "D",
+          "text": "Vice-Presidente do Tribunal."
+        },
+        {
+          "key": "E",
+          "text": "Corregedor Regional."
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 8,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q031",
+      "number": 31,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "A plataforma Java EE define um padrão de arquitetura de três camadas para o desenvolvimento de aplicações *web*: Camada de Apresentação (*Web Tier)*, Camada de Negócio (*Business Tier)* e Camada de Integração (*EIS Tier)*. Na camada de Negócio são representados",
+      "options": [
+        {
+          "key": "A",
+          "text": "todos os componentes JSF (*Java Server Faces*)."
+        },
+        {
+          "key": "B",
+          "text": "componentes de persistência de objetos utilizando Hibernate e JPA (*Java Persistence API*)."
+        },
+        {
+          "key": "C",
+          "text": "os componentes EJB (*Enterprise JavaBeans*)."
+        },
+        {
+          "key": "D",
+          "text": "todos os componentes JSP."
+        },
+        {
+          "key": "E",
+          "text": "os bancos de dados."
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 9,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q032",
+      "number": 32,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Uma aplicação que trabalha com Hibernate e EJB possui uma classe POJO − *Plain Old Java Object* utilizada no mapeamento objeto-relacional com uma tabela do banco de dados. Nessa classe, há um atributo calculado chamado `valorTotalPedido` que, para ser utilizado apenas em tempo de execução e descartado após finalizar o seu serviço temporário, deverá ser anotado com",
+      "options": [
+        {
+          "key": "A",
+          "text": "`@Embedded`"
+        },
+        {
+          "key": "B",
+          "text": "`@TemporaryAttribute`"
+        },
+        {
+          "key": "C",
+          "text": "`@GeneratedValue`"
+        },
+        {
+          "key": "D",
+          "text": "`@Transient`"
+        },
+        {
+          "key": "E",
+          "text": "`@Basic`"
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": true,
+      "has_figure": false,
+      "figures": [],
+      "page": 9,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q033",
+      "number": 33,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": "t03",
+      "command": "__Atenção:__ Para responder às questões de números 33 e 34, utilize a página HTML abaixo.",
+      "statement": "Para que o comando `if` verifique se a opção marcada como resposta na questão do formulário é a opção d, que exibe o texto `uma linguagem de estilos`, a lacuna I deve ser preenchida por",
+      "options": [
+        {
+          "key": "A",
+          "text": "`document.frm.q1[3].checked=true`"
+        },
+        {
+          "key": "B",
+          "text": "`document.frm.q1[4].checked==true`"
+        },
+        {
+          "key": "C",
+          "text": "`document.frm.q1[3].checked`"
+        },
+        {
+          "key": "D",
+          "text": "`document.frm.q1.value['d'].checked==true`"
+        },
+        {
+          "key": "E",
+          "text": "`document.frm.q1[4].checked`"
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": true,
+      "has_figure": false,
+      "figures": [],
+      "page": 9,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q034",
+      "number": 34,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": "t03",
+      "command": "__Atenção:__ Para responder às questões de números 33 e 34, utilize a página HTML abaixo.",
+      "statement": "Para que o navegador saiba explicitamente que a página foi escrita na linguagem HTML5 é necessário inserir a instrução",
+      "options": [
+        {
+          "key": "A",
+          "text": "`<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 5.0//EN\" \"http://www.w3.org/TR/html5/strict.dtd\">` após da *tag* `<html>`."
+        },
+        {
+          "key": "B",
+          "text": "`<!DOCTYPE html>` antes da *tag* `<html>`."
+        },
+        {
+          "key": "C",
+          "text": "`<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 5.0 Transitional//EN\" \"http://www.w3.org/TR/html5/loose.dtd\">` antes da *tag* `<html>`."
+        },
+        {
+          "key": "D",
+          "text": "`<!DOCTYPE html5 PUBLIC>` antes da *tag* `<html>`."
+        },
+        {
+          "key": "E",
+          "text": "`<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 5.0 //PT-BR\" \"http://www.w3.org/TR/html5/html5.dtd\">` antes da *tag* `<html>`."
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": true,
+      "has_figure": false,
+      "figures": [],
+      "page": 10,
+      "topic_ids": [],
+      "review": "Alternativas A e E reconstruídas: no PDF a quebra de linha do DOCTYPE saiu fora de ordem na extração"
+    },
+    {
+      "id": "trt4-2015-analista-ti-q035",
+      "number": 35,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": "t04",
+      "command": "__Atenção:__ Para responder às questões de números 35 e 36, considere o programa Java abaixo.",
+      "statement": "Considere que o programa foi executado quatro vezes seguidas sendo fornecidos, consecutivamente, os valores `10`, `41`, `0` e `-2` para a variável d. Neste contexto, pode-se concluir corretamente que serão exibidos como resultado destas execuções, consecutivamente, os valores",
+      "options": [
+        {
+          "key": "A",
+          "text": "true, true, false, true."
+        },
+        {
+          "key": "B",
+          "text": "true, false, true, true."
+        },
+        {
+          "key": "C",
+          "text": "true, false, true, false."
+        },
+        {
+          "key": "D",
+          "text": "false, true, true, false."
+        },
+        {
+          "key": "E",
+          "text": "false, true, false, true."
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": true,
+      "has_figure": false,
+      "figures": [],
+      "page": 10,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q036",
+      "number": 36,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": "t04",
+      "command": "__Atenção:__ Para responder às questões de números 35 e 36, considere o programa Java abaixo.",
+      "statement": "Se a instrução `System.out.print(f(v, 3, 2, d));` for alterada para `System.out.print(f(v, 2, 3, d));` e para a variável d for fornecido o valor `51`, quando o programa for executado",
+      "options": [
+        {
+          "key": "A",
+          "text": "ocorrerá uma exceção do tipo *ArrayIndexOutOfBoundsException*."
+        },
+        {
+          "key": "B",
+          "text": "será exibido o valor *true*."
+        },
+        {
+          "key": "C",
+          "text": "ocorrerá uma exceção do tipo *ArrayOverflowException*."
+        },
+        {
+          "key": "D",
+          "text": "será exibido o valor *false*."
+        },
+        {
+          "key": "E",
+          "text": "não será exibido nenhum valor e não ocorrerá nenhuma exceção."
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": true,
+      "has_figure": false,
+      "figures": [],
+      "page": 10,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q037",
+      "number": 37,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Após a codificação terminar em alguma fase, a técnica para projeto de casos de teste conhecida como Caixa Preta terá como um de seus principais objetivos",
+      "options": [
+        {
+          "key": "A",
+          "text": "garantir que todos os caminhos independentes dentro de um módulo de *software* tenham sido exercitados pelo menos uma vez."
+        },
+        {
+          "key": "B",
+          "text": "exercitar todas as decisões lógicas para valores verdadeiros e falsos."
+        },
+        {
+          "key": "C",
+          "text": "garantir que todos os laços sejam testados dentro dos limites operacionais do sistema."
+        },
+        {
+          "key": "D",
+          "text": "encontrar funções incorretas ou ausentes."
+        },
+        {
+          "key": "E",
+          "text": "exercitar estruturas de dados internas para garantir a sua qualidade e validade."
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 11,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q038",
+      "number": 38,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Para determinar o tamanho do *software*, de acordo com a AFP, devem ser seguidos procedimentos de contagem compostos por várias etapas. Na etapa de contagem das funções de transação, são definidas as Entradas Externas (EE), Saídas Externas (SE) e Consultas Externas (CE). Dentre os exemplos de CE estão",
+      "options": [
+        {
+          "key": "A",
+          "text": "os dados passados entre *online* e *batch* dentro das fronteiras da mesma aplicação."
+        },
+        {
+          "key": "B",
+          "text": "as informações provenientes de cálculos ou procedimentos para obtenção de dados derivados."
+        },
+        {
+          "key": "C",
+          "text": "as mensagens de erros ou de confirmação associadas às EE, SE ou CE."
+        },
+        {
+          "key": "D",
+          "text": "os relatórios de vendas semanais que requerem o uso de algoritmos e cálculos."
+        },
+        {
+          "key": "E",
+          "text": "as operações de recuperação de *e-mail* de uma *mailbox*."
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 11,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q039",
+      "number": 39,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "O uso de herança pode otimizar o tempo de desenvolvimento das aplicações orientadas a objetos devido ao reaproveitamento de código. Quando se implementa herança",
+      "options": [
+        {
+          "key": "A",
+          "text": "uma subclasse pode se tornar uma superclasse a qualquer momento, bastando para tanto que se derive uma subclasse a partir dela."
+        },
+        {
+          "key": "B",
+          "text": "a superclasse herda os atributos da subclasse, incluindo os atributos privados, públicos e protegidos."
+        },
+        {
+          "key": "C",
+          "text": "múltipla na linguagem Java versão 6, a subclasse herda características de mais de uma superclasse."
+        },
+        {
+          "key": "D",
+          "text": "só é possível obter polimorfismo na aplicação se houver sobrecarga de métodos."
+        },
+        {
+          "key": "E",
+          "text": "os métodos de uma superclasse não podem ser sobrescritos nas subclasses, porém, podem ser sobrecarregados."
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 11,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q040",
+      "number": 40,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Um Tribunal está modelando:\nI. os processos de negócio para a construção de um novo sistema orientado a objetos;\nII. a interação entre os usuários e os requisitos funcionais, na fase de levantamento de requisitos.\nNesse contexto, considerando que a linguagem UML foi escolhida como única linguagem de modelagem, os diagramas que devem ser utilizados em I e II são, respectivamente,",
+      "options": [
+        {
+          "key": "A",
+          "text": "de Sequência e de Casos de Uso."
+        },
+        {
+          "key": "B",
+          "text": "*Business Process Model and Notation* e Diagrama de Comunicação."
+        },
+        {
+          "key": "C",
+          "text": "de Atividades e de Casos de Uso."
+        },
+        {
+          "key": "D",
+          "text": "Fluxogramas e Diagramas de Contexto."
+        },
+        {
+          "key": "E",
+          "text": "de Atividades e de Comunicação."
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 11,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q041",
+      "number": 41,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "De acordo com a ITIL v3, um Acordo de Nível de Serviço (ANS) é um compromisso entre um provedor de serviço de TI e um cliente. Um ANS\npode definir ...I... de um incidente, problema ou mudança com base em impacto e urgência para identificar os tempos requeridos para que ações adequadas sejam tomadas.\ndocumenta ...II..., um compromisso que é baseado nos requisitos de nível de serviço, necessário para garantir que o desenho do serviço de TI atenda a seu propósito.\nAs lacunas I e II correspondem, correta e respectivamente, a",
+      "options": [
+        {
+          "key": "A",
+          "text": "a prioridade − o entregável."
+        },
+        {
+          "key": "B",
+          "text": "a escalabilidade − o contrato de serviço."
+        },
+        {
+          "key": "C",
+          "text": "o risco − meta de nível de serviço."
+        },
+        {
+          "key": "D",
+          "text": "a prioridade − meta de nível de serviço."
+        },
+        {
+          "key": "E",
+          "text": "o risco − o entregável."
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 11,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q042",
+      "number": 42,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Os modelos COBIT 4.1 e CMMI 1.3 apresentam semelhanças e podem ser utilizados de forma concomitante em uma organização como o Tribunal Regional do Trabalho. O modelo de maturidade do COBIT",
+      "options": [
+        {
+          "key": "A",
+          "text": "é baseado em um método de avaliar a organização, permitindo que ela seja pontuada de um nível de maturidade Ad-hoc (0) a Otimizado (4). Este enfoque é igual ao do modelo SEI-CMMI, para medir a maturidade da capacidade de desenvolvimento de *software*."
+        },
+        {
+          "key": "B",
+          "text": "provê uma definição genérica para as escalas de maturidade, as quais são iguais às do CMMI, mas interpretadas de acordo com a natureza dos processos de gerenciamento de TI. Um modelo específico é fornecido derivando dessa escala genérica para cada um dos 38 processos COBIT."
+        },
+        {
+          "key": "C",
+          "text": "assim como o do CMMI, provê escalas bastante granulares, que são mais fáceis de utilizar e sugerem uma desejável precisão, já que o propósito do modelo é identificar onde estão os problemas e como definir prioridades para os aprimoramentos."
+        },
+        {
+          "key": "D",
+          "text": "da mesma forma que o enfoque original SEI-CMMI, tem a intenção de medir os níveis de maneira precisa, de forma a certificar que aquele nível foi exatamente atingido. A avaliação de maturidade do COBIT espera resultar em um perfil em que todas as condições para diversos níveis de maturidade sejam atingidas."
+        },
+        {
+          "key": "E",
+          "text": "possui níveis de maturidade, designados como perfis de processos de TI, que a organização reconheceria como descrição de possíveis situações atuais e futuras. Eles não são designados como um modelo em que não se pode avançar para o próximo nível sem antes ter cumprido todas as condições do nível inferior."
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 12,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q043",
+      "number": 43,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Considere que uma organização tenha implantado o Modelo de Referência MPS para *Software* (MR-MPS-SW) e tenha atingido o nível de maturidade B. Neste nível, denominado",
+      "options": [
+        {
+          "key": "A",
+          "text": "Em Otimização, todos os processos dos níveis de maturidade anteriores (G ao C) foram cumpridos. Este nível não possui processos específicos."
+        },
+        {
+          "key": "B",
+          "text": "Gerenciado Quantitativamente, o processo de Gerência de Projetos sofre sua segunda evolução, sendo acrescentados novos resultados para atender aos objetivos de gerenciamento quantitativo. Este nível não possui processos específicos."
+        },
+        {
+          "key": "C",
+          "text": "Parcialmente Definido, todos os processos dos níveis de maturidade anteriores (G ao C) foram cumpridos e são acrescidos os processos Avaliação e Melhoria do Processo Organizacional, Definição do Processo Organizacional, Gerência de Recursos Humanos e Gerência de Reutilização."
+        },
+        {
+          "key": "D",
+          "text": "Em Otimização, o processo Gerência de Projetos sofre sua primeira evolução, retratando seu novo propósito: gerenciar o projeto com base no processo definido para o projeto e nos planos integrados."
+        },
+        {
+          "key": "E",
+          "text": "Gerenciado Quantitativamente, todos os processos dos níveis de maturidade anteriores (F ao C) foram cumpridos e são acrescidos os processos Avaliação e Melhoria do Processo Organizacional, Definição do Processo Organizacional, Gerência de Recursos Humanos e Gerência de Reutilização."
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 12,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q044",
+      "number": 44,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "O PMBoK 4ª edição elenca dentre as ferramentas e técnicas de um processo: “*É possível realizar inspeções e auditorias solicitadas pelo comprador e apoiadas pelo fornecedor conforme especificado no contrato de aquisição durante a execução do projeto para verificar a conformidade nos processos de trabalho ou nas entregas do fornecedor. Se for autorizado por contrato, algumas equipes de inspeção e auditoria podem incluir pessoal de aquisições do comprador*”. Um Analista Judiciário identificou, corretamente, que se refere ao processo",
+      "options": [
+        {
+          "key": "A",
+          "text": "Monitorar e Controlar o Trabalho do Projeto da área de conhecimento Gerenciamento da Integração do Projeto."
+        },
+        {
+          "key": "B",
+          "text": "Administrar as Aquisições da área de conhecimento Gerenciamento das Aquisições do Projeto."
+        },
+        {
+          "key": "C",
+          "text": "Controlar os Custos da área de conhecimento Gerenciamento das Aquisições do Projeto."
+        },
+        {
+          "key": "D",
+          "text": "Administrar as Aquisições da área de conhecimento Gerenciamento dos Custos do Projeto."
+        },
+        {
+          "key": "E",
+          "text": "Gerenciar a Equipe do Projeto da área de conhecimento Gerenciamento das Partes Interessadas."
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 12,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q045",
+      "number": 45,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "No caso de ocorrer um evento que atinja recursos de TI vitais para uma organização, é essencial colocar rapidamente em ação um plano que reduza os impactos da interrupção de funções críticas e recupere as operações. Especialistas recomendam ações para se criar um bom plano de contingência, dentre as quais NÃO se encontra:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Desenvolver um documento de análise de risco. O comitê gestor de crise deve preparar uma análise de risco que inclua o impacto nos negócios em caso de desastres naturais, técnicos e humanos."
+        },
+        {
+          "key": "B",
+          "text": "Estabelecer prioridades. Tudo o que é crítico dentro de cada departamento deve ser cuidadosamente analisado e classificado."
+        },
+        {
+          "key": "C",
+          "text": "Preparar um documento que descreva em detalhes os procedimentos a serem tomados. A equipe de TI deve revisar, aprovar e publicar o plano de contingência, dispensando o apoio da alta gerência nesta tarefa."
+        },
+        {
+          "key": "D",
+          "text": "Criar procedimentos padrão para testes. É essencial que o plano de recuperação de desastres seja testado em uma base realista para checar se a organização está segura ou apontar procedimentos que devam ser aperfeiçoados."
+        },
+        {
+          "key": "E",
+          "text": "Montar um comitê de gestão de crise. A formação do comitê deve levar em consideração características pessoais e profissionais necessárias para cada desafio."
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 12,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q046",
+      "number": 46,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Considere que um Analista do Tribunal Regional do Trabalho ficou com a tarefa de definir um processo de tratamento dos riscos de segurança da informação de acordo com a Norma NBR ISO/IEC 27001:2013. Uma ação correta é:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Selecionar, de forma apropriada, as opções de tratamento dos riscos de segurança da informação, levando em consideração os resultados da avaliação do risco."
+        },
+        {
+          "key": "B",
+          "text": "Determinar quais os controles e objetivos de controle definidos pela Norma serão utilizados, sem a inclusão de controles adicionais não listados, como recomendado."
+        },
+        {
+          "key": "C",
+          "text": "Elaborar, cautelosamente, uma declaração de aplicabilidade que contenha os controles necessários e sua justificativa, já que a Norma recomenda que não haja exclusão de controles."
+        },
+        {
+          "key": "D",
+          "text": "Preparar um plano para tratamento dos riscos residuais de segurança da informação, obtendo a aprovação da alta gerência e dos técnicos de TI."
+        },
+        {
+          "key": "E",
+          "text": "Não reter a informação documentada relativa ao processo de tratamento dos riscos de segurança da informação no Tribunal, já que a Norma recomenda que este documento possa ser ajustado pelos *stakeholders* e seja público."
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 12,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q047",
+      "number": 47,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Considere os dois trechos de código PL/SQL do Oracle 11g.\nTrecho 1:\n```sql\nSQL> BEGIN\n2  FOR cont IN 1..3 LOOP\n3  DBMS_OUTPUT.PUT_LINE\n4    ('Dentro do loop, cont = ' ||\n     TO_CHAR(cont));\n5  END LOOP;\n6\n7  DBMS_OUTPUT.PUT_LINE\n8    ('Fora do loop, cont = ' ||\n     TO_CHAR(cont));\n9  END;\n10 /\n```\nTrecho 2:\n```sql\nSQL> DECLARE\n2  done BOOLEAN;\n3  BEGIN\n4  FOR cont IN 1..50 LOOP\n5  IF done THEN\n6  GOTO end_loop;\n7  END IF;\n8  <<end_loop>>\n9  END LOOP;\n10 END;\n11 /\n```\nO trecho",
+      "options": [
+        {
+          "key": "A",
+          "text": "1 e o trecho 2 estão corretos e irão executar sem erros."
+        },
+        {
+          "key": "B",
+          "text": "1 e o trecho 2 têm o mesmo erro: falta declarar a variável `cont`."
+        },
+        {
+          "key": "C",
+          "text": "2 tem erro, pois o *label* `<<end_loop>>` da linha 8 está escrito com sintaxe errada: não existem `<< >>.`"
+        },
+        {
+          "key": "D",
+          "text": "1 tem erro, pois não se pode referenciar a variável não declarada `cont` fora do `LOOP`."
+        },
+        {
+          "key": "E",
+          "text": "2 apresenta erro na declaração da variável `done` e faltou declarar a variável `cont`."
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": true,
+      "has_figure": false,
+      "figures": [],
+      "page": 13,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q048",
+      "number": 48,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "O Sistema Gerenciador de Banco de Dados (SGBD)",
+      "options": [
+        {
+          "key": "A",
+          "text": "SQL Server 2014 possui várias tecnologias de BI, como o *Integration Services*, uma plataforma que inclui pacotes que fornecem processamento de extração, transformação e carregamento (ETL) para armazenamento de dados."
+        },
+        {
+          "key": "B",
+          "text": "PostegreSQL 9.4 utiliza um modelo cliente/servidor. Uma sessão PostgreSQL consiste de 2 processos cooperativos: o processo servidor que executa as operações no BD e o processo usuário-cliente que gerencia os arquivos do BD."
+        },
+        {
+          "key": "C",
+          "text": "Oracle 11g utiliza o seguinte comando para criar um novo BD, denominado meuBD: `$createdatabase` meuBD."
+        },
+        {
+          "key": "D",
+          "text": "PostegreSQL utiliza o pacote DBMS_CONNECTION_POOL para gerenciar o *Database Resident Connection Pool*, cujos procedimentos são usados pelo Administrador para configurar parâmetros *pool* como *resize* e *trigger limit*."
+        },
+        {
+          "key": "E",
+          "text": "Oracle 11g permite que o *Analysis Services* e o *Reporting Services* possam ser instalados como servidores autônomos em aplicativos de serviço compartilhado em um *farm* do SharePoint."
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 13,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q049",
+      "number": 49,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Considere a arquitetura geral de um sistema de BI- Business Intelligence mostrada na figura abaixo.\n[figura]\nNesta arquitetura",
+      "options": [
+        {
+          "key": "A",
+          "text": "Data Marts representam áreas de armazenamento intermediário criadas a partir do processo de ETL. Auxiliam na transição dos dados das fontes OLTP para o destino final no Data Warehouse."
+        },
+        {
+          "key": "B",
+          "text": "OLAP é um subconjunto de informações extraído do Data Warehouse que pode ser identificado por assuntos ou departamentos específicos. Utiliza uma modelagem multidimensional conhecida como modelo estrela."
+        },
+        {
+          "key": "C",
+          "text": "os dados armazenados no Data Warehouse são integrados na base única mantendo as convenções de nomes, valores de variáveis e outros atributos físicos de dados como foram obtidos das bases de dados originais."
+        },
+        {
+          "key": "D",
+          "text": "o Data Warehouse não é volátil, permite apenas a carga inicial dos dados e consultas a estes dados. Além disso, os dados nele armazenados são precisos em relação ao tempo, não podendo ser atualizados."
+        },
+        {
+          "key": "E",
+          "text": "Data Mining se refere ao processo que, na construção do Data Warehouse, é utilizado para composição de análises e relatórios, armazenando dados descritivos e qualificando a respectiva métrica associada."
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": true,
+      "figures": [
+        {
+          "file": "assets/trt4-2015-analista-ti-q049.png",
+          "description": "Arquitetura de BI: fontes de dados (arquivos TXT, XLS, bancos de dados) passam pelo processo ETL (com staging area) e alimentam o Data Warehouse, que contém vários Data Marts; a partir dele, ferramentas de OLAP e de Data Mining são usadas pelos usuários."
+        }
+      ],
+      "page": 13,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q050",
+      "number": 50,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Considere que o Tribunal Regional do Trabalho possua em seu Banco de Dados a tabela Tab_Processos descrita abaixo.\nTabela Tab_Processos\n| Nro_Proc | Custas_Proc | Data_Alteracao |\n|---|---|---|\n| 1111111-10.2010.5.04.0000 | 910000.00 | 05-Jan-2010 |\n| 3333333-30.2012.5.04.0000 | 250000.00 | 07-Out-2012 |\n| 7777777-70.2011.5.04.0000 | 3200000.00 | 18-Fev-2011 |\n| 1234567-80.2010.5.04.0000 | 172500.00 | 23-Mai-2010 |\n| 1111111-10.2010.5.04.0000 | 80000.00 | 16-Mar-2013 |\n| 1234567-80.2010.5.04.0000 | 900000.00 | 31-Ago-2014 |\nConsidere que, após uma consulta, foi produzido o seguinte resultado:\n| Nro_Proc | SUM(Custas_Proc) |\n|---|---|\n| 1234567-80.2010.5.04.0000 | 1072500.00 |\n| 7777777-70.2011.5.04.0000 | 3200000.00 |\nO comando SQL utilizado para obter o resultado acima é:",
+      "options": [
+        {
+          "key": "A",
+          "text": "SELECT A1.Nro_Proc Custas_Proc, SUM(Custas_Proc) FROM Tab_Processos A1 GROUP BY Nro_Proc;"
+        },
+        {
+          "key": "B",
+          "text": "SELECT SUM(Custas_Proc) FROM Tab_Processos HAVING SUM(Custas_Proc) > 10000000.00;"
+        },
+        {
+          "key": "C",
+          "text": "SELECT Nro_Proc, Custas_Proc FROM Tab_Processos GROUP BY Data_Alteracao WHERE SUM(Custas_Proc) >=\n1000000.00;"
+        },
+        {
+          "key": "D",
+          "text": "SELECT Nro_Proc, Custas_Proc FROM Tab_Processos WHERE Custas_Proc > 1000000.00;"
+        },
+        {
+          "key": "E",
+          "text": "SELECT Nro_Proc, SUM(Custas_Proc) FROM Tab_Processos GROUP BY Nro_Proc HAVING SUM(Custas_Proc) >\n1000000.00;"
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": true,
+      "has_code": true,
+      "has_figure": false,
+      "figures": [],
+      "page": 14,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q051",
+      "number": 51,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Os *chipsets* das placas-mãe de Computadores Pessoais (PCs) realizam a interface com o *chip* do processador por meio das interfaces *Northbridge* e *Southbridge*. A interface *Northbridge* é utilizada para a comunicação do processador com",
+      "options": [
+        {
+          "key": "A",
+          "text": "a Placa de Rede."
+        },
+        {
+          "key": "B",
+          "text": "a Memória Principal."
+        },
+        {
+          "key": "C",
+          "text": "o Teclado."
+        },
+        {
+          "key": "D",
+          "text": "o Disco Rígido."
+        },
+        {
+          "key": "E",
+          "text": "a Memória Secundária."
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 14,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q052",
+      "number": 52,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Os processadores atualmente utilizados em Computadores Pessoais (PCs) realizam a execução das instruções em um ciclo de máquina. O recurso tecnológico embutido nesses processadores, para possibilitar isso, é denominado",
+      "options": [
+        {
+          "key": "A",
+          "text": "*Hypertrade.*"
+        },
+        {
+          "key": "B",
+          "text": "RISC."
+        },
+        {
+          "key": "C",
+          "text": "*Swapping.*"
+        },
+        {
+          "key": "D",
+          "text": "CISC."
+        },
+        {
+          "key": "E",
+          "text": "*Pipeline.*"
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 14,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q053",
+      "number": 53,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "No sistema operacional Windows Server 2008, com os serviços do Active Directory em funcionamento, o comando `dsmod`, do *prompt* de comandos, é utilizado, dentre outras funções, para",
+      "options": [
+        {
+          "key": "A",
+          "text": "listar os módulos de *kernel* em utilização."
+        },
+        {
+          "key": "B",
+          "text": "listar os usuários cadastrados no Active Directory."
+        },
+        {
+          "key": "C",
+          "text": "modificar os atributos de um computador existente no diretório."
+        },
+        {
+          "key": "D",
+          "text": "exibir os atributos dos arquivos de um diretório."
+        },
+        {
+          "key": "E",
+          "text": "exibir as propriedades de um objeto no diretório."
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": true,
+      "has_figure": false,
+      "figures": [],
+      "page": 14,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q054",
+      "number": 54,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "A possibilidade de compartilhar arquivos entre diferentes sistemas operacionais é fundamental para aumentar a produtividade computacional. A montagem automática de uma partição com sistema de arquivos CIFS, durante o *boot* do servidor com sistema operacional Linux, deve ser configurada no arquivo",
+      "options": [
+        {
+          "key": "A",
+          "text": "`/etc/fstab.`"
+        },
+        {
+          "key": "B",
+          "text": "`/boot/mount.`"
+        },
+        {
+          "key": "C",
+          "text": "`/etc/mount.`"
+        },
+        {
+          "key": "D",
+          "text": "`/boot/inittab.`"
+        },
+        {
+          "key": "E",
+          "text": "`/etc/initd.`"
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": true,
+      "has_figure": false,
+      "figures": [],
+      "page": 14,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q055",
+      "number": 55,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "O administrador de um computador com sistema operacional Linux SuSE alterou as permissões do arquivo `arq_meu.arq` utilizando o seguinte comando. `$ chmod 644 arq_meu.arq` O resultado da execução será que o arquivo `arq_meu.arq`",
+      "options": [
+        {
+          "key": "A",
+          "text": "ficará oculto para os outros usuários."
+        },
+        {
+          "key": "B",
+          "text": "poderá ser modificado e eliminado pelos usuários do grupo."
+        },
+        {
+          "key": "C",
+          "text": "poderá ser executado pelo usuário que o criou."
+        },
+        {
+          "key": "D",
+          "text": "poderá ser modificado pelo usuário que o criou."
+        },
+        {
+          "key": "E",
+          "text": "ficará oculto para os usuários do grupo."
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": true,
+      "has_figure": false,
+      "figures": [],
+      "page": 15,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q056",
+      "number": 56,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "O usuário de um computador com sistema operacional Linux utilizou um terminal *shell* e executou o `xcalc` seguido da tecla `Enter`. Para suspender a execução do `xcalc`, deve-se, no terminal *shell*, pressionar simultaneamente as teclas",
+      "options": [
+        {
+          "key": "A",
+          "text": "`Alt+z`."
+        },
+        {
+          "key": "B",
+          "text": "`Ctrl+z`."
+        },
+        {
+          "key": "C",
+          "text": "`Alt+x`."
+        },
+        {
+          "key": "D",
+          "text": "`Ctrl+x`."
+        },
+        {
+          "key": "E",
+          "text": "`Alt+c`."
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": true,
+      "has_figure": false,
+      "figures": [],
+      "page": 15,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q057",
+      "number": 57,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "O administrador de um computador com sistema operacional Linux deseja visualizar o estado das funções de rede de computadores. Executando o comando `netstat`, para visualizar a tabela de roteamento, deve-se utilizar a opção",
+      "options": [
+        {
+          "key": "A",
+          "text": "`-r`"
+        },
+        {
+          "key": "B",
+          "text": "`-l`"
+        },
+        {
+          "key": "C",
+          "text": "`-t`"
+        },
+        {
+          "key": "D",
+          "text": "`-i`"
+        },
+        {
+          "key": "E",
+          "text": "`-x`"
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": true,
+      "has_figure": false,
+      "figures": [],
+      "page": 15,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q058",
+      "number": 58,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Quando um novo computador é conectado e colocado em funcionamento em uma rede local de computadores, a primeira atividade desempenhada é a sua identificação, utilizando o endereço MAC, para a rede e o estabelecimento do relacionamento com um endereço IP. A mensagem inicial gerada pelo computador para a rede com esse propósito, utiliza o protocolo",
+      "options": [
+        {
+          "key": "A",
+          "text": "DHCP."
+        },
+        {
+          "key": "B",
+          "text": "ICMP."
+        },
+        {
+          "key": "C",
+          "text": "DNS."
+        },
+        {
+          "key": "D",
+          "text": "ARP."
+        },
+        {
+          "key": "E",
+          "text": "SNMP."
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 15,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q059",
+      "number": 59,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "O cabeçalho do protocolo IPv4 possui o campo denominado TTL (*Time to Live*) utilizado para configurar",
+      "options": [
+        {
+          "key": "A",
+          "text": "o máximo número de saltos entre roteadores para evitar que um pacote fique indefinidamente na rede."
+        },
+        {
+          "key": "B",
+          "text": "a data/hora que o pacote foi processado e transmitido pelo roteador origem da rede."
+        },
+        {
+          "key": "C",
+          "text": "o máximo tempo (em *milissegundos*) que o pacote deve permanecer na rede para evitar o congestionamento."
+        },
+        {
+          "key": "D",
+          "text": "a data/hora que o pacote deve ser descartado caso não tenha alcançado o destino."
+        },
+        {
+          "key": "E",
+          "text": "o mínimo tempo (em *milissegundos*) que o pacote deve permanecer na rede para evitar a não entrega."
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 15,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2015-analista-ti-q060",
+      "number": 60,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Como recurso de segurança, a rede de computadores do TRT possui um *Firewall,* instalado entre a Rede Local (LAN) e a Rede Ampla (WAN), e que inclui a DMZ. Para que o *Firewall* do TRT opere de forma adequada, na DMZ deve ser instalado o servidor de",
+      "options": [
+        {
+          "key": "A",
+          "text": "arquivos compartilhados na LAN."
+        },
+        {
+          "key": "B",
+          "text": "páginas web de acesso público."
+        },
+        {
+          "key": "C",
+          "text": "banco de dados do TRT."
+        },
+        {
+          "key": "D",
+          "text": "aplicativos do TRT."
+        },
+        {
+          "key": "E",
+          "text": "emails do TRT."
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 15,
+      "topic_ids": [],
+      "review": null
+    }
+  ]
+}

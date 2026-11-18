@@ -1,0 +1,24 @@
+{
+  "q_re": "^(\\d{1,2})\\)\\s*(.*)$",
+  "opt_re": "^([a-e])\\)\\s*(.*)$",
+  "letters": "abcde",
+  "first": 1,
+  "last": 60,
+  "start_after": "^RASCUNHO$",
+  "stop_at": "^INSTRUÇÕES GERAIS - PROVA DISCURSIVA",
+  "noise": [
+    "^IBFC_15 \\d+$",
+    "^\\d+ IBFC_15$",
+    "^RASCUNHO$"
+  ],
+  "header": [
+    "^Texto [IVX]+$",
+    "^Text [IVX]+$",
+    "^Considere a oração"
+  ],
+  "opt_cont_tab": true,
+  "section_headers": [
+    "^(LÍNGUA PORTUGUESA|NOÇÕES DE DIREITO|INGLÊS TÉCNICO|RACIOCÍNIO LÓGICO|CONHECIMENTOS ESPECÍFICOS)$"
+  ],
+  "xpos": true
+}
