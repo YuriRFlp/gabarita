@@ -21,6 +21,7 @@ export type GitSnapshot = {
 
 export type PreflightError =
   | { type: 'dirty_worktree' }
+  | { type: 'no_upstream' }
   | { type: 'not_pushed' }
   | { type: 'applied_migration_changed'; path: string }
   | { type: 'migration_out_of_order'; file: string; latestOnMain: string }
@@ -34,9 +35,8 @@ export function checkMigrationPreflight(
   const errors: PreflightError[] = [];
 
   if (snapshot.porcelainStatus.trim() !== '') errors.push({ type: 'dirty_worktree' });
-  if (snapshot.upstream === null || snapshot.upstream !== snapshot.head) {
-    errors.push({ type: 'not_pushed' });
-  }
+  if (snapshot.upstream === null) errors.push({ type: 'no_upstream' });
+  else if (snapshot.upstream !== snapshot.head) errors.push({ type: 'not_pushed' });
 
   const inMigrations = snapshot.changesSinceMain.filter((change) =>
     change.path.startsWith(MIGRATIONS_DIR),
@@ -78,6 +78,8 @@ export function describePreflightError(error: PreflightError): string {
   switch (error.type) {
     case 'dirty_worktree':
       return 'A árvore de trabalho tem mudanças não commitadas. Faça commit ou descarte antes de aplicar.';
+    case 'no_upstream':
+      return 'A branch atual não tem upstream. Rode git branch --set-upstream-to=origin/<branch> <branch> (ou git push -u origin <branch>).';
     case 'not_pushed':
       return 'O HEAD é diferente do upstream (branch não publicada ou desatualizada). Rode git push e confira o upstream.';
     case 'applied_migration_changed':

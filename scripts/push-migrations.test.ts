@@ -72,7 +72,7 @@ describe('CA-5 — checkMigrationPreflight', () => {
   });
 
   it('refuses when there is no upstream (unpublished branch)', () => {
-    expect(errorsOf({ upstream: null })).toEqual([{ type: 'not_pushed' }]);
+    expect(errorsOf({ upstream: null })).toEqual([{ type: 'no_upstream' }]);
   });
 
   it('refuses when HEAD differs from upstream', () => {
@@ -142,7 +142,7 @@ describe('CA-5 — checkMigrationPreflight', () => {
     });
     expect(errors.map((e) => e.type)).toEqual([
       'dirty_worktree',
-      'not_pushed',
+      'no_upstream',
       'applied_migration_changed',
       'invalid_migration_name',
       'migration_out_of_order',
@@ -170,7 +170,8 @@ describe('CA-5 — checkMigrationPreflight', () => {
 describe('CA-5 — describePreflightError', () => {
   it.each<[PreflightError, string]>([
     [{ type: 'dirty_worktree' }, 'mudanças'],
-    [{ type: 'not_pushed' }, 'upstream'],
+    [{ type: 'no_upstream' }, 'set-upstream-to'],
+    [{ type: 'not_pushed' }, 'git push'],
     [{ type: 'applied_migration_changed', path: 'supabase/migrations/a.sql' }, 'a.sql'],
     [{ type: 'migration_out_of_order', file: 'n.sql', latestOnMain: 'l.sql' }, 'l.sql'],
     [{ type: 'invalid_migration_name', file: 'x.sql' }, 'AAAAMMDDHHmmss'],
@@ -258,7 +259,7 @@ describe('CA-6 and CA-7 — pushMigrations', () => {
     await expect(pushMigrations(deps)).resolves.toBe('refused');
     expect(run).not.toHaveBeenCalled();
     expect(lines.join('\n')).toContain(describePreflightError({ type: 'dirty_worktree' }));
-    expect(lines.join('\n')).toContain(describePreflightError({ type: 'not_pushed' }));
+    expect(lines.join('\n')).toContain(describePreflightError({ type: 'no_upstream' }));
     expect(deps.linkedRef).not.toHaveBeenCalled();
   });
 
