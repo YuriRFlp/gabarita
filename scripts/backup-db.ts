@@ -308,13 +308,15 @@ export async function runBackup(deps: {
           interactive: true,
         })
       : null;
+  const detail = (tool: string, stderr: string) =>
+    stderr.trim() ? ` ${tool}: ${scrubSecret(stderr.trim(), env)}` : '';
   await fs.rm(encryption.archive);
   if (tar.code !== 0 || gpg === null || gpg.code !== 0) {
     await fs.rm(encryption.encrypted);
     return {
       ok: false,
       directory,
-      reason: `O backup está completo, mas a cópia criptografada (.tar.gz.gpg) não foi criada.${tar.stderr ? ` tar: ${scrubSecret(tar.stderr.trim(), env)}` : ''}`,
+      reason: `O backup está completo, mas a cópia criptografada (.tar.gz.gpg) não foi criada.${detail('tar', tar.stderr)}${detail('gpg', gpg?.stderr ?? '')}`,
     };
   }
 

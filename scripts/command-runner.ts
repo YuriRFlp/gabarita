@@ -17,10 +17,14 @@ export type CommandRunner = (
 // pg_dump output can be large; the default 1 MiB buffer would kill the process.
 const MAX_BUFFER = 512 * 1024 * 1024;
 
+// When env is given it replaces process.env; NODE_ENV is re-added because the ProcessEnv typings require it.
+const childEnv = (env: Record<string, string | undefined> | undefined) =>
+  env && { ...env, NODE_ENV: process.env.NODE_ENV };
+
 const runInteractive: CommandRunner = (command, args, options) =>
   new Promise((resolve) => {
     const child = spawn(command, [...args], {
-      env: options?.env && { ...options.env, NODE_ENV: process.env.NODE_ENV },
+      env: childEnv(options?.env),
       cwd: options?.cwd,
       stdio: 'inherit',
     });
@@ -39,11 +43,7 @@ const runCaptured: CommandRunner = (command, args, options) =>
       command,
       [...args],
       {
-        // When env is given it replaces process.env; NODE_ENV is re-added because the ProcessEnv typings require it.
-        env: options?.env && {
-          ...options.env,
-          NODE_ENV: process.env.NODE_ENV,
-        },
+        env: childEnv(options?.env),
         cwd: options?.cwd,
         encoding: 'utf8',
         maxBuffer: MAX_BUFFER,

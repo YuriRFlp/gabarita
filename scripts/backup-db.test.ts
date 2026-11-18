@@ -392,6 +392,7 @@ type Overrides = {
   failOn?: 'roles.sql' | 'schema.sql' | 'data.sql';
   data?: string;
   gpgFails?: boolean;
+  tarStderr?: string;
 };
 
 function fakeRun(overrides: Overrides = {}) {
@@ -412,6 +413,9 @@ function fakeRun(overrides: Overrides = {}) {
     }
     if (command === 'git') return ok(`${COMMIT}\n`);
     if (command === 'gpg' && overrides.gpgFails) return { code: 2, stdout: '', stderr: 'no tty' };
+    if (command === 'tar' && overrides.tarStderr !== undefined) {
+      return { code: 2, stdout: '', stderr: overrides.tarStderr };
+    }
     if (command === 'tar' || command === 'gpg') return ok('');
     if (line.includes('--version')) return ok('3.2.0\n');
     if (line.includes('--role-only')) return ok('CREATE ROLE x;\n');
@@ -617,5 +621,19 @@ describe('CA-18, CA-20, CA-21 and CA-22 — runBackup', () => {
     expect(result).toMatchObject({ ok: false, directory: `${base}/${NAME}` });
     expect(memory.removed.some((path) => /T120000Z$/.test(path))).toBe(false);
     expect(memory.removed).toContain(`${base}/${NAME}.tar.gz`);
+  });
+
+  it('shows the tar error without the database password and does not call gpg', async () => {
+    const memory = memoryFs();
+    const runner = fakeRun({ tarStderr: `tar: cannot write with ${env.SUPABASE_DB_PASSWORD}` });
+
+    const result = await runBackup(deps(memory, runner));
+
+    expect(result).toMatchObject({ ok: false, directory: `${base}/${NAME}` });
+    const reason = result.ok ? '' : result.reason;
+    expect(reason).toContain('tar: tar: cannot write with ***');
+    expect(reason).not.toContain(env.SUPABASE_DB_PASSWORD);
+    expect(runner.calls.some((call) => call.command === 'gpg')).toBe(false);
+    expect([...memory.dirs.keys()].some((key) => key.endsWith('.incomplete'))).toBe(false);
   });
 });
