@@ -336,7 +336,8 @@ describe('CA-22 — gpg arguments', () => {
     expect(gpg.command).toBe('gpg');
     expect(gpg.args).toContain('--symmetric');
     expect(gpg.args).toEqual(expect.arrayContaining(['--output', encrypted, archive]));
-    expect(gpg.args.join(' ')).not.toMatch(/passphrase|--batch|pinentry/i);
+    expect(gpg.args.join(' ')).not.toMatch(/passphrase|--batch/i);
+    expect(gpg.args).toEqual(expect.arrayContaining(['--pinentry-mode', 'loopback']));
   });
 });
 
@@ -394,9 +395,9 @@ type Overrides = {
 };
 
 function fakeRun(overrides: Overrides = {}) {
-  const calls: Array<{ command: string; args: readonly string[] }> = [];
-  const run: CommandRunner = async (command, args) => {
-    calls.push({ command, args });
+  const calls: Array<{ command: string; args: readonly string[]; interactive?: boolean }> = [];
+  const run: CommandRunner = async (command, args, options) => {
+    calls.push({ command, args, interactive: options?.interactive });
     const ok = (stdout: string): CommandResult => ({ code: 0, stdout, stderr: '' });
     const line = args.join(' ');
     const dump = !args.includes('dump')
@@ -463,6 +464,7 @@ describe('CA-18, CA-20, CA-21 and CA-22 — runBackup', () => {
     const commands = runner.calls.map((call) => call.command);
     expect(commands).toContain('tar');
     expect(commands).toContain('gpg');
+    expect(runner.calls.find((call) => call.command === 'gpg')?.interactive).toBe(true);
     expect(memory.removed).toContain(`${base}/${NAME}.tar.gz`);
   });
 

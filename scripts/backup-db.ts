@@ -136,7 +136,16 @@ export function encryptionCommands(
     tar: { command: 'tar', args: ['-czf', archive, '-C', base, name] },
     gpg: {
       command: 'gpg',
-      args: ['--symmetric', '--cipher-algo', 'AES256', '--output', encrypted, archive],
+      args: [
+        '--pinentry-mode',
+        'loopback',
+        '--symmetric',
+        '--cipher-algo',
+        'AES256',
+        '--output',
+        encrypted,
+        archive,
+      ],
     },
   };
 }
@@ -293,7 +302,11 @@ export async function runBackup(deps: {
   const tar = await run(encryption.tar.command, encryption.tar.args, { cwd: repoRoot, env });
   const gpg =
     tar.code === 0
-      ? await run(encryption.gpg.command, encryption.gpg.args, { cwd: repoRoot, env })
+      ? await run(encryption.gpg.command, encryption.gpg.args, {
+          cwd: repoRoot,
+          env,
+          interactive: true,
+        })
       : null;
   await fs.rm(encryption.archive);
   if (tar.code !== 0 || gpg === null || gpg.code !== 0) {
@@ -301,7 +314,7 @@ export async function runBackup(deps: {
     return {
       ok: false,
       directory,
-      reason: 'O backup está completo, mas a cópia criptografada (.tar.gz.gpg) não foi criada.',
+      reason: `O backup está completo, mas a cópia criptografada (.tar.gz.gpg) não foi criada.${tar.stderr ? ` tar: ${scrubSecret(tar.stderr.trim(), env)}` : ''}`,
     };
   }
 

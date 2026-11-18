@@ -35,4 +35,14 @@ describe('runCommand', () => {
     const result = await runCommand('gabarita-no-such-command', []);
     expect(result.code).not.toBe(0);
   });
+
+  it('runs interactively, returning only the exit code', async () => {
+    const result = await runCommand('node', ['-e', 'process.exit(4)'], { interactive: true });
+    expect(result).toEqual({ code: 4, stdout: '', stderr: '' });
+  });
+
+  it('returns a non-zero code when an interactive command does not exist', async () => {
+    const result = await runCommand('gabarita-no-such-command', [], { interactive: true });
+    expect(result.code).not.toBe(0);
+  });
 });

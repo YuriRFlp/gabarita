@@ -99,7 +99,14 @@ O `gpg` pede a senha por um programa de pinentry. Em terminal do WSL ou em sess�
 - exporte `GPG_TTY=$(tty)` na sessão antes de rodar o backup;
 - para criptografar ou descriptografar à mão, acrescente `--pinentry-mode loopback`, que faz o `gpg` pedir a senha direto no terminal.
 
-Esta nota vem do comportamento conhecido do `gpg`; **a confirmar** na primeira execução real do backup se `GPG_TTY` basta quando o `gpg` é chamado pelo script.
+Na primeira execução real, o `gpg` chamado com a saída capturada não tinha terminal para pedir a senha e a cópia criptografada não foi criada. O script agora roda o `gpg` com o terminal herdado e `--pinentry-mode loopback`, e o próprio `gpg` pede a senha: ela nunca passa por argumento, variável ou pelo script. Se mesmo assim falhar, criptografe à mão o backup já exportado:
+
+```bash
+cd ~/gabarita-backups
+tar -czf <nome>.tar.gz <nome>
+gpg --pinentry-mode loopback --symmetric --cipher-algo AES256 --output <nome>.tar.gz.gpg <nome>.tar.gz
+rm <nome>.tar.gz
+```
 
 ## 8. Registro de ensaios de restauração
 
