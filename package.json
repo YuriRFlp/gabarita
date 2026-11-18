@@ -27,7 +27,13 @@
     "db:test": "supabase test db",
     "db:types": "supabase gen types typescript --local > src/shared/supabase/database.types.ts",
     "tokens": "node scripts/generate-tokens-css.ts",
-    "e2e:user": "node scripts/create-test-user.ts"
+    "e2e:user": "node scripts/create-test-user.ts",
+    "db:link": "supabase link --project-ref",
+    "db:push": "node scripts/push-migrations.ts",
+    "db:test:remote": "node scripts/test-remote.ts",
+    "backup": "node scripts/backup-db.ts",
+    "backup:verify": "node scripts/verify-backup.ts",
+    "check:prod": "node scripts/check-production.ts"
   },
   "dependencies": {
     "@supabase/ssr": "0.12.7",
