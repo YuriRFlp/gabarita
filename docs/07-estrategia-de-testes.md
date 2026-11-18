@@ -35,6 +35,13 @@ Derivados de `docs/04-regras-de-estudo.md`; cada um vira teste com nome descriti
 | `npm run test:int` | Integração (`*.int.test.ts`) | Sim | Não |
 | `npm run db:test` | pgTAP | Sim | Não |
 | `npm run test:e2e` | E2E (reseta o banco antes) | Sim | Não |
+| `npm run backup:verify -- <diretório>` | Ensaio de restauração de um backup no Supabase local (compara contagens com o manifesto) | Sim | Não |
+| `npm run db:test:remote` | pgTAP contra o projeto remoto ligado, depois de cada `db:push` | Sim | Não |
+| `npm run check:prod` | Checagem sem credenciais contra produção (redirecionamento, cabeçalhos, cadastro desligado, acesso anônimo às 21 tabelas) | Não | Não |
+
+Os scripts de implantação e backup (`scripts/push-migrations.ts`, `backup-db.ts`, `verify-backup.ts`, `check-production.ts`) têm testes unitários no `npm test` (executor de comandos e `fetch` injetados: nenhum toca rede, Docker ou o remoto) e, portanto, rodam no CI. A restauração de `backup:verify` tem teste de integração (`scripts/verify-backup.int.test.ts`) no `npm run test:int`.
+
+**O que roda contra produção:** somente `db:test:remote` (pgTAP em transação com `rollback`, sem deixar dados) e `check:prod` (só leitura, sem credenciais), ambos manuais, depois de cada migração ou implantação. Não há E2E com login real contra produção; o checklist manual de implantação cobre o login real (SPEC-002, `docs/operacao/implantacao.md`).
 
 O CI (`.github/workflows/ci.yml`) roda `lint`, `typecheck`, `format:check`, `test` e `build` em todo push e pull request. pgTAP, integração e E2E rodam localmente e são exigidos pela Definição de pronto (doc 06) antes de fechar uma tarefa.
 

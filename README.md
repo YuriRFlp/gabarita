@@ -10,7 +10,7 @@ O princípio central: em concurso, o que conta é **o quanto você lembra na hor
 
 ## Estado atual
 
-Fundação da aplicação concluída ([SPEC-001](docs/specs/SPEC-001-fundacao-da-aplicacao.md)); próximos passos: módulos do MVP.
+Fundação da aplicação concluída ([SPEC-001](docs/specs/SPEC-001-fundacao-da-aplicacao.md)); implantação em andamento ([SPEC-002](docs/specs/SPEC-002-implantacao.md), runbooks em `docs/operacao/`); próximos passos: módulos do MVP.
 
 | Item | Situação |
 |---|---|
@@ -18,6 +18,7 @@ Fundação da aplicação concluída ([SPEC-001](docs/specs/SPEC-001-fundacao-da
 | Schema do banco, RLS e testes pgTAP | ✅ `supabase/` |
 | Identidade visual e design system | ✅ `public/brand/`, `design/` |
 | Fundação: Next.js, login, tema, casca, CI | ✅ SPEC-001 |
+| Implantação (Vercel + Supabase remoto), backup e runbooks | 🚧 SPEC-002 em implementação |
 | Módulos do MVP | ⏳ próximas specs |
 
 ## Estrutura do repositório
@@ -31,7 +32,7 @@ data/seed/            Dados de origem (taxonomia, concursos, rubricas) em JSON
 design/               Tokens e estilos dos componentes
 docs/                 Documentação do projeto (comece por docs/README.md)
 public/brand/         Logo, símbolo e ícone do app
-scripts/              Utilitários (seed, tokens, usuário de teste)
+scripts/              Utilitários (seed, tokens, usuário de teste, migração, backup, checagem de produção)
 supabase/             Configuração local, migrações, seed e testes pgTAP
 ```
 
@@ -63,7 +64,15 @@ Variáveis de ambiente: só `NEXT_PUBLIC_SUPABASE_URL` e `NEXT_PUBLIC_SUPABASE_P
 | `npm run db:types` | Regenera os tipos do banco |
 | `npm run tokens` | Regenera `tokens.css` a partir de `design/tokens.json` |
 | `python scripts/generate_seed.py` | Regenera `supabase/seed.sql` a partir do JSON |
+| `npm run db:link -- <ref>` | Liga o repositório ao projeto Supabase remoto (uma vez por máquina) |
+| `npm run db:push` | Aplica migrações e seed no remoto, com guardas e confirmação (precisa de `SUPABASE_DB_PASSWORD` na sessão) |
+| `npm run db:test:remote` | pgTAP contra o remoto, depois do `db:push` |
+| `npm run backup` | Exporta papéis, schema e dados do remoto para fora do repositório, com cópia criptografada |
+| `npm run backup:verify -- <diretório>` | Ensaio de restauração de um backup no Supabase local |
+| `npm run check:prod` | Checagem sem credenciais contra a produção |
+
+Os comandos de implantação e backup rodam só na máquina do dono do projeto e exigem Docker. Procedimentos: [implantação](docs/operacao/implantacao.md) e [backup e restauração](docs/operacao/backup-e-restauracao.md). A URL de produção não é publicada neste repositório.
 
 ## Documentação
 
-Veja [docs/README.md](docs/README.md).
+Veja [docs/README.md](docs/README.md). Runbooks de operação em [docs/operacao/](docs/operacao/).

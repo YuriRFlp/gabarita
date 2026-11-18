@@ -9,6 +9,7 @@
 | [05 — Identidade visual](05-identidade-visual.md) | Logo, cores, tipografia, componentes e onde ficam os arquivos |
 | [06 — Padrões de código](06-padroes-de-codigo.md) | Estrutura de pastas, camadas, nomenclatura, definição de pronto |
 | [07 — Estratégia de testes](07-estrategia-de-testes.md) | Pirâmide de testes, casos obrigatórios, jornadas E2E |
+| [Operação](operacao/) | Runbooks: [implantação](operacao/implantacao.md) e [backup e restauração](operacao/backup-e-restauracao.md) |
 | [Specs por funcionalidade](specs/) | Plano técnico e critérios de aceite de cada funcionalidade, antes do código |
 | [Decisões (ADRs)](adr/) | Registro das decisões de arquitetura e o porquê de cada uma |
 

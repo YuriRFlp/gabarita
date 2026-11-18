@@ -87,6 +87,7 @@ supabase/tests/               pgTAP (RLS, restrições, visões)
 ## Banco (Supabase)
 
 - Toda mudança de schema é uma **nova** migração em `supabase/migrations/`; migração já aplicada não se edita.
+- A migração é aplicada no remoto **antes** do merge e precisa ser compatível com o código que está em produção: aditiva (tabela, coluna anulável ou com padrão, valor novo de enum, índice). Mudança que quebra o código antigo (renomear, apagar, `not null` sem padrão) é feita em duas etapas, expandir e depois contrair. O `revisor-codigo` confere essa regra.
 - Toda tabela nova tem RLS ativa e política conforme ADR-005, com teste pgTAP.
 - Visões com `security_invoker = true`.
 - `service_role` nunca no código da aplicação.
@@ -103,6 +104,7 @@ supabase/tests/               pgTAP (RLS, restrições, visões)
 ## Segurança
 
 - Chaves só em variáveis de ambiente do servidor; nada com `NEXT_PUBLIC_` além da URL e da chave publicável do Supabase (`NEXT_PUBLIC_SUPABASE_URL` e `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`).
+- A senha do banco remoto (`SUPABASE_DB_PASSWORD`) só existe como variável de ambiente da sessão do terminal: nunca em arquivo versionado, em `.env*` nem em segredo do GitHub Actions.
 - Toda entrada externa (formulário, JSON colado do chat do Claude, importação de questões) é validada com Zod antes de tocar o banco.
 - Markdown de materiais é renderizado sanitizado.
 
