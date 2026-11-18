@@ -2,6 +2,8 @@
 
 **Status:** aceito · **Data:** 2026-11-18 · **Origem:** [SPEC-002](../specs/SPEC-002-implantacao.md)
 
+> **Nota de status (2026-11-18):** o item **Backup**, nos pontos de criptografia (`--symmetric`) e envio ao Google Drive, é substituído em parte pelo [ADR-009](ADR-009-backup-chave-publica-e-pasta-sincronizada.md) (proposto, passa a valer com a aprovação da SPEC-003). O restante deste ADR continua aceito.
+
 ## Contexto
 O Gabarita vai para o ar no plano gratuito da Vercel e do Supabase (ADR-001). O repositório é público, o desenvolvimento é feito por uma pessoa e há um único usuário (ADR-005). O plano gratuito do Supabase não tem backup automático nem download de backup pelo painel, e pausa o projeto após 7 dias sem uso. Era preciso decidir de onde as migrações chegam ao banco remoto, onde mora a senha do banco, como e onde o backup é feito e se existe um ambiente intermediário entre o local e a produção.
 

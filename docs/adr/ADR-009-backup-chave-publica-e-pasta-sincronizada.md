@@ -1,0 +1,33 @@
+# ADR-009 — Backup criptografado com chave pública e cópia para pasta sincronizada
+
+**Status:** proposto · **Data:** 2026-11-18 · **Origem:** [SPEC-003](../specs/SPEC-003-backup-chave-publica-e-copia-na-nuvem.md) · **Substitui em parte:** [ADR-008](ADR-008-implantacao-e-backup-locais.md) (só o item Backup, nos pontos de criptografia e envio)
+
+## Contexto
+O ADR-008 definiu o backup semanal e manual, com cópia fora da máquina numa pasta privada do Google Drive, criptografada com `gpg --symmetric`. Na prática isso deixou dois passos manuais a cada backup: digitar a senha do `gpg` e enviar o `.tar.gz.gpg` ao Drive pelo navegador. Nenhum dos dois protege algo: a senha simétrica é a mesma que abre todas as cópias, e o envio pelo navegador só depende de lembrar. O que precisa continuar igual é o que o ADR-008 protege: a senha do banco só na sessão do terminal, nenhum segredo em arquivo ou no GitHub (repositório público), custo zero e o texto puro do backup (com e-mail e hash da senha de `auth.users`) longe de terceiros. O dono usa o Google Drive para computador no Windows, em modo **Espelhar arquivos**, cuja pasta o WSL enxerga em `/mnt/c/Users/<usuário>/My Drive`.
+
+## Decisão
+- **Criptografia por chave pública:** com `GABARITA_GPG_RECIPIENT` definida (impressão digital completa de 40 caracteres), o `npm run backup` criptografa com `gpg --batch --trust-model always --encrypt --recipient <impressão digital>`, sem pedir senha e sem terminal, depois de conferir no chaveiro que a chave existe, não está revogada, expirada ou inválida e tem capacidade de criptografia. Valor em outro formato (e-mail, nome, ID curto ou longo) recusa antes de conectar.
+- **Modo simétrico como alternativa:** sem a variável, o backup continua com `gpg --symmetric` (comportamento do ADR-008), com aviso explícito no início. As cópias antigas abrem com o mesmo `gpg --decrypt`; a senha simétrica fica no gerenciador até a última cópia simétrica sair da retenção.
+- **Chave de backup:** curva 25519, **sem expiração**, senha gerada pelo gerenciador de senhas. A chave privada exportada em ASCII e o certificado de revogação ficam numa nota segura do gerenciador; a senha da chave, num item separado. Nunca no repositório, em `.env*`, em argumento, em variável ou na pasta do Drive. Segunda cópia offline é opcional.
+- **Envio por pasta sincronizada:** com `GABARITA_CLOUD_DIR` definida, o script copia **só** o `<nome>.tar.gz.gpg` para a pasta espelhada do Google Drive (via arquivo `.partial` e renomeação), confere o SHA-256 e aplica a mesma retenção da pasta local (`GABARITA_BACKUP_KEEP`, 8 cópias), apagando só arquivos com o nome exato das cópias. Quem envia ao Google é o aplicativo do Drive, já autenticado no Windows: o projeto não guarda credencial do Google. O script não cria a pasta da nuvem.
+- **Guardas de pasta:** a base local não pode ficar num disco do Windows (`/mnt/<letra>/`), para o texto puro nunca ficar ao alcance de sincronizadores do Windows; a pasta da nuvem não pode estar no repositório nem se sobrepor à base local.
+- **Falha só da cópia:** o backup local continua válido e podado; o script sai com código `2` (diferente de sucesso `0` e de falha `1`) e orienta a cópia manual.
+- **Verificação:** `npm run backup:verify` aceita também o `.tar.gz.gpg` (descriptografa com a senha da chave privada pedida pelo `gpg`, confere as entradas do pacote, restaura no Supabase local e apaga a pasta temporária). O ensaio trimestral usa a cópia do Drive e inclui importar a chave guardada no gerenciador num `GNUPGHOME` temporário.
+- **Continua do ADR-008:** backup manual e disparado pelo dono, semanal e antes de cada `db:push` com migração; senha do banco só na sessão; cópia primária em `~/gabarita-backups/`; restauração em produção só pelo runbook.
+
+## Alternativas consideradas
+- **Manter `--symmetric` com a senha em arquivo ou variável (`--passphrase-file`):** elimina a digitação, mas deixa em disco ou no ambiente uma senha que abre todas as cópias. A chave pública não exige nenhum segredo no momento do backup.
+- **Exigir a chave pública e remover o modo simétrico:** mais simples de raciocinar, mas o backup quebraria até a chave ser configurada. Pode ser feito numa spec futura, depois de todas as cópias simétricas saírem da retenção.
+- **Chave com validade (por exemplo, 2 anos):** limita a vida de uma chave vazada, mas faria o backup recusar num dia qualquer e exigiria um rito de renovação; para uso pessoal, o certificado de revogação guardado cobre o caso de vazamento.
+- **Enviar pela API do Google Drive (rclone, OAuth, conta de serviço):** traria um token do Google para a máquina sem ganho sobre a pasta sincronizada.
+- **Assinar o backup (`--sign`):** provaria a origem, mas exigiria a senha da chave privada a cada backup, o que esta decisão quer eliminar. A barreira contra arquivo forjado é o acesso ao Drive, mais a conferência do pacote e das contagens no `backup:verify`.
+- **Agendar o backup sem o dono (cron no WSL, Agendador de Tarefas do Windows, GitHub Actions):** exigiria a senha do banco em disco ou num chaveiro destravado sem o dono (contra o ADR-008), WSL e Docker ligados no horário e um canal de aviso de falha. Reavaliar se o backup semanal for esquecido na prática (por exemplo, duas lacunas de mais de 14 dias entre backups seguidos) ou se o repositório ficar privado, com spec e ADR próprios.
+- **Emendar o ADR-008:** ADR aceito não se reescreve; o ADR-008 recebe só uma nota de status apontando para este.
+
+## Consequências
+- O backup semanal passa a pedir só a senha do banco; o `gpg` não pede nada e a cópia chega ao Drive sem passo manual.
+- **A restauração passa a depender da chave privada e da senha dela.** Sem as duas, as cópias em modo chave pública ficam ilegíveis para sempre. Por isso o runbook exige a chave e o certificado de revogação no gerenciador e o teste trimestral da cópia guardada num `GNUPGHOME` temporário; o `~/.gnupg` do WSL nunca é a única cópia.
+- O gerenciador de senhas passa a guardar a senha do banco, a chave privada e a senha dela: quem tiver o cofre e o Drive lê os backups. Aceito, no mesmo nível de confiança que já existia.
+- Arquivo copiado para a pasta espelhada não é arquivo no Drive: se o aplicativo estiver parado, a cópia fica só no disco do Windows. O primeiro backup e cada ensaio conferem as cópias pela web; as apagadas pela retenção ficam 30 dias na lixeira do Drive (criptografadas).
+- Se o Google Drive para computador mudar para o modo "transmitir", o caminho da pasta muda e o runbook precisa ser revisto.
+- O doc 06 § Segurança ganha a regra da chave privada e da senha do `gpg` fora do repositório, de argumentos e de variáveis; o doc 07 registra o teste de integração do `gpg` com chave descartável em `GNUPGHOME` temporário.

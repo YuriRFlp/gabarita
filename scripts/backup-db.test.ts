@@ -336,7 +336,8 @@ describe('CA-22 — gpg arguments', () => {
     expect(gpg.command).toBe('gpg');
     expect(gpg.args).toContain('--symmetric');
     expect(gpg.args).toEqual(expect.arrayContaining(['--output', encrypted, archive]));
-    expect(gpg.args.join(' ')).not.toMatch(/passphrase|--batch|pinentry/i);
+    expect(gpg.args.join(' ')).not.toMatch(/passphrase|--batch/i);
+    expect(gpg.args).toEqual(expect.arrayContaining(['--pinentry-mode', 'loopback']));
   });
 });
 
@@ -391,12 +392,13 @@ type Overrides = {
   failOn?: 'roles.sql' | 'schema.sql' | 'data.sql';
   data?: string;
   gpgFails?: boolean;
+  tarStderr?: string;
 };
 
 function fakeRun(overrides: Overrides = {}) {
-  const calls: Array<{ command: string; args: readonly string[] }> = [];
-  const run: CommandRunner = async (command, args) => {
-    calls.push({ command, args });
+  const calls: Array<{ command: string; args: readonly string[]; interactive?: boolean }> = [];
+  const run: CommandRunner = async (command, args, options) => {
+    calls.push({ command, args, interactive: options?.interactive });
     const ok = (stdout: string): CommandResult => ({ code: 0, stdout, stderr: '' });
     const line = args.join(' ');
     const dump = !args.includes('dump')
@@ -411,6 +413,9 @@ function fakeRun(overrides: Overrides = {}) {
     }
     if (command === 'git') return ok(`${COMMIT}\n`);
     if (command === 'gpg' && overrides.gpgFails) return { code: 2, stdout: '', stderr: 'no tty' };
+    if (command === 'tar' && overrides.tarStderr !== undefined) {
+      return { code: 2, stdout: '', stderr: overrides.tarStderr };
+    }
     if (command === 'tar' || command === 'gpg') return ok('');
     if (line.includes('--version')) return ok('3.2.0\n');
     if (line.includes('--role-only')) return ok('CREATE ROLE x;\n');
@@ -463,6 +468,7 @@ describe('CA-18, CA-20, CA-21 and CA-22 — runBackup', () => {
     const commands = runner.calls.map((call) => call.command);
     expect(commands).toContain('tar');
     expect(commands).toContain('gpg');
+    expect(runner.calls.find((call) => call.command === 'gpg')?.interactive).toBe(true);
     expect(memory.removed).toContain(`${base}/${NAME}.tar.gz`);
   });
 
@@ -615,5 +621,19 @@ describe('CA-18, CA-20, CA-21 and CA-22 — runBackup', () => {
     expect(result).toMatchObject({ ok: false, directory: `${base}/${NAME}` });
     expect(memory.removed.some((path) => /T120000Z$/.test(path))).toBe(false);
     expect(memory.removed).toContain(`${base}/${NAME}.tar.gz`);
+  });
+
+  it('shows the tar error without the database password and does not call gpg', async () => {
+    const memory = memoryFs();
+    const runner = fakeRun({ tarStderr: `tar: cannot write with ${env.SUPABASE_DB_PASSWORD}` });
+
+    const result = await runBackup(deps(memory, runner));
+
+    expect(result).toMatchObject({ ok: false, directory: `${base}/${NAME}` });
+    const reason = result.ok ? '' : result.reason;
+    expect(reason).toContain('tar: tar: cannot write with ***');
+    expect(reason).not.toContain(env.SUPABASE_DB_PASSWORD);
+    expect(runner.calls.some((call) => call.command === 'gpg')).toBe(false);
+    expect([...memory.dirs.keys()].some((key) => key.endsWith('.incomplete'))).toBe(false);
   });
 });

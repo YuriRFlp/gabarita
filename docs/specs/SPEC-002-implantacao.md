@@ -1,6 +1,6 @@
 # SPEC-002 — Implantação
 
-**Status:** em-implementacao · **Criada:** 2026-11-17 · **Atualizada:** 2026-11-18
+**Status:** concluida · **Criada:** 2026-11-17 · **Atualizada:** 2026-11-18
 **Módulo:** — (infraestrutura: `scripts/`, `vercel.json`, `next.config.ts`, `docs/operacao/`) · **ADRs relacionados:** ADR-001, ADR-004, ADR-005, ADR-006, ADR-007, ADR-008
 
 ## 1. Objetivo
@@ -435,3 +435,5 @@ Respondidas pelo dono do projeto em 2026-11-18: **todas as recomendações foram
 | 2026-11-18 | Implementação: na CLI 3.2.0 `db push`, `db dump` e `test db` miram o banco **local** por padrão; os scripts passam a usar `--remote` (o `--linked` está obsoleto e some na v4). CA-3: o padrão de `sb_secret_` exige chave real (prefixo + 20 caracteres), porque a SPEC-001 cita o prefixo em prosa. `backup:verify` roda o `psql` como `supabase_admin` (com `postgres` falha por permissão em `storage`). |
 | 2026-11-18 | Correções da revisão: contrato de `runBackup` com `home`, `repoRoot` e `publicTables` (§ 5.2); `docker cp` antes do `psql` e limpeza do arquivo temporário (§ 5.7); falha só na criptografia devolve `ok: false` sem `.incomplete` e sem poda (CA-20); CA-3 exige chave `sb_secret_` completa; CA-21 poda também o `.tar.gz.gpg`; `db:test:remote` passa por `scripts/test-remote.ts` (CA-7). |
 | 2026-11-18 | Implementação: `db:push` e `db:test:remote` passam `--yes` (a CLI recusa confirmar sem terminal). A verificação prévia separa `no_upstream` (branch sem upstream) de `not_pushed` (HEAD diferente do upstream), com a orientação certa em cada caso. |
+| 2026-11-18 | Implementação: o `gpg` do backup roda com o terminal herdado e `--pinentry-mode loopback` (com a saída capturada não tinha onde pedir a senha); falha do `tar` passa a aparecer na mensagem. |
+| 2026-11-18 | Fechamento: CA-1 a CA-24 atendidos (testes, revisão e `check:prod` com 27 checagens); checklists de CA-8, CA-9, CA-13 a CA-16 conferidos pelo dono; primeiro backup e ensaio de restauração (CA-25) feitos com login local do usuário real. CA-22 conferido: a cópia `.tar.gz.gpg` do backup `2026-11-18T214929Z` foi aberta com `gpg --decrypt` e lista os 4 arquivos. Pendência sem bloqueio, registrada no runbook: confirmar se a CLI reaplica o seed a cada push. |
