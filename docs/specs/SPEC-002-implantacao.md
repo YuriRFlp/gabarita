@@ -59,7 +59,7 @@ Implantação tem muitos itens que só existem nos painéis da Vercel, do Supaba
 |---|---|---|
 | CA-1 | Dado `vercel.json`, quando é lido, então define `regions` com uma única região, `gru1` (P-1) e `git.deploymentEnabled` que habilita só a `main`. | unitário (leitura do JSON) |
 | CA-2 | Dado `next.config.ts`, quando `headers()` é chamado, então devolve para `/:path*` exatamente: `X-Content-Type-Options: nosniff`, `X-Frame-Options: DENY`, `Referrer-Policy: strict-origin-when-cross-origin`, `Permissions-Policy: camera=(), microphone=(), geolocation=()`, `X-Robots-Tag: noindex, nofollow`; e `poweredByHeader` continua `false`. | unitário |
-| CA-3 | Dado qualquer arquivo versionado (`git ls-files`), quando a varredura roda, então não há string de conexão Postgres com senha embutida (`postgres(ql)?://usuario:senha@`), nem uma chave `sb_secret_` completa (prefixo seguido de pelo menos 20 caracteres), nem JWT com `"role":"service_role"`, exceto no próprio arquivo de teste da varredura. | unitário (varredura de arquivos) |
+| CA-3 | Dado qualquer arquivo versionado (`git ls-files`), quando a varredura roda, então não há string de conexão Postgres com senha embutida (`postgres(ql)?://usuario:senha@`), nem uma chave `sb_secret_` completa (prefixo seguido de pelo menos 20 caracteres), nem JWT cujo papel (`role`) seja o da chave de serviço do Supabase, exceto no próprio arquivo de teste da varredura. | unitário (varredura de arquivos) |
 | CA-4 | Dado todos os arquivos de `.github/workflows/`, quando são lidos, então nenhum referencia `secrets.` (além do `GITHUB_TOKEN` implícito) nem `pull_request_target`, e todos têm `permissions: contents: read`. | unitário (leitura do YAML) |
 
 **Migrações no remoto**
