@@ -28,4 +28,5 @@ Código só começa com a spec `aprovada`.
 | Spec | Funcionalidade | Status |
 |---|---|---|
 | [SPEC-001](SPEC-001-fundacao-da-aplicacao.md) | Fundação da aplicação (scaffold, ferramentas, CI, Supabase local, autenticação, design system com tema sincronizado, casca) | concluida |
-| [SPEC-002](SPEC-002-implantacao.md) | Implantação (Supabase remoto, Vercel, migrações com guardas, cadastro desligado, usuário real, cabeçalhos de segurança, backup e ensaio de restauração, runbooks) | em-implementacao |
+| [SPEC-002](SPEC-002-implantacao.md) | Implantação (Supabase remoto, Vercel, migrações com guardas, cadastro desligado, usuário real, cabeçalhos de segurança, backup e ensaio de restauração, runbooks) | concluida |
+| [SPEC-003](SPEC-003-backup-chave-publica-e-copia-na-nuvem.md) | Backup com chave pública do gpg (sem senha ao fazer backup) e cópia automática do `.gpg` para a pasta sincronizada do Google Drive, com guardas e retenção; `backup:verify` a partir do `.gpg` | rascunho |
