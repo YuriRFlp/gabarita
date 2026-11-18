@@ -21,7 +21,9 @@ describe('CA-7 — db:test:remote', () => {
     const code = await testRemote({ run, env, log: vi.fn() });
 
     expect(code).toBe(0);
-    expect(run).toHaveBeenCalledWith('npx', ['supabase', 'test', 'db', '--remote'], { env });
+    expect(run).toHaveBeenCalledWith('npx', ['supabase', 'test', 'db', '--remote', '--yes'], {
+      env,
+    });
   });
 
   it('returns a failure code and shows the output when the tests fail, without the password', async () => {
