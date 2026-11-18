@@ -12,7 +12,10 @@ export async function testRemote(deps: {
     deps.log(password.message);
     return 1;
   }
-  const result = await deps.run('npx', ['supabase', 'test', 'db', '--remote'], { env: deps.env });
+  // The CLI cannot prompt (stdout is captured); pgTAP runs in a rolled-back transaction.
+  const result = await deps.run('npx', ['supabase', 'test', 'db', '--remote', '--yes'], {
+    env: deps.env,
+  });
   if (result.stdout) deps.log(scrubSecret(result.stdout, deps.env));
   if (result.stderr) deps.log(scrubSecret(result.stderr, deps.env));
   return result.code === 0 ? 0 : 1;
