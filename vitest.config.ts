@@ -18,7 +18,7 @@ export default defineConfig({
           include: [
             'src/**/*.test.ts',
             'scripts/**/*.test.ts',
-            'tests/{lint,security,ci,assets}/**/*.test.ts',
+            'tests/{lint,security,ci,assets,config}/**/*.test.ts',
           ],
           exclude: ['**/*.int.test.ts', 'node_modules/**'],
         },

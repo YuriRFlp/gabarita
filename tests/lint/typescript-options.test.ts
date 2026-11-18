@@ -28,7 +28,10 @@ function diagnosticCodes(code: string): number[] {
   return ts.getPreEmitDiagnostics(program).map((diagnostic) => diagnostic.code);
 }
 
-describe('TypeScript options (CA-2)', () => {
+// Each probe builds a full TS program, which can exceed the default 5 s timeout on a loaded machine.
+const SLOW = 30_000;
+
+describe('TypeScript options (CA-2)', { timeout: SLOW }, () => {
   it('rejects an indexed access used without a check', () => {
     const code = 'const list: string[] = [];\nexport const size = list[0].length;\n';
     expect(diagnosticCodes(code).some((c) => POSSIBLY_UNDEFINED.includes(c))).toBe(true);
