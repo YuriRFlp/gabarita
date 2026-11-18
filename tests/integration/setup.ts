@@ -1,7 +1,7 @@
 import { existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import type { TestProject } from 'vitest/node';
-import { readLocalSupabase } from '../../scripts/create-test-user.ts';
+import { readLocalSupabase } from '../../scripts/local-supabase.ts';
 
 declare module 'vitest' {
   export interface ProvidedContext {

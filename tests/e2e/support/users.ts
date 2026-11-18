@@ -1,6 +1,6 @@
 import { randomUUID } from 'node:crypto';
 import { createClient } from '@supabase/supabase-js';
-import { isLocalUrl, readLocalSupabase } from '../../../scripts/create-test-user.ts';
+import { isLocalUrl, readLocalSupabase } from '../../../scripts/local-supabase.ts';
 
 export type DisposableUser = { id: string; email: string; password: string };
 
