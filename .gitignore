@@ -66,3 +66,6 @@ desktop.ini
 
 # Claude Code (agents and CLAUDE.md are versioned; local settings are not)
 .claude/settings.local.json
+
+# Secrets
+secrets
