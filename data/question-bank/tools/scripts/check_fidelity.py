@@ -22,13 +22,21 @@ def norm(s):
 paper = json.load(open(sys.argv[1], encoding="utf-8"))
 pdf_text = "".join(subprocess.run(["pdftotext", p, "-"], capture_output=True, text=True).stdout for p in sys.argv[2:])
 pdf_text += "".join(subprocess.run(["pdftotext", "-layout", p, "-"], capture_output=True, text=True).stdout for p in sys.argv[2:])
-hay = norm(pdf_text)
+try:
+    import pdfplumber
+    for p in sys.argv[2:]:
+        with pdfplumber.open(p) as doc:
+            pdf_text += "".join((pg.extract_text(x_tolerance=1.5) or "") + "\n" for pg in doc.pages)
+except ImportError:
+    pass
+hay = norm(pdf_text.replace("²", "2"))
 miss = []
 
 
 def check(label, text):
     # quebra em pedaços (linhas/frases) para tolerar reordenação de colunas
-    for part in re.split(r"\n|(?<=[.;:?!])\s+", text or ""):
+    text = (text or "").replace("²", "2")
+    for part in re.split(r"\n|(?<=[.;:?!])\s+|\.\.\.[IVX]+\.\.\.|■", text):
         n = norm(part)
         if len(n) >= 12 and n not in hay:
             miss.append((label, part[:90]))

@@ -1,0 +1,207 @@
+{
+  "paper": {
+    "schema_version": "1.0",
+    "id": "trt4-2022-tecnico-ti",
+    "court_id": "trt4",
+    "court": "TRT-4 (RS)",
+    "justice_branch": "trabalho",
+    "state": "RS",
+    "year": 2022,
+    "applied_on": null,
+    "exam_board": "FCC",
+    "notice": "Concurso público TRT da 4ª Região – 2022",
+    "taxonomy_edition": false,
+    "level": "tecnico",
+    "position": "Técnico Judiciário – Área Apoio Especializado",
+    "specialty": "Tecnologia da Informação",
+    "position_code": "T17",
+    "booklets": [
+      {
+        "code": "T17",
+        "type": "001",
+        "numbers": "1-60"
+      }
+    ],
+    "format": "multiple_choice",
+    "options_per_question": 5,
+    "sections": [
+      {
+        "name": "Conhecimentos Gerais",
+        "numbers": "1-30"
+      },
+      {
+        "name": "Conhecimentos Específicos",
+        "numbers": "31-60"
+      }
+    ],
+    "answer_key": {
+      "status": "definitivo",
+      "published_on": null,
+      "note": "Relação de gabaritos da FCC, tipo 1. O comunicado de alteração de gabarito e atribuição de questões não inclui este cargo"
+    },
+    "essay": {
+      "type": "redação",
+      "prompt": "*O acesso à Educação é fundamental para que todos possam intervir de modo consciente na esfera pública, participar plenamente da vida cultural e contribuir com seu trabalho para a satisfação das necessidades básicas e a melhoria das condições de vida da sociedade. Entretanto, o Censo Demográfico de 2010 contabilizou 13,9 milhões de jovens e adultos com idade superior a 15 anos que declararam não saber ler ou escrever. Esse mesmo levantamento indicou que 54,4 milhões de pessoas com 25 anos ou mais tinham escolaridade inferior ao Ensino Fundamental e outras 16,2 milhões haviam concluído o Ensino Fundamental, porém não o Ensino Médio.*\n*Ao longo das últimas décadas, o Brasil consolidou uma consciência social do direito à Educação na infância, mas ainda não construiu uma cultura do direito à Educação ao longo de toda a vida. Assim, não é incomum que pais com baixa escolaridade lutem para que os filhos tenham acesso a um ensino de qualidade, sem reivindicar para si os mesmos direitos.*\n(Adaptado de: DI PIERRO, Maria Clara. Disponível em: **https://gestaoescolar.org.br**)\nConsiderando as ideias expostas acima, redija um texto dissertativo-argumentativo sobre:\n**Educação de jovens e adultos: construção da cidadania.**",
+      "instructions": "Texto dissertativo-argumentativo a partir de proposta única e dos textos de apoio, com no mínimo 20 e no máximo 30 linhas. Eliminatória e classificatória, nota de 0 a 100; habilitado o candidato com 60 pontos ou mais.",
+      "max_score": 100,
+      "answer_standard": null,
+      "grading_criteria": "Conteúdo — até 40 pontos: a) perspectiva adotada no tratamento do tema; b) capacidade de análise e senso crítico em relação ao tema proposto; c) consistência dos argumentos, clareza e coerência no seu encadeamento.\nEstrutura — até 30 pontos: a) respeito ao gênero solicitado; b) progressão textual e encadeamento de ideias; c) articulação de frases e parágrafos (coesão textual).\nExpressão — até 30 pontos: a) desempenho linguístico de acordo com o nível de conhecimento exigido; b) adequação do nível de linguagem adotado à produção proposta e coerência no uso; c) domínio da norma culta formal (estrutura sintática, coesão, concordância, pontuação, regência, pronomes, flexão, tempos e modos verbais, grafia e acentuação).\nNota zero, entre outros casos, por fuga ao tema ou à modalidade de texto (Edital, itens 10.6 a 10.11, reproduzidos no caderno)."
+    },
+    "sources": [
+      {
+        "file": "trt4_2022_T17_prova.pdf",
+        "kind": "caderno",
+        "url": null
+      },
+      {
+        "file": "trt4_2022_T17_gabarito.pdf",
+        "kind": "gabarito",
+        "url": "https://www.concursosfcc.com.br/concursos/trt4r122/"
+      },
+      {
+        "file": "trt4_2022_alteracao_gabarito.pdf",
+        "kind": "recursos",
+        "url": "https://www.concursosfcc.com.br/concursos/trt4r122/"
+      }
+    ],
+    "notes": [
+      "Caderno de julho de 2022; data exata de aplicação não confirmada",
+      "Os destaques do caderno (itálico, negrito, sublinhado, fonte monoespaçada) estão marcados como em Markdown",
+      "Código em blocos ```linguagem com a indentação do caderno; opções de uma linha só de código aparecem entre crases",
+      "Disciplinas dos Conhecimentos Específicos: o caderno não as separa; todas como Tecnologia da Informação"
+    ]
+  },
+  "parsed": "/home/claude/bank/work/trt4_2022_T17.json",
+  "layout": "/home/claude/provas/txt/trt4_2022_T17.lay.txt",
+  "dehyphenate": true,
+  "ordinals": true,
+  "key": {
+    "file": "/home/claude/provas/txt/trt4_2022_T17_gabarito.txt",
+    "method": "pairs",
+    "after": "Tipo gabarito 1",
+    "before": "Conhec\\. Gerais"
+  },
+  "sections": [
+    {
+      "from": 1,
+      "to": 15,
+      "section": "Conhecimentos Gerais",
+      "subject": "Português"
+    },
+    {
+      "from": 16,
+      "to": 20,
+      "section": "Conhecimentos Gerais",
+      "subject": "Raciocínio Lógico-Matemático"
+    },
+    {
+      "from": 21,
+      "to": 30,
+      "section": "Conhecimentos Gerais",
+      "subject": "Legislação"
+    },
+    {
+      "from": 31,
+      "to": 60,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação"
+    }
+  ],
+  "stimuli": {
+    "s01": {
+      "range": [
+        1,
+        9
+      ],
+      "command_lines": 1,
+      "source_lines": 1
+    },
+    "s02": {
+      "range": [
+        10,
+        15
+      ],
+      "command_lines": 1,
+      "title_lines": 1,
+      "source_lines": 1
+    }
+  },
+  "keep_hyphen": [
+    "mal-intencionados"
+  ],
+  "stimulus_fixes": {
+    "t01": [
+      [
+        "a for-ma como",
+        "a forma como"
+      ]
+    ]
+  },
+  "fixes": {
+    "14": [
+      [
+        "(5o parágrafo) O tempo",
+        "(5o parágrafo)\nO tempo"
+      ]
+    ],
+    "17": [
+      [
+        "500 m2",
+        "500 m²"
+      ],
+      [
+        "000 m2",
+        "000 m²"
+      ]
+    ],
+    "30": [
+      [
+        "CNJ no 400",
+        "CNJ nº 400"
+      ]
+    ],
+    "32": [
+      [
+        "13a posição",
+        "13ª posição"
+      ],
+      [
+        "8a posição",
+        "8ª posição"
+      ]
+    ],
+    "48": [
+      [
+        "dentre outras: Comunicação",
+        "dentre outras:\nComunicação"
+      ],
+      [
+        "...II... . Dados",
+        "...II... .\nDados"
+      ],
+      [
+        "e o servidor. ...IV...",
+        "e o servidor.\n...IV..."
+      ],
+      [
+        "de uma aplicação. Preenchem",
+        "de uma aplicação.\nPreenchem"
+      ],
+      [
+        "*statefull –* cliente",
+        "*statefull* – cliente"
+      ],
+      [
+        "*statefull –* servidor",
+        "*statefull* – servidor"
+      ],
+      [
+        "*stateless –* servidor",
+        "*stateless* – servidor"
+      ]
+    ]
+  },
+  "review": {
+    "48": "Lacunas como ...I..."
+  }
+}

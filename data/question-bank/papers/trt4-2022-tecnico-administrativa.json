@@ -36,12 +36,15 @@
   "answer_key": {
     "status": "definitivo",
     "published_on": null,
-    "note": "Relação de gabaritos da FCC, tipo 1; a página não indica se é preliminar ou definitivo e não marca anulações"
+    "note": "Relação de gabaritos da FCC, tipo 1. A questão 40 foi anulada (pontos atribuídos a todos) pelo comunicado de alteração de gabarito e atribuição de questões"
   },
   "essay": {
     "type": "redação",
-    "prompt": null,
-    "instructions": "Proposta não transcrita; ver o caderno, página 14"
+    "prompt": "Considere o seguinte texto:\n*Paulinho da Viola afirmou, a propósito de quem o julga muito amarrado à tradição da música popular: “Não vivo no meu passado, meu passado é que vive em mim”.*\n*Por outro lado, há quem afirme que nos tempos que correm, marcados pela instantaneidade e excesso de informações, a memória vem gradativamente perdendo a importância.*\nLevando em conta a divergência entre as duas afirmações acima, redija um texto dissertativo-argumentativo, no qual você se posicionará criticamente diante delas.",
+    "instructions": "Texto dissertativo-argumentativo a partir de proposta única e dos textos de apoio, com no mínimo 20 e no máximo 30 linhas. Eliminatória e classificatória, nota de 0 a 100; habilitado o candidato com 60 pontos ou mais.",
+    "max_score": 100,
+    "answer_standard": null,
+    "grading_criteria": "Conteúdo — até 40 pontos: a) perspectiva adotada no tratamento do tema; b) capacidade de análise e senso crítico em relação ao tema proposto; c) consistência dos argumentos, clareza e coerência no seu encadeamento.\nEstrutura — até 30 pontos: a) respeito ao gênero solicitado; b) progressão textual e encadeamento de ideias; c) articulação de frases e parágrafos (coesão textual).\nExpressão — até 30 pontos: a) desempenho linguístico de acordo com o nível de conhecimento exigido; b) adequação do nível de linguagem adotado à produção proposta e coerência no uso; c) domínio da norma culta formal (estrutura sintática, coesão, concordância, pontuação, regência, pronomes, flexão, tempos e modos verbais, grafia e acentuação).\nNota zero, entre outros casos, por fuga ao tema ou à modalidade de texto (Edital, itens 10.6 a 10.11, reproduzidos no caderno)."
   },
   "sources": [
     {
@@ -53,12 +56,18 @@
       "file": "TRT4_2022_T15_gabarito.pdf",
       "kind": "gabarito",
       "url": "https://www.concursosfcc.com.br/concursos/trt4r122/"
+    },
+    {
+      "file": "trt4_2022_alteracao_gabarito.pdf",
+      "kind": "recursos",
+      "url": "https://www.concursosfcc.com.br/concursos/trt4r122/"
     }
   ],
   "notes": [
     "Caderno de julho de 2022; data exata de aplicação não confirmada",
-    "Prova de técnico de área administrativa: os conhecimentos gerais são do mesmo concurso do analista de TI (cargo A14), cuja prova não foi obtida",
-    "Na crônica, cada parágrafo é uma linha do campo text (as questões citam o número do parágrafo)"
+    "Na crônica, cada parágrafo é uma linha do campo text (as questões citam o número do parágrafo)",
+    "Prova de técnico de área administrativa: útil para treinar conhecimentos gerais; a prova de TI do mesmo concurso está em trt4-2022-analista-ti e trt4-2022-tecnico-ti",
+    "Prova de técnico de área administrativa: útil para treinar conhecimentos gerais; a prova de TI do mesmo concurso está em trt4-2022-analista-ti e trt4-2022-tecnico-ti"
   ],
   "stimuli": [
     {
@@ -385,7 +394,7 @@
       "subject": "Português",
       "stimulus_id": "t02",
       "command": "__Atenção:__ Para responder às questões de números 05 a 14, considere o trecho da crônica “O VIP sem querer”, de Carlos Drummond de Andrade.",
-      "statement": "*é uma coisa que nasce com o indivíduo, ou não nasce, e jamais lhe será __consubstancial__* (26º parágrafo) O termo sublinhado acima pode ser substituído, sem prejuízo para o sentido do texto, por:",
+      "statement": "*é uma coisa que nasce com o indivíduo, ou não nasce, e jamais lhe será __consubstancial__* (26º parágrafo)\nO termo sublinhado acima pode ser substituído, sem prejuízo para o sentido do texto, por:",
       "options": [
         {
           "key": "A",
@@ -428,7 +437,7 @@
       "subject": "Português",
       "stimulus_id": "t02",
       "command": "__Atenção:__ Para responder às questões de números 05 a 14, considere o trecho da crônica “O VIP sem querer”, de Carlos Drummond de Andrade.",
-      "statement": "*João Brandão __foi__ ao Aeroporto Internacional para abraçar um amigo dileto, que __viajava__ com destino ao Paraguai. Pessoa comum despedindo-se de pessoa comum. Mas __acontecem__ coisas. Alguém, informado da viagem, __pedira__ ao amigo que __levasse__ uma encomenda a Assunção.* (1º parágrafo) No trecho acima, o narrador relata alguns fatos ocorridos no passado. Um fato anterior a esse tempo passado está indicado pela seguinte forma verbal:",
+      "statement": "*João Brandão __foi__ ao Aeroporto Internacional para abraçar um amigo dileto, que __viajava__ com destino ao Paraguai. Pessoa comum despedindo-se de pessoa comum. Mas __acontecem__ coisas. Alguém, informado da viagem, __pedira__ ao amigo que __levasse__ uma encomenda a Assunção.* (1º parágrafo)\nNo trecho acima, o narrador relata alguns fatos ocorridos no passado. Um fato anterior a esse tempo passado está indicado pela seguinte forma verbal:",
       "options": [
         {
           "key": "A",
@@ -471,7 +480,7 @@
       "subject": "Português",
       "stimulus_id": "t02",
       "command": "__Atenção:__ Para responder às questões de números 05 a 14, considere o trecho da crônica “O VIP sem querer”, de Carlos Drummond de Andrade.",
-      "statement": "*– Não é preciso – objetou o meu amigo. – Posso esperar perfeitamente aqui mesmo.* (7º parágrafo) Ao ser transposto para o discurso indireto, o trecho acima assume a seguinte redação:",
+      "statement": "*– Não é preciso – objetou o meu amigo. – Posso esperar perfeitamente aqui mesmo.* (7º parágrafo)\nAo ser transposto para o discurso indireto, o trecho acima assume a seguinte redação:",
       "options": [
         {
           "key": "A",
@@ -600,7 +609,7 @@
       "subject": "Português",
       "stimulus_id": "t02",
       "command": "__Atenção:__ Para responder às questões de números 05 a 14, considere o trecho da crônica “O VIP sem querer”, de Carlos Drummond de Andrade.",
-      "statement": "*João Brandão e seu amigo foram convidados por um garçom solícito* (13º parágrafo) Transpondo-se o trecho acima para a voz ativa, a forma verbal resultante será:",
+      "statement": "*João Brandão e seu amigo foram convidados por um garçom solícito* (13º parágrafo)\nTranspondo-se o trecho acima para a voz ativa, a forma verbal resultante será:",
       "options": [
         {
           "key": "A",
@@ -1784,9 +1793,9 @@
           "text": "III e IV."
         }
       ],
-      "answer": "B",
-      "status": "valida",
-      "status_note": null,
+      "answer": null,
+      "status": "anulada",
+      "status_note": "Questão anulada: o comunicado da FCC “Alteração de gabarito e Atribuição de questões” atribui a questão 40 do tipo 1 a todos os candidatos do cargo T15 (Conhecimentos Específicos)",
       "answer_changed_from": null,
       "language": "pt",
       "has_table": false,

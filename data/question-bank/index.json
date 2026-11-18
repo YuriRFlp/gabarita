@@ -110,6 +110,24 @@
       "stimuli": 4
     },
     {
+      "id": "trt4-2022-analista-ti",
+      "file": "papers/trt4-2022-analista-ti.json",
+      "court_id": "trt4",
+      "court": "TRT-4 (RS)",
+      "year": 2022,
+      "exam_board": "FCC",
+      "level": "analista",
+      "position": "Analista Judiciário – Área Apoio Especializado",
+      "specialty": "Tecnologia da Informação",
+      "format": "multiple_choice",
+      "answer_key_status": "definitivo",
+      "taxonomy_edition": false,
+      "questions": 60,
+      "annulled": 0,
+      "with_figure": 0,
+      "stimuli": 2
+    },
+    {
       "id": "trt4-2022-tecnico-administrativa",
       "file": "papers/trt4-2022-tecnico-administrativa.json",
       "court_id": "trt4",
@@ -119,6 +137,24 @@
       "level": "tecnico",
       "position": "Técnico Judiciário",
       "specialty": "Área Administrativa",
+      "format": "multiple_choice",
+      "answer_key_status": "definitivo",
+      "taxonomy_edition": false,
+      "questions": 60,
+      "annulled": 1,
+      "with_figure": 0,
+      "stimuli": 2
+    },
+    {
+      "id": "trt4-2022-tecnico-ti",
+      "file": "papers/trt4-2022-tecnico-ti.json",
+      "court_id": "trt4",
+      "court": "TRT-4 (RS)",
+      "year": 2022,
+      "exam_board": "FCC",
+      "level": "tecnico",
+      "position": "Técnico Judiciário – Área Apoio Especializado",
+      "specialty": "Tecnologia da Informação",
       "format": "multiple_choice",
       "answer_key_status": "definitivo",
       "taxonomy_edition": false,
@@ -144,12 +180,30 @@
       "annulled": 2,
       "with_figure": 0,
       "stimuli": 10
+    },
+    {
+      "id": "tst-2023-tecnico-programacao",
+      "file": "papers/tst-2023-tecnico-programacao.json",
+      "court_id": "tst",
+      "court": "TST",
+      "year": 2023,
+      "exam_board": "Cebraspe",
+      "level": "tecnico",
+      "position": "Técnico Judiciário – Área Apoio Especializado",
+      "specialty": "Programação",
+      "format": "multiple_choice",
+      "answer_key_status": "definitivo",
+      "taxonomy_edition": false,
+      "questions": 60,
+      "annulled": 1,
+      "with_figure": 2,
+      "stimuli": 2
     }
   ],
   "totals": {
-    "papers": 8,
-    "questions": 720,
-    "annulled": 20,
-    "stimuli": 34
+    "papers": 11,
+    "questions": 900,
+    "annulled": 22,
+    "stimuli": 40
   }
 }

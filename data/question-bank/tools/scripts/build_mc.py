@@ -9,15 +9,26 @@ import subprocess
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from keys import grid_key, pairs_key  # noqa: E402
+from keys import grid_key, pairs_key, cebraspe_grid_key  # noqa: E402
 from textutil import reflow_item, is_code, set_dehyphen, DEHYPHEN  # noqa: E402
 
 cfg = json.load(open(sys.argv[1], encoding="utf-8"))
 out_path = sys.argv[2]
 paper = cfg["paper"]
-raw = json.load(open(cfg["parsed"], encoding="utf-8"))
+parsed_files = cfg["parsed"] if isinstance(cfg["parsed"], list) else [cfg["parsed"]]
+raw = {"stimuli": [], "questions": []}
+for i_, pf in enumerate(parsed_files):
+    part = json.load(open(pf, encoding="utf-8"))
+    for st in part["stimuli"]:
+        old = st["id"]
+        st["id"] = old if len(parsed_files) == 1 else f"p{i_ + 1}{old}"
+        for q in part["questions"]:
+            if q.get("stimulus_id") == old:
+                q["stimulus_id"] = st["id"]
+    raw["stimuli"] += part["stimuli"]
+    raw["questions"] += part["questions"]
 
-ENUM = re.compile(r"^(\(\s*\)|[IVX]+\s*[.)–-]|\(\d+\)|\d+[.)]\s|\([A-E]\)\s|[A-E]\)\s|[a-e]\s*[.)]\s+[A-Z]|•|[-−–]\s|[A-ZÀ-Ú]\w+:\s*[−–-])")
+ENUM = re.compile(r"^(\(\s*\)|[IVX]+\s*[.)–-]|[IVX]+\s+(?=[A-Za-zÀ-ú“‘\"])|\(\d+\)|\d+[.)]\s|\([A-E]\)\s|[A-E]\)\s|[a-e]\s*[.)]\s+[A-Z]|•|[-−–]\s|[A-ZÀ-Ú]\w+:\s*[−–-])")
 
 
 CLOSING = re.compile(r"^(Assinale|Estão|Está|Ordene|Marque|Indique|Da relação|Das afirmativas|Quais|Qual|É correto|Considerando|Com base|A sequência|Analise)\b")
@@ -32,14 +43,75 @@ def reflow_stem(lines, code=False):
         if not s:
             continue
         plain0 = re.sub(r"\*\*|__|`|(?<!\*)\*(?!\*)", "", s)
-        closes = in_enum and blocks and ((re.search(r"[.:;?*_`]$", blocks[-1][-1]) and plain0[:1].isupper()) or CLOSING.match(plain0))
+        closes = in_enum and blocks and ((re.search(r"[.:;?*_`)]$", blocks[-1][-1]) and plain0[:1].isupper()) or CLOSING.match(plain0))
         plain = re.sub(r"\*\*|__|`|(?<!\*)\*(?!\*)", "", s)
-        if not blocks or ENUM.match(plain) or closes or (code and (is_code(s) or is_code(blocks[-1][-1]))):
+        prev = blocks[-1][-1] if blocks else ""
+        starts_mark = re.match(r"^(\*|__|“\*)", s)
+        starts_upper = re.match(r"^[A-ZÀ-Ú]", s)
+        excerpt_break = bool(blocks) and (
+            (re.search(r"[.!?…”]\*{1,3}(__)?$", prev) and (starts_mark or starts_upper))
+            or (re.search(r"\*\.?$", prev) and re.match(r"^(\*|__)", prev) and starts_upper)
+            or s.startswith("(Adaptado") or prev.startswith("(Adaptado")
+            or (prev.endswith(":") and starts_mark))
+        after_quote = blocks and re.search(r"\(\d+\s*[oº]\s*parágrafo\)\.?$|\(\d+[ºo]? (estrofe|verso|linha)\)\.?$", blocks[-1][-1]) and plain0[:1].isupper()
+        if not blocks or ENUM.match(plain) or closes or after_quote or excerpt_break or (code and (is_code(s) or is_code(blocks[-1][-1]))):
             in_enum = bool(ENUM.match(plain)) or (in_enum and not closes)
             blocks.append([s])
         else:
             blocks[-1].append(s)
     return "\n".join(reflow_item(b, code) for b in blocks)
+
+
+CODE = re.compile(r"^§§([\d.]+),([\d.]+)§(.*)$")
+
+
+def guess_lang(code):
+    c = code
+    if re.search(r"^\s*<[a-zA-Z!?]", c, re.M) and re.search(r"</\w+>|/>", c):
+        return "html" if re.search(r"<(html|body|div|p|span|script|head|table|input|form)\b", c, re.I) else "xml"
+    if re.search(r"\b(SELECT|INSERT|UPDATE|DELETE|CREATE|ALTER|GRANT|REVOKE|DROP)\b", c):
+        return "sql"
+    if re.search(r"\b(public|private|protected)\s+(static\s+)?(class|void|int|String)\b|System\.out|@Override|import java", c):
+        return "java"
+    if re.search(r"^\s*(def |import |from \w+ import|print\()", c, re.M):
+        return "python"
+    if re.search(r"\$\(|\bfunction\b|=>|\bconst\b|\blet\b|\bvar\b|console\.log|require\(", c):
+        return "javascript"
+    if re.match(r"^\s*[{\[]", c):
+        return "json"
+    return "text"
+
+
+def code_segments(lines):
+    """Separa as linhas marcadas pelo layout (§§x,cw§código) do texto comum."""
+    segs = []
+    for ln in lines:
+        m = CODE.match(ln.strip())
+        kind = "code" if m else "text"
+        val = (float(m.group(1)), float(m.group(2)), m.group(3)) if m else ln
+        if segs and segs[-1][0] == kind:
+            segs[-1][1].append(val)
+        else:
+            segs.append((kind, [val]))
+    return segs
+
+
+def render_code(rows, lang=None):
+    x0 = min(x for x, _, _ in rows)
+    body = "\n".join(" " * round((x - x0) / cw) + t.rstrip() for x, cw, t in rows)
+    return f"```{lang or guess_lang(body)}\n{body}\n```"
+
+
+def reflow_code_aware(lines, fn, lang=None, inline_single=False):
+    segs = code_segments(lines)
+    if not any(k == "code" for k, _ in segs):
+        return fn(lines)
+    if inline_single and len(segs) == 1 and len(segs[0][1]) == 1:
+        return "`" + segs[0][1][0][2].strip() + "`"
+    parts = []
+    for kind, val in segs:
+        parts.append(render_code(val, lang) if kind == "code" else fn(val))
+    return "\n".join(p for p in parts if p)
 
 
 def verbatim(lines):
@@ -54,7 +126,8 @@ def verbatim(lines):
 
 
 def load_key(spec):
-    text = open(spec["file"], encoding="utf-8").read()
+    files = spec["file"] if isinstance(spec["file"], list) else [spec["file"]]
+    text = "\n".join(open(f, encoding="utf-8").read() for f in files)
     if "after" in spec:
         m = re.search(spec["after"], text)
         text = text[m.end():]
@@ -62,7 +135,7 @@ def load_key(spec):
         m = re.search(spec["before"], text)
         if m:
             text = text[: m.start()]
-    k = grid_key(text) if spec["method"] == "grid" else pairs_key(text)
+    k = {"grid": grid_key, "pairs": pairs_key, "cebraspe_grid": cebraspe_grid_key}[spec["method"]](text)
     if "string" in spec:  # gabarito transcrito
         k = {i + 1: c for i, c in enumerate(spec["string"].replace(" ", ""))}
     return k
@@ -168,10 +241,12 @@ for q in raw["questions"]:
     ans = key.get(n)
     if ans is None:
         sys.exit(f"sem gabarito para {n}")
-    annulled = ans in ("*", "X")
+    annulled = ans in ("*", "X") or n in cfg.get("annulled", [])
     changed = None
     if pre and not annulled and pre.get(n) and pre[n] != ans:
         changed = pre[n]
+    if str(n) in cfg.get("changed", {}) and not annulled:
+        changed = cfg["changed"][str(n)]
     ov = cfg.get("overrides", {}).get(str(n), {})
     stem_lines = ov.get("stem_lines", q["stem"])
     opts = {k: ov.get("options", {}).get(k, v) for k, v in q["options"].items()}
@@ -194,10 +269,12 @@ for q in raw["questions"]:
         "subject": sec.get("subject"),
         "stimulus_id": stim_of.get(n),
         "command": cmd_of.get(n),
-        "statement": ov.get("statement", reflow_stem(stem_lines, code=n in cfg.get("code", []))),
+        "statement": ov.get("statement", reflow_code_aware(stem_lines, lambda ls: reflow_stem(ls, code=n in cfg.get("code", [])),
+                                                            cfg.get("code_lang", {}).get(str(n)))),
         "options": [{"key": k.upper(), "text": (ov.get("options_text", {}).get(k.upper())
                                                  or (verbatim(v) if n in cfg.get("verbatim_options", [])
-                                                     else reflow_item(v, code=n in cfg.get("code", []))))}
+                                                     else reflow_code_aware(v, lambda ls: reflow_item(ls, code=n in cfg.get("code", [])),
+                                                                            cfg.get("code_lang", {}).get(str(n)), inline_single=True)))}
                     for k, v in opts.items()],
         "answer": None if annulled else ans.upper(),
         "status": "anulada" if annulled else "valida",
@@ -212,6 +289,20 @@ for q in raw["questions"]:
         "topic_ids": [],
         "review": cfg.get("review", {}).get(str(n)),
     }
+    for old, new in cfg.get("fixes", {}).get(str(n), []):
+        hit = False
+        if old in item["statement"]:
+            item["statement"] = item["statement"].replace(old, new); hit = True
+        for o in item["options"]:
+            if old in o["text"]:
+                o["text"] = o["text"].replace(old, new); hit = True
+        if not hit:
+            sys.exit(f"correção não aplicada em {n}: {old!r}")
+    if item["command"]:
+        item["command"] = re.sub(r"^__Atenção__\*?:\*?", "__Atenção:__", item["command"])
+    blob = item["statement"] + "".join(o["text"] for o in item["options"])
+    if "```" in blob or re.search(r"^`[^`]+`$", "\n".join(o["text"] for o in item["options"]), re.M):
+        item["has_code"] = True
     questions.append(item)
 
 if DEHYPHEN["on"]:
@@ -222,6 +313,9 @@ if cfg.get("ordinals"):
     def ordn(s):
         if not isinstance(s, str):
             return s
+        if "`" in s:
+            parts = re.split(r"(```[\s\S]*?```|`[^`]*`)", s)
+            return "".join(p if p.startswith("`") else ordn(p) for p in parts)
         s = re.sub(r"\b(\d{1,3})o\b", r"\1º", s)
         s = re.sub(r"\b(\d{1,3})a\b(?=\s+(Região|estrofe|edição|Turma|Vara|Seção|Instância|série|parte|fase|via|classe))", r"\1ª", s)
         s = re.sub(r"\b(Lei|Decreto|Resolução|Portaria|Emenda Constitucional|Súmula|Ato|Provimento|Instrução Normativa|"
@@ -235,6 +329,11 @@ if cfg.get("ordinals"):
             q[k] = ordn(q[k])
         for o in q["options"]:
             o["text"] = ordn(o["text"])
+for st in stimuli:
+    for old, new in cfg.get("stimulus_fixes", {}).get(st["id"], []):
+        if old not in st["text"]:
+            sys.exit(f"correção não aplicada em {st['id']}: {old!r}")
+        st["text"] = st["text"].replace(old, new)
 paper["stimuli"] = stimuli
 paper["questions"] = questions
 json.dump(paper, open(out_path, "w", encoding="utf-8"), ensure_ascii=False, indent=2)

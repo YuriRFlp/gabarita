@@ -1,0 +1,12 @@
+{
+  "q_re": "^Questão (\\d+)$",
+  "opt_re": "^\\(([A-E])\\)\\s*(.*)$",
+  "letters": "ABCDE",
+  "first": 1,
+  "last": 30,
+  "xpos": true,
+  "start_after": "^-- CONHECIMENTOS (BÁSICOS|ESPECÍFICOS) --",
+  "noise": ["^CEBRASPE – ", "^Espaço livre$", "^-- .* --$", "^FimDoTexto$"],
+  "header": ["^Texto CB\\d+A\\d+-[IVX]+$"],
+  "opt_cont_tab": true
+}

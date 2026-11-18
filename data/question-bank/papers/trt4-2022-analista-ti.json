@@ -1,0 +1,2670 @@
+{
+  "schema_version": "1.0",
+  "id": "trt4-2022-analista-ti",
+  "court_id": "trt4",
+  "court": "TRT-4 (RS)",
+  "justice_branch": "trabalho",
+  "state": "RS",
+  "year": 2022,
+  "applied_on": null,
+  "exam_board": "FCC",
+  "notice": "Concurso público TRT da 4ª Região – 2022",
+  "taxonomy_edition": false,
+  "level": "analista",
+  "position": "Analista Judiciário – Área Apoio Especializado",
+  "specialty": "Tecnologia da Informação",
+  "position_code": "A14",
+  "booklets": [
+    {
+      "code": "A14",
+      "type": "001",
+      "numbers": "1-60"
+    }
+  ],
+  "format": "multiple_choice",
+  "options_per_question": 5,
+  "sections": [
+    {
+      "name": "Conhecimentos Gerais",
+      "numbers": "1-30"
+    },
+    {
+      "name": "Conhecimentos Específicos",
+      "numbers": "31-60"
+    }
+  ],
+  "answer_key": {
+    "status": "definitivo",
+    "published_on": null,
+    "note": "Relação de gabaritos da FCC, tipo 1. O comunicado de alteração de gabarito e atribuição de questões não inclui este cargo"
+  },
+  "essay": {
+    "type": "redação",
+    "prompt": "*A discussão da redução da jornada de trabalho, desde o advento do capitalismo, configura-se como um ponto de partida decisivo, ancorado no universo da vida cotidiana, para, por um lado, permitir uma reflexão fundamental sobre o autocontrole sobre o tempo de trabalho e o tempo de vida (o chamado “tempo livre”), e, por outro, possibilitar o afloramento de uma vida dotada de sentido fora do trabalho. Convém, contudo, fazer um esclarecimento: a redução da jornada de trabalho não implica necessariamente a redução do tempo de trabalho.*\n*Uma vida cheia de sentido fora do trabalho supõe uma vida dotada de sentido dentro do trabalho. Uma vida desprovida de sentido no trabalho é incompatível com uma vida cheia de sentido fora do trabalho.*\n*Uma vida cheia de sentido em todas as esferas do ser social somente poderá efetivar-se através da demolição das barreiras existentes entre tempo de trabalho e tempo de não trabalho, de modo que, a partir de uma atividade vital cheia de sentido, sob bases inteiramente novas, possa se desenvolver uma nova sociabilidade.*\n(ANTUNES, Ricardo. **Adeus ao trabalho?**, edição digital)\nAncorado nas ideias expostas acima, redija um texto dissertativo-argumentativo sobre a importância da relação entre “tempo de trabalho” e “tempo livre” na vida do indivíduo contemporâneo.",
+    "instructions": "Texto dissertativo-argumentativo a partir de proposta única e dos textos de apoio, com no mínimo 20 e no máximo 30 linhas. Eliminatória e classificatória, nota de 0 a 100; habilitado o candidato com 60 pontos ou mais.",
+    "max_score": 100,
+    "answer_standard": null,
+    "grading_criteria": "Conteúdo — até 40 pontos: a) perspectiva adotada no tratamento do tema; b) capacidade de análise e senso crítico em relação ao tema proposto; c) consistência dos argumentos, clareza e coerência no seu encadeamento.\nEstrutura — até 30 pontos: a) respeito ao gênero solicitado; b) progressão textual e encadeamento de ideias; c) articulação de frases e parágrafos (coesão textual).\nExpressão — até 30 pontos: a) desempenho linguístico de acordo com o nível de conhecimento exigido; b) adequação do nível de linguagem adotado à produção proposta e coerência no uso; c) domínio da norma culta formal (estrutura sintática, coesão, concordância, pontuação, regência, pronomes, flexão, tempos e modos verbais, grafia e acentuação).\nNota zero, entre outros casos, por fuga ao tema ou à modalidade de texto (Edital, itens 10.6 a 10.11, reproduzidos no caderno)."
+  },
+  "sources": [
+    {
+      "file": "trt4_2022_A14_prova.pdf",
+      "kind": "caderno",
+      "url": null
+    },
+    {
+      "file": "trt4_2022_A14_gabarito.pdf",
+      "kind": "gabarito",
+      "url": "https://www.concursosfcc.com.br/concursos/trt4r122/"
+    },
+    {
+      "file": "trt4_2022_alteracao_gabarito.pdf",
+      "kind": "recursos",
+      "url": "https://www.concursosfcc.com.br/concursos/trt4r122/"
+    }
+  ],
+  "notes": [
+    "Caderno de julho de 2022; data exata de aplicação não confirmada",
+    "Os destaques do caderno (itálico, negrito, sublinhado, fonte monoespaçada) estão marcados como em Markdown",
+    "Código em blocos ```linguagem com a indentação do caderno; opções de uma linha só de código aparecem entre crases",
+    "Disciplinas dos Conhecimentos Específicos: o caderno não as separa; todas como Tecnologia da Informação"
+  ],
+  "stimuli": [
+    {
+      "id": "t01",
+      "title": null,
+      "text": "*Rubião fitava a enseada, – eram oito horas da manhã. Quem o visse, com os polegares metidos no cordão do chambre, à janela de uma grande casa de Botafogo, cuidaria que ele admirava aquele pedaço de água quieta; mas, em verdade, vos digo que pensava em outra coisa. Cotejava o passado com o presente. Que era, há um ano? Professor. Que é agora? Capitalista. Olha para si, para as chinelas (umas chinelas de Túnis, que lhe deu recente amigo, Cristiano Palha), para a casa, para o jardim, para a enseada, para os morros e para o céu; e tudo, desde as chinelas até o céu, tudo entra na mesma sensação de propriedade.*\n*– Vejam como Deus escreve direito por linhas tortas, pensa ele. Se mana Piedade tem casado com Quincas Borba, apenas me daria uma esperança colateral. Não casou; ambos morreram, e aqui está tudo comigo; de modo que o que parecia uma desgraça...*\n*Que abismo que há entre o espírito e o coração! O espírito do ex-professor, vexado daquele pensamento, arrepiou caminho, buscou outro assunto, uma canoa que ia passando; o coração, porém, deixou-se estar a bater de alegria. Que lhe importa a canoa nem o canoeiro, que os olhos de Rubião acompanham, arregalados? Ele, coração, vai dizendo que, uma vez que a mana Piedade tinha de morrer, foi bom que não casasse; podia vir um filho ou uma filha... – Bonita canoa! – Antes assim! – Como obedece bem aos remos do homem! – O certo é que eles estão no Céu!*\n*Um criado trouxe o café. Rubião pegou na xícara e, enquanto lhe deitava açúcar, ia disfarçadamente mirando a bandeja, que era de prata lavrada. Prata, ouro, eram os metais que amava de coração; não gostava de bronze, mas o amigo Palha disse-lhe que era matéria de preço, e assim se explica este par de figuras que aqui está na sala, um Mefistófeles e um Fausto. Tivesse, porém, de escolher, escolheria a bandeja, – primor de argentaria, execução fina e acabada.*",
+      "source": "(Machado de Assis. **Quincas Borba**. São Paulo: Companhia das Letras, 2012)",
+      "language": "pt"
+    },
+    {
+      "id": "t02",
+      "title": "**Velha história**",
+      "text": "*Era uma vez um homem que estava pescando, Maria. Até que apanhou um peixinho! Mas o peixinho era tão pequenininho e inocente, e tinha um azulado tão indescritível nas escamas, que o homem ficou com pena. E retirou cuidadosamente o anzol e pincelou com iodo a garganta do coitadinho. Depois guardou-o no bolso traseiro das calças, para que o animalzinho sarasse no quente. E desde então ficaram inseparáveis. Aonde o homem ia, o peixinho o acompanhava a trote, que nem um cachorrinho. Pelas calçadas. Pelos elevadores. Pelo café. Como era tocante vê-los no \"17\"! – o homem, grave, de preto, com uma das mãos segurando a xícara de fumegante moca, com a outra lendo o jornal, com a outra fumando, com a outra cuidando do peixinho, enquanto este, silencioso e levemente melancólico, tomava laranjada por um canudinho especial...*\n*Ora, um dia o homem e o peixinho passeavam à margem do rio onde o segundo dos dois fora pescado. E eis que os olhos do primeiro se encheram de lágrimas. E disse o homem ao peixinho:*\n*“Não, não me assiste o direito de te guardar comigo. Por que roubar-te por mais tempo ao carinho do teu pai, da tua mãe, dos teus irmãozinhos, da tua tia solteira? Não, não e não! Volta para o seio da tua família. E viva eu cá na terra sempre triste!...”*\n*Dito isso, verteu copioso pranto e, desviando o rosto, atirou o peixinho n’água. E a água fez redemoinho, que foi depois serenando, serenando até que o peixinho morreu afogado...*",
+      "source": "(Mario Quintana. ***Eu passarinho***. São Paulo: Ática, 2014)",
+      "language": "pt"
+    }
+  ],
+  "questions": [
+    {
+      "id": "trt4-2022-analista-ti-q001",
+      "number": 1,
+      "section": "Conhecimentos Gerais",
+      "subject": "Português",
+      "stimulus_id": "t01",
+      "command": "__Atenção:__ Para responder às questões de números 01 a 10, considere um trecho do romance *Quincas Borba*, de Machado de Assis.",
+      "statement": "A reflexão de Rubião no 2º parágrafo permite caracterizá-lo como",
+      "options": [
+        {
+          "key": "A",
+          "text": "calculista."
+        },
+        {
+          "key": "B",
+          "text": "altruísta."
+        },
+        {
+          "key": "C",
+          "text": "melancólico."
+        },
+        {
+          "key": "D",
+          "text": "indolente."
+        },
+        {
+          "key": "E",
+          "text": "nostálgico."
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 2,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q002",
+      "number": 2,
+      "section": "Conhecimentos Gerais",
+      "subject": "Português",
+      "stimulus_id": "t01",
+      "command": "__Atenção:__ Para responder às questões de números 01 a 10, considere um trecho do romance *Quincas Borba*, de Machado de Assis.",
+      "statement": "Depreende-se do 3º parágrafo que",
+      "options": [
+        {
+          "key": "A",
+          "text": "o “coração” de Rubião busca ocultar o sentimento de alegria pela morte da irmã e do amigo Quincas Borba."
+        },
+        {
+          "key": "B",
+          "text": "o “espírito” (ou seja, a razão) de Rubião busca consolar seu “coração” pela morte da irmã e do amigo Quincas Borba."
+        },
+        {
+          "key": "C",
+          "text": "o “espírito” (ou seja, a razão) de Rubião busca se afastar do sentimento de alegria pela morte da irmã e do amigo Quincas Borba."
+        },
+        {
+          "key": "D",
+          "text": "o “coração” de Rubião mostra-se constrangido pelo sentimento de alegria experimentado por seu “espírito” (ou seja, por sua razão)."
+        },
+        {
+          "key": "E",
+          "text": "o “espírito” (ou seja, a razão) de Rubião mostra-se orgulhoso por cercear o sentimento de alegria experimentado por seu “coração”."
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 2,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q003",
+      "number": 3,
+      "section": "Conhecimentos Gerais",
+      "subject": "Português",
+      "stimulus_id": "t01",
+      "command": "__Atenção:__ Para responder às questões de números 01 a 10, considere um trecho do romance *Quincas Borba*, de Machado de Assis.",
+      "statement": "Considere os seguintes trechos do texto.\nI. *Quem o visse, com os polegares metidos no cordão do chambre, à janela de uma grande casa de Botafogo, cuidaria que ele admirava aquele pedaço de água quieta; mas, em verdade, vos digo que pensava em outra coisa.* (1º parágrafo)\nII. *Olha para si, para as chinelas (umas chinelas de Túnis, que lhe deu recente amigo, Cristiano Palha), para a casa, para o jardim, para a enseada, para os morros e para o céu; e tudo, desde as chinelas até o céu, tudo entra na mesma sensação de propriedade.* (1º parágrafo)\nIII. − *Vejam como Deus escreve direito por linhas tortas, pensa ele. Se mana Piedade tem casado com Quincas Borba, apenas me daria uma esperança colateral.* (2º parágrafo)\nO narrador dirige-se explicitamente a seu leitor APENAS em",
+      "options": [
+        {
+          "key": "A",
+          "text": "II."
+        },
+        {
+          "key": "B",
+          "text": "I."
+        },
+        {
+          "key": "C",
+          "text": "III."
+        },
+        {
+          "key": "D",
+          "text": "I e II."
+        },
+        {
+          "key": "E",
+          "text": "I e III."
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 2,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q004",
+      "number": 4,
+      "section": "Conhecimentos Gerais",
+      "subject": "Português",
+      "stimulus_id": "t01",
+      "command": "__Atenção:__ Para responder às questões de números 01 a 10, considere um trecho do romance *Quincas Borba*, de Machado de Assis.",
+      "statement": "Verifica-se a ocorrência de discurso indireto livre no seguinte trecho:",
+      "options": [
+        {
+          "key": "A",
+          "text": "*– Vejam como Deus escreve direito por linhas tortas, pensa ele.* (2º parágrafo)"
+        },
+        {
+          "key": "B",
+          "text": "*Rubião fitava a enseada, – eram oito horas da manhã.* (1º parágrafo)"
+        },
+        {
+          "key": "C",
+          "text": "*Cotejava o passado com o presente. Que era, há um ano? Professor. Que é agora? Capitalista.* (1º parágrafo)"
+        },
+        {
+          "key": "D",
+          "text": "*Se mana Piedade tem casado com Quincas Borba, apenas me daria uma esperança colateral.* (2º parágrafo)"
+        },
+        {
+          "key": "E",
+          "text": "*– Bonita canoa! – Antes assim! – Como obedece bem aos remos do homem! – O certo é que eles estão no Céu!* (3º parágrafo)"
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 2,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q005",
+      "number": 5,
+      "section": "Conhecimentos Gerais",
+      "subject": "Português",
+      "stimulus_id": "t01",
+      "command": "__Atenção:__ Para responder às questões de números 01 a 10, considere um trecho do romance *Quincas Borba*, de Machado de Assis.",
+      "statement": "*O espírito do ex-professor, __vexado__ daquele pensamento, __arrepiou caminho,__ buscou outro assunto* (3º parágrafo)\nSem que haja prejuízo para o sentido do texto, as expressões sublinhadas podem ser substituídas, respectivamente, por:",
+      "options": [
+        {
+          "key": "A",
+          "text": "*orgulhoso e discordou da direção*"
+        },
+        {
+          "key": "B",
+          "text": "*constrangido e mudou de rumo*"
+        },
+        {
+          "key": "C",
+          "text": "*desconfiado e tomou uma decisão*"
+        },
+        {
+          "key": "D",
+          "text": "*horrorizado e tomou um susto*"
+        },
+        {
+          "key": "E",
+          "text": "*desanimado e desconfiou da direção*"
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 3,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q006",
+      "number": 6,
+      "section": "Conhecimentos Gerais",
+      "subject": "Português",
+      "stimulus_id": "t01",
+      "command": "__Atenção:__ Para responder às questões de números 01 a 10, considere um trecho do romance *Quincas Borba*, de Machado de Assis.",
+      "statement": "Considere os seguintes trechos do texto.\nI. *Quem __o__ visse, com os polegares metidos no cordão do chambre* (1º parágrafo).\nII. *tudo, desde as chinelas até __o__ céu, tudo entra na mesma sensação de propriedade* (1º parágrafo).\nIII. *não gostava de bronze, mas __o__ amigo Palha disse-lhe que era matéria de preço* (4º parágrafo).\nRetoma um termo mencionado anteriormente no texto a palavra sublinhada APENAS em",
+      "options": [
+        {
+          "key": "A",
+          "text": "II e III."
+        },
+        {
+          "key": "B",
+          "text": "II."
+        },
+        {
+          "key": "C",
+          "text": "III."
+        },
+        {
+          "key": "D",
+          "text": "I e II."
+        },
+        {
+          "key": "E",
+          "text": "I."
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 3,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q007",
+      "number": 7,
+      "section": "Conhecimentos Gerais",
+      "subject": "Português",
+      "stimulus_id": "t01",
+      "command": "__Atenção:__ Para responder às questões de números 01 a 10, considere um trecho do romance *Quincas Borba*, de Machado de Assis.",
+      "statement": "A antítese é uma figura pela qual se opõem, numa mesma frase, duas palavras ou dois pensamentos de sentido contrário, a exemplo do que se verifica em:",
+      "options": [
+        {
+          "key": "A",
+          "text": "*– Vejam como Deus escreve direito por linhas tortas, pensa ele*. (2º parágrafo)"
+        },
+        {
+          "key": "B",
+          "text": "*Rubião fitava a enseada, – eram oito horas da manhã*. (1º parágrafo)"
+        },
+        {
+          "key": "C",
+          "text": "*Que lhe importa a canoa nem o canoeiro, que os olhos de Rubião acompanham, arregalados?* (3º parágrafo)"
+        },
+        {
+          "key": "D",
+          "text": "*– Como obedece bem aos remos do homem!* (3º parágrafo)"
+        },
+        {
+          "key": "E",
+          "text": "*Rubião pegou na xícara e, enquanto lhe deitava açúcar, ia disfarçadamente mirando a bandeja, que era de prata lavrada.* (4º parágrafo)"
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 3,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q008",
+      "number": 8,
+      "section": "Conhecimentos Gerais",
+      "subject": "Português",
+      "stimulus_id": "t01",
+      "command": "__Atenção:__ Para responder às questões de números 01 a 10, considere um trecho do romance *Quincas Borba*, de Machado de Assis.",
+      "statement": "__*Tivesse, porém, de escolher,*__ *escolheria a bandeja* (4º parágrafo)\nEm relação à oração que a sucede, a oração sublinhada expressa ideia de",
+      "options": [
+        {
+          "key": "A",
+          "text": "comparação."
+        },
+        {
+          "key": "B",
+          "text": "concessão."
+        },
+        {
+          "key": "C",
+          "text": "causa."
+        },
+        {
+          "key": "D",
+          "text": "condição."
+        },
+        {
+          "key": "E",
+          "text": "consequência."
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 3,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q009",
+      "number": 9,
+      "section": "Conhecimentos Gerais",
+      "subject": "Português",
+      "stimulus_id": "t01",
+      "command": "__Atenção:__ Para responder às questões de números 01 a 10, considere um trecho do romance *Quincas Borba*, de Machado de Assis.",
+      "statement": "*Um criado trouxe o café. Rubião pegou na xícara e, enquanto __lhe__ deitava açúcar, ia disfarçadamente mirando a bandeja, __que__ era de prata lavrada.* (4º parágrafo)\nOs termos sublinhados referem-se, respectivamente, a",
+      "options": [
+        {
+          "key": "A",
+          "text": "*“Rubião”* e “*prata lavrada”*."
+        },
+        {
+          "key": "B",
+          "text": "*“Rubião”* e “*bandeja”*."
+        },
+        {
+          "key": "C",
+          "text": "*“xícara”* e “*prata lavrada”*."
+        },
+        {
+          "key": "D",
+          "text": "*“xícara”* e “*bandeja”*."
+        },
+        {
+          "key": "E",
+          "text": "*“açúcar”* e “*bandeja”*."
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 3,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q010",
+      "number": 10,
+      "section": "Conhecimentos Gerais",
+      "subject": "Português",
+      "stimulus_id": "t01",
+      "command": "__Atenção:__ Para responder às questões de números 01 a 10, considere um trecho do romance *Quincas Borba*, de Machado de Assis.",
+      "statement": "*Quem o __visse,__* [...]*, __cuidaria__ que ele admirava aquele pedaço de água quieta* (1º parágrafo)\nOs sujeitos dos verbos sublinhados são, respectivamente,",
+      "options": [
+        {
+          "key": "A",
+          "text": "*“Quem”* e “*Quem o visse”*."
+        },
+        {
+          "key": "B",
+          "text": "*“Rubião”* e “*Quem o visse”*."
+        },
+        {
+          "key": "C",
+          "text": "*“Quem”* e “*Rubião”*."
+        },
+        {
+          "key": "D",
+          "text": "*“Rubião”* e “eu” (o narrador)."
+        },
+        {
+          "key": "E",
+          "text": "*“Quem”* e “eu” (o narrador)."
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 3,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q011",
+      "number": 11,
+      "section": "Conhecimentos Gerais",
+      "subject": "Português",
+      "stimulus_id": "t02",
+      "command": "__Atenção:__ Para responder às questões de números 11 a 15, considere o texto de Mario Quintana.",
+      "statement": "Tendo em vista a tipologia textual, “Velha história” constitui um texto, sobretudo,",
+      "options": [
+        {
+          "key": "A",
+          "text": "informativo."
+        },
+        {
+          "key": "B",
+          "text": "narrativo."
+        },
+        {
+          "key": "C",
+          "text": "dissertativo."
+        },
+        {
+          "key": "D",
+          "text": "injuntivo."
+        },
+        {
+          "key": "E",
+          "text": "expositivo."
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 4,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q012",
+      "number": 12,
+      "section": "Conhecimentos Gerais",
+      "subject": "Português",
+      "stimulus_id": "t02",
+      "command": "__Atenção:__ Para responder às questões de números 11 a 15, considere o texto de Mario Quintana.",
+      "statement": "*“Não, não me __assiste__ o direito de te guardar comigo. Por que roubar-te por mais tempo ao carinho do teu pai, da tua mãe, dos teus irmãozinhos, da tua tia solteira? Não, não e não! __Volta__ para o seio da tua família. E viva eu cá na terra sempre triste!...”* (3º parágrafo)\nAo se transpor o trecho acima para o discurso indireto, os termos sublinhados assumem as seguintes formas:",
+      "options": [
+        {
+          "key": "A",
+          "text": "*assistira* e *voltara*."
+        },
+        {
+          "key": "B",
+          "text": "*assistiria* e *voltasse*."
+        },
+        {
+          "key": "C",
+          "text": "*assistia* e *voltava*."
+        },
+        {
+          "key": "D",
+          "text": "*assistiria* e *voltaria*."
+        },
+        {
+          "key": "E",
+          "text": "*assistia* e *voltasse*."
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 4,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q013",
+      "number": 13,
+      "section": "Conhecimentos Gerais",
+      "subject": "Português",
+      "stimulus_id": "t02",
+      "command": "__Atenção:__ Para responder às questões de números 11 a 15, considere o texto de Mario Quintana.",
+      "statement": "*Aonde __o__ homem ia, __o__ peixinho __o__ acompanhava __a__ trote, que nem um cachorrinho.* (1º parágrafo)\nConsiderando o contexto, os termos sublinhados constituem, respectivamente,",
+      "options": [
+        {
+          "key": "A",
+          "text": "um pronome, um artigo, um artigo e uma preposição."
+        },
+        {
+          "key": "B",
+          "text": "uma preposição, um pronome, um pronome e um artigo."
+        },
+        {
+          "key": "C",
+          "text": "um pronome, um pronome, um pronome e um artigo."
+        },
+        {
+          "key": "D",
+          "text": "um artigo, um artigo, um artigo e uma preposição."
+        },
+        {
+          "key": "E",
+          "text": "um artigo, um artigo, um pronome e uma preposição."
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 4,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q014",
+      "number": 14,
+      "section": "Conhecimentos Gerais",
+      "subject": "Português",
+      "stimulus_id": "t02",
+      "command": "__Atenção:__ Para responder às questões de números 11 a 15, considere o texto de Mario Quintana.",
+      "statement": "Verifica-se o emprego de vírgula para separar um vocativo em:",
+      "options": [
+        {
+          "key": "A",
+          "text": "*Era uma vez um homem que estava pescando, Maria.* (1º parágrafo)"
+        },
+        {
+          "key": "B",
+          "text": "*Não, não me assiste o direito de te guardar comigo.* (3º parágrafo)"
+        },
+        {
+          "key": "C",
+          "text": "*Aonde o homem ia, o peixinho o acompanhava a trote, que nem um cachorrinho.* (1º parágrafo)"
+        },
+        {
+          "key": "D",
+          "text": "*Ora, um dia o homem e o peixinho passeavam à margem do rio onde o segundo dos dois fora pescado.* (2º parágrafo)"
+        },
+        {
+          "key": "E",
+          "text": "*Dito isso, verteu copioso pranto e, desviando o rosto, atirou o peixinho n’água.* (4º parágrafo)"
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 4,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q015",
+      "number": 15,
+      "section": "Conhecimentos Gerais",
+      "subject": "Português",
+      "stimulus_id": "t02",
+      "command": "__Atenção:__ Para responder às questões de números 11 a 15, considere o texto de Mario Quintana.",
+      "statement": "Verifica-se o emprego de voz passiva no seguinte trecho:",
+      "options": [
+        {
+          "key": "A",
+          "text": "*Depois guardou-o no bolso traseiro das calças, para que o animalzinho sarasse no quente.* (1º parágrafo)"
+        },
+        {
+          "key": "B",
+          "text": "*Ora, um dia o homem e o peixinho passeavam à margem do rio onde o segundo dos dois fora pescado.* (2º parágrafo)"
+        },
+        {
+          "key": "C",
+          "text": "*E eis que os olhos do primeiro se encheram de lágrimas.* (2º parágrafo)"
+        },
+        {
+          "key": "D",
+          "text": "*E viva eu cá na terra sempre triste!...* (3º parágrafo)"
+        },
+        {
+          "key": "E",
+          "text": "*Por que roubar-te por mais tempo ao carinho do teu pai, da tua mãe, dos teus irmãozinhos, da tua tia solteira?* (3º parágrafo)"
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 4,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q016",
+      "number": 16,
+      "section": "Conhecimentos Gerais",
+      "subject": "Raciocínio Lógico-Matemático",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Os apartamentos de um moderno edifício são numerados com três algarismos da seguinte maneira: o primeiro algarismo indica o andar e os dois seguintes o número do apartamento. Por exemplo, o apartamento numerado com 201 é o apartamento 01 do segundo andar. O edifício tem 6 andares com 15 apartamentos por andar. Os andares são numerados de 1 a 6, e, em cada andar, os apartamentos são numerados de 01 a 15. A quantidade de algarismos 2 necessária para numerar todos os apartamentos da forma descrita acima é:",
+      "options": [
+        {
+          "key": "A",
+          "text": "15"
+        },
+        {
+          "key": "B",
+          "text": "12"
+        },
+        {
+          "key": "C",
+          "text": "27"
+        },
+        {
+          "key": "D",
+          "text": "21"
+        },
+        {
+          "key": "E",
+          "text": "20"
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 5,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q017",
+      "number": 17,
+      "section": "Conhecimentos Gerais",
+      "subject": "Raciocínio Lógico-Matemático",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Oito cartões, numerados de 1 a 8, sem repetições, são distribuídos em duas caixas, **A** e **B**, de modo que a soma dos números dos cartões da caixa **A** seja igual à soma dos números dos cartões da caixa **B**. Se na caixa **A** há três cartões, então, certamente,",
+      "options": [
+        {
+          "key": "A",
+          "text": "o cartão com número 8 está na caixa **A**."
+        },
+        {
+          "key": "B",
+          "text": "o cartão com número 7 está na caixa **A**."
+        },
+        {
+          "key": "C",
+          "text": "o cartão com número 3 está na caixa **B**."
+        },
+        {
+          "key": "D",
+          "text": "os cartões com números 1 e 2 estão na caixa **B**."
+        },
+        {
+          "key": "E",
+          "text": "o cartão com número 4 está na caixa **B**."
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 5,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q018",
+      "number": 18,
+      "section": "Conhecimentos Gerais",
+      "subject": "Raciocínio Lógico-Matemático",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Sabendo-se que ■ representa um número e que ■ + 15 = ■ + ■ + (■/2), o número representado por ■ é",
+      "options": [
+        {
+          "key": "A",
+          "text": "10"
+        },
+        {
+          "key": "B",
+          "text": "14"
+        },
+        {
+          "key": "C",
+          "text": "8"
+        },
+        {
+          "key": "D",
+          "text": "12"
+        },
+        {
+          "key": "E",
+          "text": "6"
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 5,
+      "topic_ids": [],
+      "review": "Os quadrados pretos do caderno representam o número desconhecido; transcritos como ■"
+    },
+    {
+      "id": "trt4-2022-analista-ti-q019",
+      "number": 19,
+      "section": "Conhecimentos Gerais",
+      "subject": "Raciocínio Lógico-Matemático",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Cento e oitenta bombons, sendo noventa e seis de chocolate meio amargo e oitenta e quatro de chocolate ao leite, devem ser colocados em caixas. As caixas devem ter o mesmo número de bombons, e cada caixa deve ter apenas bombons de um mesmo sabor. O menor número de caixas a serem compradas é:",
+      "options": [
+        {
+          "key": "A",
+          "text": "10"
+        },
+        {
+          "key": "B",
+          "text": "9"
+        },
+        {
+          "key": "C",
+          "text": "12"
+        },
+        {
+          "key": "D",
+          "text": "18"
+        },
+        {
+          "key": "E",
+          "text": "15"
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 5,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q020",
+      "number": 20,
+      "section": "Conhecimentos Gerais",
+      "subject": "Raciocínio Lógico-Matemático",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Geraldo perguntou aos seus três filhos, Antonio, Bruno e Carlos, quantas cabeças de gado ele possuía. Antonio disse 2022, Bruno disse 2027 e Carlos disse 2010. Geraldo respondeu que eles erraram por 12, 7 e 5 cabeças, não necessariamente nessa ordem. O número de cabeças de gado que Geraldo possui é:",
+      "options": [
+        {
+          "key": "A",
+          "text": "2012"
+        },
+        {
+          "key": "B",
+          "text": "2015"
+        },
+        {
+          "key": "C",
+          "text": "2017"
+        },
+        {
+          "key": "D",
+          "text": "2020"
+        },
+        {
+          "key": "E",
+          "text": "2010"
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 5,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q021",
+      "number": 21,
+      "section": "Conhecimentos Gerais",
+      "subject": "Legislação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Considere as seguintes definições:\nI. Retorno à atividade de servidor aposentado.\nII. Reinvestidura do servidor estável no cargo anteriormente ocupado, ou no cargo resultante de sua transformação, quando invalidada a sua demissão por decisão administrativa ou judicial, com ressarcimento de todas as vantagens.\nIII. Retorno do servidor estável ao cargo anteriormente ocupado.\nNos termos da Lei nº 8.112/1990, que dispõe sobre o regime jurídico dos servidores públicos civis da União, das autarquias e das fundações públicas federais, as definições I, II e III correspondem correta e respectivamente a:",
+      "options": [
+        {
+          "key": "A",
+          "text": "aproveitamento, reintegração e readaptação."
+        },
+        {
+          "key": "B",
+          "text": "reversão, aproveitamento e recondução."
+        },
+        {
+          "key": "C",
+          "text": "reversão, reintegração e recondução."
+        },
+        {
+          "key": "D",
+          "text": "recondução, aproveitamento e readaptação."
+        },
+        {
+          "key": "E",
+          "text": "aproveitamento, recondução e reintegração."
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 6,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q022",
+      "number": 22,
+      "section": "Conhecimentos Gerais",
+      "subject": "Legislação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Considere os seguintes itens:\nI. Reintegração.\nII Recondução.\nIII. Reversão.\nIV. Promoção.\nV. Readaptação.\nDe acordo com a Lei nº 8.112/1990, a vacância do cargo público ocorre APENAS nos casos indicados em:",
+      "options": [
+        {
+          "key": "A",
+          "text": "I, II, III e V."
+        },
+        {
+          "key": "B",
+          "text": "I, II e III."
+        },
+        {
+          "key": "C",
+          "text": "III, IV e V."
+        },
+        {
+          "key": "D",
+          "text": "IV e V."
+        },
+        {
+          "key": "E",
+          "text": "I, II e IV."
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 6,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q023",
+      "number": 23,
+      "section": "Conhecimentos Gerais",
+      "subject": "Legislação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Consoante a Lei nº 8.112/1990, no que concerne ao processo disciplinar:",
+      "options": [
+        {
+          "key": "A",
+          "text": "O processo disciplinar será conduzido por comissão composta de três servidores estáveis ou comissionados designados pela autoridade competente."
+        },
+        {
+          "key": "B",
+          "text": "Na fase do inquérito, o presidente da comissão poderá denegar pedidos considerados de nenhum interesse para o esclarecimento dos fatos."
+        },
+        {
+          "key": "C",
+          "text": "As reuniões e as audiências da comissão condutora do processo disciplinar terão caráter público."
+        },
+        {
+          "key": "D",
+          "text": "O prazo para a conclusão do processo disciplinar, improrrogável, não excederá sessenta dias."
+        },
+        {
+          "key": "E",
+          "text": "O julgamento fora do prazo legal implica nulidade do processo."
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 6,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q024",
+      "number": 24,
+      "section": "Conhecimentos Gerais",
+      "subject": "Legislação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Nos termos do Regimento Interno do Tribunal Regional do Trabalho da 4ª Região, a eleição para os cargos de Direção do Tribunal far-se-á mediante escrutínio",
+      "options": [
+        {
+          "key": "A",
+          "text": "secreto, em sessão ordinária do Tribunal Pleno, tomando posse os eleitos perante seus pares em sessão plenária reunida, extraordinariamente."
+        },
+        {
+          "key": "B",
+          "text": "aberto, em sessão extraordinária do Órgão Especial, tomando posse os eleitos perante seus pares em sessão plenária reunida, extraordinariamente."
+        },
+        {
+          "key": "C",
+          "text": "secreto, em sessão extraordinária do Tribunal Pleno, tomando posse os eleitos perante seus pares em sessão plenária reunida, extraordinariamente."
+        },
+        {
+          "key": "D",
+          "text": "aberto, em sessão ordinária do Tribunal Pleno, tomando posse os eleitos perante seus pares em sessão plenária reunida, ordinariamente."
+        },
+        {
+          "key": "E",
+          "text": "secreto, em sessão ordinária do Órgão Especial, tomando posse os eleitos perante seus pares em sessão plenária reunida, ordinariamente."
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 6,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q025",
+      "number": 25,
+      "section": "Conhecimentos Gerais",
+      "subject": "Legislação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Consoante os termos do Regimento Interno do Tribunal Regional do Trabalho da 4ª Região, fixar os horários de funcionamento dos serviços e das unidades judiciárias da região e eleger os magistrados que integrarão as Comissões Temporárias compete, respectivamente,",
+      "options": [
+        {
+          "key": "A",
+          "text": "ao Órgão Especial e às Seções Especializadas."
+        },
+        {
+          "key": "B",
+          "text": "ao Tribunal Pleno e às Seções Especializadas."
+        },
+        {
+          "key": "C",
+          "text": "ao Tribunal Pleno e ao Órgão Especial."
+        },
+        {
+          "key": "D",
+          "text": "ao Tribunal Pleno e ao Tribunal Pleno."
+        },
+        {
+          "key": "E",
+          "text": "ao Órgão Especial e ao Órgão Especial."
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 6,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q026",
+      "number": 26,
+      "section": "Conhecimentos Gerais",
+      "subject": "Legislação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Conforme dispõe o Regimento Interno do Tribunal Regional do Trabalho da 4ª Região, no que concerne às Turmas, é correto afirmar que",
+      "options": [
+        {
+          "key": "A",
+          "text": "de suas decisões não há previsão legal para recurso ao Órgão Especial."
+        },
+        {
+          "key": "B",
+          "text": "não têm competência para o julgamento de recursos."
+        },
+        {
+          "key": "C",
+          "text": "compõem-se de até quatro julgadores, dos quais apenas três participarão do julgamento."
+        },
+        {
+          "key": "D",
+          "text": "o Presidente da Turma profere voto apenas para desempate."
+        },
+        {
+          "key": "E",
+          "text": "o Presidente da Turma afastado temporariamente é substituído por um Presidente de outra Turma, com acúmulo de funções."
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 7,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q027",
+      "number": 27,
+      "section": "Conhecimentos Gerais",
+      "subject": "Legislação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Segundo a Lei Geral de Proteção de Dados Pessoais (LGPD), Lei nº 13.709/2018, o dado pessoal sobre origem racial ou étnica, convicção religiosa, opinião política, filiação a sindicato ou a organização de caráter religioso, filosófico ou político, dado referente à saúde ou à vida sexual, dado genético ou biométrico, quando vinculado a uma pessoa natural, é denominado dado pessoal",
+      "options": [
+        {
+          "key": "A",
+          "text": "social."
+        },
+        {
+          "key": "B",
+          "text": "sensível."
+        },
+        {
+          "key": "C",
+          "text": "intangível."
+        },
+        {
+          "key": "D",
+          "text": "não qualificável."
+        },
+        {
+          "key": "E",
+          "text": "não classificável."
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 7,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q028",
+      "number": 28,
+      "section": "Conhecimentos Gerais",
+      "subject": "Legislação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Nos termos da Lei Geral de Proteção de Dados Pessoais (LGPD), Lei nº 13.709/2018, no que concerne ao tratamento de dados pessoais de crianças e de adolescentes,",
+      "options": [
+        {
+          "key": "A",
+          "text": "o consentimento pode ser genérico ou específico."
+        },
+        {
+          "key": "B",
+          "text": "o consentimento deve ser dado por ambos os pais ou responsável legal."
+        },
+        {
+          "key": "C",
+          "text": "os dados podem ser coletados sem o consentimento, se para contatar os pais ou responsável legal, podendo ser utilizados a essa finalidade."
+        },
+        {
+          "key": "D",
+          "text": "os dados podem ser coletados sem consentimento, desde que para contatar os pais ou responsável legal, não podendo ficar armazenados."
+        },
+        {
+          "key": "E",
+          "text": "os dados podem ser coletados, se para sua proteção, e podem ser repassados a terceiros, ambos sem consentimento."
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 7,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q029",
+      "number": 29,
+      "section": "Conhecimentos Gerais",
+      "subject": "Legislação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Conforme estabelece a Lei nº 8.429/1992, a pena de *perda dos bens ou valores acrescidos ilicitamente ao patrimônio, perda da função pública, suspensão dos direitos políticos até catorze anos, pagamento de multa civil equivalente ao valor do acréscimo patrimonial e proibição de contratar com o poder público ou de receber benefícios ou incentivos fiscais ou creditícios, direta ou indiretamente, ainda que por intermédio de pessoa jurídica da qual seja sócio majoritário, pelo prazo não superior a catorze anos* pode ser aplicada no ato que",
+      "options": [
+        {
+          "key": "A",
+          "text": "permite ou facilita a aquisição, permuta ou locação de bem ou serviço por preço superior ao de mercado."
+        },
+        {
+          "key": "B",
+          "text": "ordena ou permite a realização de despesas não autorizadas em lei ou regulamento."
+        },
+        {
+          "key": "C",
+          "text": "deixa de prestar contas quando esteja obrigado a fazê-lo, desde que disponha das condições para isso, com vistas a ocultar irregularidades."
+        },
+        {
+          "key": "D",
+          "text": "descumpre as normas relativas à celebração, fiscalização e aprovação de contas de parcerias firmadas pela administração pública com entidades privadas."
+        },
+        {
+          "key": "E",
+          "text": "percebe vantagem econômica, direta ou indireta, para facilitar a alienação, permuta ou locação de bem público ou o fornecimento de serviço por ente estatal por preço inferior ao valor de mercado."
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 7,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q030",
+      "number": 30,
+      "section": "Conhecimentos Gerais",
+      "subject": "Legislação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Nos termos da Lei nº 14.133/2021 (nova Lei de Licitações), no que concerne à participação consorciada nos certames licitatórios,",
+      "options": [
+        {
+          "key": "A",
+          "text": "para consórcios compostos, em sua totalidade, de microempresas e pequenas empresas, assim definidas em lei, não haverá acréscimo sobre o valor exigido de licitante individual para a habilitação econômico-financeira."
+        },
+        {
+          "key": "B",
+          "text": "cada empresa consorciada deve comprovar, isoladamente, os requisitos habilitatórios exigidos no edital."
+        },
+        {
+          "key": "C",
+          "text": "é vedada a participação de empresas em consórcio na licitação."
+        },
+        {
+          "key": "D",
+          "text": "o edital de licitação não poderá estabelecer limite máximo para o número de empresas em consórcio."
+        },
+        {
+          "key": "E",
+          "text": "a substituição de consorciado independe de ser expressamente autorizada pelo órgão ou entidade contratante."
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 7,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q031",
+      "number": 31,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "O mecanismo de configuração automática baseado em convenção do Spring Boot pode ser iniciado anotando a classe que contém o método principal estático, com a anotação",
+      "options": [
+        {
+          "key": "A",
+          "text": "`@SpringMainClass`"
+        },
+        {
+          "key": "B",
+          "text": "`@SpringBootComponent`"
+        },
+        {
+          "key": "C",
+          "text": "`@SpringBootApplication`"
+        },
+        {
+          "key": "D",
+          "text": "`@SpringRootApplication`"
+        },
+        {
+          "key": "E",
+          "text": "`@SpringBootEntity`"
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": true,
+      "has_figure": false,
+      "figures": [],
+      "page": 8,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q032",
+      "number": 32,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Para gerenciar a configuração de um panorama do sistema de microsserviços, o Spring Cloud contém o Spring Cloud Config, que fornece o gerenciamento centralizado de arquivos de configuração. O Spring Cloud Config",
+      "options": [
+        {
+          "key": "A",
+          "text": "oferece suporte à criptografia de informações confidenciais na configuração, exceto de credenciais."
+        },
+        {
+          "key": "B",
+          "text": "suporta o armazenamento de arquivos de configuração em repositório Git, por exemplo, no GitHub."
+        },
+        {
+          "key": "C",
+          "text": "não permite separar as partes comuns da configuração das partes específicas de microsserviços."
+        },
+        {
+          "key": "D",
+          "text": "não suporta o armazenamento de arquivos de configuração em uma base de dados banco de dados JDBC."
+        },
+        {
+          "key": "E",
+          "text": "não suporta o armazenamento de arquivos de configuração em um sistema de arquivos local (*local filesystem*)."
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 8,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q033",
+      "number": 33,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Para documentar uma API acessível externamente a partir de um cenário de microsserviços, um Analista utilizou a especificação Swagger. Para cada operação RESTful na API, ele adicionou uma anotação **A**, juntamente com anotações **B** no método Java correspondente, para descrever a operação e suas respostas de erro esperadas. As anotações **A** e **B** são, respectivamente,",
+      "options": [
+        {
+          "key": "A",
+          "text": "`@describeOperation` e `@errorResponse`."
+        },
+        {
+          "key": "B",
+          "text": "`@restOperation` e `@restResponse`."
+        },
+        {
+          "key": "C",
+          "text": "`@getInfoOperation` e `@getErrorResponse`."
+        },
+        {
+          "key": "D",
+          "text": "`@ApiOperation` e `@ApiResponse`."
+        },
+        {
+          "key": "E",
+          "text": "`@swaggerOperation` e `@swaggerResponse`."
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 8,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q034",
+      "number": 34,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "O protocolo OAuth 2.0 permite que serviços de terceiros troquem informações sem que seja necessário fornecer uma senha. No OAuth 2.0",
+      "options": [
+        {
+          "key": "A",
+          "text": "há total compatibilidade com as versões anteriores deste protocolo."
+        },
+        {
+          "key": "B",
+          "text": "um único servidor de autorização pode emitir *tokens* de acesso aceitos por vários servidores de recursos."
+        },
+        {
+          "key": "C",
+          "text": "o servidor de autorização não pode ser o mesmo que o servidor de recursos."
+        },
+        {
+          "key": "D",
+          "text": "há cinco funções: proprietário do recurso, servidor de recursos, cliente, servidor de *logs* e repositório de credenciais."
+        },
+        {
+          "key": "E",
+          "text": "os *refresh tokens* são emitidos para o cliente pelo servidor de recursos e são usados para obter um novo *access token* quando o atual expira."
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 8,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q035",
+      "number": 35,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Considere o seguinte texto:\n*Nowadays, firewalls are way more sophisticated than they used to be. They are now capable of inspecting the application-level protocols and are often not only deployed at the forefront of the infrastructure but also between each component, to monitor and limit unauthorized accesses.*\n*For the same reason, some container orchestrator tools (such as* ...I...*, but also the public cloud providers) offer the possibility to implement the so-called network policies, which are essentially* ...II... *acting as a network firewall, hence not allowing (or dropping) unwanted network connections. Firewalls can be hardware appliances (with major vendors including Cisco and Check Point, among others), or even software distributions (such as PFSense and Zeroshell).*\n(Adaptado de: BONOCORE, Giuseppe. **Hands-On Software Architecture with Java**. Packt Publishing, 2022)\nAs lacunas **I** e **II** devem ser preenchidas, correta e respectivamente, com",
+      "options": [
+        {
+          "key": "A",
+          "text": "*Kubernetes* e *Access Control Lists*"
+        },
+        {
+          "key": "B",
+          "text": "*Docker* e *Reverse Proxies*"
+        },
+        {
+          "key": "C",
+          "text": "*Rancher* e *Disaster Recovery Policies*"
+        },
+        {
+          "key": "D",
+          "text": "*Jenkins* e *Reverse Proxies*"
+        },
+        {
+          "key": "E",
+          "text": "*Maven* e *Access Control Lists*"
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 8,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q036",
+      "number": 36,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Analisando as características, vantagens e desvantagens da assinatura digital um Analista concluiu corretamente que",
+      "options": [
+        {
+          "key": "A",
+          "text": "a desvantagem da utilização de resumos criptográficos no processo de autenticação é a diminuição de desempenho, pois os algoritmos simétricos são muito lentos."
+        },
+        {
+          "key": "B",
+          "text": "a submissão de resumos criptográficos ao processo de cifragem com a chave privada aumenta o tempo de operação para gerar uma assinatura, pois os resumos são mais complexos, por serem criptografados, que o documento original."
+        },
+        {
+          "key": "C",
+          "text": "cada documento possui um valor único de resumo criptográfico e somente grandes alterações no documento resultam em um resumo diferente."
+        },
+        {
+          "key": "D",
+          "text": "na assinatura digital o documento não sofre qualquer alteração e o *hash* cifrado com a chave pública do signatário é enviado separado do documento, mas na mesma operação de envio."
+        },
+        {
+          "key": "E",
+          "text": "para comprovar uma assinatura digital é necessário inicialmente realizar duas operações: calcular o resumo criptográfico do documento e decifrar a assinatura com a chave pública do signatário."
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 9,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q037",
+      "number": 37,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Um Técnico está participando da implantação de um sistema de microsserviços e utilizou um Servidor de Borda para proteger os microsserviços expostos contra solicitações de clientes mal-intencionados. Para proteger os serviços expostos e garantir que os clientes sejam confiáveis utilizou protocolos padrão e práticas recomendadas, incluindo um padrão aberto (RFC 7519) que consiste no uso de objetos JSON como uma maneira de transmitir informações com segurança entre as partes. Este padrão é conhecido como JSON",
+      "options": [
+        {
+          "key": "A",
+          "text": "API Key (JAK)."
+        },
+        {
+          "key": "B",
+          "text": "Trustworthy Protocol (JTP)."
+        },
+        {
+          "key": "C",
+          "text": "OAuth (JOA)."
+        },
+        {
+          "key": "D",
+          "text": "Web Token (JWT)."
+        },
+        {
+          "key": "E",
+          "text": "Security Protocol (JSP)."
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 9,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q038",
+      "number": 38,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Com relação às transações nos aplicativos de serviço de uma organização, considere:\nI. Transmissões incompletas e erros de roteamento.\nII. Alterações não autorizadas de mensagens.\nIII. Divulgação não autorizada.\nIV. Duplicação ou reapresentação de mensagem não autorizada.\nA norma ABNT NBR 27001:2013 recomenda que as informações envolvidas em transações nos aplicativos de serviços devem ser protegidas para prevenir o que consta de",
+      "options": [
+        {
+          "key": "A",
+          "text": "III e IV, apenas."
+        },
+        {
+          "key": "B",
+          "text": "I e II, apenas."
+        },
+        {
+          "key": "C",
+          "text": "I, II, III e IV."
+        },
+        {
+          "key": "D",
+          "text": "I, II e IV, apenas."
+        },
+        {
+          "key": "E",
+          "text": "III, apenas."
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 9,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q039",
+      "number": 39,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Segundo a norma ABNT NBR 27035-3:2021, as fases do processo de operação de resposta a incidentes incluem operações para identificação, avaliação e qualificação de incidentes, coleta de inteligência de ameaças, contenção, erradicação e recuperação de incidentes, análise de incidentes e",
+      "options": [
+        {
+          "key": "A",
+          "text": "geração de relatórios de incidentes."
+        },
+        {
+          "key": "B",
+          "text": "criação do plano de tratamento de incidentes."
+        },
+        {
+          "key": "C",
+          "text": "tratamento de incidentes."
+        },
+        {
+          "key": "D",
+          "text": "criação do plano de continuidade de negócios."
+        },
+        {
+          "key": "E",
+          "text": "melhoria contínua do processo tratamento de incidentes."
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 9,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q040",
+      "number": 40,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Em uma aplicação Java, para interagir com um banco de dados H2 usando JDBC um Analista deve indicar (ou registrar) o *driver* JDBC utilizando o comando",
+      "options": [
+        {
+          "key": "A",
+          "text": "`DriverManager.JDBCDriver(\"org.h2.Driver\");`"
+        },
+        {
+          "key": "B",
+          "text": "`Class.forDriver(\"com.jdbc.h2.Driver\");`"
+        },
+        {
+          "key": "C",
+          "text": "`Class.driver(\"com.h2.cj.jdbc.Driver\");`"
+        },
+        {
+          "key": "D",
+          "text": "`Connection.JDBCDriver(\"com.jdbc.h2.Driver\");`"
+        },
+        {
+          "key": "E",
+          "text": "`Class.forName(\"org.h2.Driver\");`"
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": true,
+      "has_figure": false,
+      "figures": [],
+      "page": 9,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q041",
+      "number": 41,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "No PostgreSQL, em condições ideais, para revogar todos os direitos do usuário `user001` na tabela `produtos`, um Analista deve utilizar o comando",
+      "options": [
+        {
+          "key": "A",
+          "text": "`GRANT REVOKE ALL ON produtos FROM user001;`"
+        },
+        {
+          "key": "B",
+          "text": "`REVOKE PERMISSIONS ON produtos FROM user001;`"
+        },
+        {
+          "key": "C",
+          "text": "`APPLY REVOKE ON produtos FROM user001;`"
+        },
+        {
+          "key": "D",
+          "text": "`REVOKE ALL ON produtos FROM user001;`"
+        },
+        {
+          "key": "E",
+          "text": "`REVOKE ALL PERMISSIONS ON produtos FROM USER user001;`"
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": true,
+      "has_figure": false,
+      "figures": [],
+      "page": 10,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q042",
+      "number": 42,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Uma declaração de variável de tipo união, válida em Typescript, é",
+      "options": [
+        {
+          "key": "A",
+          "text": "`let v:(number|string) = 924;`"
+        },
+        {
+          "key": "B",
+          "text": "`let v:[number, string] => [123,\"Tribunal\"];`"
+        },
+        {
+          "key": "C",
+          "text": "`let v: string <=> null = 123;`"
+        },
+        {
+          "key": "D",
+          "text": "`var v:[x=1, y=\"Tribunal\"];`"
+        },
+        {
+          "key": "E",
+          "text": "`var v:(x:number, y:string) => 145;`"
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": true,
+      "has_figure": false,
+      "figures": [],
+      "page": 10,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q043",
+      "number": 43,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Considere o fragmento abaixo em um arquivo XML.\n```xml\n<employees>\n  <employee>\n    <firstName>Paulo</firstName> <lastName>Silva</lastName>\n  </employee>\n</employees>\n```\nA representação correta desse fragmento usando JSON, com objeto `employees` contendo uma *array* com um funcionário, é",
+      "options": [
+        {
+          "key": "A",
+          "text": "```json\n{\"employees\":[\n     { \"firstName\":\"Paulo\", \"lastName\":\"Silva\" }\n]}\n```"
+        },
+        {
+          "key": "B",
+          "text": "```json\n{\"employees\":[\n     { firstName=\"Paulo\", lastName=\"Silva\" }\n]}\n```"
+        },
+        {
+          "key": "C",
+          "text": "```text\n(\"employees\":[\n     ( firstName=\"Paulo\", lastName=\"Silva\" )\n])\n```"
+        },
+        {
+          "key": "D",
+          "text": "```json\n{employees(\n     { firstName:\"Paulo\", lastName:\"Silva\" }\n)}\n```"
+        },
+        {
+          "key": "E",
+          "text": "```text\nemployees=[\n     ( \"firstName\":\"Paulo\", \"lastName\":\"Silva\" )\n]\n```"
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": true,
+      "has_figure": false,
+      "figures": [],
+      "page": 10,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q044",
+      "number": 44,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "A instrução jQuery para colocar o conteúdo de todos os elementos `p` da página HTML com letras de tamanho `40px` é",
+      "options": [
+        {
+          "key": "A",
+          "text": "`$(\"p.font\").style(\"size\", \"40px\");`"
+        },
+        {
+          "key": "B",
+          "text": "`$(\"p\").css(\"font-size\", \"40px\");`"
+        },
+        {
+          "key": "C",
+          "text": "`$(\"p\").css(\"size\", \"40px\");`"
+        },
+        {
+          "key": "D",
+          "text": "`$(\"p\").style(\"font-size\", \"40px\");`"
+        },
+        {
+          "key": "E",
+          "text": "`$(\"p\").css(\"font-size:40px\");`"
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": true,
+      "has_figure": false,
+      "figures": [],
+      "page": 10,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q045",
+      "number": 45,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "As classes persistentes da JPA que são definidas por anotações são `javax.persistence.Embeddable`, `javax.persistence.MappedSuperclass` e",
+      "options": [
+        {
+          "key": "A",
+          "text": "`javax.persistence.Inerface`"
+        },
+        {
+          "key": "B",
+          "text": "`javax.persistence.AbstractClass`"
+        },
+        {
+          "key": "C",
+          "text": "`javax.persistence.MainClass`"
+        },
+        {
+          "key": "D",
+          "text": "`javax.persistence.NamedClass`"
+        },
+        {
+          "key": "E",
+          "text": "`javax.persistence.Entity`"
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": true,
+      "has_figure": false,
+      "figures": [],
+      "page": 10,
+      "topic_ids": [],
+      "review": "Enunciado reordenado: a extração separou a primeira linha justificada"
+    },
+    {
+      "id": "trt4-2022-analista-ti-q046",
+      "number": 46,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Uma Analista verificou que os tensores PyTorch são variáveis indexadas (*arrays*) multidimensionais usadas como base para operações avançadas. Ela deseja mudar o tipo de tensor inicialmente usado como padrão. Para tanto deverá usar",
+      "options": [
+        {
+          "key": "A",
+          "text": "`torch.get_tensor_default_type`"
+        },
+        {
+          "key": "B",
+          "text": "`set.torch_define_tensor_type`"
+        },
+        {
+          "key": "C",
+          "text": "`torch.set_default_tensor_type`"
+        },
+        {
+          "key": "D",
+          "text": "`set.torch_default_tensor.type`"
+        },
+        {
+          "key": "E",
+          "text": "`torch.set_define_tensor_type`"
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": true,
+      "has_figure": false,
+      "figures": [],
+      "page": 11,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q047",
+      "number": 47,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "No Linux, um Analista executou um comando para verificar se o Python 3 estava instalado. O comando correto é",
+      "options": [
+        {
+          "key": "A",
+          "text": "`@python3`"
+        },
+        {
+          "key": "B",
+          "text": "`python3 -V`"
+        },
+        {
+          "key": "C",
+          "text": "`lib.python3`"
+        },
+        {
+          "key": "D",
+          "text": "`python3 -Q`"
+        },
+        {
+          "key": "E",
+          "text": "`?python3`"
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": true,
+      "has_figure": false,
+      "figures": [],
+      "page": 11,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q048",
+      "number": 48,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Uma Analista verificou que, dentre os tipos de teste de integração, uma das abordagens considerava:\n– Integrar componentes de infraestrutura e depois adicionar componentes funcionais.\n– Iniciar a integração dos sistemas no nível de módulo.\n– Implementar o método de teste quando existirem módulos superiores ainda em construção. Nesse caso, deve-se usar *drivers* para estimular o funcionamento dos módulos ausentes.\nTrata-se da abordagem",
+      "options": [
+        {
+          "key": "A",
+          "text": "*Base-Top*."
+        },
+        {
+          "key": "B",
+          "text": "*Top-Down*."
+        },
+        {
+          "key": "C",
+          "text": "*Back-Stage*."
+        },
+        {
+          "key": "D",
+          "text": "*Bottom-Up*."
+        },
+        {
+          "key": "E",
+          "text": "*Middle-Upper*."
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 11,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q049",
+      "number": 49,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Utilizando o Mockito, um Analista verificou que uma das anotações que podia utilizar era criar uma instância de uma classe que se pode “mockar” ou chamar os métodos reais a qual permite que se verifique se um método chama outros métodos. Bastante útil ao tentar colocar o código legado em teste. É uma alternativa ao uso do `@InjectMocks`, quando é preciso “mockar” métodos da própria classe que está sendo testada. Trata-se de",
+      "options": [
+        {
+          "key": "A",
+          "text": "`@When`"
+        },
+        {
+          "key": "B",
+          "text": "`@Verify`"
+        },
+        {
+          "key": "C",
+          "text": "`@Matchers`"
+        },
+        {
+          "key": "D",
+          "text": "`@Spy`"
+        },
+        {
+          "key": "E",
+          "text": "`@Mock`"
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": true,
+      "has_figure": false,
+      "figures": [],
+      "page": 11,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q050",
+      "number": 50,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "No padrão MVC, a camada onde são representadas as classes que acessam e manipulam dados na base de dados por meio de instruções SQL é a camada",
+      "options": [
+        {
+          "key": "A",
+          "text": "*Model*."
+        },
+        {
+          "key": "B",
+          "text": "*Controller*."
+        },
+        {
+          "key": "C",
+          "text": "*Middle*."
+        },
+        {
+          "key": "D",
+          "text": "*View*."
+        },
+        {
+          "key": "E",
+          "text": "*Conception*."
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 11,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q051",
+      "number": 51,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Ao pesquisar sobre tipos de memória de computadores, uma Analista verificou algumas características de um tipo onde os dados podem ser lidos e gravados eletricamente, mas é utilizada uma luz ultravioleta para apagar seu conteúdo e permitir uma nova escrita. Contudo, para permitir a regravação do seu conteúdo, todos os dados devem ser apagados antes de iniciar uma nova gravação. Trata-se da memória",
+      "options": [
+        {
+          "key": "A",
+          "text": "RAM."
+        },
+        {
+          "key": "B",
+          "text": "Flash-RAM."
+        },
+        {
+          "key": "C",
+          "text": "EPROM."
+        },
+        {
+          "key": "D",
+          "text": "DROM."
+        },
+        {
+          "key": "E",
+          "text": "VROM."
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 11,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q052",
+      "number": 52,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Utilizando um terminal Linux, em condições ideais, um Analista executa o comando `stat <41943285>` que exibe os metadados contidos no inode `41943285`, e que corresponde ao arquivo `nvdata.cache`. O resultado a seguir é um exemplo típico do conteúdo de `Inode`:\n```text\nInode: 41943285   ...I...: regular    Mode:  0640    Flags: 0x80000\nGeneration: 296323059    Version: 0x00000000:00000001\n...II...:  2047   Group:  2045   Size: 1269\nFile ACL: 0    Directory ACL: 0\nLinks: 1   ...III...: 8\nFragment:  Address: 0    Number: 0    Size: 0\n ctime: 0x598c9b7d:53724e00 -- Thu Aug 10 14:44:29 2017\n atime: 0x5e48ec40:9dd54604 -- Sun Feb 16 04:16:16 2020\n mtime: 0x598c9b7d:53724e00 -- Thu Aug 10 14:44:29 2017\ncrtime: 0x598c9b7d:53354500 -- Thu Aug 10 14:44:29 2017\nSize of extra inode fields: 28\nEXTENTS:\n(0): 167805062\n```\nAs lacunas **I**, **II** e **III**, devem ser preenchidas, correta e respectivamente, com",
+      "options": [
+        {
+          "key": "A",
+          "text": "`User` – `Blockcount` – `Xtension`"
+        },
+        {
+          "key": "B",
+          "text": "`User` – `Type` – `Inode.count`"
+        },
+        {
+          "key": "C",
+          "text": "`Type` – `Inode.count` – `User`"
+        },
+        {
+          "key": "D",
+          "text": "`User` – `Blockcount` – `Type`"
+        },
+        {
+          "key": "E",
+          "text": "`Type` – `User` – `Blockcount`"
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": true,
+      "has_figure": false,
+      "figures": [],
+      "page": 12,
+      "topic_ids": [],
+      "review": "Saída do comando stat com a indentação do caderno; lacunas como ...I..."
+    },
+    {
+      "id": "trt4-2022-analista-ti-q053",
+      "number": 53,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Em seus estudos sobre SAN e sobre o protocolo Fibre Channel (FC), uma Analista verificou que:\nO Fibre Channel Protocol (FCP) é um Protocolo de ...I... SCSI e que foi desenvolvido para facilitar a comunicação de blocos de dados entre origem-destino em redes FC. No modelo de redes FC, FCP é um protocolo da camada ...II... Além disso, para o uso do FCP nenhuma modificação especial é necessária no FC e no SCSI, pois utiliza o mesmo formato de quadro e de serviços definidos pelas especificações do FC e a arquitetura SCSI já existente.\nO Fibre Channel over IP (FCIP) permite a conexão de dois ...III... interligando *switches* através de TCP/IP. Um túnel ponto a ponto é criado através de uma rede IP e o tráfego Fibre Channel é encapsulado e desencapsulado nos terminais.\nO Internet Fibre Channel Protocol (iFCP) é um protocolo ...IV... que interliga dispositivos do Fibre Channel através da rede IP/Ethernet.\nPreenchem, correta e respectivamente, as lacunas **I**, **II**, **III** e **IV**:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Transporte – FC-3 – SANs over IP – *back-to-end*"
+        },
+        {
+          "key": "B",
+          "text": "Transporte – FC-4 – FC-SANs – *gateway-to-gateway*"
+        },
+        {
+          "key": "C",
+          "text": "Inter-Rede – FC-3 – FC-Ethernet – *gateway-to-gateway*"
+        },
+        {
+          "key": "D",
+          "text": "Aplicação – SAN-3 – Ethernet LAN – SAN *end-to-end*"
+        },
+        {
+          "key": "E",
+          "text": "Inter-Rede – FC-4 – SANs over IP – *end-to-end*"
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 12,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q054",
+      "number": 54,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Considere os seguintes itens de informação: processos filhos; pilha; arquivos abertos; alarmes pendentes; contador de programa; registradores; estado; espaço de endereçamento; variáveis globais; sinais e tratadores de sinais; informação de contabilidade. São alguns dos itens de informação privados por *threads*,",
+      "options": [
+        {
+          "key": "A",
+          "text": "contador de programa; estado e; arquivos abertos."
+        },
+        {
+          "key": "B",
+          "text": "informação de contabilidade; registradores e; pilha."
+        },
+        {
+          "key": "C",
+          "text": "pilha; alarmes pendentes; estado e; registradores."
+        },
+        {
+          "key": "D",
+          "text": "contador de programa; registradores; pilha e; estado."
+        },
+        {
+          "key": "E",
+          "text": "alarmes pendentes; sinais e tratadores de sinais e; contador de programa."
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 12,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q055",
+      "number": 55,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Uma Analista deseja configurar o LACP (IEEE 802.3ad) para interfaces *gigabit*. A título de exemplo, considere o trecho de configuração a seguir, que mostra como configurar portas *gigabit* Ethernet 2/0 na *port channel* 1 com parâmetros LACP:\n```text\nRouter> enable\nRouter# configure terminal\nRouter(config)# lacp ...I... 65535\nRouter(config)# interface port-channel 1\nRouter(config-if)# lacp max-bundle 2\nRouter(config-if)# ...II... 10.1.1.1 255.255.255.0\nRouter(config)# interface g2/0/0\nRouter(config-if)# no ip address\nRouter(config-if)# lacp port-priority 100\nRouter(config-if)# ...III... 1 mode passive\nRouter(config-if)# end\n```\nPreenchem, correta e respectivamente, as lacunas **I**, **II** e **III**:",
+      "options": [
+        {
+          "key": "A",
+          "text": "`system-address-priority` – `port address` – `group`"
+        },
+        {
+          "key": "B",
+          "text": "`port-link-priority` – `lacp ip address` – `group-port`"
+        },
+        {
+          "key": "C",
+          "text": "`priority-system` – `frame ip address` – `group-channel`"
+        },
+        {
+          "key": "D",
+          "text": "`priority-port` – `port-channel address` – `channel-port`"
+        },
+        {
+          "key": "E",
+          "text": "`system-priority` – `ip address` – `channel-group`"
+        }
+      ],
+      "answer": "E",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": true,
+      "has_figure": false,
+      "figures": [],
+      "page": 13,
+      "topic_ids": [],
+      "review": "Configuração do roteador com lacunas como ...I..."
+    },
+    {
+      "id": "trt4-2022-analista-ti-q056",
+      "number": 56,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "O identificador SSRC – *synchronization source*, que é uma das informações contidas no cabeçalho RTP, tem o tamanho de",
+      "options": [
+        {
+          "key": "A",
+          "text": "32 *bytes* e identifica as fontes de sincronização. Se aplica a pacotes gerados por misturadores na camada inter-rede."
+        },
+        {
+          "key": "B",
+          "text": "8 *bytes* e identifica as fontes que contribuíram para a formação dos dados contidos no pacote. Se aplica a pacotes gerados por misturadores."
+        },
+        {
+          "key": "C",
+          "text": "32 *bits* e identifica as fontes de sincronização."
+        },
+        {
+          "key": "D",
+          "text": "16 *bytes* e identifica as formas e tipos de sincronização."
+        },
+        {
+          "key": "E",
+          "text": "64 *bits* e identifica as fontes que contribuíram para a formação dos dados contidos no pacote. Se aplica a pacotes gerados na camada de aplicação."
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 13,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q057",
+      "number": 57,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Durante estudos sobre o protocolo ICMP, um Analista observou, corretamente, que um pacote ICMP contém o cabeçalho IP, seguido por um cabeçalho ICMP e os primeiros oito *bytes* da carga útil. Quando ocorre um erro, os valores do primeiro campo do cabeçalho ICMP podem ser usados para identificá-lo. O tipo de erro “*destination unreachable*” é identificado pelo tipo",
+      "options": [
+        {
+          "key": "A",
+          "text": "0"
+        },
+        {
+          "key": "B",
+          "text": "3"
+        },
+        {
+          "key": "C",
+          "text": "8"
+        },
+        {
+          "key": "D",
+          "text": "1"
+        },
+        {
+          "key": "E",
+          "text": "13"
+        }
+      ],
+      "answer": "B",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 13,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q058",
+      "number": 58,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Em suas pesquisas sobre qualidade de serviço, um Analista observou, corretamente, que QoS é uma coleção de tecnologias que permite que aplicativos requisitem e recebam níveis de serviços previsíveis em termos de",
+      "options": [
+        {
+          "key": "A",
+          "text": "conectividade de rede em transmissões multimídia, *throughput* de dados, taxa de perda de pacotes, sendo que *throughput* de dados significa variação das diferenças de largura de banda."
+        },
+        {
+          "key": "B",
+          "text": "conectividade de rede em transmissões multimídia, *throughput* de banda e taxa de perda de pacotes, sendo que *throughput* de banda significa variação das diferenças dos tipos de transmissão."
+        },
+        {
+          "key": "C",
+          "text": "capacidade de banda, *jitter* e taxa de perda de pacotes, sendo que *jitter* significa latência máxima durante uma transmissão."
+        },
+        {
+          "key": "D",
+          "text": "capacidade de *throughput* de dados, *jitter* e retardo, sendo que *jitter* significa variação de latência."
+        },
+        {
+          "key": "E",
+          "text": "capacidade de banda, *jitter* e taxa de perda de pacotes, sendo que *jitter* significa variação de *timestamp* entre as diferentes larguras de banda."
+        }
+      ],
+      "answer": "D",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 13,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q059",
+      "number": 59,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "Dentre os seis princípios de governança, recomendados em Introdução e Metodologia do COBIT 2019, um deles se refere ao tipo de abordagem e outro ao sistema de governança. Ao estudá-los, uma Analista verificou que as recomendações se referem, correta e respectivamente, à abordagem",
+      "options": [
+        {
+          "key": "A",
+          "text": "dinâmica e; ao sistema de governança de tecnologia e incidentes."
+        },
+        {
+          "key": "B",
+          "text": "explícita de segurança da informação e; ao sistema de governança de tecnologia embutida."
+        },
+        {
+          "key": "C",
+          "text": "holística e; ao sistema de governança de ponta a ponta."
+        },
+        {
+          "key": "D",
+          "text": "integral por prioridades dos *stakeholders* e; ao sistema de gestão de suporte aos clientes."
+        },
+        {
+          "key": "E",
+          "text": "recorrente da avaliação da infraestrutura e; ao sistema de gestão de negócios corporativos."
+        }
+      ],
+      "answer": "C",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": false,
+      "has_figure": false,
+      "figures": [],
+      "page": 14,
+      "topic_ids": [],
+      "review": null
+    },
+    {
+      "id": "trt4-2022-analista-ti-q060",
+      "number": 60,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação",
+      "stimulus_id": null,
+      "command": null,
+      "statement": "No Elasticsearch, um conjunto de analisadores visam analisar textos de idiomas específicos. O analisador brasileiro pode ser reimplementado como um analisador personalizado, conforme o exemplo seguinte:\n```json\nPUT /brazilian_example\n{\n  \"settings\": {\n    \"analysis\": {\n      \"filter\": {\n        \"brazilian_stop\": {\n          \"type\":       \"stop\",\n          \"stopwords\":  \"_brazilian_\"\n        },\n        \"...I...\": {\n          \"type\":       \"keyword_marker\",\n          \"keywords\":   [\"exemplo\"]\n        },\n        \"brazilian_stemmer\": {\n          \"type\":       \"stemmer\",\n          \"language\":   \"brazilian\"\n        }\n      },\n      \"analyzer\": {\n        \"...II...\": {\n          \"tokenizer\":  \"standard\",\n          \"...III...\": [\n            \"lowercase\",\n            \"brazilian_stop\",\n            \"brazilian_keywords\",\n            \"brazilian_stemmer\"\n          ]\n        }\n      }\n    }\n  }\n}\n```\nPreenchem, correta e respectivamente, as lacunas **I**, **II** e **III**:",
+      "options": [
+        {
+          "key": "A",
+          "text": "`brazilian_keywords` – `rebuilt_brazilian` – `filter`"
+        },
+        {
+          "key": "B",
+          "text": "`keywords_brazilian` – `brazilian_rebuilt` – `break`"
+        },
+        {
+          "key": "C",
+          "text": "`brazilian_words` – `brazilian_rebuilt` – `end_filtering`"
+        },
+        {
+          "key": "D",
+          "text": "`brazilian_marks` – `rebuilt_brazilian` – `filtering`"
+        },
+        {
+          "key": "E",
+          "text": "`words_brazilian` – `remake_brazilian` – `filter`"
+        }
+      ],
+      "answer": "A",
+      "status": "valida",
+      "status_note": null,
+      "answer_changed_from": null,
+      "language": "pt",
+      "has_table": false,
+      "has_code": true,
+      "has_figure": false,
+      "figures": [],
+      "page": 14,
+      "topic_ids": [],
+      "review": "JSON com lacunas como ...I...; as alternativas têm três colunas, reconstruídas pela imagem"
+    }
+  ]
+}

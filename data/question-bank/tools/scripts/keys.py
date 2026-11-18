@@ -27,3 +27,18 @@ def section(text, start, end=None):
     i = text.index(start)
     j = text.index(end, i + len(start)) if end else len(text)
     return text[i:j]
+
+
+def cebraspe_grid_key(text):
+    """Gabarito Cebraspe de múltipla escolha: linhas 'Questão 1 2 ...' e 'Gabarito E D ...' (0 = célula vazia; X = anulada)."""
+    key, nums = {}, None
+    for ln in text.splitlines():
+        t = ln.split()
+        if t and t[0] == "Questão":
+            nums = [int(x) for x in t[1:] if x.isdigit()]
+        elif t and t[0] == "Gabarito" and nums is not None:
+            for n, a in zip(nums, t[1:]):
+                if n and re.fullmatch(r"[A-EX]", a):
+                    key[n] = a
+            nums = None
+    return key

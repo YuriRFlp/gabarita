@@ -52,7 +52,7 @@ for ln in raw:
 
 
 def is_header(s):
-    return any(p.search(s.strip().replace("__", "").replace("**", "").replace("`", "")) for p in header)
+    return any(p.search(s.strip().replace("__", "").replace("*", "").replace("`", "")) for p in header)
 
 
 questions = []
@@ -86,7 +86,7 @@ for pg, ln, x in lines:
         expected += 1
         state = "stem"
         continue
-    if any(p.search(s.strip().replace("__", "").replace("**", "").replace("`", "")) for p in section_headers):
+    if any(p.search(s.strip().replace("__", "").replace("*", "").replace("`", "")) for p in section_headers):
         state = "after" if cur is not None else state
         continue
     if cur is None:

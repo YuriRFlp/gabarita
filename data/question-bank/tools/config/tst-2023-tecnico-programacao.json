@@ -1,0 +1,246 @@
+{
+  "paper": {
+    "schema_version": "1.0",
+    "id": "tst-2023-tecnico-programacao",
+    "court_id": "tst",
+    "court": "TST",
+    "justice_branch": "trabalho",
+    "state": "DF",
+    "year": 2023,
+    "applied_on": "2024-01-21",
+    "exam_board": "Cebraspe",
+    "notice": "Edital n.º 1 – TST, de 21 de setembro de 2023",
+    "taxonomy_edition": false,
+    "level": "tecnico",
+    "position": "Técnico Judiciário – Área Apoio Especializado",
+    "specialty": "Programação",
+    "position_code": "Cargo 3",
+    "booklets": [
+      {
+        "code": "918_TST_SERVIDOR_CB2_01",
+        "type": null,
+        "numbers": "1-30"
+      },
+      {
+        "code": "918_TST_SERVIDOR_003_01",
+        "type": null,
+        "numbers": "31-60"
+      }
+    ],
+    "format": "multiple_choice",
+    "options_per_question": 5,
+    "sections": [
+      {
+        "name": "Conhecimentos Básicos",
+        "numbers": "1-30"
+      },
+      {
+        "name": "Conhecimentos Específicos",
+        "numbers": "31-60"
+      }
+    ],
+    "answer_key": {
+      "status": "definitivo",
+      "published_on": null,
+      "note": "Gabaritos oficiais definitivos do Cebraspe; alterações e anulações justificadas no documento de justificativas"
+    },
+    "essay": null,
+    "sources": [
+      {
+        "file": "tst_2023_c3_basicos.pdf",
+        "kind": "caderno",
+        "url": null
+      },
+      {
+        "file": "tst_2023_c3_especificos.pdf",
+        "kind": "caderno",
+        "url": null
+      },
+      {
+        "file": "tst_2023_c3_gab_basicos.pdf",
+        "kind": "gabarito",
+        "url": null
+      },
+      {
+        "file": "tst_2023_c3_gab_especificos.pdf",
+        "kind": "gabarito",
+        "url": null
+      },
+      {
+        "file": "tst_2023_justificativas.pdf",
+        "kind": "recursos",
+        "url": null
+      }
+    ],
+    "notes": [
+      "Múltipla escolha do Cebraspe (cinco opções, A a E)",
+      "Os Conhecimentos Básicos (caderno 918_TST_SERVIDOR_CB2_01) são os do cargo de técnico judiciário",
+      "Disciplinas dos Conhecimentos Básicos atribuídas pelo assunto das questões; o caderno não imprime o nome das disciplinas",
+      "Código em blocos ```linguagem com a indentação do caderno; opções de uma linha só de código aparecem entre crases",
+      "O cargo não teve prova discursiva neste caderno"
+    ]
+  },
+  "parsed": [
+    "/home/claude/bank/work/tst_2023_c3_basicos.json",
+    "/home/claude/bank/work/tst_2023_c3_especificos.json"
+  ],
+  "layout": "/home/claude/provas/txt/tst_2023_c3_basicos.lay.txt",
+  "dehyphenate": true,
+  "ordinals": false,
+  "key": {
+    "file": [
+      "/home/claude/provas/txt/tst_2023_c3_gab_basicos.txt",
+      "/home/claude/provas/txt/tst_2023_c3_gab_especificos.txt"
+    ],
+    "method": "cebraspe_grid"
+  },
+  "sections": [
+    {
+      "from": 1,
+      "to": 12,
+      "section": "Conhecimentos Básicos",
+      "subject": "Língua Portuguesa"
+    },
+    {
+      "from": 13,
+      "to": 17,
+      "section": "Conhecimentos Básicos",
+      "subject": "Raciocínio Lógico-Matemático"
+    },
+    {
+      "from": 18,
+      "to": 22,
+      "section": "Conhecimentos Básicos",
+      "subject": "Direitos das pessoas com deficiência"
+    },
+    {
+      "from": 23,
+      "to": 30,
+      "section": "Conhecimentos Básicos",
+      "subject": "Regimento Interno do TST"
+    },
+    {
+      "from": 31,
+      "to": 60,
+      "section": "Conhecimentos Específicos",
+      "subject": "Tecnologia da Informação"
+    }
+  ],
+  "stimuli": {
+    "p1s01": {
+      "range": [
+        1,
+        9
+      ],
+      "title_lines": 1,
+      "source_lines": 2
+    },
+    "p1s02": {
+      "range": [
+        10,
+        12
+      ],
+      "title_lines": 1,
+      "source_lines": 2
+    }
+  },
+  "changed": {
+    "48": "E"
+  },
+  "status_notes": {
+    "37": "Deferido com anulação: as informações apresentadas no enunciado da questão prejudicaram seu julgamento objetivo.",
+    "48": "Deferido com alteração (E → A): a opção apontada preliminarmente como gabarito não pode ser correta, uma vez que a opção que representa corretamente o que será apresentado se o usuário clicar no botão Clique Aqui é a opção A."
+  },
+  "overrides": {
+    "15": {
+      "statement": "Considerando-se *P* como o conjunto dos números primos ímpares e *I* como o conjunto dos números naturais ímpares, conclui-se que *P* − *I* será"
+    },
+    "16": {
+      "statement": "*P*: “É permitido entrar de *shorts* em um tribunal.”\n*Q*: “É permitido entrar de bermuda em um tribunal.”\nCom base nas preposições *P* e *Q* precedentes, assinale a opção que é equivalente à proposição composta “Não é verdade que é permitido entrar de *shorts* ou bermuda em um tribunal.”.",
+      "options_text": {
+        "A": "p → q",
+        "B": "~(~q → p ∧ ~q)",
+        "C": "~p ∨ ~q",
+        "D": "~(p ∧ q)",
+        "E": "p ∧ q → ~q"
+      }
+    },
+    "17": {
+      "statement": "(∃*x*)(maisIdade(*x*) → (∀*y*)(maisJovem(*y*) → maisEstudioso(*x*, *y*)))\nConsiderando que maisIdade(*x*) indica que *x* é uma pessoa de mais idade na faculdade, que maisJovem(*x*) indica que *x* é uma pessoa mais jovem na faculdade e que maisEstudioso(*x*, *y*) indica que *x* é mais estudioso que *y*, assinale a opção que traduz corretamente a notação lógica da sentença precedente."
+    },
+    "48": {
+      "options_text": {
+        "A": "[imagem] Título “Poder Judiciário”, parágrafo “TST” e botão “Clique Aqui” (o parágrafo “Tribunal Superior do Trabalho” deixa de aparecer)",
+        "B": "[imagem] Apenas o botão “Clique Aqui”",
+        "C": "[imagem] Título “Poder Judiciário”, parágrafos “TST” e “Tribunal Superior do Trabalho” e botão “Clique Aqui” (igual à tela inicial)",
+        "D": "[imagem] Título “Poder Judiciário” e botão “Clique Aqui”",
+        "E": "[imagem] Título “Poder Judiciário” e parágrafo “TST”, sem o botão"
+      }
+    }
+  },
+  "figures": {
+    "48": {
+      "pdf": "/home/claude/bank/sources/tst_2023_c3_especificos.pdf",
+      "page": 2,
+      "bbox": [
+        300,
+        471,
+        572,
+        792
+      ],
+      "description": "Tela inicial: título “Poder Judiciário”, parágrafos “TST” e “Tribunal Superior do Trabalho” e botão “Clique Aqui”. Abaixo, as cinco opções de resposta, cada uma com uma captura de tela (descritas no texto das opções)."
+    },
+    "49": {
+      "pdf": "/home/claude/bank/sources/tst_2023_c3_especificos.pdf",
+      "page": 3,
+      "bbox": [
+        90,
+        285,
+        230,
+        355
+      ],
+      "description": "Formulário com o título “TST”, o rótulo “Login:”, campo de texto vazio e botão “Enviar”; abaixo do campo aparece o aviso do navegador “Preencha este campo.”"
+    }
+  },
+  "code_lang": {
+    "31": "text",
+    "46": "html",
+    "47": "php",
+    "48": "html",
+    "49": "html"
+  },
+  "fixes": {
+    "48": [
+      [
+        "ajax/libs/jquer\ny/3.7.1/",
+        "ajax/libs/jquery/3.7.1/"
+      ],
+      [
+        "clicar no botão .",
+        "clicar no botão “Clique Aqui”."
+      ]
+    ],
+    "49": [
+      [
+        "pelo leitor de tela. O código",
+        "pelo leitor de tela.\nO código"
+      ],
+      [
+        "na figura a seguir. A partir",
+        "na figura a seguir.\nA partir"
+      ],
+      [
+        "clicar no botão sem",
+        "clicar no botão “Enviar” sem"
+      ]
+    ]
+  },
+  "review": {
+    "10": "O crédito do texto CB1A1-II traz “Todavia, 2029” no caderno (transcrito como está)",
+    "15": "Símbolos dos conjuntos transcritos da imagem do caderno",
+    "16": "Fórmulas das opções transcritas da imagem do caderno",
+    "17": "Fórmula transcrita da imagem do caderno",
+    "48": "A URL do jQuery, quebrada em duas linhas pela diagramação, foi unida. As opções são imagens; o texto das opções descreve cada captura, e a figura recorta a área inteira",
+    "49": "Figura com o resultado do formulário; o botão “Enviar” citado no enunciado é uma imagem no caderno"
+  }
+}

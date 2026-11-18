@@ -1,0 +1,35 @@
+{
+  "q_re": "^(\\d{1,2})\\.\\s+(.*)$",
+  "opt_re": "^\\(([A-E])\\)\\s*(.*)$",
+  "letters": "ABCDE",
+  "first": 1,
+  "last": 60,
+  "xpos": true,
+  "start_after": "^CONHECIMENTOS GERAIS$",
+  "stop_at": "^PROVA DISCURSIVA-REDAÇÃO$",
+  "noise": [
+    "^pcimarkpci",
+    "www\\.pciconcursos\\.com\\.br",
+    "^\\d{1,2}$",
+    "^Caderno de Prova",
+    "^TRT4R",
+    "^\\d+ TRT4R",
+    "^Conhecimentos Básicos\\d*$",
+    "^Proibida a divulgação",
+    "^T15-",
+    "^Via @",
+    "^Caderno de Prova",
+    "^A14-",
+    "^T17-",
+    "^TRT4R-"
+  ],
+  "section_headers": [
+    "^(CONHECIMENTOS GERAIS|CONHECIMENTOS ESPECÍFICOS|Português|Raciocínio Lógico-Matemático|Raciocínio Lógico|Matemática e Raciocínio Lógico|Legislação)$"
+  ],
+  "header": [
+    "^Atenção:",
+    "^Instruções:"
+  ],
+  "stimulus_end": "^\\((Adaptado|[A-ZÀ-Ú][^)]{2,}\\.)",
+  "stimulus_needs_end": "considere o (poema|trecho|texto)|Considere o texto"
+}
