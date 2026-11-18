@@ -218,7 +218,7 @@ describe('CA-6 and CA-7 — pushMigrations', () => {
     await expect(pushMigrations(deps)).resolves.toBe('pushed');
     expect(run.mock.calls.map(([, args]) => args)).toEqual([
       ['supabase', 'db', 'push', '--remote', '--dry-run', '--include-seed'],
-      ['supabase', 'db', 'push', '--remote', '--include-seed'],
+      ['supabase', 'db', 'push', '--remote', '--include-seed', '--yes'],
     ]);
     expect(lines.join('\n')).toContain(REF);
     expect(lines.join('\n')).toContain('DRY RUN OUTPUT');

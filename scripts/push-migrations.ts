@@ -150,7 +150,10 @@ export async function pushMigrations(deps: {
     return 'aborted';
   }
 
-  const push = await run('npx', ['supabase', 'db', 'push', '--remote', '--include-seed'], { env });
+  // The CLI cannot prompt (stdout is captured), and the typed ref above is the confirmation.
+  const push = await run('npx', ['supabase', 'db', 'push', '--remote', '--include-seed', '--yes'], {
+    env,
+  });
   if (push.code !== 0) {
     throw new Error(
       `supabase db push falhou (código ${push.code}): ${scrubSecret(push.stderr.trim(), env)}`,
