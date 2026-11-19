@@ -5,6 +5,9 @@ Formato inspirado em [Keep a Changelog](https://keepachangelog.com/pt-BR/). Data
 ## [Não lançado]
 
 ### Adicionado
+- Mapa do edital (SPEC-004): módulo `topics` com as rotas `/topics` (lista e matriz de incidência, filtros por visão, grupo, perfil e ordem na URL, funcionando sem JavaScript) e `/topics/[topicId]` (subtópicos, contribuição de cada concurso e domínio); domínio puro em `src/modules/topics/domain/` (prioridade, domínio, urgência); leitores de servidor `getTopicMap` e `getTopicDetail` em `actions/`, sem `'use server'` (P-9).
+- Direção visual "Folha de prova" (ADR-010, SPEC-004): barra lateral numerada com marcas de sincronismo, cabeçalho de página com sobretítulo e régua, login em duas colunas; tokens `rule`, `eyebrow`, `space-5`, `space-10` e `space-12`; componentes `Bubble`, `MasteryMeter`, `Tag`, `EmptyState`, `PriorityValue` e `FilterGroup`, `Notice` com `kind="info"`; classes `gb-` correspondentes em `design/components.css`.
+- Testes da SPEC-004: `supabase/tests/topic_views.test.sql` (pgTAP de `v_topic_priority` e `v_topic_performance`), `tests/design/contrast.test.ts` (contraste dos pares de cor nos dois temas), integração de `topics` e a jornada E2E 8 (`tests/e2e/journey-08-topic-map.spec.ts`).
 - Implantação (SPEC-002): `vercel.json` (região `gru1`, implantação só da `main`), cabeçalhos de segurança e `noindex` em `next.config.ts`, scripts `db:link`, `db:push` (guardas de migração e confirmação pelo identificador do projeto), `db:test:remote`, `backup`, `backup:verify` e `check:prod`, com testes unitários e de integração.
 - Runbooks em `docs/operacao/`: `implantacao.md` e `backup-e-restauracao.md` (SPEC-002). ADR-008 (implantação e backup manuais pela máquina local).
 - Aplicação Next.js 16 (App Router, React 19.2, TypeScript strict com `noUncheckedIndexedAccess`), Node 26 fixado em `.nvmrc`, estrutura de módulos do doc 06 (SPEC-001).
@@ -21,6 +24,9 @@ Formato inspirado em [Keep a Changelog](https://keepachangelog.com/pt-BR/). Data
 - Teste pgTAP `schema_constraints.test.sql`: valores dos enums, padrão de `settings.hours_per_day`, restrições `check` e formato do seed (ADR-007).
 
 ### Alterado
+- Direção visual (SPEC-004, ADR-010): raios `radius-sm/md/lg` de 6/10/16 px para 2/4/6 px; casca com `gb-shell__rail` no lugar de `gb-shell__header`; login sem `gb-login__card`. `Button`, `Field`, `Notice` e o grupo segmentado ficam com cantos mais retos.
+- `scripts/generate_seed.py` e `supabase/seed.sql`: o `on conflict` de `topics` regrava categoria, nome, perfil, fase e ordem, e o de `subtopics` regrava a ordem, para a ordenação do mapa valer em banco já semeado (SPEC-004).
+- Docs 03, 04, 05, 06, 07 e 08 e `README.md` atualizados: visões testadas em `topic_views.test.sql`, domínio de assunto sem cartões (a retenção média fica de fora da fórmula), direção "Folha de prova", módulo `topics`, leitores de servidor sem `'use server'`, jornada 8 e teste de contraste no `npm test` (SPEC-004).
 - Banco em inglês (ADR-007, `docs/08-glossario.md`): migração inicial reescrita como `20261116000000_initial_schema.sql` (tabelas, colunas, enums e valores, visões `v_topic_priority` e `v_topic_performance`, políticas `owner_*`/`authenticated_*`, índices, gatilhos e comentários); `settings.hours_per_day` com chaves `mon`…`sun`. Exceção ao "migração aplicada não se edita": nenhuma migração havia sido aplicada fora do ambiente local.
 - Fonte da taxonomia renomeada para `data/seed/court_it_taxonomy_v0.1.json`, com chaves e valores de enum em inglês (textos e ids continuam em português); script renomeado para `scripts/generate_seed.py` e `supabase/seed.sql` regenerado.
 - Tipos do banco gerados em `src/shared/supabase/database.types.ts`.

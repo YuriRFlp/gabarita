@@ -5,7 +5,7 @@ Migrações (em ordem):
 - `supabase/migrations/20261117000000_settings_theme.sql` — preferência de tema em `settings` (SPEC-001).
 - `supabase/migrations/20261117010000_essay_type_questions_and_case_study.sql` — valor `technical_questions_and_case_study` no enum `essay_type`, para a discursiva da Vunesp no TJSP (questões dissertativas e estudo de caso na mesma etapa).
 
-Validação: `npm run db:test` (pgTAP em `supabase/tests/`) após `supabase db reset`. `rls.test.sql` cobre a RLS das 21 tabelas (anônimo sem acesso, isolamento entre usuários nas tabelas pessoais e filhas, escrita autenticada nas de referência) e o `security_invoker` das 2 visões; `settings_theme.test.sql` cobre o enum `theme_preference` e a coluna `settings.theme`; `schema_constraints.test.sql` cobre os valores dos enums, as restrições `check` e o formato do seed.
+Validação: `npm run db:test` (pgTAP em `supabase/tests/`) após `supabase db reset`. `rls.test.sql` cobre a RLS das 21 tabelas (anônimo sem acesso, isolamento entre usuários nas tabelas pessoais e filhas, escrita autenticada nas de referência) e o `security_invoker` das 2 visões; `settings_theme.test.sql` cobre o enum `theme_preference` e a coluna `settings.theme`; `schema_constraints.test.sql` cobre os valores dos enums, as restrições `check` e o formato do seed; `topic_views.test.sql` (SPEC-004) cobre `v_topic_priority` (prioridade dos 38 assuntos do seed, como `pdpj_stack` = 1,000, efeito de desativar um concurso, assunto sem incidência) e `v_topic_performance` (janela de 60 dias com o limite exato, chute fora da taxa firme, resposta em branco, isolamento entre usuários e acesso anônimo vazio).
 
 ## Visão geral
 
@@ -128,7 +128,7 @@ A **retenção estimada** (retrievability do FSRS) não é calculada em SQL: dep
 ## Carga inicial
 
 1. A fonte da verdade é `data/seed/court_it_taxonomy_v0.2.json`.
-2. `python scripts/generate_seed.py` gera `supabase/seed.sql` (idempotente: pode rodar de novo sem duplicar).
+2. `python scripts/generate_seed.py` gera `supabase/seed.sql` (idempotente: pode rodar de novo sem duplicar). Para assuntos e subtópicos, o `on conflict` atualiza as colunas em vez de ignorar: `topics` regrava `category`, `name`, `profile`, `phase` e `sort_order`, e `subtopics` regrava `sort_order`, de modo que mudar a ordem ou o perfil no JSON chega a um banco já semeado.
 3. Resultado: 7 bancas, 9 rubricas, 14 concursos, 38 assuntos, 218 subtópicos, 532 incidências.
 
 Para alterar a taxonomia, edite o JSON e gere o seed de novo; não edite o `seed.sql` à mão.

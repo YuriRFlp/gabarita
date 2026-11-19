@@ -110,9 +110,9 @@ A spec inclui também o **redesenho visual da casca e do login** pedido pelo don
 | domain | `src/modules/topics/domain/mastery.ts` (+ `.test.ts`) | Criar | `computeMastery` (CA-5 a CA-7) |
 | domain | `src/modules/topics/domain/urgency.ts` (+ `.test.ts`) | Criar | `computeUrgency` (CA-8) |
 | domain | `src/modules/topics/domain/topic-map.ts` (+ `.test.ts`) | Criar | `buildTopicMap` e `buildTopicDetail`: junta, filtra, ordena e resume (CA-9, CA-10) |
-| domain | `src/modules/topics/domain/enums-sync.test.ts` | Criar | CA-11 |
-| domain | `src/modules/topics/domain/index.ts` | Criar | Reexporta só funções e tipos puros (para os módulos 3, 4 e 7) |
-| data | `src/modules/topics/data/topics-repository.ts` (+ `.int.test.ts`) | Criar | `readTopicMapSource(client, userId)`: 4 leituras em paralelo, mapeamento snake_case → tipos do domínio, guarda dos valores de incidência (CA-15 a CA-17) |
+| data | `src/modules/topics/data/enums-sync.test.ts` | Criar | CA-11 (fica em `data/` porque lê o banco; divergência registrada em § 9) |
+| domain | `src/modules/topics/domain/index.ts` | Criar | Reexporta só funções e tipos puros (para os módulos 3, 4 e 7); `index.ts` do módulo exporta também o tipo `LoadResult` |
+| data | `src/modules/topics/data/topics-repository.ts` (+ `.int.test.ts`) | Criar | `readTopicMapSource(client, userId)`: 4 leituras em paralelo, mapeamento snake_case → tipos do domínio, guarda dos valores de incidência; leituras com `count: 'exact'` e `load_failed` quando o PostgREST trunca em 1000 linhas (CA-15 a CA-17) |
 | actions | `src/modules/topics/actions/topic-map-query-schema.ts` (+ `.test.ts`) | Criar | Zod para `searchParams` e `topicId` (CA-12) |
 | actions | `src/modules/topics/actions/get-topic-map.ts` (+ `.int.test.ts`) | Criar | `getTopicMap` e `getTopicDetail`: leitores de servidor sem `'use server'` que chamam `data/` e `domain/` (P-9) |
 | components | `src/modules/topics/components/TopicMapView.tsx` (+ `.test.tsx`) | Criar | Cabeçalho, resumo, aviso de domínio não medido, filtros, lista ou matriz, estados vazio e erro |
@@ -132,6 +132,7 @@ A spec inclui também o **redesenho visual da casca e do login** pedido pelo don
 | design | `design/tokens.json`, `design/components.css` | Alterar | Tokens e classes da direção A (§ 5.5) e dos componentes novos (antes do código) |
 | design | `src/shared/ui/styles/tokens.css` | Regenerar | `npm run tokens` |
 | testes | `supabase/tests/topic_views.test.sql` | Criar | CA-13, CA-14 |
+| testes | `tests/factories/topic-map-entries.ts` | Criar | Entradas do mapa (`makeEntry`, `EXAMS`) para os testes de componente; fica em `tests/factories/` e não em `components/` |
 | testes | `tests/factories/answers.ts` | Criar | Questão + `question_topics` + respostas para um usuário (cliente admin local) |
 | testes | `tests/e2e/journey-08-topic-map.spec.ts`, `tests/e2e/pages/TopicMapPage.ts`, `tests/e2e/data/answers.ts` | Criar | Jornada 8 |
 | testes | `tests/e2e/pages/LoginPage.ts`, `HomePage.ts` | Alterar (se preciso) | Seletores da casca e do login novos (CA-35) |
@@ -501,3 +502,4 @@ Casos-limite do doc 07 aplicáveis: domínio 0 sem respostas e urgência = prior
 | 2026-11-19 | Respostas do dono às perguntas P-1 a P-11 (coluna Resposta). P-1: direção A "Folha de prova"; § 5.5 reescrita só com ela (a B fica no HTML dos mockups como registro, com o descarte no ADR-010); CAs 34, 36 e 37 detalhados para a A, incluindo indicador do item atual que não depende de cor (bolha no lugar do número, ajuste em relação ao mockup). P-3: domínio = taxa de acerto firme quando há respostas e nenhum cartão; CA-7 e CA-26 fechados. Rascunho do ADR-010 (proposto); esclarecimento do domínio no doc 04 e termos novos no glossário registrados como proposta. Status continua `rascunho`. |
 | 2026-11-19 | Aprovada pelo dono e iniciada a implementação (ADR-010 aceito). Ordem: correção do `generate_seed.py`, redesenho da casca e do login, depois o mapa. |
 | 2026-11-19 | Divergências aceitas na implementação: removido `loading.tsx` (o streaming do Suspense esconde o conteúdo sem JavaScript e faz o 404 responder 200; a página responde completa, filtros funcionam sem JS, 404 com status 404; CA-29 reescrito); `Notice` usa a prop `kind`; lista no celular é a mesma `<table>` reempilhada por CSS, com checagem manual de leitor de tela no Safari/VoiceOver; `logo.tsx` não mudou; `gb-shell__header` virou `gb-shell__rail`. |
+| 2026-11-19 | Divergências aceitas após a revisão: `enums-sync.test.ts` fica em `data/` (lê o banco); `index.ts` exporta também o tipo `LoadResult`; `generate_seed.py` faz `do update set sort_order` em `subtopics`; as leituras usam `count: 'exact'` e devolvem `load_failed` se a contagem diferir do recebido (o PostgREST corta em 1000 linhas sem erro); as fixtures de componente ficam em `tests/factories/topic-map-entries.ts`; a tabela da lista tem papéis ARIA explícitos; o E2E ganhou um teste nomeado CA-29. |

@@ -44,11 +44,11 @@ Tradução fixa dos termos usados no código, no banco e no design system (ADR-0
 | solicitação de IA | AI request / `ai_requests` | |
 | cota de infraestrutura | infra quota | |
 | retenção desejada | desired retention | |
-| mapa do edital | topic map | Tela e módulo `topics` (rotas `/topics`); na interface, "Mapa do edital" (SPEC-004, proposto) |
-| matriz de incidência | incidence matrix | Assuntos × concursos (SPEC-004, proposto) |
-| contribuição (de um concurso para a prioridade) | contribution | peso_alvo × incidência (SPEC-004, proposto) |
-| taxa de acerto firme | firm correct rate | `firm_correct` / `answered` (SPEC-004, proposto) |
-| retenção média | average retention | Média da retrievability dos cartões do assunto (SPEC-004, proposto) |
+| mapa do edital | topic map | Tela e módulo `topics` (rotas `/topics`); na interface, "Mapa do edital" (SPEC-004) |
+| matriz de incidência | incidence matrix | Assuntos × concursos (SPEC-004); componente `IncidenceMatrix` |
+| contribuição (de um concurso para a prioridade) | contribution | peso_alvo × incidência (SPEC-004) |
+| taxa de acerto firme | firm correct rate | `firm_correct` / `answered` (SPEC-004) |
+| retenção média | average retention | Média da retrievability dos cartões do assunto (SPEC-004); `null` quando o assunto não tem cartões |
 
 ## Banco
 
@@ -212,27 +212,33 @@ Chaves que já constam da tabela de colunas (`nome`, `tipo`, `grupo`, `perfil`, 
 | `gb-etiqueta` (`--nova`, `--vencida`) | `gb-tag` (`--new`, `--overdue`) |
 | `gb-campo` (`__rotulo`, `__entrada`, `__erro`) | `gb-field` (`__label`, `__input`, `__error`) |
 | `gb-aviso` (`--erro`, `--sucesso`) | `gb-notice` (`--error`, `--success`) |
-| `gb-casca` (`__pular`, `__cabecalho`, `__logo`, `__menu-botao`, `__menu`, `--aberto`, `__lista`, `__link`, `__acoes`, `__conteudo`) | `gb-shell` (`__skip`, `__header`, `__logo`, `__menu-button`, `__menu`, `--open`, `__list`, `__link`, `__actions`, `__content`) |
+| `gb-casca` (`__pular`, `__cabecalho`, `__logo`, `__menu-botao`, `__menu`, `--aberto`, `__lista`, `__link`, `__acoes`, `__conteudo`) | `gb-shell` (`__skip`, `__rail`, `__rail-number`, `__timing-marks`, `__logo`, `__menu-button`, `__menu`, `__menu--open`, `__list`, `__link`, `__actions`, `__appearance`, `__content`); o antigo `__cabecalho` virou `__rail` com a SPEC-004 (ADR-010) |
 | `gb-segmentado` (`__opcao`), `gb-alternador-tema` | `gb-segmented` (`__option`), `gb-theme-toggle` |
-| `gb-formulario`, `gb-entrar` (`__cartao`), `gb-pagina-erro` | `gb-form`, `gb-login` (`__card`), `gb-error-page` |
+| `gb-formulario`, `gb-entrar` (`__cartao`), `gb-pagina-erro` | `gb-form`, `gb-login` (`__panel`, `__promise`, `__sheet-rows`, `__row-number`, `__row-bubbles`, `__form`; o antigo `__cartao` deixou de existir com a SPEC-004), `gb-error-page` |
 | `gb-logo--tema-claro`, `gb-logo--tema-escuro`, `gb-visualmente-oculto` | `gb-logo--light-theme`, `gb-logo--dark-theme`, `gb-visually-hidden` |
 | `design/componentes.css` | `design/components.css` |
 
-Termos novos da direção visual "Folha de prova" e do mapa do edital (SPEC-004 e ADR-010, propostos; não há nome anterior em português no código):
+Termos novos da direção visual "Folha de prova" e do mapa do edital (SPEC-004 e ADR-010; não há nome anterior em português no código):
 
 | Português | Inglês |
 |---|---|
 | régua (separador forte) | token `rule` |
-| sobretítulo | estilo `eyebrow`; classe `gb-page-header__eyebrow` |
-| cabeçalho de página | `gb-page-header` (`__title`, `__meta`) |
+| sobretítulo | estilo `eyebrow`; classes `gb-eyebrow` (avulso) e `gb-page-header__eyebrow` |
+| cabeçalho de página | `gb-page-header` (`__eyebrow`, `__title`, `__meta`) |
 | barra lateral, número do item | `gb-shell__rail`, `gb-shell__rail-number` |
-| marcas de sincronismo | `gb-shell__timing-marks` |
+| marcas de sincronismo | `gb-timing-marks` (base); `gb-shell__timing-marks` (posição na barra lateral) |
+| bloco "Aparência" da barra lateral | `gb-shell__appearance` |
 | textura de folha | `gb-sheet-texture` |
-| painel de marca, promessa, linhas da folha (login) | `gb-login__panel`, `__promise`, `__sheet-rows`, `__form` |
-| bolha (cheia, meia, vazia) | `Bubble` (`fill`: `filled`, `half`, `empty`); classe `gb-bubble--half` |
-| estado vazio | `EmptyState` |
-| grupo de filtros | `FilterGroup` |
-| valor de prioridade | `PriorityValue` |
+| painel de marca, promessa, linhas da folha (login) | `gb-login__panel`, `__promise`, `__sheet-rows`, `__row-number`, `__row-bubbles`, `__form` |
+| bolha (cheia, meia, vazia) | `Bubble` (`fill`: `filled`, `half`, `empty`; `size`: `regular`, `small`); classes `gb-bubble--filled`, `gb-bubble--half`, `gb-bubble--small` |
+| medidor de domínio | `MasteryMeter`; classes `gb-mastery`, `gb-mastery__bubbles` |
+| etiqueta de fase | `Tag` (`variant`: `default`, `new`, `overdue`, `phase`); classe `gb-tag--phase` |
+| aviso informativo | `Notice` com `kind="info"`; classe `gb-notice--info` |
+| estado vazio | `EmptyState`; classes `gb-empty-state`, `__title`, `__body` |
+| grupo de filtros | `FilterGroup`; classes `gb-filter-group`, `gb-filter-group__label` (as opções reutilizam `gb-segmented`) |
+| valor de prioridade | `PriorityValue`; classes `gb-priority`, `__bar`, `__fill` |
+| matriz de incidência (estilos) | `gb-matrix-block`, `gb-matrix-legend`, `gb-matrix` (`__table`, `__caption`, `__corner`, `__exam`, `__weight`, `__topic`, `__cell`) |
+| mapa do edital (estilos) | `gb-topic-map` (`__count`), `gb-topic-filters`, `gb-topic-list` (`__name`, `__count`, `__tags`), `gb-topic-detail__*`, `gb-subtopics`, `gb-contributions`, `gb-detail-mastery`, `gb-back-link` |
 
 ## Scripts e arquivos
 
