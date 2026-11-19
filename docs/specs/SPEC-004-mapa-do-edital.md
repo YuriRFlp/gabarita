@@ -33,7 +33,7 @@ A spec inclui também o **redesenho visual da casca e do login** pedido pelo don
 - **Rota `/topics/[topicId]`** (detalhe do assunto): subtópicos em ordem, contribuição de cada concurso para a prioridade, domínio (com estado vazio) e urgência.
 - **Domínio puro** em `src/modules/topics/domain/`: `computeTopicPriority`, `computeMastery`, `computeUrgency`, `buildTopicMap`, constantes dos enums sincronizadas com os tipos gerados.
 - **Dados:** leitura de `topics`, `subtopics`, `exams` (+ nome da banca), `incidences` e `v_topic_performance`.
-- **Componentes do design system** (em `design/components.css` e no doc 05 antes do código): `Bubble` (com o estado novo meia-bolha), `MasteryMeter` e `Tag` em React (já existiam só em CSS), variante `info` do `Notice`, `EmptyState`, `IncidenceMatrix`, `TopicList`, `PriorityValue`, `FilterGroup` (grupo segmentado de links) e os componentes da casca redesenhada.
+- **Componentes do design system** (em `design/components.css` e no doc 05 antes do código): `Bubble` (com o estado novo meia-bolha), `MasteryMeter` e `Tag` em React (já existiam só em CSS), variante `info` do `Notice` (a prop se chama `kind`, não `variant`), `EmptyState`, `IncidenceMatrix`, `TopicList`, `PriorityValue`, `FilterGroup` (grupo segmentado de links) e os componentes da casca redesenhada.
 - **pgTAP novo** para os valores das visões `v_topic_priority` e `v_topic_performance` (hoje só o `security_invoker` e o isolamento são testados).
 - **Documentação (entregáveis da implementação):** glossário (termos novos), doc 05 (direção visual, componentes, tokens), doc 06 (módulo `topics` na lista; leitores de servidor em `actions/`, P-9), doc 07 (jornada 8), doc 03 (cita o novo arquivo pgTAP em § Validação), `README.md`, `CHANGELOG.md` citando a SPEC-004. Já registrados como proposta junto com este rascunho (passam a valer com a aprovação): o esclarecimento do domínio sem cartões no doc 04 (P-3) e os termos novos no glossário, marcados "(SPEC-004, proposto)"; ao fechar a spec, a marca sai. O design system publicado no Claude é atualizado pelo dono a partir de `design/` (fora do repositório).
 
@@ -84,9 +84,9 @@ A spec inclui também o **redesenho visual da casca e do login** pedido pelo don
 | CA-24 | Dado a matriz em 360 px, então a página não tem rolagem horizontal (`scrollWidth ≤ 360`); a tabela rola dentro de uma região com `role="region"`, nome acessível e `tabindex="0"`, alcançável e rolável pelo teclado, com a coluna dos assuntos fixa à esquerda. | E2E (jornada 8, projeto `mobile`) |
 | CA-25 | Dado o detalhe `/topics/pdpj_stack`, então vejo o nome como `h1`, as etiquetas, os 12 subtópicos em lista ordenada na ordem do seed, a prioridade 1,00 com a tabela de contribuição dos 14 concursos (concurso com banca e ano, peso, incidência com bolha e texto, contribuição) e a linha de total igual à prioridade, a seção de domínio e a urgência; em `/topics/seg_infra`, TJMG aparece com meia-bolha e "Noções" e contribuição 0,07. | E2E (jornada 8) + componente |
 | CA-26 | Dado o detalhe de um assunto sem respostas, então a seção "Domínio" mostra o estado vazio "Você ainda não respondeu questões deste assunto nos últimos 60 dias. Para a urgência, o domínio conta como 0." e nenhuma porcentagem; com respostas, mostra a porcentagem, "N respostas, M acertos firmes (chutes não contam)" e a retenção média como "ainda não calculada", com a nota "Sem cartões, o domínio é a taxa de acerto firme." (até o módulo 3, P-3 e P-4). | componente + E2E (jornada 8) |
-| CA-27 | Dado um `topicId` inexistente (`/topics/nao_existe`) ou fora do formato (`/topics/..%2F`), quando acesso, então vejo a página 404 em português dentro da casca. | E2E (jornada 8) + unitário (CA-12) |
+| CA-27 | Dado um `topicId` inexistente (`/topics/nao_existe`) ou fora do formato (`/topics/..%2F`), quando acesso, então vejo a página 404 em português dentro da casca, com status HTTP 404 nas duas URLs. | E2E (jornada 8) + unitário (CA-12) |
 | CA-28 | Dado falha ao carregar (CA-17), quando abro `/topics` ou o detalhe, então vejo o aviso de erro "Não foi possível carregar o mapa do edital. Tente de novo em instantes." com o link "Tentar de novo" para o mesmo endereço, sem detalhe técnico; dado a taxonomia vazia (seed não carregado), vejo o estado vazio "A taxonomia ainda não foi carregada." | componente |
-| CA-29 | Dado a navegação entre filtros ou para o detalhe, enquanto o servidor responde, então aparece o estado de carregamento (`loading.tsx`) com o texto "Carregando o mapa do edital…" e `aria-busy="true"`, sem salto de layout no cabeçalho da página. | componente |
+| CA-29 | Dado a navegação entre filtros ou para o detalhe, enquanto o servidor responde, então a página responde completa, sem `loading.tsx` nem Suspense (as tabelas são pequenas): os filtros funcionam sem JavaScript e o 404 de assunto inexistente responde com status HTTP 404, não 200. Há um único `h1` por página. | E2E (jornada 8) |
 | CA-30 | Dado `/topics` (lista e matriz) e `/topics/pdpj_stack`, quando uso só o teclado, então alcanço em ordem lógica os filtros, cada assunto e a região da matriz, com foco visível em todos, e `Enter` abre o detalhe. | E2E (jornada 8) |
 | CA-31 | Dado `/topics` (lista e matriz), `/topics/pdpj_stack` e o estado vazio de filtros, nos temas claro e escuro, quando o axe analisa, então não há violação séria nem crítica (inclui contraste). | E2E (jornada 8) |
 | CA-32 | Dado viewport de 360 px, quando abro `/topics` e `/topics/pdpj_stack`, então não há rolagem horizontal da página, nomes longos (no seed, até 49 caracteres em assuntos e 57 em subtópicos) quebram linha sem cortar, e todo alvo de toque (filtros, links de assunto, menu) tem pelo menos 44 × 44 px. | E2E (jornada 8, projeto `mobile`) |
@@ -123,12 +123,12 @@ A spec inclui também o **redesenho visual da casca e do login** pedido pelo don
 | components | `src/modules/topics/components/format.ts` (+ `.test.ts`) | Criar | Formatação pt-BR (`0,89`, `0,025`, `70%`) e rótulo curto do tribunal ("TRT-3 (MG)" → "TRT-3") |
 | módulo | `src/modules/topics/index.ts` | Criar | API pública (§ 5.2) |
 | shared/ui | `Bubble.tsx`, `MasteryMeter.tsx`, `Tag.tsx`, `EmptyState.tsx`, `PriorityValue.tsx`, `FilterGroup.tsx` (+ testes) | Criar | Componentes do design system (CA-33) |
-| shared/ui | `Notice.tsx` (+ teste) | Alterar | Variante `info` |
+| shared/ui | `Notice.tsx` (+ teste) | Alterar | Variante `info` (prop `kind`) |
 | shared/ui | `Shell.tsx` (+ teste), `index.ts` | Alterar | Casca redesenhada (CA-36) |
-| app | `src/app/(app)/topics/page.tsx`, `loading.tsx` | Criar | Lê `searchParams`, chama `getTopicMap`, renderiza `TopicMapView` |
+| app | `src/app/(app)/topics/page.tsx` | Criar | Lê `searchParams`, chama `getTopicMap`, renderiza `TopicMapView` |
 | app | `src/app/(app)/topics/[topicId]/page.tsx` | Criar | Valida `topicId`, chama `getTopicDetail`, `notFound()` quando não existe; `generateMetadata` com o nome do assunto |
 | app | `src/app/(app)/navigation.tsx` | Alterar | Item "Mapa do edital" |
-| app | `src/app/(public)/login/page.tsx`, `src/app/logo.tsx` | Alterar | Login redesenhado (CA-37) |
+| app | `src/app/(public)/login/page.tsx`, `src/app/logo.tsx` | Alterar | Login redesenhado (CA-37); `logo.tsx` não mudou |
 | design | `design/tokens.json`, `design/components.css` | Alterar | Tokens e classes da direção A (§ 5.5) e dos componentes novos (antes do código) |
 | design | `src/shared/ui/styles/tokens.css` | Regenerar | `npm run tokens` |
 | testes | `supabase/tests/topic_views.test.sql` | Criar | CA-13, CA-14 |
@@ -309,7 +309,7 @@ type FilterGroupProps = {
   label: string;                                                // visible group label
   options: ReadonlyArray<{ label: string; href: string; current: boolean }>;
 };
-type NoticeProps = { variant: 'error' | 'success' | 'info'; /* … as today */ };
+type NoticeProps = { kind: 'error' | 'success' | 'info'; /* … as today */ };
 ```
 
 Valores de exibição:
@@ -361,7 +361,7 @@ Estrutura das telas; a aparência (réguas, raios, tipografia de títulos, numer
 │ Sair           │ …                                                                │
 └────────────────┴─────────────────────────────────────────────────────────────────┘
 ```
-- Lista como `<table>` (cabeçalhos de coluna, nome do assunto como link no cabeçalho de linha). Em < 768 px, vira lista de itens empilhados (`<ul>`): nome (link), etiquetas, "Prioridade 1,00" e domínio numa segunda linha.
+- Lista como `<table>` (cabeçalhos de coluna, nome do assunto como link no cabeçalho de linha). Em < 768 px, a MESMA `<table>` é reempilhada por CSS (não há `<ul>`; requer checagem manual de leitor de tela no Safari/VoiceOver): nome (link), etiquetas, "Prioridade 1,00" e domínio numa segunda linha.
 - Filtros: `FilterGroup` (grupo de links com aparência de `gb-segmented`, rótulo visível, `aria-current="true"` na opção ativa). No celular, os grupos quebram linha; nenhum excede 360 px (o maior, Perfil, tem 4 opções curtas).
 - A contagem "Mostrando N de 38 assuntos" fica em `<p aria-live="polite">`.
 
@@ -404,7 +404,7 @@ Subtópicos (12)
 **Estados**
 | Estado | `/topics` | Detalhe |
 |---|---|---|
-| Carregando | `loading.tsx`: título fixo + "Carregando o mapa do edital…" com `aria-busy` | Mesmo arquivo do segmento |
+| Carregando | Sem estado de carregamento: a página responde completa (tabelas pequenas); o streaming do Suspense esconderia o conteúdo sem JavaScript e faria o 404 responder 200 | Idem |
 | Vazio (sem respostas) | `Notice` `info` "Domínio ainda não medido" + "Sem respostas" em cada linha (CA-19) | `EmptyState` na seção Domínio (CA-26) |
 | Vazio (filtros) | `EmptyState` "Nenhum assunto com esses filtros." + "Limpar filtros" (CA-22) | — |
 | Vazio (sem taxonomia) | `EmptyState` "A taxonomia ainda não foi carregada." (CA-28) | 404 |
@@ -439,7 +439,7 @@ Subtópicos (12)
 
 `grid-light` é reaproveitado para a textura. Entram no teste de contraste (CA-34): `ink-strong` e a bolha `ink` sobre `ink-light` (item atual), `graphite-soft` sobre `paper` (`eyebrow`, números dos itens), `rule` sobre `paper` e a meia-bolha, nos dois temas.
 
-**Classes novas ou alteradas (`design/components.css`):** `gb-shell` (`__rail`, `__rail-number`, `__timing-marks`), `gb-login` (`__panel`, `__promise`, `__sheet-rows`, `__form`), `gb-page-header` (`__eyebrow`, `__title`, `__meta`), `gb-sheet-texture`; mais as dos componentes do mapa (§ 3).
+**Classes novas ou alteradas (`design/components.css`):** `gb-shell` (`__rail`, que substituiu `gb-shell__header`, `__rail-number`, `__timing-marks`), `gb-login` (`__panel`, `__promise`, `__sheet-rows`, `__form`), `gb-page-header` (`__eyebrow`, `__title`, `__meta`), `gb-sheet-texture`; mais as dos componentes do mapa (§ 3).
 
 **O que não muda do doc 05:** paleta e cor da marca (`ink`), destaque `highlighter` e seu uso restrito, acerto e erro com ícone e texto, fontes (Schibsted Grotesk, Atkinson Hyperlegible, JetBrains Mono) e tamanho do texto, ícones Lucide, temas claro e escuro com AA, conceito "folha de respostas" e a bolha como assinatura. Se uma spec futura quiser mudar algum desses pontos, isso exige ADR novo que substitua o ADR-010.
 
@@ -449,7 +449,7 @@ Subtópicos (12)
 | Nível | O que cobre | Critérios |
 |---|---|---|
 | Unitário | `computeTopicPriority` (seed inteiro contra o JSON, exatidão de 1, inativo, ausência de incidência, ordem e soma das contribuições), `computeMastery` (sem respostas, medido, taxa 0, retenção nula = só acerto firme, retenção 0 entra na fórmula; P-3), `computeUrgency`, `buildTopicMap` (filtros, combinação vazia, ordenações e desempates, totais), `buildTopicDetail` (existe/não existe), sincronia dos enums, `topicMapQuerySchema` e `topicIdSchema`, formatação pt-BR e rótulo curto, contraste dos tokens | CA-1 a CA-12, 34 |
-| Componente | `Bubble`, `MasteryMeter`, `Tag`, `Notice` `info`, `EmptyState`, `PriorityValue`, `FilterGroup`, `Shell` redesenhado, `TopicMapView` (aviso de domínio, estados vazio/erro/sem taxonomia), `TopicMapFilters` (hrefs preservam parâmetros, `aria-current`), `TopicList`, `IncidenceMatrix` (cabeçalhos, textos ocultos, região), `TopicDetailView` (contribuições, total, estado vazio do domínio), `loading.tsx` | CA-18 a CA-23, 25, 26, 28, 29, 33, 36, 37 |
+| Componente | `Bubble`, `MasteryMeter`, `Tag`, `Notice` `info`, `EmptyState`, `PriorityValue`, `FilterGroup`, `Shell` redesenhado, `TopicMapView` (aviso de domínio, estados vazio/erro/sem taxonomia), `TopicMapFilters` (hrefs preservam parâmetros, `aria-current`), `TopicList`, `IncidenceMatrix` (cabeçalhos, textos ocultos, região), `TopicDetailView` (contribuições, total, estado vazio do domínio) | CA-18 a CA-23, 25, 26, 28, 33, 36, 37 |
 | Integração | `readTopicMapSource` contra o banco local (contagens, nome da banca, prioridade do domínio = visão para os 38), isolamento por usuário com fábrica de respostas, falha simulada em `getTopicMap`/`getTopicDetail` | CA-15, 16, 17 |
 | pgTAP | `topic_views.test.sql`: valores de `v_topic_priority` (seed, inativo, sem incidência) e de `v_topic_performance` (limites de 60 dias e 1 segundo, 61 dias, chute, dúvida, certeza, erro, branco, questão com dois assuntos) | CA-13, 14 |
 | E2E | **Jornada 8 (nova)**: navegação até o mapa, lista sem respostas, filtros e ordenação com recarga, estado vazio de filtros, matriz, detalhe de `pdpj_stack` e `seg_infra`, 404, usuário descartável com respostas (CA-20), teclado, axe nos dois temas, 360 px. **Jornadas 1 e 7** reexecutadas após o redesenho | CA-18 a CA-27, 30 a 32, 35 a 37 |
@@ -500,3 +500,4 @@ Casos-limite do doc 07 aplicáveis: domínio 0 sem respostas e urgência = prior
 | 2026-11-19 | Criação, com mockups das direções visuais em `assets/SPEC-004-direcoes-visuais.html` |
 | 2026-11-19 | Respostas do dono às perguntas P-1 a P-11 (coluna Resposta). P-1: direção A "Folha de prova"; § 5.5 reescrita só com ela (a B fica no HTML dos mockups como registro, com o descarte no ADR-010); CAs 34, 36 e 37 detalhados para a A, incluindo indicador do item atual que não depende de cor (bolha no lugar do número, ajuste em relação ao mockup). P-3: domínio = taxa de acerto firme quando há respostas e nenhum cartão; CA-7 e CA-26 fechados. Rascunho do ADR-010 (proposto); esclarecimento do domínio no doc 04 e termos novos no glossário registrados como proposta. Status continua `rascunho`. |
 | 2026-11-19 | Aprovada pelo dono e iniciada a implementação (ADR-010 aceito). Ordem: correção do `generate_seed.py`, redesenho da casca e do login, depois o mapa. |
+| 2026-11-19 | Divergências aceitas na implementação: removido `loading.tsx` (o streaming do Suspense esconde o conteúdo sem JavaScript e faz o 404 responder 200; a página responde completa, filtros funcionam sem JS, 404 com status 404; CA-29 reescrito); `Notice` usa a prop `kind`; lista no celular é a mesma `<table>` reempilhada por CSS, com checagem manual de leitor de tela no Safari/VoiceOver; `logo.tsx` não mudou; `gb-shell__header` virou `gb-shell__rail`. |
