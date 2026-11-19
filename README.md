@@ -18,8 +18,8 @@ Fundação da aplicação concluída ([SPEC-001](docs/specs/SPEC-001-fundacao-da
 | Schema do banco, RLS e testes pgTAP | ✅ `supabase/` |
 | Identidade visual e design system (direção "Folha de prova", ADR-010) | ✅ `public/brand/`, `design/` |
 | Fundação: Next.js, login, tema, casca, CI | ✅ SPEC-001 |
-| Implantação (Vercel + Supabase remoto), backup e runbooks | 🚧 SPEC-002 em implementação |
-| Mapa do edital (módulo 01): lista, matriz de incidência e detalhe do assunto, com prioridade, domínio e urgência | 🚧 SPEC-004 em implementação (código e testes prontos, aguarda revisão e fechamento) |
+| Implantação (Vercel + Supabase remoto), backup e runbooks | ✅ SPEC-002 |
+| Mapa do edital (módulo 01): lista, matriz de incidência e detalhe do assunto, com prioridade, domínio e urgência | ✅ SPEC-004 |
 | Demais módulos do MVP | ⏳ próximas specs |
 
 ## Estrutura do repositório

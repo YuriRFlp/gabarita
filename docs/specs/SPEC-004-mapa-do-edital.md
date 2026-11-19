@@ -1,6 +1,6 @@
 # SPEC-004 — Mapa do edital
 
-**Status:** em-implementacao · **Criada:** 2026-11-19 · **Atualizada:** 2026-11-19
+**Status:** concluida · **Criada:** 2026-11-19 · **Atualizada:** 2026-11-19
 **Módulo:** `src/modules/topics` (novo), `src/shared/ui`, `design/` · **ADRs relacionados:** ADR-003, ADR-004, ADR-005, ADR-006, ADR-007; [ADR-010](../adr/ADR-010-direcao-visual-folha-de-prova.md) (proposto, passa a valer com a aprovação desta spec)
 
 ## 1. Objetivo
@@ -507,3 +507,4 @@ Casos-limite do doc 07 aplicáveis: domínio 0 sem respostas e urgência = prior
 | 2026-11-19 | Divergências aceitas na implementação: removido `loading.tsx` (o streaming do Suspense esconde o conteúdo sem JavaScript e faz o 404 responder 200; a página responde completa, filtros funcionam sem JS, 404 com status 404; CA-29 reescrito); `Notice` usa a prop `kind`; lista no celular é a mesma `<table>` reempilhada por CSS, com checagem manual de leitor de tela no Safari/VoiceOver; `logo.tsx` não mudou; `gb-shell__header` virou `gb-shell__rail`. |
 | 2026-11-19 | Divergências aceitas após a revisão: `enums-sync.test.ts` fica em `data/` (lê o banco); `index.ts` exporta também o tipo `LoadResult`; `generate_seed.py` faz `do update set sort_order` em `subtopics`; as leituras usam `count: 'exact'` e devolvem `load_failed` se a contagem diferir do recebido (o PostgREST corta em 1000 linhas sem erro); as fixtures de componente ficam em `tests/factories/topic-map-entries.ts`; a tabela da lista tem papéis ARIA explícitos; o E2E ganhou um teste nomeado CA-29. |
 | 2026-11-19 | Pedidos do dono após a implementação: (A) prioridade, urgência, pesos e contribuições exibidos em porcentagem pt-BR com no máximo uma casa decimal (`formatShare`, § 5.2), só na exibição (domínio, banco e ordenação seguem em 0–1 e a ordenação usa o valor exato); rótulo "Peso do concurso" e nota na matriz; CA-18, 23 e 25 reescritos; (B) cabeçalho de colunas fixo na rolagem (CA-38, § 5.4): `sticky` no `thead` da lista, região da matriz com altura limitada. Glossário e doc 05 não citam o formato e não mudaram. |
+| 2026-11-19 | Fechamento: CA-1 a CA-38 com testes (unitário, componente, integração, pgTAP e E2E; jornada 8 e jornadas 1 e 7 verdes) e revisão do `revisor-codigo` aprovada com ressalvas, depois resolvidas. Pendências sem bloqueio, do dono: aplicar o seed corrigido no remoto com `npm run db:push` depois do merge, e conferir a lista do celular com leitor de tela no Safari/VoiceOver. |
