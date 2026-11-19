@@ -393,7 +393,6 @@ a.gb-button { text-decoration: none; }
 .gb-header-hint__trigger {
   padding: 0; border: 0; background: none; color: inherit; cursor: help;
   font: inherit; letter-spacing: inherit; text-transform: inherit;
-  text-decoration: underline dotted; text-underline-offset: 4px;
 }
 .gb-header-hint__trigger:focus-visible { outline: 3px solid transparent; box-shadow: var(--focus-shadow); }
 .gb-header-hint__tip {

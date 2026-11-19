@@ -450,13 +450,15 @@ test.describe('Journey 8 — keyboard', () => {
 
     await map.list.getByRole('button', { name: 'Prioridade' }).hover();
     await expect(tip.first()).toBeVisible();
-    await expect(tip.first()).toContainText('Não depende das suas respostas.');
+    await expect(tip.first()).toContainText(
+      'O quanto o assunto vale nos concursos que você escolheu.',
+    );
 
     await page.mouse.move(0, 0);
     await expect(tip.first()).toBeHidden();
     await map.list.getByRole('button', { name: 'Domínio' }).focus();
     await expect(tip.last()).toBeVisible();
-    await expect(tip.last()).toContainText('prioridade × (1 − domínio)');
+    await expect(tip.last()).toContainText('O quanto você já domina o assunto.');
     await page.keyboard.press('Escape');
     await expect(tip.last()).toBeHidden();
   });

@@ -3,10 +3,8 @@ import { HeaderHint, MasteryMeter, PriorityValue, Tag } from '@/shared/ui';
 import type { TopicMapEntry } from '../domain';
 import { PROFILE_LABELS } from './format';
 
-const PRIORITY_HINT =
-  'O quanto o assunto vale nos concursos que você escolheu: soma do peso de cada concurso × a incidência do assunto nele. Não depende das suas respostas.';
-const MASTERY_HINT =
-  'O quanto você já domina o assunto, a partir dos acertos sem chute nos últimos 60 dias (e, depois, dos cartões de revisão). A urgência de estudo é a prioridade × (1 − domínio).';
+const PRIORITY_HINT = 'O quanto o assunto vale nos concursos que você escolheu.';
+const MASTERY_HINT = 'O quanto você já domina o assunto.';
 /** Below 768 px the head is visually hidden, so its titles must not be tab stops. */
 const STACKED = '(max-width: 767.98px)';
 

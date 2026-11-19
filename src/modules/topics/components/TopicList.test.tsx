@@ -79,8 +79,10 @@ describe('TopicList', () => {
     render(<TopicList entries={[makeEntry({})]} />);
     const priority = screen.getByRole('button', { name: 'Prioridade' });
     const mastery = screen.getByRole('button', { name: 'Domínio' });
-    expect(priority).toHaveAccessibleDescription(/Não depende das suas respostas\./);
-    expect(mastery).toHaveAccessibleDescription(/prioridade × \(1 − domínio\)/);
+    expect(priority).toHaveAccessibleDescription(
+      'O quanto o assunto vale nos concursos que você escolheu.',
+    );
+    expect(mastery).toHaveAccessibleDescription('O quanto você já domina o assunto.');
     expect(screen.getAllByRole('columnheader')).toHaveLength(4);
   });
 });
