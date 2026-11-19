@@ -75,11 +75,12 @@ def main():
             out.append(
                 "insert into topics (id, category, name, profile, phase, sort_order) values "
                 f"({q(t['id'])}, {q(category)}, {q(t['name'])}, {q(t.get('profile'))}, {q(t['phase'])}, {sort_order}) "
-                "on conflict (id) do update set name = excluded.name, phase = excluded.phase;")
+                "on conflict (id) do update set category = excluded.category, name = excluded.name, "
+                "profile = excluded.profile, phase = excluded.phase, sort_order = excluded.sort_order;")
             for i, s in enumerate(t["subtopics"], 1):
                 out.append(
                     f"insert into subtopics (topic_id, name, sort_order) values ({q(t['id'])}, {q(s)}, {i}) "
-                    "on conflict (topic_id, name) do nothing;")
+                    "on conflict (topic_id, name) do update set sort_order = excluded.sort_order;")
             for eid, value in t["incidence"].items():
                 out.append(
                     f"insert into incidences values ({q(eid)}, {q(t['id'])}, {value}) "
