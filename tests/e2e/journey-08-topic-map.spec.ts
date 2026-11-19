@@ -405,6 +405,7 @@ test.describe('Journey 8 — keyboard', () => {
 
   test('CA-30 — list: Tab reaches the filters in order, then the first topic, and Enter opens the detail', async ({
     page,
+    isMobile,
   }) => {
     const map = new TopicMapPage(page);
     await map.open('?sort=priority');
@@ -419,6 +420,13 @@ test.describe('Journey 8 — keyboard', () => {
     await page.keyboard.press('Tab');
     await expectFocusedWithIndicator(page, map.filterOption('Ordenar', 'Nome'));
 
+    // The two column heads that carry a hint are tab stops before the first topic.
+    // When rows are stacked the head is hidden and its titles are skipped.
+    for (const title of isMobile ? [] : ['Prioridade', 'Domínio']) {
+      await page.keyboard.press('Tab');
+      await expectFocusedWithIndicator(page, map.list.getByRole('button', { name: title }));
+    }
+
     await page.keyboard.press('Tab');
     const first = map.list.getByRole('rowheader').getByRole('link').first();
     await expectFocusedWithIndicator(page, first);
@@ -427,6 +435,30 @@ test.describe('Journey 8 — keyboard', () => {
     await page.keyboard.press('Enter');
     await expect(page).toHaveURL(/\/topics\/[a-z0-9_]+$/);
     await expect(page.getByRole('heading', { level: 1, name })).toBeVisible();
+  });
+
+  test('column heads explain themselves on hover and on keyboard focus', async ({
+    page,
+    isMobile,
+  }) => {
+    test.skip(isMobile, 'the column heads are hidden when rows are stacked');
+    const map = new TopicMapPage(page);
+    await map.open();
+    await expect(map.heading).toBeVisible();
+    const tip = map.list.getByRole('tooltip');
+    await expect(tip.first()).toBeHidden();
+
+    await map.list.getByRole('button', { name: 'Prioridade' }).hover();
+    await expect(tip.first()).toBeVisible();
+    await expect(tip.first()).toContainText('Não depende das suas respostas.');
+
+    await page.mouse.move(0, 0);
+    await expect(tip.first()).toBeHidden();
+    await map.list.getByRole('button', { name: 'Domínio' }).focus();
+    await expect(tip.last()).toBeVisible();
+    await expect(tip.last()).toContainText('prioridade × (1 − domínio)');
+    await page.keyboard.press('Escape');
+    await expect(tip.last()).toBeHidden();
   });
 
   test('CA-30 — matrix: after the filters Tab reaches the region, then the topic links', async ({

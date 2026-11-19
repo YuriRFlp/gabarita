@@ -8,3 +8,4 @@ export { Tag, type TagProps } from './Tag';
 export { EmptyState, type EmptyStateProps } from './EmptyState';
 export { PriorityValue, type PriorityValueProps } from './PriorityValue';
 export { FilterGroup, type FilterGroupProps, type FilterOption } from './FilterGroup';
+export { HeaderHint, type HeaderHintProps } from './HeaderHint';

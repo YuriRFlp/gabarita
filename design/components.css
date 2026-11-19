@@ -351,6 +351,8 @@ a.gb-button { text-decoration: none; }
 @media (min-width: 768px) {
   .gb-topic-list thead th { position: sticky; top: 0; z-index: 1; background: var(--paper); }
 }
+/* A pinned head with an open tip must paint above its pinned siblings */
+.gb-topic-list thead th:hover, .gb-topic-list thead th:focus-within { z-index: 2; }
 .gb-topic-list__name { font-weight: 400; overflow-wrap: anywhere; }
 .gb-topic-list__name a {
   display: flex; align-items: center; width: fit-content; min-height: 44px;
@@ -372,6 +374,9 @@ a.gb-button { text-decoration: none; }
     display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-1) var(--space-4);
     padding: var(--space-2) 0 var(--space-3); border-bottom: 1px solid var(--border);
   }
+  /* The clipped head still holds the hint triggers; keep them from counting as small touch targets */
+  .gb-topic-list thead .gb-header-hint__trigger { min-height: 44px; }
+  .gb-topic-list thead .gb-header-hint__tip { display: none; }
   .gb-topic-list tbody th, .gb-topic-list td { padding: 0; border-bottom: none; }
   .gb-topic-list__name { flex: 1 0 100%; }
   .gb-topic-list td { display: inline-flex; align-items: center; gap: var(--space-2); }
@@ -380,6 +385,29 @@ a.gb-button { text-decoration: none; }
   .gb-topic-list td::before { content: attr(data-label); font: 700 13px/18px var(--font-text); color: var(--graphite-soft); }
 }
 .gb-topic-list .gb-mastery, .gb-topic-list .gb-priority { vertical-align: middle; }
+
+/* Header hint: a column title that explains itself on hover and keyboard focus. The tip is always in
+   the DOM (referenced by aria-describedby) and only hidden visually; it touches the trigger so the
+   pointer can move onto it, and Escape dismisses it. Flat, square, no shadow (direction A). */
+.gb-header-hint { position: relative; display: inline-block; }
+.gb-header-hint__trigger {
+  padding: 0; border: 0; background: none; color: inherit; cursor: help;
+  font: inherit; letter-spacing: inherit; text-transform: inherit;
+  text-decoration: underline dotted; text-underline-offset: 4px;
+}
+.gb-header-hint__trigger:focus-visible { outline: 3px solid transparent; box-shadow: var(--focus-shadow); }
+.gb-header-hint__tip {
+  position: absolute; top: 100%; left: 0; z-index: 3; box-sizing: border-box;
+  width: 280px; max-width: calc(100vw - var(--space-8));
+  padding: var(--space-2) var(--space-3); border: 1px solid var(--rule); border-radius: var(--radius-sm);
+  background: var(--graphite); color: var(--paper);
+  font: 400 15px/22px var(--font-text); letter-spacing: normal; text-transform: none; text-align: left; white-space: normal;
+  visibility: hidden;
+}
+.gb-header-hint--end .gb-header-hint__tip { left: auto; right: 0; }
+.gb-header-hint:hover .gb-header-hint__tip,
+.gb-header-hint:focus-within .gb-header-hint__tip { visibility: visible; }
+.gb-header-hint[data-dismissed="true"] .gb-header-hint__tip { visibility: hidden; }
 
 /* Incidence matrix: visible legend, then a keyboard-focusable region that scrolls sideways while
    the topic column stays pinned. Borders are on cells (separate model) so they stick with them. */

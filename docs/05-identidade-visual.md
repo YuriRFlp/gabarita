@@ -61,6 +61,7 @@ Os pares de cor da direção (item atual, sobretítulo, régua, bolhas, filtro a
 | Bubble | `gb-bubble`, `gb-bubble--filled/half/small` | `shared/ui/Bubble.tsx` (`fill`: `empty`, `half`, `filled`) |
 | MasteryMeter | `gb-mastery`, `gb-mastery__bubbles` | `shared/ui/MasteryMeter.tsx` (5 bolhas; "Sem respostas" quando o valor é nulo) |
 | Tag | `gb-tag`, `gb-tag--new/overdue/phase` | `shared/ui/Tag.tsx` |
+| HeaderHint (dica no título da coluna: hover e foco, Esc fecha) | `gb-header-hint`, `gb-header-hint--end` | `shared/ui/HeaderHint.tsx` |
 | EmptyState | `gb-empty-state`, `__title`, `__body` | `shared/ui/EmptyState.tsx` (bolha vazia, título, explicação e ação opcionais) |
 | PriorityValue | `gb-priority`, `__bar`, `__fill` | `shared/ui/PriorityValue.tsx` (número com 2 casas e barra decorativa) |
 | FilterGroup | `gb-filter-group`, `gb-filter-group__label` (opções em `gb-segmented`) | `shared/ui/FilterGroup.tsx` (opções são links; `aria-current` na atual) |

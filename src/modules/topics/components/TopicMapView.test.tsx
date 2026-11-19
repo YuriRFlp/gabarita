@@ -31,7 +31,7 @@ describe('TopicMapView', () => {
   it('shows the "not measured" notice and "Sem respostas" when nothing is measured', () => {
     render(<TopicMapView result={{ ok: true, value: buildMap() }} query={QUERY} />);
     expect(screen.getByText('Domínio ainda não medido.')).toBeInTheDocument();
-    expect(screen.getByText(/últimos 60 dias/)).toBeInTheDocument();
+    expect(screen.getByText(/quando houver respostas nos últimos 60 dias/)).toBeInTheDocument();
     expect(screen.getAllByText('Sem respostas')).toHaveLength(2);
     expect(screen.queryByRole('meter')).not.toBeInTheDocument();
   });
