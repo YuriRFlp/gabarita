@@ -460,8 +460,8 @@ a.gb-button { text-decoration: none; }
   .gb-contributions th, .gb-contributions td { padding-left: var(--space-1); padding-right: var(--space-1); }
   .gb-contributions thead th { letter-spacing: 0; text-transform: none; }
   .gb-contributions { table-layout: fixed; }
-  .gb-contributions thead th:nth-child(2) { width: 31%; }
-  .gb-contributions thead th:nth-child(3) { width: 29%; }
+  .gb-contributions thead th:nth-child(2) { width: 28%; }
+  .gb-contributions thead th:nth-child(3) { width: 32%; }
   .gb-contributions__incidence { flex-wrap: wrap; gap: var(--space-1) var(--space-2); }
 }
 .gb-detail-mastery { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-2); font: 400 15px/22px var(--font-text); }
