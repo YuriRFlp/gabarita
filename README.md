@@ -10,16 +10,17 @@ O princípio central: em concurso, o que conta é **o quanto você lembra na hor
 
 ## Estado atual
 
-Fundação da aplicação concluída ([SPEC-001](docs/specs/SPEC-001-fundacao-da-aplicacao.md)); implantação em andamento ([SPEC-002](docs/specs/SPEC-002-implantacao.md), runbooks em `docs/operacao/`); próximos passos: módulos do MVP.
+Fundação da aplicação concluída ([SPEC-001](docs/specs/SPEC-001-fundacao-da-aplicacao.md)); implantação em andamento ([SPEC-002](docs/specs/SPEC-002-implantacao.md), runbooks em `docs/operacao/`); primeiro módulo do MVP, o Mapa do edital, implementado ([SPEC-004](docs/specs/SPEC-004-mapa-do-edital.md)); próximos passos: demais módulos.
 
 | Item | Situação |
 |---|---|
 | Taxonomia e matriz de incidência (14 editais, v0.2) | ✅ `data/seed/` |
 | Schema do banco, RLS e testes pgTAP | ✅ `supabase/` |
-| Identidade visual e design system | ✅ `public/brand/`, `design/` |
+| Identidade visual e design system (direção "Folha de prova", ADR-010) | ✅ `public/brand/`, `design/` |
 | Fundação: Next.js, login, tema, casca, CI | ✅ SPEC-001 |
-| Implantação (Vercel + Supabase remoto), backup e runbooks | 🚧 SPEC-002 em implementação |
-| Módulos do MVP | ⏳ próximas specs |
+| Implantação (Vercel + Supabase remoto), backup e runbooks | ✅ SPEC-002 |
+| Mapa do edital (módulo 01): lista, matriz de incidência e detalhe do assunto, com prioridade, domínio e urgência | ✅ SPEC-004 |
+| Demais módulos do MVP | ⏳ próximas specs |
 
 ## Estrutura do repositório
 

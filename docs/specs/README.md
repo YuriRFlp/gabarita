@@ -29,4 +29,5 @@ Código só começa com a spec `aprovada`.
 |---|---|---|
 | [SPEC-001](SPEC-001-fundacao-da-aplicacao.md) | Fundação da aplicação (scaffold, ferramentas, CI, Supabase local, autenticação, design system com tema sincronizado, casca) | concluida |
 | [SPEC-002](SPEC-002-implantacao.md) | Implantação (Supabase remoto, Vercel, migrações com guardas, cadastro desligado, usuário real, cabeçalhos de segurança, backup e ensaio de restauração, runbooks) | concluida |
-| [SPEC-003](SPEC-003-backup-chave-publica-e-copia-na-nuvem.md) | Backup com chave pública do gpg (sem senha ao fazer backup) e cópia automática do `.gpg` para a pasta sincronizada do Google Drive, com guardas e retenção; `backup:verify` a partir do `.gpg` | rascunho |
+| [SPEC-003](SPEC-003-backup-chave-publica-e-copia-na-nuvem.md) | Backup com chave pública do gpg (sem senha ao fazer backup) e cópia automática do `.gpg` para a pasta sincronizada do Google Drive, com guardas e retenção; `backup:verify` a partir do `.gpg` | rascunho (adiada) |
+| [SPEC-004](SPEC-004-mapa-do-edital.md) | Mapa do edital (módulo 1): taxonomia, incidência por concurso, prioridade e domínio por assunto, matriz de incidência, detalhe do assunto; redesenho da casca e do login na direção visual "Folha de prova" (ADR-010); perguntas respondidas, implementado e revisado | concluida |

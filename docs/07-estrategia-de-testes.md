@@ -9,6 +9,7 @@ Decisão de origem: ADR-006.
 | Unitário | Vitest | Funções de `domain/` (regras do doc 04) | ao lado do código | ≥ 90% de linhas e ramos em `domain/` |
 | Componente | Vitest + Testing Library | Estados e interação de componentes | ao lado do código | Todo componente com lógica |
 | Banco | pgTAP (`supabase test db`) | RLS, restrições, visões, índices | `supabase/tests/` | Toda tabela e visão |
+| Design | Vitest | Contraste dos pares de cor de `design/tokens.json` nos dois temas | `tests/design/` | Pares novos de cada direção visual |
 | Integração | Vitest + Supabase local | `data/` e `actions/` contra banco real | `*.int.test.ts` | Caminhos principais |
 | E2E | Playwright (+ axe) | Jornadas do usuário no navegador | `tests/e2e/` | Jornadas críticas abaixo |
 
@@ -26,11 +27,13 @@ Derivados de `docs/04-regras-de-estudo.md`; cada um vira teste com nome descriti
 - **Discursivas:** contagem de linhas versus limites do concurso.
 - **IA modo manual:** JSON colado inválido, incompleto ou com campos extras é rejeitado com mensagem clara.
 
+- **Mapa do edital (SPEC-004):** prioridade como soma de `peso_alvo × incidência` dos concursos ativos; domínio sem respostas (0), com respostas e sem cartões (taxa de acerto firme) e com cartões (média das duas partes); urgência; filtros e ordenações do mapa (`src/modules/topics/domain/`). Nos pgTAP, `topic_views.test.sql` cobre os mesmos números do lado do banco (ver abaixo).
+
 ## Comandos e onde cada nível roda
 
 | Comando | Nível | Precisa de Docker | Roda no CI |
 |---|---|---|---|
-| `npm test` | Unitário e componente | Não | Sim |
+| `npm test` | Unitário e componente; inclui `tests/design/` (contraste) | Não | Sim |
 | `npm run test:coverage` | Unitário e componente, com limite de 90% em `domain/` | Não | Não |
 | `npm run test:int` | Integração (`*.int.test.ts`) | Sim | Não |
 | `npm run db:test` | pgTAP | Sim | Não |
@@ -43,6 +46,14 @@ Os scripts de implantação e backup (`scripts/push-migrations.ts`, `backup-db.t
 
 **O que roda contra produção:** somente `db:test:remote` (pgTAP em transação com `rollback`, sem deixar dados) e `check:prod` (só leitura, sem credenciais), ambos manuais, depois de cada migração ou implantação. Não há E2E com login real contra produção; o checklist manual de implantação cobre o login real (SPEC-002, `docs/operacao/implantacao.md`).
 
+O que mudou com a SPEC-004: o projeto de testes unitários do Vitest passou a incluir `tests/design/**/*.test.ts` (em `vitest.config.ts`), então `tests/design/contrast.test.ts` roda no `npm test` e no CI, sem Docker. Os demais comandos não mudaram; `npm run db:test` passa a executar também `supabase/tests/topic_views.test.sql`, e `npm run test:e2e` passa a incluir a jornada 8.
+
+Arquivos de teste introduzidos pela SPEC-004:
+
+- `tests/design/contrast.test.ts`: lê `design/tokens.json` e confere, nos temas claro e escuro, que `rule` é igual a `graphite` e que cada par de cor da direção "Folha de prova" atinge 4,5:1 (texto) ou 3:1 (elementos gráficos): item atual da barra lateral, sobretítulo e números, régua, bolhas cheia, meia e vazia, anel de foco, filtro atual, aviso informativo, etiqueta de fase, "Sem respostas", barra de prioridade e o painel do login sobre a textura.
+- `supabase/tests/topic_views.test.sql`: pgTAP de `v_topic_priority` (38 linhas, prioridades entre 0 e 1, valores conhecidos do seed, concurso inativo, assunto sem incidência) e de `v_topic_performance` (janela de 60 dias com o limite exato, chute que não conta como firme, em branco, isolamento entre usuários e acesso anônimo vazio).
+- `src/modules/topics/**/*.int.test.ts`: integração do repositório e de `getTopicMap` contra o Supabase local (`npm run test:int`).
+
 O CI (`.github/workflows/ci.yml`) roda `lint`, `typecheck`, `format:check`, `test` e `build` em todo push e pull request. pgTAP, integração e E2E rodam localmente e são exigidos pela Definição de pronto (doc 06) antes de fechar uma tarefa.
 
 ## Jornadas E2E críticas
@@ -54,6 +65,7 @@ O CI (`.github/workflows/ci.yml`) roda `lint`, `typecheck`, `format:check`, `tes
 5. Simulado completo → nota por disciplina conforme a banca.
 6. Discursiva: gerar prompt (modo manual) → colar resposta → nota por critério.
 7. Tema claro e escuro; viewport de celular (360 px).
+8. Mapa do edital e casca nova (SPEC-004, `tests/e2e/journey-08-topic-map.spec.ts`): navegação para `/topics` com os 38 assuntos; usuário sem respostas (aviso, "Sem respostas") e com respostas (percentual e urgência seguindo o domínio); filtros na URL, inclusive sem JavaScript; estado vazio com "Limpar filtros"; matriz de incidência e detalhe do assunto (`/topics/pdpj_stack`, `/topics/seg_infra`) e o 404 em português; teclado; axe sem violações sérias nos dois temas; celular (sem rolagem lateral, alvos de 44 px); barra lateral a partir de 1024 px; login redesenhado. Usa o objeto de página `tests/e2e/pages/TopicMapPage.ts` e respostas criadas por `tests/e2e/data/answers.ts`.
 
 ## Regras de escrita dos testes
 

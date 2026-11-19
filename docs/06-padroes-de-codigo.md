@@ -9,10 +9,10 @@ src/
   app/                        Rotas do Next.js (App Router). Finas: só compõem módulos.
   proxy.ts                    Sessão e controle de acesso (proxy do Next 16)
   modules/
-    <module>/                 auth, settings, questions, review, schedule, mock-exams, essays, materials, ai
+    <module>/                 auth, settings, topics, questions, review, schedule, mock-exams, essays, materials, ai
       domain/                 Regras de negócio puras (sem I/O). Ex.: computeUrgency, cebraspeScore
       data/                   Acesso ao Supabase (repositórios). Único lugar com queries.
-      actions/                Server actions: validam com Zod, chamam domain + data
+      actions/                Server actions e leitores de servidor: validam com Zod, chamam domain + data
       components/             Componentes React do módulo
       index.ts                API pública do módulo
   shared/
@@ -36,6 +36,7 @@ supabase/tests/               pgTAP (RLS, restrições, visões)
 | `app/` | `index.ts` dos módulos | arquivos internos dos módulos |
 
 - Um módulo usa outro **apenas** pelo `index.ts`.
+- **Leitores de servidor em `actions/` sem `'use server'` (SPEC-004, P-9).** A diretiva `'use server'` transforma cada função exportada num endpoint que o navegador pode chamar. Uma função de leitura que recebe o cliente do Supabase e o `userId` como parâmetros não pode ser exposta assim; ela fica em `actions/`, sem a diretiva, e é chamada só pelas páginas em `app/`, pelo `index.ts` do módulo. É o caso de `getTopicMap` e `getTopicDetail` (`src/modules/topics/actions/get-topic-map.ts`). Só mutações disparadas pelo navegador levam `'use server'`.
 - Exceção para o domínio: o `index.ts` do módulo expõe ações e componentes, então um `domain/` importa o domínio de outro módulo só por `@/modules/<module>/domain` (o `domain/index.ts`, que reexporta apenas funções e tipos puros). Fora de `domain/`, essa importação é proibida.
 - As regras desta tabela são impostas pelo ESLint (`eslint.config.mjs`) e testadas em `tests/lint/`.
 - Tempo e aleatoriedade entram por parâmetro (`now: Date`, `random: () => number`) para o domínio ser determinístico e testável.

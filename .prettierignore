@@ -9,9 +9,9 @@ supabase/.temp/
 supabase/.branches/
 src/shared/supabase/database.types.ts
 src/shared/ui/styles/tokens.css
-data/
+/data/
 public/
 design/tokens.json
 docs/
 *.md
-design/
+/design/

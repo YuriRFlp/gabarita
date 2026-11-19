@@ -1,4 +1,6 @@
-/* Gabarita — components. Every color, spacing and radius comes from tokens.css. */
+/* Gabarita — components. Every color, spacing and radius comes from tokens.css.
+   Direction A "Folha de prova" (ADR-010): flat, no shadows, rules of 1–2 px, near-square corners;
+   the bubble is the only round shape on screen. */
 
 .gb-root { font: 400 17px/27px var(--font-text); color: var(--graphite); background: var(--paper); }
 
@@ -11,23 +13,29 @@
 }
 .gb-button:focus-visible { outline: none; box-shadow: var(--focus-shadow); }
 .gb-button--primary { background: var(--ink); color: var(--on-ink); }
-.gb-button--primary:hover { background: var(--ink-strong); }
+.gb-button--primary:hover { background: var(--ink-strong); color: var(--on-ink); }
 .gb-button--secondary { background: var(--paper); color: var(--graphite); border-color: var(--control-border); }
-.gb-button--secondary:hover { background: var(--paper-2); }
+.gb-button--secondary:hover { background: var(--paper-2); color: var(--graphite); }
 .gb-button--text { background: transparent; color: var(--ink); padding: 0 var(--space-2); }
 .gb-button--text:hover { text-decoration: underline; text-underline-offset: 3px; }
 .gb-button:disabled { opacity: .45; cursor: not-allowed; }
 .gb-button svg { width: 18px; height: 18px; flex: none; }
+a.gb-button { text-decoration: none; }
 
-/* Bubble: the signature element */
+/* Bubble: the signature element. Empty, half or filled; an optional label is read by screen readers. */
 .gb-bubble {
-  display: inline-grid; place-items: center; flex: none;
+  position: relative; display: inline-grid; place-items: center; flex: none;
   width: 28px; height: 28px; border-radius: var(--radius-bubble);
   border: 2px solid var(--control-border); color: var(--graphite-soft);
   font: 700 14px/1 var(--font-text); background: var(--paper);
 }
 .gb-bubble--filled { background: var(--ink); border-color: var(--ink); color: var(--on-ink); }
+.gb-bubble--half { background: linear-gradient(90deg, var(--ink) 50%, var(--paper) 50%); border-color: var(--ink); }
 .gb-bubble--small { width: 16px; height: 16px; border-width: 2px; }
+@media (forced-colors: active) {
+  .gb-bubble--filled { forced-color-adjust: none; background: CanvasText; border-color: CanvasText; }
+  .gb-bubble--half { forced-color-adjust: none; background: linear-gradient(90deg, CanvasText 50%, Canvas 50%); border-color: CanvasText; }
+}
 
 /* Option */
 .gb-option {
@@ -51,28 +59,54 @@
 .gb-option--wrong .gb-option__status { color: var(--error); }
 .gb-option__status svg { width: 18px; height: 18px; }
 
-/* Mastery meter: five bubbles */
-.gb-mastery { display: inline-flex; align-items: center; gap: var(--space-3); font: 400 15px/22px var(--font-text); color: var(--graphite-soft); }
+/* Mastery meter: five small bubbles (hidden from screen readers) plus the text "70%" or "Sem respostas" */
+.gb-mastery { display: inline-flex; align-items: center; gap: var(--space-2); font: 400 15px/22px var(--font-text); color: var(--graphite-soft); }
 .gb-mastery__bubbles { display: inline-flex; gap: var(--space-1); }
-.gb-mastery__bubbles span { width: 14px; height: 14px; border-radius: var(--radius-bubble); border: 2px solid var(--control-border); }
-.gb-mastery__bubbles span.filled { background: var(--ink); border-color: var(--ink); }
-.gb-mastery strong { color: var(--graphite); font-weight: 700; }
+.gb-mastery strong { color: var(--graphite); font-weight: 700; font-variant-numeric: tabular-nums; }
+
+/* Priority value: "0,89" in tabular numbers plus a flat bar from 0 to 1 */
+.gb-priority { display: inline-flex; align-items: center; gap: var(--space-2); font: 700 15px/22px var(--font-text); color: var(--graphite); font-variant-numeric: tabular-nums; }
+.gb-priority__bar { display: inline-block; flex: none; width: var(--space-12); height: 6px; background: var(--border); }
+.gb-priority__fill { display: block; height: 100%; background: var(--ink); }
+@media (forced-colors: active) {
+  .gb-priority__bar { forced-color-adjust: none; background: Canvas; outline: 1px solid CanvasText; }
+  .gb-priority__fill { forced-color-adjust: none; background: CanvasText; }
+}
 
 /* Tag */
 .gb-tag {
   display: inline-flex; align-items: center; gap: var(--space-1);
-  padding: 2px var(--space-2); border-radius: var(--radius-sm);
-  border: 1px solid var(--border); background: var(--paper-2); color: var(--graphite);
-  font: 400 15px/22px var(--font-text);
+  padding: 0 var(--space-2); border-radius: var(--radius-sm);
+  border: 1px solid var(--graphite-soft); background: var(--paper); color: var(--graphite);
+  font: 400 13px/20px var(--font-text); white-space: nowrap;
 }
 .gb-tag--new { background: var(--ink-light); border-color: var(--ink-light); color: var(--ink-strong); }
 .gb-tag--overdue { background: var(--highlighter); border-color: var(--highlighter); color: var(--on-highlighter); font-weight: 700; }
+.gb-tag--phase { background: var(--graphite); border-color: var(--graphite); color: var(--paper); font-weight: 700; }
 .gb-tag svg { width: 14px; height: 14px; }
 
 /* Utilities */
 .gb-visually-hidden {
   position: absolute; width: 1px; height: 1px; overflow: hidden;
   clip-path: inset(50%); white-space: nowrap;
+}
+.gb-eyebrow, .gb-page-header__eyebrow {
+  font: 700 13px/18px var(--font-text); letter-spacing: .08em; text-transform: uppercase;
+  color: var(--graphite-soft);
+}
+
+/* Sheet texture and timing marks: ornaments only (login, side rail, empty states), never behind
+   running text or tables. The timing marks element is always aria-hidden. */
+.gb-sheet-texture {
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(var(--grid-light) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-light) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+.gb-timing-marks {
+  width: 12px;
+  background-image: repeating-linear-gradient(to bottom, var(--rule) 0 6px, transparent 6px 24px);
 }
 
 /* Logo: two <img> (regular and white); only the one for the effective theme shows */
@@ -99,7 +133,7 @@
 .gb-field__error { display: flex; align-items: flex-start; gap: var(--space-1); color: var(--error); font: 700 15px/22px var(--font-text); }
 .gb-field__error svg { width: 18px; height: 18px; flex: none; margin-top: 2px; }
 
-/* Notice: error or success message, always with icon and text */
+/* Notice: error, success or info message, always with icon and text */
 .gb-notice {
   display: flex; align-items: flex-start; gap: var(--space-2);
   padding: var(--space-3) var(--space-4); border-radius: var(--radius-md);
@@ -112,20 +146,71 @@
 .gb-notice--error svg { color: var(--error); }
 .gb-notice--success { background: var(--correct-bg); border-color: var(--correct); }
 .gb-notice--success svg { color: var(--correct); }
+.gb-notice--info { background: var(--ink-light); border-color: var(--ink); }
+.gb-notice--info svg { color: var(--ink); }
+
+/* Empty state: an empty bubble, a short title, an optional explanation and an optional action */
+.gb-empty-state {
+  display: flex; align-items: flex-start; gap: var(--space-3);
+  padding: var(--space-6) var(--space-4); border-radius: var(--radius-md);
+  border: 1.5px dashed var(--control-border); background: var(--paper); color: var(--graphite);
+}
+.gb-empty-state__body { display: grid; justify-items: start; gap: var(--space-2); min-width: 0; }
+.gb-empty-state__title { font: 700 17px/27px var(--font-text); color: var(--graphite); }
 
 /* Form and card */
 .gb-form { display: flex; flex-direction: column; gap: var(--space-4); }
 .gb-form > .gb-button { justify-content: center; }
 
-/* Login screen: single column on mobile, centered card on desktop */
-.gb-login { min-height: 100dvh; display: grid; place-items: center; padding: var(--space-8) var(--space-4); }
-.gb-login__card { display: flex; flex-direction: column; gap: var(--space-6); width: 100%; max-width: 420px; }
-@media (min-width: 768px) {
-  .gb-login__card {
-    padding: var(--space-8); border-radius: var(--radius-lg);
-    border: 1px solid var(--border); background: var(--paper-2);
+/* Page header: eyebrow + h1 inside <hgroup>, metadata on the side, thick rule below */
+.gb-page-header {
+  display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between;
+  gap: var(--space-2) var(--space-6); margin-bottom: var(--space-6); padding-bottom: var(--space-4);
+  border-bottom: 2px solid var(--rule);
+}
+.gb-page-header hgroup { display: grid; gap: var(--space-1); margin: 0; min-width: 0; }
+.gb-page-header__title { font: 800 32px/38px var(--font-display); letter-spacing: -0.02em; overflow-wrap: anywhere; }
+.gb-page-header__meta { font: 400 15px/22px var(--font-text); color: var(--graphite-soft); font-variant-numeric: tabular-nums; }
+
+/* Login: brand strip above the form on mobile; two columns (brand panel | form) from 1024 px */
+.gb-login { min-height: 100dvh; display: flex; flex-direction: column; }
+.gb-login__panel {
+  position: relative; display: flex; flex-direction: column; gap: var(--space-2);
+  padding: var(--space-4); border-bottom: 2px solid var(--rule);
+}
+.gb-login__panel .gb-logo { align-self: flex-start; height: 28px; }
+.gb-login__panel .gb-eyebrow,
+.gb-login__panel .gb-timing-marks,
+.gb-login__sheet-rows { display: none; }
+.gb-login__promise { max-width: 16ch; font: 800 22px/28px var(--font-display); letter-spacing: -0.01em; color: var(--graphite); }
+.gb-login__sheet-rows {
+  gap: var(--space-3); width: max-content; max-width: 100%; margin: 0;
+  padding: var(--space-4) var(--space-5); list-style: none;
+  border: 1px solid var(--rule); background: var(--paper);
+}
+.gb-login__sheet-rows li { display: flex; align-items: center; gap: var(--space-3); font: 400 15px/22px var(--font-text); color: var(--graphite); }
+.gb-login__row-number { width: var(--space-6); font: 700 13px/1 var(--font-text); color: var(--graphite-soft); font-variant-numeric: tabular-nums; }
+.gb-login__row-bubbles { display: inline-flex; gap: var(--space-2); margin-right: var(--space-2); }
+.gb-login__form {
+  display: flex; flex-direction: column; gap: var(--space-6);
+  width: 100%; max-width: 452px; margin: 0 auto; padding: var(--space-6) var(--space-4) var(--space-8);
+}
+.gb-login__form hgroup { display: grid; gap: var(--space-1); margin: 0; }
+.gb-login__form h1 { font-weight: 800; letter-spacing: -0.02em; }
+.gb-login__form .gb-field__label { font: 700 13px/18px var(--font-text); letter-spacing: .08em; text-transform: uppercase; }
+@media (min-width: 1024px) {
+  .gb-login { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); }
+  .gb-login__panel {
+    justify-content: center; gap: var(--space-6);
+    padding: var(--space-10) var(--space-10) var(--space-10) var(--space-12);
+    border-bottom: none; border-right: 1px solid var(--rule);
   }
-  .gb-login__card .gb-field__input { background: var(--paper); }
+  .gb-login__panel .gb-logo { height: 32px; }
+  .gb-login__panel .gb-eyebrow { display: block; }
+  .gb-login__panel .gb-timing-marks { display: block; position: absolute; top: var(--space-10); bottom: var(--space-10); left: 0; }
+  .gb-login__promise { max-width: 14ch; font-size: 44px; line-height: 48px; letter-spacing: -0.02em; }
+  .gb-login__sheet-rows { display: grid; }
+  .gb-login__form { align-self: center; padding: var(--space-12) var(--space-4); }
 }
 
 /* Error page (404 and unexpected error) */
@@ -135,25 +220,38 @@
 }
 .gb-shell__content .gb-error-page { min-height: auto; padding: 0; margin: 0; }
 
-/* Segmented group: single choice among a few options (theme toggle) */
+/* Segmented group: single choice among a few options (theme toggle with buttons, filters with links) */
 .gb-segmented {
-  display: inline-flex; gap: var(--space-1); padding: var(--space-1);
+  display: inline-flex; gap: var(--space-1); margin: 0; padding: var(--space-1); list-style: none;
   border-radius: var(--radius-md); border: 1.5px solid var(--control-border); background: var(--paper);
 }
 .gb-segmented__option {
   display: inline-flex; align-items: center; gap: var(--space-1);
   min-height: 44px; padding: 0 var(--space-2);
   border-radius: var(--radius-sm); border: none; background: transparent; color: var(--graphite);
-  font: 700 15px/1 var(--font-text); cursor: pointer;
+  font: 700 15px/1 var(--font-text); text-decoration: none; cursor: pointer;
 }
-.gb-segmented__option:hover { background: var(--paper-2); }
-.gb-segmented__option:focus-visible { outline: none; box-shadow: var(--focus-shadow), inset 0 0 0 2px var(--paper); }
-.gb-segmented__option[aria-pressed="true"] { background: var(--ink); color: var(--on-ink); }
+.gb-segmented__option:hover { background: var(--paper-2); color: var(--graphite); }
+.gb-segmented__option:focus-visible { outline: 3px solid transparent; box-shadow: var(--focus-shadow), inset 0 0 0 2px var(--paper); }
+.gb-segmented__option[aria-pressed="true"],
+.gb-segmented__option[aria-current="true"] { background: var(--ink); color: var(--on-ink); }
 .gb-segmented__option:disabled { opacity: .45; cursor: not-allowed; }
 .gb-segmented__option svg { width: 18px; height: 18px; flex: none; }
+@media (forced-colors: active) {
+  .gb-segmented__option[aria-current="true"], .gb-segmented__option[aria-pressed="true"] {
+    forced-color-adjust: none; background: Highlight; color: HighlightText;
+  }
+}
 .gb-theme-toggle { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-2); }
 
-/* Authenticated app shell */
+/* Filter group: visible label + segmented group of links; the current option has aria-current="true" */
+.gb-filter-group { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2) var(--space-3); max-width: 100%; }
+.gb-filter-group__label { font: 700 13px/18px var(--font-text); letter-spacing: .08em; text-transform: uppercase; color: var(--graphite-soft); }
+.gb-filter-group .gb-segmented { flex-wrap: wrap; max-width: 100%; }
+
+/* Authenticated app shell: top bar with "Menu" below 1024 px; fixed side rail from 1024 px.
+   Items are numbered like rows of the answer sheet; the current one swaps its number for a filled
+   bubble, so it is not marked by color alone. */
 .gb-shell { min-height: 100dvh; display: flex; flex-direction: column; }
 .gb-shell__skip:not(:focus) {
   position: absolute; width: 1px; height: 1px; overflow: hidden;
@@ -165,43 +263,233 @@
   border-radius: var(--radius-md); background: var(--paper); color: var(--ink);
   font: 700 17px/1 var(--font-text); outline: none; box-shadow: var(--focus-shadow);
 }
-.gb-shell__header {
+.gb-shell__rail {
   position: relative; z-index: 10; display: flex; align-items: center; gap: var(--space-4);
-  padding: var(--space-2) var(--space-4); border-bottom: 1px solid var(--border); background: var(--paper);
+  padding: var(--space-2) var(--space-4); border-bottom: 2px solid var(--rule); background: var(--paper);
 }
+.gb-shell__timing-marks { display: none; }
 .gb-shell__logo { display: inline-flex; align-items: center; min-height: 44px; border-radius: var(--radius-sm); }
 .gb-shell__logo:focus-visible { outline: none; box-shadow: var(--focus-shadow); }
 .gb-shell__menu-button { margin-left: auto; }
 .gb-shell__menu {
   display: none; position: absolute; top: 100%; left: 0; right: 0;
   flex-direction: column; gap: var(--space-4); padding: var(--space-4);
-  border-bottom: 1px solid var(--border); background: var(--paper);
+  border-bottom: 2px solid var(--rule); background: var(--paper);
 }
 .gb-shell__menu--open { display: flex; }
 .gb-shell__list { display: flex; flex-direction: column; gap: var(--space-1); margin: 0; padding: 0; list-style: none; }
 .gb-shell__link {
   display: flex; align-items: center; gap: var(--space-2);
-  min-height: 44px; padding: 0 var(--space-3); border-radius: var(--radius-md);
-  color: var(--graphite); text-decoration: none; font: 700 17px/1 var(--font-text);
+  min-height: 44px; padding: var(--space-2) var(--space-3); border-radius: var(--radius-sm);
+  color: var(--graphite); text-decoration: none; font: 700 17px/22px var(--font-text);
 }
-.gb-shell__link:hover { background: var(--paper-2); }
-.gb-shell__link:focus-visible { outline: none; box-shadow: var(--focus-shadow); }
-.gb-shell__link[aria-current="page"] { background: var(--ink-light); color: var(--ink-strong); box-shadow: inset 3px 0 0 var(--ink); }
-.gb-shell__link[aria-current="page"]:focus-visible { box-shadow: inset 3px 0 0 var(--ink), var(--focus-shadow); }
+.gb-shell__link:hover { background: var(--paper-2); color: var(--graphite); }
+.gb-shell__link:focus-visible { outline: 3px solid transparent; box-shadow: var(--focus-shadow); }
+.gb-shell__link[aria-current="page"] { background: var(--ink-light); color: var(--ink-strong); }
 .gb-shell__link svg { width: 20px; height: 20px; flex: none; }
-.gb-shell__actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); }
+.gb-shell__rail-number {
+  display: inline-grid; place-items: center; flex: none; width: var(--space-6);
+  font: 700 13px/1 var(--font-text); color: var(--graphite-soft); font-variant-numeric: tabular-nums;
+}
+.gb-shell__actions {
+  display: flex; flex-wrap: wrap; align-items: flex-end; gap: var(--space-3) var(--space-4);
+  padding-top: var(--space-4); border-top: 1px solid var(--border);
+}
+.gb-shell__appearance { display: grid; gap: var(--space-2); }
 .gb-shell__content { flex: 1; width: 100%; max-width: 1120px; margin: 0 auto; padding: var(--space-6) var(--space-4); }
 @media (min-width: 768px) {
-  .gb-shell__menu-button { display: none; }
-  .gb-shell__menu {
-    display: flex; position: static; flex: 1; flex-direction: row; align-items: center;
-    padding: 0; border: none; background: transparent;
-  }
-  .gb-shell__list { flex-direction: row; }
-  .gb-shell__link[aria-current="page"] { box-shadow: inset 0 -3px 0 var(--ink); }
-  .gb-shell__link[aria-current="page"]:focus-visible { box-shadow: inset 0 -3px 0 var(--ink), var(--focus-shadow); }
-  .gb-shell__actions { margin-left: auto; }
   .gb-shell__content { padding: var(--space-8) var(--space-6); }
+}
+@media (min-width: 1024px) {
+  .gb-shell { display: grid; grid-template-columns: 280px minmax(0, 1fr); }
+  .gb-shell__rail {
+    position: sticky; top: 0; align-self: start; height: 100dvh; overflow-y: auto;
+    flex-direction: column; align-items: stretch; gap: var(--space-6);
+    padding: var(--space-5) var(--space-4) var(--space-5) var(--space-8);
+    border-bottom: none; border-right: 1px solid var(--rule);
+  }
+  .gb-shell__timing-marks { display: block; position: absolute; top: var(--space-12); bottom: var(--space-12); left: 0; }
+  .gb-shell__logo { align-self: flex-start; }
+  .gb-shell__menu-button { display: none; }
+  .gb-shell__menu { display: flex; position: static; flex: 1; gap: var(--space-6); padding: 0; border: none; background: transparent; }
+  .gb-shell__list { gap: 2px; }
+  .gb-shell__link { font-size: 15px; line-height: 20px; }
+  .gb-shell__link svg { display: none; }
+  .gb-shell__actions { margin-top: auto; flex-direction: column; flex-wrap: nowrap; align-items: stretch; }
+  .gb-shell__actions .gb-theme-toggle { align-items: stretch; }
+  .gb-shell__actions .gb-segmented { display: flex; flex-wrap: wrap; }
+  .gb-shell__actions .gb-segmented__option { flex: 1 1 0; justify-content: center; padding: 0 var(--space-1); }
+  .gb-shell__actions .gb-segmented__option svg { display: none; }
+  .gb-shell__content { margin: 0 auto; padding: var(--space-10) var(--space-12); }
+}
+
+/* Topic map (/topics): filters, live count, then the list or the incidence matrix. A flex column
+   (not a grid) so the wide matrix never widens the page: only its own region scrolls. */
+.gb-topic-map { display: flex; flex-direction: column; gap: var(--space-4); min-width: 0; }
+.gb-topic-filters {
+  display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3) var(--space-6);
+  padding-bottom: var(--space-4); border-bottom: 1px solid var(--border);
+}
+.gb-topic-map__count { font: 400 15px/22px var(--font-text); color: var(--graphite-soft); font-variant-numeric: tabular-nums; }
+
+/* Answer-sheet table: eyebrow column heads over a strong rule, light rules between rows */
+.gb-topic-list, .gb-contributions {
+  width: 100%; border-collapse: collapse;
+  font: 400 15px/22px var(--font-text); color: var(--graphite);
+}
+.gb-topic-list thead th, .gb-contributions thead th {
+  padding: var(--space-2); border-bottom: 1px solid var(--rule); text-align: left; vertical-align: bottom;
+  font: 700 13px/18px var(--font-text); letter-spacing: .08em; text-transform: uppercase; color: var(--graphite-soft);
+}
+.gb-topic-list tbody th, .gb-topic-list td,
+.gb-contributions tbody th, .gb-contributions td {
+  padding: var(--space-2); border-bottom: 1px solid var(--border); text-align: left; vertical-align: middle;
+}
+.gb-topic-list td { white-space: nowrap; }
+/* Column heads follow the page scroll. No ancestor has overflow, so sticky is relative to the
+   viewport; below 768 px the head is hidden (rows become cards) and nothing is pinned. */
+@media (min-width: 768px) {
+  .gb-topic-list thead th { position: sticky; top: 0; z-index: 1; background: var(--paper); }
+}
+.gb-topic-list__name { font-weight: 400; overflow-wrap: anywhere; }
+.gb-topic-list__name a {
+  display: flex; align-items: center; width: fit-content; min-height: 44px;
+  font: 700 17px/22px var(--font-text); color: var(--ink); text-decoration: none;
+}
+.gb-topic-list__name a:hover { color: var(--ink-strong); text-decoration: underline; }
+.gb-topic-list__tags { display: flex; flex-wrap: wrap; gap: var(--space-1); padding-bottom: var(--space-1); }
+.gb-topic-list td.gb-topic-list__count, .gb-topic-list thead th:last-child { text-align: right; }
+.gb-topic-list__count { font-weight: 700; font-variant-numeric: tabular-nums; }
+/* Below 768 px each row becomes a stacked card: the same cells, with the column name taken from
+   data-label, so the DOM is not duplicated for mobile. */
+@media (max-width: 767.98px) {
+  .gb-topic-list, .gb-topic-list tbody { display: block; }
+  .gb-topic-list thead {
+    position: absolute; width: 1px; height: 1px; overflow: hidden;
+    clip-path: inset(50%); white-space: nowrap;
+  }
+  .gb-topic-list tr {
+    display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-1) var(--space-4);
+    padding: var(--space-2) 0 var(--space-3); border-bottom: 1px solid var(--border);
+  }
+  .gb-topic-list tbody th, .gb-topic-list td { padding: 0; border-bottom: none; }
+  .gb-topic-list__name { flex: 1 0 100%; }
+  .gb-topic-list td { display: inline-flex; align-items: center; gap: var(--space-2); }
+  /* Priority and subtopic count share the first line; mastery, the widest, goes to the second */
+  .gb-topic-list td[data-label="Domínio"] { order: 1; }
+  .gb-topic-list td::before { content: attr(data-label); font: 700 13px/18px var(--font-text); color: var(--graphite-soft); }
+}
+.gb-topic-list .gb-mastery, .gb-topic-list .gb-priority { vertical-align: middle; }
+
+/* Incidence matrix: visible legend, then a keyboard-focusable region that scrolls sideways while
+   the topic column stays pinned. Borders are on cells (separate model) so they stick with them. */
+.gb-matrix-block { display: flex; flex-direction: column; gap: var(--space-3); min-width: 0; }
+.gb-matrix-legend {
+  display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-6); margin: 0; padding: 0; list-style: none;
+  font: 400 15px/22px var(--font-text); color: var(--graphite);
+}
+.gb-matrix-legend li { display: inline-flex; align-items: center; gap: var(--space-2); }
+/* position: relative on .gb-matrix keeps the absolutely positioned visually hidden labels inside the
+   scroll region; otherwise they escape it and widen the page. */
+.gb-matrix-note { margin: 0; font: 400 15px/22px var(--font-text); color: var(--graphite-soft); }
+/* Height-limited so the head and the topic column stay pinned inside the region while the page
+   scrolls: an element with overflow would otherwise stop sticky from following the page. */
+.gb-matrix {
+  position: relative; max-width: 100%; max-height: calc(100dvh - var(--space-8)); overflow: auto; overscroll-behavior-x: contain;
+  border-top: 2px solid var(--rule); border-bottom: 1px solid var(--rule);
+}
+.gb-matrix:focus-visible { outline: 3px solid transparent; box-shadow: var(--focus-shadow); }
+.gb-matrix__table {
+  border-collapse: separate; border-spacing: 0;
+  font: 400 15px/22px var(--font-text); color: var(--graphite);
+}
+.gb-matrix__caption {
+  padding: var(--space-2); text-align: left; caption-side: top;
+  font: 400 13px/18px var(--font-text); color: var(--graphite-soft);
+}
+.gb-matrix__corner, .gb-matrix__exam {
+  position: sticky; top: 0; z-index: 2;
+  padding: var(--space-2); border-bottom: 1px solid var(--rule); vertical-align: bottom; background: var(--paper);
+  font: 700 13px/18px var(--font-text); letter-spacing: .08em; text-transform: uppercase; color: var(--graphite-soft);
+}
+.gb-matrix__corner { left: 0; z-index: 3; text-align: left; border-right: 1px solid var(--rule); }
+.gb-matrix__exam { padding-left: var(--space-1); padding-right: var(--space-1); text-align: center; white-space: nowrap; color: var(--graphite); letter-spacing: 0; text-transform: none; }
+.gb-matrix__exam > span, .gb-matrix__corner > span { display: block; }
+.gb-matrix__corner-label { font-weight: 400; letter-spacing: 0; text-transform: none; }
+.gb-matrix__weight { font-weight: 400; color: var(--graphite-soft); font-variant-numeric: tabular-nums; }
+.gb-matrix__topic {
+  position: sticky; left: 0; z-index: 1;
+  width: 16ch; min-width: 16ch; max-width: 16ch; padding: 0 var(--space-2);
+  border-right: 1px solid var(--rule); border-bottom: 1px solid var(--border);
+  background: var(--paper); text-align: left; font-weight: 400; overflow-wrap: anywhere;
+}
+.gb-matrix__topic a {
+  display: flex; align-items: center; min-height: 44px; padding: var(--space-1) 0;
+  font-weight: 700; color: var(--ink); text-decoration: none;
+}
+.gb-matrix__topic a:hover { color: var(--ink-strong); text-decoration: underline; }
+/* The pinned column touches the edge of the scroll region, which would clip an outer ring */
+.gb-matrix__topic a:focus-visible { outline-offset: -3px; }
+.gb-matrix__cell {
+  min-width: 44px; padding: var(--space-2) var(--space-1); border-bottom: 1px solid var(--border);
+  text-align: center; vertical-align: middle;
+}
+.gb-matrix__cell .gb-bubble { vertical-align: middle; }
+@media (min-width: 768px) {
+  .gb-matrix__topic { width: 24ch; min-width: 24ch; max-width: 24ch; }
+}
+@media (min-width: 1024px) {
+  .gb-matrix__topic { width: 21ch; min-width: 21ch; max-width: 21ch; }
+}
+
+/* Topic detail (/topics/<id>) */
+.gb-back-link {
+  display: inline-flex; align-items: center; gap: var(--space-1); min-height: 44px; margin-bottom: var(--space-2);
+  font: 700 15px/22px var(--font-text); color: var(--ink); text-decoration: none;
+}
+.gb-back-link:hover { color: var(--ink-strong); text-decoration: underline; }
+.gb-back-link svg { width: 18px; height: 18px; flex: none; }
+.gb-topic-detail__tags { display: flex; flex-wrap: wrap; gap: var(--space-1); }
+.gb-topic-detail__summary {
+  margin-bottom: var(--space-8);
+  font: 700 15px/22px var(--font-text); color: var(--graphite); font-variant-numeric: tabular-nums;
+}
+.gb-topic-detail__section {
+  display: flex; flex-direction: column; gap: var(--space-3); min-width: 0;
+  margin-top: var(--space-8); padding-top: var(--space-4); border-top: 1px solid var(--rule);
+}
+.gb-topic-detail__section > p { font: 400 15px/22px var(--font-text); color: var(--graphite-soft); }
+.gb-contributions { max-width: 72ch; }
+.gb-contributions tbody th { font-weight: 400; overflow-wrap: anywhere; }
+.gb-contributions tbody th .gb-tag { margin-left: var(--space-1); }
+.gb-contributions thead th:last-child, .gb-contributions td.gb-contributions__value { text-align: right; }
+.gb-contributions__value { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.gb-contributions__incidence { display: inline-flex; align-items: center; gap: var(--space-2); }
+.gb-contributions tfoot th, .gb-contributions tfoot td {
+  padding: var(--space-2); border-top: 2px solid var(--rule); border-bottom: none; text-align: left; font-weight: 700;
+}
+.gb-contributions tfoot td { text-align: right; }
+/* At 360 px the three columns only fit with tighter cells, column heads in normal case and fixed
+   widths; automatic layout gave the long exam names the narrowest column. */
+@media (max-width: 767.98px) {
+  .gb-contributions th, .gb-contributions td { padding-left: var(--space-1); padding-right: var(--space-1); }
+  .gb-contributions thead th { letter-spacing: 0; text-transform: none; }
+  .gb-contributions { table-layout: fixed; }
+  .gb-contributions thead th:nth-child(2) { width: 28%; }
+  .gb-contributions thead th:nth-child(3) { width: 32%; }
+  .gb-contributions__incidence { flex-wrap: wrap; gap: var(--space-1) var(--space-2); }
+}
+.gb-detail-mastery { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-2); font: 400 15px/22px var(--font-text); }
+.gb-detail-mastery .gb-mastery { font-size: 17px; line-height: 27px; }
+.gb-subtopics {
+  margin: 0; padding-left: var(--space-8);
+  font: 400 17px/27px var(--font-text); color: var(--graphite); overflow-wrap: anywhere;
+}
+.gb-subtopics li { padding: var(--space-1) 0; border-bottom: 1px solid var(--border); }
+.gb-subtopics li::marker { font-weight: 700; color: var(--graphite-soft); font-variant-numeric: tabular-nums; }
+@media (min-width: 1024px) {
+  .gb-subtopics { columns: 2; column-gap: var(--space-12); }
+  .gb-subtopics li { break-inside: avoid; }
 }
 
 @media (prefers-reduced-motion: no-preference) {

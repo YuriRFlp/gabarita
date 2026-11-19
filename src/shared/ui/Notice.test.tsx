@@ -20,6 +20,17 @@ describe('Notice', () => {
     expect(notice.querySelector('svg')).toBeInTheDocument();
   });
 
+  it('shows information with icon and text, without a live region role', () => {
+    const { container } = render(<Notice kind="info">Domínio ainda não medido.</Notice>);
+    const notice = container.firstElementChild;
+    expect(notice).toHaveTextContent('Domínio ainda não medido.');
+    expect(notice).toHaveClass('gb-notice', 'gb-notice--info');
+    expect(notice).not.toHaveAttribute('role');
+    expect(notice?.querySelector('svg')).toHaveAttribute('aria-hidden', 'true');
+    expect(screen.queryByRole('alert')).not.toBeInTheDocument();
+    expect(screen.queryByRole('status')).not.toBeInTheDocument();
+  });
+
   it('hides the icon from screen readers so the message is not repeated', () => {
     render(<Notice kind="error">Falhou.</Notice>);
     expect(screen.getByRole('alert').querySelector('svg')).toHaveAttribute('aria-hidden', 'true');

@@ -3,8 +3,10 @@
 import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
 import { useId, useRef, useState, type KeyboardEvent, type ReactNode } from 'react';
+import { Bubble } from './Bubble';
 
-export type NavigationItem = { label: string; href: string; icon: ReactNode };
+/** `number` is the module number from docs/01 ("00" for home), shown like a row of the answer sheet. */
+export type NavigationItem = { number: string; label: string; href: string; icon: ReactNode };
 
 export type ShellProps = {
   logo: ReactNode;
@@ -42,7 +44,8 @@ export function Shell({ logo, navigation, currentPath, actions, children }: Shel
       <a className="gb-shell__skip" href="#content">
         Pular para o conteúdo
       </a>
-      <header className="gb-shell__header" onKeyDown={handleKeyDown}>
+      <header className="gb-shell__rail" onKeyDown={handleKeyDown}>
+        <div className="gb-timing-marks gb-shell__timing-marks" aria-hidden="true" />
         <Link className="gb-shell__logo" href="/">
           {logo}
         </Link>
@@ -67,19 +70,25 @@ export function Shell({ logo, navigation, currentPath, actions, children }: Shel
         >
           <nav aria-label="Principal">
             <ul className="gb-shell__list">
-              {navigation.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    className="gb-shell__link"
-                    href={item.href}
-                    aria-current={isActive(item.href, currentPath) ? 'page' : undefined}
-                    onClick={close}
-                  >
-                    {item.icon}
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
+              {navigation.map((item) => {
+                const active = isActive(item.href, currentPath);
+                return (
+                  <li key={item.href}>
+                    <Link
+                      className="gb-shell__link"
+                      href={item.href}
+                      aria-current={active ? 'page' : undefined}
+                      onClick={close}
+                    >
+                      <span className="gb-shell__rail-number" aria-hidden="true">
+                        {active ? <Bubble fill="filled" size="small" /> : item.number}
+                      </span>
+                      {item.icon}
+                      <span>{item.label}</span>
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </nav>
           <div className="gb-shell__actions">{actions}</div>
