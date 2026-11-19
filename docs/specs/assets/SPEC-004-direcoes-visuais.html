@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SPEC-004 — Direções visuais A e B (mockup estático)</title>
+<!--
+  Mockup estático para a pergunta P-1 da SPEC-004. Não é código da aplicação.
+  Cores tiradas de design/tokens.json (tema claro). As fontes da marca (Schibsted Grotesk,
+  Atkinson Hyperlegible) só aparecem se estiverem instaladas; senão, valem as pilhas de fallback
+  dos tokens. Sem requisições externas.
+-->
+<style>
+  :root {
+    --paper: #fcfcfa; --paper-2: #f1f1ec; --border: #deded7; --control-border: #8c8d96;
+    --graphite: #23242a; --graphite-soft: #5b5d68; --ink: #22309a; --ink-strong: #141e66;
+    --ink-light: #e6e9fa; --on-ink: #ffffff; --grid: #e26d6d; --grid-light: #f7cfca;
+    --highlighter: #ffe36e; --correct: #0e6b4e; --correct-bg: #ddf1e8;
+    --font-display: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+    --font-text: "Atkinson Hyperlegible", Verdana, system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #d9d9d4; font: 400 17px/27px var(--font-text); color: var(--graphite); }
+  .doc { max-width: 1400px; margin: 0 auto; padding: 32px 24px 80px; }
+  .doc > h1 { font: 800 32px/38px var(--font-display); margin: 0 0 8px; }
+  .doc > p { max-width: 80ch; margin: 0 0 16px; }
+  .doc h2.dir { font: 800 28px/34px var(--font-display); margin: 56px 0 4px; }
+  .doc p.dir-sub { margin: 0 0 20px; color: #3b3c44; max-width: 90ch; }
+  .frames { display: flex; gap: 24px; align-items: flex-start; overflow-x: auto; padding-bottom: 12px; }
+  .frame { flex: none; background: var(--paper); border-radius: 8px; overflow: hidden;
+           box-shadow: 0 8px 24px rgba(0,0,0,.18); }
+  .frame-label { font: 700 13px/18px var(--font-text); text-transform: uppercase; letter-spacing: .08em;
+                 color: #3b3c44; margin: 0 0 8px; }
+  .w-desk { width: 1040px; height: 640px; }
+  .w-mob { width: 360px; height: 640px; }
+  .bubble { display: inline-grid; place-items: center; width: 14px; height: 14px; border-radius: 50%;
+            border: 2px solid var(--control-border); flex: none; }
+  .bubble.filled { background: var(--ink); border-color: var(--ink); }
+  .bubble.half { background: linear-gradient(90deg, var(--ink) 50%, transparent 50%); border-color: var(--ink); }
+  .num { font-variant-numeric: tabular-nums; }
+  .vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+
+  /* ================= Direction A: answer sheet (printed, editorial) ================= */
+  .a { --r-sm: 2px; --r-md: 4px; font-family: var(--font-text); color: var(--graphite); height: 100%; }
+  .a .eyebrow { font: 700 13px/18px var(--font-text); letter-spacing: .1em; text-transform: uppercase; color: var(--graphite-soft); }
+  .a h1, .a h2, .a h3 { font-family: var(--font-display); margin: 0; }
+  .a .sheet-bg { background-color: var(--paper);
+    background-image: linear-gradient(var(--grid-light) 1px, transparent 1px), linear-gradient(90deg, var(--grid-light) 1px, transparent 1px);
+    background-size: 24px 24px; }
+  .a .timing { display: flex; flex-direction: column; gap: 18px; padding: 24px 0; }
+  .a .timing span { display: block; width: 14px; height: 6px; background: var(--graphite); }
+  /* login */
+  .a-login { display: grid; grid-template-columns: 1.15fr 1fr; height: 100%; }
+  .a-login__panel { position: relative; display: flex; gap: 28px; padding: 40px 40px 40px 20px; border-right: 1px solid var(--border); }
+  .a-login__panel .content { display: flex; flex-direction: column; gap: 24px; }
+  .a-login__panel h1 { font-size: 44px; line-height: 48px; font-weight: 800; letter-spacing: -.02em; max-width: 14ch; }
+  .a-rows { display: grid; gap: 10px; margin-top: 8px; background: var(--paper); border: 1px solid var(--graphite); padding: 16px 20px; width: max-content; }
+  .a-rows .row { display: flex; align-items: center; gap: 12px; font: 700 15px/22px var(--font-text); }
+  .a-rows .row b { width: 22px; color: var(--graphite-soft); }
+  .a-rows .row .lab { font-weight: 400; color: var(--graphite); margin-left: 8px; }
+  .a-rows .bubble { width: 18px; height: 18px; }
+  .a-login__form { display: flex; flex-direction: column; justify-content: center; gap: 24px; padding: 48px 64px; }
+  .a-field { display: grid; gap: 4px; }
+  .a-field label { font: 700 13px/18px var(--font-text); letter-spacing: .08em; text-transform: uppercase; }
+  .a-field .input { height: 48px; border: 1.5px solid var(--graphite); border-radius: var(--r-sm); background: var(--paper); }
+  .a-btn { height: 48px; display: flex; align-items: center; justify-content: center; gap: 8px; border-radius: var(--r-md);
+           background: var(--ink); color: var(--on-ink); font: 700 17px/1 var(--font-text); }
+  .a-logo { display: flex; align-items: center; gap: 8px; font: 800 22px/1 var(--font-display); color: var(--ink); }
+  .a-logo .bubble { width: 22px; height: 22px; }
+  /* app */
+  .a-app { display: grid; grid-template-columns: 232px 1fr; height: 100%; }
+  .a-rail { display: flex; flex-direction: column; gap: 24px; padding: 20px 0 20px 16px; border-right: 1px solid var(--graphite); background: var(--paper); position: relative; }
+  .a-rail .timing { position: absolute; left: 0; top: 0; bottom: 0; padding: 72px 0; }
+  .a-rail nav { display: grid; gap: 2px; padding-left: 12px; }
+  .a-rail a { display: flex; align-items: center; gap: 10px; min-height: 40px; padding: 0 12px; color: var(--graphite); text-decoration: none; font: 700 15px/1 var(--font-text); border-radius: var(--r-sm); }
+  .a-rail a .n { font: 700 13px/1 var(--font-text); color: var(--graphite-soft); width: 20px; }
+  .a-rail a[aria-current] { background: var(--ink-light); color: var(--ink-strong); }
+  .a-rail .foot { margin-top: auto; padding-left: 24px; font-size: 13px; line-height: 18px; color: var(--graphite-soft); }
+  .a-main { padding: 28px 36px; overflow: hidden; }
+  .a-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; padding-bottom: 16px; border-bottom: 2px solid var(--graphite); }
+  .a-head h1 { font-size: 34px; line-height: 38px; font-weight: 800; letter-spacing: -.02em; }
+  .a-filters { display: flex; gap: 20px; padding: 14px 0; border-bottom: 1px solid var(--border); font-size: 15px; }
+  .a-filters .grp { display: flex; gap: 6px; align-items: center; }
+  .a-filters .opt { padding: 4px 10px; border: 1.5px solid var(--control-border); border-radius: var(--r-sm); }
+  .a-filters .opt.on { background: var(--graphite); border-color: var(--graphite); color: var(--paper); font-weight: 700; }
+  .a-table { width: 100%; border-collapse: collapse; font-size: 15px; line-height: 22px; }
+  .a-table th { text-align: left; font: 700 12px/16px var(--font-text); letter-spacing: .08em; text-transform: uppercase; color: var(--graphite-soft); padding: 10px 8px; border-bottom: 1px solid var(--graphite); }
+  .a-table td { padding: 10px 8px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+  .a-table td.idx { font: 700 13px/1 var(--font-text); color: var(--graphite-soft); width: 32px; }
+  .a-table td.name { font-weight: 700; }
+  .a-table .tag { font-size: 13px; padding: 1px 6px; border: 1px solid var(--graphite-soft); border-radius: var(--r-sm); margin-left: 6px; font-weight: 400; }
+  .a-table .bubbles { display: inline-flex; gap: 4px; vertical-align: middle; }
+  .a-table .muted { color: var(--graphite-soft); }
+  .a-notice { display: flex; gap: 12px; align-items: flex-start; margin: 14px 0 6px; padding: 12px 14px; border: 1px dashed var(--graphite-soft); font-size: 15px; line-height: 22px; }
+  /* mobile */
+  .a-mob { display: flex; flex-direction: column; height: 100%; }
+  .a-mob__bar { display: flex; align-items: center; justify-content: space-between; padding: 10px 16px; border-bottom: 2px solid var(--graphite); }
+  .a-mob__menu { height: 44px; display: inline-flex; align-items: center; padding: 0 12px; border: 1.5px solid var(--graphite); border-radius: var(--r-sm); font-weight: 700; font-size: 15px; }
+  .a-mob__body { padding: 16px; display: flex; flex-direction: column; gap: 12px; overflow: hidden; }
+  .a-mob__item { display: grid; grid-template-columns: 28px 1fr auto; gap: 4px 8px; padding: 12px 0; border-bottom: 1px solid var(--border); font-size: 15px; line-height: 22px; }
+  .a-mob__item .idx { font: 700 13px/22px var(--font-text); color: var(--graphite-soft); }
+  .a-mob__item .nm { font-weight: 700; }
+  .a-mob__item .meta { grid-column: 2 / 4; color: var(--graphite-soft); display: flex; gap: 12px; align-items: center; }
+
+  /* ================= Direction B: contemporary product (surfaces, ink sidebar) ================= */
+  .b { --canvas: #f4f4f0; --r-md: 12px; --r-lg: 20px;
+       --shadow-1: 0 1px 2px rgba(20,30,102,.06), 0 1px 3px rgba(20,30,102,.08);
+       --shadow-2: 0 4px 12px rgba(20,30,102,.08), 0 1px 3px rgba(20,30,102,.06);
+       --ink-surface: #1d2a8a; --on-ink-soft: #c9cff5;
+       height: 100%; color: var(--graphite); }
+  .b h1, .b h2, .b h3 { font-family: var(--font-display); margin: 0; }
+  .b-login { display: grid; grid-template-columns: 1fr 1fr; height: 100%; }
+  .b-login__brand { position: relative; overflow: hidden; background: var(--ink-surface); color: var(--on-ink); padding: 48px; display: flex; flex-direction: column; justify-content: space-between; }
+  .b-login__brand h1 { color: var(--on-ink); font-size: 40px; line-height: 46px; font-weight: 800; letter-spacing: -.02em; max-width: 13ch; }
+  .b-login__brand p { color: var(--on-ink-soft); max-width: 36ch; margin: 12px 0 0; }
+  .b-dots { position: absolute; right: -40px; bottom: -40px; display: grid; grid-template-columns: repeat(6, 44px); gap: 14px; opacity: .9; }
+  .b-dots span { width: 44px; height: 44px; border-radius: 50%; border: 3px solid rgba(255,255,255,.35); }
+  .b-dots span.f { background: #fff; border-color: #fff; }
+  .b-logo { display: flex; align-items: center; gap: 10px; font: 800 22px/1 var(--font-display); }
+  .b-logo .bubble { width: 24px; height: 24px; border-color: currentColor; }
+  .b-logo .bubble.filled { background: currentColor; }
+  .b-login__side { background: var(--canvas); display: grid; place-items: center; padding: 40px; }
+  .b-card { background: var(--paper); border-radius: var(--r-lg); box-shadow: var(--shadow-2); padding: 36px; width: 100%; max-width: 400px; display: flex; flex-direction: column; gap: 20px; }
+  .b-field { display: grid; gap: 6px; }
+  .b-field label { font: 700 15px/22px var(--font-text); }
+  .b-field .input { height: 48px; border: 1.5px solid var(--control-border); border-radius: 10px; background: var(--paper); }
+  .b-btn { height: 48px; border-radius: 10px; display: flex; align-items: center; justify-content: center; background: var(--ink); color: var(--on-ink); font: 700 17px/1 var(--font-text); }
+  .b-app { display: grid; grid-template-columns: 240px 1fr; height: 100%; background: var(--canvas); }
+  .b-side { background: var(--ink-surface); color: var(--on-ink); padding: 20px 12px; display: flex; flex-direction: column; gap: 28px; }
+  .b-side nav { display: grid; gap: 4px; }
+  .b-side a { display: flex; align-items: center; gap: 10px; min-height: 42px; padding: 0 12px; border-radius: 10px; color: var(--on-ink-soft); text-decoration: none; font: 700 15px/1 var(--font-text); }
+  .b-side a .bubble { border-color: var(--on-ink-soft); width: 12px; height: 12px; }
+  .b-side a[aria-current] { background: var(--paper); color: var(--ink-strong); }
+  .b-side a[aria-current] .bubble { background: var(--ink); border-color: var(--ink); }
+  .b-side .foot { margin-top: auto; font-size: 13px; line-height: 18px; color: var(--on-ink-soft); padding: 0 12px; }
+  .b-main { padding: 28px 32px; display: flex; flex-direction: column; gap: 20px; overflow: hidden; }
+  .b-head h1 { font-size: 32px; line-height: 38px; font-weight: 800; letter-spacing: -.02em; }
+  .b-head p { color: var(--graphite-soft); margin: 4px 0 0; font-size: 15px; }
+  .b-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .b-stat { background: var(--paper); border-radius: var(--r-md); box-shadow: var(--shadow-1); padding: 16px 18px; }
+  .b-stat .k { font-size: 13px; line-height: 18px; color: var(--graphite-soft); }
+  .b-stat .v { font: 800 30px/36px var(--font-display); }
+  .b-panel { background: var(--paper); border-radius: var(--r-md); box-shadow: var(--shadow-1); overflow: hidden; }
+  .b-toolbar { display: flex; gap: 8px; padding: 12px 16px; border-bottom: 1px solid var(--border); font-size: 15px; align-items: center; }
+  .b-chip { padding: 4px 12px; border-radius: 999px; border: 1.5px solid var(--border); }
+  .b-chip.on { background: var(--ink-light); border-color: var(--ink-light); color: var(--ink-strong); font-weight: 700; }
+  .b-row { display: grid; grid-template-columns: 1fr 120px 200px 24px; gap: 12px; align-items: center; padding: 12px 16px; border-bottom: 1px solid var(--border); font-size: 15px; line-height: 22px; }
+  .b-row .nm { font-weight: 700; }
+  .b-row .sub { color: var(--graphite-soft); font-size: 13px; line-height: 18px; }
+  .b-bar { height: 6px; border-radius: 3px; background: var(--paper-2); overflow: hidden; margin-top: 4px; }
+  .b-bar i { display: block; height: 100%; background: var(--ink); }
+  .b-empty { display: flex; gap: 12px; align-items: center; padding: 14px 16px; background: var(--ink-light); color: var(--ink-strong); font-size: 15px; line-height: 22px; }
+  .b-mob { display: flex; flex-direction: column; height: 100%; background: var(--canvas); }
+  .b-mob__bar { display: flex; align-items: center; justify-content: space-between; padding: 10px 16px; background: var(--ink-surface); color: var(--on-ink); }
+  .b-mob__menu { height: 44px; display: inline-flex; align-items: center; padding: 0 14px; border-radius: 10px; background: rgba(255,255,255,.12); font-weight: 700; font-size: 15px; }
+  .b-mob__body { padding: 16px; display: flex; flex-direction: column; gap: 12px; overflow: hidden; }
+  .b-mob__card { background: var(--paper); border-radius: var(--r-md); box-shadow: var(--shadow-1); padding: 14px 16px; display: grid; gap: 6px; font-size: 15px; line-height: 22px; }
+</style>
+</head>
+<body>
+<div class="doc">
+  <h1>SPEC-004 — Direções visuais para a casca, o login e o Mapa do edital</h1>
+  <p>Mockups estáticos, só no tema claro, para o dono escolher a direção (pergunta P-1). Os dados são do seed v0.2. Os dois mantêm a paleta, as fontes, os ícones e o conceito "folha de respostas" do doc 05; mudam forma, superfície, hierarquia e onde a bolha aparece. Os números de contraste dos tokens novos serão verificados na implementação (CA-34).</p>
+  <p><strong>Registro (2026-11-19):</strong> o dono escolheu a direção A, "Folha de prova" (SPEC-004 § 5.5, ADR-010). A direção B fica aqui só como registro da alternativa descartada. Onde este mockup e a spec divergirem, vale a spec.</p>
+
+  <!-- ======================= A ======================= -->
+  <h2 class="dir">Direção A — "Folha de prova"</h2>
+  <p class="dir-sub">Impresso, editorial e plano. Cantos quase retos, réguas de 1–2 px em grafite, numeração de linha como na folha óptica, marcas de sincronismo (os retângulos pretos da borda da folha de leitura óptica) como ornamento. A única forma redonda da interface é a bolha, que fica ainda mais forte como assinatura. Sem sombras.</p>
+  <div class="frames">
+    <div>
+      <p class="frame-label">Login · desktop</p>
+      <div class="frame w-desk"><div class="a a-login">
+        <div class="a-login__panel sheet-bg">
+          <div class="timing" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="content">
+            <div class="a-logo"><span class="bubble filled"></span>Gabarita</div>
+            <p class="eyebrow">Analista Judiciário · Tecnologia da Informação</p>
+            <h1>Estude o que cai. Lembre no dia da prova.</h1>
+            <div class="a-rows" aria-hidden="true">
+              <div class="row"><b>01</b><span class="bubble filled"></span><span class="bubble"></span><span class="bubble"></span><span class="lab">Retenção com revisão espaçada</span></div>
+              <div class="row"><b>02</b><span class="bubble"></span><span class="bubble filled"></span><span class="bubble"></span><span class="lab">Direção pelo que mais cai</span></div>
+              <div class="row"><b>03</b><span class="bubble"></span><span class="bubble"></span><span class="bubble filled"></span><span class="lab">Prática no formato da banca</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="a-login__form">
+          <div><p class="eyebrow">Acesso</p><h2 style="font: 800 32px/38px var(--font-display); margin-top: 4px;">Entrar</h2></div>
+          <div class="a-field"><label>E-mail</label><div class="input"></div></div>
+          <div class="a-field"><label>Senha</label><div class="input"></div></div>
+          <div class="a-btn">Entrar</div>
+          <p style="font-size: 13px; line-height: 18px; color: var(--graphite-soft); margin: 0;">Uso pessoal. Cadastro desativado.</p>
+        </div>
+      </div></div>
+    </div>
+    <div>
+      <p class="frame-label">Mapa do edital · desktop (lista)</p>
+      <div class="frame w-desk"><div class="a a-app">
+        <aside class="a-rail">
+          <div class="timing" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="a-logo" style="padding-left: 12px;"><span class="bubble filled"></span>Gabarita</div>
+          <nav>
+            <a href="#"><span class="n">00</span>Início</a>
+            <a href="#" aria-current="page"><span class="n">01</span>Mapa do edital</a>
+            <a href="#" style="color: var(--graphite-soft); font-weight: 400;"><span class="n">02</span>Questões</a>
+            <a href="#" style="color: var(--graphite-soft); font-weight: 400;"><span class="n">03</span>Revisão</a>
+          </nav>
+          <div class="foot">Aparência: Sistema<br>Sair</div>
+        </aside>
+        <main class="a-main">
+          <div class="a-head">
+            <div><p class="eyebrow">Módulo 01</p><h1>Mapa do edital</h1></div>
+            <p class="num" style="font-size: 15px; color: var(--graphite-soft); margin: 0;">38 assuntos · 218 subtópicos · 14 concursos</p>
+          </div>
+          <div class="a-filters">
+            <div class="grp"><span class="eyebrow">Ver</span><span class="opt on">Lista</span><span class="opt">Matriz</span></div>
+            <div class="grp"><span class="eyebrow">Grupo</span><span class="opt on">Todos</span><span class="opt">Específicos</span><span class="opt">Gerais</span></div>
+            <div class="grp"><span class="eyebrow">Perfil</span><span class="opt on">Todos</span><span class="opt">Sistemas</span><span class="opt">Infra</span><span class="opt">Comum</span></div>
+          </div>
+          <div class="a-notice"><span class="bubble"></span><span><b>Domínio ainda não medido.</b> Ele começa em 0 e passa a ser calculado quando houver respostas nos últimos 60 dias. Por enquanto, a ordem segue só a prioridade.</span></div>
+          <table class="a-table">
+            <thead><tr><th>Nº</th><th>Assunto</th><th>Prioridade</th><th>Domínio</th><th>Subtópicos</th></tr></thead>
+            <tbody>
+              <tr><td class="idx num">01</td><td class="name">Stack da PDPJ-Br <span class="tag">Sistemas</span></td><td class="num"><b>1,00</b></td><td><span class="bubbles"><span class="bubble"></span><span class="bubble"></span><span class="bubble"></span><span class="bubble"></span><span class="bubble"></span></span> <span class="muted">Sem respostas</span></td><td class="num">12</td></tr>
+              <tr><td class="idx num">02</td><td class="name">DevOps, DevSecOps e CI/CD <span class="tag">Sistemas</span></td><td class="num"><b>1,00</b></td><td><span class="bubbles"><span class="bubble"></span><span class="bubble"></span><span class="bubble"></span><span class="bubble"></span><span class="bubble"></span></span> <span class="muted">Sem respostas</span></td><td class="num">10</td></tr>
+              <tr><td class="idx num">03</td><td class="name">Arquitetura de sistemas <span class="tag">Sistemas</span></td><td class="num"><b>1,00</b></td><td><span class="bubbles"><span class="bubble"></span><span class="bubble"></span><span class="bubble"></span><span class="bubble"></span><span class="bubble"></span></span> <span class="muted">Sem respostas</span></td><td class="num">11</td></tr>
+              <tr><td class="idx num">04</td><td class="name">Língua Portuguesa <span class="tag">Gerais</span></td><td class="num"><b>1,00</b></td><td><span class="bubbles"><span class="bubble"></span><span class="bubble"></span><span class="bubble"></span><span class="bubble"></span><span class="bubble"></span></span> <span class="muted">Sem respostas</span></td><td class="num">6</td></tr>
+              <tr><td class="idx num">05</td><td class="name">Linguagens e orientação a objetos <span class="tag">Sistemas</span></td><td class="num"><b>0,93</b></td><td><span class="bubbles"><span class="bubble"></span><span class="bubble"></span><span class="bubble"></span><span class="bubble"></span><span class="bubble"></span></span> <span class="muted">Sem respostas</span></td><td class="num">9</td></tr>
+              <tr><td class="idx num">10</td><td class="name">Legislação própria do tribunal <span class="tag">Gerais</span><span class="tag">Pós-edital</span></td><td class="num"><b>0,89</b></td><td><span class="bubbles"><span class="bubble"></span><span class="bubble"></span><span class="bubble"></span><span class="bubble"></span><span class="bubble"></span></span> <span class="muted">Sem respostas</span></td><td class="num">3</td></tr>
+            </tbody>
+          </table>
+        </main>
+      </div></div>
+    </div>
+    <div>
+      <p class="frame-label">Mapa do edital · 360 px</p>
+      <div class="frame w-mob"><div class="a a-mob">
+        <div class="a-mob__bar"><div class="a-logo" style="font-size: 19px;"><span class="bubble filled"></span>Gabarita</div><span class="a-mob__menu">Menu</span></div>
+        <div class="a-mob__body">
+          <div><p class="eyebrow">Módulo 01</p><h1 style="font: 800 28px/32px var(--font-display);">Mapa do edital</h1></div>
+          <div class="a-filters" style="flex-wrap: wrap; gap: 8px; padding: 8px 0;"><span class="opt on">Lista</span><span class="opt">Matriz</span><span class="opt">Filtros (0)</span></div>
+          <div class="a-notice" style="margin: 0;"><span class="bubble"></span><span><b>Domínio ainda não medido.</b> A ordem segue a prioridade.</span></div>
+          <div class="a-mob__item"><span class="idx">01</span><span class="nm">Stack da PDPJ-Br</span><b class="num">1,00</b><span class="meta"><span>Sistemas</span><span>Sem respostas</span></span></div>
+          <div class="a-mob__item"><span class="idx">02</span><span class="nm">DevOps, DevSecOps e CI/CD</span><b class="num">1,00</b><span class="meta"><span>Sistemas</span><span>Sem respostas</span></span></div>
+          <div class="a-mob__item"><span class="idx">18</span><span class="nm">Segurança de infraestrutura</span><b class="num">0,69</b><span class="meta"><span>Infra</span><span>Sem respostas</span></span></div>
+        </div>
+      </div></div>
+    </div>
+  </div>
+
+  <h3 style="font: 700 19px/26px var(--font-display); margin: 28px 0 8px;">Matriz de incidência (igual nas duas direções; aqui no estilo A)</h3>
+  <div class="frames"><div class="frame" style="padding: 20px 24px;"><div class="a">
+    <table class="a-table" style="width: auto;">
+      <caption class="vh">Incidência por concurso</caption>
+      <thead><tr><th>Assunto</th><th>TRT-3</th><th>TRF-6</th><th>TJMG</th><th>TRF-2</th><th>TRT-1</th><th>TRT-2</th><th>TRT-15</th><th>TRF-4</th><th>TRT-4</th><th>TRT-12</th><th>TJRJ</th><th>TJSP</th><th>TJRS</th><th>TJSC</th></tr>
+      <tr><th class="num" style="font-weight: 400;">peso</th><th class="num">,28</th><th class="num">,18</th><th class="num">,14</th><th class="num">,05</th><th class="num">,05</th><th class="num">,05</th><th class="num">,05</th><th class="num">,04</th><th class="num">,04</th><th class="num">,04</th><th class="num">,025</th><th class="num">,025</th><th class="num">,015</th><th class="num">,015</th></tr></thead>
+      <tbody>
+        <tr><td class="name">Stack da PDPJ-Br</td><td><span class="bubble filled"></span></td><td><span class="bubble filled"></span></td><td><span class="bubble filled"></span></td><td><span class="bubble filled"></span></td><td><span class="bubble filled"></span></td><td><span class="bubble filled"></span></td><td><span class="bubble filled"></span></td><td><span class="bubble filled"></span></td><td><span class="bubble filled"></span></td><td><span class="bubble filled"></span></td><td><span class="bubble filled"></span></td><td><span class="bubble filled"></span></td><td><span class="bubble filled"></span></td><td><span class="bubble filled"></span></td></tr>
+        <tr><td class="name">Segurança de infraestrutura</td><td><span class="bubble filled"></span></td><td><span class="bubble"></span></td><td><span class="bubble half"></span></td><td><span class="bubble filled"></span></td><td><span class="bubble filled"></span></td><td><span class="bubble filled"></span></td><td><span class="bubble filled"></span></td><td><span class="bubble filled"></span></td><td><span class="bubble filled"></span></td><td><span class="bubble filled"></span></td><td><span class="bubble"></span></td><td><span class="bubble"></span></td><td><span class="bubble filled"></span></td><td><span class="bubble"></span></td></tr>
+      </tbody>
+    </table>
+    <p style="font-size: 13px; line-height: 18px; color: var(--graphite-soft); margin: 12px 0 0;"><span class="bubble filled"></span> cobrado com profundidade (1) &nbsp; <span class="bubble half"></span> parcial ou em nível de noções (0,5) &nbsp; <span class="bubble"></span> ausente (0). Cada célula tem também o texto para leitor de tela.</p>
+  </div></div></div>
+
+  <!-- ======================= B ======================= -->
+  <h2 class="dir">Direção B — "Caderno digital"</h2>
+  <p class="dir-sub">Produto contemporâneo e sóbrio. A página vira a "mesa" (fundo levemente mais escuro) e cada painel é uma "folha" de papel com sombra suave; cantos mais arredondados; barra lateral na cor da caneta azul, que dá presença de marca. A bolha aparece só nos pontos de dado (navegação ativa, domínio, incidência). Mais espaço em branco, números grandes no topo.</p>
+  <div class="frames">
+    <div>
+      <p class="frame-label">Login · desktop</p>
+      <div class="frame w-desk"><div class="b b-login">
+        <div class="b-login__brand">
+          <div class="b-logo"><span class="bubble filled"></span>Gabarita</div>
+          <div><h1>Estude o que cai. Lembre no dia da prova.</h1><p>Revisão espaçada, prioridade pelos editais dos tribunais e prática no formato de cada banca.</p></div>
+          <div class="b-dots" aria-hidden="true"><span></span><span class="f"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="f"></span><span></span><span></span><span class="f"></span><span></span><span></span><span></span><span></span><span class="f"></span><span></span><span></span><span class="f"></span><span></span><span></span><span></span></div>
+        </div>
+        <div class="b-login__side"><div class="b-card">
+          <div><h2 style="font: 800 28px/34px var(--font-display);">Entrar</h2><p style="color: var(--graphite-soft); font-size: 15px; margin: 4px 0 0;">Uso pessoal. Cadastro desativado.</p></div>
+          <div class="b-field"><label>E-mail</label><div class="input"></div></div>
+          <div class="b-field"><label>Senha</label><div class="input"></div></div>
+          <div class="b-btn">Entrar</div>
+        </div></div>
+      </div></div>
+    </div>
+    <div>
+      <p class="frame-label">Mapa do edital · desktop (lista)</p>
+      <div class="frame w-desk"><div class="b b-app">
+        <aside class="b-side">
+          <div class="b-logo" style="padding: 0 12px;"><span class="bubble filled"></span>Gabarita</div>
+          <nav>
+            <a href="#"><span class="bubble"></span>Início</a>
+            <a href="#" aria-current="page"><span class="bubble"></span>Mapa do edital</a>
+          </nav>
+          <div class="foot">Aparência: Sistema<br>Sair</div>
+        </aside>
+        <main class="b-main">
+          <div class="b-head"><h1>Mapa do edital</h1><p>O que mais cai nos 14 concursos-alvo, ponderado pelo peso de cada um.</p></div>
+          <div class="b-stats">
+            <div class="b-stat"><div class="k">Assuntos</div><div class="v num">38</div></div>
+            <div class="b-stat"><div class="k">Subtópicos</div><div class="v num">218</div></div>
+            <div class="b-stat"><div class="k">Com domínio medido</div><div class="v num">0</div></div>
+          </div>
+          <div class="b-panel">
+            <div class="b-toolbar"><span class="b-chip on">Lista</span><span class="b-chip">Matriz</span><span style="width: 16px;"></span><span class="b-chip on">Todos</span><span class="b-chip">Específicos</span><span class="b-chip">Gerais</span><span style="width: 16px;"></span><span class="b-chip on">Todos os perfis</span><span class="b-chip">Infra</span></div>
+            <div class="b-empty"><span class="bubble" style="border-color: var(--ink);"></span><span><b>Domínio ainda não medido.</b> Começa em 0 e passa a ser calculado quando houver respostas nos últimos 60 dias.</span></div>
+            <div class="b-row"><div><div class="nm">Stack da PDPJ-Br</div><div class="sub">Sistemas · 12 subtópicos</div></div><div><b class="num">1,00</b><div class="b-bar"><i style="width: 100%;"></i></div></div><div class="sub">Sem respostas</div><div>›</div></div>
+            <div class="b-row"><div><div class="nm">DevOps, DevSecOps e CI/CD</div><div class="sub">Sistemas · 10 subtópicos</div></div><div><b class="num">1,00</b><div class="b-bar"><i style="width: 100%;"></i></div></div><div class="sub">Sem respostas</div><div>›</div></div>
+            <div class="b-row"><div><div class="nm">Linguagens e orientação a objetos</div><div class="sub">Sistemas · 9 subtópicos</div></div><div><b class="num">0,93</b><div class="b-bar"><i style="width: 93%;"></i></div></div><div class="sub">Sem respostas</div><div>›</div></div>
+            <div class="b-row"><div><div class="nm">Segurança de infraestrutura</div><div class="sub">Infra · 8 subtópicos</div></div><div><b class="num">0,69</b><div class="b-bar"><i style="width: 69%;"></i></div></div><div class="sub">Sem respostas</div><div>›</div></div>
+          </div>
+        </main>
+      </div></div>
+    </div>
+    <div>
+      <p class="frame-label">Mapa do edital · 360 px</p>
+      <div class="frame w-mob"><div class="b b-mob">
+        <div class="b-mob__bar"><div class="b-logo" style="font-size: 19px;"><span class="bubble filled"></span>Gabarita</div><span class="b-mob__menu">Menu</span></div>
+        <div class="b-mob__body">
+          <h1 style="font: 800 28px/32px var(--font-display);">Mapa do edital</h1>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap; font-size: 15px;"><span class="b-chip on">Lista</span><span class="b-chip">Matriz</span><span class="b-chip">Filtros</span></div>
+          <div class="b-empty" style="border-radius: 12px;"><span><b>Domínio ainda não medido.</b> A ordem segue a prioridade.</span></div>
+          <div class="b-mob__card"><b>Stack da PDPJ-Br</b><div style="display: flex; justify-content: space-between; color: var(--graphite-soft);"><span>Sistemas</span><span>Prioridade <b class="num" style="color: var(--graphite);">1,00</b></span></div><div class="b-bar"><i style="width: 100%;"></i></div></div>
+          <div class="b-mob__card"><b>Segurança de infraestrutura</b><div style="display: flex; justify-content: space-between; color: var(--graphite-soft);"><span>Infra</span><span>Prioridade <b class="num" style="color: var(--graphite);">0,69</b></span></div><div class="b-bar"><i style="width: 69%;"></i></div></div>
+        </div>
+      </div></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

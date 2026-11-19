@@ -1,7 +1,9 @@
 # SPEC-003 — Backup com chave pública e cópia automática para a nuvem
 
-**Status:** rascunho · **Criada:** 2026-11-18 · **Atualizada:** 2026-11-18
+**Status:** rascunho · **Criada:** 2026-11-18 · **Atualizada:** 2026-11-19
 **Módulo:** — (infraestrutura: `scripts/`, `docs/operacao/`) · **ADRs relacionados:** ADR-001, ADR-005, ADR-007, ADR-008, ADR-009 (redigido, § 7)
+
+> **Adiada** em 2026-11-19 por decisão do dono do projeto, que mantém o backup manual do ADR-008; a spec continua `rascunho` e o ADR-009 segue `proposto`.
 
 ## 1. Objetivo
 Tirar do backup semanal os dois passos manuais que não têm risco de segurança: digitar a senha do `gpg` a cada backup e enviar o `.tar.gz.gpg` para o Google Drive pelo navegador. O backup continua manual e disparado pelo dono (a senha do banco segue só na sessão); passa a criptografar com a chave pública do dono, sem pedir senha, e a copiar só o arquivo criptografado para a pasta do Google Drive para computador sincronizada no Windows. A senha da chave privada só é usada ao restaurar.
@@ -342,3 +344,4 @@ Respondidas pelo dono do projeto em 2026-11-18: **todas as recomendações foram
 |---|---|
 | 2026-11-18 | Criação |
 | 2026-11-18 | Respostas da § 8 registradas (todas as recomendações aceitas; P-2 = Google Drive em modo Espelhar arquivos); valores aplicados (chave sem expiração, código de saída 2, retenção 8 nos dois lugares, caminho da pasta do Drive); ADR-009 redigido e nota de status no ADR-008; aguardando aprovação do dono |
+| 2026-11-19 | Adiada por decisão do dono do projeto, que mantém o backup manual (ADR-008). Status continua `rascunho`; ADR-009 segue `proposto`. |

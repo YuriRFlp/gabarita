@@ -44,6 +44,11 @@ Tradução fixa dos termos usados no código, no banco e no design system (ADR-0
 | solicitação de IA | AI request / `ai_requests` | |
 | cota de infraestrutura | infra quota | |
 | retenção desejada | desired retention | |
+| mapa do edital | topic map | Tela e módulo `topics` (rotas `/topics`); na interface, "Mapa do edital" (SPEC-004, proposto) |
+| matriz de incidência | incidence matrix | Assuntos × concursos (SPEC-004, proposto) |
+| contribuição (de um concurso para a prioridade) | contribution | peso_alvo × incidência (SPEC-004, proposto) |
+| taxa de acerto firme | firm correct rate | `firm_correct` / `answered` (SPEC-004, proposto) |
+| retenção média | average retention | Média da retrievability dos cartões do assunto (SPEC-004, proposto) |
 
 ## Banco
 
@@ -212,6 +217,22 @@ Chaves que já constam da tabela de colunas (`nome`, `tipo`, `grupo`, `perfil`, 
 | `gb-formulario`, `gb-entrar` (`__cartao`), `gb-pagina-erro` | `gb-form`, `gb-login` (`__card`), `gb-error-page` |
 | `gb-logo--tema-claro`, `gb-logo--tema-escuro`, `gb-visualmente-oculto` | `gb-logo--light-theme`, `gb-logo--dark-theme`, `gb-visually-hidden` |
 | `design/componentes.css` | `design/components.css` |
+
+Termos novos da direção visual "Folha de prova" e do mapa do edital (SPEC-004 e ADR-010, propostos; não há nome anterior em português no código):
+
+| Português | Inglês |
+|---|---|
+| régua (separador forte) | token `rule` |
+| sobretítulo | estilo `eyebrow`; classe `gb-page-header__eyebrow` |
+| cabeçalho de página | `gb-page-header` (`__title`, `__meta`) |
+| barra lateral, número do item | `gb-shell__rail`, `gb-shell__rail-number` |
+| marcas de sincronismo | `gb-shell__timing-marks` |
+| textura de folha | `gb-sheet-texture` |
+| painel de marca, promessa, linhas da folha (login) | `gb-login__panel`, `__promise`, `__sheet-rows`, `__form` |
+| bolha (cheia, meia, vazia) | `Bubble` (`fill`: `filled`, `half`, `empty`); classe `gb-bubble--half` |
+| estado vazio | `EmptyState` |
+| grupo de filtros | `FilterGroup` |
+| valor de prioridade | `PriorityValue` |
 
 ## Scripts e arquivos
 

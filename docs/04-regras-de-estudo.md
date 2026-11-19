@@ -19,6 +19,7 @@ domínio = 0,5 × taxa_de_acerto_firme + 0,5 × retenção_média
 - **Taxa de acerto firme** (visão `v_topic_performance`, coluna `mastery_rate` = `firm_correct` / `answered`): acertos dos últimos 60 dias que **não** foram marcados como chute (`confidence = 'guess'`), divididos pelo total respondido.
 - **Retenção média**: média da probabilidade de lembrar (retrievability do FSRS) dos cartões do assunto, calculada na aplicação.
 - Assunto sem respostas tem domínio 0.
+- Assunto com respostas e **nenhum cartão** (a retenção média não existe) tem domínio igual à taxa de acerto firme. Com cartões, vale a fórmula acima, mesmo que a retenção média seja 0. *(Proposto na SPEC-004, pergunta P-3; passa a valer com a aprovação da spec.)*
 
 ## Escolha do assunto da vez
 
