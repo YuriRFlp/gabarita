@@ -28,16 +28,16 @@ describe('TopicDetailView', () => {
   it('shows each exam contribution and a total equal to the priority', () => {
     renderDetail(makeEntry({ incidences: [1, 0.5, 0] }));
     const table = screen.getByRole('table', { name: /Contribuição de cada concurso/ });
-    const trt3 = within(table).getByRole('row', { name: /TRT-3 \(MG\) · Fumarc 2022 · peso 0,28/ });
+    const trt3 = within(table).getByRole('row', { name: /TRT-3 \(MG\) · Fumarc 2022 · peso 28%/ });
     expect(within(trt3).getByText('Profundidade')).toBeInTheDocument();
-    expect(within(trt3).getByText('0,28')).toBeInTheDocument();
+    expect(within(trt3).getByText('28%')).toBeInTheDocument();
     const tjmg = within(table).getByRole('row', { name: /TJMG/ });
     expect(within(tjmg).getByText('Noções')).toBeInTheDocument();
-    expect(within(tjmg).getByText('0,07')).toBeInTheDocument();
+    expect(within(tjmg).getByText('7%')).toBeInTheDocument();
     const total = within(table).getByRole('row', { name: /Total/ });
-    expect(within(total).getByText('0,35')).toBeInTheDocument();
+    expect(within(total).getByText('35%')).toBeInTheDocument();
     expect(
-      screen.getByText(/Prioridade 0,35 · Urgência 0,35 · Domínio: sem respostas/),
+      screen.getByText(/Prioridade 35% · Urgência 35% · Domínio: sem respostas/),
     ).toBeInTheDocument();
   });
 
@@ -55,7 +55,7 @@ describe('TopicDetailView', () => {
       screen.getByText('Você ainda não respondeu questões deste assunto nos últimos 60 dias.'),
     ).toBeInTheDocument();
     expect(screen.getByText('Para a urgência, o domínio conta como 0.')).toBeInTheDocument();
-    expect(screen.queryByText(/\d\s?%/)).not.toBeInTheDocument();
+    expect(screen.getByText(/Domínio: sem respostas/)).toBeInTheDocument();
   });
 
   it('shows percentage, counts and the retention note when measured', () => {

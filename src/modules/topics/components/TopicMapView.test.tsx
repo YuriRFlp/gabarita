@@ -33,7 +33,7 @@ describe('TopicMapView', () => {
     expect(screen.getByText('Domínio ainda não medido.')).toBeInTheDocument();
     expect(screen.getByText(/últimos 60 dias/)).toBeInTheDocument();
     expect(screen.getAllByText('Sem respostas')).toHaveLength(2);
-    expect(screen.queryByText(/\d\s?%/)).not.toBeInTheDocument();
+    expect(screen.queryByRole('meter')).not.toBeInTheDocument();
   });
 
   it('hides the notice and shows the percentage when some topics are measured', () => {

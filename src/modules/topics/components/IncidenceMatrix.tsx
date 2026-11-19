@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import { Bubble } from '@/shared/ui';
 import type { Exam, IncidenceValue, TopicMapEntry } from '../domain';
-import { INCIDENCE_LONG_LABELS, bubbleFillFor, formatWeight, shortCourt } from './format';
+import { formatShare } from '@/shared/utils/format';
+import { INCIDENCE_LONG_LABELS, bubbleFillFor, shortCourt } from './format';
 
 const LEGEND_VALUES: ReadonlyArray<IncidenceValue> = [1, 0.5, 0];
 
@@ -21,6 +22,7 @@ export function IncidenceMatrix({ entries, exams }: IncidenceMatrixProps) {
           </li>
         ))}
       </ul>
+      <p className="gb-matrix-note">A porcentagem sob cada concurso é o peso dele na prioridade.</p>
       <div
         className="gb-matrix"
         role="region"
@@ -34,16 +36,19 @@ export function IncidenceMatrix({ entries, exams }: IncidenceMatrixProps) {
           <thead>
             <tr>
               <th scope="col" className="gb-matrix__corner">
-                Assunto
+                <span>Assunto</span>
+                <span aria-hidden="true" className="gb-matrix__corner-label">
+                  Peso do concurso
+                </span>
               </th>
               {exams.map((exam) => (
                 <th scope="col" key={exam.id} className="gb-matrix__exam">
                   <span aria-hidden="true">{shortCourt(exam.court)}</span>
                   <span aria-hidden="true" className="gb-matrix__weight">
-                    {formatWeight(exam.targetWeight)}
+                    {formatShare(exam.targetWeight)}
                   </span>
                   <span className="gb-visually-hidden">
-                    {`${exam.court}, ${exam.examBoardName} ${exam.year}, peso ${formatWeight(exam.targetWeight)}`}
+                    {`${exam.court}, ${exam.examBoardName} ${exam.year}, peso ${formatShare(exam.targetWeight)}`}
                   </span>
                 </th>
               ))}

@@ -22,10 +22,11 @@ describe('IncidenceMatrix', () => {
     const columns = screen.getAllByRole('columnheader');
     expect(columns).toHaveLength(EXAMS.length + 1);
     expect(
-      screen.getByRole('columnheader', { name: 'TRT-3 (MG), Fumarc 2022, peso 0,28' }),
+      screen.getByRole('columnheader', { name: 'TRT-3 (MG), Fumarc 2022, peso 28%' }),
     ).toBeInTheDocument();
     expect(screen.getByText('TRT-3')).toBeVisible();
-    expect(screen.getByText('0,025')).toBeInTheDocument();
+    expect(screen.getByText('2,5%')).toBeInTheDocument();
+    expect(screen.getByText('28%')).toBeInTheDocument();
   });
 
   it('links each row header to the topic detail', () => {
@@ -47,6 +48,14 @@ describe('IncidenceMatrix', () => {
     expect(cells[0]?.querySelector('.gb-bubble--filled')).not.toBeNull();
     expect(cells[1]?.querySelector('.gb-bubble--half')).not.toBeNull();
     expect(cells[2]?.querySelector('.gb-bubble')).not.toHaveClass('gb-bubble--filled');
+  });
+
+  it('labels the weights under the exams so the percentages are not ambiguous', () => {
+    render(<IncidenceMatrix entries={ENTRIES} exams={EXAMS} />);
+    expect(screen.getByText('Peso do concurso')).toBeVisible();
+    expect(
+      screen.getByText('A porcentagem sob cada concurso é o peso dele na prioridade.'),
+    ).toBeVisible();
   });
 
   it('shows the visible legend of the three bubbles', () => {

@@ -346,6 +346,11 @@ a.gb-button { text-decoration: none; }
   padding: var(--space-2); border-bottom: 1px solid var(--border); text-align: left; vertical-align: middle;
 }
 .gb-topic-list td { white-space: nowrap; }
+/* Column heads follow the page scroll. No ancestor has overflow, so sticky is relative to the
+   viewport; below 768 px the head is hidden (rows become cards) and nothing is pinned. */
+@media (min-width: 768px) {
+  .gb-topic-list thead th { position: sticky; top: 0; z-index: 1; background: var(--paper); }
+}
 .gb-topic-list__name { font-weight: 400; overflow-wrap: anywhere; }
 .gb-topic-list__name a {
   display: flex; align-items: center; width: fit-content; min-height: 44px;
@@ -386,8 +391,11 @@ a.gb-button { text-decoration: none; }
 .gb-matrix-legend li { display: inline-flex; align-items: center; gap: var(--space-2); }
 /* position: relative on .gb-matrix keeps the absolutely positioned visually hidden labels inside the
    scroll region; otherwise they escape it and widen the page. */
+.gb-matrix-note { margin: 0; font: 400 15px/22px var(--font-text); color: var(--graphite-soft); }
+/* Height-limited so the head and the topic column stay pinned inside the region while the page
+   scrolls: an element with overflow would otherwise stop sticky from following the page. */
 .gb-matrix {
-  position: relative; max-width: 100%; overflow-x: auto; overscroll-behavior-x: contain;
+  position: relative; max-width: 100%; max-height: calc(100dvh - var(--space-8)); overflow: auto; overscroll-behavior-x: contain;
   border-top: 2px solid var(--rule); border-bottom: 1px solid var(--rule);
 }
 .gb-matrix:focus-visible { outline: 3px solid transparent; box-shadow: var(--focus-shadow); }
@@ -400,12 +408,14 @@ a.gb-button { text-decoration: none; }
   font: 400 13px/18px var(--font-text); color: var(--graphite-soft);
 }
 .gb-matrix__corner, .gb-matrix__exam {
+  position: sticky; top: 0; z-index: 2;
   padding: var(--space-2); border-bottom: 1px solid var(--rule); vertical-align: bottom; background: var(--paper);
   font: 700 13px/18px var(--font-text); letter-spacing: .08em; text-transform: uppercase; color: var(--graphite-soft);
 }
-.gb-matrix__corner { position: sticky; left: 0; z-index: 2; text-align: left; border-right: 1px solid var(--rule); }
+.gb-matrix__corner { left: 0; z-index: 3; text-align: left; border-right: 1px solid var(--rule); }
 .gb-matrix__exam { padding-left: var(--space-1); padding-right: var(--space-1); text-align: center; white-space: nowrap; color: var(--graphite); letter-spacing: 0; text-transform: none; }
-.gb-matrix__exam > span { display: block; }
+.gb-matrix__exam > span, .gb-matrix__corner > span { display: block; }
+.gb-matrix__corner-label { font-weight: 400; letter-spacing: 0; text-transform: none; }
 .gb-matrix__weight { font-weight: 400; color: var(--graphite-soft); font-variant-numeric: tabular-nums; }
 .gb-matrix__topic {
   position: sticky; left: 0; z-index: 1;

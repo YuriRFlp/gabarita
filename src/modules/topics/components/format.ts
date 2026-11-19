@@ -1,24 +1,6 @@
 import type { IncidenceValue, TopicProfile } from '../domain';
 
-const TWO_DECIMALS = new Intl.NumberFormat('pt-BR', {
-  minimumFractionDigits: 2,
-  maximumFractionDigits: 2,
-});
-const WEIGHT = new Intl.NumberFormat('pt-BR', {
-  minimumFractionDigits: 0,
-  maximumFractionDigits: 3,
-});
 const PERCENT = new Intl.NumberFormat('pt-BR', { style: 'percent', maximumFractionDigits: 0 });
-
-/** Priority, urgency and contributions: always two decimals ("0,89"). */
-export function formatScore(value: number): string {
-  return TWO_DECIMALS.format(value);
-}
-
-/** Exam weights: up to three decimals, no trailing zeros ("0,28", "0,025"). */
-export function formatWeight(value: number): string {
-  return WEIGHT.format(value);
-}
 
 /** Mastery as a whole percentage ("70%"). */
 export function formatPercent(value: number): string {

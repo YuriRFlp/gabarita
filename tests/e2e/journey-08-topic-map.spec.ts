@@ -53,12 +53,12 @@ test.describe('Journey 8 — navigation and list without answers', () => {
 
     const pdpj = map.listRow(PDPJ);
     await expect(pdpj).toContainText('Sistemas');
-    await expect(pdpj).toContainText('1,00');
+    await expect(pdpj).toContainText('100%');
     await expect(pdpj).toContainText('Sem respostas');
     await expect(pdpj.getByRole('cell').last()).toHaveText('12');
     await expect(map.list.getByText('Geral', { exact: true }).first()).toBeVisible();
     await expect(map.list.getByText('Pós-edital', { exact: true }).first()).toBeVisible();
-    await expect(map.list.getByText(/^0,89$/).first()).toBeVisible();
+    await expect(map.list.getByText(/^89\s?%$/).first()).toBeVisible();
   });
 
   test('CA-18 — the navigation item stays current on a topic detail', async ({ page }) => {
@@ -79,7 +79,7 @@ test.describe('Journey 8 — navigation and list without answers', () => {
 
     await expect(map.masteryNotice).toBeVisible();
     await expect(map.list.getByText('Sem respostas', { exact: true })).toHaveCount(TOPIC_COUNT);
-    await expect(map.list.getByText('0%')).toHaveCount(0);
+    await expect(map.list.locator('td[data-label="Domínio"]').getByText('0%')).toHaveCount(0);
     const byUrgency = await map.topicNames();
 
     await map.open('?sort=priority');
@@ -203,14 +203,14 @@ test.describe('Journey 8 — matrix and detail', () => {
     await expect(row.getByText('cobrado com profundidade')).toHaveCount(14);
   });
 
-  test('CA-25 — /topics/pdpj_stack shows 12 subtopics and 14 contributions adding up to 1,00', async ({
+  test('CA-25 — /topics/pdpj_stack shows 12 subtopics and 14 contributions adding up to 100%', async ({
     page,
   }) => {
     await page.goto(PDPJ_PATH);
 
     await expect(page.getByRole('heading', { level: 1, name: PDPJ })).toBeVisible();
     await expect(
-      page.getByText('Prioridade 1,00 · Urgência 1,00 · Domínio: sem respostas'),
+      page.getByText('Prioridade 100% · Urgência 100% · Domínio: sem respostas'),
     ).toBeVisible();
     const contributions = page.getByRole('table', {
       name: 'Contribuição de cada concurso para a prioridade',
@@ -218,14 +218,14 @@ test.describe('Journey 8 — matrix and detail', () => {
     await expect(contributions.locator('tbody tr')).toHaveCount(14);
     await expect(contributions.locator('tbody').getByText('Profundidade')).toHaveCount(14);
     await expect(contributions.locator('tfoot tr')).toContainText('Total');
-    await expect(contributions.locator('tfoot td')).toHaveText('1,00');
+    await expect(contributions.locator('tfoot td')).toHaveText('100%');
     await expect(page.getByRole('heading', { level: 2, name: 'Subtópicos (12)' })).toBeVisible();
     await expect(
       page.getByRole('region', { name: /^Subtópicos/ }).getByRole('listitem'),
     ).toHaveCount(12);
   });
 
-  test('CA-25 — /topics/seg_infra shows TJMG with a half bubble, "Noções" and contribution 0,07', async ({
+  test('CA-25 — /topics/seg_infra shows TJMG with a half bubble, "Noções" and contribution 7%', async ({
     page,
   }) => {
     await page.goto('/topics/seg_infra');
@@ -235,7 +235,7 @@ test.describe('Journey 8 — matrix and detail', () => {
       .getByRole('row')
       .filter({ hasText: 'TJMG' });
     await expect(row).toContainText('Noções');
-    await expect(row.getByRole('cell').last()).toHaveText('0,07');
+    await expect(row.getByRole('cell').last()).toHaveText('7%');
     await expect(row.locator('.gb-bubble--half')).toHaveCount(1);
   });
 
@@ -319,12 +319,67 @@ test.describe('Journey 8 — a user with answers', () => {
       await expect(section).toContainText('10 respostas, 7 acertos firmes (chutes não contam)');
       await expect(section).toContainText('Retenção média: ainda não calculada.');
       await expect(section).toContainText('Sem cartões, o domínio é a taxa de acerto firme.');
-      await expect(page.getByText('Prioridade 1,00 · Urgência 0,30 · Domínio: 70%')).toBeVisible();
+      await expect(page.getByText('Prioridade 100% · Urgência 30% · Domínio: 70%')).toBeVisible();
     } finally {
       await context.close();
       await cleanup();
       await deleteDisposableUser(user);
     }
+  });
+});
+
+test.describe('Journey 8 — pinned column heads', () => {
+  test.skip(({ isMobile }) => isMobile, 'CA-38 pins the heads on desktop; mobile has its own test');
+
+  test('CA-38 — the list head stays at the top of the window while the page scrolls', async ({
+    page,
+  }) => {
+    const map = new TopicMapPage(page);
+    await page.setViewportSize({ width: 1280, height: 720 });
+    await map.open('?sort=priority');
+    await expect(map.list).toBeVisible();
+
+    await page.mouse.wheel(0, 1200);
+    await expect.poll(() => page.evaluate(() => window.scrollY)).toBeGreaterThan(600);
+
+    const head = map.list.getByRole('columnheader', { name: 'Prioridade' });
+    await expect(head).toBeInViewport({ ratio: 1 });
+    const box = await head.boundingBox();
+    expect(Math.abs(box?.y ?? 99)).toBeLessThanOrEqual(1);
+  });
+
+  test('CA-38 — the matrix region is height-limited and pins its head and topic column', async ({
+    page,
+  }) => {
+    const map = new TopicMapPage(page);
+    await page.setViewportSize({ width: 800, height: 720 });
+    await map.open('?view=matrix');
+    await expect(map.matrixRegion).toBeVisible();
+    await expect(map.matrixTable.getByText('Peso do concurso')).toBeVisible();
+
+    const region = await map.matrixRegion.boundingBox();
+    expect(region?.height ?? 9999).toBeLessThanOrEqual(720);
+    const scrollsBoth = await map.matrixRegion.evaluate(
+      (el) => el.scrollHeight > el.clientHeight && el.scrollWidth > el.clientWidth,
+    );
+    expect(scrollsBoth).toBe(true);
+
+    const head = map.matrixTable.getByRole('columnheader', { name: /TRT-3/ });
+    const topic = map.matrixTable.getByRole('rowheader').nth(5);
+    await map.matrixRegion.evaluate((el) => {
+      el.scrollTo({ top: 300, left: 100 });
+    });
+    await expect.poll(() => map.matrixRegion.evaluate((el) => el.scrollTop)).toBeGreaterThan(0);
+    await expect.poll(() => map.matrixRegion.evaluate((el) => el.scrollLeft)).toBeGreaterThan(0);
+
+    const box = await map.matrixRegion.boundingBox();
+    const headBox = await head.boundingBox();
+    const topicBox = await topic.boundingBox();
+    // The head pins to the top edge of the region (below its 2 px border) and the topic column to
+    // its left edge.
+    expect(Math.abs((headBox?.y ?? -99) - ((box?.y ?? 0) + 2))).toBeLessThanOrEqual(2);
+    expect(Math.abs((topicBox?.x ?? -99) - (box?.x ?? 0))).toBeLessThanOrEqual(2);
+    await expect(head).toBeInViewport();
   });
 });
 
@@ -465,6 +520,23 @@ test.describe('Journey 8 — mobile (360 px)', () => {
 
     expect(regionBox).not.toBeNull();
     expect(Math.abs((after?.x ?? -1) - (before?.x ?? -2))).toBeLessThanOrEqual(1);
+    expect(await scrollWidth(page)).toBeLessThanOrEqual(360);
+  });
+
+  test('CA-38 — the list has no pinned head in cards and the page does not scroll sideways', async ({
+    page,
+  }) => {
+    const map = new TopicMapPage(page);
+    await map.open();
+    await expect(map.list).toBeVisible();
+
+    const positions = await page.evaluate(() =>
+      Array.from(document.querySelectorAll('.gb-topic-list thead th')).map(
+        (el) => getComputedStyle(el).position,
+      ),
+    );
+    expect(positions.length).toBeGreaterThan(0);
+    expect(positions.every((position) => position === 'static')).toBe(true);
     expect(await scrollWidth(page)).toBeLessThanOrEqual(360);
   });
 

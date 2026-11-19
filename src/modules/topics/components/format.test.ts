@@ -1,23 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { bubbleFillFor, formatPercent, formatScore, formatWeight, shortCourt } from './format';
-
-describe('formatScore', () => {
-  it('uses two decimals with a comma', () => {
-    expect(formatScore(0.89)).toBe('0,89');
-    expect(formatScore(1)).toBe('1,00');
-    expect(formatScore(0.07)).toBe('0,07');
-    expect(formatScore(0)).toBe('0,00');
-  });
-});
-
-describe('formatWeight', () => {
-  it('keeps up to three decimals without trailing zeros', () => {
-    expect(formatWeight(0.28)).toBe('0,28');
-    expect(formatWeight(0.025)).toBe('0,025');
-    expect(formatWeight(0.015)).toBe('0,015');
-    expect(formatWeight(1)).toBe('1');
-  });
-});
+import { bubbleFillFor, formatPercent, shortCourt } from './format';
 
 describe('formatPercent', () => {
   it('rounds to a whole percentage', () => {

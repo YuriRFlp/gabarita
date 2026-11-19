@@ -8,11 +8,11 @@ function fill(container: HTMLElement): HTMLElement | null {
 
 describe('PriorityValue', () => {
   it.each([
-    [0.89, '0,89'],
-    [1, '1,00'],
-    [0.065, '0,07'],
-    [0, '0,00'],
-  ])('shows %s with two decimals in pt-BR as "%s"', (value, text) => {
+    [0.89, '89%'],
+    [1, '100%'],
+    [0.065, '6,5%'],
+    [0, '0%'],
+  ])('shows %s as a pt-BR percentage "%s"', (value, text) => {
     render(<PriorityValue value={value} />);
     expect(screen.getByText(text)).toBeInTheDocument();
   });

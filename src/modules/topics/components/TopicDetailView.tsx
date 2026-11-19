@@ -1,15 +1,9 @@
 import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import { Bubble, EmptyState, MasteryMeter, Notice, Tag } from '@/shared/ui';
+import { formatShare } from '@/shared/utils/format';
 import type { Exam, Mastery, TopicMapEntry } from '../domain';
-import {
-  INCIDENCE_SHORT_LABELS,
-  PROFILE_LABELS,
-  bubbleFillFor,
-  formatPercent,
-  formatScore,
-  formatWeight,
-} from './format';
+import { INCIDENCE_SHORT_LABELS, PROFILE_LABELS, bubbleFillFor, formatPercent } from './format';
 import type { LoadOutcome } from './load-outcome';
 import { TOPICS_PATH } from './TopicMapFilters';
 
@@ -98,7 +92,7 @@ export function TopicDetailView({ result, retryHref }: TopicDetailViewProps) {
         </p>
       </header>
       <p className="gb-topic-detail__summary">
-        Prioridade {formatScore(priority.priority)} · Urgência {formatScore(urgency)} · Domínio:{' '}
+        Prioridade {formatShare(priority.priority)} · Urgência {formatShare(urgency)} · Domínio:{' '}
         {mastery.kind === 'measured' ? formatPercent(mastery.value) : 'sem respostas'}
       </p>
 
@@ -121,7 +115,7 @@ export function TopicDetailView({ result, retryHref }: TopicDetailViewProps) {
               <tr key={exam.id}>
                 <th scope="row">
                   {exam.court} · {exam.examBoardName} {exam.year} · peso{' '}
-                  {formatWeight(exam.targetWeight)}
+                  {formatShare(exam.targetWeight)}
                   {counted ? null : <Tag>Inativo</Tag>}
                 </th>
                 <td>
@@ -131,7 +125,7 @@ export function TopicDetailView({ result, retryHref }: TopicDetailViewProps) {
                   </span>
                 </td>
                 <td className="gb-contributions__value">
-                  {counted ? formatScore(contribution) : '—'}
+                  {counted ? formatShare(contribution) : '—'}
                 </td>
               </tr>
             ))}
@@ -141,7 +135,7 @@ export function TopicDetailView({ result, retryHref }: TopicDetailViewProps) {
               <th scope="row" colSpan={2}>
                 Total
               </th>
-              <td className="gb-contributions__value">{formatScore(priority.priority)}</td>
+              <td className="gb-contributions__value">{formatShare(priority.priority)}</td>
             </tr>
           </tfoot>
         </table>

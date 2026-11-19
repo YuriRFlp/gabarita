@@ -75,14 +75,14 @@ A spec inclui também o **redesenho visual da casca e do login** pedido pelo don
 ### 4.3 Interface do mapa
 | # | Dado / Quando / Então | Teste |
 |---|---|---|
-| CA-18 | Dado o usuário logado, quando aciona "Mapa do edital" na navegação, então chega em `/topics`, o item fica com `aria-current="page"` (também em `/topics/<id>`), o título da página é "Mapa do edital" e a lista mostra os 38 assuntos com nome, etiqueta de perfil ou "Geral", etiqueta "Pós-edital" quando `phase = 'post_notice'`, prioridade com duas casas em pt-BR ("0,89"), domínio e número de subtópicos. | E2E (jornada 8) + componente |
+| CA-18 | Dado o usuário logado, quando aciona "Mapa do edital" na navegação, então chega em `/topics`, o item fica com `aria-current="page"` (também em `/topics/<id>`), o título da página é "Mapa do edital" e a lista mostra os 38 assuntos com nome, etiqueta de perfil ou "Geral", etiqueta "Pós-edital" quando `phase = 'post_notice'`, prioridade em porcentagem pt-BR ("89%", regra de § 5.2), domínio e número de subtópicos. | E2E (jornada 8) + componente |
 | CA-19 | Dado um usuário sem nenhuma resposta, quando abre `/topics`, então vê o aviso informativo "Domínio ainda não medido" explicando que começa em 0 e passa a ser calculado com respostas dos últimos 60 dias, cada assunto mostra "Sem respostas" com as cinco bolhas vazias (nunca "0%"), e a ordem padrão por urgência coincide com a ordem por prioridade. | E2E (jornada 8) + componente |
 | CA-20 | Dado um usuário com respostas em parte dos assuntos (criadas por fábrica), quando abre `/topics`, então os assuntos medidos mostram a porcentagem inteira ("70%") e as bolhas preenchidas por `round(valor × 5)`, os demais continuam "Sem respostas", o aviso de CA-19 não aparece e a ordem por urgência reflete o domínio. | E2E (jornada 8) + componente |
 | CA-21 | Dado `/topics`, quando escolho grupo, perfil, ordenação ou a visão "Matriz", então a URL muda para refletir a escolha, os outros parâmetros são preservados, a opção escolhida fica com `aria-current="true"`, a contagem "Mostrando N de 38 assuntos" é atualizada numa região `aria-live="polite"`, e recarregar a página mantém o estado. Com JavaScript desligado, os filtros continuam funcionando (são links). | E2E (jornada 8) + componente |
 | CA-22 | Dado filtros que resultam em lista vazia (`category=general&profile=infra`), quando a página carrega, então aparece o estado vazio "Nenhum assunto com esses filtros." com o link "Limpar filtros" para `/topics`. | componente + E2E (jornada 8) |
-| CA-23 | Dado a visão "Matriz", então há uma tabela com legenda (`caption`), uma coluna por concurso na ordem de CA-4 com cabeçalho curto visível ("TRT-3") e nome completo, banca, ano e peso disponíveis ao leitor de tela, uma linha por assunto com cabeçalho de linha que leva ao detalhe, e cada célula com bolha cheia, meia ou vazia **e** o texto "cobrado com profundidade", "parcial ou em nível de noções" ou "ausente" (oculto visualmente, lido pelo leitor de tela); a legenda das três bolhas aparece visível acima da tabela. | componente + E2E (jornada 8, axe) |
+| CA-23 | Dado a visão "Matriz", então há uma tabela com legenda (`caption`), uma coluna por concurso na ordem de CA-4 com cabeçalho curto visível ("TRT-3") e, logo abaixo, o peso em porcentagem ("28%", "2,5%") identificado pelo rótulo visível "Peso do concurso" na célula de canto e por uma nota curta acima da tabela ("A porcentagem sob cada concurso é o peso dele na prioridade."); nome completo, banca, ano e peso ("peso 28%") disponíveis ao leitor de tela, uma linha por assunto com cabeçalho de linha que leva ao detalhe, e cada célula com bolha cheia, meia ou vazia **e** o texto "cobrado com profundidade", "parcial ou em nível de noções" ou "ausente" (oculto visualmente, lido pelo leitor de tela); a legenda das três bolhas aparece visível acima da tabela. | componente + E2E (jornada 8, axe) |
 | CA-24 | Dado a matriz em 360 px, então a página não tem rolagem horizontal (`scrollWidth ≤ 360`); a tabela rola dentro de uma região com `role="region"`, nome acessível e `tabindex="0"`, alcançável e rolável pelo teclado, com a coluna dos assuntos fixa à esquerda. | E2E (jornada 8, projeto `mobile`) |
-| CA-25 | Dado o detalhe `/topics/pdpj_stack`, então vejo o nome como `h1`, as etiquetas, os 12 subtópicos em lista ordenada na ordem do seed, a prioridade 1,00 com a tabela de contribuição dos 14 concursos (concurso com banca e ano, peso, incidência com bolha e texto, contribuição) e a linha de total igual à prioridade, a seção de domínio e a urgência; em `/topics/seg_infra`, TJMG aparece com meia-bolha e "Noções" e contribuição 0,07. | E2E (jornada 8) + componente |
+| CA-25 | Dado o detalhe `/topics/pdpj_stack`, então vejo o nome como `h1`, as etiquetas, os 12 subtópicos em lista ordenada na ordem do seed, a prioridade 100% com a tabela de contribuição dos 14 concursos (concurso com banca e ano, peso em porcentagem, incidência com bolha e texto, contribuição em porcentagem) e a linha de total igual à prioridade em porcentagem, a seção de domínio e a urgência; em `/topics/seg_infra`, TJMG aparece com meia-bolha e "Noções" e contribuição 7%. | E2E (jornada 8) + componente |
 | CA-26 | Dado o detalhe de um assunto sem respostas, então a seção "Domínio" mostra o estado vazio "Você ainda não respondeu questões deste assunto nos últimos 60 dias. Para a urgência, o domínio conta como 0." e nenhuma porcentagem; com respostas, mostra a porcentagem, "N respostas, M acertos firmes (chutes não contam)" e a retenção média como "ainda não calculada", com a nota "Sem cartões, o domínio é a taxa de acerto firme." (até o módulo 3, P-3 e P-4). | componente + E2E (jornada 8) |
 | CA-27 | Dado um `topicId` inexistente (`/topics/nao_existe`) ou fora do formato (`/topics/..%2F`), quando acesso, então vejo a página 404 em português dentro da casca, com status HTTP 404 nas duas URLs. | E2E (jornada 8) + unitário (CA-12) |
 | CA-28 | Dado falha ao carregar (CA-17), quando abro `/topics` ou o detalhe, então vejo o aviso de erro "Não foi possível carregar o mapa do edital. Tente de novo em instantes." com o link "Tentar de novo" para o mesmo endereço, sem detalhe técnico; dado a taxonomia vazia (seed não carregado), vejo o estado vazio "A taxonomia ainda não foi carregada." | componente |
@@ -99,6 +99,7 @@ A spec inclui também o **redesenho visual da casca e do login** pedido pelo don
 | CA-35 | Dado o redesenho da casca e do login, quando rodo as jornadas 1 e 7 da SPEC-001 (login, acesso negado, logout, teclado, tema, 360 px, axe, 404), então todas passam sem afrouxar nenhuma verificação; mudanças só em seletores ou page objects são permitidas. | E2E (jornadas 1 e 7) |
 | CA-36 | Dado a casca redesenhada em largura ≥ 1024 px, então a navegação fica numa barra lateral fixa que comporta os 9 módulos do MVP sem quebra, itens numerados como linhas da folha ("00 Início", "01 Mapa do edital", na numeração dos módulos do doc 01) e o item atual marcado por `aria-current="page"`, por fundo `ink-light` e por um indicador que não depende de cor (o número dá lugar a uma bolha pequena preenchida); as marcas de sincronismo são `aria-hidden` e não recebem foco; abaixo de 1024 px, vale o botão "Menu" atual (`aria-expanded`, `Esc` fecha e devolve o foco); o alternador de tema e "Sair" continuam alcançáveis nas duas larguras. | E2E (jornada 7) + componente (`Shell`) |
 | CA-37 | Dado `/login` redesenhado, em desktop e em 360 px, então mantém os mesmos campos, rótulos, mensagens e estados da SPEC-001 (CA-13 a CA-18 dela); o painel de marca (direção A: textura de grade, marcas de sincronismo, a promessa e as três linhas da folha) tem ornamentos `aria-hidden`, texto real em HTML e nenhum texto em imagem; em 360 px o painel vira uma faixa curta acima do formulário e o botão "Entrar" aparece sem rolar na viewport 360 × 800. | E2E (jornada 1) + componente |
+| CA-38 | Dado `/topics` em desktop (1280 px), quando rolo a página, então o cabeçalho de colunas da lista permanece colado ao topo da janela; na matriz (a 1280 px ela cabe na horizontal e só rola na vertical; o teste de rolagem nos dois eixos usa 800 px), a região rolável tem altura limitada à janela e, ao rolá-la, a linha de cabeçalho permanece no topo dela e a coluna dos assuntos à esquerda; em 360 px a lista em cartões não tem cabeçalho fixo e a página não rola na horizontal. | E2E (jornada 8) |
 
 ## 5. Design técnico
 
@@ -120,7 +121,7 @@ A spec inclui também o **redesenho visual da casca e do login** pedido pelo don
 | components | `src/modules/topics/components/TopicList.tsx` (+ `.test.tsx`) | Criar | Lista (tabela no desktop, itens empilhados no celular) |
 | components | `src/modules/topics/components/IncidenceMatrix.tsx` (+ `.test.tsx`) | Criar | Matriz em região rolável com coluna fixa (CA-23, CA-24) |
 | components | `src/modules/topics/components/TopicDetailView.tsx` (+ `.test.tsx`) | Criar | Detalhe: subtópicos, contribuições, domínio, urgência (CA-25, CA-26) |
-| components | `src/modules/topics/components/format.ts` (+ `.test.ts`) | Criar | Formatação pt-BR (`0,89`, `0,025`, `70%`) e rótulo curto do tribunal ("TRT-3 (MG)" → "TRT-3") |
+| components | `src/modules/topics/components/format.ts` (+ `.test.ts`) | Criar | Formatação pt-BR em porcentagem (`89%`, `2,5%`, `70%`) e rótulo curto do tribunal ("TRT-3 (MG)" → "TRT-3") |
 | módulo | `src/modules/topics/index.ts` | Criar | API pública (§ 5.2) |
 | shared/ui | `Bubble.tsx`, `MasteryMeter.tsx`, `Tag.tsx`, `EmptyState.tsx`, `PriorityValue.tsx`, `FilterGroup.tsx` (+ testes) | Criar | Componentes do design system (CA-33) |
 | shared/ui | `Notice.tsx` (+ teste) | Alterar | Variante `info` (prop `kind`) |
@@ -305,7 +306,7 @@ type BubbleProps = { fill: 'empty' | 'half' | 'filled'; size?: 'small' | 'regula
 type MasteryMeterProps = { value: number | null };              // null = "Sem respostas"
 type TagProps = { variant?: 'default' | 'new' | 'overdue' | 'phase'; children: ReactNode };
 type EmptyStateProps = { title: string; children?: ReactNode; action?: ReactNode };
-type PriorityValueProps = { value: number };                    // "0,89" + bar 0..1
+type PriorityValueProps = { value: number };                    // 0..1 → "89%" + bar
 type FilterGroupProps = {
   label: string;                                                // visible group label
   options: ReadonlyArray<{ label: string; href: string; current: boolean }>;
@@ -315,7 +316,7 @@ type NoticeProps = { kind: 'error' | 'success' | 'info'; /* … as today */ };
 
 Valores de exibição:
 - Bolhas do domínio: `round(valor × 5)`, limitado a 0–5; `null` → 0 bolhas e "Sem respostas".
-- Prioridade e urgência: duas casas; pesos: até três casas, sem zeros à direita ("0,28", "0,025"); contribuição: duas casas.
+- **Porcentagem só na exibição (pedido do dono, 2026-11-19).** O domínio (`domain/`), o banco e a ordenação continuam em 0–1 e a ordenação usa o valor exato, nunca o arredondado; só a camada de apresentação multiplica por 100. Prioridade, urgência, pesos dos concursos e contribuições usam `formatShare`: percentual pt-BR com **no máximo uma casa decimal e sem zeros à direita** (0,98 → "98%"; 0,28 → "28%"; peso 0,025 → "2,5%"; 0,015 → "1,5%"; 1 → "100%"; 0 → "0%"). Os pesos do seed têm até três casas decimais (`numeric(4,3)`), logo cabem em uma casa percentual sem perda; prioridade, urgência e contribuição podem ter mais casas (0,0125) e são arredondadas só na exibição ("1,3%"), de modo que a soma das contribuições mostradas pode diferir do total em até 0,1 ponto. O domínio continua em `formatPercent`, inteiro ("70%"). O texto lido pelo leitor de tela é o mesmo texto visível ("peso 28%"); a barra de `PriorityValue` segue `aria-hidden`.
 - Rótulo curto do tribunal: texto de `court` antes do primeiro " (" ("TRF-4 (RS/SC/PR)" → "TRF-4").
 - Rótulos de incidência (do `meta.incidence_scale` do JSON): longo para leitor de tela e legenda ("cobrado com profundidade", "parcial ou em nível de noções", "ausente"); curto visível no detalhe ("Profundidade", "Noções", "Ausente").
 
@@ -355,41 +356,43 @@ Estrutura das telas; a aparência (réguas, raios, tipografia de títulos, numer
 │                │ │   calculado quando houver respostas nos últimos 60 dias.     │ │
 │                │ └──────────────────────────────────────────────────────────────┘ │
 │                │ Assunto                         Prioridade  Domínio       Subt.  │
-│                │ Stack da PDPJ-Br  [Sistemas]    1,00 ████   ○○○○○ Sem resp.  12  │
-│                │ Língua Portuguesa [Geral]       1,00 ████   ○○○○○ Sem resp.   6  │
-│                │ Legislação própria do tribunal  0,89 ███▌   ○○○○○ Sem resp.   3  │
+│                │ Stack da PDPJ-Br  [Sistemas]    100% ████   ○○○○○ Sem resp.  12  │
+│                │ Língua Portuguesa [Geral]       100% ████   ○○○○○ Sem resp.   6  │
+│                │ Legislação própria do tribunal   89% ███▌   ○○○○○ Sem resp.   3  │
 │ Aparência      │   [Geral] [Pós-edital]                                           │
 │ Sair           │ …                                                                │
 └────────────────┴─────────────────────────────────────────────────────────────────┘
 ```
-- Lista como `<table>` (cabeçalhos de coluna, nome do assunto como link no cabeçalho de linha). Em < 768 px, a MESMA `<table>` é reempilhada por CSS (não há `<ul>`; requer checagem manual de leitor de tela no Safari/VoiceOver): nome (link), etiquetas, "Prioridade 1,00" e domínio numa segunda linha.
+- Lista como `<table>` (cabeçalhos de coluna, nome do assunto como link no cabeçalho de linha). Em < 768 px, a MESMA `<table>` é reempilhada por CSS (não há `<ul>`; requer checagem manual de leitor de tela no Safari/VoiceOver): nome (link), etiquetas, "Prioridade 100%" e domínio numa segunda linha.
 - Filtros: `FilterGroup` (grupo de links com aparência de `gb-segmented`, rótulo visível, `aria-current="true"` na opção ativa). No celular, os grupos quebram linha; nenhum excede 360 px (o maior, Perfil, tem 4 opções curtas).
 - A contagem "Mostrando N de 38 assuntos" fica em `<p aria-live="polite">`.
 
 **Matriz (`?view=matrix`)**
 ```
 Legenda: ● cobrado com profundidade   ◐ parcial ou em nível de noções   ○ ausente
+A porcentagem sob cada concurso é o peso dele na prioridade.
 ┌ região rolável (tabindex=0, "Matriz de incidência por concurso") ───────────────┐
 │ Assunto            │TRT-3│TRF-6│TJMG│TRF-2│TRT-1│TRT-2│TRT-15│TRF-4│ … │TJSC│   │
-│                    │0,28 │0,18 │0,14│0,05 │0,05 │0,05 │0,05  │0,04 │   │0,015│  │
+│ Peso do concurso   │ 28% │ 18% │14% │ 5%  │ 5%  │ 5%  │ 5%   │ 4%  │   │1,5%│   │
 │ Stack da PDPJ-Br   │  ●  │  ●  │ ●  │  ●  │  ●  │  ●  │  ●   │  ●  │   │ ●  │   │
 │ Segurança de infra │  ●  │  ○  │ ◐  │  ●  │  ●  │  ●  │  ●   │  ●  │   │ ○  │   │
 └──────────────────────────────────────────────────────────────────────────────────┘
 ```
 - `<table>` com `<caption>`, `<th scope="col">` por concurso (rótulo curto visível + nome completo, banca, ano e peso em `gb-visually-hidden`), `<th scope="row">` com link para o detalhe, células com `Bubble` + texto oculto visualmente. Primeira coluna `position: sticky`. Mesmos filtros e ordem da lista.
+- **Cabeçalho fixo (pedido do dono, CA-38).** Lista (≥ 768 px): `th` do `thead` com `position: sticky; top: 0` e fundo opaco, acompanhando a rolagem da página (nenhum ancestral tem `overflow`). Matriz: um elemento com `overflow` impede o `sticky` relativo à página, então a região rolável tem `max-height` (altura da janela menos as margens da casca) e rola nos dois eixos; dentro dela, o cabeçalho (`top: 0`) e a coluna dos assuntos (`left: 0`) ficam fixos e a célula de canto fixa nos dois. A região continua focável (`tabindex="0"`) e rolável por setas. Abaixo de 768 px a lista vira cartões e não há cabeçalho visível, logo não há cabeçalho fixo.
 
 **`/topics/[topicId]`**
 ```
 ← Mapa do edital
 Stack da PDPJ-Br                          [Sistemas]
-Prioridade 1,00 · Urgência 1,00 · Domínio: sem respostas
+Prioridade 100% · Urgência 100% · Domínio: sem respostas
 
 Prioridade                               (prioridade = Σ peso × incidência)
  Concurso                        Incidência        Contribuição
- TRT-3 (MG) · Fumarc 2022 · 0,28  ● Profundidade        0,28
- TRF-6 (MG) · Cebraspe 2024 · 0,18 ● Profundidade       0,18
+ TRT-3 (MG) · Fumarc 2022 · peso 28%  ● Profundidade     28%
+ TRF-6 (MG) · Cebraspe 2024 · peso 18% ● Profundidade    18%
  …
- Total                                                  1,00
+ Total                                                 100%
 
 Domínio
  ┌ ○ Você ainda não respondeu questões deste assunto nos últimos 60 dias. ┐
@@ -453,7 +456,7 @@ Subtópicos (12)
 | Componente | `Bubble`, `MasteryMeter`, `Tag`, `Notice` `info`, `EmptyState`, `PriorityValue`, `FilterGroup`, `Shell` redesenhado, `TopicMapView` (aviso de domínio, estados vazio/erro/sem taxonomia), `TopicMapFilters` (hrefs preservam parâmetros, `aria-current`), `TopicList`, `IncidenceMatrix` (cabeçalhos, textos ocultos, região), `TopicDetailView` (contribuições, total, estado vazio do domínio) | CA-18 a CA-23, 25, 26, 28, 33, 36, 37 |
 | Integração | `readTopicMapSource` contra o banco local (contagens, nome da banca, prioridade do domínio = visão para os 38), isolamento por usuário com fábrica de respostas, falha simulada em `getTopicMap`/`getTopicDetail` | CA-15, 16, 17 |
 | pgTAP | `topic_views.test.sql`: valores de `v_topic_priority` (seed, inativo, sem incidência) e de `v_topic_performance` (limites de 60 dias e 1 segundo, 61 dias, chute, dúvida, certeza, erro, branco, questão com dois assuntos) | CA-13, 14 |
-| E2E | **Jornada 8 (nova)**: navegação até o mapa, lista sem respostas, filtros e ordenação com recarga, estado vazio de filtros, matriz, detalhe de `pdpj_stack` e `seg_infra`, 404, usuário descartável com respostas (CA-20), teclado, axe nos dois temas, 360 px. **Jornadas 1 e 7** reexecutadas após o redesenho | CA-18 a CA-27, 30 a 32, 35 a 37 |
+| E2E | **Jornada 8 (nova)**: navegação até o mapa, lista sem respostas, filtros e ordenação com recarga, estado vazio de filtros, matriz, detalhe de `pdpj_stack` e `seg_infra`, 404, usuário descartável com respostas (CA-20), teclado, axe nos dois temas, 360 px. **Jornadas 1 e 7** reexecutadas após o redesenho | CA-18 a CA-27, 30 a 32, 35 a 38 |
 
 Casos-limite do doc 07 aplicáveis: domínio 0 sem respostas e urgência = prioridade (CA-5, CA-8, CA-19); chute não conta (CA-14); janela de 60 dias com os limites dos dias 60 e 61 (CA-14, em pgTAP porque a janela vive na visão). Os demais casos do doc 07 (escolha do assunto, sessão, cartões, FSRS, simulados, discursivas, IA) não se aplicam. Regras de escrita: nomes descrevendo a regra, fábricas em `tests/factories/`, E2E com banco limpo e usuário descartável para o caso com respostas (o usuário de teste padrão permanece sem respostas, garantindo CA-19 em qualquer ordem), sem `waitForTimeout`, localizadores por papel e rótulo.
 
@@ -503,3 +506,4 @@ Casos-limite do doc 07 aplicáveis: domínio 0 sem respostas e urgência = prior
 | 2026-11-19 | Aprovada pelo dono e iniciada a implementação (ADR-010 aceito). Ordem: correção do `generate_seed.py`, redesenho da casca e do login, depois o mapa. |
 | 2026-11-19 | Divergências aceitas na implementação: removido `loading.tsx` (o streaming do Suspense esconde o conteúdo sem JavaScript e faz o 404 responder 200; a página responde completa, filtros funcionam sem JS, 404 com status 404; CA-29 reescrito); `Notice` usa a prop `kind`; lista no celular é a mesma `<table>` reempilhada por CSS, com checagem manual de leitor de tela no Safari/VoiceOver; `logo.tsx` não mudou; `gb-shell__header` virou `gb-shell__rail`. |
 | 2026-11-19 | Divergências aceitas após a revisão: `enums-sync.test.ts` fica em `data/` (lê o banco); `index.ts` exporta também o tipo `LoadResult`; `generate_seed.py` faz `do update set sort_order` em `subtopics`; as leituras usam `count: 'exact'` e devolvem `load_failed` se a contagem diferir do recebido (o PostgREST corta em 1000 linhas sem erro); as fixtures de componente ficam em `tests/factories/topic-map-entries.ts`; a tabela da lista tem papéis ARIA explícitos; o E2E ganhou um teste nomeado CA-29. |
+| 2026-11-19 | Pedidos do dono após a implementação: (A) prioridade, urgência, pesos e contribuições exibidos em porcentagem pt-BR com no máximo uma casa decimal (`formatShare`, § 5.2), só na exibição (domínio, banco e ordenação seguem em 0–1 e a ordenação usa o valor exato); rótulo "Peso do concurso" e nota na matriz; CA-18, 23 e 25 reescritos; (B) cabeçalho de colunas fixo na rolagem (CA-38, § 5.4): `sticky` no `thead` da lista, região da matriz com altura limitada. Glossário e doc 05 não citam o formato e não mudaram. |

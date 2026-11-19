@@ -24,7 +24,7 @@ describe('TopicList', () => {
   it('shows priority with two decimals, the profile tag and the subtopic count', () => {
     render(<TopicList entries={[makeEntry({ incidences: [1, 0.5, 0] })]} />);
     const row = screen.getByRole('row', { name: /Stack da PDPJ-Br/ });
-    expect(within(row).getByText('0,35')).toBeInTheDocument();
+    expect(within(row).getByText('35%')).toBeInTheDocument();
     expect(within(row).getByText('Sistemas')).toBeInTheDocument();
     expect(within(row).getByText('2')).toBeInTheDocument();
   });
@@ -54,7 +54,9 @@ describe('TopicList', () => {
   it('shows "Sem respostas" instead of a percentage when the topic is not measured', () => {
     render(<TopicList entries={[makeEntry({})]} />);
     expect(screen.getByText('Sem respostas')).toBeInTheDocument();
-    expect(screen.queryByText(/%/)).not.toBeInTheDocument();
+    expect(
+      within(screen.getByRole('cell', { name: /Sem respostas/ })).queryByText(/%/),
+    ).not.toBeInTheDocument();
   });
 
   it('shows the whole percentage when the topic is measured', () => {
