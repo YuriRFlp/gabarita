@@ -2,7 +2,13 @@ import { afterAll, afterEach, beforeAll, beforeEach, describe, expect, it, vi } 
 import type { DbClient } from '@/shared/supabase';
 import { createAnswers, createQuestion, deleteQuestion } from '#factories/answers';
 import { createFakeTopicsClient } from '#factories/fake-topics-client';
-import { createAdminClient, createUser, deleteUser, signInAs, type TestUser } from '#factories/users';
+import {
+  createAdminClient,
+  createUser,
+  deleteUser,
+  signInAs,
+  type TestUser,
+} from '#factories/users';
 import { computeTopicPriority, type TopicMapSource } from '../domain';
 import { readTopicMapSource } from './topics-repository';
 
@@ -63,9 +69,16 @@ describe('CA-15 — readTopicMapSource against the seed', () => {
     const topic = source.topics.find((candidate) => candidate.id === 'pdpj_stack');
     expect(topic).toMatchObject({ category: 'specific', phase: expect.any(String) });
     expect(typeof topic?.sortOrder).toBe('number');
-    expect(topic?.subtopics[0]).toMatchObject({ id: expect.any(String), sortOrder: expect.any(Number) });
+    expect(topic?.subtopics[0]).toMatchObject({
+      id: expect.any(String),
+      sortOrder: expect.any(Number),
+    });
     const exam = source.exams.find((candidate) => candidate.id === 'trt3');
-    expect(exam).toMatchObject({ court: 'TRT-3 (MG)', active: true, examBoardName: expect.any(String) });
+    expect(exam).toMatchObject({
+      court: 'TRT-3 (MG)',
+      active: true,
+      examBoardName: expect.any(String),
+    });
     expect(typeof exam?.targetWeight).toBe('number');
   });
 
@@ -110,10 +123,18 @@ describe('CA-16 — isolation between users', () => {
 
     const byTopic = (source: TopicMapSource, id: string) =>
       source.performance.find((row) => row.topicId === id);
-    expect(byTopic(sourceA, 'pdpj_stack')).toEqual({ topicId: 'pdpj_stack', answered: 2, firmCorrect: 1 });
+    expect(byTopic(sourceA, 'pdpj_stack')).toEqual({
+      topicId: 'pdpj_stack',
+      answered: 2,
+      firmCorrect: 1,
+    });
     expect(byTopic(sourceA, 'redes')).toEqual({ topicId: 'redes', answered: 2, firmCorrect: 1 });
     expect(sourceA.performance).toHaveLength(2);
-    expect(byTopic(sourceB, 'pdpj_stack')).toEqual({ topicId: 'pdpj_stack', answered: 5, firmCorrect: 3 });
+    expect(byTopic(sourceB, 'pdpj_stack')).toEqual({
+      topicId: 'pdpj_stack',
+      answered: 5,
+      firmCorrect: 3,
+    });
   });
 
   it("does not return another user's performance even when asked for that user id (RLS)", async () => {
@@ -130,7 +151,9 @@ describe('CA-17 — failures become load_failed', () => {
   it.each(['topics', 'exams', 'incidences', 'v_topic_performance'])(
     'returns load_failed without throwing when the %s query errors',
     async (table) => {
-      const client = createFakeTopicsClient({ results: { [table]: { data: null, error: dbError } } });
+      const client = createFakeTopicsClient({
+        results: { [table]: { data: null, error: dbError } },
+      });
 
       await expect(readTopicMapSource(client, userA.id)).resolves.toEqual(failure);
     },
@@ -152,6 +175,17 @@ describe('CA-17 — failures become load_failed', () => {
 
     await expect(readTopicMapSource(client, userA.id)).resolves.toEqual(failure);
   });
+
+  it.each(['topics', 'exams', 'incidences', 'v_topic_performance'])(
+    'returns load_failed when the %s result was truncated by the row limit',
+    async (table) => {
+      const client = createFakeTopicsClient({
+        results: { [table]: { data: [], error: null, count: 1001 } },
+      });
+
+      await expect(readTopicMapSource(client, userA.id)).resolves.toEqual(failure);
+    },
+  );
 
   it('does not leak technical detail in the result', async () => {
     const client = createFakeTopicsClient({ results: { exams: { data: null, error: dbError } } });

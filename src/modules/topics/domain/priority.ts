@@ -43,10 +43,7 @@ function scaledProduct(exam: Exam, incidence: IncidenceValue): number {
   return Math.round(exam.targetWeight * WEIGHT_SCALE) * Math.round(incidence * INCIDENCE_SCALE);
 }
 
-/**
- * docs/04 § Prioridade: Σ target weight × incidence over the active exams. Summed as integers
- * (weight in thousandths × incidence in halves) so that ties are exact and 1 is exactly 1.
- */
+/** docs/04 § Prioridade: Σ target weight × incidence over the active exams. */
 export function computeTopicPriority(
   topicId: string,
   exams: ReadonlyArray<Exam>,

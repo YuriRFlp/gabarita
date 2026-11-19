@@ -9,25 +9,70 @@ type Pair = { usage: string; foreground: string; background: string; minimum: nu
 
 // Pairs introduced by direction A "Folha de prova" (SPEC-004 § 5.5, ADR-010).
 const PAIRS: ReadonlyArray<Pair> = [
-  { usage: 'current rail item text', foreground: 'ink-strong', background: 'ink-light', minimum: TEXT },
-  { usage: 'current rail item bubble', foreground: 'ink', background: 'ink-light', minimum: NON_TEXT },
-  { usage: 'eyebrow and rail numbers', foreground: 'graphite-soft', background: 'paper', minimum: TEXT },
+  {
+    usage: 'current rail item text',
+    foreground: 'ink-strong',
+    background: 'ink-light',
+    minimum: TEXT,
+  },
+  {
+    usage: 'current rail item bubble',
+    foreground: 'ink',
+    background: 'ink-light',
+    minimum: NON_TEXT,
+  },
+  {
+    usage: 'eyebrow and rail numbers',
+    foreground: 'graphite-soft',
+    background: 'paper',
+    minimum: TEXT,
+  },
   { usage: 'rule', foreground: 'rule', background: 'paper', minimum: NON_TEXT },
   { usage: 'filled and half bubble', foreground: 'ink', background: 'paper', minimum: NON_TEXT },
   { usage: 'empty bubble', foreground: 'control-border', background: 'paper', minimum: NON_TEXT },
   { usage: 'rail item text', foreground: 'graphite', background: 'paper', minimum: TEXT },
   { usage: 'rail item on hover', foreground: 'graphite', background: 'paper-2', minimum: TEXT },
-  { usage: 'focus ring on the current rail item', foreground: 'ink', background: 'ink-light', minimum: NON_TEXT },
+  {
+    usage: 'focus ring on the current rail item',
+    foreground: 'ink',
+    background: 'ink-light',
+    minimum: NON_TEXT,
+  },
   { usage: 'current filter option', foreground: 'on-ink', background: 'ink', minimum: TEXT },
   { usage: 'info notice text', foreground: 'graphite', background: 'ink-light', minimum: TEXT },
-  { usage: 'info notice icon and border', foreground: 'ink', background: 'ink-light', minimum: NON_TEXT },
+  {
+    usage: 'info notice icon and border',
+    foreground: 'ink',
+    background: 'ink-light',
+    minimum: NON_TEXT,
+  },
   { usage: 'phase tag', foreground: 'paper', background: 'graphite', minimum: TEXT },
   { usage: 'tag', foreground: 'graphite', background: 'paper', minimum: TEXT },
-  { usage: 'mastery "Sem respostas"', foreground: 'graphite-soft', background: 'paper', minimum: TEXT },
+  {
+    usage: 'mastery "Sem respostas"',
+    foreground: 'graphite-soft',
+    background: 'paper',
+    minimum: TEXT,
+  },
   { usage: 'priority bar', foreground: 'ink', background: 'paper', minimum: NON_TEXT },
-  { usage: 'login promise over the sheet texture', foreground: 'graphite', background: 'grid-light', minimum: TEXT },
-  { usage: 'login eyebrow over the sheet texture', foreground: 'graphite-soft', background: 'grid-light', minimum: TEXT },
-  { usage: 'timing marks over the sheet texture', foreground: 'rule', background: 'grid-light', minimum: NON_TEXT },
+  {
+    usage: 'login promise over the sheet texture',
+    foreground: 'graphite',
+    background: 'grid-light',
+    minimum: TEXT,
+  },
+  {
+    usage: 'login eyebrow over the sheet texture',
+    foreground: 'graphite-soft',
+    background: 'grid-light',
+    minimum: TEXT,
+  },
+  {
+    usage: 'timing marks over the sheet texture',
+    foreground: 'rule',
+    background: 'grid-light',
+    minimum: NON_TEXT,
+  },
 ];
 
 function relativeLuminance(hex: string): number {

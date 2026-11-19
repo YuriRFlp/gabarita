@@ -1,6 +1,6 @@
 import { render, screen, within } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
-import { EXAMS, makeEntry } from './topic-fixtures';
+import { EXAMS, makeEntry } from '#factories/topic-map-entries';
 import { TopicDetailView } from './TopicDetailView';
 
 function renderDetail(entry = makeEntry({})) {

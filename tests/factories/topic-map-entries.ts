@@ -8,7 +8,7 @@ import {
   type Topic,
   type TopicMapEntry,
   type TopicPerformance,
-} from '../domain';
+} from '../../src/modules/topics/domain/index.ts';
 
 export const EXAMS: ReadonlyArray<Exam> = [
   {

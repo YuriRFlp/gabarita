@@ -1,12 +1,7 @@
 import { createClient } from '@supabase/supabase-js';
 import type { Database } from '../../../src/shared/supabase/database.types.ts';
 import { isLocalUrl, readLocalSupabase } from '../../../scripts/local-supabase.ts';
-import {
-  createAnswers,
-  createQuestion,
-  deleteQuestion,
-  type AnswerSpec,
-} from '#factories/answers';
+import { createAnswers, createQuestion, deleteQuestion, type AnswerSpec } from '#factories/answers';
 
 function adminClient() {
   const { url, secretKey } = readLocalSupabase();

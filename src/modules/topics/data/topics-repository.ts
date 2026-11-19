@@ -29,15 +29,31 @@ export async function readTopicMapSource(
     const [topics, exams, incidences, performance] = await Promise.all([
       client
         .from('topics')
-        .select('id, name, category, profile, phase, sort_order, subtopics(id, name, sort_order)'),
-      client.from('exams').select('id, court, year, target_weight, active, exam_boards(name)'),
-      client.from('incidences').select('exam_id, topic_id, value'),
-      client.from('v_topic_performance').select('topic_id, answered, firm_correct').eq('user_id', userId),
+        .select('id, name, category, profile, phase, sort_order, subtopics(id, name, sort_order)', {
+          count: 'exact',
+        }),
+      client
+        .from('exams')
+        .select('id, court, year, target_weight, active, exam_boards(name)', { count: 'exact' }),
+      client.from('incidences').select('exam_id, topic_id, value', { count: 'exact' }),
+      client
+        .from('v_topic_performance')
+        .select('topic_id, answered, firm_correct', { count: 'exact' })
+        .eq('user_id', userId),
     ]);
 
     const failure = topics.error ?? exams.error ?? incidences.error ?? performance.error;
     if (failure || !topics.data || !exams.data || !incidences.data || !performance.data) {
       console.error('readTopicMapSource: read failed', failure);
+      return LOAD_FAILED;
+    }
+
+    // PostgREST truncates at its row limit without an error; a partial map would look complete.
+    const truncated = [topics, exams, incidences, performance].some(
+      (result) => result.count !== result.data?.length,
+    );
+    if (truncated) {
+      console.error('readTopicMapSource: result truncated by the row limit');
       return LOAD_FAILED;
     }
 

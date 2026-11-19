@@ -252,6 +252,15 @@ test.describe('Journey 8 — matrix and detail', () => {
     await expect(section.getByText('%')).toHaveCount(0);
   });
 
+  test('CA-29 — the filters answer a complete page and a single h1 without JavaScript streaming', async ({
+    page,
+  }) => {
+    const response = await page.goto('/topics?view=matrix');
+
+    expect(response?.status()).toBe(200);
+    await expect(page.getByRole('heading', { level: 1 })).toHaveCount(1);
+  });
+
   for (const path of ['/topics/nao_existe', '/topics/..%2F']) {
     test(`CA-27 — ${path} shows the Portuguese 404`, async ({ page }) => {
       const response = await page.goto(path);

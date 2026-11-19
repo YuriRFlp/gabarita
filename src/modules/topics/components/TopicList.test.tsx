@@ -1,7 +1,7 @@
 import { render, screen, within } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 import { TopicList } from './TopicList';
-import { makeEntry } from './topic-fixtures';
+import { makeEntry } from '#factories/topic-map-entries';
 
 describe('TopicList', () => {
   it('lists each topic as a row header link to its detail page', () => {
@@ -9,6 +9,16 @@ describe('TopicList', () => {
     const link = screen.getByRole('link', { name: 'Stack da PDPJ-Br' });
     expect(link).toHaveAttribute('href', '/topics/pdpj_stack');
     expect(link.closest('th')).toHaveAttribute('scope', 'row');
+  });
+
+  it('keeps explicit table roles so the stacked mobile layout stays a table', () => {
+    render(<TopicList entries={[makeEntry({})]} />);
+    expect(screen.getByRole('table', { name: 'Assuntos do edital' })).toBeInTheDocument();
+    expect(screen.getAllByRole('rowgroup')).toHaveLength(2);
+    expect(screen.getAllByRole('columnheader')).toHaveLength(4);
+    expect(screen.getAllByRole('row')).toHaveLength(2);
+    expect(screen.getByRole('rowheader', { name: /Stack da PDPJ-Br/ })).toBeInTheDocument();
+    expect(screen.getAllByRole('cell')).toHaveLength(3);
   });
 
   it('shows priority with two decimals, the profile tag and the subtopic count', () => {

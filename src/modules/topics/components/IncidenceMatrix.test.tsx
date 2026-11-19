@@ -1,7 +1,7 @@
 import { render, screen, within } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 import { IncidenceMatrix } from './IncidenceMatrix';
-import { EXAMS, makeEntry } from './topic-fixtures';
+import { EXAMS, makeEntry } from '#factories/topic-map-entries';
 
 const ENTRIES = [
   makeEntry({ incidences: [1, 0.5, 0] }),

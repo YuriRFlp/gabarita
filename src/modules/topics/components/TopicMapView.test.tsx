@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 import type { TopicMap, TopicMapQuery } from '../domain';
-import { EXAMS, makeEntry } from './topic-fixtures';
+import { EXAMS, makeEntry } from '#factories/topic-map-entries';
 import { TopicMapView } from './TopicMapView';
 
 const QUERY: TopicMapQuery = { view: 'list', category: 'all', profile: 'all', sort: 'urgency' };
