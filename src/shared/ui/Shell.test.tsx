@@ -4,9 +4,15 @@ import { describe, expect, it } from 'vitest';
 import { Shell } from './Shell';
 
 const navigation = [
-  { label: 'Início', href: '/', icon: <svg aria-hidden="true" /> },
-  { label: 'Questões', href: '/questions', icon: <svg aria-hidden="true" /> },
+  { number: '00', label: 'Início', href: '/', icon: <svg aria-hidden="true" /> },
+  { number: '02', label: 'Questões', href: '/questions', icon: <svg aria-hidden="true" /> },
 ];
+
+function railNumber(link: HTMLElement): Element {
+  const number = link.querySelector('.gb-shell__rail-number');
+  if (!number) throw new Error('Item without rail number.');
+  return number;
+}
 
 function renderShell(currentPath = '/') {
   return render(
@@ -54,6 +60,43 @@ describe('Shell', () => {
     renderShell('/questions/123');
     expect(screen.getByRole('link', { name: 'Questões' })).toHaveAttribute('aria-current', 'page');
     expect(screen.getByRole('link', { name: 'Início' })).not.toHaveAttribute('aria-current');
+  });
+
+  it('numbers the items like rows of the sheet, keeping the number out of the accessible name', () => {
+    renderShell('/');
+    const questions = screen.getByRole('link', { name: 'Questões' });
+    expect(railNumber(questions)).toHaveTextContent('02');
+    expect(railNumber(questions)).toHaveAttribute('aria-hidden', 'true');
+    expect(questions).toHaveAccessibleName('Questões');
+  });
+
+  it('swaps the number of the current item for a filled bubble, so it is not marked by color only', () => {
+    renderShell('/questions');
+    const current = railNumber(screen.getByRole('link', { name: 'Questões' }));
+    expect(current).not.toHaveTextContent('02');
+    expect(current.querySelector('.gb-bubble')).toHaveClass(
+      'gb-bubble--filled',
+      'gb-bubble--small',
+    );
+    const other = railNumber(screen.getByRole('link', { name: 'Início' }));
+    expect(other).toHaveTextContent('00');
+    expect(other.querySelector('.gb-bubble')).toBeNull();
+  });
+
+  it('renders the timing marks hidden from screen readers and out of the tab order', () => {
+    const { container } = renderShell();
+    const marks = container.querySelector('.gb-shell__timing-marks');
+    expect(marks).toHaveAttribute('aria-hidden', 'true');
+    expect(marks).not.toHaveAttribute('tabindex');
+    expect(marks?.querySelector('a, button, [tabindex]')).toBeNull();
+  });
+
+  it('keeps navigation and actions inside the rail', () => {
+    const { container } = renderShell();
+    const rail = container.querySelector('.gb-shell__rail');
+    expect(rail).toContainElement(screen.getByRole('navigation', { name: 'Principal' }));
+    expect(rail).toContainElement(screen.getByRole('button', { name: 'Sair' }));
+    expect(rail).toContainElement(screen.getByRole('link', { name: 'Gabarita' }));
   });
 
   it('starts with the Menu button collapsed, controlling the list with navigation and actions', () => {

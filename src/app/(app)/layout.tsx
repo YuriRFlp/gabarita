@@ -17,7 +17,10 @@ export default async function AppLayout({ children }: { children: ReactNode }) {
       logo={<Logo />}
       actions={
         <>
-          <ThemeToggle savedTheme={savedTheme} />
+          <div className="gb-shell__appearance">
+            <p className="gb-eyebrow">Aparência</p>
+            <ThemeToggle savedTheme={savedTheme} />
+          </div>
           <LogoutButton />
         </>
       }
