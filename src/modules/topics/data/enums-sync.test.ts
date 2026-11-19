@@ -1,5 +1,4 @@
 import { describe, expect, expectTypeOf, it } from 'vitest';
-// eslint-disable-next-line no-restricted-imports -- test only: CA-11 compares the domain constants with the generated enums (SPEC-004 § 5.1).
 import { Constants, type Database } from '@/shared/supabase/database.types';
 import {
   STUDY_PHASES,
@@ -8,7 +7,7 @@ import {
   type StudyPhase,
   type TopicCategory,
   type TopicProfile,
-} from './topic-map-types';
+} from '../domain';
 
 type DbEnums = Database['public']['Enums'];
 
