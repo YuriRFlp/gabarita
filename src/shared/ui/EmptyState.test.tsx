@@ -15,13 +15,16 @@ describe('EmptyState', () => {
     render(
       <EmptyState
         title="Nenhum assunto com esses filtros."
-        action={<a href="/topics">Limpar filtros</a>}
+        action={<a href="#filters">Limpar filtros</a>}
       >
         <p>Tente outra combinação.</p>
       </EmptyState>,
     );
     expect(screen.getByText('Tente outra combinação.')).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: 'Limpar filtros' })).toHaveAttribute('href', '/topics');
+    expect(screen.getByRole('link', { name: 'Limpar filtros' })).toHaveAttribute(
+      'href',
+      '#filters',
+    );
   });
 
   it('keeps the ornamental bubble away from screen readers', () => {
