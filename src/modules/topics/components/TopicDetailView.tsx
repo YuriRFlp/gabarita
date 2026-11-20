@@ -2,17 +2,20 @@ import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import { Bubble, EmptyState, MasteryMeter, Notice, Tag } from '@/shared/ui';
 import { formatShare } from '@/shared/utils/format';
-import type { Exam, Mastery, TopicMapEntry } from '../domain';
+import type { Exam, Mastery, TopicDetail as TopicDetailEntry } from '../domain';
 import { INCIDENCE_SHORT_LABELS, PROFILE_LABELS, bubbleFillFor, formatPercent } from './format';
 import type { LoadOutcome } from './load-outcome';
 import { TOPICS_PATH } from './TopicMapFilters';
+import { WeightsNotice } from './WeightsNotice';
 
-export type TopicDetail = { entry: TopicMapEntry; exams: ReadonlyArray<Exam> };
+export type TopicDetail = { entry: TopicDetailEntry; exams: ReadonlyArray<Exam> };
 
 export type TopicDetailViewProps = {
   result: LoadOutcome<TopicDetail>;
   /** Address of the current page, for "Tentar de novo". */
   retryHref: string;
+  /** Fingerprint of the weight set whose notice was closed in this browser (cookie). */
+  dismissedWeightsFingerprint?: string | null;
 };
 
 function BackLink() {
@@ -56,16 +59,17 @@ function MasterySection({ mastery }: { mastery: Mastery }) {
   );
 }
 
-export function TopicDetailView({ result, retryHref }: TopicDetailViewProps) {
+export function TopicDetailView({
+  result,
+  retryHref,
+  dismissedWeightsFingerprint = null,
+}: TopicDetailViewProps) {
   if (!result.ok) {
     return (
       <>
         <BackLink />
         <header className="gb-page-header">
-          <hgroup>
-            <p className="gb-page-header__eyebrow">Assunto</p>
-            <h1 className="gb-page-header__title">Mapa do edital</h1>
-          </hgroup>
+          <h1 className="gb-page-header__title">Mapa do edital</h1>
         </header>
         <Notice kind="error">
           <p>Não foi possível carregar o mapa do edital. Tente de novo em instantes.</p>
@@ -82,15 +86,17 @@ export function TopicDetailView({ result, retryHref }: TopicDetailViewProps) {
     <>
       <BackLink />
       <header className="gb-page-header">
-        <hgroup>
-          <p className="gb-page-header__eyebrow">Assunto</p>
-          <h1 className="gb-page-header__title">{topic.name}</h1>
-        </hgroup>
+        <h1 className="gb-page-header__title">{topic.name}</h1>
         <p className="gb-topic-detail__tags">
           <Tag>{topic.profile === null ? 'Geral' : PROFILE_LABELS[topic.profile]}</Tag>
           {topic.phase === 'post_notice' ? <Tag variant="phase">Pós-edital</Tag> : null}
         </p>
       </header>
+      <WeightsNotice
+        weights={entry.weights}
+        dismissedFingerprint={dismissedWeightsFingerprint}
+        className="gb-topic-detail__weights-notice"
+      />
       <p className="gb-topic-detail__summary">
         Prioridade {formatShare(priority.priority)} · Urgência {formatShare(urgency)} · Domínio:{' '}
         {mastery.kind === 'measured' ? formatPercent(mastery.value) : 'sem respostas'}

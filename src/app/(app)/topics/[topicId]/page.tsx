@@ -3,7 +3,12 @@ import { notFound, redirect } from 'next/navigation';
 import { cache } from 'react';
 import { createSupabaseServerClient } from '@/shared/supabase';
 import { LOGIN_ROUTE } from '@/modules/auth';
-import { TopicDetailView, getTopicDetail, topicIdSchema } from '@/modules/topics';
+import {
+  TopicDetailView,
+  getTopicDetail,
+  readDismissedWeightsFingerprint,
+  topicIdSchema,
+} from '@/modules/topics';
 
 type TopicPageProps = { params: Promise<{ topicId: string }> };
 
@@ -32,6 +37,10 @@ export default async function TopicPage({ params }: TopicPageProps) {
   }
   if (result.value === null) notFound();
   return (
-    <TopicDetailView result={{ ok: true, value: result.value }} retryHref={`/topics/${topicId}`} />
+    <TopicDetailView
+      result={{ ok: true, value: result.value }}
+      retryHref={`/topics/${topicId}`}
+      dismissedWeightsFingerprint={await readDismissedWeightsFingerprint()}
+    />
   );
 }

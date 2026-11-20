@@ -41,7 +41,11 @@ export function ThemeToggle({ savedTheme, action = setTheme }: ThemeToggleProps)
           </button>
         ))}
       </div>
-      {state.status === 'error' ? <Notice kind="error">{state.message}</Notice> : null}
+      {state.status === 'error' ? (
+        <Notice kind="error" resetKey={state}>
+          {state.message}
+        </Notice>
+      ) : null}
     </form>
   );
 }

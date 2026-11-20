@@ -1,21 +1,65 @@
 import { render, screen, within } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
+import type { ExamWeightsSummary } from '../domain';
 import { EXAMS, makeEntry } from '#factories/topic-map-entries';
 import { TopicDetailView } from './TopicDetailView';
 
-function renderDetail(entry = makeEntry({})) {
+const DEFAULT_WEIGHTS: ExamWeightsSummary = {
+  mode: 'default',
+  activeTotal: 1000,
+  unweightedExamIds: [],
+  fingerprint: null,
+};
+
+function renderDetail(entry = makeEntry({}), weights: ExamWeightsSummary = DEFAULT_WEIGHTS) {
   return render(
-    <TopicDetailView result={{ ok: true, value: { entry, exams: EXAMS } }} retryHref="/topics/x" />,
+    <TopicDetailView
+      result={{ ok: true, value: { entry: { ...entry, weights }, exams: EXAMS } }}
+      retryHref="/topics/x"
+    />,
   );
 }
 
 describe('TopicDetailView', () => {
+  it('hides the weights notice already closed for this set, and shows it for a changed one', () => {
+    const custom: ExamWeightsSummary = { ...DEFAULT_WEIGHTS, mode: 'custom', fingerprint: 'k3j9x' };
+    const entry = { ...makeEntry({}), weights: custom };
+    const result = { ok: true, value: { entry, exams: EXAMS } } as const;
+    const { unmount } = render(
+      <TopicDetailView result={result} retryHref="/topics/x" dismissedWeightsFingerprint="k3j9x" />,
+    );
+    expect(screen.queryByText(/Pesos personalizados em uso/)).not.toBeInTheDocument();
+    unmount();
+    render(
+      <TopicDetailView result={result} retryHref="/topics/x" dismissedWeightsFingerprint="old" />,
+    );
+    expect(screen.getByText(/Pesos personalizados em uso/)).toBeInTheDocument();
+  });
+
+  it('shows the custom weights notice only with custom weights', () => {
+    const { unmount } = renderDetail();
+    expect(screen.queryByText(/Pesos personalizados em uso/)).not.toBeInTheDocument();
+    unmount();
+    renderDetail(makeEntry({}), { ...DEFAULT_WEIGHTS, mode: 'custom' });
+    expect(screen.getByText(/Pesos personalizados em uso\./)).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'Configurações' })).toBeInTheDocument();
+  });
+
   it('renders the topic name as the only h1, with tags and a back link', () => {
     renderDetail();
     expect(screen.getAllByRole('heading', { level: 1 })).toHaveLength(1);
     expect(screen.getByRole('heading', { level: 1, name: 'Stack da PDPJ-Br' })).toBeInTheDocument();
     expect(screen.getByText('Sistemas')).toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'Mapa do edital' })).toHaveAttribute('href', '/topics');
+  });
+
+  it('starts the page header with the h1, with no eyebrow or hgroup (CA-42)', () => {
+    const { container } = renderDetail();
+    expect(container.querySelector('.gb-page-header')?.firstElementChild).toBe(
+      screen.getByRole('heading', { level: 1 }),
+    );
+    expect(container.querySelector('hgroup, .gb-page-header__eyebrow')).toBeNull();
+    expect(screen.queryByText('Assunto')).not.toBeInTheDocument();
   });
 
   it('lists the subtopics in an ordered list', () => {
@@ -73,6 +117,16 @@ describe('TopicDetailView', () => {
   it('uses singular forms for one answer', () => {
     renderDetail(makeEntry({ performance: { answered: 1, firmCorrect: 1 } }));
     expect(screen.getByText(/1 resposta, 1 acerto firme/)).toBeInTheDocument();
+  });
+
+  it('has no eyebrow or hgroup in the error state either (CA-42)', () => {
+    const { container } = render(
+      <TopicDetailView result={{ ok: false, error: 'load_failed' }} retryHref="/topics/redes" />,
+    );
+    expect(container.querySelector('.gb-page-header')?.firstElementChild).toBe(
+      screen.getByRole('heading', { level: 1 }),
+    );
+    expect(container.querySelector('hgroup, .gb-page-header__eyebrow')).toBeNull();
   });
 
   it('shows the error notice with a retry link', () => {
