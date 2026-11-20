@@ -45,7 +45,7 @@ export function LoginForm({ action = login, next }: LoginFormProps) {
         error={error?.fields?.password}
       />
       {error?.message ? (
-        <Notice kind="error" ref={noticeRef} tabIndex={-1}>
+        <Notice kind="error" ref={noticeRef} tabIndex={-1} resetKey={error}>
           {error.message}
         </Notice>
       ) : null}

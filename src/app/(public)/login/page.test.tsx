@@ -8,7 +8,7 @@ vi.mock('@/modules/auth', () => ({
 vi.mock('@/app/logo', () => ({ Logo: () => <span role="img" aria-label="Gabarita" /> }));
 
 async function renderLoginPage(next?: string | string[]) {
-  render(await LoginPage({ searchParams: Promise.resolve({ next }) }));
+  return render(await LoginPage({ searchParams: Promise.resolve({ next }) }));
 }
 
 describe('LoginPage', () => {
@@ -18,6 +18,17 @@ describe('LoginPage', () => {
     expect(headings).toHaveLength(1);
     expect(headings[0]).toHaveTextContent('Entrar');
     expect(screen.getByRole('form', { name: 'Formulário' })).toBeInTheDocument();
+  });
+
+  it('starts the form column with the h1 and keeps the brand line, with no eyebrow (CA-43)', async () => {
+    const { container } = await renderLoginPage();
+    const form = container.querySelector('.gb-login__form');
+    expect(form?.firstElementChild).toBe(screen.getByRole('heading', { level: 1 }));
+    expect(container.querySelector('hgroup')).toBeNull();
+    expect(screen.queryByText('Acesso')).not.toBeInTheDocument();
+    expect(container.querySelector('.gb-login__panel .gb-eyebrow')).toHaveTextContent(
+      'Analista Judiciário · Tecnologia da Informação',
+    );
   });
 
   it('passes a string "next" to the form', async () => {

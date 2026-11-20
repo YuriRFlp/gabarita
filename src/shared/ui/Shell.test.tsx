@@ -4,21 +4,24 @@ import { describe, expect, it } from 'vitest';
 import { Shell } from './Shell';
 
 const navigation = [
-  { number: '00', label: 'Início', href: '/', icon: <svg aria-hidden="true" /> },
-  { number: '02', label: 'Questões', href: '/questions', icon: <svg aria-hidden="true" /> },
+  { label: 'Início', href: '/', icon: <svg aria-hidden="true" /> },
+  { label: 'Questões', href: '/questions', icon: <svg aria-hidden="true" /> },
 ];
 
-function railNumber(link: HTMLElement): Element {
-  const number = link.querySelector('.gb-shell__rail-number');
-  if (!number) throw new Error('Item without rail number.');
-  return number;
-}
+const secondaryNavigation = [
+  {
+    label: 'Configurações',
+    href: '/settings',
+    icon: <svg data-testid="gear" aria-hidden="true" />,
+  },
+];
 
-function renderShell(currentPath = '/') {
+function renderShell(currentPath = '/', withSecondary = false) {
   return render(
     <Shell
       logo={<span>Gabarita</span>}
       navigation={navigation}
+      secondaryNavigation={withSecondary ? secondaryNavigation : undefined}
       currentPath={currentPath}
       actions={<button type="button">Sair</button>}
     >
@@ -62,25 +65,31 @@ describe('Shell', () => {
     expect(screen.getByRole('link', { name: 'Início' })).not.toHaveAttribute('aria-current');
   });
 
-  it('numbers the items like rows of the sheet, keeping the number out of the accessible name', () => {
-    renderShell('/');
-    const questions = screen.getByRole('link', { name: 'Questões' });
-    expect(railNumber(questions)).toHaveTextContent('02');
-    expect(railNumber(questions)).toHaveAttribute('aria-hidden', 'true');
-    expect(questions).toHaveAccessibleName('Questões');
+  it('shows an icon on every item, hidden from screen readers, with no number', () => {
+    const { container } = renderShell('/');
+    for (const link of screen.getAllByRole('link', { name: /Início|Questões/ })) {
+      expect(link.querySelector('svg[aria-hidden="true"]')).not.toBeNull();
+      expect(link).not.toHaveTextContent(/\d/);
+    }
+    expect(screen.getByRole('link', { name: 'Questões' })).toHaveAccessibleName('Questões');
+    expect(container.querySelector('.gb-shell__rail-number')).toBeNull();
   });
 
-  it('swaps the number of the current item for a filled bubble, so it is not marked by color only', () => {
+  it('keeps the icon on the current item, with no bubble', () => {
     renderShell('/questions');
-    const current = railNumber(screen.getByRole('link', { name: 'Questões' }));
-    expect(current).not.toHaveTextContent('02');
-    expect(current.querySelector('.gb-bubble')).toHaveClass(
-      'gb-bubble--filled',
-      'gb-bubble--small',
-    );
-    const other = railNumber(screen.getByRole('link', { name: 'Início' }));
-    expect(other).toHaveTextContent('00');
-    expect(other.querySelector('.gb-bubble')).toBeNull();
+    const current = screen.getByRole('link', { name: 'Questões' });
+    expect(current).toHaveAttribute('aria-current', 'page');
+    expect(current.querySelector('svg[aria-hidden="true"]')).not.toBeNull();
+    expect(current.querySelector('.gb-bubble')).toBeNull();
+    expect(
+      screen.getByRole('link', { name: 'Início' }).querySelector('svg[aria-hidden="true"]'),
+    ).not.toBeNull();
+  });
+
+  it('has no theme toggle in the shell, only what the caller passes as actions', () => {
+    renderShell();
+    expect(screen.queryByRole('group', { name: 'Tema' })).toBeNull();
+    expect(screen.queryByText('Aparência')).toBeNull();
   });
 
   it('renders the timing marks hidden from screen readers and out of the tab order', () => {
@@ -146,5 +155,41 @@ describe('Shell', () => {
       </Shell>,
     );
     expect(screen.getByRole('button', { name: 'Menu' })).toHaveAttribute('aria-expanded', 'false');
+  });
+
+  describe('secondary navigation', () => {
+    it('does not render the secondary navigation when none is given', () => {
+      renderShell();
+      expect(screen.queryByRole('navigation', { name: 'Preferências' })).toBeNull();
+    });
+
+    it('renders the link inside the menu, before the actions, with its icon', () => {
+      const { container } = renderShell('/', true);
+      const link = screen.getByRole('link', { name: 'Configurações' });
+      expect(link).toHaveAttribute('href', '/settings');
+      expect(link).not.toHaveAttribute('aria-current');
+      expect(link.querySelector('[data-testid="gear"]')).toBeInTheDocument();
+      const secondary = container.querySelector('.gb-shell__secondary');
+      const actions = container.querySelector('.gb-shell__actions');
+      expect(secondary).toContainElement(link);
+      expect(secondary?.nextElementSibling).toBe(actions);
+    });
+
+    it('marks the link as current and keeps its icon, with no bubble', () => {
+      renderShell('/settings', true);
+      const link = screen.getByRole('link', { name: 'Configurações' });
+      expect(link).toHaveAttribute('aria-current', 'page');
+      expect(link.querySelector('.gb-bubble')).toBeNull();
+      expect(link.querySelector('[data-testid="gear"]')).toBeInTheDocument();
+      expect(screen.getByRole('link', { name: 'Início' })).not.toHaveAttribute('aria-current');
+    });
+
+    it('closes the open menu when the link is activated', async () => {
+      renderShell('/', true);
+      const button = screen.getByRole('button', { name: 'Menu' });
+      await userEvent.click(button);
+      await userEvent.click(screen.getByRole('link', { name: 'Configurações' }));
+      expect(button).toHaveAttribute('aria-expanded', 'false');
+    });
   });
 });
