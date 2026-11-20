@@ -167,6 +167,26 @@ isOneToOne: false
                   Relationships: [
                     
                   ]
+                },"exam_weights": {
+                  Row: {
+                    "exam_id": string,"updated_at": string,"user_id": string,"weight": number
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "exam_id": string,"updated_at"?: string,"user_id"?: string,"weight": number
+                  }
+                  Update: {
+                    "exam_id"?: string,"updated_at"?: string,"user_id"?: string,"weight"?: number
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "exam_weights_exam_id_fkey"
+      columns: ["exam_id"]
+isOneToOne: false
+      referencedRelation: "exams"
+      referencedColumns: ["id"]
+    }
+                  ]
                 },"exams": {
                   Row: {
                     "active": boolean,"court": string,"created_at": string,"duration_min": number,"essay": Json | null,"exam_board_id": string,"id": string,"objective": NonNullable<Json>,"position": string,"rubric_id": string | null,"target_weight": number,"year": number
@@ -455,14 +475,14 @@ isOneToOne: false
                   ]
                 },"settings": {
                   Row: {
-                    "ai_mode": Database["public"]['Enums']["ai_mode"],"desired_retention": number,"hours_per_day": NonNullable<Json>,"infra_quota_min_per_week": number,"new_cards_per_day": number,"target_exam_id": string | null,"theme": Database["public"]['Enums']["theme_preference"],"updated_at": string,"user_id": string
+                    "ai_mode": Database["public"]['Enums']["ai_mode"],"desired_retention": number,"hours_per_day": NonNullable<Json>,"infra_quota_min_per_week": number,"new_cards_per_day": number,"target_exam_id": string | null,"target_notice_published": boolean,"theme": Database["public"]['Enums']["theme_preference"],"updated_at": string,"user_id": string
                   }
                   ComputedFields: never
                   Insert: {
-                    "ai_mode"?: Database["public"]['Enums']["ai_mode"],"desired_retention"?: number,"hours_per_day"?: NonNullable<Json>,"infra_quota_min_per_week"?: number,"new_cards_per_day"?: number,"target_exam_id"?: string | null,"theme"?: Database["public"]['Enums']["theme_preference"],"updated_at"?: string,"user_id"?: string
+                    "ai_mode"?: Database["public"]['Enums']["ai_mode"],"desired_retention"?: number,"hours_per_day"?: NonNullable<Json>,"infra_quota_min_per_week"?: number,"new_cards_per_day"?: number,"target_exam_id"?: string | null,"target_notice_published"?: boolean,"theme"?: Database["public"]['Enums']["theme_preference"],"updated_at"?: string,"user_id"?: string
                   }
                   Update: {
-                    "ai_mode"?: Database["public"]['Enums']["ai_mode"],"desired_retention"?: number,"hours_per_day"?: NonNullable<Json>,"infra_quota_min_per_week"?: number,"new_cards_per_day"?: number,"target_exam_id"?: string | null,"theme"?: Database["public"]['Enums']["theme_preference"],"updated_at"?: string,"user_id"?: string
+                    "ai_mode"?: Database["public"]['Enums']["ai_mode"],"desired_retention"?: number,"hours_per_day"?: NonNullable<Json>,"infra_quota_min_per_week"?: number,"new_cards_per_day"?: number,"target_exam_id"?: string | null,"target_notice_published"?: boolean,"theme"?: Database["public"]['Enums']["theme_preference"],"updated_at"?: string,"user_id"?: string
                   }
                   Relationships: [
                     {

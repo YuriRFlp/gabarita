@@ -37,8 +37,8 @@ describe('parsePublicTables', () => {
 });
 
 describe('readPublicTables', () => {
-  it('finds the 21 tables of public', () => {
-    expect(readPublicTables()).toHaveLength(21);
+  it('finds the 22 tables of public', () => {
+    expect(readPublicTables()).toHaveLength(22);
   });
 
   it('matches the tables covered by supabase/tests/rls.test.sql', () => {
