@@ -1,3 +1,4 @@
+import { applyExamWeights, type ExamWeightsSummary } from './exam-weights';
 import { computeMastery, type Mastery } from './mastery';
 import { computeTopicPriority, sortExams, type TopicPriority } from './priority';
 import type {
@@ -38,7 +39,10 @@ export type TopicMap = {
   exams: ReadonlyArray<Exam>;
   /** topics, subtopics, exams and measured count the whole taxonomy; shown counts the entries. */
   totals: { topics: number; subtopics: number; exams: number; shown: number; measured: number };
+  weights: ExamWeightsSummary;
 };
+
+export type TopicDetail = TopicMapEntry & { weights: ExamWeightsSummary };
 
 const nameCollator = new Intl.Collator('pt-BR', { sensitivity: 'base' });
 
@@ -59,9 +63,10 @@ const COMPARATORS: Record<TopicMapSort, (a: TopicMapEntry, b: TopicMapEntry) => 
 function buildEntry(
   topic: Topic,
   source: TopicMapSource,
+  exams: ReadonlyArray<Exam>,
   performance: TopicPerformance | undefined,
 ): TopicMapEntry {
-  const priority = computeTopicPriority(topic.id, source.exams, source.incidences);
+  const priority = computeTopicPriority(topic.id, exams, source.incidences);
   // Average retention is not computed until module 3 (SPEC-004 P-4).
   const mastery = computeMastery(performance, null);
   const subtopics = [...topic.subtopics].sort(
@@ -87,8 +92,11 @@ function matchesQuery(topic: Topic, query: TopicMapQuery): boolean {
 }
 
 export function buildTopicMap(source: TopicMapSource, query: TopicMapQuery): TopicMap {
+  const weights = applyExamWeights(source.exams, source.weightOverrides);
   const performance = performanceByTopic(source);
-  const all = source.topics.map((topic) => buildEntry(topic, source, performance.get(topic.id)));
+  const all = source.topics.map((topic) =>
+    buildEntry(topic, source, weights.exams, performance.get(topic.id)),
+  );
   const entries = all
     .filter((entry) => matchesQuery(entry.topic, query))
     .sort(COMPARATORS[query.sort]);
@@ -96,7 +104,7 @@ export function buildTopicMap(source: TopicMapSource, query: TopicMapQuery): Top
   return {
     query,
     entries,
-    exams: sortExams(source.exams),
+    exams: sortExams(weights.exams),
     totals: {
       topics: source.topics.length,
       subtopics: source.topics.reduce((sum, topic) => sum + topic.subtopics.length, 0),
@@ -104,11 +112,14 @@ export function buildTopicMap(source: TopicMapSource, query: TopicMapQuery): Top
       shown: entries.length,
       measured: all.filter((entry) => entry.mastery.kind === 'measured').length,
     },
+    weights: weights.summary,
   };
 }
 
-export function buildTopicDetail(source: TopicMapSource, topicId: string): TopicMapEntry | null {
+export function buildTopicDetail(source: TopicMapSource, topicId: string): TopicDetail | null {
   const topic = source.topics.find((candidate) => candidate.id === topicId);
   if (topic === undefined) return null;
-  return buildEntry(topic, source, performanceByTopic(source).get(topicId));
+  const weights = applyExamWeights(source.exams, source.weightOverrides);
+  const entry = buildEntry(topic, source, weights.exams, performanceByTopic(source).get(topicId));
+  return { ...entry, weights: weights.summary };
 }

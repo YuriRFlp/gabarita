@@ -11,7 +11,16 @@ import {
   signInAs,
   type TestUser,
 } from '#factories/users';
-import { ensureSettings, readSavedTheme, saveTheme } from './settings-repository';
+import { DATABASE_ERROR } from '#factories/fake-supabase-client';
+import { createFakeTablesClient } from '#factories/fake-tables-client';
+import {
+  ensureSettings,
+  readActiveExamOptions,
+  readSavedTheme,
+  readStudyTarget,
+  saveStudyTarget,
+  saveTheme,
+} from './settings-repository';
 
 const admin = createAdminClient();
 let user: TestUser;
@@ -130,5 +139,151 @@ describe('CA-38 — saveTheme with no updated row', () => {
     } finally {
       await deleteUser(admin, other.id);
     }
+  });
+});
+
+describe('CA-17 — study target', () => {
+  it('reads no target and no notice for a fresh settings row', async () => {
+    await ensureSettings(client, user.id);
+
+    await expect(readStudyTarget(client, user.id)).resolves.toEqual({
+      ok: true,
+      value: { targetExamId: null, targetNoticePublished: false },
+    });
+  });
+
+  it('saves trt2 with the notice published and reads it back', async () => {
+    await ensureSettings(client, user.id);
+
+    const saved = await saveStudyTarget(client, user.id, {
+      targetExamId: 'trt2',
+      targetNoticePublished: true,
+    });
+
+    expect(saved).toEqual({ ok: true });
+    await expect(readStudyTarget(client, user.id)).resolves.toEqual({
+      ok: true,
+      value: { targetExamId: 'trt2', targetNoticePublished: true },
+    });
+  });
+
+  it('keeps the theme when saving the target', async () => {
+    await ensureSettings(client, user.id);
+    await saveTheme(client, user.id, 'dark');
+
+    await saveStudyTarget(client, user.id, { targetExamId: 'trt3', targetNoticePublished: false });
+
+    expect(await readThemeInDb(admin, user.id)).toBe('dark');
+  });
+
+  it('clears the target back to "Nenhum"', async () => {
+    await ensureSettings(client, user.id);
+    await saveStudyTarget(client, user.id, { targetExamId: 'trt2', targetNoticePublished: true });
+
+    await saveStudyTarget(client, user.id, { targetExamId: null, targetNoticePublished: false });
+
+    await expect(readStudyTarget(client, user.id)).resolves.toEqual({
+      ok: true,
+      value: { targetExamId: null, targetNoticePublished: false },
+    });
+  });
+
+  it('fails when the user has no settings row (zero updated rows)', async () => {
+    const saved = await saveStudyTarget(client, user.id, {
+      targetExamId: 'trt2',
+      targetNoticePublished: false,
+    });
+
+    expect(saved).toEqual({ ok: false, error: 'db_failure' });
+  });
+
+  it('fails, without touching the row, when the notice is published without a target (check constraint)', async () => {
+    await ensureSettings(client, user.id);
+
+    const saved = await saveStudyTarget(client, user.id, {
+      targetExamId: null,
+      targetNoticePublished: true,
+    });
+
+    expect(saved).toEqual({ ok: false, error: 'db_failure' });
+    await expect(readStudyTarget(client, user.id)).resolves.toMatchObject({
+      value: { targetNoticePublished: false },
+    });
+  });
+
+  it('fails when the target is an exam that does not exist (foreign key)', async () => {
+    await ensureSettings(client, user.id);
+
+    const saved = await saveStudyTarget(client, user.id, {
+      targetExamId: 'nope',
+      targetNoticePublished: false,
+    });
+
+    expect(saved).toEqual({ ok: false, error: 'db_failure' });
+  });
+
+  it('reads the active exams of the seed, labelled and in court order', async () => {
+    const result = await readActiveExamOptions(client);
+
+    expect(result.ok).toBe(true);
+    if (!result.ok) return;
+    expect(result.value).toHaveLength(14);
+    const trt2 = result.value.find((option) => option.id === 'trt2');
+    expect(trt2?.label).toMatch(/^TRT-2 \(SP\) · .+ \d{4}$/);
+    const labels = result.value.map((option) => option.label);
+    expect(labels).toEqual([...labels].sort(new Intl.Collator('pt-BR', { numeric: true }).compare));
+  });
+});
+
+describe('CA-18 — study target failures', () => {
+  it('readStudyTarget returns load_failed on error and on rejection', async () => {
+    const failing = createFakeTablesClient({
+      results: { 'settings:select': { data: null, error: DATABASE_ERROR } },
+    });
+    const rejecting = createFakeTablesClient({ throwOn: ['settings:select'] });
+
+    const expected = { ok: false, error: 'load_failed' };
+    await expect(readStudyTarget(failing.client, user.id)).resolves.toEqual(expected);
+    await expect(readStudyTarget(rejecting.client, user.id)).resolves.toEqual(expected);
+  });
+
+  it('readActiveExamOptions returns load_failed on error, truncation, rejection and a missing board', async () => {
+    const expected = { ok: false, error: 'load_failed' };
+    const cases = [
+      createFakeTablesClient({
+        results: { 'exams:select': { data: null, error: DATABASE_ERROR } },
+      }),
+      createFakeTablesClient({
+        results: { 'exams:select': { data: [], error: null, count: 1001 } },
+      }),
+      createFakeTablesClient({ throwOn: ['exams:select'] }),
+      createFakeTablesClient({
+        results: {
+          'exams:select': {
+            data: [{ id: 'x', court: 'X', year: 2025, exam_boards: null }],
+            error: null,
+          },
+        },
+      }),
+    ];
+
+    for (const { client: fake } of cases) {
+      await expect(readActiveExamOptions(fake)).resolves.toEqual(expected);
+    }
+  });
+
+  it('saveStudyTarget returns db_failure on error, on rejection and without technical detail', async () => {
+    const failing = createFakeTablesClient({
+      results: { 'settings:update': { data: null, error: DATABASE_ERROR } },
+    });
+    const rejecting = createFakeTablesClient({ throwOn: ['settings:update'] });
+    const target = { targetExamId: 'trt2', targetNoticePublished: false };
+
+    const first = await saveStudyTarget(failing.client, user.id, target);
+    const second = await saveStudyTarget(rejecting.client, user.id, target);
+
+    expect(first).toEqual({ ok: false, error: 'db_failure' });
+    expect(second).toEqual({ ok: false, error: 'db_failure' });
+    expect(JSON.stringify(first)).not.toContain('pg_hba');
   });
 });

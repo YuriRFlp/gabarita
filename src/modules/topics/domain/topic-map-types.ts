@@ -1,3 +1,5 @@
+import type { ExamWeightOverride } from './exam-weights';
+
 export const TOPIC_CATEGORIES = ['specific', 'general'] as const;
 export const TOPIC_PROFILES = ['systems', 'infra', 'common'] as const;
 export const STUDY_PHASES = ['pre_notice', 'post_notice'] as const;
@@ -38,7 +40,10 @@ export type TopicPerformance = { topicId: string; answered: number; firmCorrect:
 
 export type TopicMapSource = {
   topics: ReadonlyArray<Topic>;
+  /** targetWeight = seed default. */
   exams: ReadonlyArray<Exam>;
   incidences: ReadonlyArray<Incidence>;
   performance: ReadonlyArray<TopicPerformance>;
+  /** The user's exam_weights rows; empty = default weights (ADR-011). */
+  weightOverrides: ReadonlyArray<ExamWeightOverride>;
 };

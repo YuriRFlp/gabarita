@@ -4,8 +4,8 @@ import {
   buildTopicDetail,
   buildTopicMap,
   type Exam,
+  type TopicDetail,
   type TopicMap,
-  type TopicMapEntry,
   type TopicMapQuery,
 } from '../domain';
 
@@ -26,7 +26,7 @@ export async function getTopicDetail(
   client: DbClient,
   userId: string,
   topicId: string,
-): Promise<LoadResult<{ entry: TopicMapEntry; exams: ReadonlyArray<Exam> } | null>> {
+): Promise<LoadResult<{ entry: TopicDetail; exams: ReadonlyArray<Exam> } | null>> {
   const source = await readTopicMapSource(client, userId);
   if (!source.ok) return source;
   const entry = buildTopicDetail(source.value, topicId);

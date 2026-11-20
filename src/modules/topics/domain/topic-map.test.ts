@@ -6,6 +6,7 @@ import {
   makeSubtopic,
   makeTopic,
 } from '#factories/topic-map';
+import { s1Overrides } from '#factories/exam-weights';
 import { seedTopicMapSource } from '#factories/seed-topic-map';
 import { describe, expect, it } from 'vitest';
 import { buildTopicDetail, buildTopicMap, type TopicMapQuery } from './topic-map';
@@ -354,5 +355,128 @@ describe('buildTopicDetail', () => {
 
   it('returns null for a topic that does not exist', () => {
     expect(buildTopicDetail(seedTopicMapSource(), 'nao_existe')).toBeNull();
+  });
+});
+
+describe('buildTopicMap — CA-35: effective weights', () => {
+  function s1Source() {
+    return { ...seedTopicMapSource(), weightOverrides: s1Overrides() };
+  }
+
+  function entryOf(map: ReturnType<typeof buildTopicMap>, topicId: string) {
+    return map.entries.find((entry) => entry.topic.id === topicId);
+  }
+
+  it('reports default weights and keeps the seed priorities without overrides', () => {
+    const map = buildTopicMap(seedTopicMapSource(), DEFAULT_QUERY);
+
+    expect(map.weights).toEqual({
+      mode: 'default',
+      activeTotal: 1000,
+      unweightedExamIds: [],
+      fingerprint: null,
+    });
+    expect(entryOf(map, 'legislacao_mg')?.priority.priority).toBe(0.14);
+    expect(map.exams[0]?.id).toBe('trt3');
+  });
+
+  it('computes priority with the user weights of set S1', () => {
+    const map = buildTopicMap(s1Source(), DEFAULT_QUERY);
+
+    expect(map.weights).toEqual({
+      mode: 'custom',
+      activeTotal: 1000,
+      unweightedExamIds: [],
+      fingerprint: expect.any(String),
+    });
+    expect(entryOf(map, 'legislacao_mg')?.priority.priority).toBeCloseTo(0.088, 12);
+    expect(entryOf(map, 'redes')?.priority.priority).toBeCloseTo(0.757, 12);
+  });
+
+  it('puts TRT-2 with 40% in the first matrix column', () => {
+    const map = buildTopicMap(s1Source(), DEFAULT_QUERY);
+
+    expect(map.exams[0]).toMatchObject({ id: 'trt2', targetWeight: 0.4 });
+    expect(map.entries[0]?.priority.contributions.map((c) => c.exam.id)).toEqual(
+      map.exams.map((exam) => exam.id),
+    );
+  });
+
+  it('applies the overrides before the urgency, so the urgency order follows the new priorities', () => {
+    const exams = [
+      makeExam({ id: 'a', court: 'A', targetWeight: 0.9 }),
+      makeExam({ id: 'b', court: 'B', targetWeight: 0.1 }),
+    ];
+    const source = makeSource({
+      exams,
+      topics: [makeTopic({ id: 'on_a', sortOrder: 1 }), makeTopic({ id: 'on_b', sortOrder: 2 })],
+      incidences: [makeIncidence('on_a', 'a', 1), makeIncidence('on_b', 'b', 1)],
+      weightOverrides: [
+        { examId: 'a', weight: 0.2 },
+        { examId: 'b', weight: 0.8 },
+      ],
+    });
+
+    const map = buildTopicMap(source, query({ sort: 'urgency' }));
+
+    expect(ids(map)).toEqual(['on_b', 'on_a']);
+    expect(map.entries[0]?.urgency).toBe(0.8);
+  });
+
+  it('does not normalize active weights summing 720 and reports the total', () => {
+    const source = makeSource({
+      exams: [makeExam({ id: 'a', targetWeight: 0.5 }), makeExam({ id: 'b', targetWeight: 0.5 })],
+      topics: [makeTopic({ id: 'full' })],
+      incidences: [makeIncidence('full', 'a', 1), makeIncidence('full', 'b', 1)],
+      weightOverrides: [
+        { examId: 'a', weight: 0.42 },
+        { examId: 'b', weight: 0.3 },
+      ],
+    });
+
+    const map = buildTopicMap(source, DEFAULT_QUERY);
+
+    expect(map.weights.activeTotal).toBe(720);
+    expect(map.entries[0]?.priority.priority).toBe(0.72);
+  });
+
+  it('keeps the totals of the taxonomy unchanged by the overrides', () => {
+    expect(buildTopicMap(s1Source(), DEFAULT_QUERY).totals).toEqual(
+      buildTopicMap(seedTopicMapSource(), DEFAULT_QUERY).totals,
+    );
+  });
+});
+
+describe('buildTopicDetail — CA-36: effective weights', () => {
+  it('shows TJMG with weight 8.8% and contribution 8.8% in legislacao_mg under S1', () => {
+    const source = { ...seedTopicMapSource(), weightOverrides: s1Overrides() };
+
+    const detail = buildTopicDetail(source, 'legislacao_mg');
+
+    expect(detail?.priority.contributions.find((c) => c.exam.id === 'tjmg')).toMatchObject({
+      exam: { targetWeight: 0.088 },
+      contribution: 0.088,
+    });
+    expect(detail?.priority.priority).toBe(0.088);
+  });
+
+  it('returns the weights summary with the entry', () => {
+    const source = { ...seedTopicMapSource(), weightOverrides: s1Overrides() };
+
+    expect(buildTopicDetail(source, 'legislacao_mg')?.weights).toEqual({
+      mode: 'custom',
+      activeTotal: 1000,
+      unweightedExamIds: [],
+      fingerprint: expect.any(String),
+    });
+  });
+
+  it('returns the default summary without overrides', () => {
+    expect(buildTopicDetail(seedTopicMapSource(), 'redes')?.weights).toEqual({
+      mode: 'default',
+      activeTotal: 1000,
+      unweightedExamIds: [],
+      fingerprint: null,
+    });
   });
 });
