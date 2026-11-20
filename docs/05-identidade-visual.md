@@ -31,9 +31,9 @@ A folha de respostas: papel branco, grade rosada, caneta azul e a bolha preenchi
 Decidida no [ADR-010](adr/ADR-010-direcao-visual-folha-de-prova.md) (SPEC-004): a interface é a própria folha óptica da prova. Vale para todas as telas.
 
 - **Plana:** sem sombras; seções separadas por réguas de 1 a 2 px na cor `rule`; cantos quase retos. A bolha é a única forma redonda e continua a assinatura.
-- **Casca:** barra lateral fixa de 280 px a partir de 1024 px; abaixo disso, barra superior com o botão "Menu". Os itens são numerados como linhas da folha, na numeração dos módulos do doc 01 ("00" para o início). O item atual tem fundo `ink-light` e uma bolha preenchida no lugar do número, para não depender só de cor. "Aparência" (alternador de tema) e "Sair" ficam no rodapé da barra.
-- **Cabeçalho de página:** sobretítulo (`eyebrow`, por exemplo "Módulo 01"), `h1` em Schibsted Grotesk 800 e régua grossa abaixo; metadados à direita.
-- **Login:** a partir de 1024 px, duas colunas (painel de marca e formulário). O painel traz a promessa "Estude o que cai. Lembre no dia da prova." e, só no desktop, o sobretítulo, as marcas de sincronismo e três linhas da folha com as prioridades do produto. No celular, o painel vira uma faixa curta com o logo e a promessa.
+- **Casca:** barra lateral fixa de 280 px a partir de 1024 px; abaixo disso, barra superior com o botão "Menu". Cada item tem um ícone Lucide (traço 2 px), visível em todas as larguras, e não tem número ([ADR-012](adr/ADR-012-barra-lateral-com-icones-e-tema-so-em-configuracoes.md)). O item atual mantém o ícone e é indicado só pelo fundo `ink` cheio, com texto e ícone `on-ink` (3:1 contra o fundo da barra) e `aria-current="page"`; no foco, um intervalo de 2 px em `paper` antecede o anel. Em alto contraste (`forced-colors`) vale `Highlight`/`HighlightText`. O rodapé tem "Configurações" e "Sair"; o tema só se escolhe em Configurações > Aparência.
+- **Cabeçalho de página:** `h1` em Schibsted Grotesk 800 e régua grossa abaixo; resumo ou metadados à direita. Sem sobretítulo e sem `hgroup` ([ADR-013](adr/ADR-013-cabecalho-de-pagina-sem-sobretitulo.md)).
+- **Login:** a partir de 1024 px, duas colunas (painel de marca e formulário). O painel traz a promessa "Estude o que cai. Lembre no dia da prova." e, só no desktop, a linha de marca (`gb-eyebrow`), as marcas de sincronismo e três linhas da folha com as prioridades do produto. No celular, o painel vira uma faixa curta com o logo e a promessa.
 - **Ornamentos contidos:** a textura de grade (`gb-sheet-texture`) e as marcas de sincronismo (`gb-timing-marks`, sempre `aria-hidden`) só aparecem no login, na barra lateral e nos estados vazios; nunca atrás de texto corrido ou de tabelas.
 - **Números:** prioridades, contagens e numeração usam `font-variant-numeric: tabular-nums`.
 
@@ -45,27 +45,33 @@ Decidida no [ADR-010](adr/ADR-010-direcao-visual-folha-de-prova.md) (SPEC-004): 
 | `eyebrow` (tipografia) | Novo. 13/18, peso 700, caixa alta, espaçamento 0,08em, `graphite-soft` |
 | `space-5`, `space-10`, `space-12` | Novos: 20, 40 e 48 px |
 | `radius-sm` / `radius-md` / `radius-lg` | De 6/10/16 px para 2/4/6 px |
-| `graphite-soft`, `ink-light`, `grid-light` | Mesmos valores; o texto de uso passou a citar sobretítulo, item atual da barra lateral e a textura de grade |
+| `graphite-soft`, `ink-light`, `grid-light` | Mesmos valores; o texto de uso passou a citar rótulos curtos, cabeçalhos de coluna e a textura de grade |
 
-Os pares de cor da direção (item atual, sobretítulo, régua, bolhas, filtro atual, aviso informativo, etiqueta de fase, painel do login sobre a textura) têm teste de contraste nos dois temas em `tests/design/contrast.test.ts`.
+Os pares de cor da direção (item atual da barra e seu anel de foco, rótulo curto, régua, bolhas, filtro atual, aviso informativo, etiqueta de fase, painel do login sobre a textura) têm teste de contraste nos dois temas em `tests/design/contrast.test.ts`.
 
 ## Componentes
 
 | Componente | Classes (`design/components.css`) | No código |
 |---|---|---|
 | Button | `gb-button`, `gb-button--primary/secondary/text` | `shared/ui/Button.tsx` |
-| Field | `gb-field`, `gb-field__label`, `gb-field__input`, `gb-field__error` | `shared/ui/Field.tsx` |
-| Notice | `gb-notice`, `gb-notice--error/success/info` | `shared/ui/Notice.tsx` |
-| Shell e navegação | `gb-shell` e elementos (`__skip`, `__rail`, `__rail-number`, `__timing-marks`, `__logo`, `__menu-button`, `__menu`, `__menu--open`, `__list`, `__link`, `__actions`, `__appearance`, `__content`) | `shared/ui/Shell.tsx` |
-| Grupo segmentado (alternador de tema) | `gb-segmented`, `gb-segmented__option` | `modules/settings/components/ThemeToggle.tsx` |
+| Field | `gb-field`, `gb-field__label`, `gb-field__input`, `gb-field__error`, `gb-field__control`, `gb-field__suffix` | `shared/ui/Field.tsx` (`suffix` opcional, ex.: "%") |
+| SelectField | `gb-field`, `gb-field__select` | `shared/ui/SelectField.tsx` (`<select>` nativo com rótulo e erro) |
+| CheckboxField | `gb-checkbox`, `__label`, `__input`, `__text`, `__hint` | `shared/ui/CheckboxField.tsx` (alvo de 44 px, explicação opcional) |
+| PageSection | `gb-page-section`, `__header`, `__title`, `__description`, `__body`, `__block-title` | `shared/ui/PageSection.tsx` (`h2` + descrição; seções separadas por régua) |
+| Tabela de pesos | `gb-weight-table`, `__exam`, `__default`, `__input`, `__total`, `__status` (`--ok`/`--off`) | `modules/topics/components` (SPEC-005) |
+| Notice (erro, sucesso e informação, todos com botão de fechar por padrão; `dismissible={false}` só com motivo real) | `gb-notice`, `gb-notice--error/success/info`, `gb-notice__close` | `shared/ui/Notice.tsx`, `NoticeFrame.tsx` |
+| DismissibleNotice (usado pelo Notice, para os três tipos de aviso: erro, sucesso e informação; não use direto) | `gb-notice--error/success/info`, `gb-notice__close` | `shared/ui/DismissibleNotice.tsx` |
+| Shell e navegação | `gb-shell` e elementos (`__skip`, `__rail`, `__timing-marks`, `__logo`, `__menu-button`, `__menu`, `__menu--open`, `__list`, `__link`, `__secondary`, `__secondary-link`, `__actions`, `__content`; item atual por `aria-current="page"`) | `shared/ui/Shell.tsx` |
+| Grupo segmentado (alternador de tema, só em Configurações > Aparência) | `gb-segmented`, `gb-segmented__option` | `modules/settings/components/ThemeToggle.tsx` |
 | Bubble | `gb-bubble`, `gb-bubble--filled/half/small` | `shared/ui/Bubble.tsx` (`fill`: `empty`, `half`, `filled`) |
 | MasteryMeter | `gb-mastery`, `gb-mastery__bubbles` | `shared/ui/MasteryMeter.tsx` (5 bolhas; "Sem respostas" quando o valor é nulo) |
 | Tag | `gb-tag`, `gb-tag--new/overdue/phase` | `shared/ui/Tag.tsx` |
 | HeaderHint (dica no título da coluna: hover e foco, Esc fecha) | `gb-header-hint`, `gb-header-hint--end` | `shared/ui/HeaderHint.tsx` |
+| ActionHint (dica num botão bloqueado com `aria-disabled`: hover e foco, Esc fecha; texto de ajuda `gb-form__help` sem hover) | `gb-action-hint`, `gb-form__help` (usa `gb-header-hint`) | `shared/ui/ActionHint.tsx` |
 | EmptyState | `gb-empty-state`, `__title`, `__body` | `shared/ui/EmptyState.tsx` (bolha vazia, título, explicação e ação opcionais) |
 | PriorityValue | `gb-priority`, `__bar`, `__fill` | `shared/ui/PriorityValue.tsx` (número com 2 casas e barra decorativa) |
 | FilterGroup | `gb-filter-group`, `gb-filter-group__label` (opções em `gb-segmented`) | `shared/ui/FilterGroup.tsx` (opções são links; `aria-current` na atual) |
-| Cabeçalho de página | `gb-page-header` (`__eyebrow`, `__title`, `__meta`); `gb-eyebrow` avulso | Usado nas telas do módulo `topics` |
+| Cabeçalho de página | `gb-page-header` (`__title`, `__meta`); `gb-eyebrow` avulso (rótulo curto) | Usado nas telas de `topics`, em Configurações e no formulário do login (só `h1` e régua) |
 | Login | `gb-login` (`__panel`, `__promise`, `__sheet-rows`, `__row-number`, `__row-bubbles`, `__form`) | `src/app/(public)/login/page.tsx` |
 | Matriz de incidência | `gb-matrix-block`, `gb-matrix-legend`, `gb-matrix` e elementos | `modules/topics/components/IncidenceMatrix.tsx` |
 | Lista e detalhe do assunto | `gb-topic-map`, `gb-topic-filters`, `gb-topic-list`, `gb-topic-detail__*`, `gb-subtopics`, `gb-contributions`, `gb-detail-mastery`, `gb-back-link` | `modules/topics/components/` |

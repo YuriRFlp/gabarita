@@ -8,7 +8,7 @@ Regras de negócio que a aplicação implementa. Valores entre colchetes são pa
 prioridade(assunto) = Σ peso_alvo(concurso) × incidência(assunto, concurso)
 ```
 
-Calculada pela visão `v_topic_priority` (coluna `priority`, a partir de `exams.target_weight` e `incidences.value`). Varia de 0 a 1.
+O `peso_alvo` é o **peso efetivo** do concurso: o peso padrão (`exams.target_weight`) ou, no modo personalizado, o valor do usuário em `exam_weights` (concurso ativo sem linha pesa 0), conforme a SPEC-005 e o ADR-011. A aplicação calcula a prioridade em `domain/` (`computeTopicPriority`). A visão `v_topic_priority` (coluna `priority`, a partir de `exams.target_weight` e `incidences.value`) calcula só com os pesos padrão e serve de conferência deles. Varia de 0 a 1.
 
 ## Domínio de um assunto
 

@@ -4,18 +4,19 @@ Migrações (em ordem):
 - `supabase/migrations/20261116000000_initial_schema.sql` — schema do MVP.
 - `supabase/migrations/20261117000000_settings_theme.sql` — preferência de tema em `settings` (SPEC-001).
 - `supabase/migrations/20261117010000_essay_type_questions_and_case_study.sql` — valor `technical_questions_and_case_study` no enum `essay_type`, para a discursiva da Vunesp no TJSP (questões dissertativas e estudo de caso na mesma etapa).
+- `supabase/migrations/20261119000000_exam_weights_and_target_notice.sql` — tabela `exam_weights` (peso de cada concurso definido pelo usuário) e coluna `settings.target_notice_published` (SPEC-005, ADR-011).
 
-Validação: `npm run db:test` (pgTAP em `supabase/tests/`) após `supabase db reset`. `rls.test.sql` cobre a RLS das 21 tabelas (anônimo sem acesso, isolamento entre usuários nas tabelas pessoais e filhas, escrita autenticada nas de referência) e o `security_invoker` das 2 visões; `settings_theme.test.sql` cobre o enum `theme_preference` e a coluna `settings.theme`; `schema_constraints.test.sql` cobre os valores dos enums, as restrições `check` e o formato do seed; `topic_views.test.sql` (SPEC-004) cobre `v_topic_priority` (prioridade dos 38 assuntos do seed, como `pdpj_stack` = 1,000, efeito de desativar um concurso, assunto sem incidência) e `v_topic_performance` (janela de 60 dias com o limite exato, chute fora da taxa firme, resposta em branco, isolamento entre usuários e acesso anônimo vazio).
+Validação: `npm run db:test` (pgTAP em `supabase/tests/`) após `supabase db reset`. `rls.test.sql` cobre a RLS das 22 tabelas (anônimo sem acesso, isolamento entre usuários nas tabelas pessoais e filhas, escrita autenticada nas de referência) e o `security_invoker` das 2 visões; `settings_theme.test.sql` cobre o enum `theme_preference` e a coluna `settings.theme`; `schema_constraints.test.sql` cobre os valores dos enums, as restrições `check` e o formato do seed; `exam_weights.test.sql` (SPEC-005) cobre a estrutura de `exam_weights` (chave, `on delete cascade`, tipo `numeric(4,3)`), o `check` de faixa 0 a 1, o gatilho de `updated_at`, a RLS de dono (isolamento entre usuários e anônimo sem acesso) e a coluna `settings.target_notice_published` com o `check` que a exige com concurso-alvo; `topic_views.test.sql` (SPEC-004) cobre `v_topic_priority` (prioridade dos 38 assuntos do seed, como `pdpj_stack` = 1,000, efeito de desativar um concurso, assunto sem incidência) e `v_topic_performance` (janela de 60 dias com o limite exato, chute fora da taxa firme, resposta em branco, isolamento entre usuários e acesso anônimo vazio).
 
 ## Visão geral
 
-São 21 tabelas em 6 blocos, mais 2 visões.
+São 22 tabelas em 6 blocos, mais 2 visões.
 
 | Bloco | Tabelas | Natureza |
 |---|---|---|
 | Referência | `exam_boards`, `rubrics`, `exams`, `topics`, `subtopics`, `incidences` | Carregadas pelo seed; mudam a cada novo edital |
 | Conteúdo | `materials`, `papers`, `questions`, `question_topics` | Cresce com importações |
-| Estudo | `settings`, `study_sessions`, `schedule_items`, `mock_exams`, `mock_exam_questions`, `answers` | Atividade do usuário |
+| Estudo | `settings`, `exam_weights`, `study_sessions`, `schedule_items`, `mock_exams`, `mock_exam_questions`, `answers` | Atividade do usuário |
 | Memorização | `cards`, `review_logs` | Estado e histórico FSRS |
 | Discursivas | `essay_prompts`, `essays` | Temas e tentativas corrigidas |
 | IA | `ai_requests` | Registro de prompts e respostas |
@@ -88,7 +89,9 @@ Concursos sem discursiva (TJRS, TJSC, TRT-12) têm `essay` e `rubric_id` nulos.
 
 ### Estudo
 
-**`settings`** — uma linha por usuário: concurso-alvo, horas por dia da semana, cota semanal mínima de infraestrutura, novos cartões por dia, retenção desejada do FSRS, modo de IA e tema da interface. `theme` (`theme_preference`: `system`, `light`, `dark`; padrão `system`) é sincronizado entre aparelhos pelo banco; a aplicação guarda uma cópia em cookie só como cache para pintar a página sem consultar o banco.
+**`settings`** — uma linha por usuário: concurso-alvo (`target_exam_id`) e a marcação `target_notice_published` (o edital do concurso-alvo foi publicado; o `check` `settings_notice_requires_target` exige concurso-alvo para marcá-la), horas por dia da semana, cota semanal mínima de infraestrutura, novos cartões por dia, retenção desejada do FSRS, modo de IA e tema da interface. `theme` (`theme_preference`: `system`, `light`, `dark`; padrão `system`) é sincronizado entre aparelhos pelo banco; a aplicação guarda uma cópia em cookie só como cache para pintar a página sem consultar o banco.
+
+**`exam_weights`** — o peso que o usuário dá a cada concurso na prioridade dos assuntos, sobre o padrão `exams.target_weight` (SPEC-005, ADR-011). Chave `(user_id, exam_id)`; `weight` é `numeric(4,3)` com `check` entre 0 e 1; `exam_id` tem `on delete cascade`; o gatilho `trg_exam_weights_updated` mantém `updated_at`. RLS `owner_exam_weights` (`user_id = auth.uid()`). Qualquer linha põe o usuário no modo personalizado: concurso ativo sem linha pesa 0; sem linhas, valem os pesos padrão. O total de 100% é verificado pela aplicação, não pelo banco.
 
 **`schedule_items`** — o plano do dia, gerado pela aplicação. Quando executado, aponta para a `study_sessions` correspondente.
 
@@ -118,7 +121,7 @@ Concursos sem discursiva (TJRS, TJSC, TRT-12) têm `essay` e `rubric_id` nulos.
 
 | Visão | O que calcula |
 |---|---|
-| `v_topic_priority` | Soma de `target_weight × incidence` nos concursos ativos |
+| `v_topic_priority` | Soma de `target_weight × incidence` nos concursos ativos, com o peso padrão do seed. Serve de conferência dos pesos padrão; a prioridade que o usuário vê usa o peso efetivo, calculado em `domain/` (`exam_weights` sobre o padrão) |
 | `v_topic_performance` | Taxa de domínio dos últimos 60 dias por assunto; acerto com confiança `guess` não conta |
 
 As duas usam `security_invoker = true`, para respeitar a RLS de quem consulta.

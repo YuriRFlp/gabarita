@@ -20,6 +20,7 @@ Fundação da aplicação concluída ([SPEC-001](docs/specs/SPEC-001-fundacao-da
 | Fundação: Next.js, login, tema, casca, CI | ✅ SPEC-001 |
 | Implantação (Vercel + Supabase remoto), backup e runbooks | ✅ SPEC-002 |
 | Mapa do edital (módulo 01): lista, matriz de incidência e detalhe do assunto, com prioridade, domínio e urgência | ✅ SPEC-004 |
+| Configurações: concurso-alvo, edital publicado, tema e pesos dos concursos na prioridade dos assuntos | ✅ SPEC-005 |
 | Demais módulos do MVP | ⏳ próximas specs |
 
 ## Estrutura do repositório
