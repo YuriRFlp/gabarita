@@ -26,6 +26,7 @@ import {
 } from './support/users.ts';
 import { HomePage } from './pages/HomePage.ts';
 import { LoginPage } from './pages/LoginPage.ts';
+import { SettingsPage, THEME_LABELS } from './pages/SettingsPage.ts';
 
 const NO_SESSION = { cookies: [], origins: [] };
 const MISSING_ROUTE = '/route-that-does-not-exist';
@@ -124,20 +125,28 @@ test.describe('Journey 7 — theme toggle', () => {
     { initial: 'system', chosen: 'light' },
     { initial: 'dark', chosen: 'system' },
   ] as const) {
-    test(`CA-25 — choosing "${scenario.chosen}" saves database and cookie, marks the option and persists without flashing`, async ({
+    test(`CA-25 — choosing "${scenario.chosen}" in Configurações saves database and cookie, marks the option and persists without flashing`, async ({
       page,
     }) => {
       await setThemeInDatabase(scenario.initial);
       const home = new HomePage(page);
+      const settings = new SettingsPage(page);
       await home.open();
       await expectHtmlTheme(page, scenario.initial);
+      // ADR-012: the shell has no toggle; the theme is chosen in Settings > Aparência.
+      await expect(home.heading).toBeVisible();
+      await expect(home.themeGroup).toHaveCount(0);
 
       await home.chooseTheme(scenario.chosen);
 
+      await expect(page).toHaveURL('/settings');
       await expectHtmlTheme(page, scenario.chosen);
       for (const other of ['system', 'light', 'dark'] as const) {
         if (other !== scenario.chosen) {
-          await expect(home.themeOption(other)).toHaveAttribute('aria-pressed', 'false');
+          await expect(settings.themeOption(THEME_LABELS[other])).toHaveAttribute(
+            'aria-pressed',
+            'false',
+          );
         }
       }
       expect(await readThemeFromDatabase()).toBe(scenario.chosen);
@@ -145,8 +154,10 @@ test.describe('Journey 7 — theme toggle', () => {
 
       expect(await themeAfterReload(page)).toBe(expectedAttribute(scenario.chosen));
       await expectHtmlTheme(page, scenario.chosen);
-      await home.openMenuIfPresent();
-      await expect(home.themeOption(scenario.chosen)).toHaveAttribute('aria-pressed', 'true');
+      await expect(settings.themeOption(THEME_LABELS[scenario.chosen])).toHaveAttribute(
+        'aria-pressed',
+        'true',
+      );
     });
   }
 });
@@ -194,6 +205,20 @@ test.describe('Journey 7 — accessibility in both themes', () => {
         await expectNoSeriousA11yViolations(page);
       });
 
+      test(`CA-27 — Configurações in the ${theme} theme (current item on ink, toggle, close buttons) has no serious or critical violations`, async ({
+        page,
+      }) => {
+        const settings = new SettingsPage(page);
+        await settings.open();
+        await expect(settings.heading).toBeVisible();
+        await expectHtmlTheme(page, theme);
+        await expectNoSeriousA11yViolations(page);
+
+        await settings.openMenuIfPresent();
+        await expect(settings.settingsLink()).toHaveAttribute('aria-current', 'page');
+        await expectNoSeriousA11yViolations(page);
+      });
+
       test(`CA-27 — 404 in the ${theme} theme has no serious or critical violations`, async ({
         page,
       }) => {
@@ -224,7 +249,7 @@ test.describe('Journey 7 — mobile (360 px)', () => {
     await context.close();
   });
 
-  test('CA-28 — home: the menu reaches navigation, theme toggle and "Sair" without horizontal scroll', async ({
+  test('CA-28 — home: the menu reaches navigation, "Configurações" and "Sair" without horizontal scroll and has no theme toggle', async ({
     page,
   }) => {
     const home = new HomePage(page);
@@ -236,15 +261,10 @@ test.describe('Journey 7 — mobile (360 px)', () => {
 
     await home.openMenuIfPresent();
 
-    for (const target of [
-      home.homeLink,
-      home.themeOption('system'),
-      home.themeOption('light'),
-      home.themeOption('dark'),
-      home.logoutButton,
-    ]) {
+    for (const target of [home.homeLink, home.settingsLink, home.logoutButton]) {
       await expect(target).toBeInViewport();
     }
+    await expect(home.themeGroup).toHaveCount(0);
     await expect(home.homeLink).toHaveAttribute('aria-current', 'page');
     expect(await scrollWidth(page)).toBeLessThanOrEqual(360);
     expect(await smallTouchTargets(page)).toEqual([]);
@@ -336,6 +356,7 @@ test.describe('Journey 7 — saved theme across devices', () => {
     const otherDevice = await newDeviceContext(browser, testInfo, SESSION_FILE);
     const otherPage = await otherDevice.newPage();
     const otherHome = new HomePage(otherPage);
+    const otherSettings = new SettingsPage(otherPage);
     await otherHome.open();
     await expect(otherHome.heading).toBeVisible();
 
@@ -350,8 +371,8 @@ test.describe('Journey 7 — saved theme across devices', () => {
     expect(response).not.toBeNull();
     expect(themeInServerHtml((await response?.text()) ?? '')).toBe('dark');
     await expect(otherPage.locator('html')).toHaveAttribute('data-theme', 'dark');
-    await otherHome.openMenuIfPresent();
-    await expect(otherHome.themeOption('dark')).toHaveAttribute('aria-pressed', 'true');
+    await otherSettings.open();
+    await expect(otherSettings.themeOption('Escuro')).toHaveAttribute('aria-pressed', 'true');
     expect(await readThemeCookie(otherDevice)).toBe('dark');
     await otherDevice.close();
   });

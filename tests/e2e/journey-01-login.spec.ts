@@ -95,6 +95,35 @@ test.describe('Journey 1 — login without a session', () => {
     });
   }
 
+  test('CA-42 — the form starts with the h1 "Entrar", without the "Acesso" eyebrow or an hgroup', async ({
+    page,
+  }) => {
+    const loginPage = new LoginPage(page);
+    await loginPage.open();
+    await expect(loginPage.heading).toBeVisible();
+
+    await expect(page.getByRole('heading', { level: 1 })).toHaveCount(1);
+    const first = loginPage.form.locator(':scope > *').first();
+    expect(await first.evaluate((element) => element.tagName)).toBe('H1');
+    await expect(first).toHaveText('Entrar');
+    await expect(
+      loginPage.form.locator('hgroup, .gb-eyebrow, .gb-page-header__eyebrow'),
+    ).toHaveCount(0);
+    await expect(page.getByText('Acesso', { exact: true })).toHaveCount(0);
+  });
+
+  test('CA-42 — from 1024 px the brand panel keeps the "Analista Judiciário" line', async ({
+    page,
+  }) => {
+    test.skip(test.info().project.name === 'mobile', 'sizes the viewport itself, in desktop');
+    await page.setViewportSize({ width: 1280, height: 800 });
+    const loginPage = new LoginPage(page);
+    await loginPage.open();
+    await expect(loginPage.heading).toBeVisible();
+
+    await expect(loginPage.brandLine).toBeVisible();
+  });
+
   test('CA-22 — logs in with the keyboard only, with visible focus on every control', async ({
     page,
   }) => {

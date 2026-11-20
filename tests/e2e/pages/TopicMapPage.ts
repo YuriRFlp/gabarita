@@ -4,6 +4,9 @@ export type FilterGroupName = 'Ver' | 'Grupo' | 'Perfil' | 'Ordenar';
 
 export class TopicMapPage {
   readonly heading: Locator;
+  /** The page header: the h1 comes first, with no eyebrow or hgroup (ADR-013, CA-42). */
+  readonly pageHeader: Locator;
+  readonly weightsNotice: Locator;
   readonly count: Locator;
   readonly masteryNotice: Locator;
   readonly emptyTitle: Locator;
@@ -15,6 +18,11 @@ export class TopicMapPage {
 
   constructor(readonly page: Page) {
     this.heading = page.getByRole('heading', { level: 1, name: 'Mapa do edital' });
+    this.pageHeader = page.locator('header.gb-page-header');
+    // The info notice has no ARIA role, so it is found by its frame and text.
+    this.weightsNotice = page
+      .locator('.gb-notice')
+      .filter({ hasText: /Pesos personalizados em uso|Os pesos dos concursos ativos/ });
     this.count = page.getByText(/^Mostrando \d+ de \d+ assuntos$/);
     this.masteryNotice = page.getByText('Domínio ainda não medido.');
     this.emptyTitle = page.getByText('Nenhum assunto com esses filtros.');
@@ -60,6 +68,15 @@ export class TopicMapPage {
 
   topicLink(topicName: string): Locator {
     return this.page.getByRole('link', { name: topicName, exact: true });
+  }
+
+  /** The first child of the header is the h1 and nothing eyebrow-like sits in the header. */
+  async expectHeaderStartsWithHeading() {
+    const first = this.pageHeader.locator(':scope > *').first();
+    expect(await first.evaluate((element) => element.tagName)).toBe('H1');
+    await expect(
+      this.pageHeader.locator('hgroup, .gb-eyebrow, .gb-page-header__eyebrow'),
+    ).toHaveCount(0);
   }
 
   navigationLink(name: string): Locator {
