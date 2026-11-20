@@ -18,7 +18,7 @@
 .gb-button--secondary:hover { background: var(--paper-2); color: var(--graphite); }
 .gb-button--text { background: transparent; color: var(--ink); padding: 0 var(--space-2); }
 .gb-button--text:hover { text-decoration: underline; text-underline-offset: 3px; }
-.gb-button:disabled { opacity: .45; cursor: not-allowed; }
+.gb-button:disabled, .gb-button[aria-disabled="true"] { opacity: .45; cursor: not-allowed; }
 .gb-button svg { width: 18px; height: 18px; flex: none; }
 a.gb-button { text-decoration: none; }
 
@@ -90,7 +90,7 @@ a.gb-button { text-decoration: none; }
   position: absolute; width: 1px; height: 1px; overflow: hidden;
   clip-path: inset(50%); white-space: nowrap;
 }
-.gb-eyebrow, .gb-page-header__eyebrow {
+.gb-eyebrow {
   font: 700 13px/18px var(--font-text); letter-spacing: .08em; text-transform: uppercase;
   color: var(--graphite-soft);
 }
@@ -122,6 +122,11 @@ a.gb-button { text-decoration: none; }
 /* Form field */
 .gb-field { display: grid; gap: var(--space-1); width: 100%; }
 .gb-field__label { font: 700 15px/22px var(--font-text); color: var(--graphite); }
+/* Label kept for assistive technology only (e.g. a table cell whose headers already name the field) */
+.gb-field__label--hidden {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip-path: inset(50%); white-space: nowrap;
+}
 .gb-field__input {
   width: 100%; min-height: 44px; padding: 0 var(--space-3);
   border-radius: var(--radius-sm); border: 1.5px solid var(--control-border);
@@ -132,6 +137,69 @@ a.gb-button { text-decoration: none; }
 .gb-field__input[aria-invalid="true"] { border-color: var(--error-vivid); border-width: 2px; }
 .gb-field__error { display: flex; align-items: flex-start; gap: var(--space-1); color: var(--error); font: 700 15px/22px var(--font-text); }
 .gb-field__error svg { width: 18px; height: 18px; flex: none; margin-top: 2px; }
+/* Field with a unit after the input (e.g. "%"): the input keeps gb-field__input, the unit sits beside it */
+.gb-field__control { display: flex; align-items: center; gap: var(--space-2); }
+.gb-field__control .gb-field__input { flex: 1 1 auto; min-width: 0; }
+.gb-field__suffix { flex: none; font: 700 15px/22px var(--font-text); color: var(--graphite-soft); }
+/* Select: native element kept for keyboard and screen readers; only the frame and the arrow are drawn */
+.gb-field__select {
+  appearance: none; padding-right: var(--space-10); cursor: pointer;
+  background-image: linear-gradient(45deg, transparent 50%, var(--graphite) 50%), linear-gradient(135deg, var(--graphite) 50%, transparent 50%);
+  background-position: calc(100% - 20px) 50%, calc(100% - 14px) 50%;
+  background-size: 6px 6px; background-repeat: no-repeat;
+}
+/* Forced colors drop background images, so the drawn arrow would vanish: fall back to the native one */
+@media (forced-colors: active) {
+  .gb-field__select { appearance: auto; padding-right: var(--space-3); background-image: none; }
+}
+/* Checkbox: 24 px box inside a 44 px touch row; label and hint are one click target */
+.gb-checkbox { display: grid; grid-template-columns: auto 1fr; column-gap: var(--space-3); align-items: start; }
+.gb-checkbox__label { display: flex; align-items: center; gap: var(--space-3); grid-column: 1 / -1; min-height: 44px; cursor: pointer; font: 700 17px/22px var(--font-text); color: var(--graphite); }
+.gb-checkbox__input { flex: none; width: 24px; height: 24px; margin: 0; accent-color: var(--ink); cursor: pointer; }
+.gb-checkbox__input:focus-visible { outline: none; box-shadow: var(--focus-shadow); }
+.gb-checkbox__input:disabled, .gb-checkbox__input:disabled + .gb-checkbox__text { opacity: .6; cursor: not-allowed; }
+.gb-checkbox__hint { grid-column: 1 / -1; margin: 0; padding-left: calc(24px + var(--space-3)); font: 400 15px/22px var(--font-text); color: var(--graphite-soft); }
+.gb-checkbox .gb-field__error { grid-column: 1 / -1; padding-left: calc(24px + var(--space-3)); }
+
+/* Page section: h2 + description, sections separated by a 1 px rule */
+.gb-page-section { display: grid; gap: var(--space-4); padding-block: var(--space-6); border-top: 1px solid var(--rule); min-width: 0; }
+.gb-page-section:first-of-type { border-top: none; padding-top: 0; }
+.gb-page-section__header { display: grid; gap: var(--space-1); }
+.gb-page-section__title { margin: 0; font: 800 24px/30px var(--font-display); letter-spacing: -0.01em; overflow-wrap: anywhere; }
+.gb-page-section__description { margin: 0; font: 400 17px/27px var(--font-text); color: var(--graphite-soft); }
+.gb-page-section__body { display: grid; gap: var(--space-4); min-width: 0; }
+.gb-page-section__body > .gb-page-section__body + .gb-page-section__body { margin-top: var(--space-6); }
+.gb-page-section__block-title { margin: 0; font: 700 13px/18px var(--font-text); letter-spacing: .08em; text-transform: uppercase; color: var(--graphite-soft); }
+
+/* Weight table: exam, default, editable weight. Three columns at every width (360 px included) */
+.gb-weight-table { width: 100%; border-collapse: collapse; font: 400 15px/22px var(--font-text); color: var(--graphite); }
+.gb-weight-table caption { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.gb-weight-table thead th {
+  padding: var(--space-2); border-bottom: 1px solid var(--rule); text-align: left; vertical-align: bottom;
+  font: 700 13px/18px var(--font-text); letter-spacing: .08em; text-transform: uppercase; color: var(--graphite-soft);
+}
+.gb-weight-table tbody th, .gb-weight-table tbody td { padding: var(--space-2); border-bottom: 1px solid var(--border); text-align: left; vertical-align: middle; }
+.gb-weight-table__exam { display: grid; gap: 2px; font-weight: 700; overflow-wrap: anywhere; }
+.gb-weight-table__exam small { font: 400 15px/22px var(--font-text); color: var(--graphite-soft); }
+.gb-weight-table__default { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.gb-weight-table__input { width: 128px; max-width: 100%; }
+.gb-weight-table__input .gb-field__input { text-align: right; font-variant-numeric: tabular-nums; }
+.gb-weight-table tfoot th, .gb-weight-table tfoot td { padding: var(--space-3) var(--space-2); border-top: 2px solid var(--rule); text-align: left; font-weight: 700; }
+/* Mirrors the field above it (same width, padding, border and gap) so the number shares its right edge and the "%" sits where the field's suffix sits */
+.gb-weight-table__total { display: flex; align-items: center; gap: var(--space-2); width: 128px; max-width: 100%; font-variant-numeric: tabular-nums; }
+.gb-weight-table__total-number { flex: 1 1 auto; min-width: 0; padding-inline: calc(var(--space-3) + 1.5px); text-align: right; font: 700 17px/27px var(--font-text); }
+.gb-weight-table__total-suffix { flex: none; font: 700 15px/22px var(--font-text); color: var(--graphite-soft); }
+/* Sum status sits below the table, outside the tfoot, so the total stays in the Peso column */
+.gb-weight-table__live { margin: 0; }
+.gb-weight-table__status { display: inline-flex; align-items: center; gap: var(--space-1); font: 700 15px/22px var(--font-text); }
+.gb-weight-table__status svg { width: 18px; height: 18px; flex: none; }
+.gb-weight-table__status--ok svg { color: var(--correct); }
+.gb-weight-table__status--off { color: var(--error); }
+.gb-weight-table__status--off svg { color: var(--error); }
+@media (max-width: 767.98px) {
+  .gb-weight-table tbody th, .gb-weight-table tbody td, .gb-weight-table thead th, .gb-weight-table tfoot th, .gb-weight-table tfoot td { padding-inline: var(--space-1); }
+  .gb-weight-table__input, .gb-weight-table__total { width: 104px; }
+}
 
 /* Notice: error, success or info message, always with icon and text */
 .gb-notice {
@@ -148,6 +216,21 @@ a.gb-button { text-decoration: none; }
 .gb-notice--success svg { color: var(--correct); }
 .gb-notice--info { background: var(--ink-light); border-color: var(--ink); }
 .gb-notice--info svg { color: var(--ink); }
+.gb-notice__body { flex: 1; min-width: 0; }
+/* Close button: 44 px target, pulled into the notice padding so the box keeps its height */
+.gb-notice__close {
+  display: inline-flex; align-items: center; justify-content: center; flex: none;
+  width: 44px; height: 44px; margin: calc(var(--space-3) * -1 + 2px) calc(var(--space-4) * -1 + 2px) calc(var(--space-3) * -1 + 2px) 0;
+  padding: 0; border: 1.5px solid transparent; border-radius: var(--radius-sm);
+  background: transparent; color: var(--graphite); cursor: pointer;
+}
+.gb-notice__close:hover { border-color: var(--graphite); }
+.gb-notice__close:focus-visible { outline: none; box-shadow: var(--focus-shadow); }
+.gb-notice__close svg { margin-top: 0; color: currentColor; }
+@media (forced-colors: active) {
+  .gb-notice__close { border-color: ButtonText; color: ButtonText; }
+  .gb-notice__close:focus-visible { outline: 2px solid Highlight; outline-offset: 2px; }
+}
 
 /* Empty state: an empty bubble, a short title, an optional explanation and an optional action */
 .gb-empty-state {
@@ -161,15 +244,29 @@ a.gb-button { text-decoration: none; }
 /* Form and card */
 .gb-form { display: flex; flex-direction: column; gap: var(--space-4); }
 .gb-form > .gb-button { justify-content: center; }
+/* Row of form buttons: stacked and full width at 360 px, side by side from 480 px (targets stay at 44 px) */
+.gb-form__actions { display: flex; flex-direction: column; align-items: stretch; gap: var(--space-2); }
+.gb-form__actions > .gb-button { justify-content: center; min-height: 44px; }
+.gb-form__actions > .gb-action-hint { display: flex; flex-direction: column; }
+.gb-action-hint .gb-button { justify-content: center; min-height: 44px; }
+/* Help text for screens without hover, where the tip cannot be reached; hidden where the tip works */
+.gb-form__help { display: none; margin: 0; font: 400 15px/22px var(--font-text); color: var(--graphite-soft); }
+@media (hover: none) {
+  .gb-action-hint .gb-header-hint__tip { display: none; }
+  .gb-form__help { display: block; }
+}
+@media (min-width: 480px) {
+  .gb-form__actions > .gb-action-hint { display: inline-flex; }
+  .gb-form__actions { flex-direction: row; flex-wrap: wrap; align-items: center; }
+}
 
-/* Page header: eyebrow + h1 inside <hgroup>, metadata on the side, thick rule below */
+/* Page header: h1, metadata on the side, thick rule below. No eyebrow above the title (ADR-013). */
 .gb-page-header {
   display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between;
   gap: var(--space-2) var(--space-6); margin-bottom: var(--space-6); padding-bottom: var(--space-4);
   border-bottom: 2px solid var(--rule);
 }
-.gb-page-header hgroup { display: grid; gap: var(--space-1); margin: 0; min-width: 0; }
-.gb-page-header__title { font: 800 32px/38px var(--font-display); letter-spacing: -0.02em; overflow-wrap: anywhere; }
+.gb-page-header__title { min-width: 0; font: 800 32px/38px var(--font-display); letter-spacing: -0.02em; overflow-wrap: anywhere; }
 .gb-page-header__meta { font: 400 15px/22px var(--font-text); color: var(--graphite-soft); font-variant-numeric: tabular-nums; }
 
 /* Login: brand strip above the form on mobile; two columns (brand panel | form) from 1024 px */
@@ -195,7 +292,6 @@ a.gb-button { text-decoration: none; }
   display: flex; flex-direction: column; gap: var(--space-6);
   width: 100%; max-width: 452px; margin: 0 auto; padding: var(--space-6) var(--space-4) var(--space-8);
 }
-.gb-login__form hgroup { display: grid; gap: var(--space-1); margin: 0; }
 .gb-login__form h1 { font-weight: 800; letter-spacing: -0.02em; }
 .gb-login__form .gb-field__label { font: 700 13px/18px var(--font-text); letter-spacing: .08em; text-transform: uppercase; }
 @media (min-width: 1024px) {
@@ -250,8 +346,8 @@ a.gb-button { text-decoration: none; }
 .gb-filter-group .gb-segmented { flex-wrap: wrap; max-width: 100%; }
 
 /* Authenticated app shell: top bar with "Menu" below 1024 px; fixed side rail from 1024 px.
-   Items are numbered like rows of the answer sheet; the current one swaps its number for a filled
-   bubble, so it is not marked by color alone. */
+   Each item has an icon; the current one is marked by a solid ink background (3:1 against the rail,
+   WCAG 1.4.11) with on-ink text and icon, plus aria-current="page" (ADR-012). */
 .gb-shell { min-height: 100dvh; display: flex; flex-direction: column; }
 .gb-shell__skip:not(:focus) {
   position: absolute; width: 1px; height: 1px; overflow: hidden;
@@ -285,17 +381,33 @@ a.gb-button { text-decoration: none; }
 }
 .gb-shell__link:hover { background: var(--paper-2); color: var(--graphite); }
 .gb-shell__link:focus-visible { outline: 3px solid transparent; box-shadow: var(--focus-shadow); }
-.gb-shell__link[aria-current="page"] { background: var(--ink-light); color: var(--ink-strong); }
 .gb-shell__link svg { width: 20px; height: 20px; flex: none; }
-.gb-shell__rail-number {
-  display: inline-grid; place-items: center; flex: none; width: var(--space-6);
-  font: 700 13px/1 var(--font-text); color: var(--graphite-soft); font-variant-numeric: tabular-nums;
-}
 .gb-shell__actions {
   display: flex; flex-wrap: wrap; align-items: flex-end; gap: var(--space-3) var(--space-4);
   padding-top: var(--space-4); border-top: 1px solid var(--border);
 }
-.gb-shell__appearance { display: grid; gap: var(--space-2); }
+/* Secondary link (Configurações): same treatment as the main items */
+.gb-shell__secondary { padding-top: var(--space-2); }
+.gb-shell__secondary-link {
+  display: flex; align-items: center; gap: var(--space-2);
+  min-height: 44px; padding: var(--space-2) var(--space-3); border-radius: var(--radius-sm);
+  color: var(--graphite); text-decoration: none; font: 700 17px/22px var(--font-text);
+}
+.gb-shell__secondary-link:hover { background: var(--paper-2); color: var(--graphite); }
+.gb-shell__secondary-link:focus-visible { outline: 3px solid transparent; box-shadow: var(--focus-shadow); }
+.gb-shell__secondary-link svg { width: 20px; height: 20px; flex: none; }
+/* Current item: ink background; a 2 px paper gap inside the box separates the fill from the focus ring */
+.gb-shell__link[aria-current="page"],
+.gb-shell__secondary-link[aria-current="page"] { background: var(--ink); color: var(--on-ink); }
+.gb-shell__link[aria-current="page"]:focus-visible,
+.gb-shell__secondary-link[aria-current="page"]:focus-visible {
+  outline: 3px solid transparent; box-shadow: var(--focus-shadow), inset 0 0 0 2px var(--paper);
+}
+@media (forced-colors: active) {
+  .gb-shell__link[aria-current="page"], .gb-shell__secondary-link[aria-current="page"] {
+    forced-color-adjust: none; background: Highlight; color: HighlightText;
+  }
+}
 .gb-shell__content { flex: 1; width: 100%; max-width: 1120px; margin: 0 auto; padding: var(--space-6) var(--space-4); }
 @media (min-width: 768px) {
   .gb-shell__content { padding: var(--space-8) var(--space-6); }
@@ -314,12 +426,10 @@ a.gb-button { text-decoration: none; }
   .gb-shell__menu { display: flex; position: static; flex: 1; gap: var(--space-6); padding: 0; border: none; background: transparent; }
   .gb-shell__list { gap: 2px; }
   .gb-shell__link { font-size: 15px; line-height: 20px; }
-  .gb-shell__link svg { display: none; }
+  .gb-shell__secondary { margin-top: auto; padding-top: 0; }
+  .gb-shell__secondary-link { font-size: 15px; line-height: 20px; }
+  .gb-shell__secondary + .gb-shell__actions { margin-top: 0; }
   .gb-shell__actions { margin-top: auto; flex-direction: column; flex-wrap: nowrap; align-items: stretch; }
-  .gb-shell__actions .gb-theme-toggle { align-items: stretch; }
-  .gb-shell__actions .gb-segmented { display: flex; flex-wrap: wrap; }
-  .gb-shell__actions .gb-segmented__option { flex: 1 1 0; justify-content: center; padding: 0 var(--space-1); }
-  .gb-shell__actions .gb-segmented__option svg { display: none; }
   .gb-shell__content { margin: 0 auto; padding: var(--space-10) var(--space-12); }
 }
 
@@ -351,6 +461,8 @@ a.gb-button { text-decoration: none; }
 @media (min-width: 768px) {
   .gb-topic-list thead th { position: sticky; top: 0; z-index: 1; background: var(--paper); }
 }
+/* A pinned head with an open tip must paint above its pinned siblings */
+.gb-topic-list thead th:hover, .gb-topic-list thead th:focus-within { z-index: 2; }
 .gb-topic-list__name { font-weight: 400; overflow-wrap: anywhere; }
 .gb-topic-list__name a {
   display: flex; align-items: center; width: fit-content; min-height: 44px;
@@ -372,6 +484,9 @@ a.gb-button { text-decoration: none; }
     display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-1) var(--space-4);
     padding: var(--space-2) 0 var(--space-3); border-bottom: 1px solid var(--border);
   }
+  /* The clipped head still holds the hint triggers; keep them from counting as small touch targets */
+  .gb-topic-list thead .gb-header-hint__trigger { min-height: 44px; }
+  .gb-topic-list thead .gb-header-hint__tip { display: none; }
   .gb-topic-list tbody th, .gb-topic-list td { padding: 0; border-bottom: none; }
   .gb-topic-list__name { flex: 1 0 100%; }
   .gb-topic-list td { display: inline-flex; align-items: center; gap: var(--space-2); }
@@ -380,6 +495,28 @@ a.gb-button { text-decoration: none; }
   .gb-topic-list td::before { content: attr(data-label); font: 700 13px/18px var(--font-text); color: var(--graphite-soft); }
 }
 .gb-topic-list .gb-mastery, .gb-topic-list .gb-priority { vertical-align: middle; }
+
+/* Header hint: a column title that explains itself on hover and keyboard focus. The tip is always in
+   the DOM (referenced by aria-describedby) and only hidden visually; it touches the trigger so the
+   pointer can move onto it, and Escape dismisses it. Flat, square, no shadow (direction A). */
+.gb-header-hint { position: relative; display: inline-block; }
+.gb-header-hint__trigger {
+  padding: 0; border: 0; background: none; color: inherit; cursor: help;
+  font: inherit; letter-spacing: inherit; text-transform: inherit;
+}
+.gb-header-hint__trigger:focus-visible { outline: 3px solid transparent; box-shadow: var(--focus-shadow); }
+.gb-header-hint__tip {
+  position: absolute; top: 100%; left: 0; z-index: 3; box-sizing: border-box;
+  width: 280px; max-width: calc(100vw - var(--space-8));
+  padding: var(--space-2) var(--space-3); border: 1px solid var(--rule); border-radius: var(--radius-sm);
+  background: var(--graphite); color: var(--paper);
+  font: 400 15px/22px var(--font-text); letter-spacing: normal; text-transform: none; text-align: left; white-space: normal;
+  visibility: hidden;
+}
+.gb-header-hint--end .gb-header-hint__tip { left: auto; right: 0; }
+.gb-header-hint:hover .gb-header-hint__tip,
+.gb-header-hint:focus-within .gb-header-hint__tip { visibility: visible; }
+.gb-header-hint[data-dismissed="true"] .gb-header-hint__tip { visibility: hidden; }
 
 /* Incidence matrix: visible legend, then a keyboard-focusable region that scrolls sideways while
    the topic column stays pinned. Borders are on cells (separate model) so they stick with them. */
@@ -450,6 +587,7 @@ a.gb-button { text-decoration: none; }
 .gb-back-link:hover { color: var(--ink-strong); text-decoration: underline; }
 .gb-back-link svg { width: 18px; height: 18px; flex: none; }
 .gb-topic-detail__tags { display: flex; flex-wrap: wrap; gap: var(--space-1); }
+.gb-topic-detail__weights-notice { margin-bottom: var(--space-4); }
 .gb-topic-detail__summary {
   margin-bottom: var(--space-8);
   font: 700 15px/22px var(--font-text); color: var(--graphite); font-variant-numeric: tabular-nums;

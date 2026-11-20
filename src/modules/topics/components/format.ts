@@ -37,3 +37,19 @@ export function bubbleFillFor(value: IncidenceValue): 'empty' | 'half' | 'filled
   if (value === 0.5) return 'half';
   return 'empty';
 }
+
+const WEIGHT_NUMBER = new Intl.NumberFormat('pt-BR', {
+  minimumFractionDigits: 0,
+  maximumFractionDigits: 1,
+});
+
+/** Thousandths as the number typed in a weight field, without "%" ("177" becomes "17,7"). */
+export function formatWeightUnits(units: number): string {
+  return WEIGHT_NUMBER.format(units / 10);
+}
+
+/** A gap in percentage points, from thousandths: "3 pontos", "0,5 ponto", "1 ponto". */
+export function formatPoints(units: number): string {
+  const points = Math.abs(units) / 10;
+  return `${WEIGHT_NUMBER.format(points)} ${points <= 1 ? 'ponto' : 'pontos'}`;
+}

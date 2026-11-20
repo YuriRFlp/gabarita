@@ -37,7 +37,7 @@ Ordem de prioridade: concursos de MG, depois federais e depois estaduais; dentro
 | Estaduais do Sul (0,03) | TJRS | Vunesp 2023 | 0,015 | Concurso exclusivo de TI |
 | | TJSC | FGV 2026 | 0,015 | Analista de Sistemas |
 
-Os pesos ficam na coluna `exams.target_weight` e podem ser alterados a qualquer momento. A origem é `data/seed/court_it_taxonomy_v0.2.json` (`meta.target_weights` e `meta.priority_tiers`).
+Os pesos ficam na coluna `exams.target_weight` e são o **peso padrão**. O usuário os altera em Configurações (SPEC-005): os valores dele ficam em `exam_weights` e valem, como peso efetivo, na prioridade dos assuntos; "Restaurar padrão" volta aos do seed. A origem é `data/seed/court_it_taxonomy_v0.2.json` (`meta.target_weights` e `meta.priority_tiers`).
 
 ## Módulos do MVP
 

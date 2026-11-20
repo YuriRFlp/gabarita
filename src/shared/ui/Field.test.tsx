@@ -8,6 +8,17 @@ describe('Field', () => {
     expect(screen.getByLabelText('E-mail')).toHaveAttribute('id', 'email');
   });
 
+  it('hides the label visually while keeping it as the accessible name', () => {
+    render(<Field id="weight" label="Peso do TRT-2" hideLabel suffix="%" />);
+    expect(screen.getByLabelText('Peso do TRT-2')).toHaveAttribute('id', 'weight');
+    expect(screen.getByText('Peso do TRT-2')).toHaveClass('gb-field__label--hidden');
+  });
+
+  it('keeps the label visible by default', () => {
+    render(<Field id="email" label="E-mail" />);
+    expect(screen.getByText('E-mail')).not.toHaveClass('gb-field__label--hidden');
+  });
+
   it('without an error, neither marks the input invalid nor points to a message', () => {
     render(<Field id="email" label="E-mail" />);
     const input = screen.getByLabelText('E-mail');
@@ -61,5 +72,32 @@ describe('Field', () => {
     expect(input).toHaveAttribute('name', 'password');
     expect(input).toHaveAttribute('autocomplete', 'current-password');
     expect(input).toBeRequired();
+  });
+
+  it('without suffix, renders the input directly in the field', () => {
+    const { container } = render(<Field id="a" label="A" />);
+    expect(container.querySelector('.gb-field__control')).toBeNull();
+    expect(container.querySelector('.gb-field__suffix')).toBeNull();
+  });
+
+  it('with suffix, shows it beside the input, hidden from screen readers', () => {
+    const { container } = render(<Field id="w" label="Peso do TRT-2, em porcentagem" suffix="%" />);
+    const control = container.querySelector('.gb-field__control');
+    const suffix = container.querySelector('.gb-field__suffix');
+    expect(control).toContainElement(
+      screen.getByRole('textbox', { name: 'Peso do TRT-2, em porcentagem' }),
+    );
+    expect(suffix?.parentElement).toBe(control);
+    expect(suffix).toHaveTextContent('%');
+    expect(suffix).toHaveAttribute('aria-hidden', 'true');
+    expect(screen.getByLabelText('Peso do TRT-2, em porcentagem')).toHaveAccessibleName(
+      'Peso do TRT-2, em porcentagem',
+    );
+  });
+
+  it('with suffix and error, keeps the error outside the control and describes the input', () => {
+    const { container } = render(<Field id="w" label="Peso" suffix="%" error="Valor inválido." />);
+    expect(container.querySelector('.gb-field__control')).not.toHaveTextContent('Valor inválido.');
+    expect(screen.getByLabelText('Peso')).toHaveAccessibleDescription('Valor inválido.');
   });
 });

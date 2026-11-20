@@ -44,7 +44,7 @@ Toda funcionalidade de IA passa por uma interface única, e o modo configurado e
 | `manual` | A plataforma gera o prompt; o usuário cola no chat do Claude e importa a resposta |
 | `api` | Função serverless chama a API do Claude (não implementado no MVP) |
 
-Cada interação fica registrada em `ia_solicitacoes`, com prompt, resposta bruta e status.
+Cada interação fica registrada em `ai_requests`, com prompt, resposta bruta e status.
 
 ## Segurança
 

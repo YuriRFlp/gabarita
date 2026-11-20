@@ -44,10 +44,7 @@ export default async function LoginPage({ searchParams }: LoginPageProps) {
         </ol>
       </div>
       <div className="gb-login__form">
-        <hgroup>
-          <p className="gb-eyebrow">Acesso</p>
-          <h1>Entrar</h1>
-        </hgroup>
+        <h1>Entrar</h1>
         <LoginForm next={typeof next === 'string' ? next : undefined} />
       </div>
     </main>

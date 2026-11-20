@@ -1,16 +1,16 @@
--- RLS on the 21 tables and security_invoker on the views (SPEC-001, CA-6; ADR-005).
+-- RLS on the 22 tables and security_invoker on the views (SPEC-001, CA-6; SPEC-005, CA-14; ADR-005).
 begin;
 
 create extension if not exists pgtap with schema extensions;
 
-select plan(238);
+select plan(251);
 
 -- Reference lists. A new table in public that is not listed here makes
 -- the first test fail, forcing RLS coverage for it.
 create temp table personal_tables (name text primary key);
 insert into personal_tables values
   ('materials'), ('settings'), ('study_sessions'), ('schedule_items'), ('mock_exams'),
-  ('answers'), ('cards'), ('essays'), ('ai_requests');
+  ('answers'), ('cards'), ('essays'), ('ai_requests'), ('exam_weights');
 
 create temp table child_tables (name text primary key);
 insert into child_tables values ('review_logs'), ('mock_exam_questions');
@@ -32,7 +32,7 @@ grant select on personal_tables, child_tables, reference_tables, all_tables
 select set_eq(
   $$ select tablename::text from pg_tables where schemaname = 'public' $$,
   $$ select name from all_tables $$,
-  'the 21 tables in public are exactly the ones covered by this test'
+  'the 22 tables in public are exactly the ones covered by this test'
 );
 
 select is(
@@ -94,7 +94,9 @@ insert into inserts values
   ('essays', $$insert into essays (user_id, prompt_id, rubric_id, text, lines)
      values (%L, '00000000-0000-0000-0004-000000000001', 'fumarc_redacao', 'texto', 10)$$),
   ('ai_requests', $$insert into ai_requests (user_id, type, mode, prompt)
-     values (%L, 'summary', 'manual', 'prompt')$$);
+     values (%L, 'summary', 'manual', 'prompt')$$),
+  ('exam_weights', $$insert into exam_weights (user_id, exam_id, weight) values (%L, 'trt2', 0.05)
+     on conflict (user_id, exam_id) do update set weight = excluded.weight$$);
 grant select on inserts to anon, authenticated;
 
 do $$

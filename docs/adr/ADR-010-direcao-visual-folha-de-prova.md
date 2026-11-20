@@ -2,6 +2,10 @@
 
 **Status:** aceito · **Data:** 2026-11-19 · **Origem:** [SPEC-004](../specs/SPEC-004-mapa-do-edital.md) § 5.5, pergunta P-1
 
+> **Nota de status (2026-11-20):** substituído em parte pelo [ADR-012](ADR-012-barra-lateral-com-icones-e-tema-so-em-configuracoes.md) em três pontos da casca: os itens da barra lateral usam ícones em vez de números; o item atual é indicado pelo fundo `ink`, com contraste de 3:1 com a barra, mantendo o ícone (a bolha saiu); e o alternador de tema sai do rodapé da barra e fica só em Configurações > Aparência. O restante deste ADR continua valendo.
+>
+> **Nota de status (2026-11-20):** substituído em parte pelo [ADR-013](ADR-013-cabecalho-de-pagina-sem-sobretitulo.md) no item "Cabeçalho de página": o sobretítulo sai de todas as páginas (e a classe `gb-page-header__eyebrow` sai do design system). O cabeçalho passa a ser `h1` e régua grossa abaixo, com resumo ou metadados à direita onde houver. O estilo `eyebrow` continua para rótulos curtos (linha de marca do login, rótulos de campo, cabeçalhos de coluna).
+
 ## Contexto
 O doc 05 definiu o conceito (a folha de respostas), a paleta, as fontes, os ícones e os temas, mas não como a interface se organiza. A casca da SPEC-001 ficou genérica e foi considerada pouco profissional pelo dono: um cabeçalho com links que não comporta os 9 módulos do MVP, o alternador de tema no lugar mais nobre da tela, um login sem nenhum sinal do produto, pouca hierarquia tipográfica e o conceito "folha de respostas" presente só no logo. Antes de desenhar a primeira tela com dado de estudo (o Mapa do edital), foram apresentadas ao dono duas direções, com mockups em [`docs/specs/assets/SPEC-004-direcoes-visuais.html`](../specs/assets/SPEC-004-direcoes-visuais.html). A escolha vale para todas as telas futuras, por isso fica registrada aqui.
 

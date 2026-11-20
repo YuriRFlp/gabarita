@@ -1,5 +1,6 @@
-import { CircleAlert, CircleCheck, Info } from 'lucide-react';
 import type { ReactNode, Ref } from 'react';
+import { DismissibleNotice } from './DismissibleNotice';
+import { NoticeFrame } from './NoticeFrame';
 
 export type NoticeProps = {
   kind: 'error' | 'success' | 'info';
@@ -7,25 +8,21 @@ export type NoticeProps = {
   id?: string;
   tabIndex?: number;
   ref?: Ref<HTMLDivElement>;
+  /**
+   * Shows the close button (default). Turn it off only when the notice is part of a flow that
+   * needs it, e.g. the question above a confirmation's buttons.
+   */
+  dismissible?: boolean;
+  /** Identity of the result shown (e.g. the action state): a new value shows a closed notice again. */
+  resetKey?: unknown;
+  /**
+   * Called when the reader closes the notice (e.g. to remember it). Pass a Server Action: Notice
+   * stays a Server Component and the close button, a Client Component, calls it.
+   */
+  onDismiss?: () => void | Promise<void>;
 };
 
-const ICONS = { error: CircleAlert, success: CircleCheck, info: Info } as const;
-// An info notice is part of the page from the start; announcing it as a live region would only
-// interrupt the reader.
-const ROLES = { error: 'alert', success: 'status', info: undefined } as const;
-
-export function Notice({ kind, children, id, tabIndex, ref }: NoticeProps) {
-  const Icon = ICONS[kind];
-  return (
-    <div
-      ref={ref}
-      id={id}
-      tabIndex={tabIndex}
-      role={ROLES[kind]}
-      className={`gb-notice gb-notice--${kind}`}
-    >
-      <Icon aria-hidden="true" strokeWidth={2} />
-      <div>{children}</div>
-    </div>
-  );
+export function Notice({ dismissible = true, resetKey, ...rest }: NoticeProps) {
+  if (!dismissible) return <NoticeFrame {...rest} />;
+  return <DismissibleNotice resetKey={resetKey} {...rest} />;
 }

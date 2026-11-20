@@ -1,8 +1,19 @@
-import { House, MapIcon } from 'lucide-react';
-import type { NavigationItem } from '@/shared/ui';
+import { House, MapIcon, Settings } from 'lucide-react';
+import type { NavigationItem, SecondaryNavigationItem } from '@/shared/ui';
 
-// Numbers follow the MVP module list in docs/01 (00 is the home page).
 export const NAVIGATION_ITEMS: ReadonlyArray<NavigationItem> = [
-  { number: '00', label: 'Início', href: '/', icon: <House aria-hidden /> },
-  { number: '01', label: 'Mapa do edital', href: '/topics', icon: <MapIcon aria-hidden /> },
+  { label: 'Início', href: '/', icon: <House aria-hidden="true" strokeWidth={2} /> },
+  {
+    label: 'Mapa do edital',
+    href: '/topics',
+    icon: <MapIcon aria-hidden="true" strokeWidth={2} />,
+  },
+];
+
+export const SECONDARY_NAVIGATION_ITEMS: ReadonlyArray<SecondaryNavigationItem> = [
+  {
+    label: 'Configurações',
+    href: '/settings',
+    icon: <Settings aria-hidden="true" strokeWidth={2} />,
+  },
 ];

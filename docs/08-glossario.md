@@ -44,6 +44,14 @@ Tradução fixa dos termos usados no código, no banco e no design system (ADR-0
 | solicitação de IA | AI request / `ai_requests` | |
 | cota de infraestrutura | infra quota | |
 | retenção desejada | desired retention | |
+| peso do concurso (do usuário) | exam weight / `exam_weights` | Quanto o concurso pesa na prioridade; uma linha por usuário e concurso (SPEC-005, ADR-011) |
+| peso padrão | default weight | `exams.target_weight`, regravado pelo seed |
+| peso efetivo | effective weight | O que entra na prioridade: o peso padrão, ou o do usuário no modo personalizado (concurso ativo sem linha pesa 0) |
+| pesos personalizados | custom weights | `mode: 'custom'` de `ExamWeightsSummary`; `'default'` quando não há linhas em `exam_weights` |
+| restaurar padrão | restore defaults | Apaga as linhas de `exam_weights` (`restoreDefaultWeights`) |
+| ajustar os demais (redistribuir) | rebalance | `rebalanceWeights`: mantém os pesos alterados e escala os outros até somar 100% |
+| edital do concurso-alvo publicado | `target_notice_published` | Coluna de `settings`; exige concurso-alvo (`target_exam_id`) |
+| impressão digital dos pesos | `weightsFingerprint` | Identidade curta de um conjunto de pesos; mantém fechado o aviso já dispensado |
 | mapa do edital | topic map | Tela e módulo `topics` (rotas `/topics`); na interface, "Mapa do edital" (SPEC-004) |
 | matriz de incidência | incidence matrix | Assuntos × concursos (SPEC-004); componente `IncidenceMatrix` |
 | contribuição (de um concurso para a prioridade) | contribution | peso_alvo × incidência (SPEC-004) |
@@ -66,6 +74,7 @@ Tradução fixa dos termos usados no código, no banco e no design system (ADR-0
 | `questoes` | `questions` |
 | `questao_assuntos` | `question_topics` |
 | `configuracoes` | `settings` |
+| (nova, SPEC-005) | `exam_weights` |
 | `sessoes_estudo` | `study_sessions` |
 | `itens_cronograma` | `schedule_items` |
 | `simulados` | `mock_exams` |
@@ -188,6 +197,7 @@ Chaves que já constam da tabela de colunas (`nome`, `tipo`, `grupo`, `perfil`, 
 | componentes `Botao`, `Campo`, `Aviso`, `Casca`, `Alternativa`, `MedidorDominio`, `Etiqueta` | `Button`, `Field`, `Notice`, `Shell`, `Option`, `MasteryMeter`, `Tag` |
 | `FormularioEntrar`, `BotaoSair`, `AlternadorTema` | `LoginForm`, `LogoutButton`, `ThemeToggle` |
 | cookie `gb-tema` | `gb-theme` |
+| (novo, SPEC-005) cookie do aviso de pesos fechado | `gb-weights-notice` |
 | `data-theme="claro"` / `"escuro"` | `data-theme="light"` / `"dark"` |
 
 ## Design system
@@ -212,7 +222,7 @@ Chaves que já constam da tabela de colunas (`nome`, `tipo`, `grupo`, `perfil`, 
 | `gb-etiqueta` (`--nova`, `--vencida`) | `gb-tag` (`--new`, `--overdue`) |
 | `gb-campo` (`__rotulo`, `__entrada`, `__erro`) | `gb-field` (`__label`, `__input`, `__error`) |
 | `gb-aviso` (`--erro`, `--sucesso`) | `gb-notice` (`--error`, `--success`) |
-| `gb-casca` (`__pular`, `__cabecalho`, `__logo`, `__menu-botao`, `__menu`, `--aberto`, `__lista`, `__link`, `__acoes`, `__conteudo`) | `gb-shell` (`__skip`, `__rail`, `__rail-number`, `__timing-marks`, `__logo`, `__menu-button`, `__menu`, `__menu--open`, `__list`, `__link`, `__actions`, `__appearance`, `__content`); o antigo `__cabecalho` virou `__rail` com a SPEC-004 (ADR-010) |
+| `gb-casca` (`__pular`, `__cabecalho`, `__logo`, `__menu-botao`, `__menu`, `--aberto`, `__lista`, `__link`, `__acoes`, `__conteudo`) | `gb-shell` (`__skip`, `__rail`, `__timing-marks`, `__logo`, `__menu-button`, `__menu`, `__menu--open`, `__list`, `__link`, `__actions`, `__content`); o antigo `__cabecalho` virou `__rail` com a SPEC-004 (ADR-010) |
 | `gb-segmentado` (`__opcao`), `gb-alternador-tema` | `gb-segmented` (`__option`), `gb-theme-toggle` |
 | `gb-formulario`, `gb-entrar` (`__cartao`), `gb-pagina-erro` | `gb-form`, `gb-login` (`__panel`, `__promise`, `__sheet-rows`, `__row-number`, `__row-bubbles`, `__form`; o antigo `__cartao` deixou de existir com a SPEC-004), `gb-error-page` |
 | `gb-logo--tema-claro`, `gb-logo--tema-escuro`, `gb-visualmente-oculto` | `gb-logo--light-theme`, `gb-logo--dark-theme`, `gb-visually-hidden` |
@@ -223,17 +233,18 @@ Termos novos da direção visual "Folha de prova" e do mapa do edital (SPEC-004 
 | Português | Inglês |
 |---|---|
 | régua (separador forte) | token `rule` |
-| sobretítulo | estilo `eyebrow`; classes `gb-eyebrow` (avulso) e `gb-page-header__eyebrow` |
-| cabeçalho de página | `gb-page-header` (`__eyebrow`, `__title`, `__meta`) |
-| barra lateral, número do item | `gb-shell__rail`, `gb-shell__rail-number` |
+| rótulo curto (caixa alta) | estilo `eyebrow`; classe `gb-eyebrow` (avulso). Substitui "sobretítulo", que deixou de existir (ADR-013) |
+| cabeçalho de página | `gb-page-header` (`__title`, `__meta`) |
+| barra lateral (itens com ícone, sem número) | `gb-shell__rail` |
 | marcas de sincronismo | `gb-timing-marks` (base); `gb-shell__timing-marks` (posição na barra lateral) |
-| bloco "Aparência" da barra lateral | `gb-shell__appearance` |
 | textura de folha | `gb-sheet-texture` |
 | painel de marca, promessa, linhas da folha (login) | `gb-login__panel`, `__promise`, `__sheet-rows`, `__row-number`, `__row-bubbles`, `__form` |
 | bolha (cheia, meia, vazia) | `Bubble` (`fill`: `filled`, `half`, `empty`; `size`: `regular`, `small`); classes `gb-bubble--filled`, `gb-bubble--half`, `gb-bubble--small` |
 | medidor de domínio | `MasteryMeter`; classes `gb-mastery`, `gb-mastery__bubbles` |
 | etiqueta de fase | `Tag` (`variant`: `default`, `new`, `overdue`, `phase`); classe `gb-tag--phase` |
 | aviso informativo | `Notice` com `kind="info"`; classe `gb-notice--info` |
+| seção de página (Configurações) | `PageSection`; classes `gb-page-section`, `__header`, `__title`, `__description`, `__body`, `__block-title` |
+| navegação secundária da barra lateral | `secondaryNavigation` (prop de `Shell`; classes `gb-shell__secondary`, `__secondary-link`) |
 | estado vazio | `EmptyState`; classes `gb-empty-state`, `__title`, `__body` |
 | grupo de filtros | `FilterGroup`; classes `gb-filter-group`, `gb-filter-group__label` (as opções reutilizam `gb-segmented`) |
 | valor de prioridade | `PriorityValue`; classes `gb-priority`, `__bar`, `__fill` |

@@ -1,16 +1,17 @@
 import { randomUUID } from 'node:crypto';
 import { createClient } from '@supabase/supabase-js';
+import type { Database } from '../../../src/shared/supabase/database.types.ts';
 import { isLocalUrl, readLocalSupabase } from '../../../scripts/local-supabase.ts';
 
 export type DisposableUser = { id: string; email: string; password: string };
 
 let localSupabase: ReturnType<typeof readLocalSupabase> | undefined;
 
-function adminClient() {
+export function adminClient() {
   localSupabase ??= readLocalSupabase();
   const { url, secretKey } = localSupabase;
   if (!isLocalUrl(url)) throw new Error(`Refused: ${url} is not the local Supabase.`);
-  return createClient(url, secretKey, {
+  return createClient<Database>(url, secretKey, {
     auth: { persistSession: false, autoRefreshToken: false },
   });
 }

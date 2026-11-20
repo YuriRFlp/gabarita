@@ -2,6 +2,7 @@ import { afterAll, afterEach, beforeAll, beforeEach, describe, expect, it, vi } 
 import type { DbClient } from '@/shared/supabase';
 import { createAnswers, createQuestion, deleteQuestion } from '#factories/answers';
 import { createFakeTopicsClient } from '#factories/fake-topics-client';
+import { S1_UNITS, clearExamWeightsFor, writeExamWeightsFor } from '#factories/exam-weights';
 import {
   createAdminClient,
   createUser,
@@ -9,7 +10,7 @@ import {
   signInAs,
   type TestUser,
 } from '#factories/users';
-import { computeTopicPriority, type TopicMapSource } from '../domain';
+import { applyExamWeights, computeTopicPriority, sortExams, type TopicMapSource } from '../domain';
 import { readTopicMapSource } from './topics-repository';
 
 const admin = createAdminClient();
@@ -27,6 +28,8 @@ beforeAll(async () => {
 });
 
 afterAll(async () => {
+  await clearExamWeightsFor(admin, userA.id);
+  await clearExamWeightsFor(admin, userB.id);
   for (const id of questions) await deleteQuestion(admin, id);
   await deleteUser(admin, userA.id);
   await deleteUser(admin, userB.id);
@@ -144,11 +147,59 @@ describe('CA-16 — isolation between users', () => {
   });
 });
 
+describe('CA-16 — the exam weights of the signed-in user', () => {
+  beforeEach(async () => {
+    await clearExamWeightsFor(admin, userA.id);
+    await clearExamWeightsFor(admin, userB.id);
+  });
+
+  it('reads no overrides for a user without custom weights', async () => {
+    const source = await loadSource(clientB, userB.id);
+
+    expect(source.weightOverrides).toEqual([]);
+  });
+
+  it('reads the 14 rows of A as weights 0..1, and B still sees none', async () => {
+    await writeExamWeightsFor(admin, userA.id, S1_UNITS);
+
+    const sourceA = await loadSource(clientA, userA.id);
+    const sourceB = await loadSource(clientB, userB.id);
+
+    expect(sourceA.weightOverrides).toHaveLength(14);
+    expect(sourceA.weightOverrides.find((row) => row.examId === 'trt2')?.weight).toBe(0.4);
+    expect(sourceB.weightOverrides).toEqual([]);
+  });
+
+  it('gives A the S1 priority (legislacao_mg 0.088) and the TRT-2 first, and B the seed values', async () => {
+    await writeExamWeightsFor(admin, userA.id, S1_UNITS);
+
+    const sourceA = await loadSource(clientA, userA.id);
+    const sourceB = await loadSource(clientB, userB.id);
+    const effectiveA = applyExamWeights(sourceA.exams, sourceA.weightOverrides);
+    const effectiveB = applyExamWeights(sourceB.exams, sourceB.weightOverrides);
+
+    expect(
+      computeTopicPriority('legislacao_mg', effectiveA.exams, sourceA.incidences).priority,
+    ).toBeCloseTo(0.088, 10);
+    expect(sortExams(effectiveA.exams)[0]?.id).toBe('trt2');
+    expect(sortExams(effectiveB.exams)[0]?.id).toBe('trt3');
+    for (const topic of sourceB.topics) {
+      const fromSeed = computeTopicPriority(topic.id, sourceB.exams, sourceB.incidences).priority;
+      const fromEffective = computeTopicPriority(
+        topic.id,
+        effectiveB.exams,
+        sourceB.incidences,
+      ).priority;
+      expect(fromEffective, topic.id).toBe(fromSeed);
+    }
+  });
+});
+
 describe('CA-17 — failures become load_failed', () => {
   const failure = { ok: false, error: 'load_failed' };
   const dbError = { code: '08006', message: 'connection failure', details: 'pg_hba.conf' };
 
-  it.each(['topics', 'exams', 'incidences', 'v_topic_performance'])(
+  it.each(['topics', 'exams', 'incidences', 'v_topic_performance', 'exam_weights'])(
     'returns load_failed without throwing when the %s query errors',
     async (table) => {
       const client = createFakeTopicsClient({
@@ -159,7 +210,7 @@ describe('CA-17 — failures become load_failed', () => {
     },
   );
 
-  it.each(['topics', 'exams', 'incidences', 'v_topic_performance'])(
+  it.each(['topics', 'exams', 'incidences', 'v_topic_performance', 'exam_weights'])(
     'returns load_failed without throwing when the %s query rejects',
     async (table) => {
       const client = createFakeTopicsClient({ throwOn: table });
@@ -176,7 +227,7 @@ describe('CA-17 — failures become load_failed', () => {
     await expect(readTopicMapSource(client, userA.id)).resolves.toEqual(failure);
   });
 
-  it.each(['topics', 'exams', 'incidences', 'v_topic_performance'])(
+  it.each(['topics', 'exams', 'incidences', 'v_topic_performance', 'exam_weights'])(
     'returns load_failed when the %s result was truncated by the row limit',
     async (table) => {
       const client = createFakeTopicsClient({

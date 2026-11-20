@@ -63,5 +63,12 @@ export function makePerformance(
 }
 
 export function makeSource(overrides: Partial<TopicMapSource> = {}): TopicMapSource {
-  return { topics: [], exams: [], incidences: [], performance: [], ...overrides };
+  return {
+    topics: [],
+    exams: [],
+    incidences: [],
+    performance: [],
+    weightOverrides: [],
+    ...overrides,
+  };
 }

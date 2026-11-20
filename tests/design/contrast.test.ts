@@ -10,19 +10,19 @@ type Pair = { usage: string; foreground: string; background: string; minimum: nu
 // Pairs introduced by direction A "Folha de prova" (SPEC-004 § 5.5, ADR-010).
 const PAIRS: ReadonlyArray<Pair> = [
   {
-    usage: 'current rail item text',
-    foreground: 'ink-strong',
-    background: 'ink-light',
-    minimum: TEXT,
-  },
-  {
-    usage: 'current rail item bubble',
+    usage: 'current rail item background against the rail',
     foreground: 'ink',
-    background: 'ink-light',
+    background: 'paper',
     minimum: NON_TEXT,
   },
   {
-    usage: 'eyebrow and rail numbers',
+    usage: 'current rail item text and icon',
+    foreground: 'on-ink',
+    background: 'ink',
+    minimum: TEXT,
+  },
+  {
+    usage: 'short label and column heads',
     foreground: 'graphite-soft',
     background: 'paper',
     minimum: TEXT,
@@ -33,9 +33,9 @@ const PAIRS: ReadonlyArray<Pair> = [
   { usage: 'rail item text', foreground: 'graphite', background: 'paper', minimum: TEXT },
   { usage: 'rail item on hover', foreground: 'graphite', background: 'paper-2', minimum: TEXT },
   {
-    usage: 'focus ring on the current rail item',
+    usage: 'focus ring on the current rail item, measured against the paper gap',
     foreground: 'ink',
-    background: 'ink-light',
+    background: 'paper',
     minimum: NON_TEXT,
   },
   { usage: 'current filter option', foreground: 'on-ink', background: 'ink', minimum: TEXT },
@@ -46,7 +46,19 @@ const PAIRS: ReadonlyArray<Pair> = [
     background: 'ink-light',
     minimum: NON_TEXT,
   },
+  {
+    usage: 'success notice text and close button',
+    foreground: 'graphite',
+    background: 'correct-bg',
+    minimum: TEXT,
+  },
   { usage: 'phase tag', foreground: 'paper', background: 'graphite', minimum: TEXT },
+  {
+    usage: 'tooltip text (header and action hints)',
+    foreground: 'paper',
+    background: 'graphite',
+    minimum: TEXT,
+  },
   { usage: 'tag', foreground: 'graphite', background: 'paper', minimum: TEXT },
   {
     usage: 'mastery "Sem respostas"',
@@ -56,13 +68,31 @@ const PAIRS: ReadonlyArray<Pair> = [
   },
   { usage: 'priority bar', foreground: 'ink', background: 'paper', minimum: NON_TEXT },
   {
+    usage: 'weight status icon (correct)',
+    foreground: 'correct',
+    background: 'paper',
+    minimum: NON_TEXT,
+  },
+  {
+    usage: 'weight status and field error text',
+    foreground: 'error',
+    background: 'paper',
+    minimum: TEXT,
+  },
+  {
+    usage: 'select arrow and checkbox',
+    foreground: 'graphite',
+    background: 'paper',
+    minimum: NON_TEXT,
+  },
+  {
     usage: 'login promise over the sheet texture',
     foreground: 'graphite',
     background: 'grid-light',
     minimum: TEXT,
   },
   {
-    usage: 'login eyebrow over the sheet texture',
+    usage: 'login brand line over the sheet texture',
     foreground: 'graphite-soft',
     background: 'grid-light',
     minimum: TEXT,

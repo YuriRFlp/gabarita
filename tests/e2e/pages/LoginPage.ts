@@ -2,6 +2,9 @@ import type { Locator, Page } from '@playwright/test';
 
 export class LoginPage {
   readonly heading: Locator;
+  /** The form block: its first element must be the h1, with no eyebrow above it (CA-42). */
+  readonly form: Locator;
+  readonly brandLine: Locator;
   readonly emailField: Locator;
   readonly passwordField: Locator;
   readonly submitButton: Locator;
@@ -10,6 +13,10 @@ export class LoginPage {
 
   constructor(readonly page: Page) {
     this.heading = page.getByRole('heading', { level: 1, name: 'Entrar' });
+    this.form = page.locator('.gb-login__form');
+    this.brandLine = page.getByText('Analista Judiciário · Tecnologia da Informação', {
+      exact: true,
+    });
     this.emailField = page.getByLabel('E-mail');
     this.passwordField = page.getByLabel('Senha');
     this.submitButton = page.getByRole('button', { name: /^(Entrar|Entrando…)$/ });

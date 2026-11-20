@@ -2,6 +2,7 @@ import { afterAll, afterEach, beforeAll, beforeEach, describe, expect, it, vi } 
 import type { DbClient } from '@/shared/supabase';
 import { createAnswers, createQuestion, deleteQuestion } from '#factories/answers';
 import { createFakeTopicsClient } from '#factories/fake-topics-client';
+import { S1_UNITS, clearExamWeightsFor, writeExamWeightsFor } from '#factories/exam-weights';
 import {
   createAdminClient,
   createUser,
@@ -28,6 +29,8 @@ beforeAll(async () => {
 });
 
 afterAll(async () => {
+  await clearExamWeightsFor(admin, userA.id);
+  await clearExamWeightsFor(admin, userB.id);
   for (const id of questions) await deleteQuestion(admin, id);
   await deleteUser(admin, userA.id);
   await deleteUser(admin, userB.id);
@@ -86,6 +89,63 @@ describe('CA-16 — the map reflects only the signed-in user', () => {
   });
 });
 
+describe('CA-16, CA-35, CA-36 — the map uses the effective weights of the user', () => {
+  beforeEach(async () => {
+    await clearExamWeightsFor(admin, userA.id);
+    await clearExamWeightsFor(admin, userB.id);
+  });
+
+  it('gives A the S1 priorities, the TRT-2 as first column and the custom summary; B keeps the defaults', async () => {
+    await writeExamWeightsFor(admin, userA.id, S1_UNITS);
+
+    const mapA = await mapOf(clientA, userA.id);
+    const mapB = await mapOf(clientB, userB.id);
+
+    const priorityOf = (map: typeof mapA, id: string) =>
+      map.entries.find((entry) => entry.topic.id === id)?.priority.priority;
+    expect(priorityOf(mapA, 'legislacao_mg')).toBeCloseTo(0.088, 10);
+    expect(priorityOf(mapA, 'pdpj_stack')).toBe(1);
+    expect(mapA.exams[0]?.id).toBe('trt2');
+    expect(mapA.weights).toEqual({
+      mode: 'custom',
+      activeTotal: 1000,
+      unweightedExamIds: [],
+      fingerprint: expect.any(String),
+    });
+    expect(mapB.exams[0]?.id).toBe('trt3');
+    expect(mapB.weights).toEqual({
+      mode: 'default',
+      activeTotal: 1000,
+      unweightedExamIds: [],
+      fingerprint: null,
+    });
+  });
+
+  it('passes the weights summary to the detail and shows the TJMG contribution of 8.8%', async () => {
+    await writeExamWeightsFor(admin, userA.id, S1_UNITS);
+
+    const result = await getTopicDetail(clientA, userA.id, 'legislacao_mg');
+
+    expect(result.ok).toBe(true);
+    if (!result.ok || result.value === null) throw new Error('expected a topic');
+    expect(result.value.entry.weights.mode).toBe('custom');
+    const tjmg = result.value.entry.priority.contributions.find((c) => c.exam.id === 'tjmg');
+    expect(tjmg?.exam.targetWeight).toBe(0.088);
+    expect(tjmg?.contribution).toBeCloseTo(0.088, 10);
+    expect(result.value.entry.priority.priority).toBeCloseTo(0.088, 10);
+  });
+
+  it('flags a total different from 100% in the summary', async () => {
+    await writeExamWeightsFor(admin, userA.id, { trt2: 720 });
+
+    const map = await mapOf(clientA, userA.id);
+
+    expect(map.weights.mode).toBe('custom');
+    expect(map.weights.activeTotal).toBe(720);
+    expect(map.weights.unweightedExamIds).toHaveLength(13);
+  });
+});
+
 describe('getTopicDetail', () => {
   it('returns the entry and the exams in contribution order', async () => {
     const result = await getTopicDetail(clientA, userA.id, 'pdpj_stack');
@@ -111,7 +171,7 @@ describe('CA-17 — failure of the database', () => {
   const failure = { ok: false, error: 'load_failed' };
   const dbError = { code: '08006', message: 'connection failure', details: 'pg_hba.conf' };
 
-  it.each(['topics', 'exams', 'incidences', 'v_topic_performance'])(
+  it.each(['topics', 'exams', 'incidences', 'v_topic_performance', 'exam_weights'])(
     'getTopicMap returns load_failed when %s fails',
     async (table) => {
       const client = createFakeTopicsClient({
@@ -122,7 +182,7 @@ describe('CA-17 — failure of the database', () => {
     },
   );
 
-  it.each(['topics', 'exams', 'incidences', 'v_topic_performance'])(
+  it.each(['topics', 'exams', 'incidences', 'v_topic_performance', 'exam_weights'])(
     'getTopicDetail returns load_failed when %s fails',
     async (table) => {
       const client = createFakeTopicsClient({

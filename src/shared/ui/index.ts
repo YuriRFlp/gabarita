@@ -1,10 +1,17 @@
 export { Notice, type NoticeProps } from './Notice';
 export { Button, type ButtonProps } from './Button';
 export { Field, type FieldProps } from './Field';
-export { Shell, type NavigationItem, type ShellProps } from './Shell';
+export { Shell, type NavigationItem, type SecondaryNavigationItem, type ShellProps } from './Shell';
 export { Bubble, type BubbleFill, type BubbleProps } from './Bubble';
 export { MasteryMeter, type MasteryMeterProps } from './MasteryMeter';
 export { Tag, type TagProps } from './Tag';
 export { EmptyState, type EmptyStateProps } from './EmptyState';
 export { PriorityValue, type PriorityValueProps } from './PriorityValue';
 export { FilterGroup, type FilterGroupProps, type FilterOption } from './FilterGroup';
+export { HeaderHint, type HeaderHintProps } from './HeaderHint';
+export { ActionHint, type ActionHintProps } from './ActionHint';
+export { PageSection, type PageSectionProps } from './PageSection';
+export { SelectField, type SelectFieldProps } from './SelectField';
+export { CheckboxField, type CheckboxFieldProps } from './CheckboxField';
+export { DismissibleNotice, type DismissibleNoticeProps } from './DismissibleNotice';
+export { useHydrated } from './use-hydrated';

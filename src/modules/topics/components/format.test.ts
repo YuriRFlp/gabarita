@@ -1,5 +1,11 @@
 import { describe, expect, it } from 'vitest';
-import { bubbleFillFor, formatPercent, shortCourt } from './format';
+import {
+  bubbleFillFor,
+  formatPercent,
+  formatPoints,
+  formatWeightUnits,
+  shortCourt,
+} from './format';
 
 describe('formatPercent', () => {
   it('rounds to a whole percentage', () => {
@@ -30,5 +36,28 @@ describe('bubbleFillFor', () => {
     expect(bubbleFillFor(1)).toBe('filled');
     expect(bubbleFillFor(0.5)).toBe('half');
     expect(bubbleFillFor(0)).toBe('empty');
+  });
+});
+
+describe('formatWeightUnits', () => {
+  it('shows thousandths as a pt-BR number with at most one decimal', () => {
+    expect(formatWeightUnits(400)).toBe('40');
+    expect(formatWeightUnits(177)).toBe('17,7');
+    expect(formatWeightUnits(25)).toBe('2,5');
+    expect(formatWeightUnits(0)).toBe('0');
+    expect(formatWeightUnits(1000)).toBe('100');
+  });
+});
+
+describe('formatPoints', () => {
+  it('uses the singular up to one point', () => {
+    expect(formatPoints(10)).toBe('1 ponto');
+    expect(formatPoints(5)).toBe('0,5 ponto');
+  });
+
+  it('uses the plural above one point and ignores the sign', () => {
+    expect(formatPoints(350)).toBe('35 pontos');
+    expect(formatPoints(-30)).toBe('3 pontos');
+    expect(formatPoints(15)).toBe('1,5 pontos');
   });
 });

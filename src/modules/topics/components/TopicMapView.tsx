@@ -5,21 +5,25 @@ import { IncidenceMatrix } from './IncidenceMatrix';
 import { TopicList } from './TopicList';
 import { TopicMapFilters, TOPICS_PATH, buildTopicMapHref } from './TopicMapFilters';
 import type { LoadOutcome } from './load-outcome';
+import { WeightsNotice } from './WeightsNotice';
 
 export type TopicMapViewProps = {
   result: LoadOutcome<TopicMap>;
   query: TopicMapQuery;
+  /** Fingerprint of the weight set whose notice was closed in this browser (cookie). */
+  dismissedWeightsFingerprint?: string | null;
 };
 
-export function TopicMapView({ result, query }: TopicMapViewProps) {
+export function TopicMapView({
+  result,
+  query,
+  dismissedWeightsFingerprint = null,
+}: TopicMapViewProps) {
   if (!result.ok) {
     return (
       <>
         <header className="gb-page-header">
-          <hgroup>
-            <p className="gb-page-header__eyebrow">Módulo 01</p>
-            <h1 className="gb-page-header__title">Mapa do edital</h1>
-          </hgroup>
+          <h1 className="gb-page-header__title">Mapa do edital</h1>
         </header>
         <Notice kind="error">
           <p>Não foi possível carregar o mapa do edital. Tente de novo em instantes.</p>
@@ -36,10 +40,7 @@ export function TopicMapView({ result, query }: TopicMapViewProps) {
   return (
     <>
       <header className="gb-page-header">
-        <hgroup>
-          <p className="gb-page-header__eyebrow">Módulo 01</p>
-          <h1 className="gb-page-header__title">Mapa do edital</h1>
-        </hgroup>
+        <h1 className="gb-page-header__title">Mapa do edital</h1>
         <p className="gb-page-header__meta">
           {totals.topics} assuntos · {totals.subtopics} subtópicos · {totals.exams} concursos
         </p>
@@ -47,6 +48,7 @@ export function TopicMapView({ result, query }: TopicMapViewProps) {
 
       {hasTaxonomy ? (
         <div className="gb-topic-map">
+          <WeightsNotice weights={map.weights} dismissedFingerprint={dismissedWeightsFingerprint} />
           {totals.measured === 0 ? (
             <Notice kind="info">
               <p>

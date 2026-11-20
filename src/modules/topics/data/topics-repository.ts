@@ -2,12 +2,14 @@ import type { DbClient } from '@/shared/supabase';
 import {
   INCIDENCE_VALUES,
   type Exam,
+  type ExamWeightOverride,
   type Incidence,
   type IncidenceValue,
   type Topic,
   type TopicMapSource,
   type TopicPerformance,
 } from '../domain';
+import { selectExams, toExam } from './exam-catalog';
 
 export type LoadResult<T> = { ok: true; value: T } | { ok: false; error: 'load_failed' };
 
@@ -18,7 +20,7 @@ function toIncidenceValue(value: number): IncidenceValue | null {
 }
 
 /**
- * Reads everything the topic map needs in four parallel queries. Any failure, or a value outside
+ * Reads everything the topic map needs in five parallel queries. Any failure, or a value outside
  * the domain contract, yields `load_failed` without technical detail; the detail goes to the log.
  */
 export async function readTopicMapSource(
@@ -26,30 +28,40 @@ export async function readTopicMapSource(
   userId: string,
 ): Promise<LoadResult<TopicMapSource>> {
   try {
-    const [topics, exams, incidences, performance] = await Promise.all([
+    const [topics, exams, incidences, performance, weights] = await Promise.all([
       client
         .from('topics')
         .select('id, name, category, profile, phase, sort_order, subtopics(id, name, sort_order)', {
           count: 'exact',
         }),
-      client
-        .from('exams')
-        .select('id, court, year, target_weight, active, exam_boards(name)', { count: 'exact' }),
+      selectExams(client),
       client.from('incidences').select('exam_id, topic_id, value', { count: 'exact' }),
       client
         .from('v_topic_performance')
         .select('topic_id, answered, firm_correct', { count: 'exact' })
         .eq('user_id', userId),
+      client
+        .from('exam_weights')
+        .select('exam_id, weight', { count: 'exact' })
+        .eq('user_id', userId),
     ]);
 
-    const failure = topics.error ?? exams.error ?? incidences.error ?? performance.error;
-    if (failure || !topics.data || !exams.data || !incidences.data || !performance.data) {
+    const failure =
+      topics.error ?? exams.error ?? incidences.error ?? performance.error ?? weights.error;
+    if (
+      failure ||
+      !topics.data ||
+      !exams.data ||
+      !incidences.data ||
+      !performance.data ||
+      !weights.data
+    ) {
       console.error('readTopicMapSource: read failed', failure);
       return LOAD_FAILED;
     }
 
     // PostgREST truncates at its row limit without an error; a partial map would look complete.
-    const truncated = [topics, exams, incidences, performance].some(
+    const truncated = [topics, exams, incidences, performance, weights].some(
       (result) => result.count !== result.data?.length,
     );
     if (truncated) {
@@ -83,18 +95,12 @@ export async function readTopicMapSource(
 
     const mappedExams: Exam[] = [];
     for (const row of exams.data) {
-      if (!row.exam_boards) {
+      const exam = toExam(row);
+      if (!exam) {
         console.error('readTopicMapSource: exam without exam board', row.id);
         return LOAD_FAILED;
       }
-      mappedExams.push({
-        id: row.id,
-        court: row.court,
-        year: row.year,
-        examBoardName: row.exam_boards.name,
-        targetWeight: row.target_weight,
-        active: row.active,
-      });
+      mappedExams.push(exam);
     }
 
     const mappedPerformance: TopicPerformance[] = [];
@@ -108,6 +114,11 @@ export async function readTopicMapSource(
       });
     }
 
+    const weightOverrides: ExamWeightOverride[] = weights.data.map((row) => ({
+      examId: row.exam_id,
+      weight: row.weight,
+    }));
+
     return {
       ok: true,
       value: {
@@ -115,6 +126,7 @@ export async function readTopicMapSource(
         exams: mappedExams,
         incidences: mappedIncidences,
         performance: mappedPerformance,
+        weightOverrides,
       },
     };
   } catch (error) {

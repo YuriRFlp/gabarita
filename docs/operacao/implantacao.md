@@ -52,8 +52,8 @@ O `db:push` só aplica se, nesta ordem: a árvore de trabalho estiver limpa; o `
 > **Confira a linha `Target:` do dry-run.** Na CLI 3.2.0 os comandos `db push`, `db dump` e `test db` apontam para o banco **local** por padrão; os scripts do repositório passam `--remote` para mirar o projeto ligado. Mesmo assim, se a saída do dry-run mostrar `Target: local stack (127.0.0.1:54322)`, **não confirme**: o alvo não é o remoto. Ver seção 9.
 
 Checklist de CA-8 e CA-9:
-- [ ] No painel (Database, Migrations) ou no SQL Editor, o histórico remoto tem exatamente as 3 migrações do repositório.
-- [ ] `npm run db:test:remote` passa todos os testes pgTAP (RLS das 21 tabelas, `security_invoker` das visões, tema, restrições e contagens do seed: 7 bancas, 9 rubricas, 14 concursos, 38 assuntos, 218 subtópicos, 532 incidências).
+- [ ] No painel (Database, Migrations) ou no SQL Editor, o histórico remoto tem exatamente as 4 migrações do repositório (a última é `20261119000000_exam_weights_and_target_notice.sql`, SPEC-005).
+- [ ] `npm run db:test:remote` passa todos os testes pgTAP (RLS das 22 tabelas, `security_invoker` das visões, tema, `exam_weights` e `target_notice_published`, restrições e contagens do seed: 7 bancas, 9 rubricas, 14 concursos, 38 assuntos, 218 subtópicos, 532 incidências).
 - [ ] CA-9: as tabelas pessoais têm as mesmas contagens de antes do teste (os testes rodam em transação com `rollback` e não deixam dados nem a extensão `pgtap`). Confira no SQL Editor.
 
 Se `db:test:remote` falhar nos testes de leitura e gravação de `authenticated`, o projeto remoto pode ter vindo sem o padrão de grants do Supabase; a correção seria uma migração nova com `grant`, em spec própria.
@@ -90,11 +90,11 @@ Ele roda sem credenciais, só com leitura, e imprime `OK`/`FALHA` por checagem (
 - `/` sem sessão redireciona (307) para `/login?next=%2F`; `/login` responde 200;
 - cabeçalhos de segurança, `Strict-Transport-Security` presente e sem `X-Powered-By` em `/login`;
 - `GET /auth/v1/settings` com `disable_signup` igual a `true`;
-- leitura anônima de cada uma das 21 tabelas de `public` devolve lista vazia ou erro de permissão (401/403), nunca linha.
+- leitura anônima de cada uma das 22 tabelas de `public` devolve lista vazia ou erro de permissão (401/403), nunca linha.
 
 Checklist de CA-15 (login real, no computador e no celular a 360 px):
 - [ ] O login leva à casca do app e a linha de `settings` é criada.
-- [ ] Escolher "Escuro" no computador aparece no celular no próximo carregamento completo.
+- [ ] Escolher "Escuro" em Configurações > Aparência, no computador, aparece no celular no próximo carregamento completo.
 - [ ] "Sair" encerra só o aparelho atual.
 - [ ] Senha errada mostra "E-mail ou senha incorretos."
 
@@ -159,4 +159,5 @@ A conexão direta ao banco do plano gratuito é só IPv6, e o WSL costuma não t
 
 - **Alvo dos comandos na CLI 3.2.0.** Sem projeto ligado, `npx supabase db push --dry-run --include-seed` mostra `Target: local stack (127.0.0.1:54322)`: a CLI é "Local by default" e só usa o projeto ligado com `--remote` (`--linked` é obsoleto e some na v4). Os scripts `db:push`, `db:test:remote` e `backup` já passam `--remote`. Na primeira implantação, confirme que a linha `Target:` do dry-run aponta o projeto remoto.
 - **O seed é reaplicado a cada push?** A saída do dry-run lista `supabase/seed.sql` como arquivo que seria aplicado ("Would seed these files"), mas não foi possível verificar sem um remoto se a CLI 3.2.0 reaplica o seed a cada `db push --include-seed` ou só quando o arquivo muda. **A confirmar na primeira implantação.** Em qualquer caso, o seed é idempotente (ADR-004), então reaplicar é seguro; a consequência aceita é que ele sobrescreve `exams.target_weight` e `rubrics.definition` no remoto (o JSON é a fonte da verdade).
+- **Migração da SPEC-005 (`exam_weights`).** Ao aplicá-la, o `db:push` deve listar só `20261119000000_exam_weights_and_target_notice.sql` (e o seed); depois, `db:test:remote` com 22 tabelas e `check:prod` (o anônimo não lê `exam_weights`). Registrar aqui se a CLI 3.2.0 reaplicou o seed sem migração pendente. A SPEC-005 ainda não foi implantada.
 - **Região das funções no plano Hobby e Node 26 na Vercel** (seções 2.2 e 2.4): conferir no painel.

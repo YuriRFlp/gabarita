@@ -6,3 +6,4 @@ export {
   themeToSync,
   type ThemePreference,
 } from './theme-preference';
+export { validateStudyTarget, type StudyTarget } from './study-target';

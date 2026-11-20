@@ -3,14 +3,17 @@
 import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
 import { useId, useRef, useState, type KeyboardEvent, type ReactNode } from 'react';
-import { Bubble } from './Bubble';
 
-/** `number` is the module number from docs/01 ("00" for home), shown like a row of the answer sheet. */
-export type NavigationItem = { number: string; label: string; href: string; icon: ReactNode };
+/** Rail item: a Lucide icon (decorative) and the label; the current one is marked by its background. */
+export type NavigationItem = { label: string; href: string; icon: ReactNode };
+
+/** Link below the main list (e.g. Configurações); same shape and treatment. */
+export type SecondaryNavigationItem = NavigationItem;
 
 export type ShellProps = {
   logo: ReactNode;
   navigation: ReadonlyArray<NavigationItem>;
+  secondaryNavigation?: ReadonlyArray<SecondaryNavigationItem>;
   currentPath: string;
   actions: ReactNode;
   children: ReactNode;
@@ -21,7 +24,14 @@ function isActive(href: string, currentPath: string): boolean {
   return currentPath === href || currentPath.startsWith(`${href}/`);
 }
 
-export function Shell({ logo, navigation, currentPath, actions, children }: ShellProps) {
+export function Shell({
+  logo,
+  navigation,
+  secondaryNavigation = [],
+  currentPath,
+  actions,
+  children,
+}: ShellProps) {
   const menuId = useId();
   const menuButton = useRef<HTMLButtonElement>(null);
   // Storing the path where the menu opened closes it on navigation without an effect.
@@ -80,9 +90,6 @@ export function Shell({ logo, navigation, currentPath, actions, children }: Shel
                       aria-current={active ? 'page' : undefined}
                       onClick={close}
                     >
-                      <span className="gb-shell__rail-number" aria-hidden="true">
-                        {active ? <Bubble fill="filled" size="small" /> : item.number}
-                      </span>
                       {item.icon}
                       <span>{item.label}</span>
                     </Link>
@@ -91,6 +98,28 @@ export function Shell({ logo, navigation, currentPath, actions, children }: Shel
               })}
             </ul>
           </nav>
+          {secondaryNavigation.length > 0 && (
+            <nav className="gb-shell__secondary" aria-label="Preferências">
+              <ul className="gb-shell__list">
+                {secondaryNavigation.map((item) => {
+                  const active = isActive(item.href, currentPath);
+                  return (
+                    <li key={item.href}>
+                      <Link
+                        className="gb-shell__secondary-link"
+                        href={item.href}
+                        aria-current={active ? 'page' : undefined}
+                        onClick={close}
+                      >
+                        {item.icon}
+                        <span>{item.label}</span>
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </nav>
+          )}
           <div className="gb-shell__actions">{actions}</div>
         </div>
       </header>

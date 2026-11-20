@@ -74,4 +74,15 @@ describe('TopicList', () => {
     const names = screen.getAllByRole('link').map((link) => link.textContent);
     expect(names).toEqual(['Beta', 'Alfa']);
   });
+
+  it('explains the priority and mastery columns in tooltips tied to their titles', () => {
+    render(<TopicList entries={[makeEntry({})]} />);
+    const priority = screen.getByRole('button', { name: 'Prioridade' });
+    const mastery = screen.getByRole('button', { name: 'Domínio' });
+    expect(priority).toHaveAccessibleDescription(
+      'O quanto o assunto vale nos concursos que você escolheu.',
+    );
+    expect(mastery).toHaveAccessibleDescription('O quanto você já domina o assunto.');
+    expect(screen.getAllByRole('columnheader')).toHaveLength(4);
+  });
 });

@@ -44,6 +44,55 @@ test.describe('Journey 8 — navigation and list without answers', () => {
     await expect(map.navigationLink('Mapa do edital')).toHaveAttribute('aria-current', 'page');
   });
 
+  test('CA-40 — the navigation shows icons without numbers or bubbles and marks only the current item', async ({
+    page,
+  }) => {
+    const map = new TopicMapPage(page);
+    const home = new HomePage(page);
+    await map.open();
+    await expect(map.heading).toBeVisible();
+    await map.openMenuIfPresent();
+
+    const topics = map.navigationLink('Mapa do edital');
+    const start = map.navigationLink('Início');
+    for (const link of [start, topics, home.settingsLink]) {
+      await expect(link.locator('svg[aria-hidden="true"]')).toHaveCount(1);
+      await expect(link.locator('.gb-bubble')).toHaveCount(0);
+    }
+    await expect(topics).toHaveAttribute('aria-current', 'page');
+    await expect(start).not.toHaveAttribute('aria-current');
+    await expect(home.settingsLink).not.toHaveAttribute('aria-current');
+    await expect(page.locator('.gb-shell__rail-number')).toHaveCount(0);
+    await expect(map.mainNavigation).not.toContainText(/\b0[01]\b/);
+    await expect(home.themeGroup).toHaveCount(0);
+    await expect(home.logoutButton).toBeVisible();
+    const currentBackground = await topics.evaluate((el) => getComputedStyle(el).backgroundColor);
+    const otherBackground = await start.evaluate((el) => getComputedStyle(el).backgroundColor);
+    expect(currentBackground).not.toBe(otherBackground);
+  });
+
+  test('CA-42 — the map header starts with the h1, without "Módulo 01"', async ({ page }) => {
+    const map = new TopicMapPage(page);
+    await map.open();
+    await expect(map.heading).toBeVisible();
+
+    await map.expectHeaderStartsWithHeading();
+    await expect(map.pageHeader.getByText('Módulo 01')).toHaveCount(0);
+    await expect(page.getByRole('heading', { level: 1 })).toHaveCount(1);
+  });
+
+  test('CA-42 — the detail header starts with the h1 (the topic name), without "Assunto"', async ({
+    page,
+  }) => {
+    const map = new TopicMapPage(page);
+    await page.goto(PDPJ_PATH);
+    await expect(page.getByRole('heading', { level: 1, name: PDPJ })).toBeVisible();
+
+    await map.expectHeaderStartsWithHeading();
+    await expect(map.pageHeader.getByText('Assunto', { exact: true })).toHaveCount(0);
+    await expect(page.getByRole('heading', { level: 1 })).toHaveCount(1);
+  });
+
   test('CA-18 — each row shows name, profile or "Geral", "Pós-edital", priority and subtopics', async ({
     page,
   }) => {
@@ -405,6 +454,7 @@ test.describe('Journey 8 — keyboard', () => {
 
   test('CA-30 — list: Tab reaches the filters in order, then the first topic, and Enter opens the detail', async ({
     page,
+    isMobile,
   }) => {
     const map = new TopicMapPage(page);
     await map.open('?sort=priority');
@@ -419,6 +469,13 @@ test.describe('Journey 8 — keyboard', () => {
     await page.keyboard.press('Tab');
     await expectFocusedWithIndicator(page, map.filterOption('Ordenar', 'Nome'));
 
+    // The two column heads that carry a hint are tab stops before the first topic.
+    // When rows are stacked the head is hidden and its titles are skipped.
+    for (const title of isMobile ? [] : ['Prioridade', 'Domínio']) {
+      await page.keyboard.press('Tab');
+      await expectFocusedWithIndicator(page, map.list.getByRole('button', { name: title }));
+    }
+
     await page.keyboard.press('Tab');
     const first = map.list.getByRole('rowheader').getByRole('link').first();
     await expectFocusedWithIndicator(page, first);
@@ -427,6 +484,32 @@ test.describe('Journey 8 — keyboard', () => {
     await page.keyboard.press('Enter');
     await expect(page).toHaveURL(/\/topics\/[a-z0-9_]+$/);
     await expect(page.getByRole('heading', { level: 1, name })).toBeVisible();
+  });
+
+  test('column heads explain themselves on hover and on keyboard focus', async ({
+    page,
+    isMobile,
+  }) => {
+    test.skip(isMobile, 'the column heads are hidden when rows are stacked');
+    const map = new TopicMapPage(page);
+    await map.open();
+    await expect(map.heading).toBeVisible();
+    const tip = map.list.getByRole('tooltip');
+    await expect(tip.first()).toBeHidden();
+
+    await map.list.getByRole('button', { name: 'Prioridade' }).hover();
+    await expect(tip.first()).toBeVisible();
+    await expect(tip.first()).toContainText(
+      'O quanto o assunto vale nos concursos que você escolheu.',
+    );
+
+    await page.mouse.move(0, 0);
+    await expect(tip.first()).toBeHidden();
+    await map.list.getByRole('button', { name: 'Domínio' }).focus();
+    await expect(tip.last()).toBeVisible();
+    await expect(tip.last()).toContainText('O quanto você já domina o assunto.');
+    await page.keyboard.press('Escape');
+    await expect(tip.last()).toBeHidden();
   });
 
   test('CA-30 — matrix: after the filters Tab reaches the region, then the topic links', async ({
@@ -490,6 +573,20 @@ test.describe('Journey 8 — accessibility in both themes', () => {
           await expectNoSeriousA11yViolations(page);
         });
       }
+
+      test(`CA-31 — list with a column hint open in the ${theme} theme has no serious or critical violations`, async ({
+        page,
+        isMobile,
+      }) => {
+        test.skip(isMobile, 'the column heads are hidden when rows are stacked');
+        const map = new TopicMapPage(page);
+        await map.open();
+        await expect(map.heading).toBeVisible();
+        await map.list.getByRole('button', { name: 'Prioridade' }).focus();
+        await expect(map.list.getByRole('tooltip').first()).toBeVisible();
+
+        await expectNoSeriousA11yViolations(page);
+      });
     });
   }
 });
@@ -592,27 +689,27 @@ test.describe('Journey 8 — mobile (360 px)', () => {
 test.describe('Journey 8 — side rail', () => {
   test.skip(({ isMobile }) => isMobile, 'CA-36 sizes the viewport itself, in the desktop project');
 
-  test('CA-36 — at 1280 px the navigation is a fixed side rail with numbered rows and an inline marker for the current item', async ({
+  test('CA-36 — at 1280 px the navigation is a fixed side rail with icons and a solid background on the current item', async ({
     page,
   }) => {
     const map = new TopicMapPage(page);
+    const home = new HomePage(page);
     await map.open();
     await expect(map.heading).toBeVisible();
 
     await expect(map.menuButton).toBeHidden();
     await expect(map.mainNavigation).toBeVisible();
-    const home = map.navigationLink('Início');
+    const start = map.navigationLink('Início');
     const topics = map.navigationLink('Mapa do edital');
-    await expect(home).toContainText('00');
     await expect(topics).toHaveAttribute('aria-current', 'page');
-    await expect(topics.locator('.gb-bubble--filled')).toHaveCount(1);
-    await expect(topics).not.toContainText('01');
-    await expect(home).not.toHaveAttribute('aria-current');
-    await expect(home.locator('.gb-bubble')).toHaveCount(0);
-    await expect(page.locator('.gb-shell__rail-number[aria-hidden="true"]')).toHaveCount(2);
+    await expect(topics.locator('svg[aria-hidden="true"]')).toHaveCount(1);
+    await expect(topics.locator('.gb-bubble')).toHaveCount(0);
+    await expect(start).not.toHaveAttribute('aria-current');
+    await expect(start.locator('svg[aria-hidden="true"]')).toHaveCount(1);
     const currentBackground = await topics.evaluate((el) => getComputedStyle(el).backgroundColor);
-    const otherBackground = await home.evaluate((el) => getComputedStyle(el).backgroundColor);
+    const otherBackground = await start.evaluate((el) => getComputedStyle(el).backgroundColor);
     expect(currentBackground).not.toBe(otherBackground);
+    expect(currentBackground).not.toBe('rgba(0, 0, 0, 0)');
 
     const rail = page.locator('.gb-shell__rail');
     await expect(rail).toBeInViewport({ ratio: 1 });
@@ -620,8 +717,55 @@ test.describe('Journey 8 — side rail', () => {
     const box = await rail.boundingBox();
     expect(box?.x).toBe(0);
     expect(box?.y).toBe(0);
-    await expect(new HomePage(page).logoutButton).toBeInViewport();
-    await expect(new HomePage(page).themeOption('dark')).toBeInViewport();
+    // The footer of the rail holds only "Configurações" and "Sair".
+    await expect(home.settingsLink).toBeInViewport();
+    await expect(home.logoutButton).toBeInViewport();
+    await expect(
+      rail.getByRole('navigation', { name: 'Preferências' }).getByRole('link'),
+    ).toHaveText(['Configurações']);
+    await expect(rail.getByRole('button')).toHaveText(['Sair']);
+  });
+
+  test('CA-41 — keyboard focus on the current item keeps the ring apart from the ink background', async ({
+    page,
+  }) => {
+    const map = new TopicMapPage(page);
+    await map.open();
+    await expect(map.heading).toBeVisible();
+    const topics = map.navigationLink('Mapa do edital');
+
+    for (let presses = 0; presses < 10; presses += 1) {
+      await page.keyboard.press('Tab');
+      if (await topics.evaluate((link) => link === document.activeElement)) break;
+    }
+
+    await expect(topics).toBeFocused();
+    expect(await hasFocusIndicator(topics)).toBe(true);
+    // The 2 px inset in the paper color is what separates the ring from the filled item.
+    expect(await topics.evaluate((link) => getComputedStyle(link).boxShadow)).toContain('inset');
+  });
+
+  test('CA-40 — with forced colors the current item uses Highlight and HighlightText', async ({
+    page,
+  }) => {
+    await page.emulateMedia({ forcedColors: 'active' });
+    const map = new TopicMapPage(page);
+    await map.open();
+    await expect(map.heading).toBeVisible();
+
+    const system = await page.evaluate(() => {
+      const probe = document.createElement('div');
+      probe.style.backgroundColor = 'Highlight';
+      probe.style.color = 'HighlightText';
+      document.body.append(probe);
+      const style = getComputedStyle(probe);
+      const colors = { background: style.backgroundColor, text: style.color };
+      probe.remove();
+      return colors;
+    });
+    const topics = map.navigationLink('Mapa do edital');
+    await expect(topics).toHaveCSS('background-color', system.background);
+    await expect(topics).toHaveCSS('color', system.text);
   });
 
   test('CA-36 — the timing marks are aria-hidden and out of the tab order', async ({ page }) => {
@@ -661,7 +805,8 @@ test.describe('Journey 8 — side rail', () => {
         await expect(map.menuButton).toHaveAttribute('aria-expanded', 'false');
         await map.openMenuIfPresent();
       }
-      await expect(home.themeOption('dark')).toBeVisible();
+      await expect(home.themeGroup).toHaveCount(0);
+      await expect(home.settingsLink).toBeVisible();
       await expect(home.logoutButton).toBeVisible();
       await expect(home.logoutButton).toBeInViewport();
     });

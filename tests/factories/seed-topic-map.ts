@@ -43,7 +43,7 @@ export function seedPriorities(): Array<{ topicId: string; priority: number }> {
   }));
 }
 
-/** Topic map source as generate_seed.py loads it: every exam active, no answers. */
+/** Topic map source as generate_seed.py loads it: every exam active, no answers, default weights. */
 export function seedTopicMapSource(): TopicMapSource {
   const seed = readSeed();
   const categorized = [
@@ -80,5 +80,6 @@ export function seedTopicMapSource(): TopicMapSource {
       })),
     ),
     performance: [],
+    weightOverrides: [],
   };
 }
